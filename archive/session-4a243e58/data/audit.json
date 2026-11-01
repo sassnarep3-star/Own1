@@ -1,0 +1,964 @@
+{
+ "generated_from": "data/ledger.json",
+ "ledger_reviewed": "2026-08-19",
+ "ledger_pass": "S",
+ "checks_run": 11,
+ "stats": {
+  "listings": 206,
+  "types": 9,
+  "free_path_full": 189,
+  "free_path_partial": 13,
+  "free_path_paid_cash": 4,
+  "status": {
+   "mixed": 5,
+   "ended": 27,
+   "live": 163,
+   "caution": 11
+  },
+  "by_type": {
+   "skill": 12,
+   "trivia": 2,
+   "creative": 18,
+   "tech": 14,
+   "directory": 2,
+   "sports": 129,
+   "pools": 7,
+   "forecasting": 3,
+   "market": 19
+  },
+  "free_and_enterable_today": 163,
+  "free_enterable_pct_of_catalogue": 79.1,
+  "free_enterable_and_verified_this_pass": 0,
+  "ended": 27,
+  "ios_all": 78,
+  "official_source_rows": 194,
+  "official_source_coverage_pct": 94.2,
+  "type_rows": [
+   {
+    "id": "skill",
+    "name": "Skill tournaments",
+    "blurb": "Head-to-head or multiplayer skill games. Free rooms usually pay gems, not cash. Real USD almost always requires an entry fee.",
+    "total": 12,
+    "free_full": 1,
+    "live": 8,
+    "free_and_live": 1,
+    "verified": 1,
+    "no_official_source": 0
+   },
+   {
+    "id": "trivia",
+    "name": "Trivia competitions",
+    "blurb": "Live or async quiz contests. Free daily plays exist on some apps. Prize pools are split among remaining winners.",
+    "total": 2,
+    "free_full": 1,
+    "live": 1,
+    "free_and_live": 1,
+    "verified": 0,
+    "no_official_source": 0
+   },
+   {
+    "id": "sports",
+    "name": "Fantasy & sports picks",
+    "blurb": "Daily fantasy freerolls and sweepstakes sportsbooks. Free tickets or free coins can win USD; most large pools are paid-entry.",
+    "total": 129,
+    "free_full": 128,
+    "live": 93,
+    "free_and_live": 103,
+    "verified": 0,
+    "no_official_source": 9
+   },
+   {
+    "id": "creative",
+    "name": "Creative contests",
+    "blurb": "Writing, photo, and brand challenges judged on a submission. Some are free; some lock cash prizes behind a membership.",
+    "total": 18,
+    "free_full": 17,
+    "live": 17,
+    "free_and_live": 17,
+    "verified": 4,
+    "no_official_source": 0
+   },
+   {
+    "id": "forecasting",
+    "name": "Forecasting tournaments",
+    "blurb": "Judgement competitions scored on calibrated accuracy. You submit probability estimates, not wagers \u2014 nothing is staked and prizes come from sponsors.",
+    "total": 3,
+    "free_full": 3,
+    "live": 2,
+    "free_and_live": 2,
+    "verified": 1,
+    "no_official_source": 0
+   },
+   {
+    "id": "market",
+    "name": "Market competitions",
+    "blurb": "Paper-trading and simulated-investing contests scored on portfolio return. Free to enter; prizes are funded by the operator, not your own stake.",
+    "total": 19,
+    "free_full": 18,
+    "live": 19,
+    "free_and_live": 18,
+    "verified": 0,
+    "no_official_source": 3
+   },
+   {
+    "id": "tech",
+    "name": "Tech & data competitions",
+    "blurb": "Hackathons and machine-learning contests with published USD prize pools. Free to enter; winners complete tax and identity checks.",
+    "total": 14,
+    "free_full": 14,
+    "live": 14,
+    "free_and_live": 14,
+    "verified": 1,
+    "no_official_source": 0
+   },
+   {
+    "id": "directory",
+    "name": "Directories & forums",
+    "blurb": "Places that list many current contests. Use them to find new promotions, then verify each contest\u2019s own official rules.",
+    "total": 2,
+    "free_full": 2,
+    "live": 2,
+    "free_and_live": 2,
+    "verified": 0,
+    "no_official_source": 0
+   },
+   {
+    "id": "pools",
+    "name": "Free pool & league platforms",
+    "blurb": "Free tools for running your own pick\u2019em, survivor, squares, or fantasy league. The platform is free; the prize pot is funded by your group.",
+    "total": 7,
+    "free_full": 5,
+    "live": 7,
+    "free_and_live": 5,
+    "verified": 0,
+    "no_official_source": 0
+   }
+  ]
+ },
+ "findings": [
+  {
+   "id": "F01",
+   "rule": "R1",
+   "severity": "high",
+   "title": "Listings with no official-tier source",
+   "detail": "The source file states its own rule: \u201cany listing that states a specific prize figure must cite the operator's own rules or game page\u201d, with tiers official | affiliate | forum. These listings cite only affiliate or forum pages.",
+   "listing_ids": [
+    "thelines-survivor",
+    "fantasy-arena",
+    "fplhub",
+    "bona-fide",
+    "olka",
+    "fplmanager-india",
+    "fplstore",
+    "pitchbooking",
+    "roboforex-demo",
+    "fbs-pro-demo",
+    "npbfx-demo",
+    "tff-fantezi-lig"
+   ],
+   "count": 12,
+   "rows": [
+    {
+     "id": "thelines-survivor",
+     "name": "TheLines Free NFL Survivor",
+     "url": "https://www.thelines.com/free-nfl-contest-pools-games-week-1-2024/",
+     "sources": [
+      "affiliate: https://www.thelines.com/free-nfl-contest-pools-games-week-1-2024/"
+     ]
+    },
+    {
+     "id": "fantasy-arena",
+     "name": "Fantasy Arena FPL league",
+     "url": "https://fantasy.premierleague.com/",
+     "sources": [
+      "affiliate: https://allaboutfpl.com/2025/07/list-of-free-to-join-prize-fpl-mini-leagues-ahead-of-25-26-season/"
+     ]
+    },
+    {
+     "id": "fplhub",
+     "name": "FPL Hub league",
+     "url": "https://fantasy.premierleague.com/",
+     "sources": [
+      "affiliate: https://fpltips.com/fpl-leagues-with-prizes/"
+     ]
+    },
+    {
+     "id": "bona-fide",
+     "name": "Bona Fide Sports league",
+     "url": "https://fantasy.premierleague.com/",
+     "sources": [
+      "forum: https://www.reddit.com/r/FantasyPL/comments/1v4h6th/fpl_202627_minileagues_thread/"
+     ]
+    },
+    {
+     "id": "olka",
+     "name": "OLKA Express league",
+     "url": "https://fantasy.premierleague.com/",
+     "sources": [
+      "forum: https://www.reddit.com/r/FantasyPL/comments/1m6naoy/league_codes_megathread/"
+     ]
+    },
+    {
+     "id": "fplmanager-india",
+     "name": "FPLManagerIndia league",
+     "url": "https://fantasy.premierleague.com/",
+     "sources": [
+      "affiliate: https://allaboutfpl.com/2025/07/list-of-free-to-join-prize-fpl-mini-leagues-ahead-of-25-26-season/"
+     ]
+    },
+    {
+     "id": "fplstore",
+     "name": "fplStore_ league",
+     "url": "https://fantasy.premierleague.com/",
+     "sources": [
+      "affiliate: https://fpltips.com/fpl-leagues-with-prizes/"
+     ]
+    },
+    {
+     "id": "pitchbooking",
+     "name": "Pitchbooking.com league",
+     "url": "https://fantasy.premierleague.com/",
+     "sources": [
+      "forum: https://www.reddit.com/r/FantasyPL/comments/wecme0/list_of_free_to_enter_fpl_leagues_with_prizes/"
+     ]
+    },
+    {
+     "id": "roboforex-demo",
+     "name": "RoboForex Demo Contest",
+     "url": "https://roboforex.com/",
+     "sources": [
+      "affiliate: https://tradingbrokers.com/roboforex-demo-contest/"
+     ]
+    },
+    {
+     "id": "fbs-pro-demo",
+     "name": "FBS Pro Demo Contest",
+     "url": "https://fbs.com/",
+     "sources": [
+      "affiliate: https://fofan.org/contest/fbs-pro-demo-trading-contest/"
+     ]
+    },
+    {
+     "id": "npbfx-demo",
+     "name": "NPBFX Trading Battle Demo Contest",
+     "url": "https://npbfx.com/",
+     "sources": [
+      "affiliate: https://www.ndfxbonus.com/2026/07/npbfx-trading-battle-demo-contest-win.html"
+     ]
+    },
+    {
+     "id": "tff-fantezi-lig",
+     "name": "TFF Fantezi Lig (Turkish S\u00fcper Lig)",
+     "url": "https://fantazilig.tff.org/",
+     "sources": [
+      "affiliate: https://en.shiftdelete.net/tff-launches-official-fantasy-league-mobile-game-for-super-lig/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "F02",
+   "rule": "R2",
+   "severity": "high",
+   "title": "Dollar prize figures that cite no official page",
+   "detail": "A specific prize ladder is published for these entries while the only citation is an affiliate page. The figures are reproduced in the tables as *source data, unverified*, never as a verified amount.",
+   "listing_ids": [
+    "roboforex-demo",
+    "fbs-pro-demo",
+    "npbfx-demo"
+   ],
+   "count": 3,
+   "rows": [
+    {
+     "id": "roboforex-demo",
+     "name": "RoboForex Demo Contest",
+     "prize": "1st $700, 2nd $550, 3rd $420 \u2026 10th $50 (ten prizes)",
+     "url": "https://roboforex.com/"
+    },
+    {
+     "id": "fbs-pro-demo",
+     "name": "FBS Pro Demo Contest",
+     "prize": "1st $450, 2nd $250, 3rd $150, 4th $100, 5th $50 ($1,000 fund)",
+     "url": "https://fbs.com/"
+    },
+    {
+     "id": "npbfx-demo",
+     "name": "NPBFX Trading Battle Demo Contest",
+     "prize": "1st $1,000 (+ iPhone), 2nd $500, 3rd $250, 4th $150, 5th\u201310th $100, 11th\u201320th $50",
+     "url": "https://npbfx.com/"
+    }
+   ]
+  },
+  {
+   "id": "F03",
+   "rule": "R3",
+   "severity": "high",
+   "title": "Several listings share one sign-up URL",
+   "detail": "These rows do not link to a distinct prize page. For the Fantasy Premier League group, the shared URL is the game itself, which publishes no cash prize \u2014 the cash claims come from third-party mini-leagues with private rules.",
+   "listing_ids": [
+    "afl-tipping",
+    "aflw-tipping",
+    "bingo-cash",
+    "bona-fide",
+    "cev-predictor",
+    "cev-volley-fantasy",
+    "fantasy-arena",
+    "ffs-fpl",
+    "ffs-ucl",
+    "football-mad",
+    "fpl-official",
+    "fplhub",
+    "fplmanager-india",
+    "fplstore",
+    "lazyfpl",
+    "olka",
+    "pitchbooking",
+    "solitaire-cash",
+    "ucl-fantasy"
+   ],
+   "count": 19,
+   "groups": [
+    {
+     "url": "https://championsleague.cev.eu/",
+     "ids": [
+      "cev-volley-fantasy",
+      "cev-predictor"
+     ]
+    },
+    {
+     "url": "https://fantasy.premierleague.com/",
+     "ids": [
+      "fpl-official",
+      "ffs-fpl",
+      "football-mad",
+      "fantasy-arena",
+      "lazyfpl",
+      "fplhub",
+      "bona-fide",
+      "olka",
+      "fplmanager-india",
+      "fplstore",
+      "pitchbooking"
+     ]
+    },
+    {
+     "url": "https://gaming.uefa.com/en/uclfantasy",
+     "ids": [
+      "ucl-fantasy",
+      "ffs-ucl"
+     ]
+    },
+    {
+     "url": "https://tipping.afl.com.au/",
+     "ids": [
+      "afl-tipping",
+      "aflw-tipping"
+     ]
+    },
+    {
+     "url": "https://www.papaya.com/",
+     "ids": [
+      "solitaire-cash",
+      "bingo-cash"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "F04",
+   "rule": "R4",
+   "severity": "medium",
+   "title": "Listings that are not themselves prize competitions",
+   "detail": "Directories and pool-host tools publish no prize of their own; any money comes from the user's own private group. They are counted in the headline 'free path' total on the reference site.",
+   "listing_ids": [
+    "reedsy-dir",
+    "officepoolstop",
+    "funofficepools",
+    "mysurvivorpool",
+    "gridirongames",
+    "squarespool",
+    "myfantasyleague",
+    "trofeo",
+    "mlcontests"
+   ],
+   "count": 9,
+   "rows": [
+    {
+     "id": "reedsy-dir",
+     "name": "Reedsy Writing Contest List",
+     "type": "directory",
+     "prize": "Listed per contest (hundreds to tens of thousands)"
+    },
+    {
+     "id": "officepoolstop",
+     "name": "OfficePoolStop",
+     "type": "pools",
+     "prize": "Prizes decided by your group"
+    },
+    {
+     "id": "funofficepools",
+     "name": "FunOfficePools",
+     "type": "pools",
+     "prize": "Prizes decided by your group"
+    },
+    {
+     "id": "mysurvivorpool",
+     "name": "MySurvivorPool",
+     "type": "pools",
+     "prize": "Prizes decided by your group"
+    },
+    {
+     "id": "gridirongames",
+     "name": "Gridiron Games",
+     "type": "pools",
+     "prize": "Prizes decided by your group \u2014 commissioner pays a hosting fee"
+    },
+    {
+     "id": "squarespool",
+     "name": "SquaresPool.com",
+     "type": "pools",
+     "prize": "Prizes decided by your group"
+    },
+    {
+     "id": "myfantasyleague",
+     "name": "MyFantasyLeague",
+     "type": "pools",
+     "prize": "Prizes decided by your league"
+    },
+    {
+     "id": "trofeo",
+     "name": "Trofeo.live",
+     "type": "pools",
+     "prize": "Pools with friends"
+    },
+    {
+     "id": "mlcontests",
+     "name": "ML Contests",
+     "type": "directory",
+     "prize": "n/a \u2014 directory"
+    }
+   ]
+  },
+  {
+   "id": "F05",
+   "rule": "R5",
+   "severity": "medium",
+   "title": "Ended / out-of-season entries inside the headline free-path count",
+   "detail": "27 listings carry status 'ended' and 26 of them are counted by the reference site's JavaScript in 'True free paths' (it counts freePath=='full' with no status filter). They cannot be entered today.",
+   "listing_ids": [
+    "givling",
+    "espn-pigskin",
+    "fox-super6",
+    "pickwatch",
+    "thelines-survivor",
+    "splash-mock",
+    "fftoday-draft",
+    "fpl-second-chance",
+    "the-special-one",
+    "goaloracle",
+    "oddspedia",
+    "espn-tourney-challenge",
+    "espn-tc-eliminator",
+    "nhl-bracket-challenge",
+    "espn-nba-playoff",
+    "nba-pickem",
+    "espn-hockey-playoff",
+    "espn-cfp-bracket",
+    "espn-knockout-bracket",
+    "mlb-hr-derby-pickem",
+    "espn-womens-tourney",
+    "yahoo-bracket-mayhem",
+    "espn-bowl-mania",
+    "the-open-fantasy",
+    "darts-corner-predictor",
+    "bridgewater-forecast",
+    "aleague-fantasy"
+   ],
+   "count": 27,
+   "ended_free_ids": [
+    "espn-pigskin",
+    "fox-super6",
+    "pickwatch",
+    "thelines-survivor",
+    "splash-mock",
+    "fftoday-draft",
+    "fpl-second-chance",
+    "the-special-one",
+    "goaloracle",
+    "oddspedia",
+    "espn-tourney-challenge",
+    "espn-tc-eliminator",
+    "nhl-bracket-challenge",
+    "espn-nba-playoff",
+    "nba-pickem",
+    "espn-hockey-playoff",
+    "espn-cfp-bracket",
+    "espn-knockout-bracket",
+    "mlb-hr-derby-pickem",
+    "espn-womens-tourney",
+    "yahoo-bracket-mayhem",
+    "espn-bowl-mania",
+    "the-open-fantasy",
+    "darts-corner-predictor",
+    "bridgewater-forecast",
+    "aleague-fantasy"
+   ]
+  },
+  {
+   "id": "F06",
+   "rule": "R6",
+   "severity": "medium",
+   "title": "Prize is explicitly not currently knowable",
+   "detail": "The source data itself says the prize is unpublished, not running, or unconfirmed. The Prize (USD) column is therefore left blank for these rows; nothing is estimated.",
+   "listing_ids": [
+    "givling",
+    "fox-super6",
+    "pickwatch",
+    "thelines-survivor",
+    "splash-mock",
+    "football-mad",
+    "fantasy-arena",
+    "fplhub",
+    "bona-fide",
+    "olka",
+    "fplmanager-india",
+    "fplstore",
+    "pitchbooking",
+    "crunchdao",
+    "mlcontests",
+    "99designs",
+    "designcrowd",
+    "crowdspring"
+   ],
+   "count": 18,
+   "rows": [
+    {
+     "id": "givling",
+     "name": "Givling",
+     "prize": "Trivia removed \u2014 no longer a trivia contest",
+     "status": "ended"
+    },
+    {
+     "id": "fox-super6",
+     "name": "FOX Super 6",
+     "prize": "Not currently published \u2014 confirm on the live game page",
+     "status": "ended"
+    },
+    {
+     "id": "pickwatch",
+     "name": "NFL Pickwatch Contest",
+     "prize": "Not running for 2026",
+     "status": "ended"
+    },
+    {
+     "id": "thelines-survivor",
+     "name": "TheLines Free NFL Survivor",
+     "prize": "Not confirmed for 2026",
+     "status": "ended"
+    },
+    {
+     "id": "splash-mock",
+     "name": "Splash Sports NFL Mock Draft",
+     "prize": "Not verified outside the entry window",
+     "status": "ended"
+    },
+    {
+     "id": "football-mad",
+     "name": "Football Mad FPL league",
+     "prize": "Prize pool not confirmed for 2026/27",
+     "status": "caution"
+    },
+    {
+     "id": "fantasy-arena",
+     "name": "Fantasy Arena FPL league",
+     "prize": "Prize not confirmed for 2026/27",
+     "status": "caution"
+    },
+    {
+     "id": "fplhub",
+     "name": "FPL Hub league",
+     "prize": "Prize not confirmed for 2026/27",
+     "status": "caution"
+    },
+    {
+     "id": "bona-fide",
+     "name": "Bona Fide Sports league",
+     "prize": "Prize not confirmed for 2026/27",
+     "status": "caution"
+    },
+    {
+     "id": "olka",
+     "name": "OLKA Express league",
+     "prize": "Prize not confirmed for 2026/27",
+     "status": "caution"
+    },
+    {
+     "id": "fplmanager-india",
+     "name": "FPLManagerIndia league",
+     "prize": "Prize not confirmed for 2026/27",
+     "status": "caution"
+    },
+    {
+     "id": "fplstore",
+     "name": "fplStore_ league",
+     "prize": "Prize not confirmed for 2026/27",
+     "status": "caution"
+    },
+    {
+     "id": "pitchbooking",
+     "name": "Pitchbooking.com league",
+     "prize": "Prize not confirmed for 2026/27",
+     "status": "caution"
+    },
+    {
+     "id": "crunchdao",
+     "name": "CrunchDAO / ADIA Lab Challenges",
+     "prize": "Prize pool not stated on the competition overview \u2014 confirm before entering",
+     "status": "live"
+    },
+    {
+     "id": "mlcontests",
+     "name": "ML Contests",
+     "prize": "n/a \u2014 directory",
+     "status": "live"
+    },
+    {
+     "id": "99designs",
+     "name": "99designs Design Contests",
+     "prize": "Client-funded prize per contest (varies)",
+     "status": "live"
+    },
+    {
+     "id": "designcrowd",
+     "name": "DesignCrowd Design Contests",
+     "prize": "Client-funded prize per contest (varies); community contests free with monetary prizes",
+     "status": "live"
+    },
+    {
+     "id": "crowdspring",
+     "name": "CrowdSpring Design Contests",
+     "prize": "Client-funded prize per contest (varies)",
+     "status": "live"
+    }
+   ]
+  },
+  {
+   "id": "F07",
+   "rule": "R7",
+   "severity": "medium",
+   "title": "Marked 'Free USD path' although the description mentions an entry fee or deposit",
+   "detail": "The fee may correctly apply only to a separate cash room, but the label and the copy disagree on the same row and need a human read.",
+   "listing_ids": [
+    "ewc-play",
+    "deriv-tournaments",
+    "multibank-demo",
+    "tradingcom-paper",
+    "tickmill-nfp",
+    "film-prize"
+   ],
+   "count": 6,
+   "rows": [
+    {
+     "id": "ewc-play",
+     "name": "Esports World Cup (EWC) Play \u2014 Fantasy & Pick'em",
+     "short": "The official EWC free fantasy and pick'em game. No entry fee or wager of any kind; cash prizes for top finishers."
+    },
+    {
+     "id": "deriv-tournaments",
+     "name": "Deriv Trading Tournaments",
+     "short": "Deriv's free monthly demo trading tournaments with real cash prizes, no deposit required."
+    },
+    {
+     "id": "multibank-demo",
+     "name": "MultiBank Group Demo Trading Competition",
+     "short": "MultiBank's free demo trading competition with $15,000 in real cash every round plus a year-end car."
+    },
+    {
+     "id": "tradingcom-paper",
+     "name": "Trading.com Paper Trading Competition",
+     "short": "Trading.com's free monthly paper-trading competition (US only) \u2014 $6,000 / $3,000 / $1,000 cash prizes."
+    },
+    {
+     "id": "tickmill-nfp",
+     "name": "Tickmill NFP Machine",
+     "short": "Tickmill's monthly price-prediction contest \u2014 predict the NFP price for a chance at $500 cash."
+    },
+    {
+     "id": "film-prize",
+     "name": "Louisiana Film Prize (Prize Fest)",
+     "short": "The world's largest cash prize for a short film \u2014 $50,000, with a $0 entry fee (film must be shot in Louisiana)."
+    }
+   ]
+  },
+  {
+   "id": "F08",
+   "rule": "R8",
+   "severity": "low",
+   "title": "Non-cash currency named in the payout copy of a 'free' row",
+   "detail": "Gems, tickets, Z coins and bonus cash are not withdrawable dollars. Rows are kept, but they are not ranked as cash prizes.",
+   "listing_ids": [
+    "rams-pickem",
+    "atp-fantasy",
+    "f1-fantasy",
+    "superbru",
+    "six-nations-fantasy",
+    "euroleague-fantasy",
+    "cev-volley-fantasy",
+    "cev-predictor",
+    "super-league-fantasy",
+    "super-league-predictor",
+    "motogp-fantasy",
+    "the-hundred-fantasy",
+    "ibu-ecup",
+    "premiership-rugby-fantasy",
+    "aleague-fantasy"
+   ],
+   "count": 15,
+   "rows": [
+    {
+     "id": "rams-pickem",
+     "name": "LA Rams Pick'em",
+     "prize": "Pechanga resort stay + $250 credit; weekly tickets and signed merchandise",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "atp-fantasy",
+     "name": "ATP Fantasy (Official ATP Tour)",
+     "prize": "ATP merchandise and 2027 tickets (no cash)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "f1-fantasy",
+     "name": "F1 Fantasy (Official Formula 1)",
+     "prize": "2027 F1 tickets + VIP grid walk (1st); grandstand tickets (2nd); \u00a3500 F1 Store voucher (3rd)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "superbru",
+     "name": "Superbru",
+     "prize": "Sponsor-funded prizes per game (tickets, vouchers, experiences)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "six-nations-fantasy",
+     "name": "Six Nations Fantasy Rugby",
+     "prize": "2x tickets + flights/accommodation (overall); signed ball (top 5); \u00a3100 Fanatics gift card (round)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "euroleague-fantasy",
+     "name": "EuroLeague Fantasy Challenge",
+     "prize": "Game tickets, jerseys, basketballs and EuroLeague TV subscriptions (non-cash)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "cev-volley-fantasy",
+     "name": "CEV Champions League Volley Fantasy",
+     "prize": "Final 2026 tickets (season winner); jerseys + match balls (2nd\u20133rd); match ball + EuroVolley.TV (4th\u20135th)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "cev-predictor",
+     "name": "CEV Champions League Predictor Game",
+     "prize": "Tickets to the Final Four 2027 (non-cash)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "super-league-fantasy",
+     "name": "Betfred Super League Fantasy (Rugby League)",
+     "prize": "Monthly: PS5/Xbox + \u00a3600 games; season: hospitality tickets + SuperLeague+ pass + signed shirt",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "super-league-predictor",
+     "name": "Betfred Super League Predictor",
+     "prize": "Season winner: launch invite + 4 event tickets + SuperLeague+ pass; monthly/weekly tickets; streak prizes",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "motogp-fantasy",
+     "name": "MotoGP Fantasy (Official)",
+     "prize": "1st signed Marquez helmet; 2nd PS5 + MotoGP26; 3rd signed knee slider; weekly GP tickets",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "the-hundred-fantasy",
+     "name": "The Hundred Fantasy (ECB)",
+     "prize": "1st signed bat; 2nd Citizen watch + tickets; 3rd; block winners get Final tickets (non-cash)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "ibu-ecup",
+     "name": "IBU eCup (Winter Sports Mania)",
+     "prize": "2x VIP tickets to the BMW IBU World Cup for monthly winners (non-cash)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "premiership-rugby-fantasy",
+     "name": "Fantasy Premiership Rugby",
+     "prize": "Overall winner: VIP Final package; runner-up: signed shirt + 4 tickets; per-round: 2 tickets",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "aleague-fantasy",
+     "name": "A-Leagues Fantasy",
+     "prize": "$4,000 major prize; $600 2nd; $400 3rd; weekly double-pass tickets",
+     "cashout": "Winner claim only"
+    }
+   ]
+  },
+  {
+   "id": "F09",
+   "rule": "R9",
+   "severity": "info",
+   "title": "Prize published as prose, not a figure",
+   "detail": "102 of 206 listings describe the prize in words without a dollar amount. No amount is derived from prose; the Prize (USD) column stays blank until an official page is read (see data/verification.json).",
+   "listing_ids": [
+    "solitaire-cash",
+    "bingo-cash",
+    "skillz",
+    "pocket7",
+    "givling",
+    "reedsy-dir",
+    "topcoder",
+    "fox-super6",
+    "pickwatch",
+    "thelines-survivor",
+    "splash-mock",
+    "fpl-official",
+    "fpl-second-chance",
+    "fpl-draft",
+    "fantasy-efl",
+    "telegraph-ff",
+    "ucl-fantasy",
+    "pl-predictor",
+    "pooltracker-epl",
+    "ffs-fpl",
+    "ffs-ucl",
+    "ffs-efl",
+    "ffs-tattico",
+    "football-mad",
+    "fantasy-arena",
+    "lazyfpl",
+    "fplhub",
+    "bona-fide",
+    "olka",
+    "fplmanager-india",
+    "fplstore",
+    "pitchbooking",
+    "dirty-dozen",
+    "the-special-one",
+    "andys-predictor",
+    "pickem-sports",
+    "sports-predictor",
+    "goaloracle",
+    "oddspedia",
+    "streak-for-cash",
+    "playerslounge",
+    "officepoolstop",
+    "funofficepools",
+    "mysurvivorpool",
+    "gridirongames",
+    "squarespool",
+    "myfantasyleague",
+    "trofeo",
+    "crunchdao",
+    "mlcontests",
+    "bundesliga-fantasy",
+    "laliga-fantasy",
+    "swagbucks-trivia",
+    "99designs",
+    "battlefy",
+    "challengermode",
+    "atp-fantasy",
+    "f1-fantasy",
+    "start-gg",
+    "play-pokemon",
+    "designcrowd",
+    "crowdspring",
+    "signate",
+    "hypermind",
+    "superbru",
+    "ligue1-fantasy",
+    "lol-pickem",
+    "six-nations-fantasy",
+    "tattico-serie-a",
+    "supercoach-bbl",
+    "ninjatrader-arena",
+    "dp-world-tour-fantasy",
+    "the-open-fantasy",
+    "sun-dream-team",
+    "sky-sports-ff",
+    "cricket-draft",
+    "icc-t20-fantasy",
+    "darts-corner-predictor",
+    "spfl-fantasy",
+    "euroleague-fantasy",
+    "valorant-pickem",
+    "eredivisie-fantasy",
+    "cev-volley-fantasy",
+    "cev-predictor",
+    "super-league-fantasy",
+    "super-league-predictor",
+    "motogp-fantasy",
+    "the-hundred-fantasy",
+    "fantasy-gaa",
+    "wsl-fantasy",
+    "ti-compendium",
+    "ibu-ecup",
+    "tff-fantezi-lig",
+    "premiership-rugby-fantasy",
+    "agentmma",
+    "formula-e-predictor",
+    "telegraph-fantasy-racing",
+    "stable-stars",
+    "ultimate-fantasy-tennis",
+    "world-press-photo",
+    "weather-potw",
+    "epoty"
+   ],
+   "count": 102,
+   "count_of_listings": 206
+  },
+  {
+   "id": "F10",
+   "rule": "R10",
+   "severity": "low",
+   "title": "Headline 'Added this pass' is one sub-list, not the set of additions",
+   "detail": "The reference site renders 'Added this pass' from `addedThisPassC` (60 ids) and badges rows as 'New' only if they appear in `addedThisPass` or `addedThisPassC`. The file also carries passes G\u2013S (132 ids); the union of every addedThisPass* list is 192 ids, so most later additions never get the badge.",
+   "listing_ids": [],
+   "count": 0,
+   "per_key": {
+    "addedThisPass": 10,
+    "addedThisPassC": 60,
+    "addedThisPassG": 10,
+    "addedThisPassH": 12,
+    "addedThisPassI": 10,
+    "addedThisPassJ": 10,
+    "addedThisPassK": 10,
+    "addedThisPassL": 10,
+    "addedThisPassM": 10,
+    "addedThisPassN": 10,
+    "addedThisPassO": 10,
+    "addedThisPassP": 10,
+    "addedThisPassQ": 10,
+    "addedThisPassR": 10,
+    "addedThisPassS": 10
+   },
+   "union": 192
+  },
+  {
+   "id": "F11",
+   "rule": "R11",
+   "severity": "low",
+   "title": "Reference site masthead date disagrees with its data",
+   "detail": "`index.html` prints \u201cPass C \u00b7 17 Aug 2026\u201d in the masthead while `assets/data.js` declares `reviewed: 2026-08-19`, `pass: \"S\"`. Any reader using the masthead is three passes and two days behind. (Literal masthead read from the mirrored copy: 'Pass C \u00b7 17 Aug 2026'.)",
+   "listing_ids": [],
+   "count": 0
+  }
+ ],
+ "environment_limits": [
+  "External links are not probed from the shell (no outbound network except GitHub/npm/PyPI in this sandbox).",
+  "Prize prose is never converted to a number; Prize (USD) is blank unless an official page was read."
+ ]
+}

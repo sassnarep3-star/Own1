@@ -1,0 +1,76 @@
+{
+ "readOn": "2026-11-01",
+ "total": 211,
+ "verified": 20,
+ "partial": 6,
+ "unverified": 185,
+ "freeConfirmed": 13,
+ "paidConfirmed": 1,
+ "cashConfirmed": 16,
+ "noSource": 2,
+ "categories": [
+  {
+   "id": "tech",
+   "name": "AI, data & code",
+   "blurb": "Model-building and engineering competitions with cash prizes",
+   "icon": "⌘"
+  },
+  {
+   "id": "forecasting",
+   "name": "Forecasting",
+   "blurb": "Prediction tournaments scored on accuracy",
+   "icon": "◎"
+  },
+  {
+   "id": "creative",
+   "name": "Writing, art & photography",
+   "blurb": "Judged creative prizes",
+   "icon": "✳"
+  },
+  {
+   "id": "sports",
+   "name": "Sports picks & fantasy",
+   "blurb": "Season-long and weekly prediction games",
+   "icon": "◈"
+  },
+  {
+   "id": "market",
+   "name": "Markets & trading",
+   "blurb": "Paper-trading and demo competitions",
+   "icon": "▥"
+  },
+  {
+   "id": "skill",
+   "name": "Skill cash games",
+   "blurb": "Mostly pay-to-enter skill tournaments and esports",
+   "icon": "⚡"
+  },
+  {
+   "id": "trivia",
+   "name": "Trivia & quizzes",
+   "blurb": "Quiz and knowledge formats",
+   "icon": "?"
+  },
+  {
+   "id": "pools",
+   "name": "Pool software",
+   "blurb": "Tools for group pools — prizes are usually funded by players, not the operator",
+   "icon": "▦"
+  },
+  {
+   "id": "directory",
+   "name": "Directories",
+   "blurb": "Lists and indexes that point to competitions",
+   "icon": "↗"
+  }
+ ],
+ "linkCheckedOn": "2026-11-01T13:47:33.737Z",
+ "linkTotal": 203,
+ "linkOk": 166,
+ "linkHardFail": 10,
+ "linkSoftFail": 27,
+ "linkRedirect": 2,
+ "linkServerErr": 1,
+ "linkBotBlocked": 24,
+ "linkHealthGenerated": "2026-11-01T13:47:33.737Z"
+}

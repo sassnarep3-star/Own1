@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How rows are verified, the actionability score rubric, the blank-field policy and known limitations.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0f766e">
+<title>Method and verification rules · Prize Atlas</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%230f766e%22%2F%3E%3Cpath%20d%3D%22M16%207l2.4%205.6L24%2015l-5.6%202.4L16%2023l-2.4-5.6L8%2015l5.6-2.4z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E">
+<link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-base="./" data-view="methodology" data-category="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="brand" href="./index.html"><span class="mark" aria-hidden="true">✳</span><span>Prize Atlas</span></a>
+    <nav class="nav" aria-label="Main"><a href="./index.html">Overview</a><a href="./shortlist.html">Shortlist</a><a href="./categories.html">Categories</a><a href="./summary.html">Summary</a><a href="./methodology.html" aria-current="page">Method</a><a href="./review.html">Flagged</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Overview</a><span aria-hidden="true">/</span> <span>Method</span></nav>
+  <div class="pagehead">
+    <p class="eyebrow">Method</p>
+    <h1>How each row is checked</h1>
+    <p class="lead">The rules are boring on purpose: one official page per fact, a date, and a blank when the page does not say it.</p>
+  </div>
+</div>
+<div class="wrap prose">
+  <section>
+    <h2>Evidence levels</h2>
+    <table class="simple">
+      <thead><tr><th>Level</th><th>What it means</th><th>What you can rely on</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill pill-ok">Verified</span></td><td>The operator’s own page was opened on the verification date and prints the prize, entry cost, deadline or eligibility shown.</td><td>Those specific facts, on that date, for that edition.</td></tr>
+        <tr><td><span class="pill pill-info">Platform index</span></td><td>The official index was read; individual events set their own terms.</td><td>That the platform exists and hosts events — not any individual prize.</td></tr>
+        <tr><td><span class="pill pill-warn">Unverified lead</span></td><td>Imported name and link only. No operator page was read, or the page could not be read.</td><td>Nothing about money, eligibility or timing.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="score">
+    <h2>The actionability score (0–100)</h2>
+    <p>This ranks how complete and current the verified facts are. It is deliberately not an expected-value calculation: no source in this dataset publishes win probabilities, entrant counts or time-to-prize data, so any such number would be invented.</p>
+    <table class="simple">
+      <thead><tr><th>Component</th><th>Points</th><th>Condition</th></tr></thead>
+      <tbody>
+        <tr><td>Free entry confirmed</td><td>+25</td><td>The operator page says entry is free.</td></tr>
+        <tr><td>Cash prize confirmed</td><td>+20</td><td>A cash amount or pool is printed, and the prize is cash rather than merchandise or bonus credit.</td></tr>
+        <tr><td>Open when checked</td><td>+15</td><td>No closure notice on the page at the verification date.</td></tr>
+        <tr><td>Deadline or season dates printed</td><td>+10</td><td>A date or window appears on the page.</td></tr>
+        <tr><td>Eligibility printed</td><td>+10</td><td>Age, geography or account requirements are stated.</td></tr>
+        <tr><td>Effort stated</td><td>+10 / +6</td><td>+10 when the format is low-effort (picks, forecasts), +6 when it is not.</td></tr>
+        <tr><td>Official page checked</td><td>+10</td><td>Status is verified or platform.</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Unverified leads score 0 by definition and are excluded from the shortlist. The score ships in the site’s JavaScript, so you can read it: <a href="https://github.com/sassnarep3-star/Own1/blob/main/assets/app.js">assets/app.js</a>.</p>
+  </section>
+
+  <section>
+    <h2>Rules the data has to pass</h2>
+    <ul class="plain">
+      <li><strong>No inferred values.</strong> If the page does not print a prize, entry cost or deadline, the field is empty. Blanks are rendered as “—” and never as “unknown amount”.</li>
+      <li><strong>No third-party facts.</strong> Aggregators, news articles and app-store pages are used only to find an operator page, never as the source of a figure.</li>
+      <li><strong>A date on every verified row.</strong> <code>verifiedOn</code> is mandatory for verified and platform rows.</li>
+      <li><strong>Flags are published, not hidden.</strong> Every contradiction, dead link and non-cash prize is surfaced on the row and on the <a href="review.html">Flagged for review</a> page.</li>
+      <li><strong>The build is checked.</strong> A test suite validates the JSON schema, enforces the blank-field policy, verifies every internal link and confirms the generated pages match their source data before anything is published.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Known limits</h2>
+    <ul class="plain">
+      <li>Most rows are still leads. 180 of 211 entries have not been read against an operator page.</li>
+      <li>Verification is a snapshot. Contests close, prizes change and pages move; the date on each row is the only currency.</li>
+      <li>Some official pages are JavaScript applications that return nothing to a reader or crawler. Those rows stay unverified rather than being filled in from memory.</li>
+      <li>Eligibility summaries are paraphrases of one section of the rules; the rules themselves control.</li>
+      <li>External link reachability is monitored separately because operator sites rate-limit and block automated checks; a passing link check is not evidence of a prize.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Provenance</h2>
+    <p>The 206 imported names come from the reference catalogue’s data file (stamped 2026-08-19). Names and category assignments were kept; every financial and timing claim was cleared until an operator page confirmed it. The two added rows (GEMS, US Midterms 2026) were added from their operator pages. Full page-by-page notes: <a href="https://github.com/sassnarep3-star/Own1/blob/main/research/VERIFICATION.md">research/VERIFICATION.md</a>. Pages and evidence files produced by other agent sessions working in this repository at the same time are preserved and listed on the <a href="archive.html">archive page</a>.</p>
+  </section>
+</div>
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p><strong>Prize Atlas</strong> — a source-first research dashboard. Not financial, legal or tax advice. Rules change without notice: always read the operator's own page before you spend time or money.</p>
+    <p>Data last verified <time datetime="2026-11-01">1 November 2026</time> · <a href="./methodology.html">Method</a> · <a href="./review.html">Flagged for review</a> · <a href="./archive.html">Archive</a> · <a href="https://github.com/sassnarep3-star/Own1">Repository</a></p>
+  </div>
+</footer>
+<script src="./assets/app.js" defer></script>
+</body>
+</html>

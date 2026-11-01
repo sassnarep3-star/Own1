@@ -19,6 +19,7 @@ does not block anything.
 | `90c9f78c-own1` | `arena/90c9f78c-own1` | PR #5, #8 | Re-verification of all 7 checked rows, executive summary, integration record |
 | `37aed701-own1` | `arena/37aed701-own1` | PR #6, #9 | Supplemental research page: 3 hackathons, 5 findings, official links |
 | `20a81ffd-own1` | `arena/20a81ffd-own1` | PR #10 | Independent source verification record |
+| `a479d584-own1`, `4a243e58-own1` | `arena/a479d584-own1`, `arena/4a243e58-own1` | PR #20, #21 | Fourth build: ledger subsite, `.cjs` scripts, honest link-status classification, ESPN College Pick'em and CBS Pick'em verified, 15 unsourced claims quarantined |
 | `4e1fdad5-own1` | `arena/4e1fdad5-own1` | PR #17, #18, #19 | Third full build: per-entry pages, playbook, finder, `data/upstream/` snapshot of the source repo |
 | `d21e8702-own1` | `arena/d21e8702-own1` | PR #12, #16 | Second full build of the brief: Python site generator, own audit/methodology/sources pages, `tools/*.py`, `data/audit.json` |
 | **`arena-041e7ad1`** | **`arena/041e7ad1-own1`** | **PR #13** | **Final integration session: provenance-pinned rebuild, 211-row verified table, 22 flags, merge of all of the above** |
@@ -199,6 +200,25 @@ Resolution:
   per-row anchors exist only at runtime. File links into the archives are still fully checked.
 
 Result: 325 HTML files, 0 broken links, all suites green.
+
+### Fourth reconciliation (sessions `a479d584`, `4a243e58`)
+
+`main` gained one more build while this PR waited on the mergeable check: a `ledger/` subsite, `.cjs`
+script names, a link-status classifier that treats redirects and 5xx as "unknown" rather than
+"broken", two additional verified competitions (ESPN College Pick'em, CBS Pick'em) and a documented
+quarantine of 15 unsourced claims coming out of the merged builds.
+
+- Preserved intact at `archive/session-4a243e58/` (112 files, banner-linked, including its
+  `.github/workflows/link-health.yml`), so their new verifications and quarantine list stay readable
+  and diffable.
+- Their root duplicates were removed after archiving, and their `link-health` workflow stays out of
+  this repo's CI gate — it depends on their `data/entries.json`/`build-data.mjs` pipeline, which lives
+  in the archive, not at the root.
+- Their new verifications are *not* copied into this build's tables. Copying a claim from another
+  session's page would make it second-hand; this build only publishes figures it can show a source
+  for itself. Their two verifications are linked from `research.html` via the archive.
+
+Result: 392 HTML files, 0 broken links, all suites green.
 
 ### Conflict log
 
