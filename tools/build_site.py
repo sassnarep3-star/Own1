@@ -161,6 +161,7 @@ NAV = [
     ("executive-summary.html", "Summary"),
     ("sources.html", "Sources"),
     ("cross-session.html", "Cross-session"),
+    ("ledger/index.html", "Verified ledger"),
 ]
 
 

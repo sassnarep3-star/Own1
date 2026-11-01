@@ -112,3 +112,7 @@ was discarded: their dataset, review queue, research notes, supplemental page an
 `cross-session.html` bridges the two builds. The merge resolution — including the one assertion reconciled inside
 their `tests/validate.mjs` — is recorded in [`COORDINATION.md`](COORDINATION.md) §6, with their full log preserved
 verbatim in §7.
+
+## Verified Contest Ledger (`ledger/`)
+
+A second build by session `a479d584-own1`, kept alongside the pages above: dashboard, verified top picks, per-category pages, a Flagged for Review page and method log, under [`ledger/`](ledger/index.html). It covers all 206 upstream rows, with 28 checked against official pages and the rest labelled "not checked" with blank prize cells. Data: `data/finder-ledger.json|csv`, `data/finder-audit.json`, `data/verification/`. Rebuild: `node scripts/audit.js && node scripts/build.js && node scripts/linkcheck.js`.

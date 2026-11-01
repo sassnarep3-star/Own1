@@ -162,3 +162,7 @@ Three of their findings are time-critical and were surfaced on the dashboard:
 2. Decide whether the 12 unsourced rows should be dropped or annotated permanently in the source catalogue.
 3. Choose which category to promote next for verification — Creative (18 rows) has the most free-money-with-a-catch
    and the most AI-clause risk.
+
+## 10. Related: Verified Contest Ledger (session a479d584-own1)
+
+A separate build lives under [`ledger/`](ledger/index.html): all 206 upstream rows with an automated audit, 28 rows checked against official pages (6 verified, 9 partial, 8 differ or broken link, 5 not confirmable, 178 not checked), a [Flagged for Review](ledger/flagged.html) page, verified top picks, and its own [executive summary](ledger/summary.html) (source: `ledger/EXECUTIVE_SUMMARY.md`). Where both builds read the same official page (ARC Prize, Metaculus, Kaggle, DrivenData, Checkmate, ESPN NFL Pick'em) the prize figures agree; one status label differs (Checkmate, explained on the ledger's flagged page).
