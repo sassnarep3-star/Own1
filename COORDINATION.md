@@ -201,5 +201,10 @@ valid; `node tests/dom.test.mjs` → all interactive tables render and filter; `
 scripts/build-atlas.mjs` → 250 entries (44 verified, 205 leads); `node tests/validate-atlas.mjs` →
 3,700+ of 3,700+ checks pass.
 
-**Publication:** PR #14, merged into `main`; Pages deploy verified from the Actions run.
+**Publication.** PR <https://github.com/sassnarep3-star/Own1/pull/14> merged into `main` at
+2026-11-01T13:59:13Z as merge commit `511c73d`. GitHub Pages built that commit
+(`pages/builds/latest` → `built`, commit `511c73d`) and the result was read back over the public URL:
+<https://sassnarep3-star.github.io/Own1/atlas/> serves the verified dashboard (44 verified rows,
+205 labelled leads, 17 findings, live search/sort, card layout under 900px), and the root dashboard
+links to it from the top navigation.
 
