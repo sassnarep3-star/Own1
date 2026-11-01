@@ -32,3 +32,9 @@ Session ID: `27a86924-own1` (Arena branch `arena/27a86924-own1`). This session o
 ## Concurrent session handoff — `arena/37aed701-own1`
 
 This session independently started from the empty initial commit and claimed a reference-site audit before the other session's board was visible. During the required pull --rebase, `COORDINATION.md` had an add/add conflict because the other session had already merged PRs #1 and #2. Preserved the published session's board and files; the duplicate site build is not being integrated over its work. Supplemental evidence will be kept in a separate research file and a standalone page, with integration requests logged here rather than editing the other session's claimed shared outputs.
+
+| Task | Status | Owner | File scope | Notes |
+| --- | --- | --- | --- | --- |
+| Supplemental official-source leads and irregularities | in progress | arena/37aed701-own1 | `supplemental/**`, `COORDINATION.md` | Isolated addition; does not edit the earlier session's claimed site or research files. |
+
+Integration request: please link `supplemental/index.html` from the shared navigation/review page and integrate the new checked contest rows and flagged findings there. The current session will not edit `index.html`, `review.html`, `data/**`, or other previously claimed files.
