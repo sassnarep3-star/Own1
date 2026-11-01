@@ -74,3 +74,13 @@ The same evidence file explains why several upstream claims stay blank here: Fan
 node tools/build.mjs     # regenerate all pages from data/
 node tests/validate.mjs  # data contract, links, assets, mobile rules
 ```
+
+### 3b. Reads added in the publication segment (2026-11-01)
+
+Five more pages were opened from official domains on the same day and logged in `data/verification/batchB.jsonl`:
+
+- **Deriv trading tournaments** — <https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes>: "free to enter … no deposit required", $1,000 / $600 / $400 per monthly tournament, $10,000 virtual funds, skill-based leaderboards, no random draws. Promoted to *Page checked*; the offshore operator and the identity-verification requirement are flagged on the row.
+- **USA.gov challenges** — <https://www.usa.gov/challenges>: the current federal entry point, linking to active challenges and participation guidance. The older challenge.gov submission portal has been retired; that is flagged on the HeroX row.
+- **HeroX** — <https://www.herox.com/crowdsourcing-projects>: listing opened (GEMS Prize, $10 Million Origin of Life Prize); entry cost is not stated on the listing, so the entry field stays blank.
+- **RoboForex** — <https://roboforex.com/contests/>: returned 404 ("It seems that the page you requested doesn't exist"). No terms page found; the row is flagged and stays blank.
+- **AFL Tipping** — <https://www.afl.com.au/news/1469992/play-afl-tipping-25k-up-for-grabs-new-game-launched>: the article body rendered as site navigation only, so the advertised "$25K" could not be read in a prize schedule. Nothing recorded.
