@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PrizeDesk — Free-to-enter cash competitions, sourced to the operator</title>
+<meta name="description" content="A mobile-first dashboard of 206 free-to-enter competitions that can pay cash: filtered by entry path, ID checks, platform and status, with official source links on every row.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="PrizeDesk — Free-to-enter cash competitions, sourced to the operator">
+<meta property="og:description" content="A mobile-first dashboard of 206 free-to-enter competitions that can pay cash: filtered by entry path, ID checks, platform and status, with official source links on every row.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E%24%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/site.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">$</span>
+      <span class="brand-text">
+        <b>PrizeDesk</b>
+        <span>Source reviewed 19 Aug 2026</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Main"><a href="index.html" aria-current="page">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="analysis.html">Analysis</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+
+<section class="hero">
+  <p class="kicker">Rebuilt for a phone · one row per competition · every row links to the operator</p>
+  <h1>Find the free competitions that actually pay cash.</h1>
+  <p class="lede">206 competitions from the Free Money &amp; Contest Ledger dataset, reorganised into a
+  searchable dashboard: filter by entry path, ID checks, platform and status, then open the operator's own
+  rules before you spend a minute on it. Values we could not trace to an official source are left blank.</p>
+  <div class="btn-row">
+    <a class="btn primary" href="all.html">Browse all 206 →</a>
+    <a class="btn" href="best.html">See the best picks</a>
+    <a class="btn" href="flagged.html">What we flagged (17)</a>
+  </div>
+</section>
+
+<div class="stat-grid">
+  <div class="stat"><b>206</b><span>competitions in the ledger</span></div>
+  <div class="stat is-good"><b>189</b><span>with a free entry path</span></div>
+  <div class="stat"><b>163</b><span>marked active</span></div>
+  <div class="stat"><b>128</b><span>state a cash amount</span></div>
+  <div class="stat is-good"><b>12</b><span>rows fetched live 1 Nov 2026</span></div>
+  <div class="stat is-warn"><b>27</b><span>ended / out of season</span></div>
+  <div class="stat is-warn"><b>12</b><span>no official source</span></div>
+  <div class="stat is-warn"><b>17</b><span>flagged for review</span></div>
+</div>
+
+<div class="callout info" style="margin-top:14px">
+  <p><b>Read this first.</b> The dataset behind this site was last checked by its authors on
+  19 Aug 2026 — 74 days before this build. Only
+  12 rows were fetched live on 1 Nov 2026; the rest carry a
+  "source cited — not re-checked" badge. Prize figures are the source's claims. Open the operator's rules
+  before entering; contest law and eligibility vary by state.</p>
+</div>
+
+<section class="section">
+  <h2>Start here: highest-ranked live picks</h2>
+  <p class="note-tiny">Ranked by the scoring model described on <a href="best.html">Best picks</a>:
+  free entry, official source, live check, stated cash size, low ID burden, browser entry, no operator
+  account required. This is our heuristic, not an endorsement, and the score is shown so you can disagree.</p>
+  <div class="table-scroll">
+    <table class="ledger">
+      <thead><tr><th>#</th><th>Competition</th><th>Prize (claimed)</th><th>Entry</th><th>Score</th></tr></thead>
+      <tbody><tr>
+      <td class="num" data-label="#">1</td>
+      <td class="cell-name" data-label="Competition"><a href="c/metaculus.html">Metaculus Tournaments</a>
+        <span class="cell-sub">Free forecasting tournaments with sponsor-funded cash prizes. Not a prediction market —…</span></td>
+      <td data-label="Prize (claimed)"><span class="prize">Per tournament — $3,000 to $50,000 prize pools</span></td>
+      <td data-label="Entry"><span class="badge good">Free entry</span></td>
+      <td data-label="Score" class="num">14</td>
+    </tr><tr>
+      <td class="num" data-label="#">2</td>
+      <td class="cell-name" data-label="Competition"><a href="c/hipa.html">Hamdan International Photography Award (HIPA)</a>
+        <span class="cell-sub">The world&#39;s richest photography award — a $200,000 grand prize and $1,000,000 total pool, free…</span></td>
+      <td data-label="Prize (claimed)"><span class="prize">$200,000 grand prize; category prizes $20,000–$50,000; total pool $1,000,000</span></td>
+      <td data-label="Entry"><span class="badge good">Free entry</span></td>
+      <td data-label="Score" class="num">12</td>
+    </tr><tr>
+      <td class="num" data-label="#">3</td>
+      <td class="cell-name" data-label="Competition"><a href="c/arcprize.html">ARC Prize (via Kaggle)</a>
+        <span class="cell-sub">High-dollar abstraction-and-reasoning competition hosted with Kaggle. Free to submit;…</span></td>
+      <td data-label="Prize (claimed)"><span class="prize">$2,000,000 across three 2026 tracks</span></td>
+      <td data-label="Entry"><span class="badge good">Free entry</span></td>
+      <td data-label="Score" class="num">11</td>
+    </tr><tr>
+      <td class="num" data-label="#">4</td>
+      <td class="cell-name" data-label="Competition"><a href="c/cbs-pro-pickem.html">CBS Sports Pro Football Pick&#39;em</a>
+        <span class="cell-sub">Weekly and season-long pick&#39;em with a six-figure perfect-week jackpot.</span></td>
+      <td data-label="Prize (claimed)"><span class="prize">$1K/week + $5K season + $100K perfect</span></td>
+      <td data-label="Entry"><span class="badge good">Free entry</span></td>
+      <td data-label="Score" class="num">11</td>
+    </tr><tr>
+      <td class="num" data-label="#">5</td>
+      <td class="cell-name" data-label="Competition"><a href="c/espn-pickem.html">ESPN NFL Pick&#39;em</a>
+        <span class="cell-sub">Free season-long pick&#39;em. Ten free entries a week; 58 prizes split the six-figure pot.</span></td>
+      <td data-label="Prize (claimed)"><span class="prize">$102,000 total across 58 prizes</span></td>
+      <td data-label="Entry"><span class="badge good">Free entry</span></td>
+      <td data-label="Score" class="num">11</td>
+    </tr></tbody>
+    </table>
+  </div>
+  <div class="btn-row"><a class="btn" href="best.html">Full shortlists and method →</a></div>
+</section>
+
+<section class="section">
+  <h2>Categories</h2>
+  <div class="cat-grid"><a class="cat-card" href="categories/skill.html">
+      <span class="count">12 competitions · 8 active</span>
+      <b>Skill tournaments</b>
+      <p>Head-to-head skill games — solitaire, bingo, blocks. The free rooms pay gems or tickets; the dollar prizes sit in cash rooms that charge an entry fee, and the house takes a rake.</p>
+    </a><a class="cat-card" href="categories/trivia.html">
+      <span class="count">2 competitions · 1 active</span>
+      <b>Trivia competitions</b>
+      <p>Quiz formats. This is the thinnest category in the ledger: one row is a closed contest and the other pays in points rather than dollars.</p>
+    </a><a class="cat-card" href="categories/sports.html">
+      <span class="count">129 competitions · 93 active</span>
+      <b>Fantasy &amp; sports picks</b>
+      <p>NFL, college and soccer pick&#39;em, survivor, bracket and fantasy contests. The largest category and the most seasonal — check status before you invest a season.</p>
+    </a><a class="cat-card" href="categories/creative.html">
+      <span class="count">18 competitions · 17 active</span>
+      <b>Creative contests</b>
+      <p>Writing, photo and judged submissions. Entry is usually free, but judging is slow and subjective, and deadlines decide whether a row is worth anything today.</p>
+    </a><a class="cat-card" href="categories/forecasting.html">
+      <span class="count">3 competitions · 2 active</span>
+      <b>Forecasting tournaments</b>
+      <p>Scored probability forecasts against other people, with prizes funded by sponsors. Free to enter, objectively scored, and the one category where a bot tournament already exists.</p>
+    </a><a class="cat-card" href="categories/market.html">
+      <span class="count">19 competitions · 19 active</span>
+      <b>Market competitions</b>
+      <p>Paper-trading and simulated-investing contests. Free to enter, but many are broker customer-acquisition funnels and some prizes are credits or funded demo accounts, not cash.</p>
+    </a><a class="cat-card" href="categories/tech.html">
+      <span class="count">14 competitions · 14 active</span>
+      <b>Tech &amp; data competitions</b>
+      <p>Machine-learning competitions and hackathons with published prize pools. Free to enter, objectively scored, and the best structural fit for an AI-assisted entrant.</p>
+    </a><a class="cat-card" href="categories/directory.html">
+      <span class="count">2 competitions · 2 active</span>
+      <b>Directories &amp; forums</b>
+      <p>Third-party catalogues of contests. Useful for discovery only — every linked contest still needs its own rules check, and many listed contests charge entry fees.</p>
+    </a><a class="cat-card" href="categories/pools.html">
+      <span class="count">7 competitions · 7 active</span>
+      <b>Free pool &amp; league platforms</b>
+      <p>Free tools for running your own pool or league. Nothing is funded by the operator; the prize pot is your group&#39;s money.</p>
+    </a></div>
+</section>
+
+<section class="section">
+  <h2>How this site differs from a link dump</h2>
+  <div class="card">
+    <ul class="list">
+      <li><b>One row, one operator link.</b> Every row has a link to the operator's own page and, where one exists, a separate rules link. No affiliate redirects.</li>
+      <li><b>Blank beats guessed.</b> 81 rows show “—” for the prize because the source states no amount or cites no official source. We never fill in a number.</li>
+      <li><b>Status is visible.</b> 27 ended contests are stamped and excluded from every shortlist instead of hiding in the scroll.</li>
+      <li><b>Badges mean something.</b> “Live-checked” = we fetched a page of that row on 1 Nov 2026. “Source cited” = we did not.</li>
+      <li><b>Problems are published, not buried.</b> 17 irregularities with evidence and links are on <a href="flagged.html">Flagged for review</a>.</li>
+    </ul>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="all.html">All 206 competitions</a>
+      <a href="best.html">Best picks</a>
+      <a href="analysis.html">Analysis</a>
+      <a href="verification.html">Verification method</a>
+      <a href="flagged.html">Flagged for review (17)</a>
+      <a href="executive-summary.html">Executive summary</a>
+    </div>
+    <p><b>PrizeDesk</b> is an independent workbench built on the Free Money &amp; Contest
+    Ledger dataset (pinned commit <code>466f7c1</code>, source reviewed
+    19 Aug 2026). It is not affiliated with any operator listed.
+    Prize figures are the source dataset's claims, not this site's promises — open the operator's
+    rules before you enter. Contest law varies by state and country; play only where legal. 18+/21+.</p>
+    <p class="note-tiny">Figures verified on this site: 12 of 206 rows were
+    fetched live on 1 Nov 2026. Everything else is labelled
+    "source cited — not re-checked". See <a href="verification.html">how verification works</a>.</p>
+  </div>
+</footer>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>

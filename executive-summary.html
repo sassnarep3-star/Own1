@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive summary — PrizeDesk</title>
+<meta name="description" content="What the source ledger contains, what we could and could not verify, what we rebuilt, and where the free cash actually is.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Executive summary — PrizeDesk">
+<meta property="og:description" content="What the source ledger contains, what we could and could not verify, what we rebuilt, and where the free cash actually is.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E%24%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/site.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">$</span>
+      <span class="brand-text">
+        <b>PrizeDesk</b>
+        <span>Source reviewed 19 Aug 2026</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="analysis.html">Analysis</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+
+<section class="hero">
+  <p class="kicker">Executive summary · 1 Nov 2026</p>
+  <h1>Executive summary</h1>
+  <p class="lede">What the source ledger contains, what we could and could not verify, what we rebuilt, and where the free cash actually is.</p>
+  <div class="btn-row">
+    <a class="btn primary" href="all.html">Browse the 206 rows</a>
+    <a class="btn" href="best.html">Best picks</a>
+    <a class="btn" href="flagged.html">Flagged (17)</a>
+  </div>
+</section>
+<article class="prose section"><h2>1. The brief, and what was delivered</h2>
+<p>The source site (Free Money &amp; Contest Ledger) is a research catalogue of free-to-enter competitions that can pay real money. Its weaknesses are real: on a phone it is one long scroll of 206 full-length cards with no search, no filters and no sorting, its own pages disagree about which revision is published, and at least one cited App Store link is dead. It also mixes 27 ended contests and 12 unverified referral codes into the same undifferentiated list as live, verifiable competitions.</p>
+<p>This repository rebuilds it as a mobile-first dashboard: one row per competition, nine category pages, a full-table page with search/filter/sort, a scoring-based shortlist, a verification page, and a Flagged for Review page carrying every irregularity with source links. Every table row links to the operator&#39;s own page. Nothing on the site is a value we invented — values that no official source supports are left blank and listed as unverified.</p>
+<h2>2. Key numbers</h2>
+<div class="table-scroll"><table class="ledger">
+      <thead><tr><th>Measure</th><th>Value</th><th>Meaning</th></tr></thead>
+      <tbody><tr><td data-label="Measure">Listings carried over</td><td data-label="Value">206</td><td data-label="Meaning">All rows from the pinned source file; no additions, no deletions</td></tr><tr><td data-label="Measure">Categories</td><td data-label="Value">9</td><td data-label="Meaning">Skill, trivia, sports, creative, forecasting, market, tech, directories, pools</td></tr><tr><td data-label="Measure">Free-to-enter (full free path)</td><td data-label="Value">189 (91.7%)</td><td data-label="Meaning">Source marks a genuinely free entry path</td></tr><tr><td data-label="Measure">Some free events only</td><td data-label="Value">13</td><td data-label="Meaning">Free practice exists; cash play costs money</td></tr><tr><td data-label="Measure">Cash requires an entry fee</td><td data-label="Value">4</td><td data-label="Meaning">Free play pays gems, not dollars</td></tr><tr><td data-label="Measure">Not marked ended</td><td data-label="Value">179</td><td data-label="Meaning">Live, mixed or flagged &quot;caution&quot; by the source; the strict &quot;active&quot; count is lower</td></tr><tr><td data-label="Measure">Ended / out of season</td><td data-label="Value">27</td><td data-label="Meaning">Excluded from every shortlist</td></tr><tr><td data-label="Measure">Prize text with a stated money amount</td><td data-label="Value">128</td><td data-label="Meaning">62.1% — the rest say &quot;varies&quot;, &quot;your group&quot; or &quot;confirm in-app&quot;</td></tr><tr><td data-label="Measure">Prize cell blanked on the site</td><td data-label="Value">81</td><td data-label="Meaning">No official source, or no stated amount — left blank, never guessed</td></tr><tr><td data-label="Measure">Rows with no official-tier source</td><td data-label="Value">12</td><td data-label="Meaning">Prize claims rest on affiliate/forum sources only</td></tr><tr><td data-label="Measure">Referral / promo codes withheld</td><td data-label="Value">12</td><td data-label="Meaning">Unverifiable personal codes; deliberately not republished</td></tr><tr><td data-label="Measure">Rows re-fetched live this pass</td><td data-label="Value">12</td><td data-label="Meaning">Of 206 — see section 6</td></tr><tr><td data-label="Measure">Flagged irregularities</td><td data-label="Value">17</td><td data-label="Meaning">All published on the Flagged for Review page</td></tr><tr><td data-label="Measure">Age of the source data</td><td data-label="Value">74 days</td><td data-label="Meaning">Source last checked 2026-08-19; re-verified 2026-11-01</td></tr></tbody>
+    </table></div>
+<h2>3. What is actually wrong with the original site</h2>
+<ul class="list"><li>Mobile usability: 206 cards, each with six metadata rows, six expandable blocks and up to eight buttons, rendered as a single column. No search box, no filters, no sorting — stated on the page itself as a design choice.</li><li>Version confusion: the header says &quot;Pass C · 17 Aug 2026&quot;, the data says pass S / 2026-08-19, and the review page says the ledger &quot;runs to 119 listings&quot; while the data holds 206.</li><li>Broken and weak links: in a sample of 12 fetched URLs, the Solitaire Cash App Store link returned Apple&#39;s &quot;An Error Occurred&quot; page; one row links only over http://; six rows cite no rules page at all; 113 rows use the signup page as the &quot;rules&quot; link.</li><li>Unsupported prize claims: 12 rows have no official-tier source, and three of them say outright that the prize table came from review sites.</li><li>Unverifiable incentives: 12 referral/league codes, 8 of them explicitly marked unverified, 4 with no verification at all.</li><li>Scope drift: the file says sweepstakes, casinos and bookmaker accounts are excluded, then links a contest through a live US sportsbook (betfanatics.com) and includes ~16 forex/CFD broker demo contests whose own notes call them &quot;broker acquisition funnels&quot;.</li><li>Dead weight: 27 ended contests and 2 directory rows are presented with the same weight as live competitions.</li></ul>
+<h2>4. What this rebuild does differently</h2>
+<ul class="list"><li>Verified-only values: a prize or cash-out figure appears in the table only when the row has an official-tier source and the source text states an amount. Otherwise the cell is blank and marked unverified.</li><li>One link per row to the operator, plus a second link to the rules/terms page when one exists, and a third to the App Store only where an app actually exists.</li><li>Every row carries a verification badge: &quot;Live-checked 2026-11-01&quot; (12 rows), &quot;Source cited — not re-checked&quot; (182), or &quot;No official source&quot; (12).</li><li>Status is first-class: ended contests are stamped, filtered out of the shortlists and excluded from the &quot;enter now&quot; count.</li><li>Search, filters (category, entry path, platform, ID checks, status) and sorting work on a real table on desktop and collapse to labelled cards on a phone.</li><li>The 17 irregularities are published with their evidence, their links and a recommended action — including the ones we could not settle ourselves.</li></ul>
+<h2>5. Where the money and the odds actually are</h2>
+<p>Sports pick&#39;em is the largest category (129 of 206 rows) and holds most of the seven-figure marketing numbers, but it is also the most seasonal — 27 rows are already out of season — and the big pools are split across thousands of entrants with tie-breakers. It is the worst place to win money per hour unless you are chasing a specific, well-understood contest.</p>
+<p>Tech and forecasting carry the largest free-to-enter cash pools with the least luck. Checked live on 2026-11-01: Kaggle had prize-bearing competitions of $450,000, $100,000 and $35,000 open to anyone; Metaculus listed 19 tournaments with published pools up to $50,000 and states plainly that you &quot;can participate for free and win cash prizes&quot;. The ledger additionally lists ARC Prize at $2,000,000 across three 2026 tracks (source claim, not re-checked). These are also the only categories where the work — modelling, calibration, engineering — is exactly what an AI coding agent can help you do, and where one entry can plausibly place.</p>
+<p>Market/paper-trading contests sit in between. They are free to enter and several pay genuine withdrawable cash, but about half are broker acquisition funnels where the &quot;prize&quot; is a funded demo account or a trading credit, and a few require a live brokerage account. Treat them as marketing offers that happen to be winnable.</p>
+<p>Skill tournaments and trivia are the weakest value in the set: the free rooms pay gems or points, the dollar prizes need an entry fee, and the house takes a rake from every pot. Creative contests are free but judged and slow — worth entering only where the prize is large relative to the effort and the judging is transparent.</p>
+<h2>6. What we did not verify — read this before you enter anything</h2>
+<ul class="list"><li>12 of 206 rows were fetched live this pass. The build environment could reach the web only through a page-fetch tool, so a full 206-row crawl (roughly 400 URLs) was not possible. The remaining 194 rows are published as &quot;source cited — not re-checked&quot;, and the full list is on the Flagged for Review page.</li><li>All prize figures are at least 74 days old. Seasonal sports contests in particular must be re-read from the operator page before you commit time.</li><li>We did not verify AI-assistance terms for any contest. Many judged contests restrict or prohibit AI-generated entries; check the rules before using an agent.</li><li>We did not assess tax treatment beyond flagging that US prizes of $600+ normally require a W-9. That is general context, not advice.</li><li>Gambling-adjacent rows are kept but stamped &quot;operator account required&quot;. Whether they belong in a free-money ledger is a scope decision for you.</li></ul>
+<h2>7. Practical next steps</h2>
+<ol class="list"><li>Start with the &quot;Best picks&quot; page: it ranks only live, free-to-enter, officially sourced rows that state a real cash amount, and it shows the scoring so you can disagree with it.</li><li>Pick two categories, not nine. Tech and forecasting give the best expected value for time spent, and both suit AI-assisted work.</li><li>Before entering anything, open the operator&#39;s rules from the row and confirm: current prize, deadline, eligibility in your state, and whether entry is genuinely free this season.</li><li>Treat every &quot;funded account&quot;, &quot;trading credit&quot; and &quot;gems&quot; prize as worth zero unless you specifically want the product behind it.</li><li>Re-run the pipeline (npm run build) when you want a fresh pass: the source is pinned by commit and checksum, so any change is auditable.</li></ol>
+<h2>8. Provenance</h2>
+<p>Source data: the public FreeMoneyApps repository, commit 466f7c1e7a14b52b4a0d36beb84a00d68fd409b7, file assets/data.js, SHA-256 13986a17b8b9aa7b3240232e6138155967cfa9347256faa7b5c7d1565ed73211, captured 2026-11-01. The file is vendored unchanged in this repository and parsed as strict JSON — never executed. Every published row can be traced back to that file, and every claim in it can be traced to the operator link shown on the row.</p></article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="all.html">All 206 competitions</a>
+      <a href="best.html">Best picks</a>
+      <a href="analysis.html">Analysis</a>
+      <a href="verification.html">Verification method</a>
+      <a href="flagged.html">Flagged for review (17)</a>
+      <a href="executive-summary.html">Executive summary</a>
+    </div>
+    <p><b>PrizeDesk</b> is an independent workbench built on the Free Money &amp; Contest
+    Ledger dataset (pinned commit <code>466f7c1</code>, source reviewed
+    19 Aug 2026). It is not affiliated with any operator listed.
+    Prize figures are the source dataset's claims, not this site's promises — open the operator's
+    rules before you enter. Contest law varies by state and country; play only where legal. 18+/21+.</p>
+    <p class="note-tiny">Figures verified on this site: 12 of 206 rows were
+    fetched live on 1 Nov 2026. Everything else is labelled
+    "source cited — not re-checked". See <a href="verification.html">how verification works</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
