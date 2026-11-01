@@ -327,7 +327,7 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 - **`tests/validate.mjs`:** this session's stricter gate replaced the earlier version; the legacy Python checks (`tools/*.py`) were left untouched.
 - **Fact overlap:** `d21e8702-own1`'s `data/verification.json` claimed Checkmate Gaming, World Press Photo and Istanbul Photo Awards. All three were re-read here; Checkmate is verified, the two photo awards publish no fee or amount on the page read and are therefore `partial` with blank cells, and that difference is recorded in `research/facts.mjs`.
 
-**Publication:** (recorded below once complete)
+**Publication:** [PR #19](https://github.com/sassnarep3-star/Own1/pull/19) opened and merged without waiting for approval at 2026-11-01 13:51 UTC (merge commit `0db7ffee8257be89559001fed0b8b733aba68ba7`); CI on the PR passed ([run 41313282372](https://github.com/sassnarep3-star/Own1/actions/runs/41313282372)). GitHub Pages rebuilt from `main` ([pages build run 41313315920](https://github.com/sassnarep3-star/Own1/actions/runs/41313315920)) and reports `status: built`. Live checks after deploy: `index.html` renders 211 leads / 18 checked / 11 free / 193 flagged with an 18-row ranked shortlist; `review.html` renders 17 cross-cutting flags and the 10 dead links; `entry/codex-twitchcon.html` renders the five verbatim quotes and the fit breakdown.
 
 ### Second merge, same session (2026-11-01)
 

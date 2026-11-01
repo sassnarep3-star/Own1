@@ -302,9 +302,13 @@ for (const e of entries.filter((x) => x.status !== 'unverified')) {
           ? '<span class="mutedtext">Not covered by the automated check</span>'
           : e.link.ok
           ? `<span class="pill good">Responded OK</span> <span class="small">checked ${esc(e.link.checkedAt.slice(0, 10))}</span>`
-          : e.link.hardFail
-          ? `<span class="pill bad">Failed: ${esc(e.link.status || e.link.error)}</span> <span class="small">checked ${esc(e.link.checkedAt.slice(0, 10))}</span>`
-          : `<span class="pill warn">Bot-blocked (${esc(e.link.status || e.link.error)}) — not evidence the page is gone</span>`
+          : e.link.state === 'dead'
+          ? `<span class="pill bad">Did not resolve: ${esc(e.link.status || e.link.error)}</span> <span class="small">checked ${esc(e.link.checkedAt.slice(0, 10))}</span>`
+          : e.link.state === 'redirect'
+          ? `<span class="pill warn">Redirect (${esc(e.link.status)}) not followed by the checker</span> <span class="small">open it manually before relying on this row</span>`
+          : e.link.state === 'bot-blocked'
+          ? `<span class="pill warn">Bot-blocked (${esc(e.link.status)}) — not evidence the page is gone</span>`
+          : `<span class="pill warn">Not confirmed (${esc(e.link.status || e.link.error)})</span>`
       }</dd>
     </dl>
     ${e.notes ? `<p class="small" style="margin-top:14px"><strong>Audit note.</strong> ${esc(e.notes)}</p>` : ''}

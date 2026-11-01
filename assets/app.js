@@ -32,10 +32,14 @@
     var health = SITE.linkHealth && SITE.linkHealth[e.officialUrl];
     var flag = '';
     if (health) {
-      if (health.ok) flag = '<span class="subtle">Link OK · checked ' + esc(health.checkedAt.slice(0, 10)) + '</span>';
+      var when = esc(health.checkedAt.slice(0, 10));
+      if (health.ok) flag = '<span class="subtle">Link responded OK · checked ' + when + '</span>';
+      else if (health.hardFail) flag = '<span class="subtle"><span class="pill bad">Link failed: ' + esc(health.status || health.error) + '</span></span>';
+      else if (health.status === 307 || health.status === 301 || health.status === 302 || health.status === 308)
+        flag = '<span class="subtle"><span class="pill warn">Redirect ' + health.status + ' not followed</span> — open it manually</span>';
       else if (health.status === 403 || health.status === 429 || health.status === 401)
-        flag = '<span class="subtle">Bot-blocked (HTTP ' + health.status + ') — not evidence the page is gone</span>';
-      else flag = '<span class="subtle pill bad">Link failed: ' + esc(health.status || health.error) + '</span>';
+        flag = '<span class="subtle"><span class="pill warn">Bot-blocked (' + health.status + ')</span> — not evidence the page is gone</span>';
+      else flag = '<span class="subtle"><span class="pill warn">Not confirmed (' + esc(health.status || health.error) + ')</span></span>';
     }
     return '<a class="source" href="' + esc(e.officialUrl) + '" target="_blank" rel="noopener noreferrer">' + label + ' ↗</a>' + flag;
   }
