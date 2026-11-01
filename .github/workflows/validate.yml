@@ -1,4 +1,4 @@
-name: Validate site
+name: Validate static site
 
 on:
   push:
@@ -16,21 +16,29 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: npm
 
-      # The Atlas layer (/atlas) is generated from data/*.json; committed HTML must match the data.
-      - name: Rebuild the Atlas layer
+      - run: npm ci --no-audit --no-fund
+
+      # Root layer: data -> pages
+      - name: Rebuild the root layer from source data
+        run: npm run build
+
+      - name: Fail if root pages are out of date with the evidence file
+        run: git diff --exit-code -- data index.html category entry review.html sources.html playbook.html
+
+      # Atlas subsite: data -> pages (scripts/build.mjs writes only atlas/** and data/atlas-entries.json)
+      - name: Rebuild the verified atlas subsite
         run: node scripts/build.mjs
 
-      - name: Fail if the committed Atlas HTML is stale
-        run: |
-          if [ -n "$(git status --porcelain atlas data/atlas-entries.json)" ]; then
-            echo "::error::Atlas pages are out of date. Run 'node scripts/build.mjs' and commit the result."
-            git --no-pager diff --stat -- atlas data/atlas-entries.json
-            exit 1
-          fi
+      - name: Fail if the atlas pages are stale
+        run: git diff --exit-code -- atlas data/atlas-entries.json
 
-      - name: Validate the Atlas layer (data, evidence standard, every internal link)
-        run: node tests/validate-atlas.mjs
-
-      - name: Validate the remaining site layers
+      - name: Validation gate (root layer)
         run: node tests/validate.mjs
+
+      - name: Interactive render test (headless DOM)
+        run: node tests/dom.test.mjs
+
+      - name: Validation gate (atlas layer, plus a whole-repository link audit)
+        run: node tests/validate-atlas.mjs

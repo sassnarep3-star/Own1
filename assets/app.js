@@ -1,70 +1,147 @@
-const BASE = document.body.dataset.base || './';
-const CATEGORIES = [
-  ['sports','Fantasy & sports picks','Sports picks and fantasy leads','◈'],
-  ['tech','Tech & data','Model-building, code and hackathons','⌘'],
-  ['forecasting','Forecasting','Probability and prediction tournaments','◎'],
-  ['creative','Creative contests','Writing, design and photography','✳'],
-  ['market','Market simulations','Paper-trading leads; verify terms','▥'],
-  ['skill','Skill tournaments','Often paid cash rooms or noncash rewards','⚡'],
-  ['trivia','Trivia','Quiz and knowledge contests','?'],
-  ['pools','Pool tools','Tools; group-funded prizes are not operator cash','▦'],
-  ['directory','Directories','Find events; not contests themselves','↗']
-];
-const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const $ = id => document.getElementById(id);
-const link = (url, label) => url && /^https:\/\//.test(url)
-  ? `<a class="source" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`
-  : '<span class="mutedtext">—</span>';
-const cell = (label, content, extra = '') => `<td data-label="${label}"${extra}><div class="cell-content">${content}</div></td>`;
-const value = s => esc(s) || '<span class="mutedtext">—</span>';
-
-function table(rows) {
-  const body = rows.map(r => {
-    const category = CATEGORIES.find(c => c[0] === r.category)?.[1] || r.category;
-    const checked = r.sourceStatus === 'checked';
-    const name = `<span class="name">${esc(r.name)}</span><span class="subtle">${esc(category)}${r.kind ? ' · ' + esc(r.kind) : ''}</span>`;
-    const evidence = `<span class="pill ${checked ? 'good' : 'warn'}">${checked ? 'Page checked' : 'Unverified'}</span>`;
-    const source = `${link(r.source, checked ? 'Official page' : 'Unverified research lead')}${r.note ? `<span class="subtle">${esc(r.note)}</span>` : ''}${!r.source ? '<span class="subtle">No operator source located</span>' : ''}`;
-    return `<tr>${cell('Listing', name, ' class="listing-cell"')}${cell('Evidence', evidence)}${cell('Cash prize', value(r.prize))}${cell('Entry cost', value(r.entry))}${cell('Deadline', value(r.deadline))}${cell('Official source / lead', source)}</tr>`;
-  }).join('');
-  return `<div class="table-wrap"><table><thead><tr><th>Listing</th><th>Evidence</th><th>Cash prize</th><th>Entry cost</th><th>Deadline</th><th>Official source / lead</th></tr></thead><tbody>${body}</tbody></table></div>`;
-}
-
-function render(rows) {
-  const page = document.body.dataset.page;
-  const checked = rows.filter(r => r.sourceStatus === 'checked');
-  const unverified = rows.filter(r => r.sourceStatus !== 'checked');
-  if ($('all-count')) $('all-count').textContent = rows.length;
-  if ($('checked-count')) $('checked-count').textContent = checked.length;
-  if ($('review-count')) $('review-count').textContent = unverified.length;
-  if ($('category-grid')) $('category-grid').innerHTML = CATEGORIES.map(c => `<a class="card" href="${BASE}category/${c[0]}.html"><span class="icon" aria-hidden="true">${c[3]}</span><h3>${esc(c[1])}</h3><p>${esc(c[2])}</p><span class="count">${rows.filter(r => r.category === c[0]).length} leads →</span></a>`).join('');
-
-  const initial = page === 'review' ? unverified : page === 'category' ? rows.filter(r => r.category === document.body.dataset.category) : checked;
-  const search = $('search'), status = $('status'), kind = $('kind');
-  // This filter uses only explicitly documented free-entry fields; blank is NOT free.
-  const free = document.createElement('select');
-  free.id = 'entry-filter';
-  free.setAttribute('aria-label', 'Entry cost evidence');
-  free.innerHTML = '<option value="">All entry costs</option><option value="confirmed-free">Confirmed free entry</option><option value="unknown">Entry cost unknown</option>';
-  kind?.after(free);
-
-  function update() {
-    const q = (search?.value || '').trim().toLowerCase();
-    const current = initial.filter(r => {
-      const freeEntry = r.sourceStatus === 'checked' && (r.entry === 'Free' || r.entry.startsWith('Free ('));
-      return (!q || [r.name, r.category, r.note, r.source].join(' ').toLowerCase().includes(q))
-        && (!status?.value || r.sourceStatus === status.value)
-        && (!kind?.value || r.kind === kind.value)
-        && (!free.value || (free.value === 'confirmed-free' ? freeEntry : !r.entry));
+/* Prize Atlas client logic: search, filter, sort. All numbers come from data/site-data.js,
+   which is generated from data/entries.json. Nothing is computed that the build did not already assert. */
+(function () {
+  var SITE = window.SITE || { entries: [], categories: [], stats: {} };
+  var body = document.body;
+  var page = body.dataset.page || 'home';
+  var base = body.dataset.base || './';
+  var cat = body.dataset.category || '';
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
     });
-    $('rows').innerHTML = current.length ? table(current) : '<div class="empty">No matches. Try a different search or filter.</div>';
-    $('result-count').textContent = `${current.length} of ${initial.length} listings`;
-  }
-  [search, status, kind, free].forEach(el => el?.addEventListener(el.tagName === 'INPUT' ? 'input' : 'change', update));
-  update();
-}
+  };
+  var dash = '<span class="mutedtext">—</span>';
 
-fetch(`${BASE}data/entries.json`)
-  .then(r => { if (!r.ok) throw Error('Data unavailable'); return r.json(); })
-  .then(render)
-  .catch(() => { $('rows').innerHTML = '<div class="empty">Could not load the catalog. Try refreshing the page.</div>'; });
+  var STATUS_LABEL = { verified: 'Page checked', partial: 'Partly checked', unverified: 'Unverified' };
+  var STATUS_CLASS = { verified: 'good', partial: 'warn', unverified: 'neutral' };
+
+  function pill(status) {
+    return '<span class="pill ' + (STATUS_CLASS[status] || 'neutral') + '">' + (STATUS_LABEL[status] || status) + '</span>';
+  }
+  function freeCell(e) {
+    if (e.freeEntry === true) return '<span class="pill good">Free confirmed</span>';
+    if (e.freeEntry === false) return '<span class="pill bad">Paid entry</span>';
+    if (e.status === 'unverified') return dash;
+    return '<span class="pill warn">Fee not stated</span>';
+  }
+  function linkCell(e) {
+    if (!e.officialUrl) return '<span class="mutedtext">No operator link</span>';
+    var label = e.status === 'unverified' ? 'Lead link' : 'Official page';
+    var health = SITE.linkHealth && SITE.linkHealth[e.officialUrl];
+    var flag = '';
+    if (health) {
+      if (health.ok) flag = '<span class="subtle">Link OK · checked ' + esc(health.checkedAt.slice(0, 10)) + '</span>';
+      else if (health.status === 403 || health.status === 429 || health.status === 401)
+        flag = '<span class="subtle">Bot-blocked (HTTP ' + health.status + ') — not evidence the page is gone</span>';
+      else flag = '<span class="subtle pill bad">Link failed: ' + esc(health.status || health.error) + '</span>';
+    }
+    return '<a class="source" href="' + esc(e.officialUrl) + '" target="_blank" rel="noopener noreferrer">' + label + ' ↗</a>' + flag;
+  }
+  function nameCell(e) {
+    var c = (SITE.categories || []).filter(function (x) { return x.id === e.category; })[0];
+    var sub = (c ? c.name : e.category) + (e.operator ? ' · ' + e.operator : '');
+    var title = e.status === 'unverified'
+      ? '<span class="name">' + esc(e.name) + '</span>'
+      : '<a class="name" href="' + base + 'entry/' + esc(e.id) + '.html">' + esc(e.name) + '</a>';
+    return title + '<span class="subtle">' + esc(sub) + '</span>';
+  }
+
+  function table(rows, opts) {
+    opts = opts || {};
+    var showFit = !!opts.fit;
+    var head =
+      '<div class="table-wrap"><table><thead><tr>' +
+      '<th>Competition</th><th>Status</th><th>Entry cost</th><th>Cash prize</th><th>Deadline</th>' +
+      (showFit ? '<th class="num">Fit</th>' : '') +
+      '<th>Source</th></tr></thead><tbody>';
+    var body = rows.map(function (e) {
+      var deadline = e.deadline ? esc(e.deadline) : dash;
+      var prize = e.prize ? esc(e.prize) : (e.cashPrize === true ? '<span class="pill warn">Amount not stated</span>' : dash);
+      return '<tr>' +
+        '<td data-label="Competition">' + nameCell(e) + '</td>' +
+        '<td data-label="Status">' + pill(e.status) + '</td>' +
+        '<td data-label="Entry cost">' + freeCell(e) + '</td>' +
+        '<td data-label="Cash prize">' + prize + '</td>' +
+        '<td data-label="Deadline">' + deadline + '</td>' +
+        (showFit ? '<td class="num" data-label="Fit score">' + (e.fit ? '<strong>' + e.fit.score + '</strong>' : dash) + '</td>' : '') +
+        '<td data-label="Source">' + linkCell(e) + '</td>' +
+        '</tr>';
+    }).join('');
+    return head + body + '</tbody></table></div>';
+  }
+
+  function initTable(mountId, initial, opts) {
+    var mount = $(mountId);
+    if (!mount) return;
+    var panel = mount.closest('.panel') || document;
+    var search = panel.querySelector('.f-search');
+    var statusSel = panel.querySelector('.f-status');
+    var catSel = panel.querySelector('.f-cat');
+    var sortSel = panel.querySelector('.f-sort');
+    var foot = panel.querySelector('.table-foot');
+    if (mount.dataset.sort && sortSel) sortSel.value = mount.dataset.sort;
+    var current = initial.slice();
+
+    function apply() {
+      var q = (search && search.value || '').trim().toLowerCase();
+      var st = statusSel ? statusSel.value : '';
+      var c = catSel ? catSel.value : '';
+      var sort = sortSel ? sortSel.value : 'fit';
+      current = initial.filter(function (e) {
+        if (st && e.status !== st) return false;
+        if (c && e.category !== c) return false;
+        if (!q) return true;
+        return [e.name, e.operator, e.category, e.prize, e.notes, e.officialUrl]
+          .join(' ').toLowerCase().indexOf(q) !== -1;
+      });
+      current.sort(function (a, b) {
+        if (sort === 'name') return a.name.localeCompare(b.name);
+        if (sort === 'deadline') {
+          if (!a.deadline && !b.deadline) return a.name.localeCompare(b.name);
+          if (!a.deadline) return 1;
+          if (!b.deadline) return -1;
+          return a.deadline.localeCompare(b.deadline);
+        }
+        if (sort === 'status') {
+          var order = { verified: 0, partial: 1, unverified: 2 };
+          return (order[a.status] - order[b.status]) || a.name.localeCompare(b.name);
+        }
+        var fa = a.fit ? a.fit.score : -1, fb = b.fit ? b.fit.score : -1;
+        return (fb - fa) || a.name.localeCompare(b.name);
+      });
+      mount.innerHTML = current.length
+        ? table(current, opts)
+        : '<div class="empty">No listings match those filters. Clear the search to see everything.</div>';
+      if (foot) foot.textContent = current.length + ' of ' + initial.length + ' listings shown';
+    }
+    [search, statusSel, catSel, sortSel].forEach(function (el) {
+      if (!el) return;
+      el.addEventListener(el.tagName === 'INPUT' ? 'input' : 'change', apply);
+    });
+    apply();
+  }
+
+  // ---- home ----
+  if (page === 'home') {
+    var all = SITE.entries;
+    var verified = all.filter(function (e) { return e.status === 'verified'; });
+    var ranked = verified.slice().sort(function (a, b) { return (b.fit ? b.fit.score : 0) - (a.fit ? a.fit.score : 0); });
+    initTable('picks', ranked, { fit: true });
+    initTable('rows', all, { fit: true });
+  }
+  // ---- category ----
+  if (page === 'category') {
+    initTable('rows', SITE.entries.filter(function (e) { return e.category === cat; }), { fit: true });
+  }
+  // ---- review ----
+  if (page === 'review') {
+    initTable('rows', SITE.entries.filter(function (e) { return e.status !== 'verified'; }), { fit: false });
+  }
+  // ---- sources ledger filter ----
+  if (page === 'sources' && $('rows')) {
+    var evRows = SITE.evidenceLedger || [];
+    initTable('rows', evRows, { fit: false });
+  }
+})();

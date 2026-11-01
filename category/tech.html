@@ -1,439 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tech &amp; data competitions — free-to-enter cash competitions — Free Cash Ledger</title>
-<meta name="description" content="Hackathons and machine-learning contests with published USD prize pools. Free to enter; winners complete tax and identity checks. 14 competitions, each with an official source link.">
-<meta property="og:title" content="Tech &amp; data competitions — free-to-enter cash competitions — Free Cash Ledger">
-<meta property="og:description" content="Hackathons and machine-learning contests with published USD prize pools. Free to enter; winners complete tax and identity checks. 14 competitions, each with an official source link.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230f766e'/><text x='18' y='45' font-size='36' font-family='monospace' fill='white'>$</text></svg>">
-<link rel="stylesheet" href="../assets/css/style.css">
+<meta name="description" content="AI, data &amp; code: free-to-enter cash competition leads with official-source verification status.">
+<title>AI, data &amp; code · Prize Atlas</title>
+<link rel="stylesheet" href="../assets/style.css">
 </head>
-<body data-rel="../">
-<a class="skip" href="#main">Skip to content</a>
-<header class="top">
-  <div class="top-inner">
-    <a class="brand" href="../index.html">
-      <span class="mark">$</span>
-      <span>Free Cash Ledger<small>206 competitions · verified 2026-11-01</small></span>
-    </a>
-    <nav class="main" aria-label="Main"><a href="../index.html">Dashboard</a><a href="../best-picks.html">Best picks</a><a href="../all.html">All 206</a><a href="../verification.html">Verification</a><a href="../flagged.html">Flagged (13)</a><a href="../methodology.html">Method</a><a href="../executive-summary.html">Summary</a><a href="../sources.html">Sources</a><a href="../cross-session.html">Cross-session</a><a href="../ledger/index.html">Verified ledger</a><a href="../atlas/index.html">Atlas (44 checked)</a></nav>
-  </div>
-</header>
-<div class="wrap" id="main">
+<body data-base="../" data-page="category" data-category="tech">
+<header class="topbar"><div class="shell">
+  <a class="brand" href="../index.html"><span class="mark">✳</span> Prize Atlas</a>
+  <nav class="topnav" aria-label="Main">
+    <a href="../index.html">Dashboard</a>
+    <a href="../playbook.html">Playbook</a>
+    <a href="../sources.html">Sources</a>
+    <a href="../atlas/index.html">Verified atlas (44)</a>
+    <a href="../review.html" class="review-link">Flagged (193)</a>
+    
+  </nav>
+</div></header>
 
-<section class="hero">
-  <p class="kicker"><a href="../index.html">Dashboard</a> / Category</p>
-  <h1 class="page">Tech &amp; data competitions <span style="color:#64748b;font-size:.6em">(14)</span></h1>
-  <p class="lede">Hackathons and machine-learning contests with published USD prize pools. Free to enter; winners complete tax and identity checks.</p>
-  <div class="stats">
-    <div class="stat"><b>14</b><span>rows in this category</span></div>
-    <div class="stat"><b>14</b><span>free &amp; enterable today</span></div>
-    <div class="stat"><b>3</b><span>re-verified this pass</span></div>
-    <div class="stat"><b>High</b><span>AI-agent fit (editorial)</span></div>
+<main class="shell main">
+  <div class="page-intro" style="margin:18px 0 6px">
+    <div class="eyebrow">Category</div>
+    <h1 style="margin:6px 0 8px;font-size:clamp(24px,5vw,34px);letter-spacing:-.02em">AI, data &amp; code</h1>
+    <p class="small" style="max-width:70ch">Model-building and engineering competitions with cash prizes. 11 of 18 entries have had an official page read; the rest are leads with blank cells.</p>
   </div>
-</section>
-  <div class="legend" style="font-size:12.5px;color:#64748b;margin:0 0 10px;line-height:1.9">
-    <b style="color:#101828">Legend</b> ·
-    <span class="badge b-free">Free to enter</span> catalogue says entry is free ·
-    <span class="badge b-partial">Some free events</span> mixed ·
-    <span class="badge b-paid">Cash needs an entry fee</span> ·
-    <span class="badge b-verified">Verified</span> checked against the operator’s page ·
-    <span class="badge b-partially">Partly verified</span> some fields only ·
-    <span class="badge b-contradicted">Contradicted</span> operator page disagrees ·
-    <span class="badge b-unverified">Source data only</span> not re-checked.
-    “Prize (as published)” is the catalogue’s own wording; “Verified prize” is only filled from a quoted official page.
-  </div>
-  <div class="toolbar">
-    <input id="q" type="search" placeholder="Search name, category, prize…" aria-label="Search competitions">
-    <label class="chip"><input type="checkbox" id="freeOnly"> Free to enter only</label>
-    <label class="chip"><input type="checkbox" id="liveOnly"> Live only</label>
-    <select id="sort" aria-label="Sort">
-      <option value="score">Sort: priority score</option>
-      <option value="prize">Sort: verified prize</option>
-      <option value="name">Sort: name</option>
-    </select>
-    <span class="count" id="shown">—</span>
-  </div>
-  <div class="table" id="catalogue">
-    <div class="thead">
-      <div>Competition</div><div>Free to enter</div><div>Prize (as published)</div>
-      <div>Verified prize</div><div>Official source</div>
-    </div>
-      <div class="row" id="arcprize" data-id="arcprize" data-name="ARC Prize (via Kaggle)"
-           data-free="full" data-live="1"
-           data-score="79" data-prize="2000000" data-search="arcprize arc prize (via kaggle) high-dollar abstraction-and-reasoning competition hosted with kaggle. free to submit; open-source requirements apply. tech &amp; data competitions live $2,000,000 across three 2026 tracks">
-        <div class="cell">
-          <div class="name"><a href="#arcprize">ARC Prize (via Kaggle)</a></div>
-          <p class="short">High-dollar abstraction-and-reasoning competition hosted with Kaggle. Free to submit; open-source requirements apply.</p>
-          <div class="badges">
-            <span class="badge ">Tech &amp; data competitions</span>
-            <span class="badge b-live">Live</span>
-            <span class="badge b-verified">Verified</span>
-          </div>
-          <details class="more" data-entry="arcprize">
-            <summary>Details</summary>
-            <div class="detail-slot"></div>
-          </details>
-        </div>
-        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-free">Free to enter (per catalogue)</span></div>
-        <div class="cell"><span class="lbl">Prize (as published)</span>
-          <div class="prize">$2,000,000 across three 2026 tracks</div></div>
-        <div class="cell"><span class="lbl">Verified prize</span><span class="prize"><b>USD 2,000,000</b><br><a href="../verification.html#arcprize">quote &amp; scope →</a></span></div>
-        <div class="cell"><span class="lbl">Official source</span>
-          <div class="links"><a class="btn primary" href="https://arcprize.org/" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://www.kaggle.com/competitions/arc-prize-2026-paper-track" rel="noopener noreferrer nofollow">Rules ↗</a></div>
-          <span class="badge ">priority 79/100</span>
-        </div>
-      </div>
-      <div class="row" id="drivendata" data-id="drivendata" data-name="DrivenData"
-           data-free="full" data-live="1"
-           data-score="79" data-prize="300000" data-search="drivendata drivendata social-impact data-science contests with published usd purses. free to enter; winners paid by check or wire after tax forms. tech &amp; data competitions live per contest — often $10,000–$200,000 total purses">
-        <div class="cell">
-          <div class="name"><a href="#drivendata">DrivenData</a></div>
-          <p class="short">Social-impact data-science contests with published USD purses. Free to enter; winners paid by check or wire after tax forms.</p>
-          <div class="badges">
-            <span class="badge ">Tech &amp; data competitions</span>
-            <span class="badge b-live">Live</span>
-            <span class="badge b-partially">Partly verified</span>
-          </div>
-          <details class="more" data-entry="drivendata">
-            <summary>Details</summary>
-            <div class="detail-slot"></div>
-          </details>
-        </div>
-        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-free">Free to enter (per catalogue)</span></div>
-        <div class="cell"><span class="lbl">Prize (as published)</span>
-          <div class="prize">Per contest — often $10,000–$200,000 total purses</div></div>
-        <div class="cell"><span class="lbl">Verified prize</span><span class="prize"><b>USD 300,000</b><br><a href="../verification.html#drivendata">quote &amp; scope →</a></span></div>
-        <div class="cell"><span class="lbl">Official source</span>
-          <div class="links"><a class="btn primary" href="https://www.drivendata.org/competitions/" rel="noopener noreferrer nofollow">Official site ↗</a></div>
-          <span class="badge ">priority 79/100</span>
-        </div>
-      </div>
-      <div class="row" id="kaggle" data-id="kaggle" data-name="Kaggle Competitions"
-           data-free="full" data-live="1"
-           data-score="79" data-prize="450000" data-search="kaggle kaggle competitions browser data-science contests. featured competitions publish usd prize pools. getting started tracks usually pay $0. tech &amp; data competitions live featured pots commonly $5,000–$100,000+; specials exceed $1m">
-        <div class="cell">
-          <div class="name"><a href="#kaggle">Kaggle Competitions</a></div>
-          <p class="short">Browser data-science contests. Featured competitions publish USD prize pools. Getting Started tracks usually pay $0.</p>
-          <div class="badges">
-            <span class="badge ">Tech &amp; data competitions</span>
-            <span class="badge b-live">Live</span>
-            <span class="badge b-partially">Partly verified</span>
-          </div>
-          <details class="more" data-entry="kaggle">
-            <summary>Details</summary>
-            <div class="detail-slot"></div>
-          </details>
-        </div>
-        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-free">Free to enter (per catalogue)</span></div>
-        <div class="cell"><span class="lbl">Prize (as published)</span>
-          <div class="prize">Featured pots commonly $5,000–$100,000+; specials exceed $1M</div></div>
-        <div class="cell"><span class="lbl">Verified prize</span><span class="prize"><b>USD 450,000</b><br><a href="../verification.html#kaggle">quote &amp; scope →</a></span></div>
-        <div class="cell"><span class="lbl">Official source</span>
-          <div class="links"><a class="btn primary" href="https://www.kaggle.com/competitions" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://www.kaggle.com/legal/terms" rel="noopener noreferrer nofollow">Terms ↗</a></div>
-          <span class="badge ">priority 79/100</span>
-        </div>
-      </div>
-      <div class="row" id="codabench" data-id="codabench" data-name="Codabench / CodaLab"
-           data-free="full" data-live="1"
-           data-score="76" data-prize="0" data-search="codabench codabench / codalab open-source academic benchmark platform. 1,471 public competitions, free to enter and to host. tech &amp; data competitions live per benchmark — many are unpaid; ml contests logged $248,000 across 2025">
-        <div class="cell">
-          <div class="name"><a href="#codabench">Codabench / CodaLab</a></div>
-          <p class="short">Open-source academic benchmark platform. 1,471 public competitions, free to enter and to host.</p>
-          <div class="badges">
-            <span class="badge ">Tech &amp; data competitions</span>
-            <span class="badge b-live">Live</span>
-            <span class="badge b-unverified">source data only</span>
-          </div>
-          <details class="more" data-entry="codabench">
-            <summary>Details</summary>
-            <div class="detail-slot"></div>
-          </details>
-        </div>
-        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-free">Free to enter (per catalogue)</span></div>
-        <div class="cell"><span class="lbl">Prize (as published)</span>
-          <div class="prize">Per benchmark — many are unpaid; ML Contests logged $248,000 across 2025</div></div>
-        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
-        <div class="cell"><span class="lbl">Official source</span>
-          <div class="links"><a class="btn primary" href="https://www.codabench.org/" rel="noopener noreferrer nofollow">Official site ↗</a></div>
-          <span class="badge ">priority 76/100</span>
-        </div>
-      </div>
-      <div class="row" id="grand-challenge" data-id="grand-challenge" data-name="Grand Challenge (medical imaging)"
-           data-free="full" data-live="1"
-           data-score="76" data-prize="0" data-search="grand-challenge grand challenge (medical imaging) medical image analysis challenges from miccai, rsna and university hospitals. 264 hosted to date. tech &amp; data competitions live per challenge — commonly $2,000 to $10,000">
-        <div class="cell">
-          <div class="name"><a href="#grand-challenge">Grand Challenge (medical imaging)</a></div>
-          <p class="short">Medical image analysis challenges from MICCAI, RSNA and university hospitals. 264 hosted to date.</p>
-          <div class="badges">
-            <span class="badge ">Tech &amp; data competitions</span>
-            <span class="badge b-live">Live</span>
-            <span class="badge b-unverified">source data only</span>
-          </div>
-          <details class="more" data-entry="grand-challenge">
-            <summary>Details</summary>
-            <div class="detail-slot"></div>
-          </details>
-        </div>
-        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-free">Free to enter (per catalogue)</span></div>
-        <div class="cell"><span class="lbl">Prize (as published)</span>
-          <div class="prize">Per challenge — commonly $2,000 to $10,000</div></div>
-        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
-        <div class="cell"><span class="lbl">Official source</span>
-          <div class="links"><a class="btn primary" href="https://grand-challenge.org/challenges/" rel="noopener noreferrer nofollow">Official site ↗</a></div>
-          <span class="badge ">priority 76/100</span>
-        </div>
-      </div>
-      <div class="row" id="aicrowd" data-id="aicrowd" data-name="AIcrowd Challenges"
-           data-free="full" data-live="1"
-           data-score="68" data-prize="0" data-search="aicrowd aicrowd challenges open ml challenge platform hosting research contests for arc, sony, meta and amazon. tech &amp; data competitions live per challenge — currently up to $150,000+">
-        <div class="cell">
-          <div class="name"><a href="#aicrowd">AIcrowd Challenges</a></div>
-          <p class="short">Open ML challenge platform hosting research contests for ARC, Sony, Meta and Amazon.</p>
-          <div class="badges">
-            <span class="badge ">Tech &amp; data competitions</span>
-            <span class="badge b-live">Live</span>
-            <span class="badge b-unverified">source data only</span>
-          </div>
-          <details class="more" data-entry="aicrowd">
-            <summary>Details</summary>
-            <div class="detail-slot"></div>
-          </details>
-        </div>
-        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-free">Free to enter (per catalogue)</span></div>
-        <div class="cell"><span class="lbl">Prize (as published)</span>
-          <div class="prize">Per challenge — currently up to $150,000+</div></div>
-        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
-        <div class="cell"><span class="lbl">Official source</span>
-          <div class="links"><a class="btn primary" href="https://www.aicrowd.com/challenges" rel="noopener noreferrer nofollow">Official site ↗</a></div>
-          <span class="badge ">priority 68/100</span>
-        </div>
-      </div>
-      <div class="row" id="devpost" data-id="devpost" data-name="Devpost Hackathons"
-           data-free="full" data-live="1"
-           data-score="68" data-prize="0" data-search="devpost devpost hackathons browser directory of judged hackathons. many are free to enter and pay winners in usd via the event’s official rules. tech &amp; data competitions live per event — currently $10,000 to $685,000 per hackathon">
-        <div class="cell">
-          <div class="name"><a href="#devpost">Devpost Hackathons</a></div>
-          <p class="short">Browser directory of judged hackathons. Many are free to enter and pay winners in USD via the event’s official rules.</p>
-          <div class="badges">
-            <span class="badge ">Tech &amp; data competitions</span>
-            <span class="badge b-live">Live</span>
-            <span class="badge b-unverified">source data only</span>
-          </div>
-          <details class="more" data-entry="devpost">
-            <summary>Details</summary>
-            <div class="detail-slot"></div>
-          </details>
-        </div>
-        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-free">Free to enter (per catalogue)</span></div>
-        <div class="cell"><span class="lbl">Prize (as published)</span>
-          <div class="prize">Per event — currently $10,000 to $685,000 per hackathon</div></div>
-        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
-        <div class="cell"><span class="lbl">Official source</span>
-          <div class="links"><a class="btn primary" href="https://devpost.com/hackathons" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://info.devpost.com/terms" rel="noopener noreferrer nofollow">Terms ↗</a></div>
-          <span class="badge ">priority 68/100</span>
-        </div>
-      </div>
-      <div class="row" id="herox" data-id="herox" data-name="HeroX / Challenge.gov"
-           data-free="full" data-live="1"
-           data-score="68" data-prize="0" data-search="herox herox / challenge.gov marketplace of judged innovation prizes, including us federal challenge.gov pots paid by eft. tech &amp; data competitions live per challenge — federal pots often $25,000–$500,000+">
-        <div class="cell">
-          <div class="name"><a href="#herox">HeroX / Challenge.gov</a></div>
-          <p class="short">Marketplace of judged innovation prizes, including US federal Challenge.gov pots paid by EFT.</p>
-          <div class="badges">
-            <span class="badge ">Tech &amp; data competitions</span>
-            <span class="badge b-live">Live</span>
-            <span class="badge b-unverified">source data only</span>
-          </div>
-          <details class="more" data-entry="herox">
-            <summary>Details</summary>
-            <div class="detail-slot"></div>
-          </details>
-        </div>
-        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-free">Free to enter (per catalogue)</span></div>
-        <div class="cell"><span class="lbl">Prize (as published)</span>
-          <div class="prize">Per challenge — federal pots often $25,000–$500,000+</div></div>
-        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
-        <div class="cell"><span class="lbl">Official source</span>
-          <div class="links"><a class="btn primary" href="https://www.herox.com/challenges" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://www.challenge.gov/" rel="noopener noreferrer nofollow">Rules ↗</a><a class="btn" href="https://www.herox.com/terms" rel="noopener noreferrer nofollow">Terms ↗</a></div>
-          <span class="badge ">priority 68/100</span>
-        </div>
-      </div>
-      <div class="row" id="tianchi" data-id="tianchi" data-name="Tianchi (Alibaba Cloud)"
-           data-free="full" data-live="1"
-           data-score="68" data-prize="0" data-search="tianchi tianchi (alibaba cloud) alibaba cloud&#x27;s big-data competition platform — the second-largest ml competition host by prize money after kaggle. tech &amp; data competitions live per competition — from ~$1,000 to ¥1,000,000+ (~$157,000); $1.03m across 2025">
-        <div class="cell">
-          <div class="name"><a href="#tianchi">Tianchi (Alibaba Cloud)</a></div>
-          <p class="short">Alibaba Cloud&#x27;s big-data competition platform — the second-largest ML competition host by prize money after Kaggle.</p>
-          <div class="badges">
-            <span class="badge ">Tech &amp; data competitions</span>
-            <span class="badge b-live">Live</span>
-            <span class="badge b-unverified">source data only</span>
-          </div>
-          <details class="more" data-entry="tianchi">
-            <summary>Details</summary>
-            <div class="detail-slot"></div>
-          </details>
-        </div>
-        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-free">Free to enter (per catalogue)</span></div>
-        <div class="cell"><span class="lbl">Prize (as published)</span>
-          <div class="prize">Per competition — from ~$1,000 to ¥1,000,000+ (~$157,000); $1.03M across 2025</div></div>
-        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
-        <div class="cell"><span class="lbl">Official source</span>
-          <div class="links"><a class="btn primary" href="https://tianchi.aliyun.com/" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://tianchi.aliyun.com/competition/entrance/532277?lang=en-us" rel="noopener noreferrer nofollow">Rules ↗</a></div>
-          <span class="badge ">priority 68/100</span>
-        </div>
-      </div>
-      <div class="row" id="xprize" data-id="xprize" data-name="XPRIZE"
-           data-free="full" data-live="1"
-           data-score="68" data-prize="0" data-search="xprize xprize large multi-year incentive prizes and occasional hackathons with seven-figure usd pools. tech &amp; data competitions live flagship prizes in the millions; 2026 google-backed hackathon advertised a $2m pool">
-        <div class="cell">
-          <div class="name"><a href="#xprize">XPRIZE</a></div>
-          <p class="short">Large multi-year incentive prizes and occasional hackathons with seven-figure USD pools.</p>
-          <div class="badges">
-            <span class="badge ">Tech &amp; data competitions</span>
-            <span class="badge b-live">Live</span>
-            <span class="badge b-unverified">source data only</span>
-          </div>
-          <details class="more" data-entry="xprize">
-            <summary>Details</summary>
-            <div class="detail-slot"></div>
-          </details>
-        </div>
-        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-free">Free to enter (per catalogue)</span></div>
-        <div class="cell"><span class="lbl">Prize (as published)</span>
-          <div class="prize">Flagship prizes in the millions; 2026 Google-backed hackathon advertised a $2M pool</div></div>
-        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
-        <div class="cell"><span class="lbl">Official source</span>
-          <div class="links"><a class="btn primary" href="https://www.xprize.org/" rel="noopener noreferrer nofollow">Official site ↗</a></div>
-          <span class="badge ">priority 68/100</span>
-        </div>
-      </div>
-      <div class="row" id="zindi" data-id="zindi" data-name="Zindi"
-           data-free="full" data-live="1"
-           data-score="68" data-prize="0" data-search="zindi zindi africa-focused data science competition platform. free entry, cash prizes paid by bank transfer or paypal. tech &amp; data competitions live per challenge — typically $1,500 to $25,000">
-        <div class="cell">
-          <div class="name"><a href="#zindi">Zindi</a></div>
-          <p class="short">Africa-focused data science competition platform. Free entry, cash prizes paid by bank transfer or PayPal.</p>
-          <div class="badges">
-            <span class="badge ">Tech &amp; data competitions</span>
-            <span class="badge b-live">Live</span>
-            <span class="badge b-unverified">source data only</span>
-          </div>
-          <details class="more" data-entry="zindi">
-            <summary>Details</summary>
-            <div class="detail-slot"></div>
-          </details>
-        </div>
-        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-free">Free to enter (per catalogue)</span></div>
-        <div class="cell"><span class="lbl">Prize (as published)</span>
-          <div class="prize">Per challenge — typically $1,500 to $25,000</div></div>
-        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
-        <div class="cell"><span class="lbl">Official source</span>
-          <div class="links"><a class="btn primary" href="https://zindi.world/competitions" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://zindi.world/rules" rel="noopener noreferrer nofollow">Rules ↗</a></div>
-          <span class="badge ">priority 68/100</span>
-        </div>
-      </div>
-      <div class="row" id="crunchdao" data-id="crunchdao" data-name="CrunchDAO / ADIA Lab Challenges"
-           data-free="full" data-live="1"
-           data-score="57" data-prize="0" data-search="crunchdao crunchdao / adia lab challenges quantitative ml competitions run with adia lab. free entry, notebook submissions. tech &amp; data competitions live prize pool not stated on the competition overview — confirm before entering">
-        <div class="cell">
-          <div class="name"><a href="#crunchdao">CrunchDAO / ADIA Lab Challenges</a></div>
-          <p class="short">Quantitative ML competitions run with ADIA Lab. Free entry, notebook submissions.</p>
-          <div class="badges">
-            <span class="badge ">Tech &amp; data competitions</span>
-            <span class="badge b-live">Live</span>
-            <span class="badge b-unverified">source data only</span>
-          </div>
-          <details class="more" data-entry="crunchdao">
-            <summary>Details</summary>
-            <div class="detail-slot"></div>
-          </details>
-        </div>
-        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-free">Free to enter (per catalogue)</span></div>
-        <div class="cell"><span class="lbl">Prize (as published)</span>
-          <div class="prize">Prize pool not stated on the competition overview — confirm before entering</div></div>
-        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
-        <div class="cell"><span class="lbl">Official source</span>
-          <div class="links"><a class="btn primary" href="https://hub.crunchdao.com/competitions/structural-break-real-time" rel="noopener noreferrer nofollow">Official site ↗</a></div>
-          <span class="badge ">priority 57/100</span>
-        </div>
-      </div>
-      <div class="row" id="signate" data-id="signate" data-name="Signate (Japan) Data Competitions"
-           data-free="full" data-live="1"
-           data-score="57" data-prize="0" data-search="signate signate (japan) data competitions japan-based data science competition platform with cash prize contests from nedo and corporate sponsors. tech &amp; data competitions live per competition — yen-denominated cash prizes (e.g. ¥4,000,000 total / ¥1,200,000 top)">
-        <div class="cell">
-          <div class="name"><a href="#signate">Signate (Japan) Data Competitions</a></div>
-          <p class="short">Japan-based data science competition platform with cash prize contests from NEDO and corporate sponsors.</p>
-          <div class="badges">
-            <span class="badge ">Tech &amp; data competitions</span>
-            <span class="badge b-live">Live</span>
-            <span class="badge b-unverified">source data only</span>
-          </div>
-          <details class="more" data-entry="signate">
-            <summary>Details</summary>
-            <div class="detail-slot"></div>
-          </details>
-        </div>
-        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-free">Free to enter (per catalogue)</span></div>
-        <div class="cell"><span class="lbl">Prize (as published)</span>
-          <div class="prize">Per competition — yen-denominated cash prizes (e.g. ¥4,000,000 total / ¥1,200,000 top)</div></div>
-        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
-        <div class="cell"><span class="lbl">Official source</span>
-          <div class="links"><a class="btn primary" href="https://signate.jp/" rel="noopener noreferrer nofollow">Official site ↗</a></div>
-          <span class="badge ">priority 57/100</span>
-        </div>
-      </div>
-      <div class="row" id="topcoder" data-id="topcoder" data-name="Topcoder"
-           data-free="full" data-live="1"
-           data-score="57" data-prize="0" data-search="topcoder topcoder long-running design, development, and data-science tournaments. many challenges pay usd to verified members. tech &amp; data competitions live per challenge — hundreds to tens of thousands; tco finals add extra purses">
-        <div class="cell">
-          <div class="name"><a href="#topcoder">Topcoder</a></div>
-          <p class="short">Long-running design, development, and data-science tournaments. Many challenges pay USD to verified members.</p>
-          <div class="badges">
-            <span class="badge ">Tech &amp; data competitions</span>
-            <span class="badge b-live">Live</span>
-            <span class="badge b-unverified">source data only</span>
-          </div>
-          <details class="more" data-entry="topcoder">
-            <summary>Details</summary>
-            <div class="detail-slot"></div>
-          </details>
-        </div>
-        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-free">Free to enter (per catalogue)</span></div>
-        <div class="cell"><span class="lbl">Prize (as published)</span>
-          <div class="prize">Per challenge — hundreds to tens of thousands; TCO finals add extra purses</div></div>
-        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
-        <div class="cell"><span class="lbl">Official source</span>
-          <div class="links"><a class="btn primary" href="https://www.topcoder.com/challenges" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://www.topcoder.com/policy" rel="noopener noreferrer nofollow">Terms ↗</a></div>
-          <span class="badge ">priority 57/100</span>
-        </div>
-      </div>
-  </div>
-
-<h2 class="sec">Other categories</h2>
-<div class="links"><a class="btn" href="skill.html">Skill tournaments (12)</a><a class="btn" href="trivia.html">Trivia competitions (2)</a><a class="btn" href="sports.html">Fantasy &amp; sports picks (129)</a><a class="btn" href="creative.html">Creative contests (18)</a><a class="btn" href="forecasting.html">Forecasting tournaments (3)</a><a class="btn" href="market.html">Market competitions (19)</a><a class="btn" href="directory.html">Directories &amp; forums (2)</a><a class="btn" href="pools.html">Free pool &amp; league platforms (7)</a></div>
-
-<footer class="site">
-  <p><b>Free Cash Competition Ledger</b> — an independent catalogue mirroring the “Free Money &amp; Contest Ledger”
-  (<a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">reference site</a>)
-  with per-row source links and a separate verification layer.</p>
-  <p>Not affiliated with any listed operator. Official rules always win. US federal tax reporting generally
-  applies to prizes of $600 or more — confirm with a tax professional. Nothing here is legal or financial advice.
-  Sweepstakes and casino-style gambling products are out of scope.</p>
-  <p>Data as published by the reference catalogue on 2026-08-19 (pass “S”), audited and partly re-verified on
-  2026-11-01. Prize amounts change; open the operator’s rules before you enter.
-  <a href="../methodology.html">Method &amp; limits</a> · <a href="../flagged.html">Flagged for review</a> ·
-  <a href="../sources.html">Sources</a> · <a href="../cross-session.html">Cross-session</a></p>
-  <p><b>Built in parallel with other agent sessions.</b> Their pages still ship and are linked here:
-  <a href="../review.html">their review queue</a> ·
-  <a href="../supplemental/index.html">their supplemental evidence</a> ·
-  <a href="https://github.com/sassnarep3-star/Own1/blob/main/research/SOURCES.md" rel="noopener noreferrer">their source audit</a>.</p>
-</footer>
+  
+  <div class="panel">
+    <div class="toolbar">
+  <input class="f-search" type="search" placeholder="Search name, operator, prize…" aria-label="Search listings">
+  <select class="f-status" aria-label="Verification status">
+    <option value="">All statuses</option><option value="verified">Page checked</option>
+    <option value="partial">Partly checked</option><option value="unverified">Unverified</option>
+  </select>
+  
+  <select class="f-sort" aria-label="Sort"><option value="fit">Sort: best fit</option><option value="deadline">Sort: deadline</option><option value="status">Sort: status</option><option value="name">Sort: name</option></select>
 </div>
-<script src="../assets/js/site.js"></script>
-</body>
-</html>
+    <div id="rows" aria-live="polite">Loading…</div>
+    <div class="table-foot">Loading…</div>
+  </div>
+  <div class="notice"><strong>How to read a row.</strong> “Page checked” links to that entry's evidence page with the exact quote. “Lead link” is an unverified URL inherited from the reference catalog — it may be stale or wrong, and a good URL is not proof of a prize.</div>
+  <p class="small"><a href="../index.html">← All categories</a> · <a href="../playbook.html">How to choose one</a> · <a href="../review.html">What is flagged</a></p>
+</main>
+<footer class="footer"><div class="shell">
+  <span>Prize Atlas — an evidence ledger, not a tip jar. Research, not financial or legal advice. Facts read 2026-11-01.</span>
+  <span><a href="../sources.html">Method &amp; sources</a> · <a href="../review.html">Flagged for review</a> · <a href="../supplemental/index.html">Supplemental audit</a> · <a href="https://github.com/sassnarep3-star/Own1">Repository</a></span>
+</div></footer>
+<script src="../data/site-data.js"></script>
+<script src="../assets/app.js" defer></script>
+</body></html>

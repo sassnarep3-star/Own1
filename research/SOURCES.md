@@ -1,95 +1,64 @@
-# Source audit and verification log — 2026-11-01 UTC
+# Source audit — 2026-11-01 UTC
 
-This file records what was actually read, what it said, and what remains unverified. The published
-version of this material is the [Method page](../method.html) and the
-[Flagged for review page](../review.html).
+This file is the human-readable audit log. The machine-readable version that generates the site is [`research/facts.mjs`](facts.mjs); every value published in the tables comes from an entry there.
 
-## 1. Scope
+## Scope and method
 
-- **Reference catalogue:** <https://karagemop466-tech.github.io/FreeMoneyApps/> — repository
-  <https://github.com/karagemop466-tech/FreeMoneyApps>, data file `assets/data.js`, pass "S",
-  stamped **2026-08-19**, 206 listings.
-- **Starting repository:** `sassnarep3-star/Own1` at commit `90a7908`, which contained a first-pass
-  static site (208 rows, 7 rows checked).
-- **This pass:** 206 listings re-imported as unverified leads, 44 rows verified against operator
-  pages, 17 irregularities documented, site rebuilt as a mobile-first dashboard.
+The starting repository contained only `README.md`. The requested reference site is a separate repository, [FreeMoneyApps](https://github.com/karagemop466-tech/FreeMoneyApps), whose [`assets/data.js`](https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/data.js) holds 206 listings stamped 2026-08-19. That file is **not** an official source for any prize, window or qualification. It was used for one thing only: names, categories and candidate links. Its older `100_VERIFIED_CONTESTS.md` calls itself superseded and lists false claims, so it was not used at all.
 
-The reference catalogue is **not** an official source for any prize, entry window or eligibility rule.
-A URL that the catalogue labels "official" is a pointer to be checked, not evidence.
+A row is marked `verified` only when the organiser's own page was opened on 2026-11-01 and the displayed value copied as a quote. A row is `partial` when the page would not render its listings. Everything else is `unverified`, and keeps its prize, fee, deadline and fit score blank.
 
-## 2. Method
+## Official pages read in this session
 
-1. Read the reference data file directly (`assets/data.js`) and imported only: id, name, category,
-   source URL, legacy prize text, legacy status, legacy free-path label, legacy description.
-2. Stripped every prize, fee, deadline and eligibility field to an empty string. A lead row therefore
-   shows blanks plus the legacy claim, labelled unverified.
-3. Ran a DNS check over all **223** distinct hostnames in the catalogue. Six did not resolve.
-4. Opened operator pages for the categories where free entry plus cash is plausible, and recorded only
-   what those pages state. Countdowns ("8 days to go") were recorded as notes, never converted to dates.
-5. Cross-checked conflicting statements on the same operator page and published both values.
+| Entry | Page read | What it establishes | What it does **not** establish |
+| --- | --- | --- | --- |
+| Codex x TwitchCon Hackathon | [rules](https://twitchcon-codex.devpost.com/rules) | No purchase necessary; 18+; submission 2026-10-23 → 2026-11-02 14:00 PT; AI coding assistants permitted; $25,000 in prizes (page title); sanction carve-outs incl. Brazil and Quebec | Does not state the individual prize split on the pages read; no guarantee of payment or of eligibility beyond rule 3 |
+| PayPal AI Hackathon | [rules](https://paypalaihackathon.devpost.com/rules) | No purchase necessary; age of majority; submission 2026-10-01 → 2026-11-12 12:00 PT; free sandbox; any AI tool | Prize total — the event page and rules are reported to disagree, so no amount is asserted |
+| ARC Prize 2026 | [competition](https://arcprize.org/competitions/2026) | $2M across three tracks; submissions 2026-11-02; papers 2026-11-08; open source required; no internet during Kaggle evaluation | Entry fee — not stated anywhere on the page |
+| Kaggle | [competitions](https://www.kaggle.com/competitions) | Live prize events: ARC paper track $450,000 (8 days), NFL Big Data Bowl 2027 $100,000 (2 months), Gemma 4 paper track $35,000 (11 days) | Fee; also mixes unpaid "Getting Started" events with prize events |
+| NFL Big Data Bowl 2027 | [index](https://www.kaggle.com/competitions) | $100,000; 2 months remaining | Full eligibility — on the competition page, not read here |
+| DrivenData | [competitions](https://www.drivendata.org/competitions/) | One active prize competition; benchmarks and practice are unpaid | Entry fee |
+| GEMS Prize Challenge | [competition](https://www.drivendata.org/competitions/306/competition-doe-gems/) | $300,000; "4 weeks left"; hosted by DOE | Entry fee |
+| Metaculus | [tournaments](https://www.metaculus.com/tournaments/) | "You can participate for free and win cash prizes"; 13 funded tournaments, 4 with no prize pool; largest live pool $50,000 (FutureEval Bot Tournament) | Individual tournament eligibility and payout mechanics |
+| US Midterms 2026 | [tournaments](https://www.metaculus.com/tournaments/) | $10,000 pool; "ends 3 days from now" (→ 2026-11-04, derived arithmetically) | — |
+| ESPN NFL Pick'em | [how to play](https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay) | Free to play confirmed verbatim; $102,000 total; full prize table; no-purchase clause; void in PR/territories/Quebec | Whether 10 or 5 entries is current — the page contradicts itself |
+| Wergle Flomp | [contest](https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free) | No fee to enter; $5,100 total; window 2026-08-15 → 2027-04-01; AI-written text prohibited | — |
+| Tom Howard/Margaret Reid | [contest](https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest) | **$27 per submission**; $12,000 total; closed until 2027-04-15; AI text prohibited | — |
+| Sony World Photography Awards | [awards](https://www.worldphoto.org/sony-world-photography-awards) | "free to enter"; $25,000 Series / $5,000 Single Image; 2027 deadlines: Single Image 2027-01-05, Series 2027-01-12 | Whether equipment-only Student/Youth prizes include cash |
+| Environmental Photographer of the Year | [site](https://www.epoty.org/) | "free to enter ... around the world of all ages and experience levels" | Any cash amount — none is stated, so the prize cell is blank |
+| Weather Photographer of the Year | [site](https://www.rmets.org/weather-photographer-of-the-year) | "free to enter"; all skill levels worldwide; dates shown without a year | Any cash amount |
+| TradingView The Leap | [rules](https://www.tradingview.com/the-leap/tradestation-july-2026/rules/) | No purchase necessary; skill competition; paper trading only; competition period 2026-07-20 → 2026-08-14 (ended) | Prize amounts — not read, so blank |
+| Givling | [site](https://givling.com/) | Crowdfunding queue: $50,000 queue + $50,000 exchange; points from purchases, ads and spinners | That it is a judged competition — it is not |
+| Zindi, Topcoder, AIcrowd, XPRIZE | [Zindi](https://zindi.world/competitions), [Topcoder](https://www.topcoder.com/challenges), [AIcrowd](https://www.aicrowd.com/challenges), [XPRIZE](https://www.xprize.org/competitions) | Boards require JavaScript or sign-in; no listings rendered | Prizes, fees, deadlines — all left blank |
 
-## 3. Operator pages read on 2026-11-01
+## Cross-cutting irregularities
 
-| Page | What was confirmed |
-| --- | --- |
-| <https://fantasy.espn.com/games/nfl-pickem-2026/picks> and <https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay> | Free to play; $102,000 across 58 prizes; game dates 09/09/2026–01/10/2027; prize ladder; $5,000 random drawing; the page contradicts itself on the entry limit (10 vs five) |
-| <https://fantasy.espn.com/free-prize-games> | ESPN free-to-play games index; related tile for College Pick'em ("LIVE • Sep 5 – Dec 5") |
-| <https://www.cbssports.com/fantasy/football/games/pickem/rules> | 2026 Pro Football Pick'em: free, 18+, 50 states + DC, 2026-09-09 to 2027-01-10, 18 × $1,000 weekly, $5,000 season, $100,000 contingency |
-| <https://www.cbssports.com/fantasy/college-football/games/pickem/rules> | College Pick'em: free, 18+, 50 states + DC, 2026-09-05 to 2026-11-28; prize amounts not read this pass |
-| <https://www.kaggle.com/competitions> | Hub states "Featured: premier challenges with prizes"; cards for ARC Prize 2026 Paper Track ($450,000, "8 days to go"), NFL Big Data Bowl 2027 ($100,000, "2 months to go"), Gemma 4 Developer Agent Paper Track ($35,000, "11 days to go") |
-| <https://arcprize.org/competitions/2026> | $2M across three tracks; submissions due 2026-11-02, papers 2026-11-08, results 2026-12-04; open-source requirement; no internet during Kaggle evaluation |
-| <https://www.drivendata.org/competitions/> | Index separates prize competitions, benchmarks and practice |
-| <https://www.drivendata.org/competitions/306/competition-doe-gems/> | $300,000 total; ends Dec. 3, 2026, 11:59 p.m. UTC; prize ladder; eligibility deferred to rules page |
-| <https://devpost.com/hackathons> | Listing data for the nine Devpost events recorded (dates and prize totals as shown) |
-| <https://paypalaihackathon.devpost.com/> | Deadline 2026-11-12 15:00 EST; eligibility (age of majority, all countries with standard exceptions); deliverables; page states both $67,500 cash and $69,750 total prizes |
-| <https://www.metaculus.com/tournaments/> | 19 tournaments; "$10,000 PRIZE POOL", "NO PRIZE POOL" labels and end-countdowns recorded verbatim; operator states participation is free |
-| <https://www.worldphoto.org/sony-world-photography-awards> | Free to enter; Series $25,000, Single Image $5,000; Student and Youth prizes are equipment; closes 2026-11-27 (Student), 2027-01-05 (Single Image, Youth), 2027-01-12 (Series) |
-| <https://vocal.media/resources/challenges-frequently-asked-questions> | Free entry; 13+; Stripe countries only; cash paid through Stripe |
-| <https://givling.com/> | Queue and Exchange mechanics; up to $50,000 + $50,000; $10,814,664 crowdfunded to date |
-| <https://www.xprize.org/competitions> | Active purses: Quantum Applications $5M, Water Scarcity $119M, Healthspan $101M; Wildfire $11M in "Finals" |
-| <https://www.cbssports.com/games/> | Returned "this page has been moved or deleted" — recorded as a link-rot finding |
+All of these are published on the site's "Flagged for review" page with their source links. Summary:
 
-Pages fetched but **not** usable as evidence:
+1. Tom Howard/Margaret Reid is a **paid-entry** contest ($27) that the reference catalog implied was free.
+2. TradingView's link points to an **edition that ended** 2026-08-14.
+3. Givling is a **crowdfunding queue**, not a judged cash competition; its inherited "ended" status was stale.
+4. **Ten links failed a real check**: DNS failures (`supercoach.news.com.au`, `fantasy.football.scot`, `fantazilig.tff.org`, `fantasyracing.telegraph.co.uk`), an expired certificate (`pensacolabeachsongwritersfestival.com`), a certificate name mismatch (`favorites.actionnetwork.com`), two 404s (`bracketchallenge.nhl.com`, `topcoder.com/challenges`), two timeouts (`fantasygaelicfootball.com`, `gaming.uefa.com`). Note that Topcoder served a sign-in shell in a browser despite the 404, so it is flagged as *unreliable*, not closed.
+5. ESPN's own page states **both** "up to 10 entries" and "up to five total".
+6. PayPal's hackathon page and rules are **reported to disagree** on the prize total; no figure asserted.
+7. Challenge.gov was **sunset 2026-03-30** but still appears in the reference catalog.
+8. EPOTY and Weather Photographer of the Year **publish no cash amount**; prize cells blank.
+9. The reference site's blanket **"$600+" tax rule** is not a legal rule ([IRS Pub. 525](https://www.irs.gov/publications/p525), [Topic 419](https://www.irs.gov/taxtopics/tc419)).
+10. Two leads (**TheLines**, **SquaresPool**) have no usable HTTPS operator URL; no substitute was invented.
 
-- <https://www.aicrowd.com/challenges> — the challenge taxonomy rendered as spam tags, no reliable prize data.
-- <https://zindi.africa/competitions> — redirects to zindi.world and renders client-side; no listing data returned.
-- <https://www.worldpressphoto.org/contest> — page returned only a heading and a link; no prize figures, so the World Press Photo lead stays unverified.
-- <https://www.cbssports.com/games/> — 404 as noted above.
+## Verification status of the inherited catalog
 
-## 4. Irregularities (published on the Flagged for review page)
+- 190 of 211 rows remain unverified, with financial and timing fields blank.
+- 4 rows are `partial` because their boards would not render.
+- 21 inherited rows were labelled `ended`, 5 `mixed`, 11 `caution` in August 2026; none of those labels is displayed as a current fact.
+- The reference dataset mixes paid-entry skill games, directories, group-funded pool software and non-cash credits. They are retained for completeness and **not** recommended as free-cash opportunities.
 
-1. All 206 legacy listings carry a prize claim; 143 contain an explicit dollar figure; none is re-established against a current rules page.
-2. Six source domains do not resolve: `supercoach.news.com.au`, `fantasyfootball.skysports.com`, `fantasy.football.scot`, `fantazilig.tff.org`, `fantasy.premiershiprugby.com`, `fantasyracing.telegraph.co.uk`.
-3. One listing (`squarespool`) has only an http:// source and no secure alternative.
-4. 26 listings marked "ended" still carry a "full free path" label.
-5. 68 listings describe non-cash or mixed rewards (gift cards, merchandise, bonus currency, gems, coins, partial free paths).
-6. 15 listings include an affiliate-tier source and 4 a forum-tier source.
-7. `thelines-survivor` is sourced to a URL pinned to week 1 of the 2024 season.
-8. Several mini-league rows link to `fantasy.premierleague.com`, the host platform, not the league operator.
-9. ESPN's NFL Pick'em page states two different entry limits.
-10. The PayPal AI Hackathon page states two different prize totals.
-11. Devpost's DSH Hacks V2 card says "5 non-cash prizes" while its title advertises "$100k+ in prizes".
-12. ARC Prize's stated paper deadline and Kaggle's countdown differ by about a day.
-13. `100_VERIFIED_CONTESTS.md` in the reference repository declares itself superseded; it was not used.
-14. CBS Sports' `/games/` path is a 404 while its deep rules URLs load.
-15. Four categories have no verified entry (skill, market, pools, directories).
-16. The reference site itself has no search or filters — the usability problem this rebuild addresses.
-17. External links on lead rows are **not certified reachable**: this environment resolves DNS but cannot fetch arbitrary domains, so only the operator pages in §3 were opened.
-
-## 5. What remains unverified
-
-- 205 lead rows: name, category and a legacy source pointer only. Prize, fee, deadline, eligibility,
-  work required and payout are blank by policy.
-- Hackathon totals read from Devpost are "in prizes", not confirmed "in cash".
-- Eligibility for most verified rows is either the operator's summary wording or deferred to a rules
-  page that was not opened; where that happened the row says so.
-- External deep-link reachability is spot-checked, not certified.
-
-## 6. Reproduce
+## Reproducing the checks
 
 ```bash
-git clone --depth 1 https://github.com/karagemop466-tech/FreeMoneyApps /tmp/fma
-node scripts/import_legacy.mjs /tmp/fma/assets/data.js > data/legacy.json
-node scripts/build.mjs
-node tests/validate.mjs
+node scripts/build-data.mjs     # merge facts + leads + link health
+node scripts/build-site.mjs     # regenerate every page
+node tests/validate.mjs         # verification gate (fails on any unsourced or broken claim)
 ```
+
+Link health is measured by `.github/workflows/link-health.yml` on a GitHub runner, because the environment that builds this repository can only reach GitHub. A 403/429 from that runner means the site refused a bot — **not** that the page is gone. That distinction is shown in the UI.

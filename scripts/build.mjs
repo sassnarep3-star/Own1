@@ -29,7 +29,7 @@ const categories = read('data/categories.json');
 const audit = read('data/atlas-findings.json');
 
 const TODAY = '2026-11-01';
-const SITE = 'Prize Atlas';
+const SITE = 'Verified Atlas';
 const REPO = 'https://github.com/sassnarep3-star/Own1';
 
 /* ------------------------------------------------------------------ helpers */
@@ -213,7 +213,7 @@ const shell = ({ page, title, description, body, heroHtml = '', S = '' }) => {
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="topbar">
   <div class="shell topbar-inner">
-    <a class="brand" href="${S}index.html"><span class="mark" aria-hidden="true">◈</span><span>Prize Atlas</span></a>
+    <a class="brand" href="${S}index.html"><span class="mark" aria-hidden="true">◈</span><span>Verified Atlas</span></a>
     <nav class="topnav" aria-label="Main">${nav}</nav>
   </div>
 </header>
@@ -221,7 +221,7 @@ ${heroHtml.replaceAll('{{D}}', S)}
 <main id="main" class="shell main">${body.replaceAll('{{D}}', S).replaceAll('{{R}}', D)}</main>
 <footer class="footer">
   <div class="shell footer-inner">
-    <p><strong>Prize Atlas</strong> — free-to-enter cash competition research. Facts verified against operator pages on ${TODAY} UTC. Not financial, legal or tax advice.</p>
+    <p><strong>Verified Atlas</strong> — operator-verified cash competition research, the subsite of the Prize Atlas project. Facts verified against operator pages on ${TODAY} UTC. Not financial, legal or tax advice.</p>
     <p class="footer-links"><a href="${S}summary.html">Executive summary</a><a href="${S}method.html">Method &amp; sources</a><a href="${S}review.html">Flagged for review</a><a href="${D}">Repo home</a><a href="${REPO}" target="_blank" rel="noopener noreferrer">Repository ↗</a></p>
   </div>
 </footer>

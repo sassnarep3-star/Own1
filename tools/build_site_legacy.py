@@ -1,3 +1,8 @@
+# ARCHIVED GENERATOR — DO NOT RUN.
+# This script was written by session d21e8702-own1 and is preserved for provenance only.
+# It writes index.html, category/*.html, sources.html and other shared paths that are now produced by
+# scripts/build-site.mjs (the canonical generator). Running it would silently overwrite the live pages.
+# Kept in the repository so that session's work and method stay auditable.
 #!/usr/bin/env python3
 """Static site generator for the Free Cash Competition Ledger.
 
