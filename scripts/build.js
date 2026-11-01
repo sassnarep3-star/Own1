@@ -1366,6 +1366,7 @@ const ctx = {
   sourceReviewed: SITE.sourceReviewed,
   commit: SITE.commit,
   sha256: SITE.sha256,
+  flagCounts: Object.fromEntries(irr.items.map((f) => [f.id, (f.affected || []).length])),
   catCount: Object.fromEntries(TYPES.map((t) => [t.id, ledger.listings.filter((i) => i.type === t.id).length]))
 };
 

@@ -24,6 +24,7 @@ const ctx = {
   sourceReviewed: verif.sourceReviewed,
   commit: ledger.provenance.sourceRepoCommit,
   sha256: ledger.provenance.sourceFileSha256,
+  flagCounts: Object.fromEntries(irr.items.map((f) => [f.id, (f.affected || []).length])),
   catCount: Object.fromEntries(ledger.types.map((t) => [t.id, ledger.listings.filter((i) => i.type === t.id).length]))
 };
 

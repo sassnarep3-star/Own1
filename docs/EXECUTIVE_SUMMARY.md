@@ -5,7 +5,7 @@ _What the source ledger contains, what we could and could not verify, what we re
 
 ## 1. The brief, and what was delivered
 
-The source site (Free Money & Contest Ledger) is a research catalogue of free-to-enter competitions that can pay real money. Its weaknesses are real: on a phone it is one long scroll of 206 full-length cards with no search, no filters and no sorting, its own pages disagree about which revision is published, and at least one cited App Store link is dead. It also mixes 27 ended contests and 12 unverified referral codes into the same undifferentiated list as live, verifiable competitions.
+The source site (Free Money & Contest Ledger) is a research catalogue of free-to-enter competitions that can pay real money. Its weaknesses are real: on a phone it is one long scroll of 206 full-length cards with no search, no filters and no sorting, its own pages disagree about which revision is published, and one of its cited App Store links returned an error page when we fetched it. It also mixes 27 ended contests and 12 unverified referral codes into the same undifferentiated list as live, verifiable competitions.
 
 This repository rebuilds it as a mobile-first dashboard: one row per competition, nine category pages, a full-table page with search/filter/sort, a scoring-based shortlist, a verification page, and a Flagged for Review page carrying every irregularity with source links. Every table row links to the operator's own page. Nothing on the site is a value we invented — values that no official source supports are left blank and listed as unverified.
 
@@ -36,8 +36,8 @@ This repository rebuilds it as a mobile-first dashboard: one row per competition
 - Version confusion: the header says "Pass C · 17 Aug 2026", the data says pass S / 2026-08-19, and the review page says the ledger "runs to 119 listings" while the data holds 206.
 - Broken and weak links: in a sample of 12 fetched URLs, the Solitaire Cash App Store link returned Apple's "An Error Occurred" page; one row links only over http://; six rows cite no rules page at all; 113 rows use the signup page as the "rules" link.
 - Unsupported prize claims: 12 rows have no official-tier source, and three of them say outright that the prize table came from review sites.
-- Unverifiable incentives: 12 referral/league codes, 8 of them explicitly marked unverified, 4 with no verification at all.
-- Scope drift: the file says sweepstakes, casinos and bookmaker accounts are excluded, then links a contest through a live US sportsbook (betfanatics.com) and includes ~16 forex/CFD broker demo contests whose own notes call them "broker acquisition funnels".
+- Unverifiable incentives: 12 referral/league codes, 8 of them explicitly marked unverified and 4 with no verification flag at all.
+- Scope drift: the file says sweepstakes, casinos and bookmaker accounts are excluded, then links a contest through a live US sportsbook (betfanatics.com) and includes 15 forex/CFD broker demo contests whose own notes call them "broker acquisition funnels".
 - Dead weight: 27 ended contests and 2 directory rows are presented with the same weight as live competitions.
 
 
@@ -45,7 +45,7 @@ This repository rebuilds it as a mobile-first dashboard: one row per competition
 
 - Verified-only values: a prize or cash-out figure appears in the table only when the row has an official-tier source and the source text states an amount. Otherwise the cell is blank and marked unverified.
 - One link per row to the operator, plus a second link to the rules/terms page when one exists, and a third to the App Store only where an app actually exists.
-- Every row carries a verification badge: "Live-checked 2026-11-01" (12 rows), "Source cited — not re-checked" (182), or "No official source" (12).
+- Every row carries a verification badge: "Live-checked" (11 rows fetched on 2026-11-01), "Link error" (1), "Source cited — not re-checked" (182), or "No official source" (12).
 - Status is first-class: ended contests are stamped, filtered out of the shortlists and excluded from the "enter now" count.
 - Search, filters (category, entry path, platform, ID checks, status) and sorting work on a real table on desktop and collapse to labelled cards on a phone.
 - The 17 irregularities are published with their evidence, their links and a recommended action — including the ones we could not settle ourselves.

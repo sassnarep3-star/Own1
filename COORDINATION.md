@@ -78,13 +78,19 @@ found.
   IDs referenced by every listing, all `addedThisPass*` / `featured` /
   `removedThisPass` IDs resolve to real listings or are absent as expected.
 
-### T2 — Structural + source audit — DONE (12 items `needs review`)
+### T2 — Structural + source audit — DONE (17 items `needs review`)
 
 - Every listing checked for: a signup URL, a rules URL, at least one source, at least
   one `tier: official` source, https-only links, and whether the prize field contains a
   stated figure.
 - Results are per-row in `data/verification.json`; the human-readable register is
-  `data/irregularities.json`, published at `flagged.html` and marked `needs review`.
+  `data/irregularities.json` (17 items: I-01 … I-16 plus I-08a/I-08b split), published at
+  `flagged.html` and marked `needs review`.
+- Headline results: 12 rows cite no official-tier source; 27 rows are ended/out of season;
+  12 rows carry referral codes with no verification; 6 rows cite no rules URL; 113 rows use the
+  signup page as their "rules" link; 1 row links only over http://; 78 rows state no money amount;
+  24 rows quote a non-USD currency; and the source's own scope policy is contradicted by 17 rows
+  that need a gambling-operator or broker account.
 
 ### T3 — Live spot-check — DONE (see `data/live-checks.json`)
 
@@ -95,8 +101,16 @@ found.
 - Consequence for the site: a row is labelled **"live-checked 2026-11-01"** only if it
   was actually fetched this session. All other rows are labelled **"source cited — not
   re-checked this session"**. No row is presented as verified when it was not.
-- The full not-re-checked set is listed on the Flagged for Review page so the gap is
+- The full not-re-checked set (194 rows) is listed on the Flagged for Review page so the gap is
   visible, not hidden.
+- Twelve URLs were fetched: CBS pick'em rules, Kaggle competitions, Papaya FAQ, SquaresPool,
+  two App Store pages, betfanatics.com, Metaculus tournaments, World Press Photo, TradingView
+  The Leap, Reedsy's contest directory and Swagbucks. Results, including what each page did *not*
+  confirm, are in `data/live-checks.json` and rendered on `flagged.html`.
+- Two findings changed the published data: the Solitaire Cash App Store URL returned Apple's
+  error page (row marked "link error", I-05), and the TradingView rules link points at a finished
+  July 2026 event (I-06). A live check that found no open entry window also costs a row 4 points
+  in the shortlist model.
 
 ### T4–T8 — Site build — DONE
 
@@ -109,8 +123,10 @@ found.
 ### T9 — Link/build check — DONE
 
 - `scripts/checklinks.js` resolves every internal `href`/`src` to a file on disk
-  (0 missing), confirms every listing appears on exactly one category page and on the
-  full table, and confirms every row carries an external source link.
+  (223 HTML files, 0 missing), confirms every listing appears on exactly one category page and
+  exactly once on the full table, confirms every row carries an external source link, and fails on
+  anchors that do not resolve. A separate tag-balance pass over all 223 files found 0 malformed
+  documents. `npm run build` runs the whole chain end to end.
 
 ### T10 — Integration — DONE
 
