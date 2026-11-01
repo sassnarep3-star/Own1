@@ -192,8 +192,8 @@ const NAV = [
   ['ledger-pass.html', 'Ledger pass'],
 ];
 
-const shell = ({ page, title, description, body, heroHtml = '' }) => {
-  const nav = NAV.map(([href, label]) => `<a href="./${href}"${page === href ? ' aria-current="page" class="active"' : ''}>${label}</a>`).join('');
+const shell = ({ page, title, description, body, heroHtml = '', D = '../' }) => {
+  const nav = NAV.map(([href, label]) => `<a href="${D}${href}"${page === href ? ' aria-current="page" class="active"' : ''}>${label}</a>`).join('');
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -202,24 +202,24 @@ const shell = ({ page, title, description, body, heroHtml = '' }) => {
 <title>${esc(title)} · ${SITE}</title>
 <meta name="description" content="${esc(description)}">
 <meta name="color-scheme" content="light">
-<link rel="stylesheet" href="./assets/style.css">
+<link rel="stylesheet" href="${D}assets/atlas.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23104f5c'/%3E%3Cpath d='M8 21l5-10 3 6 3-4 5 8z' fill='%237fe3d0'/%3E%3C/svg%3E">
-<script src="./assets/app.js" defer></script>
+<script src="${D}assets/atlas.js" defer></script>
 </head>
 <body data-page="${page}">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="topbar">
   <div class="shell topbar-inner">
-    <a class="brand" href="./index.html"><span class="mark" aria-hidden="true">◈</span><span>Prize Atlas</span></a>
+    <a class="brand" href="${D}index.html"><span class="mark" aria-hidden="true">◈</span><span>Prize Atlas</span></a>
     <nav class="topnav" aria-label="Main">${nav}</nav>
   </div>
 </header>
-${heroHtml}
-<main id="main" class="shell main">${body}</main>
+${heroHtml.replaceAll('{{D}}', D)}
+<main id="main" class="shell main">${body.replaceAll('{{D}}', D)}</main>
 <footer class="footer">
   <div class="shell footer-inner">
     <p><strong>Prize Atlas</strong> — free-to-enter cash competition research. Facts verified against operator pages on ${TODAY} UTC. Not financial, legal or tax advice.</p>
-    <p class="footer-links"><a href="./summary.html">Executive summary</a><a href="./method.html">Method &amp; sources</a><a href="./review.html">Flagged for review</a><a href="./ledger-pass.html">Ledger pass</a><a href="${REPO}" target="_blank" rel="noopener noreferrer">Repository ↗</a></p>
+    <p class="footer-links"><a href="${D}summary.html">Executive summary</a><a href="${D}method.html">Method &amp; sources</a><a href="${D}review.html">Flagged for review</a><a href="../">Repo home</a><a href="${REPO}" target="_blank" rel="noopener noreferrer">Repository ↗</a></p>
   </div>
 </footer>
 </body>
@@ -230,7 +230,12 @@ const metric = (value, label, note = '') =>
   `<div class="metric"><strong>${esc(value)}</strong><span>${esc(label)}</span>${note ? `<em>${esc(note)}</em>` : ''}</div>`;
 
 /* ------------------------------------------------------------------- pages */
-mkdirSync(join(ROOT, 'category'), { recursive: true });
+const OUT = join(ROOT, 'atlas');
+/* Placeholder for the depth of the page being written: bodies are shared between
+   atlas/*.html (depth ../) and atlas/category/*.html (depth ../../), and the shell
+   substitutes the real value at render time. */
+const D = '{{D}}';
+mkdirSync(join(OUT, 'category'), { recursive: true });
 
 /* index ---------------------------------------------------------------- */
 const startHere = verified
@@ -248,7 +253,7 @@ const indexBody = `
 
 <div class="notice">
   <strong>Read the evidence column, not the headline.</strong>
-  A row is marked <span class="tier tier-A">verified</span> only when the operator's own page was opened on ${TODAY} and the prize, fee or date shown was read there. Everything imported from the reference catalogue is an <em>unverified lead</em>: its prize and fee columns are deliberately blank, and its legacy claim appears only in a column labelled unverified — on the <a href="./review.html">Flagged for review</a> page and in each category's lead table.
+  A row is marked <span class="tier tier-A">verified</span> only when the operator's own page was opened on ${TODAY} and the prize, fee or date shown was read there. Everything imported from the reference catalogue is an <em>unverified lead</em>: its prize and fee columns are deliberately blank, and its legacy claim appears only in a column labelled unverified — on the <a href="${D}review.html">Flagged for review</a> page and in each category's lead table.
 </div>
 
 <section aria-labelledby="start-here">
@@ -257,7 +262,7 @@ const indexBody = `
       <h2 id="start-here">Start here: verified, cash, and open soon</h2>
       <p>Tier A rows with a stated deadline and a high fit for AI-assisted work, ordered by the nearest operator-stated deadline.</p>
     </div>
-    <a class="see-all" href="./shortlist.html">All ${stats.verified} verified →</a>
+    <a class="see-all" href="${D}shortlist.html">All ${stats.verified} verified →</a>
   </div>
   ${verifiedTable(startHere).replace('<div class="toolbar">', '<div class="toolbar toolbar-hidden">')}
 </section>
@@ -268,14 +273,14 @@ const indexBody = `
       <h2 id="browse">Browse by category</h2>
       <p>Nine categories. Each page separates what was verified from what is still a lead.</p>
     </div>
-    <a class="see-all" href="./categories.html">Category overview →</a>
+    <a class="see-all" href="${D}categories.html">Category overview →</a>
   </div>
   <div class="category-grid">
     ${categories
       .map((c) => {
         const v = verified.filter((r) => r.category === c.id).length;
         const l = leadRows.filter((r) => r.category === c.id).length;
-        return `<a class="card" href="./category/${c.id}.html">
+        return `<a class="card" href="${D}category/${c.id}.html">
           <span class="card-icon" aria-hidden="true">${c.icon}</span>
           <h3>${esc(c.name)}</h3>
           <p>${esc(c.blurb)}</p>
@@ -291,12 +296,12 @@ const indexBody = `
   <ol class="steps">
     <li><strong>Pick a category.</strong> Tech, data and forecasting carry the most operator-verified cash for work an AI agent can help you produce. Sports pick'em is the lowest-effort cash path but has the widest fields.</li>
     <li><strong>Read the row, then open the official page.</strong> Every verified row links the page the facts came from. Re-read it before you invest time: rules change mid-season.</li>
-    <li><strong>Check the flags.</strong> Entry limits, non-cash prizes and reserved eligibility are recorded as flags rather than smoothed over. The <a href="./review.html">Flagged for review</a> page lists every unresolved item.</li>
+    <li><strong>Check the flags.</strong> Entry limits, non-cash prizes and reserved eligibility are recorded as flags rather than smoothed over. The <a href="${D}review.html">Flagged for review</a> page lists every unresolved item.</li>
   </ol>
 </section>`;
 
 writeFileSync(
-  join(ROOT, 'index.html'),
+  join(OUT, 'index.html'),
   shell({
     page: 'index.html',
     title: 'Free-to-enter cash competitions, verified',
@@ -305,8 +310,8 @@ writeFileSync(
       eyebrow: 'Verified footholds, not hype',
       title: 'Find the free competitions worth your time — and see the source for every number.',
       lead: `The reference catalogue lists 206 competitions on a single page with no search. This rebuild covers all of them: ${stats.verified} rows verified against the operator's own pages, the rest kept as clearly labelled unverified leads with their prize and fee fields left blank.`,
-      actions: `<a class="btn btn-primary" href="./shortlist.html">Open the verified shortlist</a>
-        <a class="btn btn-ghost" href="./summary.html">Read the executive summary</a>`,
+      actions: `<a class="btn btn-primary" href="${D}shortlist.html">Open the verified shortlist</a>
+        <a class="btn btn-ghost" href="${D}summary.html">Read the executive summary</a>`,
     }),
     body: indexBody,
   })
@@ -333,7 +338,7 @@ ${pageIntro({
 ${verifiedTable(verified)}`;
 
 writeFileSync(
-  join(ROOT, 'shortlist.html'),
+  join(OUT, 'shortlist.html'),
   shell({
     page: 'shortlist.html',
     title: 'Verified shortlist',
@@ -354,7 +359,7 @@ ${pageIntro({
     .map((c) => {
       const v = verified.filter((r) => r.category === c.id);
       const l = leadRows.filter((r) => r.category === c.id).length;
-      return `<a class="card" href="./category/${c.id}.html">
+      return `<a class="card" href="${D}category/${c.id}.html">
         <span class="card-icon" aria-hidden="true">${c.icon}</span>
         <h3>${esc(c.name)}</h3>
         <p>${esc(c.blurb)}</p>
@@ -365,7 +370,7 @@ ${pageIntro({
 </div>`;
 
 writeFileSync(
-  join(ROOT, 'categories.html'),
+  join(OUT, 'categories.html'),
   shell({
     page: 'categories.html',
     title: 'Categories',
@@ -396,20 +401,20 @@ ${
 }
 ${
   lRows.length
-    ? `<div class="section-head"><div><h2>Unverified leads</h2><p>Imported from the reference catalogue. Prize and fee are blank because no operator page was read.</p></div><a class="see-all" href="../review.html">Why these are flagged →</a></div>${leadsTable(lRows)}`
+    ? `<div class="section-head"><div><h2>Unverified leads</h2><p>Imported from the reference catalogue. Prize and fee are blank because no operator page was read.</p></div><a class="see-all" href="${D}review.html">Why these are flagged →</a></div>${leadsTable(lRows)}`
     : ''
 }
-<p class="back-link"><a href="../categories.html">← All categories</a></p>`;
+<p class="back-link"><a href="${D}categories.html">← All categories</a></p>`;
   writeFileSync(
-    join(ROOT, 'category', `${c.id}.html`),
+    join(OUT, 'category', `${c.id}.html`),
     shell({
       page: 'categories.html',
       title: c.name,
       description: `${c.name}: verified free-to-enter cash competitions and unverified leads, with official sources.`,
       body,
-    }).replaceAll('href="./', 'href="../').replaceAll('src="./', 'src="../')
-  );
-}
+      D: '../../',
+    })
+  );}
 
 /* review --------------------------------------------------------------- */
 const sevTone = { high: 'sev-high', medium: 'sev-medium', low: 'sev-low' };
@@ -438,7 +443,7 @@ ${pageIntro({
 ${leadsTable(leadRows)}`;
 
 writeFileSync(
-  join(ROOT, 'review.html'),
+  join(OUT, 'review.html'),
   shell({
     page: 'review.html',
     title: 'Flagged for review',
@@ -470,7 +475,7 @@ ${pageIntro({
   <ul>
     <li><strong>${stats.leads} legacy listings preserved</strong>, with names and categories imported but every prize, fee and deadline field left blank. The legacy claim is displayed only in a column explicitly labelled unverified.</li>
     <li><strong>${stats.verified} rows verified</strong> by opening the operator's own page on ${TODAY} and reading the prize, entry cost, deadline or eligibility from it. Each row links that page and stamps the check date.</li>
-    <li><strong>${stats.findings} irregularities flagged</strong> and published on the <a href="./review.html">Flagged for review</a> page with sources, instead of being silently fixed or dropped.</li>
+    <li><strong>${stats.findings} irregularities flagged</strong> and published on the <a href="${D}review.html">Flagged for review</a> page with sources, instead of being silently fixed or dropped.</li>
     <li><strong>Mobile-first rebuild</strong>: a dashboard, per-category pages, search, filters, sorting and card layouts, with no build step needed to view it.</li>
   </ul>
   <h2>3. Where the verified money is</h2>
@@ -501,17 +506,17 @@ ${pageIntro({
   </ul>
   <h2>5. Recommended next steps</h2>
   <ol class="steps">
-    <li>Work the two code-heavy tracks with near-term deadlines first: <a href="./shortlist.html">the shortlist</a> sorted by deadline puts ARC Prize, PayPal AI and GEMS at the top.</li>
+    <li>Work the two code-heavy tracks with near-term deadlines first: <a href="${D}shortlist.html">the shortlist</a> sorted by deadline puts ARC Prize, PayPal AI and GEMS at the top.</li>
     <li>Treat forecasting tournaments as background work — they are free, they reward calibration, and a bot tournament with a $50,000 pool is explicitly built for automated approaches.</li>
     <li>Before any submission, re-open the rules page from the row and confirm (a) entry is still free, (b) you are eligible by country and age, (c) the deadline in your time zone. Rules changed mid-season on at least two rows checked here.</li>
-    <li>Review the <a href="./review.html">flagged items</a> and tell us which leads to verify next; that list is ordered by evidence value, not by prize size.</li>
+    <li>Review the <a href="${D}review.html">flagged items</a> and tell us which leads to verify next; that list is ordered by evidence value, not by prize size.</li>
   </ol>
   <h2>6. Limits of this document</h2>
   <p>Verification is a snapshot: a page read on ${TODAY} can change tomorrow. Cash prizes may carry tax consequences (US reporting commonly starts at $600, but confirm with the operator and a tax professional). Nothing here is financial, legal or tax advice, and no operator paid for a listing.</p>
 </div>`;
 
 writeFileSync(
-  join(ROOT, 'summary.html'),
+  join(OUT, 'summary.html'),
   shell({
     page: 'summary.html',
     title: 'Executive summary',
@@ -567,7 +572,7 @@ ${pageIntro({
 </div>`;
 
 writeFileSync(
-  join(ROOT, 'method.html'),
+  join(OUT, 'method.html'),
   shell({
     page: 'method.html',
     title: 'Method and sources',
@@ -578,12 +583,12 @@ writeFileSync(
 
 /* 404 ------------------------------------------------------------------ */
 writeFileSync(
-  join(ROOT, '404.html'),
+  join(OUT, '404.html'),
   shell({
     page: '404',
     title: 'Page not found',
     description: 'That page does not exist. Use the dashboard to find verified competitions.',
-    body: `<div class="page-intro"><p class="eyebrow">404</p><h1>That page does not exist</h1><p>Use the <a href="./index.html">dashboard</a>, the <a href="./shortlist.html">verified shortlist</a> or the <a href="./categories.html">category overview</a>. If something here is broken, it is worth flagging: the <a href="./review.html">Flagged for review</a> page lists known issues.</p></div>`,
+    body: `<div class="page-intro"><p class="eyebrow">404</p><h1>That page does not exist</h1><p>Use the <a href="${D}index.html">dashboard</a>, the <a href="${D}shortlist.html">verified shortlist</a> or the <a href="${D}categories.html">category overview</a>. If something here is broken, it is worth flagging: the <a href="${D}review.html">Flagged for review</a> page lists known issues.</p></div>`,
   })
 );
 
@@ -616,7 +621,7 @@ ${pageIntro({
 <div class="table-card"><div class="table-scroll"><table class="data-table">
   <thead><tr><th scope="col">Page</th><th scope="col">What it contains</th></tr></thead>
   <tbody>
-    ${ledgerPages.map(([href, title, blurb]) => `<tr><td data-label="Page"><a class="source-link" href="./${href}">${esc(title)} ↗</a></td><td data-label="What it contains">${esc(blurb)}</td></tr>`).join('')}
+    ${ledgerPages.map(([href, title, blurb]) => `<tr><td data-label="Page"><a class="source-link" href="${D}${href}">${esc(title)} ↗</a></td><td data-label="What it contains">${esc(blurb)}</td></tr>`).join('')}
   </tbody>
 </table></div></div>
 <div class="prose-card">
@@ -624,13 +629,13 @@ ${pageIntro({
   <ul>
     <li><strong>Catalogue fields.</strong> The ledger pass keeps the reference catalogue's own prize text on each row, tagged by free-path and status. This site's pages blank any prize, fee or deadline that was not read from an operator page, and show the catalogue claim only in a column labelled unverified.</li>
     <li><strong>Depth.</strong> The ledger pass re-checked 12 rows with verbatim quotes. This pass verified 44 rows and records prize, entry, deadline, eligibility and work required, with the page read.</li>
-    <li><strong>Findings.</strong> The ledger pass computes findings with <code>tools/audit.py</code>; this pass publishes 17 findings with source links on the <a href="./review.html">Flagged for review</a> page.</li>
+    <li><strong>Findings.</strong> The ledger pass computes findings with <code>tools/audit.py</code>; this pass publishes 17 findings with source links on the <a href="${D}review.html">Flagged for review</a> page.</li>
     <li><strong>Build.</strong> <code>tools/build_site.py</code> owns <code>all.html</code>, <code>verification.html</code> and the other pages listed above. <code>scripts/build.mjs</code> owns <code>index.html</code>, this page and the category pages. Re-running the Python generator will overwrite <code>index.html</code> and <code>category/*.html</code>; see COORDINATION.md before doing that.</li>
   </ul>
 </div>`;
 
 writeFileSync(
-  join(ROOT, 'ledger-pass.html'),
+  join(OUT, 'ledger-pass.html'),
   shell({
     page: 'ledger-pass.html',
     title: 'Ledger pass',
@@ -643,9 +648,9 @@ writeFileSync(
 const sitePages = ['index.html', 'shortlist.html', 'categories.html', 'summary.html', 'method.html', 'review.html', 'ledger-pass.html',
   ...categories.map((c) => `category/${c.id}.html`), ...ledgerPages.map(([href]) => href)];
 writeFileSync(
-  join(ROOT, 'sitemap.xml'),
+  join(OUT, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    sitePages.map((p) => `  <url><loc>https://sassnarep3-star.github.io/Own1/${p}</loc><lastmod>${TODAY}</lastmod></url>`).join('\n') +
+    sitePages.map((p) => `  <url><loc>https://sassnarep3-star.github.io/Own1/atlas/${p}</loc><lastmod>${TODAY}</lastmod></url>`).join('\n') +
     `\n</urlset>\n`
 );
 

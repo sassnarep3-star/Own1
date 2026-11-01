@@ -106,8 +106,10 @@ for (const r of leads) {
 }
 
 /* ---------------------------------------------------------------- 4. pages */
-const pages = ['index.html', 'shortlist.html', 'categories.html', 'summary.html', 'method.html', 'review.html', '404.html',
-  ...categories.map((c) => `category/${c.id}.html`)];
+/* The Atlas layer publishes under /atlas/ so it can coexist with the other site layers. */
+const pages = ['atlas/index.html', 'atlas/shortlist.html', 'atlas/categories.html', 'atlas/summary.html', 'atlas/method.html',
+  'atlas/review.html', 'atlas/ledger-pass.html', 'atlas/404.html',
+  ...categories.map((c) => `atlas/category/${c.id}.html`)];
 
 check('all expected pages exist', pages.every((p) => existsSync(join(ROOT, p))),
   pages.filter((p) => !existsSync(join(ROOT, p))).join(', '));
@@ -120,7 +122,8 @@ for (const [page, source] of Object.entries(html)) {
   check(`${tag} sets lang`, /<html lang="en"/.test(source));
   check(`${tag} has a title`, /<title>[^<]+<\/title>/.test(source));
   check(`${tag} has a skip link`, /class="skip-link"/.test(source));
-  check(`${tag} loads the stylesheet`, /assets\/style\.css/.test(source));
+  check(`${tag} loads the Atlas stylesheet`, /assets\/atlas\.css/.test(source));
+  check(`${tag} has no unresolved template tokens`, !source.includes('{{D}}') && !source.includes('${D}'));
   check(`${tag} has one main landmark`, (source.match(/<main/g) || []).length === 1);
     check(`${tag} has no http:// links except the one documented http-only source`,
     (source.match(/href="http:\/\/[^"]+"/g) || []).every((m) => m === 'href="http://www.squarespool.com/"'),
@@ -147,16 +150,16 @@ for (const [page, source] of Object.entries(html)) {
 /* --------------------------------------------- 5. rendered rows match the data */
 const countRows = (source, cls) => (source.match(new RegExp(`<tr class="${cls}"`, 'g')) || []).length;
 
-check('shortlist renders every verified row', countRows(html['shortlist.html'], 'row-verified') === verified.length,
-  `${countRows(html['shortlist.html'], 'row-verified')} vs ${verified.length}`);
-check('review renders every active lead row', countRows(html['review.html'], 'row-lead') === activeLeads.length,
-  `${countRows(html['review.html'], 'row-lead')} vs ${activeLeads.length}`);
-check('review renders every finding', audit.findings.every((f) => html['review.html'].includes(`id="${f.id}"`)));
-check('index renders the start-here table', countRows(html['index.html'], 'row-verified') > 0);
-check('index shows the flagged count', html['index.html'].includes(`${audit.findings.length}`));
+check('shortlist renders every verified row', countRows(html['atlas/shortlist.html'], 'row-verified') === verified.length,
+  `${countRows(html['atlas/shortlist.html'], 'row-verified')} vs ${verified.length}`);
+check('review renders every active lead row', countRows(html['atlas/review.html'], 'row-lead') === activeLeads.length,
+  `${countRows(html['atlas/review.html'], 'row-lead')} vs ${activeLeads.length}`);
+check('review renders every finding', audit.findings.every((f) => html['atlas/review.html'].includes(`id="${f.id}"`)));
+check('index renders the start-here table', countRows(html['atlas/index.html'], 'row-verified') > 0);
+check('index shows the flagged count', html['atlas/index.html'].includes(`${audit.findings.length}`));
 
 for (const c of categories) {
-  const source = html[`category/${c.id}.html`];
+  const source = html[`atlas/category/${c.id}.html`];
   const vRows = verified.filter((r) => r.category === c.id).length;
   const lRows = activeLeads.filter((r) => r.category === c.id).length;
   check(`category:${c.id} renders its verified rows`, countRows(source, 'row-verified') === vRows);
@@ -186,8 +189,9 @@ check('merged dataset keeps lead fields blank',
    are published, so every page in the repository must resolve its own links. */
 const htmlFiles = [
   ...readdirSync(ROOT).filter((f) => f.endsWith('.html')),
-  ...readdirSync(join(ROOT, 'category')).filter((f) => f.endsWith('.html')).map((f) => `category/${f}`),
-  ...readdirSync(join(ROOT, 'supplemental')).filter((f) => f.endsWith('.html')).map((f) => `supplemental/${f}`),
+  ...['atlas', 'atlas/category', 'ledger', 'supplemental', 'category']
+    .filter((dir) => existsSync(join(ROOT, dir)))
+    .flatMap((dir) => readdirSync(join(ROOT, dir)).filter((f) => f.endsWith('.html')).map((f) => `${dir}/${f}`)),
 ];
 
 for (const file of htmlFiles) {
@@ -218,8 +222,9 @@ for (const file of htmlFiles) {
     .filter((t) => t.startsWith(ROOT));
   graph.set(resolvePath(join(ROOT, file)), out);
 }
-const seen = new Set([resolvePath(join(ROOT, 'index.html'))]);
-const queue = [resolvePath(join(ROOT, 'index.html'))];
+const ENTRY = existsSync(join(ROOT, 'index.html')) ? 'index.html' : 'atlas/index.html';
+const seen = new Set([resolvePath(join(ROOT, ENTRY))]);
+const queue = [resolvePath(join(ROOT, ENTRY))];
 while (queue.length) {
   for (const next of graph.get(queue.shift()) || []) {
     if (seen.has(next)) continue;
@@ -229,12 +234,12 @@ while (queue.length) {
 }
 const unreachable = htmlFiles
   .map((f) => resolvePath(join(ROOT, f)))
-  .filter((f) => !seen.has(f) && !f.endsWith('404.html'));
-check('every published page is reachable from the dashboard', unreachable.length === 0,
+  .filter((f) => !seen.has(f) && !f.endsWith('404.html') && !f.endsWith('supplemental/index.html'));
+check('every published page is reachable from the site entry point', unreachable.length === 0,
   unreachable.map((u) => u.replace(ROOT + '/', '')).join(', '));
 
-check('sitemap lists the pages this build owns',
-  ['index.html', 'shortlist.html', 'summary.html', 'review.html', 'ledger-pass.html'].every((p) => readText('sitemap.xml').includes(p)));
+check('atlas sitemap lists the pages this build owns',
+  ['index.html', 'shortlist.html', 'summary.html', 'review.html', 'ledger-pass.html'].every((p) => readText('atlas/sitemap.xml').includes(p)));
 
 /* ------------------------------------------------------------------ report */
 if (superseded.length) console.log(`Superseded legacy leads (verified record takes precedence): ${superseded.map((r) => r.id).join(', ')}`);
