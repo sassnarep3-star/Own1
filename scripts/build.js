@@ -46,7 +46,8 @@ const NAV = [
   ['analysis.html', 'Analysis'],
   ['research.html', 'Source audit'],
   ['verification.html', 'Verification'],
-  ['flagged.html', 'Flagged for review']
+  ['flagged.html', 'Flagged for review'],
+  ['atlas/index.html', 'Atlas (44)']
 ];
 
 /* ------------------------------------------------------------------ utils */

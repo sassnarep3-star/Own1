@@ -129,3 +129,32 @@ This is an independent compilation. It is not affiliated with, endorsed by, or s
 listed. Contest rules, prizes and eligibility change without notice — always open the operator's own rules
 before entering. Some listings are restricted by US state or country, and some involve skill-gaming or
 brokerage accounts. Play only where legal. 18+/21+. Nothing here is financial, legal or tax advice.
+
+## `/atlas` — the operator-verified subsite
+
+`atlas/index.html` is a second published layer, written by its own generator under a stricter rule than
+the root pages: **prize, entry, deadline and eligibility are only written when the operator's own page
+was opened.** Everything else stays blank with an explicit flag.
+
+| | Root layer | `/atlas` subsite |
+| --- | --- | --- |
+| Generator | `npm run build` → `scripts/build.js` | `node scripts/build-atlas.mjs` |
+| Data | `data/listings.json` and the root evidence files | `data/verified.json`, `data/legacy.json`, `data/atlas-findings.json`, `data/atlas-entries.json`, `data/atlas-categories.json` |
+| Rows checked against an operator page | 5 merged + 12 live-checked + 7 independently checked | 44, each with prize, entry, deadline, eligibility and the page read |
+| Unconfirmed catalogue claims | per-row, blanked with a reason | quarantined in a *legacy claim (unverified)* column |
+| Findings | `flagged.html`, 22 flags | 17 sourced findings on `atlas/review.html` |
+| Mobile tables | filterable, horizontally scrollable | become labelled cards under 900px |
+
+Atlas pages: `atlas/index.html` (dashboard), `atlas/shortlist.html`, `atlas/categories.html` and
+`atlas/category/<id>.html`, `atlas/summary.html`, `atlas/review.html`, `atlas/method.html`,
+`atlas/ledger-pass.html`.
+
+Its own gate: `node tests/validate-atlas.mjs` — 3,800+ assertions, including "no verified field is
+copied from a legacy claim", "lead rows never populate prize/fee/deadline", "every internal link
+resolves" and "every atlas page is reachable from the dashboard". CI rebuilds `atlas/`, fails on any
+diff, then runs that gate.
+
+> The two generators never write the same file: `scripts/build.js` owns the root pages and `c/<slug>.html`,
+> `scripts/build-atlas.mjs` owns `atlas/**`. Atlas data files are namespaced `atlas-*`, so the two
+> evidence sets cannot overwrite each other.
+

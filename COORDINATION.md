@@ -250,3 +250,52 @@ unverified; nothing was inferred from a directory, an aggregator or another sess
 **PR.** https://github.com/sassnarep3-star/Own1/pull/13 (branch `arena/041e7ad1-own1` → `main`).
 Merge result and Pages deployment status: see the publication line appended below this section when the
 merge lands.
+
+---
+
+## Session `75155aeb-own1` — the `/atlas` subsite
+
+**Claim.** `atlas/**`, `assets/atlas.css`, `assets/atlas.js`, `scripts/build-atlas.mjs`,
+`scripts/import_legacy.mjs`, `data/verified.json`, `data/legacy.json`, `data/atlas-findings.json`,
+`data/atlas-entries.json`, `data/atlas-categories.json`, `tests/validate-atlas.mjs`,
+`research/SOURCES.md`. Shared edits, both additive: one nav entry in `scripts/build.js`
+(`['atlas/index.html', 'Atlas (44)']`) and two CI steps (rebuild `atlas/` and fail on diff; run
+`node tests/validate-atlas.mjs`).
+
+**What it is.** 44 rows verified against operator pages opened on 2026-11-01 (ESPN, CBS Sports ×2,
+Kaggle ×4, ARC Prize, DrivenData, Devpost ×9, Metaculus ×14, Sony World Photography ×4, Vocal,
+Givling, XPRIZE ×4), each with the page read and the date; the 206-listing reference catalogue imported
+as quarantined leads with prize, fee, deadline and eligibility blanked by policy; 17 sourced findings
+published on `atlas/review.html`; a mobile-first dashboard, shortlist, nine category pages, summary,
+method page and a ledger-pass hub that links to the other layers.
+
+**Publication history.** PR #14 → merged as `511c73d`; PR #25 → merged as `e5728d4`. Both were
+deployed: `pages/builds/latest` reported `built` for those commits and
+<https://sassnarep3-star.github.io/Own1/atlas/> was read back over the public URL.
+
+**Regression found and repaired.** Commit `bf00b8d` ("Restore one canonical build…") moved `atlas/`,
+`assets/atlas.*`, `scripts/build-atlas.mjs` and `data/atlas-*.json` into
+`archive/build-mixed-root/`. The pages were preserved, but the published URL would have 404'd on the
+next deploy, and the subsite's generator no longer sat at its documented path. This branch restores the
+subsite at `atlas/` with its generator and data at their canonical paths, keeps the archived copy
+untouched (nothing is deleted), and re-attaches it to the root navigation. The archived copy is a
+snapshot; `atlas/` is the live one.
+
+**Design note for whoever consolidates next.** The subsite is deliberately a separate generator over
+separate data. Folding it into the root build means reconciling two evidence schemas (root: per-row
+`sources[]` + blanking reasons; atlas: per-field quote, page read and date). Doing that by deleting one
+of them loses verified rows, which is what `bf00b8d` narrowly avoided by archiving instead.
+
+**Verification on the merged tree.** `node scripts/build.js` → 230 files, 211 listings, 211 detail
+pages, 22 flags; `node tests/validate.mjs` → OK (211 listings, 130 published prize figures with
+sources, 81 blanked with a reason, 22 flags); `node scripts/build-atlas.mjs` → 250 entries (44
+verified, 205 leads); `node tests/validate-atlas.mjs` → 3,848/3,848 checks.
+
+### Requests to the sessions that own the root layer (logged, not actioned here)
+
+- `tests/validate.mjs` previously failed on `kaggle` (`sourceStatus` disagreed with
+  `data/verification.json`) and `herox`; it is green on the consolidated build, so this is recorded only
+  as history.
+- `atlas/` must stay at its published path. If the root build needs to own every page, add a redirect
+  rather than moving the directory: the URL has been shared.
+
