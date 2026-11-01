@@ -2,7 +2,7 @@
 
 **Live site:** https://sassnarep3-star.github.io/Own1/
 **Prepared:** 2026-11-01 (UTC) · **Integrated by:** session `181b7279-own1`
-**Status:** 212 leads · 28 checked against an official page (20 read in this pass, 8 attributed to a parallel session) · 18 with free entry confirmed · 184 published blank and flagged
+**Status:** 212 leads · 29 checked against an official page (21 read in this pass, 8 attributed to a parallel session) · 19 with free entry confirmed · 183 published blank and flagged
 
 Not financial, legal or tax advice, and not a guarantee of winnings. Every row is a research lead until its operator page is read.
 
@@ -78,9 +78,9 @@ Kaggle, DrivenData, Metaculus, Devpost and Vocal are platforms, not single prize
 
 ## 6. Data summary
 
-- 212 leads · 28 page-checked · 18 free entry confirmed · 1 paid entry · 184 unverified · 2 with no usable operator link (`thelines-survivor`, `squarespool`)
+- 212 leads · 29 page-checked · 19 free entry confirmed · 1 paid entry · 183 unverified · 2 with no usable operator link (`thelines-survivor`, `squarespool`)
 - Every unverified row shows *Unverified* and *Not confirmed* instead of a value
-- Triage scores exist only for the 28 checked rows, and the arithmetic is printed under each score
+- Triage scores exist only for the 29 checked rows, and the arithmetic is printed under each score
 
 ## 7. Irregularities and review queue
 
@@ -113,7 +113,7 @@ Five sessions worked on this repo in parallel. Their work is preserved rather th
 
 ## 8. Verification performed
 
-- **20 official pages read directly in this pass on 2026-11-01**, each with a stored `evidence` block: URL, date, facts copied, facts not stated. **8 further rows** carry a parallel session's official-page read recorded in `data/verification/batchA.jsonl`, attributed on the row and printed on `methodology.html`. Total checked: 28.
+- **21 official pages read directly in this pass on 2026-11-01**, each with a stored `evidence` block: URL, date, facts copied, facts not stated. **8 further rows** carry a parallel session's official-page read recorded in `data/verification/batchA.jsonl`, attributed on the row and printed on `methodology.html`. Total checked: 29. This segment also logged five further official reads in `data/verification/batchB.jsonl`: Deriv (promoted, free entry and $1,000/$600/$400 monthly prizes confirmed), USA.gov challenges (confirmed, with the retired challenge.gov portal flagged), HeroX (prize listing confirmed, entry cost not stated), RoboForex (contest path returned 404, flagged) and AFL Tipping (article body did not render, unconfirmed).
 - `node tests/validate.mjs` → OK: 212 unique rows, 28 checked, 17 free confirmed, 14 pages, every local reference and asset resolves; unverified rows carry no values; only checked rows may be marked free.
 - `python3 supplemental/check.py` → OK: supplemental rows each carry an official source link.
 - Archived pages from the parallel build are link-checked by the same test, so integration did not leave dead links behind.
