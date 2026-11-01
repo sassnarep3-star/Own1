@@ -443,7 +443,7 @@ ${pageHead({
   });
 }
 
-export function archivePage() {
+export function archivePage(available) {
   const rows = [
     ['ledger/index.html', 'Separate “ledger” subsite (session a479d584)', 'A second full build kept under /ledger/ with its own category pages, picks, method and flagged pages, preserved intact rather than merged into this dashboard.'],
     ['verification.html', 'Independent verification pass (session d21e8702)', 'A separate audit of 12 entries with verbatim quotes from each operator page, including a documented contradiction on the Tom Howard poetry fee and the Weather Photographer of the Year prize.'],
@@ -460,7 +460,9 @@ export function archivePage() {
     ['EXECUTIVE_SUMMARY.md', 'Executive summary (markdown)', 'The written record behind executive-summary.html.'],
     ['IRREGULARITIES.md', 'Irregularities log (markdown)', 'Problems found by that session.'],
     ['tools/build_site.py', 'That session’s site generator', 'Preserved so its pages can be rebuilt from data/verification.json.'],
-  ];
+    ['playbook.html', 'Playbook (session 4a243e58)', 'Entry-by-entry playbook built by another parallel session.'],
+    ['entry/kaggle.html', 'Per-entry pages (session 4a243e58)', 'A directory of single-competition pages, kept as published.'],
+  ].filter(([file]) => available.includes(file));
   const body = `
 ${pageHead({
   eyebrow: 'Archive',

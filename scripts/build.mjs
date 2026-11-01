@@ -38,7 +38,13 @@ put('methodology.html', './', methodologyPage());
 put('review.html', './', reviewPage(irregularities, rows));
 put('all.html', './', allPage(cats, rows));
 put('404.html', './', notFoundPage());
-put('archive.html', './', archivePage());
+const archiveCandidates = [
+  'ledger/index.html', 'verification.html', 'best-picks.html', 'flagged.html', 'sources.html',
+  'executive-summary.html', 'cross-session.html', 'supplemental/index.html', 'playbook.html',
+  'entry/kaggle.html', 'data/verification.json', 'data/ledger.json', 'data/audit.json',
+  'VERIFICATION.md', 'EXECUTIVE_SUMMARY.md', 'IRREGULARITIES.md', 'tools/build_site.py',
+];
+put('archive.html', './', archivePage(archiveCandidates.filter((f) => fs.existsSync(path.join(ROOT, f)))));
 for (const cat of cats) put(`category/${cat.id}.html`, '../', categoryPage(cat, rows));
 
 // Category ids used by data but missing a page (or vice versa) would be a broken site.

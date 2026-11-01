@@ -108,7 +108,8 @@ const ARCHIVE_PAGES = [
   'best-picks.html', 'verification.html', 'flagged.html', 'sources.html',
   'executive-summary.html', 'cross-session.html', 'supplemental/index.html',
 ];
-const isArchivePage = (f) => ARCHIVE_PAGES.includes(f) || f.startsWith('ledger/');
+const isArchivePage = (f) =>
+  ARCHIVE_PAGES.includes(f) || f.startsWith('ledger/') || f.startsWith('entry/') || f === 'playbook.html';
 const unexpected = htmlFiles.filter((f) => !expectedPages.includes(f) && !isArchivePage(f));
 assert.equal(unexpected.length, 0, `unexpected extra html pages: ${unexpected}`);
 
