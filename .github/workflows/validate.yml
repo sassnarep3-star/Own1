@@ -1,13 +1,46 @@
-name: Validate static site
+name: Validate site
+
 on:
   push:
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
 jobs:
   validate:
+    name: Data, build and link integrity
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node tests/validate.mjs
+
+      # Fails if a committed page no longer matches data/*.json or src/*.mjs.
+      - name: Generated pages are up to date
+        run: node scripts/build.mjs --check
+
+      # Schema, blank-field policy, evidence policy, internal links, static table.
+      - name: Validate data and pages
+        run: node tests/validate.mjs
+
+  external-links:
+    name: External link reachability (advisory)
+    runs-on: ubuntu-latest
+    needs: validate
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check operator URLs
+        run: node tests/links.mjs
+      - name: Upload link report
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-report
+          path: research/link-report.md
+          if-no-files-found: ignore
