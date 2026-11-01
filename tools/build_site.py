@@ -207,7 +207,11 @@ def shell(title: str, description: str, rel: str, body: str, current: str, extra
   <p>Data as published by the reference catalogue on 2026-08-19 (pass “S”), audited and partly re-verified on
   {BUILD_DATE}. Prize amounts change; open the operator’s rules before you enter.
   <a href="{rel}methodology.html">Method &amp; limits</a> · <a href="{rel}flagged.html">Flagged for review</a> ·
-  <a href="{rel}sources.html">Sources</a></p>
+  <a href="{rel}sources.html">Sources</a> · <a href="{rel}cross-session.html">Cross-session</a></p>
+  <p><b>Built in parallel with other agent sessions.</b> Their pages still ship and are linked here:
+  <a href="{rel}review.html">their review queue</a> ·
+  <a href="{rel}supplemental/index.html">their supplemental evidence</a> ·
+  <a href="https://github.com/sassnarep3-star/Own1/blob/main/research/SOURCES.md" rel="noopener noreferrer">their source audit</a>.</p>
 </footer>
 </div>
 <script src="{rel}assets/js/site.js"></script>
@@ -995,7 +999,8 @@ likely to expire while you read this:</p>
   <li><b>GEMS Prize Challenge (DrivenData)</b> — $300,000 total, ending <b>December 3, 2026</b> 23:59 UTC.
   <a href="https://www.drivendata.org/competitions/306/competition-doe-gems/" rel="noopener noreferrer nofollow">drivendata.org/competitions/306 ↗</a></li>
   <li><b>ESPN NFL Pick’em</b> — they read the rules page and recorded “free” plus a <b>$102,000</b> total including a
-  $5,000 random draw, and flagged that ESPN’s own FAQ contradicts itself on the entry limit (5 vs 10).
+  $5,000 random draw, and flagged that ESPN’s own FAQ contradicts itself on the entry limit (5 vs 10). A second
+  session re-read the same page and quoted <b>“Every game we offer is completely free.”</b>
   <a href="https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules" rel="noopener noreferrer nofollow">ESPN rules ↗</a></li>
 </ul>
 </div>
