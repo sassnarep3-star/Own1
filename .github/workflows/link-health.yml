@@ -5,6 +5,11 @@ name: Link health (non-blocking)
 # instead of claiming links work. Download the artifact to refresh data/link-health.json.
 
 on:
+  push:
+    paths:
+      - 'data/entries.json'
+      - 'scripts/linkcheck.mjs'
+      - '.github/workflows/link-health.yml'
   workflow_dispatch:
   schedule:
     - cron: '0 6 * * 1'
