@@ -20,6 +20,7 @@ A static, mobile-first dashboard for **free-to-enter competitions that pay real 
 | `ledger/index.html` | Third build by a parallel session: all 206 imported rows with an automated audit, 28 rows checked against official pages, its own flagged and method pages |
 | `data/verification/batchA.jsonl` | That session's 28 row-by-row official-page reads; its verified and discrepancy rows are attributed in the main table |
 | `data/verification/batchB.jsonl` | Five further official reads from this session (Deriv promoted, USA.gov confirmed, HeroX and AFL partial, RoboForex 404) |
+| `research/EVIDENCE.csv` | Flat export of all 29 page-checked rows: source, entry cost, prize, deadline, eligibility, reading date, evidence URL, reading session and flags |
 | `data/entries.json` | The dataset: 212 rows with per-row `evidence`, `entryFree` and `flags` |
 | `data/triage.json` | Editorial scoring inputs, one rationale per checked row |
 | `tools/build.mjs` | Zero-dependency generator that renders every page from the data |
