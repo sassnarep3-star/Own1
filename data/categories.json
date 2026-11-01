@@ -1,0 +1,83 @@
+[
+  {
+    "id": "tech",
+    "label": "Tech, data & AI",
+    "icon": "⌘",
+    "short": "Model-building, code and research prizes",
+    "tagline": "The strongest fit for an AI-assisted competitor",
+    "intro": "Machine-learning and data competitions are the one group where an AI agent can do most of the work: the task is published, the metric is objective and the submission is scored automatically. Prize money is real but concentrated at the top of the leaderboard, and the work is measured in weeks, not minutes.",
+    "kind": "contests"
+  },
+  {
+    "id": "forecasting",
+    "label": "Forecasting",
+    "icon": "◎",
+    "short": "Probability and prediction tournaments",
+    "tagline": "Small prizes, low effort, many open tournaments",
+    "intro": "Metaculus runs rolling forecasting tournaments with cash pools and states plainly that participation is free. Pools range from a few thousand dollars to $50,000, and some listed tournaments explicitly carry no prize pool. Effort per question is minutes, so this is the cheapest place to start.",
+    "kind": "contests"
+  },
+  {
+    "id": "creative",
+    "label": "Creative & writing",
+    "icon": "✳",
+    "short": "Writing, photography and film prizes",
+    "tagline": "Free entry exists, but many contests charge fees",
+    "intro": "Several of the best-known writing and photography prizes are free to enter and pay cash; others charge an entry fee, and a few are restricted by geography or by rules that ban AI-generated work. Read the fee line first, then the AI line.",
+    "kind": "contests"
+  },
+  {
+    "id": "sports",
+    "label": "Fantasy & pick'em",
+    "icon": "◈",
+    "short": "Sports picks, survivor and fantasy games",
+    "tagline": "Free entry is normal here; prizes are modest",
+    "intro": "US media pick'em games are free by rule and pay fixed weekly and season prizes. Most are season-long commitments with a handful of minutes of work each week. Outside the US the picture changes: many fantasy games pay merchandise or tickets rather than cash.",
+    "kind": "contests"
+  },
+  {
+    "id": "market",
+    "label": "Market simulations",
+    "icon": "▥",
+    "short": "Demo and paper-trading competitions",
+    "tagline": "Read the prize paragraph before the rules",
+    "intro": "Broker demo contests are usually free and run on virtual money, but many pay 'trading bonuses' credited to a live account rather than withdrawable cash. One broker on this list states that plainly; treat every other demo contest the same way until its own terms say otherwise.",
+    "kind": "caution"
+  },
+  {
+    "id": "skill",
+    "label": "Skill games",
+    "icon": "⚡",
+    "short": "Mobile skill tournaments and esports",
+    "tagline": "Mostly paid entry, not a free cash path",
+    "intro": "The large mobile skill platforms fund their cash prizes from entry fees and take a platform cut. Their free rooms pay in-app currency. A handful of free tournaments exist on esports and gaming platforms, but the advertised prize is often bonus credit.",
+    "kind": "caution"
+  },
+  {
+    "id": "trivia",
+    "label": "Trivia & rewards",
+    "icon": "?",
+    "short": "Quiz and reward apps",
+    "tagline": "Cash is rare and often crowdfunded",
+    "intro": "Trivia and reward apps often advertise large totals that are crowdfunded over time or paid in points. Givling, the largest name in this group, now describes itself as a crowdfunding competition, not a fixed prize pool.",
+    "kind": "caution"
+  },
+  {
+    "id": "pools",
+    "label": "Pool tools",
+    "icon": "▦",
+    "short": "Software for office and survivor pools",
+    "tagline": "Not contests - other people fund the prizes",
+    "intro": "These are tools for running a pool you and your friends fund, not competitions an operator pays out. They are kept here so they are not mistaken for free prize money.",
+    "kind": "tools"
+  },
+  {
+    "id": "directory",
+    "label": "Directories",
+    "icon": "↗",
+    "short": "Indexes that list many contests",
+    "tagline": "Start here to find new contests",
+    "intro": "Directories do not run contests; they index other people's. They are the fastest way to find a new opportunity, and the worst way to confirm a prize, because their listings lag the organisers' rules.",
+    "kind": "tools"
+  }
+]

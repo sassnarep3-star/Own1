@@ -5,8 +5,8 @@ A mobile-first dashboard of **free-to-enter competitions that pay real cash**, b
 **Live:** https://sassnarep3-star.github.io/Own1/
 
 - **211 leads** in the ledger, imported from the reference catalog by name and link only.
-- **17 entries** have had their official page read on 2026-11-01, with the exact quotes stored in `research/facts.mjs`.
-- **190 leads remain unverified** with prize, fee and deadline cells deliberately blank.
+- **20 entries** have had their official page read on 2026-11-01, with the exact quotes stored in `research/facts.mjs` (53 quoted facts).
+- **185 leads remain unverified** with prize, fee and deadline cells deliberately blank.
 - **203 outbound links** were tested by an automated runner: 166 responded, 10 failed outright, 27 were bot-blocked.
 
 Start with the [executive summary](EXECUTIVE_SUMMARY.md), then the [sources ledger](https://sassnarep3-star.github.io/Own1/sources.html) and the [flagged queue](https://sassnarep3-star.github.io/Own1/review.html).

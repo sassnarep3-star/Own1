@@ -2612,36 +2612,65 @@
   "id": "cbs-pro-pickem",
   "name": "CBS Sports Pro Football Pick'em",
   "category": "sports",
-  "status": "unverified",
-  "operator": "",
-  "officialUrl": "https://www.cbssports.com/fantasy/football/games/pickem/rules",
-  "freeEntry": null,
-  "cashPrize": null,
+  "status": "verified",
+  "operator": "CBS Interactive Inc.",
+  "officialUrl": "https://www.cbssports.com/fantasy/football/games/pickem/rules/",
+  "freeEntry": true,
+  "cashPrize": true,
   "prize": "",
-  "deadline": null,
-  "cycle": "",
-  "eligibility": "",
-  "effort": null,
-  "agentFit": null,
-  "notes": "",
-  "evidence": [],
-  "readOn": null,
+  "deadline": "2027-01-10",
+  "cycle": "Challenge period 2026-09-09 → 2027-01-10; 18 weekly contests",
+  "eligibility": "18+ (or age of majority); legal residents of the 50 US states and DC only — Puerto Rico and all US territories excluded",
+  "effort": "low",
+  "agentFit": "medium",
+  "notes": "The contest is free and open only to US-state residents. Prize amounts sit in section 3 of the rules, which was not read in this session, so the prize cell is blank rather than copied from another session's unsourced note.",
+  "evidence": [
+   {
+    "url": "https://www.cbssports.com/fantasy/football/games/pickem/rules/",
+    "fact": "No purchase or entry fee; eligibility",
+    "quote": "NO PURCHASE OR ENTRY FEE IS NECESSARY TO ENTER OR WIN. ... LEGAL RESIDENTS OF ONE OF THE FIFTY (50) UNITED STATES OR THE DISTRICT OF COLUMBIA (FOR PURPOSES OF CLARITY, PUERTO RICO AND ALL US TERRITORIES AND POSSESSIONS ARE EXPRESSLY EXCLUDED); (C) (18) YEARS OLD OR AGE OF MAJORITY"
+   },
+   {
+    "url": "https://www.cbssports.com/fantasy/football/games/pickem/rules/",
+    "fact": "Free to play and challenge dates",
+    "quote": "The Challenge is FREE to play. No purchase, wireless device or entry fee necessary to enter or win. ... The Challenge commences on September 9, 2026 and is scheduled to end on January 10, 2027 ... There will be eighteen (18) Weekly Contest Periods"
+   }
+  ],
+  "readOn": "2026-11-01",
   "legacyStatus": "live",
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "free-entry-confirmed",
+   "cash-confirmed",
+   "prize-amount-not-stated"
   ],
-  "fit": null,
-  "link": {
-   "ok": true,
-   "status": 200,
-   "error": "",
-   "checkedAt": "2026-11-01T13:47:09.369Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.cbssports.com/fantasy/football/games/pickem/rules"
-  }
+  "fit": {
+   "score": 85,
+   "parts": [
+    [
+     "Confirmed free entry",
+     40
+    ],
+    [
+     "Confirmed cash prize",
+     20
+    ],
+    [
+     "AI-agent fit: medium",
+     12
+    ],
+    [
+     "Effort: low",
+     10
+    ],
+    [
+     "Deadline in 70 day(s)",
+     3
+    ]
+   ]
+  },
+  "link": null
  },
  {
   "id": "cev-predictor",
@@ -2823,36 +2852,69 @@
   "id": "espn-cfb",
   "name": "ESPN College Football Pick'em",
   "category": "sports",
-  "status": "unverified",
-  "operator": "",
-  "officialUrl": "https://fantasy.espn.com/games/college-football-pickem-2026/make-picks",
-  "freeEntry": null,
-  "cashPrize": null,
-  "prize": "",
+  "status": "verified",
+  "operator": "ESPN (Disney Streaming Services LLC)",
+  "officialUrl": "https://fantasy.espn.com/games/college-football-pickem-2026/howtoplay",
+  "freeEntry": true,
+  "cashPrize": true,
+  "prize": "$86,000 total — $20,000 grand prizes in Standard, Spread and Confidence; 14 × $500 weekly per mode; $5,000 random drawing",
   "deadline": null,
-  "cycle": "",
-  "eligibility": "",
-  "effort": null,
-  "agentFit": null,
-  "notes": "",
-  "evidence": [],
-  "readOn": null,
+  "cycle": "College football season — 14 weeks",
+  "eligibility": "Void in Puerto Rico, other U.S. territories, foreign territories and Quebec; ages 13-17 may play but cannot win",
+  "effort": "low",
+  "agentFit": "medium",
+  "notes": "The same page's FAQ still says \"up to five total\" entries, as on the NFL game — re-check the live UI.",
+  "evidence": [
+   {
+    "url": "https://fantasy.espn.com/games/college-football-pickem-2026/howtoplay",
+    "fact": "Free to play",
+    "quote": "Are ESPN games free to play? Yes! Every game we offer is completely free."
+   },
+   {
+    "url": "https://fantasy.espn.com/games/college-football-pickem-2026/howtoplay#Prizes",
+    "fact": "Prize breakdown",
+    "quote": "$86,000 in total prize money is up for grabs! Three (3) GRAND PRIZES of $20,000 each for the highest-finishing entry in the Standard, Spread and Confidence game modes ($60,000 in Total Prizes) ... Fourteen (14) WEEKLY PRIZES of $500 each ... One (1) RANDOM DRAWING PRIZE of $5,000 for making full picks in all 3 game modes every week of the season"
+   },
+   {
+    "url": "https://fantasy.espn.com/games/college-football-pickem-2026/howtoplay#CompleteRules",
+    "fact": "No purchase necessary; eligibility carve-outs",
+    "quote": "NO PURCHASE OR PAYMENT NECESSARY TO ENTER OR WIN. ... VOID IN PUERTO RICO, OTHER U.S. TERRITORIES AND FOREIGN TERRITORIES, QUEBEC AND WHERE PROHIBITED BY LAW."
+   }
+  ],
+  "readOn": "2026-11-01",
   "legacyStatus": "live",
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "free-entry-confirmed",
+   "cash-confirmed"
   ],
-  "fit": null,
-  "link": {
-   "ok": true,
-   "status": 200,
-   "error": "",
-   "checkedAt": "2026-11-01T13:47:09.560Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.espn.com/games/college-football-pickem-2026/make-picks"
-  }
+  "fit": {
+   "score": 85,
+   "parts": [
+    [
+     "Confirmed free entry",
+     40
+    ],
+    [
+     "Confirmed cash prize",
+     20
+    ],
+    [
+     "AI-agent fit: medium",
+     12
+    ],
+    [
+     "Effort: low",
+     10
+    ],
+    [
+     "No published deadline",
+     3
+    ]
+   ]
+  },
+  "link": null
  },
  {
   "id": "espn-cfp-bracket",
