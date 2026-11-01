@@ -1,50 +1,74 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8">
+<html lang="en">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Directories: free-to-enter cash competition leads with official-source verification status.">
-<title>Directories · Prize Atlas</title>
+<meta name="description" content="Indexes that list many contests. 2 entries, 1 checked against the operator page.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0f766e">
+<title>Directories — cash prize competitions · Prize Atlas</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%230f766e%22%2F%3E%3Cpath%20d%3D%22M16%207l2.4%205.6L24%2015l-5.6%202.4L16%2023l-2.4-5.6L8%2015l5.6-2.4z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
-<body data-base="../" data-page="category" data-category="directory">
-<header class="topbar"><div class="shell">
-  <a class="brand" href="../index.html"><span class="mark">✳</span> Prize Atlas</a>
-  <nav class="topnav" aria-label="Main">
-    <a href="../index.html">Dashboard</a>
-    <a href="../playbook.html">Playbook</a>
-    <a href="../sources.html">Sources</a>
-    <a href="../ledger/index.html">Verified ledger</a>
-    <a href="../review.html" class="review-link">Flagged (193)</a>
-    
-  </nav>
-</div></header>
+<body data-base="../" data-view="category" data-category="directory">
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="brand" href="../index.html"><span class="mark" aria-hidden="true">✳</span><span>Prize Atlas</span></a>
+    <nav class="nav" aria-label="Main"><a href="../index.html">Overview</a><a href="../shortlist.html">Shortlist</a><a href="../categories.html">Categories</a><a href="../summary.html">Summary</a><a href="../methodology.html">Method</a><a href="../review.html">Flagged</a></nav>
+  </div>
+</header>
+<main id="main">
 
-<main class="shell main">
-  <div class="page-intro" style="margin:18px 0 6px">
-    <div class="eyebrow">Category</div>
-    <h1 style="margin:6px 0 8px;font-size:clamp(24px,5vw,34px);letter-spacing:-.02em">Directories</h1>
-    <p class="small" style="max-width:70ch">Lists and indexes that point to competitions. 0 of 2 entries have had an official page read; the rest are leads with blank cells.</p>
+<div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Overview</a><span aria-hidden="true">/</span> <a href="../categories.html">Categories</a><span aria-hidden="true">/</span> <span>Directories</span></nav>
+  <div class="pagehead">
+    <p class="eyebrow">Category · Directories</p>
+    <h1>Directories</h1>
+    <p class="lead">Directories do not run contests; they index other people&#39;s. They are the fastest way to find a new opportunity, and the worst way to confirm a prize, because their listings lag the organisers&#39; rules.</p>
   </div>
-  <div class="notice warn"><strong>Nothing in this category has been verified yet.</strong> Every row below is a name and a link from the reference catalog. Prize, fee and deadline cells are blank because no official page was read. Treat them as research leads only.</div>
-  <div class="panel">
-    <div class="toolbar">
-  <input class="f-search" type="search" placeholder="Search name, operator, prize…" aria-label="Search listings">
-  <select class="f-status" aria-label="Verification status">
-    <option value="">All statuses</option><option value="verified">Page checked</option>
-    <option value="partial">Partly checked</option><option value="unverified">Unverified</option>
-  </select>
-  
-  <select class="f-sort" aria-label="Sort"><option value="fit">Sort: best fit</option><option value="deadline">Sort: deadline</option><option value="status">Sort: status</option><option value="name">Sort: name</option></select>
 </div>
-    <div id="rows" aria-live="polite">Loading…</div>
-    <div class="table-foot">Loading…</div>
+<div class="wrap"><div class="notice notice-info"><strong>2 entries in this category, 1 checked against an operator page.</strong> The rest are leads carried over from the reference catalogue: the name and the link are kept, the money is blank until someone reads the rules. <a href="../review.html">What is flagged</a> · <a href="../methodology.html">How scoring works</a></div></div>
+<section class="wrap section">
+  <div class="section-head"><h2>Entries</h2><p>Start here to find new contests</p></div>
+  <div class="panel" id="panel">
+  <div class="toolbar">
+    <div class="field grow"><label for="q">Search</label><input id="q" type="search" placeholder="Name, prize, eligibility…" autocomplete="off"></div>
+    
+    <div class="field"><label for="f-status">Evidence</label><select id="f-status">
+      <option value="">All</option>
+      <option value="verified">Verified on official page</option>
+      <option value="platform">Platform index</option>
+      <option value="lead">Unverified lead</option>
+    </select></div>
+    <div class="field"><label for="f-entry">Entry</label><select id="f-entry">
+      <option value="">Any</option>
+      <option value="free">Free</option>
+      <option value="conditional">Conditional</option>
+      <option value="paid">Paid</option>
+      <option value="unknown">Not stated</option>
+    </select></div>
+    <div class="field"><label for="f-sort">Sort</label><select id="f-sort">
+      <option value="score">Actionability</option>
+      <option value="deadline">Deadline</option>
+      <option value="prize">Prize size</option>
+      <option value="name">Name</option>
+    </select></div>
+    <label class="check"><input type="checkbox" id="f-cash"> Cash confirmed</label>
+    <label class="check"><input type="checkbox" id="f-open"> Open now</label>
   </div>
-  <div class="notice"><strong>How to read a row.</strong> “Page checked” links to that entry's evidence page with the exact quote. “Lead link” is an unverified URL inherited from the reference catalog — it may be stale or wrong, and a good URL is not proof of a prize.</div>
-  <p class="small"><a href="../index.html">← All categories</a> · <a href="../playbook.html">How to choose one</a> · <a href="../review.html">What is flagged</a></p>
+  <div id="rows" aria-live="polite"><p class="loading">Loading entries…</p></div>
+  <div class="tfoot"><span id="count">Loading…</span><button class="linkbtn" type="button" id="reset">Reset filters</button></div>
+</div>
+<noscript><div class="wrap"><div class="notice notice-warn">This dashboard filters the data in your browser, so JavaScript is required for the interactive table. The <a href="../all.html">full static table</a> contains every entry and works without JavaScript.</div></div></noscript>
+</section>
 </main>
-<footer class="footer"><div class="shell">
-  <span>Prize Atlas — an evidence ledger, not a tip jar. Research, not financial or legal advice. Facts read 2026-11-01.</span>
-  <span><a href="../sources.html">Method &amp; sources</a> · <a href="../review.html">Flagged for review</a> · <a href="../supplemental/index.html">Supplemental audit</a> · <a href="https://github.com/sassnarep3-star/Own1">Repository</a></span>
-</div></footer>
-<script src="../data/site-data.js"></script>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p><strong>Prize Atlas</strong> — a source-first research dashboard. Not financial, legal or tax advice. Rules change without notice: always read the operator's own page before you spend time or money.</p>
+    <p>Data last verified <time datetime="2026-11-01">1 November 2026</time> · <a href="../methodology.html">Method</a> · <a href="../review.html">Flagged for review</a> · <a href="../archive.html">Archive</a> · <a href="https://github.com/sassnarep3-star/Own1">Repository</a></p>
+  </div>
+</footer>
 <script src="../assets/app.js" defer></script>
-</body></html>
+</body>
+</html>

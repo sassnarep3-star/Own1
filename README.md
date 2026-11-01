@@ -1,65 +1,79 @@
 # Prize Atlas
 
-A mobile-first dashboard of **free-to-enter competitions that pay real cash**, built so that every displayed fact traces to a quoted official page and every gap is visible.
+A mobile-first dashboard for **free-to-enter cash prize competitions**, built so that every
+figure on the page can be traced to the operator's own rules page — and everything that cannot be
+traced is visibly blank.
 
-**Live:** https://sassnarep3-star.github.io/Own1/
+**Live site:** https://sassnarep3-star.github.io/Own1/
 
-- **211 leads** in the ledger, imported from the reference catalog by name and link only.
-- **17 entries** have had their official page read on 2026-11-01, with the exact quotes stored in `research/facts.mjs`.
-- **190 leads remain unverified** with prize, fee and deadline cells deliberately blank.
-- **203 outbound links** were tested by an automated runner: 166 responded, 10 failed outright, 27 were bot-blocked.
+| Entry point | What it is |
+| --- | --- |
+| `index.html` | Dashboard: stats, best-documented free entries, category grid, filterable table of all 211 entries |
+| `shortlist.html` | Six tiers, ordered by a published rubric (free entry + confirmed cash + open now ranks first) |
+| `categories.html` + `category/*.html` | Nine categories with their own tables |
+| `summary.html` | Executive summary: what the evidence supports, what to ignore |
+| `methodology.html` | Evidence levels, the actionability rubric, the blank-field policy, known limits |
+| `review.html` | Flagged for review: 180 unverified leads plus 11 documented irregularities with source links |
+| `all.html` | Every entry in one static table — works with JavaScript disabled |
 
-Start with the [executive summary](EXECUTIVE_SUMMARY.md), then the [sources ledger](https://sassnarep3-star.github.io/Own1/sources.html) and the [flagged queue](https://sassnarep3-star.github.io/Own1/review.html).
+## The one rule
 
-## Local preview
+A prize, entry cost, deadline or eligibility line appears **only** if a person opened the
+operator's page and read it. Otherwise the field is empty, the row is marked *unverified lead*, and
+it is published on the review page. No estimates, no aggregator figures, no "typical payout".
 
-No dependencies, no framework, no build tooling to install.
+Current state (1 November 2026): **211 entries · 28 verified · 3 platform indexes · 180 unverified
+leads · 57 flags**. Full page-by-page notes: [research/VERIFICATION.md](research/VERIFICATION.md).
+
+## Repository layout
+
+```
+index.html shortlist.html categories.html summary.html methodology.html review.html all.html 404.html
+category/<slug>.html          generated category pages
+data/entries.json             the dataset (one object per competition)
+data/categories.json          the nine categories and their descriptions
+data/irregularities.json      documented problems, each with source links
+src/template.mjs              shared shell (head, nav, footer) used by every page
+src/pages.mjs                 page bodies
+scripts/build.mjs             generates every .html from data/ + src/
+assets/style.css              one stylesheet, no frameworks or web fonts
+assets/app.js                 filters, sorting, row details, shortlist tiers
+tests/validate.mjs            schema, blank-field policy, internal links, build freshness
+tests/links.mjs               external link reachability (advisory, writes research/link-report.md)
+research/                     verification log, source list, executive summary
+COORDINATION.md               shared task board for parallel agent sessions
+```
+
+## Working on it
 
 ```bash
-python3 -m http.server 8000 --bind 0.0.0.0     # then open the preview URL
-node scripts/build-data.mjs && node scripts/build-site.mjs   # regenerate pages
-node tests/validate.mjs                        # the verification gate
+node scripts/build.mjs      # regenerate every page after editing data/ or src/
+node tests/validate.mjs     # schema + policy + internal links (must pass before publishing)
+python3 -m http.server 8000 --bind 0.0.0.0   # preview at http://localhost:8000
 ```
 
-## How the data works
+No dependencies, no build tooling beyond Node 22. GitHub Pages serves the repository root from
+`main`; `.nojekyll` keeps the `assets/` and `data/` folders untouched.
 
-```
-research/facts.mjs      hand-written evidence: URL, fact, exact quote, date read  ← the only place values enter
-research/legacy-leads.json  the inherited catalog: names, categories, links only
-research/flags.mjs      cross-cutting irregularities, each with a source
-data/link-health.json   machine-measured HTTP status of every outbound URL
-        ↓  node scripts/build-data.mjs
-data/entries.json       merged dataset + editorial fit score
-        ↓  node scripts/build-site.mjs
-index.html · category/* · entry/* · review.html · sources.html · playbook.html · data/site-data.js
-```
+## Adding or verifying an entry
 
-### Adding a verified fact
+1. Open the operator's own page and read the fact you want to publish.
+2. Edit that row in `data/entries.json`: set `status` to `verified` (or `platform` for an index),
+   fill only the fields the page prints, set `verifiedOn`, `entryCost`, `cash`, `openNow` and
+   `effort`, and add a `flags` entry for anything surprising (fee, AI restriction, non-cash prize,
+   contradiction).
+3. Run `node scripts/build.mjs` and `node tests/validate.mjs`.
+4. If the page contradicted the catalogue or could not be loaded, add it to
+   `data/irregularities.json` so it appears on the review page.
 
-1. Read the organiser's own page. Not a listicle, not the reference catalog.
-2. Add or extend the entry in `research/facts.mjs`: `officialUrl`, the field, and one `evidence` item per claim containing the **exact quote**.
-3. Leave any field the page does not state as `null`/`''`. Do not fill it in.
-4. Run the two build scripts and `node tests/validate.mjs`.
+The test suite refuses to publish a lead row that carries a prize figure, a `free` entry claim
+without a verification date, a non-HTTPS source, or a broken internal link.
 
-### What the gate enforces
+## Licence and disclaimer
 
-`tests/validate.mjs` fails the build if: an unverified row carries a prize, fee, deadline or fit score; a checked row has no evidence; quoted evidence comes from a different host than the row links; a local link is broken; two elements share an id on a page; the client payload disagrees with the dataset; or a checked row is missing from `research/facts.mjs`.
-
-### Link health
-
-`.github/workflows/link-health.yml` requests every outbound URL on a GitHub runner (weekly, or on demand) and publishes the report to the `link-health-data` branch. Copy it to `data/link-health.json` and rebuild to refresh the per-row link status. Interpretation baked into the UI: **403/429 = bot block, not a dead page**; DNS, TLS, timeout and 404 = hard failure.
-
-## Automation
-
-- `validate.yml` — runs the verification gate on every push and PR.
-- `link-health.yml` — non-blocking; records real HTTP results, never gates a deploy.
-
-## Judgement, clearly labelled
-
-The **fit score** on each checked entry is editorial, not evidence: free entry (40) + cash (20) + AI-agent fit (4–20) + effort (3–10) + urgency (0–10). It ranks *how much is confirmed and how well the work suits an agent*, not the odds of winning. The [playbook](https://sassnarep3-star.github.io/Own1/playbook.html) explains the reasoning; the [sources page](https://sassnarep3-star.github.io/Own1/sources.html) holds the facts.
-
-Research, not financial, legal or tax advice.
+Research notes and site content are provided for personal research. Not financial, legal or tax
+advice. Rules change without notice — the operator's page always controls.
 
 ## Verified Contest Ledger (`ledger/`)
 
-A separate build by session `a479d584-own1`, kept alongside the main site: dashboard, verified top picks, per-category pages, a Flagged for Review page and method log under [`ledger/`](ledger/index.html). It covers all 206 upstream rows; 28 are checked against official pages and the rest are labelled "not checked" with blank prize cells. Data: `data/finder-ledger.json|csv`, `data/finder-audit.json`, `data/verification/`. Rebuild: `node scripts/audit.cjs && node scripts/build.cjs && node scripts/linkcheck.cjs` (CommonJS because `package.json` sets `"type": "module"`).
+A separate build by session `a479d584-own1`, preserved intact under [`ledger/`](ledger/index.html): dashboard, verified top picks, per-category pages, a Flagged for Review page and a method log. It covers all 206 upstream rows; 28 are checked against official pages and the rest are labelled "not checked" with blank prize cells. Data: `data/finder-ledger.json|csv`, `data/finder-audit.json`, `data/verification/`. Rebuild: `node scripts/audit.cjs && node scripts/build.cjs && node scripts/linkcheck.cjs` (CommonJS because `package.json` sets `"type": "module"`).
