@@ -139,5 +139,10 @@
     "scale": 1,
     "effort": "low",
     "rationale": "$500 cash grand prize confirmed, but the draft window ended 2026-09-08."
+  },
+  "deriv-tournaments": {
+    "scale": 1,
+    "effort": "medium",
+    "rationale": "Free demo-trading tournament paying $1,000/$600/$400 monthly with no deposit; 14-day leaderboard consistency is the barrier."
   }
 }

@@ -22,50 +22,6 @@ function expect(condition, message) {
   return condition;
 }
 
-
-/* ---------- schema guard ----------
-   Several sessions in this repo publish different dataset schemas. This suite
-   owns the Prize Atlas schema (sourceStatus / entryFree / evidence blocks). If a
-   different schema is on disk, validate what is schema-independent — page
-   structure and every local reference — and say so, instead of failing on rows
-   this suite does not own. */
-const atlasSchema = entries.every((r) => 'sourceStatus' in r);
-if (!atlasSchema) {
-  const pages = ['index.html', 'analysis.html', 'methodology.html', 'review.html', 'supplemental/index.html']
-    .filter(exists);
-  const htmlFiles = [];
-  const walk = (dir) => {
-    for (const f of fs.readdirSync(path.join(ROOT, dir), { withFileTypes: true })) {
-      if (f.name === '.git' || f.name === 'node_modules') continue;
-      const rel = path.join(dir, f.name);
-      if (f.isDirectory()) walk(rel);
-      else if (f.name.endsWith('.html')) htmlFiles.push(rel);
-    }
-  };
-  walk('.');
-  let links = 0;
-  for (const page of htmlFiles) {
-    const html = read(page);
-    for (const m of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
-      const url = m[1];
-      if (url.startsWith('#') || url.startsWith('mailto:') || url.startsWith('data:') || url.startsWith('javascript:')) continue;
-      if (/^https?:\/\//.test(url)) continue;
-      links += 1;
-      const target = path.resolve(path.dirname(path.join(ROOT, page)), url.split('#')[0]);
-      expect(fs.existsSync(target), `${page}: broken local reference ${url}`);
-    }
-  }
-  if (failures.length) {
-    console.error(`FAILED ${failures.length} link check(s):`);
-    for (const f of failures.slice(0, 40)) console.error(' - ' + f);
-    process.exit(1);
-  }
-  console.log(`Notice: data/entries.json uses a different dataset schema, so the Prize Atlas data contract was skipped. ` +
-    `Link-checked ${htmlFiles.length} HTML pages (${links} local references) with no failures. ` +
-    `Prize Atlas data pages present: ${pages.length}.`);
-  process.exit(0);
-}
-
 /* ---------- data contract ---------- */
 expect(entries.length >= 208, `expected at least 208 rows, found ${entries.length}`);
 expect(new Set(entries.map((r) => r.id)).size === entries.length, 'duplicate row ids');

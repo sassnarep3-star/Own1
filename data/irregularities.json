@@ -1,740 +1,106 @@
-{
- "verifiedOn": "2026-11-01",
- "statusMeaning": "needs review",
- "items": [
+[
   {
-   "id": "I-01",
-   "title": "Source site contradicts itself on scope and size",
-   "severity": "medium",
-   "type": "provenance",
-   "summary": "The source page header says \"Pass C · 17 Aug 2026\", its dataset says pass S / reviewed 2026-08-19, and its own review.html says the ledger \"now runs to 119 listings\" while the data holds 206. The numbers on the source homepage (206 / 189 / 62 / 60) are computed by its JavaScript, not written into the data.",
-   "evidence": [
-    "index.html of the source site: subtitle \"Pass C · 17 Aug 2026\".",
-    "assets/data.js header: \"pass S, 2026-08-19\", reviewed: \"2026-08-19\".",
-    "review.html of the source site: \"the ledger now runs to 119 listings\"."
-   ],
-   "affected": [],
-   "links": [
-    {
-     "title": "Source site",
-     "url": "https://karagemop466-tech.github.io/FreeMoneyApps/"
-    },
-    {
-     "title": "Source repository (pinned commit)",
-     "url": "https://github.com/karagemop466-tech/FreeMoneyApps/commit/466f7c1e7a14b52b4a0d36beb84a00d68fd409b7"
-    }
-   ],
-   "action": "We publish the dataset's own numbers and state the pass and date we used. No figure on our site is taken from the source page's marketing header."
+    "id": "challenge-gov-sunset",
+    "severity": "broken link",
+    "title": "Challenge.gov was shut down; the imported link now redirects readers in circles",
+    "detail": "The imported ledger points to challenge.gov as an official source for federal prize competitions. That platform was sunset on 30 March 2026 and the site now only explains the move. The row keeps the old URL so the change is visible, with the replacement directory recorded in its notes.",
+    "sources": [
+      { "label": "challenge.gov (sunset notice, read 2026-11-01)", "url": "https://www.challenge.gov/" },
+      { "label": "USA.gov challenges directory", "url": "https://www.usa.gov/challenges" }
+    ]
   },
   {
-   "id": "I-02",
-   "title": "Every prize figure is 74 days stale at publication",
-   "severity": "high",
-   "type": "freshness",
-   "summary": "All 206 rows carry \"last checked 2026-08-19\". Today is 2026-11-01 — a 74-day gap. Contest prize tables, seasons and eligibility change on that timescale, and several sports contests in the set are seasonal.",
-   "evidence": [
-    "Ledger field lastChecked = \"2026-08-19\" on all 206 rows.",
-    "Source repository last commit 2026-08-19T22:07:51Z."
-   ],
-   "affected": [
-    "all"
-   ],
-   "links": [
-    {
-     "title": "Source repository commit",
-     "url": "https://github.com/karagemop466-tech/FreeMoneyApps/commit/466f7c1e7a14b52b4a0d36beb84a00d68fd409b7"
-    }
-   ],
-   "action": "Shown on every page as \"source reviewed 2026-08-19\". Prize figures are labelled as the source's claims, and each row links to the operator so the live figure can be read before entering."
+    "id": "pgatour-404",
+    "severity": "broken link",
+    "title": "PGA TOUR Fantasy prizes page returns 404",
+    "detail": "The imported source URL fantasygolf.pgatour.com/prizes now returns 'Page Not Found'. No prize value could be confirmed, so the row keeps blank prize fields and is marked unverified.",
+    "sources": [
+      { "label": "fantasygolf.pgatour.com/prizes (404 on 2026-11-01)", "url": "https://fantasygolf.pgatour.com/prizes" }
+    ]
   },
   {
-   "id": "I-03",
-   "title": "Ended / out-of-season contests are still listed with prize figures",
-   "severity": "medium",
-   "type": "data-quality",
-   "summary": "27 listings are marked \"ended / out of season\" by the source itself yet still carry a prize figure. They must not be presented as things to enter today.",
-   "evidence": [
-    "Rows with status \"ended\" (e.g. espn-pigskin, fox-super6, nba-pickem, yahoo-bracket-mayhem)."
-   ],
-   "affected": [
-    "givling",
-    "espn-pigskin",
-    "fox-super6",
-    "pickwatch",
-    "thelines-survivor",
-    "splash-mock",
-    "fftoday-draft",
-    "fpl-second-chance",
-    "the-special-one",
-    "goaloracle",
-    "oddspedia",
-    "espn-tourney-challenge",
-    "espn-tc-eliminator",
-    "nhl-bracket-challenge",
-    "espn-nba-playoff",
-    "nba-pickem",
-    "espn-hockey-playoff",
-    "espn-cfp-bracket",
-    "espn-knockout-bracket",
-    "mlb-hr-derby-pickem",
-    "espn-womens-tourney",
-    "yahoo-bracket-mayhem",
-    "espn-bowl-mania",
-    "the-open-fantasy",
-    "darts-corner-predictor",
-    "bridgewater-forecast",
-    "aleague-fantasy"
-   ],
-   "links": [],
-   "action": "Separated on the site: excluded from every shortlist and from the \"enter now\" count; shown with an \"Ended\" stamp in the full table and on its category page."
+    "id": "prizefest-redirect",
+    "severity": "wrong destination",
+    "title": "The Louisiana Film Prize link lands on the Photo Prize rules",
+    "detail": "prizefest.com/film/rules/ redirects to the Photo Prize rules page, which restricts entries to photographs taken in Caddo or Bossier Parish, Louisiana. The film competition's own rules were therefore not read, and the row stays unverified.",
+    "sources": [
+      { "label": "Prize Fest Photo Prize rules (where the film link lands)", "url": "https://prizefest.com/photo/rules/" }
+    ]
   },
   {
-   "id": "I-04",
-   "title": "No official-source link on the row — prize figure has no official basis",
-   "severity": "high",
-   "type": "sourcing",
-   "summary": "12 listings cite only affiliate or forum sources. Three of them say so in their own text: the prize table was taken from review sites, not the operator.",
-   "evidence": [
-    "Rows whose sources array contains no entry with tier \"official\".",
-    "roboforex-demo restricted field: \"Prize table sourced from review sites, not the official domain — re-confirm before relying on it.\"",
-    "fbs-pro-demo and npbfx-demo carry the same note."
-   ],
-   "affected": [
-    "thelines-survivor",
-    "fantasy-arena",
-    "fplhub",
-    "bona-fide",
-    "olka",
-    "fplmanager-india",
-    "fplstore",
-    "pitchbooking",
-    "roboforex-demo",
-    "fbs-pro-demo",
-    "npbfx-demo",
-    "tff-fantezi-lig"
-   ],
-   "links": [],
-   "action": "The prize cell is left BLANK for these rows on the site, marked \"unverified\", and the row is listed here. The dataset's own wording is shown in the row detail, clearly labelled as an unconfirmed claim."
+    "id": "yahoo-outage",
+    "severity": "source unavailable",
+    "title": "Yahoo Survival Football served an outage page",
+    "detail": "The imported URL returned Yahoo's 'Will be right back' outage notice on the verification date, so no rule, prize or deadline could be read. The row is unverified rather than guessed.",
+    "sources": [
+      { "label": "football.fantasysports.yahoo.com/public/survival", "url": "https://football.fantasysports.yahoo.com/public/survival" }
+    ]
   },
   {
-   "id": "I-05",
-   "title": "Official iOS link returns an error page",
-   "severity": "high",
-   "type": "broken-link",
-   "summary": "The App Store link for Solitaire Cash (id1252281551) returned Apple's \"An Error Occurred\" page on 2026-11-01, while a different apps.apple.com link fetched in the same session loaded normally. The app is likely no longer on the US storefront, but one observation is not proof.",
-   "evidence": [
-    "Fetch of https://apps.apple.com/us/app/solitaire-cash-win-real-money/id1252281551 returned title \"App Store\", body \"An Error Occurred\".",
-    "Control fetch of https://apps.apple.com/us/app/skillz-arena/id6761981587 rendered a full app page."
-   ],
-   "affected": [
-    "solitaire-cash"
-   ],
-   "links": [
-    {
-     "title": "Broken App Store link (check manually)",
-     "url": "https://apps.apple.com/us/app/solitaire-cash-win-real-money/id1252281551"
-    },
-    {
-     "title": "Control app that loaded fine",
-     "url": "https://apps.apple.com/us/app/skillz-arena/id6761981587"
-    },
-    {
-     "title": "Operator site",
-     "url": "https://www.papaya.com/"
-    }
-   ],
-   "action": "Row keeps the operator link and shows the App Store link marked \"reported error 2026-11-01\". Human confirmation needed."
+    "id": "javascript-only",
+    "severity": "unreadable source",
+    "title": "Several platform indexes are JavaScript apps with no readable listing",
+    "detail": "Kaggle's competition index, AIcrowd, Zindi, Topcoder and the UEFA fantasy game returned no readable challenge, prize or deadline data when fetched. They are kept as unverified leads; each individual event has to be opened and checked on its own page.",
+    "sources": [
+      { "label": "kaggle.com/competitions", "url": "https://www.kaggle.com/competitions" },
+      { "label": "aicrowd.com/challenges", "url": "https://www.aicrowd.com/challenges" },
+      { "label": "zindi.world/competitions", "url": "https://zindi.world/competitions" }
+    ]
   },
   {
-   "id": "I-06",
-   "title": "Rules link points at a past, finished contest",
-   "severity": "medium",
-   "type": "stale-link",
-   "summary": "The TradingView row links its \"rules\" to the named July 2026 event, and on 2026-11-01 the programme's landing page showed every event as completed. The generic entry point is the useful link, not a single expired event's rules.",
-   "evidence": [
-    "rulesUrl: https://www.tradingview.com/the-leap/tradestation-july-2026/rules/",
-    "Landing page on 2026-11-01 listed events through \"October 7 – 20, 2026\", marked Completed."
-   ],
-   "affected": [
-    "tradingview-leap"
-   ],
-   "links": [
-    {
-     "title": "Programme landing page",
-     "url": "https://www.tradingview.com/the-leap/"
-    },
-    {
-     "title": "Expired rules link cited by the source",
-     "url": "https://www.tradingview.com/the-leap/tradestation-july-2026/rules/"
-    }
-   ],
-   "action": "Row leads with the programme page; the expired rules link is shown as \"past contest rules\" rather than presented as current terms."
+    "id": "trading-bonus",
+    "severity": "misleading prize",
+    "title": "Broker 'demo contests' pay trading bonuses, not cash",
+    "detail": "HFM's official FAQ answers 'Are the prizes real cash?' with 'No, the prizes are trading bonuses that will be credited to your live trading account.' The other brokers in the market-simulations category make similar offers, so none of them should be read as a cash prize until their own terms confirm it.",
+    "sources": [
+      { "label": "HFM Virtual to Real demo contest FAQ", "url": "https://www.hfm.com/int/en/promotions/demo-contest" }
+    ]
   },
   {
-   "id": "I-07",
-   "title": "Referral / promo codes published with no verification",
-   "severity": "high",
-   "type": "unverifiable-claim",
-   "summary": "12 rows carry a referral or league code. Eight are explicitly marked codeVerified: false and four have no verification flag at all. Referral codes are personal or affiliate incentives, they change without notice, and a code can never be confirmed as \"the operator's official offer\".",
-   "evidence": [
-    "Rows with a \"code\" field, e.g. ffs-fpl (eikrq4), fplhub (00ul99), olka (5nysyw), pitchbooking (5hwilh).",
-    "codeVerified is false on 8 of the 12 and unspecified on the other 4."
-   ],
-   "affected": [
-    "ffs-fpl",
-    "ffs-ucl",
-    "ffs-efl",
-    "football-mad",
-    "fantasy-arena",
-    "lazyfpl",
-    "fplhub",
-    "bona-fide",
-    "olka",
-    "fplmanager-india",
-    "fplstore",
-    "pitchbooking"
-   ],
-   "links": [],
-   "action": "Codes are NOT published on this site. The row is shown without a code and this entry explains why. If you want them, take them from the operator page, not from this ledger."
+    "id": "paid-entry",
+    "severity": "not free",
+    "title": "Entries that are not free were imported as if they were",
+    "detail": "The reference ledger mixed paid-entry and bonus-credit offers into a page about free money. Two verified examples: the Tom Howard/Margaret Reid poetry contest charges $27 per submission, and Papaya's cash tournaments are funded by entry fees (free rooms pay Gems, not dollars). Both are kept with a 'paid' or 'not free' label instead of being recommended.",
+    "sources": [
+      { "label": "Tom Howard/Margaret Reid contest page ('Fee: $27 per submission')", "url": "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest" },
+      { "label": "Papaya FAQ (entry-fee funded cash tournaments)", "url": "https://www.papaya.com/faq" }
+    ]
   },
   {
-   "id": "I-08a",
-   "title": "No rules URL at all",
-   "severity": "medium",
-   "type": "sourcing",
-   "summary": "6 rows have no rules/terms URL, so a reader cannot check eligibility or prize terms from the row.",
-   "evidence": [
-    "Rows where rulesUrl is null/empty."
-   ],
-   "affected": [
-    "aicrowd",
-    "codabench",
-    "grand-challenge",
-    "crunchdao",
-    "mlcontests",
-    "bundesliga-fantasy"
-   ],
-   "links": [],
-   "action": "Row shows the operator site only, with a \"no rules page cited\" note in the detail panel."
+    "id": "ai-rules",
+    "severity": "AI restriction",
+    "title": "Some free contests ban AI-generated entries outright",
+    "detail": "Winning Writers contests state that submitted writing 'must be composed using your own words, and may not contain any AI-generated text'. An AI agent can help you find and plan an entry, but not write it. The Prize Fest photo rules take the same position on generated images.",
+    "sources": [
+      { "label": "Wergle Flomp contest rules (AI policy)", "url": "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free" },
+      { "label": "Prize Fest Photo Prize rules ('AI generation tools... strictly prohibited')", "url": "https://prizefest.com/photo/rules/" }
+    ]
   },
   {
-   "id": "I-08b",
-   "title": "\"Rules\" link is just the signup page",
-   "severity": "low",
-   "type": "sourcing",
-   "summary": "117 of 206 rows point their rules URL at exactly the same address as the signup URL. The rules are then not a separate, linkable document — the reader lands on a marketing or entry page.",
-   "evidence": [
-    "Rows where rulesUrl === signupUrl."
-   ],
-   "affected": [
-    "skillz",
-    "pocket7",
-    "givling",
-    "kaggle",
-    "devpost",
-    "reedsy-dir",
-    "drivendata",
-    "xprize",
-    "topcoder",
-    "espn-pickem",
-    "espn-survivor",
-    "espn-wintotals",
-    "espn-playoff",
-    "espn-pigskin",
-    "espn-cfb",
-    "cbs-pro-pickem",
-    "cbs-cfb-pickem",
-    "fox-super6",
-    "yahoo-survival",
-    "pickwatch",
-    "beat-the-geek",
-    "tsg-playoff",
-    "favorites-pickem",
-    "thelines-survivor",
-    "rams-pickem",
-    "draft-pro",
-    "splash-mock",
-    "fftoday-draft",
-    "rotoballer",
-    "apex-fantasy",
-    "fpl-second-chance",
-    "fpl-draft",
-    "fantasy-efl",
-    "telegraph-ff",
-    "ucl-fantasy",
-    "pl-predictor",
-    "pooltracker-epl",
-    "ffs-tattico",
-    "dirty-dozen",
-    "the-special-one",
-    "andys-predictor",
-    "pickem-sports",
-    "sports-predictor",
-    "goaloracle",
-    "oddspedia",
-    "streak-for-cash",
-    "gamersaloon",
-    "playerslounge",
-    "officepoolstop",
-    "funofficepools",
-    "mysurvivorpool",
-    "gridirongames",
-    "squarespool",
-    "myfantasyleague",
-    "trofeo",
-    "nhl-bracket-challenge",
-    "espn-nba-playoff",
-    "espn-hockey-playoff",
-    "espn-cfp-bracket",
-    "espn-knockout-bracket",
-    "mlb-hr-derby-pickem",
-    "start-gg",
-    "crowdspring",
-    "espn-womens-tourney",
-    "signate",
-    "hypermind",
-    "espn-bowl-mania",
-    "ligue1-fantasy",
-    "tattico-serie-a",
-    "supercoach-bbl",
-    "for-traders",
-    "ninjatrader-arena",
-    "the-open-fantasy",
-    "sun-dream-team",
-    "tim-hortons-hockey",
-    "darts-corner-predictor",
-    "spfl-fantasy",
-    "euroleague-fantasy",
-    "valorant-pickem",
-    "multibank-demo",
-    "xm-demo",
-    "hfm-demo",
-    "litefinance-best",
-    "tradingcom-paper",
-    "tickmill-nfp",
-    "roboforex-demo",
-    "fbs-pro-demo",
-    "npbfx-demo",
-    "fantasy-gaa",
-    "pensacola-songwriting",
-    "ti-compendium",
-    "ibu-ecup",
-    "tom-howard-poetry",
-    "wergle-flomp",
-    "mxa-fantasy",
-    "kinolime",
-    "streak-contest",
-    "agentmma",
-    "formula-e-predictor",
-    "stable-stars",
-    "stablestakes",
-    "running-aces-harness",
-    "ncga-majors-challenge",
-    "fantasy-golf-challenge",
-    "checkmate-gaming",
-    "fundedfast-open",
-    "hipa",
-    "sony-world-photo",
-    "world-press-photo",
-    "weather-potw",
-    "epoty",
-    "spie-light",
-    "istanbul-photo-awards",
-    "gems-prize-2026",
-    "midterms-2026",
-    "codex-twitchcon-2026",
-    "paypal-ai-hackathon-2026"
-   ],
-   "links": [],
-   "action": "Shown as a single \"Official page\" link instead of pretending there is a separate rules document."
+    "id": "espn-entry-limit",
+    "severity": "internal contradiction",
+    "title": "ESPN contradicts itself on how many entries you may create",
+    "detail": "ESPN's own How-to-Play text says players 'can now create up to 10 entries', while the FAQ on the same page says 'you can create another entry (up to five total)'. Nobody should plan around either number without checking the live entry screen.",
+    "sources": [
+      { "label": "ESPN NFL Pick'em How to Play / FAQ", "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay" }
+    ]
   },
   {
-   "id": "I-09",
-   "title": "Insecure (http://) link",
-   "severity": "low",
-   "type": "link-hygiene",
-   "summary": "1 row links only http://. The host serves the same page over https, so the link should be upgraded.",
-   "evidence": [
-    "squarespool: http://www.squarespool.com/ ; the https version returned the same page on 2026-11-01."
-   ],
-   "affected": [
-    "squarespool"
-   ],
-   "links": [
-    {
-     "title": "https version that works",
-     "url": "https://www.squarespool.com/"
-    }
-   ],
-   "action": "Our site links the https address. The dataset keeps the original for auditability."
+    "id": "no-source-rows",
+    "severity": "missing source",
+    "title": "Two imported rows have no usable operator link",
+    "detail": "TheLines Free NFL Survivor and SquaresPool.com arrived from the reference ledger without a usable HTTPS operator page. No substitute third-party article or HTTP-only page was used. They are published as unverified leads with an empty source field.",
+    "sources": [
+      { "label": "Reference ledger the rows came from", "url": "https://karagemop466-tech.github.io/FreeMoneyApps/" }
+    ]
   },
   {
-   "id": "I-10",
-   "title": "Gambling-operator and broker-account contests sit inside a ledger that excludes them",
-   "severity": "high",
-   "type": "scope-policy",
-   "summary": "The source states that sweepstakes, casinos, and \"any contest that requires an account with a gambling operator (bookmaker, sportsbook or real-money DFS)\" are excluded. 17 rows appear to break that rule: a contest entered through Fanatics' sportsbook/casino product, a contest hosted on a gambling-affiliate domain, and 15 broker demo contests whose own notes call them broker acquisition funnels. Whether they belong in a free-money ledger is your call, not ours — but it should not be silent.",
-   "evidence": [
-    "fanatics-survivor signupUrl is https://betfanatics.com/ — fetched on 2026-11-01: \"Fanatics Sports & Casino — Bet $20 Get $350 in FanCash\", with Sportsbook and Casino state lists.",
-    "dirty-dozen signupUrl is https://www.gambling.com/games/dirty-dozen — a gambling-affiliate domain, contest name \"(Gambling.com)\".",
-    "tickmill-nfp eligibility: \"Live Tickmill account holders\".",
-    "xm-demo / hfm-demo / litefinance-best restricted notes: \"Broker acquisition funnel\", prizes are trading bonuses or credits.",
-    "The source's own category blurb for sports advertises \"sweepstakes sportsbooks\" while the file header excludes sweepstakes (see I-15)."
-   ],
-   "affected": [
-    "fanatics-survivor",
-    "dirty-dozen",
-    "moomoo-paper-trading",
-    "for-traders",
-    "ninjatrader-arena",
-    "deriv-tournaments",
-    "multibank-demo",
-    "xm-demo",
-    "headway-demo",
-    "hfm-demo",
-    "litefinance-best",
-    "tradingcom-paper",
-    "tickmill-nfp",
-    "roboforex-demo",
-    "fbs-pro-demo",
-    "npbfx-demo",
-    "fundedfast-open"
-   ],
-   "links": [
-    {
-     "title": "betfanatics.com (fetched 2026-11-01)",
-     "url": "https://betfanatics.com/"
-    },
-    {
-     "title": "gambling.com contest page",
-     "url": "https://www.gambling.com/games/dirty-dozen"
-    },
-    {
-     "title": "Tickmill NFP Machine",
-     "url": "https://www.tickmill.com/promotions/nfp-machine"
-    }
-   ],
-   "action": "These rows are kept (they are free to enter) but are stamped \"operator account required\" on the site and excluded from the \"best free-to-enter\" shortlist. Decide whether to drop them."
-  },
-  {
-   "id": "I-11",
-   "title": "Prizes that are points, gems or credits, not dollars",
-   "severity": "medium",
-   "type": "prize-quality",
-   "summary": "The ledger's premise is \"free competitions that can pay real money\", but a number of rows pay in non-cash currency: Swagbucks SB points, Papaya Gems, Skillz Z coins, broker trading credits. The 2 rows below are the ones where the dataset itself says the free path pays in something other than dollars, or where the payout is a credit rather than cash. Others in the skill category have the same shape without saying so as plainly.",
-   "evidence": [
-    "swagbucks-trivia prize: \"SB points redeemable for PayPal cash / gift cards\".",
-    "givling prize: \"Trivia removed — no longer a trivia contest\" (the row no longer describes a contest at all).",
-    "papaya.com/faq (fetched): free competitions use Gems; cash competitions are separate."
-   ],
-   "affected": [
-    "swagbucks-trivia",
-    "givling",
-    "solitaire-cash",
-    "bingo-cash",
-    "skillz",
-    "pocket7",
-    "hfm-demo",
-    "litefinance-best",
-    "deriv-tournaments"
-   ],
-   "links": [
-    {
-     "title": "Swagbucks (points currency)",
-     "url": "https://www.swagbucks.com/"
-    },
-    {
-     "title": "Papaya FAQ (Gems vs cash)",
-     "url": "https://www.papaya.com/faq"
-    }
-   ],
-   "action": "Each row states its payout currency explicitly (\"points\", \"gems\", \"account credit\"); the shortlist requires a cash-equivalent payout."
-  },
-  {
-   "id": "I-12",
-   "title": "No stated prize amount",
-   "severity": "medium",
-   "type": "data-quality",
-   "summary": "133 rows state a money amount; the other 78 do not. They use placeholder text such as \"Prizes decided by your group\", \"Varies\", \"Confirm in-app\" or \"Unverified\". These rows cannot be ranked on prize value.",
-   "evidence": [
-    "Rows where the prize field contains no currency amount."
-   ],
-   "affected": [
-    "solitaire-cash",
-    "bingo-cash",
-    "skillz",
-    "pocket7",
-    "givling",
-    "reedsy-dir",
-    "topcoder",
-    "fox-super6",
-    "pickwatch",
-    "thelines-survivor",
-    "splash-mock",
-    "fpl-official",
-    "fpl-second-chance",
-    "fpl-draft",
-    "fantasy-efl",
-    "ucl-fantasy",
-    "pl-predictor",
-    "pooltracker-epl",
-    "ffs-efl",
-    "football-mad",
-    "fantasy-arena",
-    "fplhub",
-    "bona-fide",
-    "olka",
-    "fplmanager-india",
-    "fplstore",
-    "pitchbooking",
-    "the-special-one",
-    "pickem-sports",
-    "sports-predictor",
-    "goaloracle",
-    "streak-for-cash",
-    "playerslounge",
-    "officepoolstop",
-    "funofficepools",
-    "mysurvivorpool",
-    "gridirongames",
-    "squarespool",
-    "myfantasyleague",
-    "trofeo",
-    "crunchdao",
-    "mlcontests",
-    "bundesliga-fantasy",
-    "laliga-fantasy",
-    "swagbucks-trivia",
-    "99designs",
-    "battlefy",
-    "challengermode",
-    "atp-fantasy",
-    "start-gg",
-    "play-pokemon",
-    "designcrowd",
-    "crowdspring",
-    "signate",
-    "hypermind",
-    "superbru",
-    "ligue1-fantasy",
-    "lol-pickem",
-    "supercoach-bbl",
-    "ninjatrader-arena",
-    "dp-world-tour-fantasy",
-    "icc-t20-fantasy",
-    "euroleague-fantasy",
-    "valorant-pickem",
-    "eredivisie-fantasy",
-    "cev-volley-fantasy",
-    "cev-predictor",
-    "super-league-predictor",
-    "motogp-fantasy",
-    "the-hundred-fantasy",
-    "wsl-fantasy",
-    "ti-compendium",
-    "ibu-ecup",
-    "tff-fantezi-lig",
-    "premiership-rugby-fantasy",
-    "agentmma",
-    "formula-e-predictor",
-    "ultimate-fantasy-tennis"
-   ],
-   "links": [],
-   "action": "Prize shown as \"—\" on the site with the reason, and the row is ineligible for the big-prize shortlist."
-  },
-  {
-   "id": "I-13",
-   "title": "Non-USD prize currencies in a USD-framed ledger",
-   "severity": "low",
-   "type": "data-quality",
-   "summary": "Some prize figures are in £ or €. They are not converted here — a conversion would be an invented number.",
-   "evidence": [
-    "Rows whose prize text contains £ or € and no $."
-   ],
-   "affected": [
-    "telegraph-ff",
-    "ffs-fpl",
-    "ffs-ucl",
-    "ffs-tattico",
-    "lazyfpl",
-    "dirty-dozen",
-    "andys-predictor",
-    "oddspedia",
-    "f1-fantasy",
-    "six-nations-fantasy",
-    "tattico-serie-a",
-    "the-open-fantasy",
-    "sun-dream-team",
-    "sky-sports-ff",
-    "cricket-draft",
-    "darts-corner-predictor",
-    "spfl-fantasy",
-    "super-league-fantasy",
-    "fantasy-gaa",
-    "telegraph-fantasy-racing",
-    "stable-stars",
-    "world-press-photo",
-    "weather-potw",
-    "epoty"
-   ],
-   "links": [],
-   "action": "Original currency shown as written; no conversion applied anywhere on the site."
-  },
-  {
-   "id": "I-14",
-   "title": "Directory listings are not themselves free contests",
-   "severity": "medium",
-   "type": "scope",
-   "summary": "The directory rows are catalogues. Fetched on 2026-11-01, Reedsy's writing-contest list showed 458 contests, many of them charging entry fees ($5–$49 observed), and its \"prize\" is a directory-wide range rather than a prize.",
-   "evidence": [
-    "reedsy-dir prize text: \"Listed per contest (hundreds to tens of thousands)\".",
-    "Fetched page: entry fees $5, $11, $12, $15, $20, $25 and $49 on listed contests."
-   ],
-   "affected": [
-    "reedsy-dir",
-    "mlcontests"
-   ],
-   "links": [
-    {
-     "title": "Reedsy contest directory",
-     "url": "https://reedsy.com/resources/writing-contests/"
-    }
-   ],
-   "action": "Directory rows carry an explicit warning on their detail page, are scored −6 in the shortlist model and never appear in a \"best picks\" list."
-  },
-  {
-   "id": "I-15",
-   "title": "Category copy tells readers to use sweepstakes sportsbooks, which the same file excludes",
-   "severity": "medium",
-   "type": "scope-policy",
-   "summary": "The sports category blurb in the source data reads: \"Daily fantasy freerolls and sweepstakes sportsbooks.\" The file header says sweepstakes are excluded by policy. Both cannot be true.",
-   "evidence": [
-    "types[sports].blurb: \"Daily fantasy freerolls and sweepstakes sportsbooks. Free tickets or free coins can win USD; most large pools are paid-entry.\""
-   ],
-   "affected": [],
-   "links": [
-    {
-     "title": "Source repository",
-     "url": "https://github.com/karagemop466-tech/FreeMoneyApps"
-    }
-   ],
-   "action": "We do not repeat that blurb. Our category description is written from what the rows actually contain."
-  },
-  {
-   "id": "I-17",
-   "title": "ESPN's own rules contradict each other on how many entries you may submit",
-   "severity": "low",
-   "type": "source-conflict",
-   "summary": "Found by the parallel sessions on 2026-11-01: ESPN's FAQ says five entries while the intro and the current picks UI say ten. Both cannot be right, and it changes how a multi-entry strategy works.",
-   "evidence": [
-    "ESPN NFL Pick'em FAQ vs the current picks page, read 2026-11-01 by arena/27a86924-own1 and re-read by arena/90c9f78c-own1 (see research/SOURCES.md)."
-   ],
-   "affected": [
-    "espn-pickem"
-   ],
-   "links": [
-    {
-     "title": "ESPN Pick'em complete rules",
-     "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules"
-    }
-   ],
-   "action": "The caveat is carried on the row's detail page verbatim as a cross-check note. We do not pick a number."
-  },
-  {
-   "id": "I-18",
-   "title": "Challenge.gov is listed as a live lead, but the government says the platform was sunset on 2026-03-30",
-   "severity": "medium",
-   "type": "stale-source",
-   "summary": "Found by a parallel session on 2026-11-01: the reference work groups Challenge.gov with other contest platforms, while the government's own site states the platform was sunset in March 2026. A dead directory sends readers to nothing.",
-   "evidence": [
-    "challenge.gov notice read 2026-11-01 (see the archived supplemental research page)."
-   ],
-   "affected": [],
-   "links": [
-    {
-     "title": "Challenge.gov (government notice)",
-     "url": "https://www.challenge.gov/"
-    }
-   ],
-   "action": "No Challenge.gov row exists in this ledger, so nothing was removed. Recorded here because the source material presents it as a current directory."
-  },
-  {
-   "id": "I-19",
-   "title": "IceHacks advertises cash in its header but its own description says there are no cash prizes",
-   "severity": "low",
-   "type": "source-conflict",
-   "summary": "A parallel session found a page contradicting itself: the header advertises cash, the description says no cash prizes. Header copy is not a prize.",
-   "evidence": [
-    "icehacks.devpost.com read 2026-11-01."
-   ],
-   "affected": [],
-   "links": [
-    {
-     "title": "IceHacks event page",
-     "url": "https://icehacks.devpost.com/"
-    }
-   ],
-   "action": "IceHacks is not carried as a row, so no prize is published for it. Recorded so the pattern (headline vs rules) stays visible."
-  },
-  {
-   "id": "I-20",
-   "title": "PayPal AI Hackathon: headline prize total and itemised rules disagree",
-   "severity": "medium",
-   "type": "prize-discrepancy",
-   "summary": "The event page advertises $67,500 cash and $69,750 total prizes; the rules itemise individual awards including non-cash credits. This site quotes only the clearly stated first-place cash award ($12,000) and nothing else.",
-   "evidence": [
-    "Event page vs rules page, read 2026-11-01 by arena/37aed701-own1."
-   ],
-   "affected": [
-    "paypal-ai-hackathon-2026"
-   ],
-   "links": [
-    {
-     "title": "Event page",
-     "url": "https://paypalaihackathon.devpost.com/"
-    },
-    {
-     "title": "Official rules",
-     "url": "https://paypalaihackathon.devpost.com/rules"
-    }
-   ],
-   "action": "The row states \"$12,000 first place\" only, with this discrepancy noted on its detail page. No total is published."
-  },
-  {
-   "id": "I-21",
-   "title": "The blanket claim that \"US tax forms apply at $600+\" is a generalisation, not a rule",
-   "severity": "low",
-   "type": "tax-claim",
-   "summary": "A parallel session flagged that the reference work presents a $600 threshold as universal. Reporting depends on the type of income and the filer's circumstances; IRS guidance distinguishes prizes/awards from gambling winnings.",
-   "evidence": [
-    "The source dataset's own verification-level text: \"US prizes of $600+ typically require a W-9\".",
-    "IRS Publication 525 and IRS Topic 419 distinguish other income from gambling winnings."
-   ],
-   "affected": [],
-   "links": [
-    {
-     "title": "IRS Publication 525 (taxable and nontaxable income)",
-     "url": "https://www.irs.gov/publications/p525"
-    },
-    {
-     "title": "IRS Topic 419 (gambling income and losses)",
-     "url": "https://www.irs.gov/taxtopics/tc419"
-    }
-   ],
-   "action": "Every page that mentions tax says \"the source's generalisation\" and links this entry. Nothing here is tax advice."
-  },
-  {
-   "id": "I-16",
-   "title": "Most rows were not re-checked in this pass",
-   "severity": "info",
-   "type": "verification-coverage",
-   "summary": "13 of 211 rows were fetched live on 2026-11-01. The build sandbox has no general outbound web access, so a 206-row crawl was not possible here. The other 198 rows are published as \"source cited — not re-checked this session\".",
-   "evidence": [
-    "live-checks.json records 12 fetches; no other URL was retrieved this session."
-   ],
-   "affected": [],
-   "links": [],
-   "action": "Listed openly. Each row carries its own status badge so a reader can tell a live-checked row from a merely cited one."
+    "id": "stale-ledger",
+    "severity": "stale data",
+    "title": "The imported catalogue is a research desk, not an authority",
+    "detail": "All 206 imported names carry the reference ledger's August 2026 stamp. Its 'live' and 'ended' labels were not carried forward as facts, and its older 100-item document describes itself as superseded. Names and category assignments were kept; financial and timing claims were cleared until an operator page confirmed them.",
+    "sources": [
+      { "label": "Free Money & Contest Ledger", "url": "https://karagemop466-tech.github.io/FreeMoneyApps/" }
+    ]
   }
- ]
-}
+]
