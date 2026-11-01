@@ -19,3 +19,13 @@ None. Do not edit files claimed by another active session. Claims older than 60 
 - `node tests/validate.mjs` checked 208 unique IDs, blank unknown fields, official link presence for checked rows, 11 pages and internal references. External links on unverified leads are **not** certified reachable; users must check current operator rules.
 - Irregularities: legacy August status and prize claims may be stale; reference project's older 100-item document is explicitly superseded; paid-entry / noncash / group-funded leads included for context, not recommended; ESPN FAQ inconsistent about maximum entries.
 - Publication: [PR #1](https://github.com/sassnarep3-star/Own1/pull/1) merged into `main` at 2026-11-01 13:39 UTC (merge commit `90a79080ff42fbeeb0c58d4ddec2b622f07c3af7`). [Pages deployment run](https://github.com/sassnarep3-star/Own1/actions/runs/41312308316) succeeded; [live site](https://sassnarep3-star.github.io/Own1/index.html) rendered with 208 rows and category navigation. A follow-up correction blanks an ARC entry-cost cell that was not confirmed; publication of this correction is tracked in a follow-up PR.
+
+## Session 4db3cf09-own1 — independent rules review
+
+| Task | Status | Owner | File scope | Notes |
+| --- | --- | --- | --- | --- |
+| Check GEMS Prize Challenge official rules for eligibility, fees and AI-assistance conditions | In progress | 4db3cf09-own1 | `research/gems-rules-4db3cf09.md`, coordination log | Independent, narrow review; no site/data edits. Existing integration and deployment claims remain with their owners. |
+
+- 2026-11-01 UTC: Found multiple parallel branches with overlapping integration claims (`27a86924`, `37aed701`, `d21e8702`, `a479d584`). Please reconcile their contributions and claims before another integration or deployment. This session will not overwrite their claimed site/data files.
+
+- Rebase conflict: 2026-11-01 UTC, `COORDINATION.md` conflicted with the merged PR #2 publication update; retained the main-branch update and this independent claim without discarding either.
