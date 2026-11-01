@@ -139,26 +139,9 @@ const SOFT = (r) => !!r && !r.ok && !HARD(r);
 
 for (const e of entries) {
   const r = e.officialUrl ? health[e.officialUrl] || null : null;
-  if (r) {
-    // Classify honestly: only DNS/TLS/timeout/404 are "dead". A redirect the checker did not follow,
-    // a bot block, or a 5xx server error are all different things and must not be shown as "broken".
-    const state = r.ok
-      ? 'ok'
-      : HARD(r)
-      ? 'dead'
-      : r.status >= 300 && r.status < 400
-      ? 'redirect'
-      : r.status === 401 || r.status === 403 || r.status === 429
-      ? 'bot-blocked'
-      : r.status >= 500
-      ? 'server-error'
-      : 'blocked-other';
-    e.link = { ok: r.ok, status: r.status, error: r.error, checkedAt: r.checkedAt, hardFail: HARD(r), state, finalUrl: r.finalUrl || '' };
-  } else {
-    e.link = null;
-  }
+  e.link = r ? { ok: r.ok, status: r.status, error: r.error, checkedAt: r.checkedAt, hardFail: HARD(r) } : null;
   if (r && HARD(r)) e.flags.push('link-dead');
-  if (r && ['bot-blocked', 'redirect', 'server-error', 'blocked-other'].includes(e.link.state)) e.flags.push('link-not-confirmed');
+  if (r && SOFT(r)) e.flags.push('link-unreachable-to-bot');
 }
 
 const stats = {
@@ -177,9 +160,6 @@ const stats = {
   linkOk: healthDoc?.ok || 0,
   linkHardFail: entries.filter((e) => e.link?.hardFail).length,
   linkSoftFail: entries.filter((e) => e.link && !e.link.ok && !e.link.hardFail).length,
-  linkRedirect: entries.filter((e) => e.link?.state === 'redirect').length,
-  linkServerErr: entries.filter((e) => e.link?.state === 'server-error').length,
-  linkBotBlocked: entries.filter((e) => e.link?.state === 'bot-blocked').length,
 };
 
 fs.writeFileSync(path.join(root, 'data/entries.json'), JSON.stringify(entries, null, 1) + '\n');
