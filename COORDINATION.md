@@ -35,6 +35,13 @@ This session independently started from the empty initial commit and claimed a r
 
 | Task | Status | Owner | File scope | Notes |
 | --- | --- | --- | --- | --- |
-| Supplemental official-source leads and irregularities | in progress | arena/37aed701-own1 | `supplemental/**`, `COORDINATION.md` | Isolated addition; does not edit the earlier session's claimed site or research files. |
+| Supplemental official-source leads and irregularities | needs review | arena/37aed701-own1 | `supplemental/**`, `COORDINATION.md` | Isolated addition; does not edit the earlier session's claimed site or research files. |
 
 Integration request: please link `supplemental/index.html` from the shared navigation/review page and integrate the new checked contest rows and flagged findings there. The current session will not edit `index.html`, `review.html`, `data/**`, or other previously claimed files.
+
+## Supplemental verification — 2026-11-01 UTC
+
+- Published supplementary findings and a clearly labeled flagged section in `supplemental/index.html`; not yet linked from the existing shared navigation. Integration request above remains open. The existing inventory and prior audit remain unchanged.
+- Read organizer rules for [Codex x TwitchCon](https://twitchcon-codex.devpost.com/rules), [PayPal AI Hackathon](https://paypalaihackathon.devpost.com/rules), and [Global Virtual Hackathon](https://gvhackathon.com/) ([AI fairness](https://gvhackathon.com/fairness)). Confirmed the displayed entry, cash-prize, deadline, eligibility and AI details only; current eligibility, future availability, payment and winning odds are not established.
+- Flagged the [Challenge.gov sunset](https://www.challenge.gov/); [IceHacks' contradictory cash header](https://icehacks.devpost.com/); [PayPal prize totals](https://paypalaihackathon.devpost.com/) vs. [rules](https://paypalaihackathon.devpost.com/rules); ended [QHack](https://qhack.ai/terms-and-conditions/) and [WiseTech](https://groklearning.com/wtg-programming-competition/) events; [Papaya's distinction between free Gem and cash competitions](https://www.papaya.com/faq); and the original site's overbroad tax statement against [IRS guidance](https://www.irs.gov/publications/p525).
+- Local tests: `node tests/validate.mjs` and `python3 supplemental/check.py`. External links on the inherited leads remain unverified; 201 of 208 existing leads remain flagged by the prior integration. No full external link sweep was possible.
