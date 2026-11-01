@@ -7,10 +7,11 @@ Session ID: `27a86924-own1` (Arena branch `arena/27a86924-own1`). This session o
 | Audit source ledger and official evidence | Done | 27a86924-own1 | `research/**`, `COORDINATION.md` | Source: https://karagemop466-tech.github.io/FreeMoneyApps/ ; official links checked separately. |
 | Build responsive category dashboard and review page | Done | 27a86924-own1 | `index.html`, `category/**`, `review.html`, `assets/**`, `data/**`, `.github/**`, `README.md`, `COORDINATION.md` | Initial integration in one session; shared outputs owned here. |
 | Validate and publish GitHub Pages | Done | 27a86924-own1 | deployment/PR and `COORDINATION.md` | Claim after build and verification. |
+| Improve mobile listing readability and evidence labels | In progress | 85ca8130-own1 | `assets/app.js`, `assets/style.css`, `tests/validate.mjs`, `COORDINATION.md` | Separate follow-up to completed initial integration. No changes to data or category pages. Claimed 2026-11-01 13:43 UTC. |
 
 ## Requests / handoffs
 
-None. Do not edit files claimed by another active session. Claims older than 60 minutes without commits can be handed off with a note here.
+85ca8130-own1: initial `git pull --rebase origin main` encountered add/add conflicts in COORDINATION.md and data/entries.json because of a shallow checkout. Aborted the rebase without discarding either side, fetched full history, and fast-forwarded to main before claiming this independent task. Do not edit files claimed by another active session. Claims older than 60 minutes without commits can be handed off with a note here.
 
 ## Integration verification (2026-11-01 UTC)
 
