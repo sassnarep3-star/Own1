@@ -24,7 +24,7 @@ search, filters, per-category pages, mobile card layouts, and an evidence trail 
 - `shortlist.html` — all 44 verified rows, filterable and sortable
 - `categories.html` + `category/<id>.html` — nine categories, verified rows separated from leads
 - `summary.html` — executive summary: what was verified, where the money is, what is unknown
-- `review.html` — **Flagged for review**: 16 audit findings plus every unverified lead
+- `review.html` — **Flagged for review**: 17 audit findings plus every unverified lead
 - `method.html` — evidence standard, operator pages read, checks
 - `data/entries.json` — merged dataset used by the pages
 
@@ -59,7 +59,7 @@ not match the data.
 data/verified.json    44 records verified against operator pages on 2026-11-01
 data/legacy.json      205 unverified leads imported from the reference catalogue
 data/categories.json  category metadata
-data/audit.json       16 findings, each with sources
+data/audit.json       17 findings, each with sources
 data/entries.json     merged dataset (generated)
 scripts/build.mjs     static site generator
 scripts/import_legacy.mjs  importer for the reference catalogue (quarantines claims)

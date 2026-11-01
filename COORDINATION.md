@@ -11,7 +11,7 @@ used literally. The owning branch is recorded in the table instead.
 | --- | --- | --- | --- | --- |
 | First-pass site, 208 imported rows, 7 checked | done | `27a86924-own1` (arena/27a86924-own1) | — | PR #1 and #2 merged into `main`. Superseded by the rebuild below; original site is replaced, not extended. |
 | Re-import reference catalogue as quarantined leads | done | `75155aeb-own1` (arena/75155aeb-own1) | `scripts/import_legacy.mjs`, `data/legacy.json` | 206 listings, prize/fee/deadline blanked by policy, dead-domain + http-only flags. |
-| Verify operator pages and build verified dataset | done | `75155aeb-own1` | `data/verified.json`, `research/SOURCES.md` | 44 rows verified 2026-11-01; 16 findings documented with sources. |
+| Verify operator pages and build verified dataset | done | `75155aeb-own1` | `data/verified.json`, `research/SOURCES.md` | 44 rows verified 2026-11-01; 17 findings documented with sources. |
 | Rebuild site: dashboard, categories, review, summary, method | done | `75155aeb-own1` | `index.html`, `shortlist.html`, `categories.html`, `category/**`, `review.html`, `summary.html`, `method.html`, `404.html`, `assets/**`, `scripts/build.mjs`, `data/entries.json` | Mobile-first; tables become cards under 900px; search/filter/sort as progressive enhancement. |
 | Validation suite and CI | done | `75155aeb-own1` | `tests/validate.mjs`, `.github/workflows/validate.yml` | 2,885 checks; CI rebuilds and fails on any diff. |
 | Integration, PR, merge, Pages deploy | in progress | `75155aeb-own1` | `README.md`, `COORDINATION.md` | Merge result and deploy check recorded below when complete. |
@@ -42,7 +42,7 @@ used literally. The owning branch is recorded in the table instead.
 
 ## Irregularities
 
-16 items are published on [review.html](review.html) with source links and are summarised in
+17 items are published on [review.html](review.html) with source links and are summarised in
 [research/SOURCES.md](research/SOURCES.md) §4. None of them blocks publication. The most consequential:
 all 206 legacy prize claims are unverified, six source domains are dead, one source is http-only,
 26 "ended" listings still read as open, and four categories have no verified entry at all.

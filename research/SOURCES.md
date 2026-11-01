@@ -12,7 +12,7 @@ version of this material is the [Method page](../method.html) and the
 - **Starting repository:** `sassnarep3-star/Own1` at commit `90a7908`, which contained a first-pass
   static site (208 rows, 7 rows checked).
 - **This pass:** 206 listings re-imported as unverified leads, 44 rows verified against operator
-  pages, 16 irregularities documented, site rebuilt as a mobile-first dashboard.
+  pages, 17 irregularities documented, site rebuilt as a mobile-first dashboard.
 
 The reference catalogue is **not** an official source for any prize, entry window or eligibility rule.
 A URL that the catalogue labels "official" is a pointer to be checked, not evidence.
@@ -74,6 +74,7 @@ Pages fetched but **not** usable as evidence:
 14. CBS Sports' `/games/` path is a 404 while its deep rules URLs load.
 15. Four categories have no verified entry (skill, market, pools, directories).
 16. The reference site itself has no search or filters — the usability problem this rebuild addresses.
+17. External links on lead rows are **not certified reachable**: this environment resolves DNS but cannot fetch arbitrary domains, so only the operator pages in §3 were opened.
 
 ## 5. What remains unverified
 
