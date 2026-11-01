@@ -1,0 +1,34 @@
+name: Link health (non-blocking)
+
+# Deliberately not wired to push or to the Pages deploy: this job can never block publication.
+# It records what every outbound link actually returns, so the site can show real link status
+# instead of claiming links work. Download the artifact to refresh data/link-health.json.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run data build (so the URL list exists)
+        run: node scripts/build-data.mjs
+      - name: Check every outbound link
+        run: node scripts/linkcheck.mjs
+        continue-on-error: true
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-health
+          path: data/link-health.json
+          if-no-files-found: warn
