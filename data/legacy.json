@@ -1,0 +1,5471 @@
+[
+  {
+    "id": "solitaire-cash",
+    "name": "Solitaire Cash (Papaya)",
+    "category": "skill",
+    "recordType": "lead",
+    "source": "https://www.papaya.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Cash rooms advertise prizes up to tens of dollars per event",
+    "legacyStatus": "mixed",
+    "legacyFreePath": "paid-cash",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "iOS skill solitaire. Free Gem tournaments exist. USD prizes sit in separate cash rooms that charge an entry fee.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "entry-fee-required"
+    ]
+  },
+  {
+    "id": "bingo-cash",
+    "name": "Bingo Cash (Papaya)",
+    "category": "skill",
+    "recordType": "lead",
+    "source": "https://www.papaya.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Cash-room prize tables vary",
+    "legacyStatus": "mixed",
+    "legacyFreePath": "paid-cash",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Same Papaya engine as Solitaire Cash, bingo format. Free Gem rooms; cash rooms need an entry fee.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "entry-fee-required"
+    ]
+  },
+  {
+    "id": "skillz",
+    "name": "Skillz / Blackout Bingo / Skillz Arena",
+    "category": "skill",
+    "recordType": "lead",
+    "source": "https://www.skillz.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Cash match prizes vary by entry; platform has paid out large historical totals",
+    "legacyStatus": "mixed",
+    "legacyFreePath": "paid-cash",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Largest US skill-cash platform. Free practice with Z/Gemz. Cash prizes require a cash entry in enabled states.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "entry-fee-required"
+    ]
+  },
+  {
+    "id": "pocket7",
+    "name": "Pocket7Games",
+    "category": "skill",
+    "recordType": "lead",
+    "source": "https://www.pocket7games.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Cash tournament prize pools",
+    "legacyStatus": "mixed",
+    "legacyFreePath": "paid-cash",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "iOS multi-game skill venue (solitaire, bingo, 21, pool). Free tickets exist; cash events need an entry.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "entry-fee-required"
+    ]
+  },
+  {
+    "id": "givling",
+    "name": "Givling",
+    "category": "trivia",
+    "recordType": "lead",
+    "source": "https://www.givling.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Trivia removed — no longer a trivia contest",
+    "legacyStatus": "ended",
+    "legacyFreePath": "partial",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "iOS/Android trivia. Two free plays per day. Weekly team jackpots in USD plus a controversial student-loan queue.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "vocal",
+    "name": "Vocal Challenges",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://vocal.media/challenges",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Open challenges often $200; specials have gone to $5,000–$20,000",
+    "legacyStatus": "mixed",
+    "legacyFreePath": "partial",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Browser writing contests with USD prizes. Some challenges are free; many large pots require paid Vocal+.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "kaggle",
+    "name": "Kaggle Competitions",
+    "category": "tech",
+    "recordType": "lead",
+    "source": "https://www.kaggle.com/competitions",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Featured pots commonly $5,000–$100,000+; specials exceed $1M",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Browser data-science contests. Featured competitions publish USD prize pools. Getting Started tracks usually pay $0.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "devpost",
+    "name": "Devpost Hackathons",
+    "category": "tech",
+    "recordType": "lead",
+    "source": "https://devpost.com/hackathons",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Per event — currently $10,000 to $685,000 per hackathon",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Browser directory of judged hackathons. Many are free to enter and pay winners in USD via the event’s official rules.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "arcprize",
+    "name": "ARC Prize (via Kaggle)",
+    "category": "tech",
+    "recordType": "lead",
+    "source": "https://arcprize.org/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$2,000,000 across three 2026 tracks",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "High-dollar abstraction-and-reasoning competition hosted with Kaggle. Free to submit; open-source requirements apply.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "reedsy-dir",
+    "name": "Reedsy Writing Contest List",
+    "category": "directory",
+    "recordType": "lead",
+    "source": "https://reedsy.com/resources/writing-contests",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Listed per contest (hundreds to tens of thousands)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Curated list of living writing contests with prize and entry-fee fields. Use the $0 fee filter.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "drivendata",
+    "name": "DrivenData",
+    "category": "tech",
+    "recordType": "lead",
+    "source": "https://www.drivendata.org/competitions/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Per contest — often $10,000–$200,000 total purses",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Social-impact data-science contests with published USD purses. Free to enter; winners paid by check or wire after tax forms.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "herox",
+    "name": "HeroX / Challenge.gov",
+    "category": "tech",
+    "recordType": "lead",
+    "source": "https://www.herox.com/challenges",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Per challenge — federal pots often $25,000–$500,000+",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Marketplace of judged innovation prizes, including US federal Challenge.gov pots paid by EFT.",
+    "legacySourceTiers": [
+      "forum",
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "xprize",
+    "name": "XPRIZE",
+    "category": "tech",
+    "recordType": "lead",
+    "source": "https://www.xprize.org/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Flagship prizes in the millions; 2026 Google-backed hackathon advertised a $2M pool",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Large multi-year incentive prizes and occasional hackathons with seven-figure USD pools.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "topcoder",
+    "name": "Topcoder",
+    "category": "tech",
+    "recordType": "lead",
+    "source": "https://www.topcoder.com/challenges",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Per challenge — hundreds to tens of thousands; TCO finals add extra purses",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Long-running design, development, and data-science tournaments. Many challenges pay USD to verified members.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "espn-pickem",
+    "name": "ESPN NFL Pick'em",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.espn.com/games/nfl-pickem-2026/make-picks",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$102,000 total across 58 prizes",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free season-long pick'em. Ten free entries a week; 58 prizes split the six-figure pot.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "espn-survivor",
+    "name": "ESPN NFL Survivor",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.espn.com/games/nfl-survivor-2026/make-picks",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$25,000 grand prize",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Pick one winning team a week, no repeats. Outlast everyone for the grand prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "espn-wintotals",
+    "name": "ESPN NFL Win Totals",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.espn.com/games/nfl-win-totals-2026/make-picks",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$5,000",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Predict every team's regular-season win total. Free to enter.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "espn-playoff",
+    "name": "ESPN NFL Playoff Predictor",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.espn.com/games/nfl-playoff-predictor-2026/make-picks",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$10,000",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Predict the playoff field before the season. Free entry.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "espn-pigskin",
+    "name": "ESPN Pigskin Bracket Challenge",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.espn.com/games/nfl-playoff-football-challenge-2026/make-picks",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$50,000",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Bracket every playoff game. Free to enter; big grand prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "espn-cfb",
+    "name": "ESPN College Football Pick'em",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.espn.com/games/college-football-pickem-2026/make-picks",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$86,000 total (46 prizes)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "College version of ESPN Pick'em with 46 prizes across the season.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "cbs-pro-pickem",
+    "name": "CBS Sports Pro Football Pick'em",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.cbssports.com/fantasy/football/games/pickem/rules",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$1K/week + $5K season + $100K perfect",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Weekly and season-long pick'em with a six-figure perfect-week jackpot.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "cbs-cfb-pickem",
+    "name": "CBS Sports College Football Pick'em",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.cbssports.com/fantasy/college-football/games/pickem/rules",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$1K/wk + $5K season + $100K perfect",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "College football pick'em with weekly, season, and perfect-week prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "fox-super6",
+    "name": "FOX Super 6",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.foxsports.com/fox-super-6",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Not currently published — confirm on the live game page",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Predict six outcomes for a shot at weekly five-figure cash. Free to play in 49 states.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "fanatics-survivor",
+    "name": "Fanatics NFL Survivor League",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://betfanatics.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$1M+ guaranteed (up to $10M)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free survivor league inside the Fanatics app. $1M guaranteed, grows with each player.",
+    "legacySourceTiers": [
+      "official",
+      "affiliate"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "yahoo-survival",
+    "name": "Yahoo Survival Football",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://football.fantasysports.yahoo.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Historically $6,000 total — $5,000 in MGM resort credits plus $1,000 cash",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Yahoo's free survivor game with cash prizes for the last players standing.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "pickwatch",
+    "name": "NFL Pickwatch Contest",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://nflpickwatch.com/contest/nfl/2026",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Not running for 2026",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Pick every game against the spread. Free season contest with weekly prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "beat-the-geek",
+    "name": "Beat The Geek",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.thesportsgeek.com/contests/beat-the-geek/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "NFL trip for 2 + $500/wk gift card + $2,500 season gift card",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Weekly pick'em with cash and season prizes, including an NFL trip.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "tsg-playoff",
+    "name": "TheSportsGeek NFL Playoff Pick'em",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.thesportsgeek.com/contests/nfl-playoff-pickem/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$500 Amazon gift card",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Postseason pick'em with an Amazon gift card prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "favorites-pickem",
+    "name": "The Favorites Podcast Pick'em",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.actionnetwork.com/nfl/the-favorites-podcast-free-100k-pro-football-pick-em-contest",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$100,000+ prize pool",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Action Network's free pick'em with a six-figure pool and weekly payouts.",
+    "legacySourceTiers": [
+      "official",
+      "affiliate"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "thelines-survivor",
+    "name": "TheLines Free NFL Survivor",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.thelines.com/free-nfl-contest-pools-games-week-1-2024/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Not confirmed for 2026",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free survivor pool run by TheLines with a five-figure prize.",
+    "legacySourceTiers": [
+      "affiliate"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "rams-pickem",
+    "name": "LA Rams Pick'em",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.therams.com/news/rams-pick-em-launching-2026-season-season-tickets-player-signed-merchandise-more-prizes-for-predictions",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Pechanga resort stay + $250 credit; weekly tickets and signed merchandise",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Team-run pick'em with resort stays, signed gear, and season tickets on offer.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "draft-pro",
+    "name": "The Draft Pro — Perfect Draft Challenge",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.prnewswire.com/news-releases/the-draft-pro-launches-free-1-000-000-perfect-draft-challenge-ahead-of-the-2026-nfl-draft-302736409.html",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$10,000 (perfect 32/32) — current NBA/NHL game",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Predict all 32 first-round NFL Draft picks for a million-dollar prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "splash-mock",
+    "name": "Splash Sports NFL Mock Draft",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://nflmockdraft.app.splashsports.com/nfl-mock-draft/my-entry",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Not verified outside the entry window",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Mock the NFL Draft for a share of $10,000 in prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "fftoday-draft",
+    "name": "FFToday NFL Draft Contest",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.fftoday.com/contests/draftcontest.php?o=3",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$100 cash + prizes",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Mock the first round of the NFL Draft for cash and prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "rotoballer",
+    "name": "RotoBaller Challenge",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.rotoballer.com/free-fantasy-football-tournament-rotoballer-challenge-2026/1900460",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$500 + 50x Premium",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free season-long fantasy football tournament with cash and premium prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "apex-fantasy",
+    "name": "Apex Fantasy Free League Entry",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://apexfantasyleagues.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$125 league entry",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free league entry (worth $125) via email signup.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "fpl-official",
+    "name": "Official FPL (Premier League)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.premierleague.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "VIP trip + Surface Laptop + Puma gear",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The free Premier League fantasy game with VIP trips, hardware, and gear for top finishers.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "fpl-second-chance",
+    "name": "FPL Second Chance League",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.premierleague.com/en/news/4220308/the-second-chance-league-is-live-in-fantasy",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Puma gear + EA FC 26 + FPL bundle",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Official FPL side competition with Puma gear and an EA FC 26 prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "fpl-draft",
+    "name": "FPL Draft",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://draft.premierleague.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prizes (league-dependent)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Premier League's free draft game. Compete in head-to-head leagues.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "fantasy-efl",
+    "name": "Fantasy EFL",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.efl.com/prizes",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prizes (see official prize page)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The EFL's official free fantasy game with published prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "telegraph-ff",
+    "name": "Telegraph Fantasy Football",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasyfootball.telegraph.co.uk/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£5,000 prize pool (2026/27)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free UK fantasy football with a cash first prize (5 free teams).",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "ucl-fantasy",
+    "name": "UCL Fantasy",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://gaming.uefa.com/en/uclfantasy",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "UCL Final trip + PS5",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "UEFA's free Champions League fantasy game with a final trip and a PS5.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "pl-predictor",
+    "name": "Premier League Predictor",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://premierleaguepredictor.co.uk/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Weekly cash prizes",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free UK predictor with weekly cash prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "pooltracker-epl",
+    "name": "Pooltracker EPL Predictor",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.pooltracker.com/game_info/english-premier-league-predictor.asp",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Pools with friends",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free EPL score predictor for private pools with friends.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "ffs-fpl",
+    "name": "Fantasy Football Scout FPL league",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.premierleague.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£1,200 cash + memberships",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free-to-join FPL mini-league with a £1,200 cash pool plus memberships.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "ffs-ucl",
+    "name": "FFScout UCL Fantasy league",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://gaming.uefa.com/en/uclfantasy",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£150 + Mega Bundle",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "FFScout's free Champions League fantasy league with a £150 prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "ffs-efl",
+    "name": "FFScout Fantasy EFL league",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.efl.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Mega Bundle",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "FFScout's free Fantasy EFL league with a Mega Bundle prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "ffs-tattico",
+    "name": "FFScout Tattico Serie A league",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasyfootballscout.co.uk/2026/08/15/join-our-tattico-fantasy-serie-a-league-win-750-in-prizes",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£750 total",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "FFScout's free Serie A fantasy league with a £750 prize pool.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "football-mad",
+    "name": "Football Mad FPL league",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.premierleague.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prize pool not confirmed for 2026/27",
+    "legacyStatus": "caution",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free FPL mini-league with a £5,000 prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "fantasy-arena",
+    "name": "Fantasy Arena FPL league",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.premierleague.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prize not confirmed for 2026/27",
+    "legacyStatus": "caution",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free FPL mini-league with a $1,500 prize across season and monthly.",
+    "legacySourceTiers": [
+      "affiliate"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "lazyfpl",
+    "name": "LazyFPL league",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.premierleague.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£500 prize pool (top six)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free FPL mini-league with a £750 prize.",
+    "legacySourceTiers": [
+      "official",
+      "affiliate"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "fplhub",
+    "name": "FPL Hub league",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.premierleague.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prize not confirmed for 2026/27",
+    "legacyStatus": "caution",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free FPL mini-league with a £1,250 prize.",
+    "legacySourceTiers": [
+      "affiliate"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "bona-fide",
+    "name": "Bona Fide Sports league",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.premierleague.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prize not confirmed for 2026/27",
+    "legacyStatus": "caution",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free FPL mini-league with a $200 first prize.",
+    "legacySourceTiers": [
+      "forum"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "olka",
+    "name": "OLKA Express league",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.premierleague.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prize not confirmed for 2026/27",
+    "legacyStatus": "caution",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free FPL mini-league with a €1,000 first prize.",
+    "legacySourceTiers": [
+      "forum"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "fplmanager-india",
+    "name": "FPLManagerIndia league",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.premierleague.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prize not confirmed for 2026/27",
+    "legacyStatus": "caution",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free FPL mini-league with a PS5 and £200.",
+    "legacySourceTiers": [
+      "affiliate"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "fplstore",
+    "name": "fplStore_ league",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.premierleague.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prize not confirmed for 2026/27",
+    "legacyStatus": "caution",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free FPL mini-league with a £500 voucher.",
+    "legacySourceTiers": [
+      "affiliate"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "pitchbooking",
+    "name": "Pitchbooking.com league",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.premierleague.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prize not confirmed for 2026/27",
+    "legacyStatus": "caution",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free FPL mini-league with a £150 gift card.",
+    "legacySourceTiers": [
+      "forum"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "dirty-dozen",
+    "name": "Dirty Dozen (Gambling.com)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.gambling.com/games/dirty-dozen",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£12,000 weekly",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Predict yellow and red cards for 12 players to win £12,000 weekly.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "the-special-one",
+    "name": "The Special One",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://thespecialone.co.uk/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Paused",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Last-man-standing knockout game with prizes. Email signup.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "andys-predictor",
+    "name": "Andy's Bet Club £1M Predictor",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://andysbetclub.co.uk/predictor-game/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£1,000,000",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Predict the final Premier League table 1-20 for a £1,000,000 prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "pickem-sports",
+    "name": "Pick 'Em Sports (iOS)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://apps.apple.com/us/app/pick-em-sports-nfl-cfb/id6737177213",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Sponsored prizes",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free NFL/CFB pick'em app with sponsored prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "sports-predictor",
+    "name": "Sports Predictor (iOS)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://apps.apple.com/us/app/sports-predictor-fantasy-game/id1445043792",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Cash via PayPal",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free fantasy/sports prediction game with cash paid via PayPal.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "goaloracle",
+    "name": "GoalOracle",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://goaloracle.io/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Contest complete",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Skill-based football prediction game with prizes for top finishers.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "oddspedia",
+    "name": "Oddspedia Handicapping Contests",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://oddspedia.com/us/picks/capper-contests/wc2026-competition",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "€2,000 prize pool",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free capper/pick contests with a cash prize pool.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "streak-for-cash",
+    "name": "Streak for the Cash",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.streakforthecash.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Unverified",
+    "legacyStatus": "caution",
+    "legacyFreePath": "partial",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Streak-based prediction game. Site live but prize structure unverified in 2026.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "gamersaloon",
+    "name": "GamerSaloon 1-Rounders",
+    "category": "skill",
+    "recordType": "lead",
+    "source": "https://www.gamersaloon.com/promos/1rounder/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$10 cash per bracket",
+    "legacyStatus": "live",
+    "legacyFreePath": "partial",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free single-round esports brackets (Madden, EA FC, NBA 2K) paying $10 as bonus cash.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "playerslounge",
+    "name": "Players' Lounge Free Tournaments",
+    "category": "skill",
+    "recordType": "lead",
+    "source": "https://www.playerslounge.com/madden",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Cash",
+    "legacyStatus": "live",
+    "legacyFreePath": "partial",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free Madden and EA FC tournaments with cash prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "officepoolstop",
+    "name": "OfficePoolStop",
+    "category": "pools",
+    "recordType": "lead",
+    "source": "https://officepoolstop.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prizes decided by your group",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free platform to run pick'em, survivor, confidence, squares, and bookie pools.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "funofficepools",
+    "name": "FunOfficePools",
+    "category": "pools",
+    "recordType": "lead",
+    "source": "https://www.funofficepools.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prizes decided by your group",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free pick'em, survivor, and squares pools for offices since 2007.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "mysurvivorpool",
+    "name": "MySurvivorPool",
+    "category": "pools",
+    "recordType": "lead",
+    "source": "https://mysurvivorpool.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prizes decided by your group",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free survivor and football squares hosting.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "gridirongames",
+    "name": "Gridiron Games",
+    "category": "pools",
+    "recordType": "lead",
+    "source": "https://gridirongames.com/football-pools/nfl-survivor/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prizes decided by your group — commissioner pays a hosting fee",
+    "legacyStatus": "live",
+    "legacyFreePath": "partial",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Survivor pools for offices. Free for players.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "squarespool",
+    "name": "SquaresPool.com",
+    "category": "pools",
+    "recordType": "lead",
+    "source": "http://www.squarespool.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prizes decided by your group",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free Super Bowl and any-game football squares hosting.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "http-only"
+    ]
+  },
+  {
+    "id": "myfantasyleague",
+    "name": "MyFantasyLeague",
+    "category": "pools",
+    "recordType": "lead",
+    "source": "https://home.myfantasyleague.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prizes decided by your league",
+    "legacyStatus": "live",
+    "legacyFreePath": "partial",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Custom fantasy league hosting. Free trial through Week 4.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "trofeo",
+    "name": "Trofeo.live",
+    "category": "pools",
+    "recordType": "lead",
+    "source": "https://trofeo.live/nfl-confidence-pool",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Pools with friends",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free NFL confidence and pick'em pools. Players do not even need an account.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "mlb-beat-the-streak",
+    "name": "MLB Beat the Streak",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.mlb.com/apps/beat-the-streak",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$5,600,000 headline (≈$3,000,000 lump sum); $10,000 Top Streak prize",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Official MLB game. Pick one hitter a day; a 57-game streak pays $5.6 million.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "metaculus",
+    "name": "Metaculus Tournaments",
+    "category": "forecasting",
+    "recordType": "lead",
+    "source": "https://www.metaculus.com/tournaments/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Per tournament — $3,000 to $50,000 prize pools",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free forecasting tournaments with sponsor-funded cash prizes. Not a prediction market — nothing is staked.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "aicrowd",
+    "name": "AIcrowd Challenges",
+    "category": "tech",
+    "recordType": "lead",
+    "source": "https://www.aicrowd.com/challenges",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Per challenge — currently up to $150,000+",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Open ML challenge platform hosting research contests for ARC, Sony, Meta and Amazon.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "zindi",
+    "name": "Zindi",
+    "category": "tech",
+    "recordType": "lead",
+    "source": "https://zindi.world/competitions",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Per challenge — typically $1,500 to $25,000",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Africa-focused data science competition platform. Free entry, cash prizes paid by bank transfer or PayPal.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "codabench",
+    "name": "Codabench / CodaLab",
+    "category": "tech",
+    "recordType": "lead",
+    "source": "https://www.codabench.org/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Per benchmark — many are unpaid; ML Contests logged $248,000 across 2025",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Open-source academic benchmark platform. 1,471 public competitions, free to enter and to host.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "grand-challenge",
+    "name": "Grand Challenge (medical imaging)",
+    "category": "tech",
+    "recordType": "lead",
+    "source": "https://grand-challenge.org/challenges/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Per challenge — commonly $2,000 to $10,000",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Medical image analysis challenges from MICCAI, RSNA and university hospitals. 264 hosted to date.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "crunchdao",
+    "name": "CrunchDAO / ADIA Lab Challenges",
+    "category": "tech",
+    "recordType": "lead",
+    "source": "https://hub.crunchdao.com/competitions/structural-break-real-time",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prize pool not stated on the competition overview — confirm before entering",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Quantitative ML competitions run with ADIA Lab. Free entry, notebook submissions.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "mlcontests",
+    "name": "ML Contests",
+    "category": "directory",
+    "recordType": "lead",
+    "source": "https://mlcontests.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "n/a — directory",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The best index of live machine-learning competitions, filterable by prize pool and platform.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "espn-tourney-challenge",
+    "name": "ESPN Men’s Tournament Challenge",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.espn.com/games/bracket",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$125,000 (men’s bracket)",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "ESPN’s March Madness bracket game. Free, up to 25 brackets, $125,000 in prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "espn-tc-eliminator",
+    "name": "ESPN Tournament Challenge Eliminator",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.espn.com/games/mens-tournament-challenge-eliminator-2026/howtoplay",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$10,000 grand prize",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "March Madness survivor game — pick one team a day, never repeat. $10,000 grand prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "nascar-fantasy-live",
+    "name": "NASCAR Fantasy Live",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasygames.nascar.com/live",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$25,000 grand prize; $10,000 second; $5,000 third; $10,000 Daytona 500 champion",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "NASCAR's official free fantasy game. Set a 5-driver lineup weekly across all 36 races; the season winner takes a $25,000 check.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "pga-fantasy-golf",
+    "name": "PGA TOUR Fantasy Golf",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasygolf.pgatour.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$5,000 total ARV in gift cards + single-tournament trip prizes",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The TOUR's free season-long fantasy game. Prizes are gift cards and trips, not cash.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "nhl-bracket-challenge",
+    "name": "NHL Stanley Cup Playoffs Bracket Challenge",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://bracketchallenge.nhl.com/en/home",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Grand prize ARV up to $10,490; $1,000 NHL Shop gift code (Second Chance bracket)",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "NHL's free playoff bracket game. Grand prize is an NHL event trip and a limited-edition watch.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "espn-nba-playoff",
+    "name": "ESPN NBA Playoff Challenge",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.espn.com/games/nba-playoff-challenge-2026/howtoplay",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$50,000 total prizes",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "ESPN's free NBA playoff bracket game with a $50,000 prize table.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "nba-pickem",
+    "name": "NBA Pick'Em",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.nba.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$1,000,000 perfect bracket; trips, signed memorabilia, $100–$500 NBA Store credits",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The NBA's own free prediction game. Perfect playoff bracket wins $1,000,000; other prizes are trips, memorabilia and NBA Store credits.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "bundesliga-fantasy",
+    "name": "Bundesliga Fantasy Manager",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.bundesliga.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Trips, signed jerseys, DERBYSTAR balls, VIP Supercup access, 50× EA SPORTS FC 27 codes (non-cash)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The official DFL Bundesliga fantasy game. Free; prizes are match trips, signed jerseys, balls and EA FC game codes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "laliga-fantasy",
+    "name": "La Liga Fantasy",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.laliga.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Merchandise and experiences — official terms state no cash prizes",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "LALIGA's official free fantasy game. Prizes are merchandise and experiences — the official terms state no cash prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "swagbucks-trivia",
+    "name": "Swagbucks Daily Trivia",
+    "category": "trivia",
+    "recordType": "lead",
+    "source": "https://www.swagbucks.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "SB points redeemable for PayPal cash / gift cards",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free live and on-demand trivia games that pay in SB points, redeemable for PayPal cash or gift cards.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "99designs",
+    "name": "99designs Design Contests",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://99designs.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Client-funded prize per contest (varies)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Designers compete for client-funded prize money. Free to create an account and enter contests.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "freelancer-contests",
+    "name": "Freelancer.com Contests",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://www.freelancer.com/contest",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Client-funded prize per contest (from ~$10 up)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Client-funded skill contests (design, writing, video). Entering is free; the winner pays a 10%/$5 fee on the prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "battlefy",
+    "name": "Battlefy Esports Tournaments",
+    "category": "skill",
+    "recordType": "lead",
+    "source": "https://battlefy.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prizes set per tournament by the organizer",
+    "legacyStatus": "live",
+    "legacyFreePath": "partial",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Tournament platform used by publishers and communities. Hosts free-to-enter brackets with cash prizes alongside paid events.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "challengermode",
+    "name": "Challengermode",
+    "category": "skill",
+    "recordType": "lead",
+    "source": "https://www.challengermode.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Per tournament — cash, gift cards, Riot Points, products",
+    "legacyStatus": "live",
+    "legacyFreePath": "partial",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Esports tournament platform across 200+ games. Most tournaments are free to enter and pay cash, gift cards or products.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "atp-fantasy",
+    "name": "ATP Fantasy (Official ATP Tour)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.atptour.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "ATP merchandise and 2027 tickets (no cash)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The ATP's official free fantasy tennis game. Pick eight players under a 100-credit cap; prizes are merchandise and 2027 tickets.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "f1-fantasy",
+    "name": "F1 Fantasy (Official Formula 1)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.formula1.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "2027 F1 tickets + VIP grid walk (1st); grandstand tickets (2nd); £500 F1 Store voucher (3rd)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The official free Formula 1 fantasy game. $100m cap for five drivers and two constructors; prizes are tickets and store vouchers.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "ewc-play",
+    "name": "Esports World Cup (EWC) Play — Fantasy & Pick'em",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://esportsworldcup.com/en/play/fantasy",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "1st $10,000, 2nd $7,000, 3rd $6,000, 4th $5,000; top 130 paid (~$200,000 total pool)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The official EWC free fantasy and pick'em game. No entry fee or wager of any kind; cash prizes for top finishers.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "espn-hockey-playoff",
+    "name": "ESPN Playoff Hockey Challenge",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.espn.com/games/nhl-playoff-hockey-challenge-2026/group",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$10,000 total prizes",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "ESPN's free NHL playoff fantasy/picks game with a $10,000 prize table.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "espn-cfp-bracket",
+    "name": "ESPN College Football Playoff Bracket Challenge",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.espn.com/games/college-football-playoff-challenge-2025/mostpickedchampions",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$50,000 total prizes",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Bracket every College Football Playoff game for a shot at $50,000.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "espn-knockout-bracket",
+    "name": "ESPN Knockout Bracket Challenge (World Cup)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.espn.com/games/mens-knockout-bracket-challenge-2026/howtoplay",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$10,000 total prizes",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "ESPN's free World Cup 2026 knockout-round bracket game with $10,000 in prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "mlb-hr-derby-pickem",
+    "name": "MLB Home Run Derby Pick'Em (T-Mobile)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.mlb.com/sponsorship/home-run-derby-pick-em/official-rules",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$100,000 grand prize; $6,500 World Series trip (first prize)",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "MLB's annual one-day bracket contest for the Home Run Derby with a $100,000 grand prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "tradingview-leap",
+    "name": "TradingView — The Leap",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://www.tradingview.com/the-leap/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$50,000 total: 1st $10,000; 2nd $7,000; 3rd $6,000; 4th $3,500; 5th $2,500; 6–25 $550; 26–50 $400",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "TradingView's free paper-trading competition. Trade $100,000 virtual money; the top 250 win cash prizes up to $10,000.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "wall-street-survivor",
+    "name": "Wall Street Survivor Trading Contests",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://www.wallstreetsurvivor.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$500 in Amazon gift cards per monthly contest (e.g. $300 / $150 / $50)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Monthly free stock/crypto paper-trading contests with Amazon gift-card prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "start-gg",
+    "name": "Start.gg (formerly smash.gg)",
+    "category": "skill",
+    "recordType": "lead",
+    "source": "https://start.gg/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Per tournament — set and paid by the organizer",
+    "legacyStatus": "live",
+    "legacyFreePath": "partial",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The fighting-game community's tournament platform. Free-to-enter brackets; prizes are funded by organizers.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "chesscom-tournaments",
+    "name": "Chess.com Prize Tournaments",
+    "category": "skill",
+    "recordType": "lead",
+    "source": "https://www.chess.com/tournaments",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Arena Kings up to $2,500/month; variant championships $2,500–$5,000; Titled Tuesday cash for titled players",
+    "legacyStatus": "live",
+    "legacyFreePath": "partial",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free-to-enter chess arenas and Swiss events with cash prizes for top finishers — but the cash tiers are gated by title or streaming.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "play-pokemon",
+    "name": "Play! Pokémon Championship Series",
+    "category": "skill",
+    "recordType": "lead",
+    "source": "https://www.pokemon.com/us/play-pokemon",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "USD prize money at Regional / International / World Championships (scholarships or Visa prepaid for minors)",
+    "legacyStatus": "live",
+    "legacyFreePath": "partial",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The official Pokémon TCG / VGC / GO competitive circuit. Regional and International Championships pay USD prize money.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "designcrowd",
+    "name": "DesignCrowd Design Contests",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://www.designcrowd.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Client-funded prize per contest (varies); community contests free with monetary prizes",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Crowdsourced design marketplace. Enter client-funded contests free; the winner receives the prize minus a platform fee.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "crowdspring",
+    "name": "CrowdSpring Design Contests",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://www.crowdspring.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Client-funded prize per contest (varies)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Premium crowdsourced design marketplace. Enter contests free; the winner receives the prize minus a platform fee.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "espn-womens-tourney",
+    "name": "ESPN Women's Tournament Challenge",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.espn.com/games/tournament-challenge-bracket-women-2026/leaderboard",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$125,000 total prizes",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "ESPN's free March Madness women's bracket game with a $125,000 prize table.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "yahoo-bracket-mayhem",
+    "name": "Yahoo Fantasy Bracket Mayhem",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://tournament.fantasysports.yahoo.com/signup",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$25,000 best men's bracket + $25,000 best women's bracket ($50,000 total)",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Yahoo's free March Madness bracket game — $25,000 for the best men's bracket and $25,000 for the best women's.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "bullrush",
+    "name": "BullRush Trading Competitions",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://bullrush.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$101,000 monthly tournament in prop accounts + prize pool; free hourly competitions",
+    "legacyStatus": "live",
+    "legacyFreePath": "partial",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Gamified trading contests with a free entry ladder; prizes are funded prop accounts and credits rather than direct cash.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "signate",
+    "name": "Signate (Japan) Data Competitions",
+    "category": "tech",
+    "recordType": "lead",
+    "source": "https://signate.jp/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Per competition — yen-denominated cash prizes (e.g. ¥4,000,000 total / ¥1,200,000 top)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Japan-based data science competition platform with cash prize contests from NEDO and corporate sponsors.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "tianchi",
+    "name": "Tianchi (Alibaba Cloud)",
+    "category": "tech",
+    "recordType": "lead",
+    "source": "https://tianchi.aliyun.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Per competition — from ~$1,000 to ¥1,000,000+ (~$157,000); $1.03M across 2025",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Alibaba Cloud's big-data competition platform — the second-largest ML competition host by prize money after Kaggle.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "hypermind",
+    "name": "Hypermind Forecasting Contests",
+    "category": "forecasting",
+    "recordType": "lead",
+    "source": "https://dash.hypermind.com/hypermind/app.html",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Contest rewards in USD/EUR (24,573€ at stake at review); paid as Amazon gift certificates",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Play-money prediction market and forecasting contests where the best forecasters share real cash rewards.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "moomoo-paper-trading",
+    "name": "moomoo Paper Trading Competition",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://www.moomoo.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$200,000 total cash rewards; global top three $10,000 / $3,000 / $1,000",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Moomoo's global paper-trading competition. Trade $100,000 virtual funds for a share of $200,000 in cash rewards.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "superbru",
+    "name": "Superbru",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.superbru.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Sponsor-funded prizes per game (tickets, vouchers, experiences)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free social sports prediction and fantasy platform for rugby, football, cricket, NFL and more, with sponsor-funded prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "afl-fantasy",
+    "name": "AFL Fantasy",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.afl.com.au/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "A$300,000+ prize pool (incl. a crypto.com component)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The AFL's official free fantasy game (Australian rules football), with a six-figure prize pool.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "nrl-fantasy",
+    "name": "NRL Fantasy",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.nrl.com/fantasy/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "1st overall: trip + $2,000; monthly 1st: $1,000; vouchers for placings",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The NRL's official free rugby league fantasy game, with cash and voucher prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "espn-bowl-mania",
+    "name": "ESPN Capital One Bowl Mania",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.espn.com/games/college-football-bowl-mania-2025/picks",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$1,000,000 for a perfect entry; $20,000 grand prize per contest mode",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "ESPN's free college-football bowl pick'em — a perfect entry wins up to $1,000,000.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "ligue1-fantasy",
+    "name": "Ligue 1 Fantasy",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://ligue1.com/en/fantasy",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prizes (see official game page; non-cash, season-dependent)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Ligue 1's official free fantasy game — pick 11 players each week to challenge the community and win prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "lol-pickem",
+    "name": "LoL Esports Pick'Em",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://lolesports.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "In-game rewards: emotes, icons, and a Jhin skin for a perfect bracket (non-cash)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Riot's official free prediction game for LoL tournaments (MSI / Worlds) — rewards are in-game items, not cash.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "six-nations-fantasy",
+    "name": "Six Nations Fantasy Rugby",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.sixnationsrugby.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "2x tickets + flights/accommodation (overall); signed ball (top 5); £100 Fanatics gift card (round)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The official Guinness Six Nations free fantasy game, with tickets, a signed ball and gift-card prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "tattico-serie-a",
+    "name": "Tattico Fantasy Serie A",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://tattico.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Free global leaderboard; FFScout runs a free-to-join £750 prize league on it",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Lega Serie A's official fantasy game — free to play on the global leaderboard, with a free FFScout £750 prize league.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "supercoach-bbl",
+    "name": "KFC SuperCoach BBL",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://supercoach.news.com.au/bbl/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Weekly cash prizes + vouchers (seasonal)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Cricket Australia's official Big Bash fantasy game (News Corp's SuperCoach), free with weekly cash prizes.",
+    "legacySourceTiers": [
+      "official",
+      "affiliate"
+    ],
+    "flags": [
+      "unverified",
+      "dead-domain",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "fundednext",
+    "name": "FundedNext Monthly Trading Competition",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://fundednext.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "1st $5,000 + $100K account; 2nd $2,000; 3rd $1,000; 4th–600th funded accounts",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free monthly prop-firm trading competition on a $100,000 simulated account, with cash prizes and funded accounts.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "for-traders",
+    "name": "For Traders Tournaments",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://fortraders.com/tournaments",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Funded-account prizes; weekly 24h Wednesday Clash advertises a $75,000 prize pool in challenges",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free daily/weekly/monthly prop-firm trading tournaments (Wednesday Clash, Crypto Clash) with funded-account prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "ninjatrader-arena",
+    "name": "NinjaTrader Arena",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://ninjatrader.com/ninjatrader-arena/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Cash prizes or account credits per competition",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "NinjaTrader's free simulated futures trading competitions with cash prizes or account credits.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "yahoo-daily-draw",
+    "name": "Yahoo Daily Draw",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://sports.yahoo.com/dailydraw/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$500 daily / $1,000 weekly prize pools (bank eGift cards)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Yahoo's free daily sports-prediction game — pick 4 of 6 prediction cards; top finishers win cash prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "dp-world-tour-fantasy",
+    "name": "Fantasy DP World Tour",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.europeantour.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Callaway golf clubs + custom fitting (overall); hospitality, putters, clubs for other tiers (non-cash)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The DP World Tour's official free fantasy golf game with weekly, Rolex Series, Top 10 and overall prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "the-open-fantasy",
+    "name": "The Open Championship Fantasy (Match Ups)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.theopen.com/fantasy/prizes",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£5,000 cash top prize (plus other prizes)",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The R&A's official free predictor game for The Open, with a £5,000 cash prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "sun-dream-team",
+    "name": "The Sun Dream Team",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.dreamteamfc.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£60,000 top prize; £100,000+ total cash prizes",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The Sun's free UK fantasy football game with a £60,000 top prize and £100,000+ total pool.",
+    "legacySourceTiers": [
+      "official",
+      "affiliate"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "sky-sports-ff",
+    "name": "Sky Sports Fantasy Football",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasyfootball.skysports.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£50,000 jackpot (overall leaderboard)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Sky's free UK fantasy football game with a £50,000 jackpot.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "dead-domain"
+    ]
+  },
+  {
+    "id": "cricket-draft",
+    "name": "The Cricket Draft",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.thecricketdraft.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£500 cricket kit bundle (1st); signed England bat; £50 gameweek vouchers (non-cash)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free UK county-cricket fantasy game with kit, bat and voucher prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "icc-t20-fantasy",
+    "name": "ICC T20 World Cup Fantasy",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.icc-cricket.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Signed merchandise, T20 Shop vouchers (non-cash)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The ICC's official free fantasy cricket game for the T20 World Cup, with signed-merchandise and voucher prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "tim-hortons-hockey",
+    "name": "Tim Hortons NHL Hockey Challenge",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.timhortons.ca/tims-nhl-hockey-challenge",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Hyundai TUCSON grand prize; $5,000 cash; gift cards; free coffee; Tims Rewards points",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Tim Hortons' free daily NHL prediction game for Tims Rewards members in Canada, with real prizes including a car.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "darts-corner-predictor",
+    "name": "Darts Corner Premier League Darts Predictor",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.dartscorner.co.uk/pages/premier-league-darts-predictor",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£1,000 cash per week (perfect score); £250 voucher weekly; £25 vouchers",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free weekly darts prediction game — predict Premier League Darts scores for a £1,000 cash prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "spfl-fantasy",
+    "name": "William Hill Premiership (SPFL) Fantasy Football",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.football.scot/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£10,000 overall winner + monthly prizes (EA Sports games)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The Scottish Premiership's official free fantasy game, with a £10,000 overall prize and monthly prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "dead-domain"
+    ]
+  },
+  {
+    "id": "euroleague-fantasy",
+    "name": "EuroLeague Fantasy Challenge",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.euroleaguebasketball.net/euroleague/fantasy/prizes-and-rules/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Game tickets, jerseys, basketballs and EuroLeague TV subscriptions (non-cash)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The EuroLeague's official free fantasy basketball game, with tickets, jerseys and TV subscriptions as prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "valorant-pickem",
+    "name": "Valorant Champions Pick'Em",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://valorantesports.com/pickems",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "In-game rewards: sprays, gun buddies, titles (non-cash)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Riot's official free prediction game for VCT Champions — in-game rewards for accurate picks.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "eredivisie-fantasy",
+    "name": "ESPN Fantasy Voetbal (Eredivisie)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasyvoetbal.nl/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prizes via sub-leagues and season (not itemised on the public page)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The Eredivisie's official free fantasy football game (ESPN Fantasy Voetbal), with sub-league and season prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "deriv-tournaments",
+    "name": "Deriv Trading Tournaments",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://contest.deriv.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "1st $1,000; 2nd $600; 3rd $400 (typical $2,000 monthly pool)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Deriv's free monthly demo trading tournaments with real cash prizes, no deposit required.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "multibank-demo",
+    "name": "MultiBank Group Demo Trading Competition",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://tradfi.multibankgroup.com/en/lp-n/demo-competition",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$15,000 per round: 1st $10,000, 2nd $3,000, 3rd $2,000; Mercedes-Benz S-Class year-end prize",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "MultiBank's free demo trading competition with $15,000 in real cash every round plus a year-end car.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "xm-demo",
+    "name": "XM Demo Competition (Demo Weekly)",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://www.xm.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$25,000/week shared by 100 winners (1st $2,000, 2nd $1,500, 3rd $1,250)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "XM's free weekly demo trading competition — 100 winners share $25,000 in withdrawable cash each week.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "headway-demo",
+    "name": "Headway No Limits Demo Contest",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://hw.online/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$2,125 pool: 1st $1,000, 2nd $500, 3rd $200, 4th $100, 5th $75, 6th–10th $50",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Headway's free monthly demo trading contest with $2,125 in withdrawable cash prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "hfm-demo",
+    "name": "HFM Virtual to Real Demo Contest",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://www.hfm.com/int/en/promotions/demo-contest",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "1st $2,000, 2nd $1,000, 3rd $500 (trading bonuses, credited to a live account)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "HFM's free monthly demo trading contest — $2,000 / $1,000 / $500 prizes credited to a live account.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "litefinance-best",
+    "name": "LiteFinance Best of the Best Demo Contest",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://www.litefinance.org/contests/demo/best/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "1st $4,000, 2nd $2,500, 3rd $1,500, 4th $1,000, 5th $1,000 ($10,000 fund)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "LiteFinance's free monthly demo contest with a $10,000 prize fund split among the top five.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "tradingcom-paper",
+    "name": "Trading.com Paper Trading Competition",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://www.trading.com/us/forex-trading-competition",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "1st $6,000, 2nd $3,000, 3rd $1,000 (withdrawable cash)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Trading.com's free monthly paper-trading competition (US only) — $6,000 / $3,000 / $1,000 cash prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "tickmill-nfp",
+    "name": "Tickmill NFP Machine",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://www.tickmill.com/promotions/nfp-machine",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$500 for an exact prediction; $250/$150/$100 for the closest three",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Tickmill's monthly price-prediction contest — predict the NFP price for a chance at $500 cash.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "roboforex-demo",
+    "name": "RoboForex Demo Contest",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://roboforex.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "1st $700, 2nd $550, 3rd $420 … 10th $50 (ten prizes)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "RoboForex's free monthly demo trading contest with a $3,000 prize fund across ten winners.",
+    "legacySourceTiers": [
+      "affiliate"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "fbs-pro-demo",
+    "name": "FBS Pro Demo Contest",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://fbs.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "1st $450, 2nd $250, 3rd $150, 4th $100, 5th $50 ($1,000 fund)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "FBS's free monthly demo trading contest with a $1,000 fund split among the top five.",
+    "legacySourceTiers": [
+      "affiliate"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "npbfx-demo",
+    "name": "NPBFX Trading Battle Demo Contest",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://npbfx.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "1st $1,000 (+ iPhone), 2nd $500, 3rd $250, 4th $150, 5th–10th $100, 11th–20th $50",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "NPBFX's free monthly demo trading contest with a $3,000 pool plus an iPhone for the top trader.",
+    "legacySourceTiers": [
+      "affiliate"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "cev-volley-fantasy",
+    "name": "CEV Champions League Volley Fantasy",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://championsleague.cev.eu/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Final 2026 tickets (season winner); jerseys + match balls (2nd–3rd); match ball + EuroVolley.TV (4th–5th)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The CEV's official free volleyball fantasy game, with match balls, jerseys and Final Four tickets as prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "vnl-fantasy",
+    "name": "VNL Fantasy (Volleyball Nations League)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://en.volleyballworld.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Global winner: 1 year VBTV + $100 shop credit; runner-up $50; top-3 matchday get 1 month VBTV",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The FIVB's official free VNL fantasy game, with VBTV subscriptions and shop credit as prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "cev-predictor",
+    "name": "CEV Champions League Predictor Game",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://championsleague.cev.eu/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Tickets to the Final Four 2027 (non-cash)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The CEV's official free volleyball match-prediction game, with Final Four tickets for top scorers.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "super-league-fantasy",
+    "name": "Betfred Super League Fantasy (Rugby League)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.superleague.co.uk/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Monthly: PS5/Xbox + £600 games; season: hospitality tickets + SuperLeague+ pass + signed shirt",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The Super League's official free fantasy rugby league game, with monthly and season prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "super-league-predictor",
+    "name": "Betfred Super League Predictor",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.superleague.co.uk/predictor",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Season winner: launch invite + 4 event tickets + SuperLeague+ pass; monthly/weekly tickets; streak prizes",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The Super League's official free season-long prediction game, with tickets and subscriptions as prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "motogp-fantasy",
+    "name": "MotoGP Fantasy (Official)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.motogp.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "1st signed Marquez helmet; 2nd PS5 + MotoGP26; 3rd signed knee slider; weekly GP tickets",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Dorna's official free MotoGP fantasy game — signed helmets, a PS5 and grand prix tickets as prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "the-hundred-fantasy",
+    "name": "The Hundred Fantasy (ECB)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.thehundred.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "1st signed bat; 2nd Citizen watch + tickets; 3rd; block winners get Final tickets (non-cash)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The ECB's official free fantasy game for The Hundred, with signed bats, a watch and match tickets as prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "indycar-fantasy",
+    "name": "INDYCAR Fantasy Challenge",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.indycar.com/fantasy",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "1st: 2026 Indy 500 VIP experience (ARV $5,000); 2nd memorabilia ($650); 3rd–10th packages",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "INDYCAR's official free fantasy game (on GridRival), with an Indy 500 VIP experience as the top prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "super-rugby-fantasy",
+    "name": "Fantasy Super Rugby Pacific",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.playfantasyrugby.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "USD $10,000 (AUD $14,000) major prize for the overall winner",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Super Rugby Pacific's official free fantasy game with a USD $10,000 major prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "fantasy-gaa",
+    "name": "Fantasy Gaelic Football (GAA)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasygaelicfootball.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£700 first prize (2026); club of the year £300; further place prizes",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "A free Gaelic football fantasy game with cash prizes for the top finishers and best club.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "film-prize",
+    "name": "Louisiana Film Prize (Prize Fest)",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://www.prizefest.com/film/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$50,000 cash (Caddo/Bossier Parish); $25,000 (elsewhere in Louisiana); $250 per finalist",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The world's largest cash prize for a short film — $50,000, with a $0 entry fee (film must be shot in Louisiana).",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "pensacola-songwriting",
+    "name": "Pensacola Beach Songwriters Festival Competition",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://pensacolabeachsongwritersfestival.com/2026-songwriting-competition/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$1,000 grand prize + festival performance; $150 per category winner",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "A free-entry songwriting competition with a $1,000 grand prize and $150 category prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "young-lions",
+    "name": "Young Lions Fiction Award (NYPL)",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://www.nypl.org/about/awards/young-lions-fiction-award",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$10,000 grand prize",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The New York Public Library's free-entry $10,000 award for the best fiction book by a US author 35 or under.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "afl-tipping",
+    "name": "AFL Tipping",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://tipping.afl.com.au/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$25,000 cash + Toyota AFL Grand Final package; $2,000 2nd; $1,000 3rd; weekly Sherrin + $100",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The AFL's official free footy tipping competition, with a $25,000 cash major prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "aflw-tipping",
+    "name": "AFLW Tipping",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://tipping.afl.com.au/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$7,500 cash 1st; $750 2nd; $500 3rd; $1,000 Gauntlet; $500 streak; weekly Sherrin",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The AFL's official free women's footy tipping competition, with a $7,500 cash major prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "supercoach-afl",
+    "name": "KFC SuperCoach AFL",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://supercoach.com.au/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$50,000 1st; $5,000 2nd; $1,000 3rd–10th; $1,000 weekly ($2,000 for Plus subscribers); $1,000 Cup",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Australia's biggest free AFL fantasy game (News Corp), with a $50,000 grand prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "supercoach-nrl",
+    "name": "KFC SuperCoach NRL",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://supercoach.com.au/nrl",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$50,000 1st; $5,000 2nd; $1,000 3rd–10th",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "News Corp's free NRL fantasy game (distinct from the NRL's own game), with a $50,000 grand prize.",
+    "legacySourceTiers": [
+      "official",
+      "affiliate"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "supercoach-nbl",
+    "name": "SuperCoach NBL",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://supercoach.com.au/nbl",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Mitsubishi ASX GS (value $29,000+) major prize + $500 weekly cash prizes",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The NBL's free fantasy basketball game (News Corp), with a car and weekly cash prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "wsl-fantasy",
+    "name": "WSL Fantasy (Barclays Women's Super League)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://wslfantasy.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prizes for top season spots and each 'leg' leaderboard (non-cash, not itemised)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The Women's Super League's official free fantasy game, with prizes for season and 'leg' winners.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "ti-compendium",
+    "name": "The International (Dota 2) Compendium Fantasy",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.dota2.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "In-game rewards: Dota Plus subscriptions, Terrain Token, Aegis replica, Immortal Treasures (non-cash)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Valve's free in-game Dota 2 fantasy/predictions event for The International — rewards, not cash.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "ibu-ecup",
+    "name": "IBU eCup (Winter Sports Mania)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.biathlonworld.com/inside-ibu/marketing/ibu-biathlon-ecup",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "2x VIP tickets to the BMW IBU World Cup for monthly winners (non-cash)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The IBU's official biathlon esports game with VIP World Cup tickets for monthly winners.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "tom-howard-poetry",
+    "name": "Tom Howard/Margaret Reid Poetry Contest",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$12,000 total: two $3,500 prizes + ten $500 honorable mentions",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "A free-entry poetry contest with $12,000 in cash prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "wergle-flomp",
+    "name": "Wergle Flomp Humor Poetry Contest",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$2,000 1st (+ subscriptions); $750 2nd; $350 3rd; total $5,100",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "A free-entry humor-poetry contest with $5,100 in prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "aflw-fantasy",
+    "name": "AFLW Fantasy",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://aflwfantasy.afl/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Toyota Corolla Ascent Sport Hybrid (value $37,000) + AFL Store vouchers; Sherrin football",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The AFL's official free women's footy fantasy game, with a $37,000 Toyota as the top prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "tff-fantezi-lig",
+    "name": "TFF Fantezi Lig (Turkish Süper Lig)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantazilig.tff.org/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "An automobile for the overall season champion + weekly/monthly rewards",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The Turkish Football Federation's official free Süper Lig fantasy game, with a car for the season champion.",
+    "legacySourceTiers": [
+      "affiliate"
+    ],
+    "flags": [
+      "unverified",
+      "dead-domain"
+    ]
+  },
+  {
+    "id": "mxa-fantasy",
+    "name": "MXA Fantasy League (Supercross/Motocross)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://motocrossactionmag.com/fantasy-mx-sx/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$15,000 Stark Varg 1.2 (season); weekly gear/sprees (FXR $500, helmets, FMF exhausts)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Motocross Action's free fantasy league, with a $15,000 Stark Varg and sponsor gear as prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "kinolime",
+    "name": "Kinolime Script-to-Screen Competition",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://www.kinolime.com/competition",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$25,000 cash production award + up to $15M production financing",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "A free-to-enter feature-screenplay competition with a $25,000 cash award plus up to $15M in production financing.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "bridgewater-forecast",
+    "name": "Bridgewater Forecasting the Future Challenge",
+    "category": "forecasting",
+    "recordType": "lead",
+    "source": "https://www.bridgewater.com/forecasting-the-future-a-modern-economics-challenge",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$25,000 each to five winners + a career/internship opportunity at Bridgewater",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Bridgewater and Global Citizen's free global forecasting challenge — $25,000 to each of five winners.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended"
+    ]
+  },
+  {
+    "id": "streak-contest",
+    "name": "Streak Contest (MobLab)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://apps.apple.com/us/app/streak-contest/id1623816920",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$5 (5 picks), $100 (10), $1,000 (15), $20,000 (20), $100,000 (25)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "A free daily sports pick'em app — build a winning streak for cash prizes up to $100,000.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "premiership-rugby-fantasy",
+    "name": "Fantasy Premiership Rugby",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasy.premiershiprugby.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Overall winner: VIP Final package; runner-up: signed shirt + 4 tickets; per-round: 2 tickets",
+    "legacyStatus": "caution",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The official Gallagher Premiership Rugby fantasy game, with a Final VIP experience and tickets as prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "dead-domain",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "aleague-fantasy",
+    "name": "A-Leagues Fantasy",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://aleagues.com.au/fantasy",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$4,000 major prize; $600 2nd; $400 3rd; weekly double-pass tickets",
+    "legacyStatus": "ended",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The A-Leagues' official fantasy and tipping games, with a $4,000 cash major prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "legacy-ended",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "agentmma",
+    "name": "AgentMMA UFC Fantasy Contest",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://agentmma.com/contests/next",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Prizes for top finishers (amount not specified on the public page)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "A free UFC fantasy pick'em contest — predict winners, methods and rounds for prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "formula-e-predictor",
+    "name": "Formula E Predictor",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.fiaformulae.com/en/news/9291",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Signed shirt + cap (top scorer); merchandise discount codes (non-cash)",
+    "legacyStatus": "caution",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Formula E's free race prediction game, with a signed shirt and cap for the top scorer.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "telegraph-fantasy-racing",
+    "name": "Telegraph Fantasy Racing",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://fantasyracing.telegraph.co.uk/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£2,500 (Cheltenham) / £2,000 (Royal Ascot) first prize; 2nd–10th cash prizes",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The Telegraph's free fantasy horse-racing game for Cheltenham and Royal Ascot, with a £2,000–£2,500 cash first prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "dead-domain"
+    ]
+  },
+  {
+    "id": "stable-stars",
+    "name": "Stable Stars (Cheltenham Festival)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://cheltenhamfestival.fans/stable-stars/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£500 voucher (1st), £300 (2nd), £200 (3rd) each day",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "A free daily horse-racing tipping game with £500/£300/£200 vouchers each Festival day.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "stablestakes",
+    "name": "StableStakes (Fantasy Horse Racing)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://stablestakes.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$5,000 Crown Showdown prize pool; other contests $2,500+",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "A fantasy horse-racing platform with free-to-play contests, including the $5,000 Crown Showdown.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "ohha-harness",
+    "name": "OHHA Harness Racing Fantasy League",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.ohha.com/fantasy-stable",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$5,000 total: $1,500 1st, $800 2nd, $400 3rd, $100 4th–10th + $100 last",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The Ohio Harness Horsemen's Association's free fantasy stable league with $5,000 in cash prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "running-aces-harness",
+    "name": "Running Aces Fantasy Horse Racing League",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://runaces.com/racing/live-racing/fantasy-horse-racing-league/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$1,000 pool: $500 1st, $275 2nd, $125 3rd, $100 4th",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Running Aces' free harness-racing fantasy league with a $1,000 prize pool.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "ultimate-fantasy-tennis",
+    "name": "Ultimate Fantasy Tennis",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://ultimatefantasytennis.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Topps autographed tennis cards for top Open Play finishers (non-cash)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "A free season-long fantasy tennis game, with Topps autographed cards as Open Play prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "ncga-majors-challenge",
+    "name": "NCGA Majors Challenge",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://ncga.org/majorschallenge",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Amazon gift cards: $300 1st, $200 2nd, $150 3rd … $10 16th–20th; season prize a free foursome",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The NCGA's free fantasy golf game for the five majors, with Amazon gift-card prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "majors-challenge",
+    "name": "Majors Challenge Perfect Team Contest",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://majorschallenge.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$250,000 grand prize for a perfect 12-player team; Shot Scope gift cards for top five",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "A free fantasy golf contest with a $250,000 prize for a 'Perfect 12' Masters roster.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "teepster",
+    "name": "Teepster Fantasy Golf",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://www.teepster.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Motocaddy M1 DHC electric buggy (RRP A$1,499) for the Open Pick 6 winner",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "A free one-and-done fantasy golf platform (PGA/DP World/LIV), with prize contests like the Motocaddy Pick 6.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "fantasy-golf-challenge",
+    "name": "Fantasy Golf Challenge (GolfBalls.com)",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://golfgamecentral.com/fantasy-challenge.php",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "Weekly $20, segment $50/$25, overall $100/$75/$50 (GolfBalls.com gift certificates)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "A free weekly fantasy golf game with GolfBalls.com gift-certificate prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "checkmate-gaming",
+    "name": "Checkmate Gaming (CMG) Free Tournaments",
+    "category": "skill",
+    "recordType": "lead",
+    "source": "https://www.checkmategaming.com/free-tournaments",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$10–$180 cash per tournament (free entry)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Free-entry Call of Duty / Valorant esports tournaments with cash prizes posted daily.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "buzz-fantasy-golf",
+    "name": "Buzz Fantasy Golf",
+    "category": "sports",
+    "recordType": "lead",
+    "source": "https://buzzfantasygolf.com/services/freefantasygolfgame",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$10 Amazon GC weekly; $25/$10 segment; $50/$25/$10 season (gift cards)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "A free PGA Tour fantasy golf game with Amazon gift-card prizes for weekly, segment and season winners.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "fundedfast-open",
+    "name": "FundedFast Open",
+    "category": "market",
+    "recordType": "lead",
+    "source": "https://fundedfast.com/trading-competition",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "1st $25, 2nd $20, 3rd $15 (cash) per two-week round",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "A genuinely free bi-weekly prop-firm trading competition with small cash prizes, no payment details required.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "hipa",
+    "name": "Hamdan International Photography Award (HIPA)",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://www.hipa.ae/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$200,000 grand prize; category prizes $20,000–$50,000; total pool $1,000,000",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The world's richest photography award — a $200,000 grand prize and $1,000,000 total pool, free to enter.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "sony-world-photo",
+    "name": "Sony World Photography Awards",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://www.worldphoto.org/sony-world-photography-awards",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$25,000 (Professional Photographer of the Year); $5,000 (Open); Sony equipment",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "A free-to-enter global photography competition with a $25,000 grand prize and $5,000 category prizes.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "world-press-photo",
+    "name": "World Press Photo Contest",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://www.worldpressphoto.org/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "€10,000 (Photo of the Year); €1,000 per winner; Fujifilm camera for the top winner",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The leading free photojournalism contest — €10,000 for World Press Photo of the Year, €1,000 per regional winner.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "weather-potw",
+    "name": "Weather Photographer of the Year",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://www.rmets.org/weather-photographer-of-the-year",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£5,000 (winner); £2,500 (mobile); £750 (young winner)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "The Royal Meteorological Society's free photo contest with a £5,000 cash prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "epoty",
+    "name": "Environmental Photographer of the Year (EPOTY)",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://epoty.org/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "£5,000 (EPOTY); £1,000 per category; Nikon gear for Young EPOTY",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "CIWEM's free environmental photography contest with a £5,000 cash prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified",
+      "non-cash-mixed"
+    ]
+  },
+  {
+    "id": "spie-light",
+    "name": "SPIE International Day of Light Photo Contest",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://spie.org/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$2,500 (1st), $1,000 (2nd), $500 (3rd), $750 (technology/science)",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "SPIE's free photo contest on the theme of light, with a $2,500 first prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  },
+  {
+    "id": "istanbul-photo-awards",
+    "name": "Istanbul Photo Awards",
+    "category": "creative",
+    "recordType": "lead",
+    "source": "https://istanbulphotoawards.com/",
+    "sourceLabel": "Legacy-linked operator page — not re-read in this pass",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "eligibility": "",
+    "work": "",
+    "payout": "",
+    "notes": "",
+    "legacyPrizeClaim": "$6,000 (single news); $3,000 other categories; $1,500 runners-up; $1,000 third",
+    "legacyStatus": "live",
+    "legacyFreePath": "full",
+    "legacyChecked": "2026-08-19",
+    "legacyShort": "Anadolu Agency's free international photojournalism contest with a $6,000 top category prize.",
+    "legacySourceTiers": [
+      "official"
+    ],
+    "flags": [
+      "unverified"
+    ]
+  }
+]

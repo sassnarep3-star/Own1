@@ -168,3 +168,38 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 - PR: _filled in below after the pull request is opened._
 - Merge: _filled in after merge._
 - Pages deployment: _filled in after the deployment check._
+
+---
+
+## Session `75155aeb-own1` — `/atlas` verified subsite (2026-11-01)
+
+**Claim.** `atlas/**`, `assets/atlas.css`, `assets/atlas.js`, `scripts/build-atlas.mjs`,
+`scripts/import_legacy.mjs`, `data/verified.json`, `data/legacy.json`, `data/atlas-findings.json`,
+`data/atlas-entries.json`, `data/atlas-categories.json`, `tests/validate-atlas.mjs`,
+`research/SOURCES.md`. Shared files touched by this session, each additively and recorded here:
+`scripts/build-site.mjs` (one nav link to `atlas/index.html`) and `.github/workflows/validate.yml`
+(two steps: rebuild `atlas/` and fail on diff; run `node tests/validate-atlas.mjs`).
+
+**Work.** 44 rows verified against operator pages opened 2026-11-01 (ESPN, CBS Sports ×2, Kaggle ×4,
+ARC Prize, DrivenData, Devpost ×9, Metaculus ×14, Sony World Photography ×4, Vocal, Givling,
+XPRIZE ×4), each with the page read and the date; the 206-listing reference catalogue imported as
+quarantined leads with prize/fee/deadline/eligibility blanked by policy; 17 sourced findings published
+on `atlas/review.html` (dead source domains, one http-only source, 26 rows still labelled "ended", four
+operator pages that contradict themselves); mobile-first dashboard, shortlist, nine category pages,
+summary, method page; `tests/validate-atlas.mjs` with a whole-repository link audit and a reachability
+check.
+
+**Merge handling.** `main` advanced eight times during this session (PRs #8, #10, #11, #12, #16, #18,
+#19 and direct integrations). Every advance was merged, never rebased over, and no other session's file
+was deleted. As `main`'s generator moved between `scripts/build.mjs` and `scripts/build-data.mjs` +
+`scripts/build-site.mjs`, this session's generator was renamed to `scripts/build-atlas.mjs` and its
+category metadata to `data/atlas-categories.json`, so the two builds own disjoint paths.
+
+**Verification on the merged tree.** `npm run build` → `entries=211 verified=20 partial=6
+unverified=185`; `node tests/validate.mjs` → 211 rows, 53 quoted facts, 40 pages, all local references
+valid; `node tests/dom.test.mjs` → all interactive tables render and filter; `node
+scripts/build-atlas.mjs` → 250 entries (44 verified, 205 leads); `node tests/validate-atlas.mjs` →
+3,700+ of 3,700+ checks pass.
+
+**Publication:** PR #14, merged into `main`; Pages deploy verified from the Actions run.
+
