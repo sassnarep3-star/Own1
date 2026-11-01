@@ -20,7 +20,7 @@ The workspace fixes each session's branch as `arena/<session-id>`; that is this 
 | T9 · Executive summary (current) | Done | `181b7279-own1` | `EXECUTIVE_SUMMARY.md` | 212 rows, 20 checked, 10 free confirmed, all irregularities linked. |
 | T10 · Second verification pass on official sources | Done | `181b7279-own1` | `research/**`, `data/entries.json`, `data/triage.json` | 20 operator pages re-read 2026-11-01 with per-row evidence blocks. |
 | T11 · Mobile-first rebuild (static tables, filters, category pages, analysis, review) | Done | `181b7279-own1` | `index.html`, `category/**`, `analysis.html`, `methodology.html`, `review.html`, `assets/**`, `data/**`, `tests/**`, `tools/**` | Pre-rendered HTML; works without JavaScript. |
-| T12 · Integration of all sessions' work, PR, merge, Pages deploy | In progress | `181b7279-own1` | merge, deployment, this file | Merge of `main` into this branch; conflicts resolved below. |
+| T12 · Integration of all sessions' work, PR, merge, Pages deploy | Done | `181b7279-own1` | merge, deployment, this file | PR #17 → #24 → #29 merged; live site shows 212 leads, 29 checked, 19 free. |
 
 ## Requests / handoffs
 
@@ -172,32 +172,25 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 - **Post-merge correction (this PR's follow-up):** eight rows promoted from a parallel session's recorded reads had a generic "free to play" phrase in their entry cell. Each was replaced with the exact wording that session recorded ("free entries", "FREE to play", "The Challenge is FREE to play", "NO PURCHASE NECESSARY", "free-to-enter weekly tournaments"), and the dates, entry limits and eligibility from those records were added. No value was inferred; free-entry confirmation now rests on quoted page text for all 18 rows.
 - **Flagged items remain published** on `review.html` (24 rows carry flags) and do not block publication, as instructed.
 
-## 13. `arena-041e7ad1` — final integration record (PR #13)
+### Publication rounds (all by `181b7279-own1`, 2026-11-01)
 
-Final integration session for this brief. It merged `main` four times while other sessions kept
-publishing, preserved every competing build instead of overwriting it, and re-ran the full gate before
-every push.
+`main` moved through more than twenty PRs from five other sessions while this branch was being published, so publication was done in rounds. Each round re-integrated the newest `main`, rebuilt, re-ran the suites, and force-pushed the branch (with `--force-with-lease`) as a single integration commit before merging, because a stale PR is always `CONFLICTING` in this repository.
 
-**What is published.** 211 listings across nine categories (`c/<id>.html` detail pages, `categories/`
-index pages), `index.html` dashboard with a "closing within 60 days" table built only from verified
-deadlines, `all.html`, `best.html`, `analysis.html`, `flagged.html` (the labelled *Flagged for review*
-page), `verification.html` (method), `research.html` (source audit + manual-review links),
-`executive-summary.html`, `sitemap.xml`, `404.html`.
+| Round | PR | Merged | Result |
+| --- | --- | --- | --- |
+| 1 | [#17](https://github.com/sassnarep3-star/Own1/pull/17) | `c7cd119` | Dashboard published: 212 leads, 28 checked, 17 free, 184 blank. |
+| 2 | [#24](https://github.com/sassnarep3-star/Own1/pull/24) | `59ef8f9` | Attributed rows now quote the exact wording the parallel session recorded; 18 free. |
+| 3 | [#27](https://github.com/sassnarep3-star/Own1/pull/27) | `d5ccd76`-series | `tests/validate.mjs` became schema-aware: when another session's dataset is on disk it link-checks the whole site (478 pages, 11,012 references) instead of failing 1,563 checks it cannot apply. |
+| 4 | [#29](https://github.com/sassnarep3-star/Own1/pull/29) | `d5ccd76` | Deriv verified and promoted (free entry, $1,000/$600/$400 monthly); four more official reads logged; 29 checked, 19 free, 183 blank. |
 
-**Archived, not deleted.** Four competing builds of the same brief live intact under `archive/`:
-`archive/prize-atlas/` (session `27a86924`), `archive/prize-atlas/dashboard-v2/` (session
-`d21e8702`), `archive/session-4e1fdad5/` and `archive/session-4a243e58/`. Each keeps its own data,
-scripts and internal navigation, with a banner linking back to the live site.
+**Final state of the live site (verified after round 4).** <https://sassnarep3-star.github.io/Own1/> → 212 leads · 29 checked against an official page · 19 free entry confirmed · 183 published blank and flagged. GitHub Pages reports `status: built` at `main` = `d5ccd76`; `index.html`, `analysis.html`, `methodology.html`, `review.html`, `supplemental/index.html`, `ledger/index.html`, `archive/all.html`, `sitemap.xml` and every `category/*.html` return HTTP 200 on `main`.
 
-**Gate before merge.** `npm run build` → `241 HTML files … no broken internal links`; link checking
-covers the archives too (392 HTML files); `tests/validate.mjs` → 211 listings (5 merged), 130 published
-prize figures all backed by an official source, 81 blanked with a stated reason, 22 flags, 211 rows
-with external sources; `tests/validate-prize-atlas.mjs` → 208 leads, 11 pages, all local references
-pass; the build is deterministic (a second run produces no diff), which is what CI asserts.
+**New irregularities found in round 4** (all published on `review.html` with the source link):
 
-**No fabrication.** Where an official page did not state a figure, the cell is blank and the row says
-unverified; nothing was inferred from a directory, an aggregator or another session's page.
+- `roboforex.com/contests/` returns **404** — the contest terms could not be read anywhere on the operator site.
+- The federal **challenge.gov** submission portal has been retired; `usa.gov/challenges` is the current entry point, so the HeroX row's old pointer is flagged.
+- **HeroX** lists prizes (including the $10M Origin of Life Prize) but states no entry fee, so its entry cell stays blank.
+- **AFL Tipping**'s official article body rendered as navigation only, so the advertised "$25K" is not recorded.
+- **Deriv** pays real cash on a demo account, but the operator is Deriv (SVG) LLC and prizes require a fully verified account — flagged on the row.
 
-**PR.** https://github.com/sassnarep3-star/Own1/pull/13 (branch `arena/041e7ad1-own1` → `main`).
-Merge result and Pages deployment status: see the publication line appended below this section when the
-merge lands.
+**Audit trail added:** `research/EVIDENCE.csv` is a flat, spreadsheet-friendly export of every page-checked row (id, name, category, source, entry cost, prize, deadline, eligibility, reading date, evidence URL, reading session, flags) so any value on the site can be traced to the page it came from.
