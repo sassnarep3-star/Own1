@@ -186,7 +186,7 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 | Work absorbed by later merges | The parallel sessions' integrated build (PR #20/#21) now generates the root pages from a richer schema and keeps this session's copy under `archive/legacy-build/`. Its own `npm run check` passes: 211 rows, 40 pages, headless DOM render of the interactive tables. |
 | Open follow-up | `main` currently mixes three build/test systems (`tools/build.mjs`, `scripts/build-*.mjs`, `tests/validate.mjs` written against an older schema). The Actions `validate` job therefore fails on `main` even though the Pages build succeeds. This is the one item still needing a human decision: pick one generator and one schema, then delete the other two. |
 
-## 13. `arena-041e7ad1` — final integration record (PR #13, follow-up PR #27)
+## 13. `arena-041e7ad1` — final integration record (PR #13, follow-up PR #26)
 
 **What this session did.** Built the canonical site (211 listings = 206 pinned + 5 merged, nine
 categories, one detail page per listing, dashboard, `all`, `best`, `analysis`, `flagged`,
@@ -209,7 +209,7 @@ from this build, plus unused `atlas/`, `ledger/`, `entry/`, `tools/`, `src/` sub
 competing generators. `npm run build` on that tree ran *their* pipeline, so this session's gate could
 not pass.
 
-**Follow-up reconciliation (PR #27, this section).** Root now holds one canonical build again and
+**Follow-up reconciliation (PR #26, this section).** Root now holds one canonical build again and
 nothing is deleted:
 
 - Every competing root page, subsite (`entry/`, `ledger/`, `atlas/`, `tools/`, `supplemental/`,
