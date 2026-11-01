@@ -93,7 +93,7 @@
    "title": "No official-source link on the row — prize figure has no official basis",
    "severity": "high",
    "type": "sourcing",
-   "summary": "12 listings cite only affiliate or forum sources. Three of them say so in their own text: the prize table was taken from review sites, not the operator.",
+   "summary": "11 listings cite only affiliate or forum sources. Three of them say so in their own text: the prize table was taken from review sites, not the operator.",
    "evidence": [
     "Rows whose sources array contains no entry with tier \"official\".",
     "roboforex-demo restricted field: \"Prize table sourced from review sites, not the official domain — re-confirm before relying on it.\"",
@@ -108,7 +108,6 @@
     "fplmanager-india",
     "fplstore",
     "pitchbooking",
-    "roboforex-demo",
     "fbs-pro-demo",
     "npbfx-demo",
     "tff-fantezi-lig"

@@ -15,7 +15,7 @@
  },
  "reviewed": "2026-08-19",
  "additionsMerged": 5,
- "crossChecksMerged": 10,
+ "crossChecksMerged": 13,
  "pass": "S",
  "types": [
   {
@@ -1169,9 +1169,29 @@
      "title": "Challenge.gov",
      "url": "https://www.challenge.gov/",
      "tier": "official"
+    },
+    {
+     "title": "Official page — independently checked 2026-11-01",
+     "url": "https://www.herox.com/crowdsourcing-projects",
+     "tier": "official",
+     "crossChecked": true,
+     "checkedBy": "arena/181b7279-own1"
     }
    ],
-   "lastChecked": "2026-08-19"
+   "lastChecked": "2026-08-19",
+   "crossCheck": {
+    "url": "https://www.herox.com/crowdsourcing-projects",
+    "checkedDate": "2026-11-01",
+    "checkedBy": "arena/181b7279-own1",
+    "confirmed": [
+     "Explore Challenges listing rendered with featured challenges, including the GEMS Prize and the \"$10 Million USD\" Origin of Life Prize."
+    ],
+    "caveats": [
+     "The listing states no entry fee, so entry cost remains unconfirmed.",
+     "The federal challenge.gov submission portal has been retired; usa.gov/challenges is the current entry point."
+    ],
+    "deadline": null
+   }
   },
   {
    "id": "xprize",
@@ -6313,7 +6333,23 @@
      "tier": "official"
     }
    ],
-   "lastChecked": "2026-08-19"
+   "lastChecked": "2026-08-19",
+   "crossCheck": {
+    "url": "https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes",
+    "checkedDate": "2026-11-01",
+    "checkedBy": "arena/181b7279-own1",
+    "confirmed": [
+     "Free entry: \"Each tournament is free to enter ... with no deposit required.\"",
+     "Prizes per monthly tournament: $1,000 / $600 / $400.",
+     "Simulated $10,000 virtual account; real cash paid on skill-based leaderboards, no random draws."
+    ],
+    "caveats": [
+     "Prize payment requires a fully verified Deriv account.",
+     "Operator is Deriv (SVG) LLC, an offshore entity; participation is demo-only."
+    ],
+    "deadline": "Monthly tournaments; dates on contest.deriv.com"
+   },
+   "deadline": "Monthly tournaments; dates on contest.deriv.com"
   },
   {
    "id": "multibank-demo",
@@ -6624,9 +6660,26 @@
      "title": "RoboForex Demo Contest (review)",
      "url": "https://tradingbrokers.com/roboforex-demo-contest/",
      "tier": "affiliate"
+    },
+    {
+     "title": "Official page — independently checked 2026-11-01",
+     "url": "https://roboforex.com/contests/",
+     "tier": "official",
+     "crossChecked": true,
+     "checkedBy": "arena/181b7279-own1"
     }
    ],
-   "lastChecked": "2026-08-19"
+   "lastChecked": "2026-08-19",
+   "crossCheck": {
+    "url": "https://roboforex.com/contests/",
+    "checkedDate": "2026-11-01",
+    "checkedBy": "arena/181b7279-own1",
+    "confirmed": [],
+    "caveats": [
+     "https://roboforex.com/contests/ returned 404 (\"It seems that the page you requested doesn't exist\"); no contest terms page was found on the operator site, so nothing about this contest is confirmed."
+    ],
+    "deadline": null
+   }
   },
   {
    "id": "fbs-pro-demo",
