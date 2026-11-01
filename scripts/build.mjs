@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   indexPage, shortlistPage, categoriesPage, categoryPage,
-  summaryPage, methodologyPage, reviewPage, allPage, notFoundPage,
+  summaryPage, methodologyPage, reviewPage, allPage, notFoundPage, archivePage,
 } from '../src/pages.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -38,6 +38,7 @@ put('methodology.html', './', methodologyPage());
 put('review.html', './', reviewPage(irregularities, rows));
 put('all.html', './', allPage(cats, rows));
 put('404.html', './', notFoundPage());
+put('archive.html', './', archivePage());
 for (const cat of cats) put(`category/${cat.id}.html`, '../', categoryPage(cat, rows));
 
 // Category ids used by data but missing a page (or vice versa) would be a broken site.
@@ -46,6 +47,17 @@ if (missing.length) {
   console.error(`Unknown category id(s) in data/entries.json: ${missing.join(', ')}`);
   process.exit(1);
 }
+
+// Sitemap for the pages this build owns (archive pages are listed by their own generator).
+const SITE_URL = 'https://sassnarep3-star.github.io/Own1/';
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${[...pages.keys(), 'archive.html']
+  .map((p) => `  <url><loc>${SITE_URL}${p}</loc><lastmod>2026-11-01</lastmod></url>`)
+  .join('\n')}
+</urlset>
+`;
+pages.set('sitemap.xml', sitemap);
 
 const check = process.argv.includes('--check');
 let stale = 0;

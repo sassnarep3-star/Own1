@@ -110,7 +110,7 @@
 
   function rowHtml(r) {
     var s = score(r);
-    return '<tr class="row-main" data-id="' + esc(r.id) + '" aria-expanded="false" tabindex="0">' +
+    return '<tr class="row-main" id="' + esc(r.id) + '" data-id="' + esc(r.id) + '" aria-expanded="false" tabindex="0">' +
       '<td class="cell-name" data-label="Competition">' +
         '<span class="c-name">' + esc(r.name) + '</span>' +
         '<span class="subtle">' + esc(catLabel(r.category)) + (r.effort ? ' · effort: ' + esc(r.effort) : '') + '</span>' +
