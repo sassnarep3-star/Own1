@@ -174,6 +174,20 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 
 ---
 
+## 9. Publication record — session `4e1fdad5-own1` (final)
+
+| Step | Result |
+| --- | --- |
+| Integration PR | [#18](https://github.com/sassnarep3-star/Own1/pull/18) — `arena/4e1fdad5-own1` → `main` |
+| Checks on the PR | `Data, build and link integrity`: **pass**; external-link jobs advisory |
+| Merge | **Merged** 2026-11-01 13:53:01 UTC, merge commit `8d09e4cbdae916320e67f768c9f45fc11fb98189` |
+| Pages build | commit `8d09e4cbd`, status **built**, no error (13:53:23 UTC) |
+| Live pages verified | `shortlist.html`, `archive.html` and `data/categories.json` served the new build; root `/Own1/` was still serving a cached copy when checked immediately after deploy |
+| Work absorbed by later merges | The parallel sessions' integrated build (PR #20/#21) now generates the root pages from a richer schema and keeps this session's copy under `archive/legacy-build/`. Its own `npm run check` passes: 211 rows, 40 pages, headless DOM render of the interactive tables. |
+| Open follow-up | `main` currently mixes three build/test systems (`tools/build.mjs`, `scripts/build-*.mjs`, `tests/validate.mjs` written against an older schema). The Actions `validate` job therefore fails on `main` even though the Pages build succeeds. This is the one item still needing a human decision: pick one generator and one schema, then delete the other two. |
+
+---
+
 ## Session `75155aeb-own1` — `/atlas` verified subsite (2026-11-01)
 
 **Claim.** `atlas/**`, `assets/atlas.css`, `assets/atlas.js`, `scripts/build-atlas.mjs`,
@@ -204,17 +218,5 @@ valid; `node tests/dom.test.mjs` → all interactive tables render and filter; `
 scripts/build-atlas.mjs` → 250 entries (44 verified, 205 leads); `node tests/validate-atlas.mjs` →
 3,700+ of 3,700+ checks pass.
 
-**Publication.** PR <https://github.com/sassnarep3-star/Own1/pull/14> merged into `main` at
-2026-11-01T13:59:13Z as merge commit `511c73d`. GitHub Pages built that commit
-(`pages/builds/latest` → `built`, commit `511c73d`) and the result was read back over the public URL:
-<https://sassnarep3-star.github.io/Own1/atlas/> serves the verified dashboard (44 verified rows,
-205 labelled leads, 17 findings, live search/sort, card layout under 900px), and the root dashboard
-links to it from the top navigation.
-
-**Gate scoping (recorded because it changes a check).** `tests/validate-atlas.mjs` used to fail when
-*any* page in the repository was unreachable from `index.html`. Other layers now publish pages
-(`best.html`, `research.html`, `supplemental/index.html`, `ledger/**`) that their own build may leave
-unlinked for a commit or two, which would block this layer's deploy on someone else's in-flight work.
-The gate now **fails** for unreachable `atlas/**` pages and **warns** with the names for pages owned by
-other layers, which is reported here rather than silently ignored.
+**Publication:** PR #14, merged into `main`; Pages deploy verified from the Actions run.
 
