@@ -496,3 +496,60 @@ Object.assign(facts, {
     notes: 'The event page and its own rules have been reported to state different totals ($67,500 vs $69,750) and the rules include non-cash credits, so no prize figure is asserted here. Read section 8 of the rules before relying on any amount.',
   },
 });
+
+// Added 2026-11-01 by the integration session. These leads were also claimed by session d21e8702-own1's
+// verification file on main; each was re-read here so the quotes below are this session's own.
+Object.assign(facts, {
+  'checkmate-gaming': {
+    status: 'verified',
+    operator: 'Checkmate Gaming',
+    officialUrl: 'https://www.checkmategaming.com/free-tournaments',
+    freeEntry: true,
+    cashPrize: true,
+    prize: 'Free-entry tournaments listed at $40–$120 each (paid "ELITE ENTRY" events also run)',
+    deadline: null,
+    cycle: 'Daily — new tournaments posted daily',
+    eligibility: 'Regions listed per event: US, CA, EU',
+    effort: 'high',
+    agentFit: 'low',
+    evidence: [
+      { url: 'https://www.checkmategaming.com/free-tournaments', fact: 'Free entry with real cash prizes', quote: 'FREE TOURNAMENTS — Totally free to enter with real cash prizes. New tournaments posted daily.' },
+      { url: 'https://www.checkmategaming.com/free-tournaments', fact: 'Day-of prizes and entry types', quote: 'FREE ENTRY — $40 PRIZE — Nov 1 2026, 01:30 PM EST ... $120 PRIZE ... FREE ENTRY ... ELITE ENTRY — $1500 PRIZE — Nov 1 2026, 03:00 PM EST' },
+    ],
+    notes: 'The board mixes genuinely free events with paid "ELITE ENTRY" tournaments, and at least one free event is marked invite-only. Check the entry type on the event card before joining; prizes are per event, not a pool.',
+  },
+  'istanbul-photo-awards': {
+    status: 'partial',
+    operator: 'Anadolu Ajansı (İstanbul Photo Awards)',
+    officialUrl: 'https://istanbulphotoawards.com/',
+    freeEntry: null,
+    cashPrize: null,
+    prize: '',
+    deadline: null,
+    cycle: 'Annual',
+    eligibility: '',
+    effort: 'medium',
+    agentFit: 'low',
+    evidence: [
+      { url: 'https://istanbulphotoawards.com/', fact: 'Site rendered only the 2026 winners and announcements', quote: 'İSTANBUL PHOTO AWARDS 2026 ... Photo of the Year 2026 — Haitham Imad / EPA / Palestine' },
+    ],
+    notes: 'The homepage showed the 2026 results only; no entry fee, prize amount or submission window was stated there, so those fields are blank. A prize total of $58,000 appears in another session\'s notes but was not confirmed on a page read here.',
+  },
+  'world-press-photo': {
+    status: 'partial',
+    operator: 'World Press Photo Foundation',
+    officialUrl: 'https://www.worldpressphoto.org/',
+    freeEntry: null,
+    cashPrize: null,
+    prize: '',
+    deadline: null,
+    cycle: 'Annual',
+    eligibility: '',
+    effort: 'medium',
+    agentFit: 'low',
+    evidence: [
+      { url: 'https://www.worldpressphoto.org/', fact: 'Homepage describes the contest but states no fee or amount', quote: 'The annual World Press Photo Contest recognizes and honors the best photojournalism and documentary photography produced over the last year. ... New: Nature and Sports Awards ... in the 2027 World Press Photo Contest!' },
+    ],
+    notes: 'The contest page itself was not read; the homepage states no entry fee or prize value, so both stay blank. The 2027 contest adds Nature and Sports awards.',
+  },
+});

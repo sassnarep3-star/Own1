@@ -1365,27 +1365,49 @@
   "id": "istanbul-photo-awards",
   "name": "Istanbul Photo Awards",
   "category": "creative",
-  "status": "unverified",
-  "operator": "",
+  "status": "partial",
+  "operator": "Anadolu Ajansı (İstanbul Photo Awards)",
   "officialUrl": "https://istanbulphotoawards.com/",
   "freeEntry": null,
   "cashPrize": null,
   "prize": "",
   "deadline": null,
-  "cycle": "",
+  "cycle": "Annual",
   "eligibility": "",
-  "effort": null,
-  "agentFit": null,
-  "notes": "",
-  "evidence": [],
-  "readOn": null,
+  "effort": "medium",
+  "agentFit": "low",
+  "notes": "The homepage showed the 2026 results only; no entry fee, prize amount or submission window was stated there, so those fields are blank. A prize total of $58,000 appears in another session's notes but was not confirmed on a page read here.",
+  "evidence": [
+   {
+    "url": "https://istanbulphotoawards.com/",
+    "fact": "Site rendered only the 2026 winners and announcements",
+    "quote": "İSTANBUL PHOTO AWARDS 2026 ... Photo of the Year 2026 — Haitham Imad / EPA / Palestine"
+   }
+  ],
+  "readOn": "2026-11-01",
   "legacyStatus": "live",
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-incomplete"
   ],
-  "fit": null,
+  "fit": {
+   "score": 13,
+   "parts": [
+    [
+     "AI-agent fit: low",
+     4
+    ],
+    [
+     "Effort: medium",
+     6
+    ],
+    [
+     "No published deadline",
+     3
+    ]
+   ]
+  },
   "link": {
    "ok": true,
    "status": 200,
@@ -1860,27 +1882,49 @@
   "id": "world-press-photo",
   "name": "World Press Photo Contest",
   "category": "creative",
-  "status": "unverified",
-  "operator": "",
+  "status": "partial",
+  "operator": "World Press Photo Foundation",
   "officialUrl": "https://www.worldpressphoto.org/",
   "freeEntry": null,
   "cashPrize": null,
   "prize": "",
   "deadline": null,
-  "cycle": "",
+  "cycle": "Annual",
   "eligibility": "",
-  "effort": null,
-  "agentFit": null,
-  "notes": "",
-  "evidence": [],
-  "readOn": null,
+  "effort": "medium",
+  "agentFit": "low",
+  "notes": "The contest page itself was not read; the homepage states no entry fee or prize value, so both stay blank. The 2027 contest adds Nature and Sports awards.",
+  "evidence": [
+   {
+    "url": "https://www.worldpressphoto.org/",
+    "fact": "Homepage describes the contest but states no fee or amount",
+    "quote": "The annual World Press Photo Contest recognizes and honors the best photojournalism and documentary photography produced over the last year. ... New: Nature and Sports Awards ... in the 2027 World Press Photo Contest!"
+   }
+  ],
+  "readOn": "2026-11-01",
   "legacyStatus": "live",
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-incomplete"
   ],
-  "fit": null,
+  "fit": {
+   "score": 13,
+   "parts": [
+    [
+     "AI-agent fit: low",
+     4
+    ],
+    [
+     "Effort: medium",
+     6
+    ],
+    [
+     "No published deadline",
+     3
+    ]
+   ]
+  },
   "link": {
    "ok": true,
    "status": 200,
@@ -7017,27 +7061,63 @@
   "id": "checkmate-gaming",
   "name": "Checkmate Gaming (CMG) Free Tournaments",
   "category": "skill",
-  "status": "unverified",
-  "operator": "",
+  "status": "verified",
+  "operator": "Checkmate Gaming",
   "officialUrl": "https://www.checkmategaming.com/free-tournaments",
-  "freeEntry": null,
-  "cashPrize": null,
-  "prize": "",
+  "freeEntry": true,
+  "cashPrize": true,
+  "prize": "Free-entry tournaments listed at $40–$120 each (paid \"ELITE ENTRY\" events also run)",
   "deadline": null,
-  "cycle": "",
-  "eligibility": "",
-  "effort": null,
-  "agentFit": null,
-  "notes": "",
-  "evidence": [],
-  "readOn": null,
+  "cycle": "Daily — new tournaments posted daily",
+  "eligibility": "Regions listed per event: US, CA, EU",
+  "effort": "high",
+  "agentFit": "low",
+  "notes": "The board mixes genuinely free events with paid \"ELITE ENTRY\" tournaments, and at least one free event is marked invite-only. Check the entry type on the event card before joining; prizes are per event, not a pool.",
+  "evidence": [
+   {
+    "url": "https://www.checkmategaming.com/free-tournaments",
+    "fact": "Free entry with real cash prizes",
+    "quote": "FREE TOURNAMENTS — Totally free to enter with real cash prizes. New tournaments posted daily."
+   },
+   {
+    "url": "https://www.checkmategaming.com/free-tournaments",
+    "fact": "Day-of prizes and entry types",
+    "quote": "FREE ENTRY — $40 PRIZE — Nov 1 2026, 01:30 PM EST ... $120 PRIZE ... FREE ENTRY ... ELITE ENTRY — $1500 PRIZE — Nov 1 2026, 03:00 PM EST"
+   }
+  ],
+  "readOn": "2026-11-01",
   "legacyStatus": "live",
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "free-entry-confirmed",
+   "cash-confirmed"
   ],
-  "fit": null,
+  "fit": {
+   "score": 70,
+   "parts": [
+    [
+     "Confirmed free entry",
+     40
+    ],
+    [
+     "Confirmed cash prize",
+     20
+    ],
+    [
+     "AI-agent fit: low",
+     4
+    ],
+    [
+     "Effort: high",
+     3
+    ],
+    [
+     "No published deadline",
+     3
+    ]
+   ]
+  },
   "link": {
    "ok": true,
    "status": 200,
