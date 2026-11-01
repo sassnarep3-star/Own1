@@ -19,7 +19,7 @@ The starting repository had only `README.md` (`# Own1`). The requested reference
 ## Irregularities / review queue
 
 - 201 of the 208 rows are **not individually checked against their current operator rules**; they appear as unverified leads with financial and timing fields blank. A URL labeled official in the old ledger does not itself verify anything. Some links may be stale or broken.
-- 1 legacy row (`thelines-survivor`) has no operator URL at all and shows no source link; a non-operator article was deliberately not substituted.
+- 2 legacy rows (`thelines-survivor` and `squarespool`) show no usable HTTPS operator source link; a non-operator article and an HTTP-only page were deliberately not substituted.
 - 27 legacy records were labeled `ended`, 5 `mixed`, 11 `caution` in August; none of these statuses proves their situation today. Do not treat an unverified lead as currently open or free.
 - Old dataset includes paid-entry skill games, directories, group-funded pool software, and non-cash credits. They are kept for completeness, *not* recommended as free-cash opportunities.
 - The legacy `fanatics-survivor` uses a bookmaker URL and a third-party news article for a large prize claim. No current operator contest rules verified; do not quote that prize.
