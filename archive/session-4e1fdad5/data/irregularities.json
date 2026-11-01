@@ -1,0 +1,106 @@
+[
+  {
+    "id": "challenge-gov-sunset",
+    "severity": "broken link",
+    "title": "Challenge.gov was shut down; the imported link now redirects readers in circles",
+    "detail": "The imported ledger points to challenge.gov as an official source for federal prize competitions. That platform was sunset on 30 March 2026 and the site now only explains the move. The row keeps the old URL so the change is visible, with the replacement directory recorded in its notes.",
+    "sources": [
+      { "label": "challenge.gov (sunset notice, read 2026-11-01)", "url": "https://www.challenge.gov/" },
+      { "label": "USA.gov challenges directory", "url": "https://www.usa.gov/challenges" }
+    ]
+  },
+  {
+    "id": "pgatour-404",
+    "severity": "broken link",
+    "title": "PGA TOUR Fantasy prizes page returns 404",
+    "detail": "The imported source URL fantasygolf.pgatour.com/prizes now returns 'Page Not Found'. No prize value could be confirmed, so the row keeps blank prize fields and is marked unverified.",
+    "sources": [
+      { "label": "fantasygolf.pgatour.com/prizes (404 on 2026-11-01)", "url": "https://fantasygolf.pgatour.com/prizes" }
+    ]
+  },
+  {
+    "id": "prizefest-redirect",
+    "severity": "wrong destination",
+    "title": "The Louisiana Film Prize link lands on the Photo Prize rules",
+    "detail": "prizefest.com/film/rules/ redirects to the Photo Prize rules page, which restricts entries to photographs taken in Caddo or Bossier Parish, Louisiana. The film competition's own rules were therefore not read, and the row stays unverified.",
+    "sources": [
+      { "label": "Prize Fest Photo Prize rules (where the film link lands)", "url": "https://prizefest.com/photo/rules/" }
+    ]
+  },
+  {
+    "id": "yahoo-outage",
+    "severity": "source unavailable",
+    "title": "Yahoo Survival Football served an outage page",
+    "detail": "The imported URL returned Yahoo's 'Will be right back' outage notice on the verification date, so no rule, prize or deadline could be read. The row is unverified rather than guessed.",
+    "sources": [
+      { "label": "football.fantasysports.yahoo.com/public/survival", "url": "https://football.fantasysports.yahoo.com/public/survival" }
+    ]
+  },
+  {
+    "id": "javascript-only",
+    "severity": "unreadable source",
+    "title": "Several platform indexes are JavaScript apps with no readable listing",
+    "detail": "Kaggle's competition index, AIcrowd, Zindi, Topcoder and the UEFA fantasy game returned no readable challenge, prize or deadline data when fetched. They are kept as unverified leads; each individual event has to be opened and checked on its own page.",
+    "sources": [
+      { "label": "kaggle.com/competitions", "url": "https://www.kaggle.com/competitions" },
+      { "label": "aicrowd.com/challenges", "url": "https://www.aicrowd.com/challenges" },
+      { "label": "zindi.world/competitions", "url": "https://zindi.world/competitions" }
+    ]
+  },
+  {
+    "id": "trading-bonus",
+    "severity": "misleading prize",
+    "title": "Broker 'demo contests' pay trading bonuses, not cash",
+    "detail": "HFM's official FAQ answers 'Are the prizes real cash?' with 'No, the prizes are trading bonuses that will be credited to your live trading account.' The other brokers in the market-simulations category make similar offers, so none of them should be read as a cash prize until their own terms confirm it.",
+    "sources": [
+      { "label": "HFM Virtual to Real demo contest FAQ", "url": "https://www.hfm.com/int/en/promotions/demo-contest" }
+    ]
+  },
+  {
+    "id": "paid-entry",
+    "severity": "not free",
+    "title": "Entries that are not free were imported as if they were",
+    "detail": "The reference ledger mixed paid-entry and bonus-credit offers into a page about free money. Two verified examples: the Tom Howard/Margaret Reid poetry contest charges $27 per submission, and Papaya's cash tournaments are funded by entry fees (free rooms pay Gems, not dollars). Both are kept with a 'paid' or 'not free' label instead of being recommended.",
+    "sources": [
+      { "label": "Tom Howard/Margaret Reid contest page ('Fee: $27 per submission')", "url": "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest" },
+      { "label": "Papaya FAQ (entry-fee funded cash tournaments)", "url": "https://www.papaya.com/faq" }
+    ]
+  },
+  {
+    "id": "ai-rules",
+    "severity": "AI restriction",
+    "title": "Some free contests ban AI-generated entries outright",
+    "detail": "Winning Writers contests state that submitted writing 'must be composed using your own words, and may not contain any AI-generated text'. An AI agent can help you find and plan an entry, but not write it. The Prize Fest photo rules take the same position on generated images.",
+    "sources": [
+      { "label": "Wergle Flomp contest rules (AI policy)", "url": "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free" },
+      { "label": "Prize Fest Photo Prize rules ('AI generation tools... strictly prohibited')", "url": "https://prizefest.com/photo/rules/" }
+    ]
+  },
+  {
+    "id": "espn-entry-limit",
+    "severity": "internal contradiction",
+    "title": "ESPN contradicts itself on how many entries you may create",
+    "detail": "ESPN's own How-to-Play text says players 'can now create up to 10 entries', while the FAQ on the same page says 'you can create another entry (up to five total)'. Nobody should plan around either number without checking the live entry screen.",
+    "sources": [
+      { "label": "ESPN NFL Pick'em How to Play / FAQ", "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay" }
+    ]
+  },
+  {
+    "id": "no-source-rows",
+    "severity": "missing source",
+    "title": "Two imported rows have no usable operator link",
+    "detail": "TheLines Free NFL Survivor and SquaresPool.com arrived from the reference ledger without a usable HTTPS operator page. No substitute third-party article or HTTP-only page was used. They are published as unverified leads with an empty source field.",
+    "sources": [
+      { "label": "Reference ledger the rows came from", "url": "https://karagemop466-tech.github.io/FreeMoneyApps/" }
+    ]
+  },
+  {
+    "id": "stale-ledger",
+    "severity": "stale data",
+    "title": "The imported catalogue is a research desk, not an authority",
+    "detail": "All 206 imported names carry the reference ledger's August 2026 stamp. Its 'live' and 'ended' labels were not carried forward as facts, and its older 100-item document describes itself as superseded. Names and category assignments were kept; financial and timing claims were cleared until an operator page confirmed them.",
+    "sources": [
+      { "label": "Free Money & Contest Ledger", "url": "https://karagemop466-tech.github.io/FreeMoneyApps/" }
+    ]
+  }
+]
