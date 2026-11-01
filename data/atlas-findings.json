@@ -1,0 +1,264 @@
+{
+  "verifiedOn": "2026-11-01",
+  "reference": "https://karagemop466-tech.github.io/FreeMoneyApps/",
+  "referenceRepo": "https://github.com/karagemop466-tech/FreeMoneyApps",
+  "referenceData": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/data.js",
+  "findings": [
+    {
+      "id": "legacy-prize-claims-unverified",
+      "severity": "high",
+      "title": "Every imported listing carries a prize claim, and none of them were re-checked against operator rules",
+      "detail": "The reference ledger's data file assigns a prize description to 206 of 206 listings, and 143 of those descriptions contain an explicit dollar figure or large number. All of them are stamped 2026-08-19. Nothing in the file shows that the operator's own rules page was read for that figure. In this rebuild those claims are kept, but only in the 'legacy claim' column of the Flagged for Review page, clearly labelled unverified; the verified prize column stays blank unless an official page was read.",
+      "sources": [
+        {
+          "label": "Reference ledger data file (assets/data.js)",
+          "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/data.js"
+        },
+        {
+          "label": "Reference site",
+          "url": "https://karagemop466-tech.github.io/FreeMoneyApps/"
+        }
+      ]
+    },
+    {
+      "id": "dead-domains",
+      "severity": "high",
+      "title": "Six listing source domains no longer resolve",
+      "detail": "DNS lookups on 2026-11-01 returned no address for the operator domains behind six listings: KFC SuperCoach BBL (supercoach.news.com.au), Sky Sports Fantasy Football (fantasyfootball.skysports.com), SPFL/William Hill Premiership Fantasy (fantasy.football.scot), TFF Fantezi Lig (fantazilig.tff.org), Fantasy Premiership Rugby (fantasy.premiershiprugby.com) and Telegraph Fantasy Racing (fantasyracing.telegraph.co.uk). A domain that does not resolve cannot be an official source. These rows are kept as leads with a dead-link flag.",
+      "sources": [
+        {
+          "label": "Reference ledger data file",
+          "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/data.js"
+        },
+        {
+          "label": "supercoach.news.com.au (no DNS)",
+          "url": "https://supercoach.news.com.au/bbl/"
+        },
+        {
+          "label": "fantasyfootball.skysports.com (no DNS)",
+          "url": "https://fantasyfootball.skysports.com/"
+        },
+        {
+          "label": "fantasy.football.scot (no DNS)",
+          "url": "https://fantasy.football.scot/"
+        },
+        {
+          "label": "fantazilig.tff.org (no DNS)",
+          "url": "https://fantazilig.tff.org/"
+        },
+        {
+          "label": "fantasy.premiershiprugby.com (no DNS)",
+          "url": "https://fantasy.premiershiprugby.com/"
+        },
+        {
+          "label": "fantasyracing.telegraph.co.uk (no DNS)",
+          "url": "https://fantasyracing.telegraph.co.uk/"
+        }
+      ]
+    },
+    {
+      "id": "http-only-source",
+      "severity": "medium",
+      "title": "One listing has no HTTPS source at all",
+      "detail": "SquaresPool.com is linked only over plain HTTP (http://www.squarespool.com/). No secure URL was found for it, so the row has no usable official source and is flagged rather than linked as if verified.",
+      "sources": [
+        {
+          "label": "http://www.squarespool.com/",
+          "url": "http://www.squarespool.com/"
+        }
+      ]
+    },
+    {
+      "id": "ended-but-labelled-free",
+      "severity": "medium",
+      "title": "26 listings marked 'ended' still carry a 'full free path' label",
+      "detail": "The reference ledger uses two independent fields: status (live / mixed / caution / ended) and freePath (full / partial / paid-cash). Twenty-six rows with status 'ended' are still labelled 'full', which reads as an open free opportunity. On this site those rows are leads with an 'ended' flag, and no row is presented as currently open unless it was read from the operator.",
+      "sources": [
+        {
+          "label": "Reference ledger data file",
+          "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "non-cash-mixed",
+      "severity": "medium",
+      "title": "68 listings describe non-cash or mixed rewards (gift cards, bonus currency, partial free paths)",
+      "detail": "Prize text across the legacy file mentions gift cards, merchandise, bonus cash, gems, coins, points, trips or equipment, or marks the free path as 'partial'. These are not free cash prizes and are flagged so they never appear as if they were. Examples visible in the reference site itself: Papaya free rooms pay Gems, Skillz Z coins have no cash value, GamerSaloon 1-Rounders pay bonus cash.",
+      "sources": [
+        {
+          "label": "Reference ledger data file",
+          "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/data.js"
+        },
+        {
+          "label": "Papaya FAQ (free rooms use Gems)",
+          "url": "https://www.papaya.com/faq"
+        },
+        {
+          "label": "Skillz terms",
+          "url": "https://www.skillz.com/terms-of-service/"
+        }
+      ]
+    },
+    {
+      "id": "weak-source-tiers",
+      "severity": "medium",
+      "title": "15 listings rely on an affiliate source and 4 on a forum source",
+      "detail": "The reference file records a source tier per link. Fifteen listings include an affiliate-tier link and four include a forum-tier link among their sources. Where a prize figure rests only on those tiers there is no operator evidence for it. This site does not repeat those figures as facts.",
+      "sources": [
+        {
+          "label": "Reference ledger data file",
+          "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "stale-article-source",
+      "severity": "low",
+      "title": "A listing is sourced to a 2024 news article",
+      "detail": "TheLines Free NFL Survivor links to an article whose URL is pinned to week 1 of the 2024 season, and the listing is marked 'ended'. It cannot establish a 2026 contest.",
+      "sources": [
+        {
+          "label": "thelines.com article (2024 URL)",
+          "url": "https://www.thelines.com/free-nfl-contest-pools-games-week-1-2024/"
+        }
+      ]
+    },
+    {
+      "id": "host-platform-source",
+      "severity": "low",
+      "title": "Several mini-league rows link to the host platform, not the league operator",
+      "detail": "Rows such as Bona Fide Sports, OLKA Express and Pitchbooking point at fantasy.premierleague.com, the platform that hosts those leagues. The platform page cannot confirm the league's prize, and the legacy file itself says the prize is 'not confirmed for 2026/27'.",
+      "sources": [
+        {
+          "label": "fantasy.premierleague.com",
+          "url": "https://fantasy.premierleague.com/"
+        }
+      ]
+    },
+    {
+      "id": "espn-entry-limit",
+      "severity": "medium",
+      "title": "ESPN's own NFL Pick'em page states two different entry limits",
+      "detail": "On 2026-11-01 the picks page said 'Create up to ten entries' and the rules text in the same game said entries could be created 'up to five total'. Only the entry form can settle which applies. Recorded as a flag on the verified row rather than resolved by guessing.",
+      "sources": [
+        {
+          "label": "ESPN NFL Pick'em picks page",
+          "url": "https://fantasy.espn.com/games/nfl-pickem-2026/picks"
+        },
+        {
+          "label": "ESPN NFL Pick'em rules and FAQ",
+          "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay"
+        }
+      ]
+    },
+    {
+      "id": "paypal-prize-conflict",
+      "severity": "medium",
+      "title": "The PayPal AI Hackathon page states two different prize totals",
+      "detail": "The same official page advertised '$67,500 in cash' in its summary block and '$69,750 in total prizes' in its body copy on 2026-11-01. The verified row records both figures and does not choose between them.",
+      "sources": [
+        {
+          "label": "PayPal AI Hackathon page",
+          "url": "https://paypalaihackathon.devpost.com/"
+        }
+      ]
+    },
+    {
+      "id": "dsh-hacks-noncash",
+      "severity": "low",
+      "title": "A hackathon title advertises '$100k+ in prizes' while its prize counter says non-cash",
+      "detail": "DSH Hacks V2 is titled '($100k+ in prizes!)' but Devpost's own prize counter for the event reads '5 non-cash prizes'. The counter is the operator's structured field, so this row is not treated as a cash opportunity.",
+      "sources": [
+        {
+          "label": "Devpost hackathon listing",
+          "url": "https://devpost.com/hackathons"
+        },
+        {
+          "label": "DSH Hacks V2 event page",
+          "url": "https://dsh-hacks-v2.devpost.com/"
+        }
+      ]
+    },
+    {
+      "id": "arc-deadline-drift",
+      "severity": "low",
+      "title": "ARC Prize countdown and stated paper deadline disagree by about a day",
+      "detail": "ARC Prize's competition page states papers are due 2026-11-08 while Kaggle's card for the same paper track displayed '8 days to go' on 2026-11-01. The operator's own date is recorded and the discrepancy is flagged.",
+      "sources": [
+        {
+          "label": "ARC Prize 2026 key dates",
+          "url": "https://arcprize.org/competitions/2026"
+        },
+        {
+          "label": "Kaggle competitions hub",
+          "url": "https://www.kaggle.com/competitions"
+        }
+      ]
+    },
+    {
+      "id": "superseded-document",
+      "severity": "medium",
+      "title": "The reference project's older '100 verified contests' document declares itself superseded",
+      "detail": "100_VERIFIED_CONTESTS.md in the reference repository describes itself as superseded and contains claims the project later corrected. It was not used as evidence for anything on this site.",
+      "sources": [
+        {
+          "label": "100_VERIFIED_CONTESTS.md",
+          "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/100_VERIFIED_CONTESTS.md"
+        }
+      ]
+    },
+    {
+      "id": "cbs-games-page-404",
+      "severity": "low",
+      "title": "A CBS Sports games landing path returns a moved-or-deleted page",
+      "detail": "https://www.cbssports.com/games/ returned 'this page has been moved or deleted' on 2026-11-01. The deep rules URLs used on this site (/fantasy/football/games/pickem/rules and /fantasy/college-football/games/pickem/rules) do load. Deep links on media sites rot; always confirm the live rules page.",
+      "sources": [
+        {
+          "label": "CBS Sports games path (404 on 2026-11-01)",
+          "url": "https://www.cbssports.com/games/"
+        },
+        {
+          "label": "CBS Pro Football Pick'em rules (loads)",
+          "url": "https://www.cbssports.com/fantasy/football/games/pickem/rules"
+        }
+      ]
+    },
+    {
+      "id": "category-coverage-gaps",
+      "severity": "medium",
+      "title": "Four categories have no verified entries yet",
+      "detail": "Skill tournaments, market simulations, pool software and directories remain lead-only after this pass. Nothing from those categories was found that could be confirmed free-to-enter with a cash prize from an official page that also set out rules. They are published as leads and marked as a coverage gap rather than padded with unverified rows.",
+      "sources": [
+        {
+          "label": "Reference ledger data file",
+          "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "reference-ux",
+      "severity": "high",
+      "title": "The reference site is one long page with no search, no filters and 206 entries",
+      "detail": "The reference site's own description says 'No search box, no filters: just scroll'. On a phone that means a very long scroll through 206 entries with repetitive labels, and no way to sort by deadline or prize. That is the usability problem this rebuild addresses: a dashboard with shortlists, per-category pages, search, filters, sorting and mobile card layouts.",
+      "sources": [
+        {
+          "label": "Reference site",
+          "url": "https://karagemop466-tech.github.io/FreeMoneyApps/"
+        }
+      ]
+    },
+    {
+      "id": "unreachable-not-certified",
+      "severity": "low",
+      "title": "External links on lead rows are not certified reachable",
+      "detail": "This build environment can only resolve DNS for arbitrary domains, not fetch them, so every external link was not opened. DNS was checked for all 223 hostnames (six failed). Reachability of individual deep URLs was spot-checked on the operator pages listed on the Method page. Treat a lead link as a research pointer, not a live contest.",
+      "sources": [
+        {
+          "label": "Method page (published site)",
+          "url": "https://sassnarep3-star.github.io/Own1/method.html"
+        }
+      ]
+    }
+  ]
+}
