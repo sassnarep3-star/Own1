@@ -17,7 +17,7 @@ Two rules govern every page:
 ## 2. Where the data comes from
 
 - **Inherited catalog (211 rows):** names, categories and links imported from [FreeMoneyApps `assets/data.js`](https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/data.js) (206 listings, stamped 2026-08-19), plus five leads added during audits. Its prize, fee and status claims were **not** trusted. Its older `100_VERIFIED_CONTESTS.md` is self-described as superseded and was not used.
-- **Verified layer (17 entries, 44 quoted facts):** each was read on 2026-11-01 from the operator's own page; the quote and URL are stored in [`research/facts.mjs`](../research/facts.mjs) and rendered on the entry's page.
+- **Verified layer (20 entries, 53 quoted facts):** each was read on 2026-11-01 from the operator's own page; the quote and URL are stored in [`research/facts.mjs`](../research/facts.mjs) and rendered on the entry's page.
 - **Parity checked (4 entries):** boards requiring JavaScript or sign-in (Zindi, Topcoder, AIcrowd, XPRIZE) rendered no listings, so nothing was asserted.
 - **Link health (203 unique URLs):** an automated runner requested every outbound link and recorded the real HTTP result. 166 responded, 10 failed outright, 27 were bot-blocked.
 
@@ -26,9 +26,9 @@ Two rules govern every page:
 | Measure | Value |
 | --- | --- |
 | Leads in the ledger | 211 |
-| Official pages read and quoted | 17 |
-| Partly checked (no assertion possible) | 4 |
-| Unverified leads, all fields blank | 190 |
+| Official pages read and quoted | 20 |
+| Partly checked (no assertion possible) | 6 |
+| Unverified leads, all fields blank | 185 |
 | Confirmed free entry | 10 |
 | Confirmed paid entry (corrected) | 1 |
 | Confirmed cash prize | 13 |
@@ -78,7 +78,7 @@ Bounded, objectively-scored work: model-building (Kaggle, DrivenData, ARC), fore
 
 1. **This week:** Codex x TwitchCon closes 2026-11-02 (assistants allowed, highest agent fit in the ledger). US Midterms closes 2026-11-04 at low effort. Both are free.
 2. **Next 30 days:** the PayPal hackathon (2026-11-12) and the Metaculus Cup / FutureEval windows for recurring practice.
-3. **Ongoing:** treat the 190 unverified rows as a *reading queue*, not an opportunity list. Verification is one page-read per row, and the site now makes adding one a one-file edit.
+3. **Ongoing:** treat the 185 unverified rows as a *reading queue*, not an opportunity list. Verification is one page-read per row, and the site now makes adding one a one-file edit.
 
 ## 8. Known limits
 
