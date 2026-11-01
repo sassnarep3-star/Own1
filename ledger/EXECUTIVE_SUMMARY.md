@@ -8,7 +8,7 @@ Collect, organize and analyze free-to-enter competitions that can pay real cash,
 ## What was built
 - A GitHub Pages site (this repo): dashboard, verified **Top picks**, 9 category pages, an all-entries table with search/filters, a **Flagged for Review** page, a method/verification log, and CSV/JSON data exports.
 - Mobile-first layout: tables collapse to cards on phones, no web fonts, search and filters on every table.
-- Offline audit and build scripts (`scripts/audit.cjs`, `scripts/build.cjs`, `scripts/linkcheck.cjs`) so results are reproducible.
+- Offline audit and build scripts (`scripts/audit.js`, `scripts/build.js`, `scripts/linkcheck.js`) so results are reproducible.
 
 ## Verification result (read this first)
 | Outcome | Rows |

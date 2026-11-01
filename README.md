@@ -1,64 +1,56 @@
 # Prize Atlas
 
-A mobile-first dashboard of **free-to-enter competitions that pay real cash**, built so that every displayed fact traces to a quoted official page and every gap is visible.
+A static, mobile-first dashboard for **free-to-enter competitions that pay real cash** — built from the reference ledger at [karagemop466-tech/FreeMoneyApps](https://karagemop466-tech.github.io/FreeMoneyApps/), with every claim either read on an official page or published as blank and flagged.
 
-**Live:** https://sassnarep3-star.github.io/Own1/
+**Live site:** https://sassnarep3-star.github.io/Own1/
 
-- **211 leads** in the ledger, imported from the reference catalog by name and link only.
-- **20 entries** have had their official page read on 2026-11-01, with the exact quotes stored in `research/facts.mjs`.
-- **185 leads remain unverified** with prize, fee and deadline cells deliberately blank.
-- **203 outbound links** were tested by an automated runner: 166 responded, 10 failed outright, 27 were bot-blocked.
+## What is in here
 
-Start with the [executive summary](EXECUTIVE_SUMMARY.md), then the [sources ledger](https://sassnarep3-star.github.io/Own1/sources.html) and the [flagged queue](https://sassnarep3-star.github.io/Own1/review.html).
+| Path | What it is |
+| --- | --- |
+| `index.html` | Dashboard: key figures, triage shortlist, category cards, all 212 rows in one filterable table, executive summary |
+| `category/*.html` | Nine category pages (sports, tech, forecasting, creative, market, skill, trivia, pools, directories) |
+| `analysis.html` | Findings: coverage, where the money is, free-entry traps, the link problem, how to use a coding agent |
+| `methodology.html` | The verification rules and the exact official pages read, per row |
+| `review.html` | Flagged for review: unverified rows, dead/reused links, contradictions, paid-entry traps |
+| `supplemental/index.html` | Independent second audit (three hackathon leads, seven extra flags) |
+| `archive/*.html` | An alternate build of this research by a parallel session, kept working and linked from the method page |
+| `data/verification.json`, `data/audit.json`, `data/ledger.json` | Verbatim-quote verification of 12 rows, 11 rule-based audit findings over the imported ledger, and the mirrored ledger |
+| `entry/*.html`, `sources.html`, `playbook.html` | Fourth build by a parallel session: per-lead pages, a source ledger and a competition playbook |
+| `ledger/index.html` | Third build by a parallel session: all 206 imported rows with an automated audit, 28 rows checked against official pages, its own flagged and method pages |
+| `data/verification/batchA.jsonl` | That session's 28 row-by-row official-page reads; its verified and discrepancy rows are attributed in the main table |
+| `data/entries.json` | The dataset: 212 rows with per-row `evidence`, `entryFree` and `flags` |
+| `data/triage.json` | Editorial scoring inputs, one rationale per checked row |
+| `tools/build.mjs` | Zero-dependency generator that renders every page from the data |
+| `tests/validate.mjs` | Data contract + link/asset + mobile checks, run in CI |
 
-## Local preview
+`EXECUTIVE_SUMMARY.md`, `REQUIREMENTS.md`, `research/SOURCES.md` and `COORDINATION.md` carry the written analysis and the task log.
 
-No dependencies, no framework, no build tooling to install.
+## Data policy
+
+- **Checked** rows were read on the linked operator page on the date in their `evidence.checkedAt` field. Prize, entry cost, deadline and eligibility are copied from that page.
+- **Unverified** rows are leads only. Their prize, entry-cost, deadline, kind and eligibility cells are forced blank by `tests/validate.mjs`; they display an *Unverified* badge.
+- Blank means *not confirmed* — never zero, never free. Only an explicit statement such as "The Competition is free to enter" produces a *Free entry* badge.
+- Nothing is converted, combined, rounded, extrapolated or estimated; no win probability is published.
+
+## Local preview and checks
 
 ```bash
-python3 -m http.server 8000 --bind 0.0.0.0     # then open the preview URL
-node scripts/build-data.mjs && node scripts/build-site.mjs   # regenerate pages
-node tests/validate.mjs                        # the verification gate
+python3 -m http.server 8000 --bind 0.0.0.0   # then open the preview
+node tools/build.mjs                          # regenerate all HTML from data/
+node tests/validate.mjs                       # must print OK
 ```
 
-## How the data works
+No dependencies, no build step at deploy time. GitHub Pages serves the repository root of `main` (`.nojekyll` present).
 
-```
-research/facts.mjs      hand-written evidence: URL, fact, exact quote, date read  ← the only place values enter
-research/legacy-leads.json  the inherited catalog: names, categories, links only
-research/flags.mjs      cross-cutting irregularities, each with a source
-data/link-health.json   machine-measured HTTP status of every outbound URL
-        ↓  node scripts/build-data.mjs
-data/entries.json       merged dataset + editorial fit score
-        ↓  node scripts/build-site.mjs
-index.html · category/* · entry/* · review.html · sources.html · playbook.html · data/site-data.js
-```
+## Adding or verifying a row
 
-### Adding a verified fact
-
-1. Read the organiser's own page. Not a listicle, not the reference catalog.
-2. Add or extend the entry in `research/facts.mjs`: `officialUrl`, the field, and one `evidence` item per claim containing the **exact quote**.
-3. Leave any field the page does not state as `null`/`''`. Do not fill it in.
-4. Run the two build scripts and `node tests/validate.mjs`.
-
-### What the gate enforces
-
-`tests/validate.mjs` fails the build if: an unverified row carries a prize, fee, deadline or fit score; a checked row has no evidence; quoted evidence comes from a different host than the row links; a local link is broken; two elements share an id on a page; the client payload disagrees with the dataset; or a checked row is missing from `research/facts.mjs`.
-
-### Link health
-
-`.github/workflows/link-health.yml` requests every outbound URL on a GitHub runner (weekly, or on demand) and publishes the report to the `link-health-data` branch. Copy it to `data/link-health.json` and rebuild to refresh the per-row link status. Interpretation baked into the UI: **403/429 = bot block, not a dead page**; DNS, TLS, timeout and 404 = hard failure.
-
-## Automation
-
-- `validate.yml` — runs the verification gate on every push and PR.
-- `link-health.yml` — non-blocking; records real HTTP results, never gates a deploy.
-
-## Judgement, clearly labelled
-
-The **fit score** on each checked entry is editorial, not evidence: free entry (40) + cash (20) + AI-agent fit (4–20) + effort (3–10) + urgency (0–10). It ranks *how much is confirmed and how well the work suits an agent*, not the odds of winning. The [playbook](https://sassnarep3-star.github.io/Own1/playbook.html) explains the reasoning; the [sources page](https://sassnarep3-star.github.io/Own1/sources.html) holds the facts.
-
-Research, not financial, legal or tax advice.
+1. Open the operator's official page; copy the exact wording for prize, entry cost, deadline and eligibility.
+2. Fill only what the page states. Leave everything else blank.
+3. Add an `evidence` block: `url`, `checkedAt`, `confirmed[]`, `notStated[]`, `limits`.
+4. Set `sourceStatus` to `checked` and `entryFree` to `yes`, `no` or blank.
+5. Add a `triage.json` entry with a written rationale if the row should appear in the shortlist.
+6. Run `node tools/build.mjs && node tests/validate.mjs`, then commit.
 
 ## `/atlas` — the operator-verified subsite
 
@@ -79,7 +71,7 @@ Atlas pages: `atlas/index.html` (dashboard), `atlas/shortlist.html`, `atlas/cate
 `atlas/category/<id>.html`, `atlas/summary.html`, `atlas/review.html`, `atlas/method.html`,
 `atlas/ledger-pass.html`.
 
-Its own gate: `node tests/validate-atlas.mjs` → **3,773 assertions**, including "no verified field is
+Its own gate: `node tests/validate-atlas.mjs` — 3,700+ assertions, including "no verified field is
 copied from a legacy claim", "lead rows never populate prize/fee/deadline", "every internal link in the
 repository resolves" and "every published page is reachable from the dashboard". CI rebuilds `atlas/`,
 fails on any diff, then runs that gate.

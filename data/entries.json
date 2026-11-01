@@ -51,9 +51,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:06.680Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.aicrowd.com/challenges"
+   "hardFail": false
   }
  },
  {
@@ -118,9 +116,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:06.774Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://arcprize.org/competitions/2026"
+   "hardFail": false
   }
  },
  {
@@ -153,9 +149,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:06.775Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.codabench.org/"
+   "hardFail": false
   }
  },
  {
@@ -208,7 +202,7 @@
   "flags": [
    "free-entry-confirmed",
    "cash-confirmed",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": {
    "score": 93,
@@ -240,9 +234,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:06.777Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://twitchcon-codex.devpost.com/rules"
+   "hardFail": false
   }
  },
  {
@@ -275,9 +267,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:06.778Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://hub.crunchdao.com/competitions/structural-break-real-time"
+   "hardFail": false
   }
  },
  {
@@ -303,7 +293,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -311,9 +301,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:06.779Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://devpost.com/hackathons"
+   "hardFail": false
   }
  },
  {
@@ -373,9 +361,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:06.780Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.drivendata.org/competitions/"
+   "hardFail": false
   }
  },
  {
@@ -440,9 +426,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:06.781Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.drivendata.org/competitions/306/competition-doe-gems/"
+   "hardFail": false
   }
  },
  {
@@ -475,9 +459,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:06.941Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://grand-challenge.org/challenges/"
+   "hardFail": false
   }
  },
  {
@@ -510,9 +492,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:06.982Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.challenge.gov/"
+   "hardFail": false
   }
  },
  {
@@ -572,9 +552,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.048Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.kaggle.com/competitions"
+   "hardFail": false
   }
  },
  {
@@ -634,9 +612,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.185Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.kaggle.com/competitions/nfl-big-data-bowl-2027"
+   "hardFail": false
   }
  },
  {
@@ -680,7 +656,7 @@
    "free-entry-confirmed",
    "cash-confirmed",
    "prize-amount-not-stated",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": {
    "score": 93,
@@ -712,9 +688,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.242Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://paypalaihackathon.devpost.com/rules"
+   "hardFail": false
   }
  },
  {
@@ -747,9 +721,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.267Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://service.signate.jp/"
+   "hardFail": false
   }
  },
  {
@@ -782,9 +754,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.276Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://tianchi.aliyun.com/competition/entrance/532277?lang=en-us"
+   "hardFail": false
   }
  },
  {
@@ -840,9 +810,7 @@
    "status": 404,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.328Z",
-   "hardFail": true,
-   "state": "dead",
-   "finalUrl": "https://www.topcoder.com/challenges"
+   "hardFail": true
   }
  },
  {
@@ -897,9 +865,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.331Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.xprize.org/competitions"
+   "hardFail": false
   }
  },
  {
@@ -954,9 +920,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.498Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://zindi.world/competitions"
+   "hardFail": false
   }
  },
  {
@@ -989,9 +953,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.501Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.bridgewater.com/forecasting-the-future-a-modern-economics-challenge"
+   "hardFail": false
   }
  },
  {
@@ -1017,7 +979,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -1025,9 +987,7 @@
    "status": 503,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.518Z",
-   "hardFail": false,
-   "state": "server-error",
-   "finalUrl": "https://dash.hypermind.com/hypermind/app.html"
+   "hardFail": false
   }
  },
  {
@@ -1065,7 +1025,7 @@
   "flags": [
    "free-entry-confirmed",
    "cash-confirmed",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": {
    "score": 89,
@@ -1097,9 +1057,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.703Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://www.metaculus.com/tournaments/"
+   "hardFail": false
   }
  },
  {
@@ -1137,7 +1095,7 @@
   "flags": [
    "free-entry-confirmed",
    "cash-confirmed",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": {
    "score": 92,
@@ -1169,9 +1127,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.757Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://www.metaculus.com/tournament/midterms-2026/"
+   "hardFail": false
   }
  },
  {
@@ -1197,7 +1153,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -1205,9 +1161,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.761Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://support.99designs.com/hc/en-us/articles/204761045-What-is-a-design-contest"
+   "hardFail": false
   }
  },
  {
@@ -1240,9 +1194,7 @@
    "status": 202,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.769Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.crowdspring.com/"
+   "hardFail": false
   }
  },
  {
@@ -1275,9 +1227,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.785Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.designcrowd.com/help/article/what-are-community-contests-and-how-do-i-start-participating"
+   "hardFail": false
   }
  },
  {
@@ -1342,9 +1292,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.794Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.epoty.org/"
+   "hardFail": false
   }
  },
  {
@@ -1377,9 +1325,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.884Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.freelancer.com/faq/topic.php?id=33"
+   "hardFail": false
   }
  },
  {
@@ -1412,9 +1358,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.887Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.hipa.ae/"
+   "hardFail": false
   }
  },
  {
@@ -1469,9 +1413,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.892Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://istanbulphotoawards.com/"
+   "hardFail": false
   }
  },
  {
@@ -1504,9 +1446,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.905Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.kinolime.com/competitions"
+   "hardFail": false
   }
  },
  {
@@ -1539,9 +1479,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:07.966Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://prizefest.com/photo/rules/"
+   "hardFail": false
   }
  },
  {
@@ -1575,9 +1513,7 @@
    "status": 0,
    "error": "CERT_HAS_EXPIRED",
    "checkedAt": "2026-11-01T13:47:08.025Z",
-   "hardFail": true,
-   "state": "dead",
-   "finalUrl": "https://pensacolabeachsongwritersfestival.com/2026-songwriting-competition/"
+   "hardFail": true
   }
  },
  {
@@ -1651,9 +1587,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.160Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.worldphoto.org/sony-world-photography-awards"
+   "hardFail": false
   }
  },
  {
@@ -1686,9 +1620,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.288Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://spie.org/"
+   "hardFail": false
   }
  },
  {
@@ -1737,7 +1669,7 @@
    "paid-entry-confirmed",
    "cash-confirmed",
    "paid-entry-vs-ledger",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": {
    "score": 33,
@@ -1765,9 +1697,7 @@
    "status": 307,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.304Z",
-   "hardFail": false,
-   "state": "redirect",
-   "finalUrl": "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest"
+   "hardFail": false
   }
  },
  {
@@ -1800,9 +1730,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.387Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://vocal.media/resources/challenges-frequently-asked-questions"
+   "hardFail": false
   }
  },
  {
@@ -1867,9 +1795,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.495Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.rmets.org/weather-photographer-of-the-year"
+   "hardFail": false
   }
  },
  {
@@ -1917,7 +1843,7 @@
   "flags": [
    "free-entry-confirmed",
    "cash-confirmed",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": {
    "score": 73,
@@ -1949,9 +1875,7 @@
    "status": 307,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.529Z",
-   "hardFail": false,
-   "state": "redirect",
-   "finalUrl": "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free"
+   "hardFail": false
   }
  },
  {
@@ -2006,9 +1930,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.533Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.worldpressphoto.org/"
+   "hardFail": false
   }
  },
  {
@@ -2041,9 +1963,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.670Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.nypl.org/about/awards/young-lions-fiction-award/submission-form"
+   "hardFail": false
   }
  },
  {
@@ -2076,9 +1996,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.716Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://aleagues.com.au/news/official-a-leagues-fantasy-the-handbook/"
+   "hardFail": false
   }
  },
  {
@@ -2111,9 +2029,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.752Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.afl.com.au/fantasy"
+   "hardFail": false
   }
  },
  {
@@ -2146,9 +2062,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.842Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.afl.com.au/news/1469992/play-afl-tipping-25k-up-for-grabs-new-game-launched"
+   "hardFail": false
   }
  },
  {
@@ -2181,9 +2095,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.867Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.afl.com.au/aflw/news/1550791/win-a-37k-toyota-huge-prizes-on-offer-in-aflw-fantasy"
+   "hardFail": false
   }
  },
  {
@@ -2216,9 +2128,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.879Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.afl.com.au/aflw/news/1555826/aflw-tipping-is-back-for-2026-with-new-games-and-huge-prizes-to-be-won"
+   "hardFail": false
   }
  },
  {
@@ -2244,7 +2154,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -2252,9 +2162,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.900Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://agentmma.com/contests/next"
+   "hardFail": false
   }
  },
  {
@@ -2287,9 +2195,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.937Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://andysbetclub.co.uk/predictor-game/"
+   "hardFail": false
   }
  },
  {
@@ -2322,9 +2228,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.967Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://apexfantasyleagues.com/"
+   "hardFail": false
   }
  },
  {
@@ -2350,7 +2254,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -2358,9 +2262,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:08.983Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://www.atptour.com/en/news/atp-launches-official-fantasy-game-2026"
+   "hardFail": false
   }
  },
  {
@@ -2393,9 +2295,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.006Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.thesportsgeek.com/contests/beat-the-geek/"
+   "hardFail": false
   }
  },
  {
@@ -2428,9 +2328,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.049Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.superleague.co.uk/prizes-winners"
+   "hardFail": false
   }
  },
  {
@@ -2463,9 +2361,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.159Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.superleague.co.uk/article/5728/play-super-league-predictor-in-2026"
+   "hardFail": false
   }
  },
  {
@@ -2498,9 +2394,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.177Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.premierleague.com/"
+   "hardFail": false
   }
  },
  {
@@ -2533,9 +2427,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.179Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.bundesliga.com/en/bundesliga/news/official-fantasy-manager-season-2026-27-new-features-38255"
+   "hardFail": false
   }
  },
  {
@@ -2568,9 +2460,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.217Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://buzzfantasygolf.com/services/FreeGameRules"
+   "hardFail": false
   }
  },
  {
@@ -2603,74 +2493,41 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.357Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.cbssports.com/fantasy/college-football/games/pickem/rules"
+   "hardFail": false
   }
  },
  {
   "id": "cbs-pro-pickem",
   "name": "CBS Sports Pro Football Pick'em",
   "category": "sports",
-  "status": "verified",
-  "operator": "CBS Interactive Inc.",
-  "officialUrl": "https://www.cbssports.com/fantasy/football/games/pickem/rules/",
-  "freeEntry": true,
-  "cashPrize": true,
+  "status": "unverified",
+  "operator": "",
+  "officialUrl": "https://www.cbssports.com/fantasy/football/games/pickem/rules",
+  "freeEntry": null,
+  "cashPrize": null,
   "prize": "",
-  "deadline": "2027-01-10",
-  "cycle": "Challenge period 2026-09-09 → 2027-01-10; 18 weekly contests",
-  "eligibility": "18+ (or age of majority); legal residents of the 50 US states and DC only — Puerto Rico and all US territories excluded",
-  "effort": "low",
-  "agentFit": "medium",
-  "notes": "The contest is free and open only to US-state residents. Prize amounts sit in section 3 of the rules, which was not read in this session, so the prize cell is blank rather than copied from another session's unsourced note.",
-  "evidence": [
-   {
-    "url": "https://www.cbssports.com/fantasy/football/games/pickem/rules/",
-    "fact": "No purchase or entry fee; eligibility",
-    "quote": "NO PURCHASE OR ENTRY FEE IS NECESSARY TO ENTER OR WIN. ... LEGAL RESIDENTS OF ONE OF THE FIFTY (50) UNITED STATES OR THE DISTRICT OF COLUMBIA (FOR PURPOSES OF CLARITY, PUERTO RICO AND ALL US TERRITORIES AND POSSESSIONS ARE EXPRESSLY EXCLUDED); (C) (18) YEARS OLD OR AGE OF MAJORITY"
-   },
-   {
-    "url": "https://www.cbssports.com/fantasy/football/games/pickem/rules/",
-    "fact": "Free to play and challenge dates",
-    "quote": "The Challenge is FREE to play. No purchase, wireless device or entry fee necessary to enter or win. ... The Challenge commences on September 9, 2026 and is scheduled to end on January 10, 2027 ... There will be eighteen (18) Weekly Contest Periods"
-   }
-  ],
-  "readOn": "2026-11-01",
+  "deadline": null,
+  "cycle": "",
+  "eligibility": "",
+  "effort": null,
+  "agentFit": null,
+  "notes": "",
+  "evidence": [],
+  "readOn": null,
   "legacyStatus": "live",
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "free-entry-confirmed",
-   "cash-confirmed",
-   "prize-amount-not-stated"
+   "official-page-not-read"
   ],
-  "fit": {
-   "score": 85,
-   "parts": [
-    [
-     "Confirmed free entry",
-     40
-    ],
-    [
-     "Confirmed cash prize",
-     20
-    ],
-    [
-     "AI-agent fit: medium",
-     12
-    ],
-    [
-     "Effort: low",
-     10
-    ],
-    [
-     "Deadline in 70 day(s)",
-     3
-    ]
-   ]
-  },
-  "link": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.369Z",
+   "hardFail": false
+  }
  },
  {
   "id": "cev-predictor",
@@ -2702,9 +2559,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.399Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://championsleague.cev.eu/en/articles/cev-champions-league-volley-2026/win-fantastic-prizes-with-the-clvolleyw-predictor-game/"
+   "hardFail": false
   }
  },
  {
@@ -2730,7 +2585,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -2738,9 +2593,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.460Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://cevmatchpredictor.zendesk.com/hc/en-us/articles/12463995830941-CEV-Champions-League-Fantasy-Terms-Conditions"
+   "hardFail": false
   }
  },
  {
@@ -2773,9 +2626,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.522Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.dartscorner.co.uk/pages/premier-league-darts-predictor"
+   "hardFail": false
   }
  },
  {
@@ -2808,9 +2659,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.524Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.gambling.com/games"
+   "hardFail": false
   }
  },
  {
@@ -2843,78 +2692,41 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.529Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.espn.com/games/college-football-bowl-mania-2025/picks"
+   "hardFail": false
   }
  },
  {
   "id": "espn-cfb",
   "name": "ESPN College Football Pick'em",
   "category": "sports",
-  "status": "verified",
-  "operator": "ESPN (Disney Streaming Services LLC)",
-  "officialUrl": "https://fantasy.espn.com/games/college-football-pickem-2026/howtoplay",
-  "freeEntry": true,
-  "cashPrize": true,
-  "prize": "$86,000 total — $20,000 grand prizes in Standard, Spread and Confidence; 14 × $500 weekly per mode; $5,000 random drawing",
+  "status": "unverified",
+  "operator": "",
+  "officialUrl": "https://fantasy.espn.com/games/college-football-pickem-2026/make-picks",
+  "freeEntry": null,
+  "cashPrize": null,
+  "prize": "",
   "deadline": null,
-  "cycle": "College football season — 14 weeks",
-  "eligibility": "Void in Puerto Rico, other U.S. territories, foreign territories and Quebec; ages 13-17 may play but cannot win",
-  "effort": "low",
-  "agentFit": "medium",
-  "notes": "The same page's FAQ still says \"up to five total\" entries, as on the NFL game — re-check the live UI.",
-  "evidence": [
-   {
-    "url": "https://fantasy.espn.com/games/college-football-pickem-2026/howtoplay",
-    "fact": "Free to play",
-    "quote": "Are ESPN games free to play? Yes! Every game we offer is completely free."
-   },
-   {
-    "url": "https://fantasy.espn.com/games/college-football-pickem-2026/howtoplay#Prizes",
-    "fact": "Prize breakdown",
-    "quote": "$86,000 in total prize money is up for grabs! Three (3) GRAND PRIZES of $20,000 each for the highest-finishing entry in the Standard, Spread and Confidence game modes ($60,000 in Total Prizes) ... Fourteen (14) WEEKLY PRIZES of $500 each ... One (1) RANDOM DRAWING PRIZE of $5,000 for making full picks in all 3 game modes every week of the season"
-   },
-   {
-    "url": "https://fantasy.espn.com/games/college-football-pickem-2026/howtoplay#CompleteRules",
-    "fact": "No purchase necessary; eligibility carve-outs",
-    "quote": "NO PURCHASE OR PAYMENT NECESSARY TO ENTER OR WIN. ... VOID IN PUERTO RICO, OTHER U.S. TERRITORIES AND FOREIGN TERRITORIES, QUEBEC AND WHERE PROHIBITED BY LAW."
-   }
-  ],
-  "readOn": "2026-11-01",
+  "cycle": "",
+  "eligibility": "",
+  "effort": null,
+  "agentFit": null,
+  "notes": "",
+  "evidence": [],
+  "readOn": null,
   "legacyStatus": "live",
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "free-entry-confirmed",
-   "cash-confirmed"
+   "official-page-not-read"
   ],
-  "fit": {
-   "score": 85,
-   "parts": [
-    [
-     "Confirmed free entry",
-     40
-    ],
-    [
-     "Confirmed cash prize",
-     20
-    ],
-    [
-     "AI-agent fit: medium",
-     12
-    ],
-    [
-     "Effort: low",
-     10
-    ],
-    [
-     "No published deadline",
-     3
-    ]
-   ]
-  },
-  "link": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.560Z",
+   "hardFail": false
+  }
  },
  {
   "id": "espn-cfp-bracket",
@@ -2946,9 +2758,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.606Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.espn.com/games/college-football-playoff-challenge-2025/mostpickedchampions"
+   "hardFail": false
   }
  },
  {
@@ -2981,9 +2791,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.608Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://eredivisie.com/news/this-is-espn-fantasy-voetbal-the-official-game-of-the-vriendenloterij-eredivisie/"
+   "hardFail": false
   }
  },
  {
@@ -3016,9 +2824,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.649Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.espn.com/games/mens-knockout-bracket-challenge-2026/howtoplay"
+   "hardFail": false
   }
  },
  {
@@ -3051,9 +2857,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.662Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.espn.com/games/bracket"
+   "hardFail": false
   }
  },
  {
@@ -3086,9 +2890,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.709Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.espn.com/games/nba-playoff-challenge-2026/howtoplay"
+   "hardFail": false
   }
  },
  {
@@ -3163,9 +2965,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.889Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay"
+   "hardFail": false
   }
  },
  {
@@ -3198,9 +2998,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.978Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.espn.com/games/nfl-playoff-predictor-2026/make-picks"
+   "hardFail": false
   }
  },
  {
@@ -3233,9 +3031,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.980Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.espn.com/games/nfl-survivor-2026/make-picks"
+   "hardFail": false
   }
  },
  {
@@ -3268,9 +3064,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.993Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.espn.com/games/nfl-win-totals-2026/make-picks"
+   "hardFail": false
   }
  },
  {
@@ -3303,9 +3097,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.994Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.espn.com/games/nfl-playoff-football-challenge-2026/make-picks"
+   "hardFail": false
   }
  },
  {
@@ -3338,9 +3130,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.006Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.espn.com/games/nhl-playoff-hockey-challenge-2026/group"
+   "hardFail": false
   }
  },
  {
@@ -3373,9 +3163,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.017Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.espn.com/games/mens-tournament-challenge-eliminator-2026/howtoplay"
+   "hardFail": false
   }
  },
  {
@@ -3408,9 +3196,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.084Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.espn.com/games/tournament-challenge-bracket-women-2026/leaderboard"
+   "hardFail": false
   }
  },
  {
@@ -3436,7 +3222,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -3444,9 +3230,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.112Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://esportsworldcup.com/en/play/fantasy/league-of-legends"
+   "hardFail": false
   }
  },
  {
@@ -3472,7 +3256,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -3480,9 +3264,7 @@
    "status": 429,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.122Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://www.euroleaguebasketball.net/euroleague/fantasy/prizes-and-rules/"
+   "hardFail": false
   }
  },
  {
@@ -3515,9 +3297,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.125Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.formula1.com/en/latest/article/boost-the-fun-with-friends-and-family-this-season-f1-fantasy-is-back.2xVBBN90riZiaYXeYhOe0Z"
+   "hardFail": false
   }
  },
  {
@@ -3551,9 +3331,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.128Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://betfanatics.com/"
+   "hardFail": false
   }
  },
  {
@@ -3586,9 +3364,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.177Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.premierleague.com/"
+   "hardFail": false
   }
  },
  {
@@ -3614,7 +3390,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -3622,9 +3398,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.168Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://www.europeantour.com/dpworld-tour/news/articles/detail/fantasy-dp-world-tour-is-back/"
+   "hardFail": false
   }
  },
  {
@@ -3657,9 +3431,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.226Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.efl.com/prizes"
+   "hardFail": false
   }
  },
  {
@@ -3692,9 +3464,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.267Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.fantasyfootballscout.co.uk/2026/08/14/win-5000-worth-of-prizes-with-fantasy-football-scout-in-2026-27"
+   "hardFail": false
   }
  },
  {
@@ -3728,9 +3498,7 @@
    "status": 0,
    "error": "UND_ERR_CONNECT_TIMEOUT",
    "checkedAt": "2026-11-01T13:47:10.348Z",
-   "hardFail": true,
-   "state": "dead",
-   "finalUrl": "https://fantasygaelicfootball.com/"
+   "hardFail": true
   }
  },
  {
@@ -3764,9 +3532,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.425Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://golfgamecentral.com/fantasy-challenge.php"
+   "hardFail": false
   }
  },
  {
@@ -3793,7 +3559,7 @@
   "flags": [
    "official-page-not-read",
    "source-not-operator",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -3801,9 +3567,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.477Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://www.leicestertigers.com/news/fantasy-premiership-2223-launch"
+   "hardFail": false
   }
  },
  {
@@ -3836,9 +3600,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.479Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://playfantasyrugby.com/rugby-championship/help/game-guidelines"
+   "hardFail": false
   }
  },
  {
@@ -3871,9 +3633,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.497Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.fantasyfootballscout.co.uk/mini-leagues"
+   "hardFail": false
   }
  },
  {
@@ -3906,9 +3666,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.562Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.fantasyfootballscout.co.uk/2026/08/15/join-our-tattico-fantasy-serie-a-league-win-750-in-prizes"
+   "hardFail": false
   }
  },
  {
@@ -3941,9 +3699,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.497Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.fantasyfootballscout.co.uk/mini-leagues"
+   "hardFail": false
   }
  },
  {
@@ -3969,7 +3725,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -3977,9 +3733,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.578Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://www.fftoday.com/contests/draftcontest.php?o=3"
+   "hardFail": false
   }
  },
  {
@@ -4012,9 +3766,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.602Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.footballmad.co.uk/news/think-youre-a-fantasy-football-genius-prove-it-5-000-in-cash-prizes-up-for-grabs"
+   "hardFail": false
   }
  },
  {
@@ -4047,9 +3799,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.662Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.fiaformulae.com/en/news"
+   "hardFail": false
   }
  },
  {
@@ -4082,9 +3832,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.772Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.foxsports.com/fox-super-6"
+   "hardFail": false
   }
  },
  {
@@ -4117,9 +3865,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.773Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://draft.premierleague.com/"
+   "hardFail": false
   }
  },
  {
@@ -4152,9 +3898,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.177Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.premierleague.com/"
+   "hardFail": false
   }
  },
  {
@@ -4187,9 +3931,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.805Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.premierleague.com/en/news/4220308/the-second-chance-league-is-live-in-fantasy"
+   "hardFail": false
   }
  },
  {
@@ -4222,9 +3964,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.177Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.premierleague.com/"
+   "hardFail": false
   }
  },
  {
@@ -4257,9 +3997,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.177Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.premierleague.com/"
+   "hardFail": false
   }
  },
  {
@@ -4292,9 +4030,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.834Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://goaloracle.io/"
+   "hardFail": false
   }
  },
  {
@@ -4327,9 +4063,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.970Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.biathlonworld.com/inside-ibu/marketing/ibu-biathlon-ecup"
+   "hardFail": false
   }
  },
  {
@@ -4363,9 +4097,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.972Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://play.google.com/store/apps/editorial?id=mc_apps_edit_icc_fantasy_fcp&gl=GB&hl=en"
+   "hardFail": false
   }
  },
  {
@@ -4398,9 +4130,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:10.978Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.indycar.com/fantasychallenge/indycar/fullrules"
+   "hardFail": false
   }
  },
  {
@@ -4433,9 +4163,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:11.031Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.codesports.com.au/nocookies?a=A.flavipes"
+   "hardFail": false
   }
  },
  {
@@ -4469,9 +4197,7 @@
    "status": 0,
    "error": "ENOTFOUND",
    "checkedAt": "2026-11-01T13:47:11.060Z",
-   "hardFail": true,
-   "state": "dead",
-   "finalUrl": "https://supercoach.news.com.au/bbl/"
+   "hardFail": true
   }
  },
  {
@@ -4497,7 +4223,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -4505,9 +4231,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:11.141Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://supercoach.com.au/nrl"
+   "hardFail": false
   }
  },
  {
@@ -4540,9 +4264,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:11.153Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.laliga.com/en-GB/legal/condiciones-de-uso-fantasy"
+   "hardFail": false
   }
  },
  {
@@ -4575,9 +4297,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:11.222Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.therams.com/news/rams-pick-em-launching-2026-season-season-tickets-player-signed-merchandise-more-prizes-for-predictions"
+   "hardFail": false
   }
  },
  {
@@ -4610,9 +4330,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:11.234Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.lazyfpl.com/readers-mini-league"
+   "hardFail": false
   }
  },
  {
@@ -4645,9 +4363,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:11.401Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://ligue1.com/en/fantasy"
+   "hardFail": false
   }
  },
  {
@@ -4680,9 +4396,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:11.403Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://lolesports.com/en-US/news/msi-2026-primer"
+   "hardFail": false
   }
  },
  {
@@ -4716,9 +4430,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:11.432Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://thegolfwire.com/majors-challenge-perfect-team-contest-masters/"
+   "hardFail": false
   }
  },
  {
@@ -4751,9 +4463,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:11.526Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.mlb.com/apps/beat-the-streak/official-rules"
+   "hardFail": false
   }
  },
  {
@@ -4786,9 +4496,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:11.655Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.mlb.com/sponsorship/home-run-derby-pick-em/official-rules"
+   "hardFail": false
   }
  },
  {
@@ -4821,9 +4529,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:11.840Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.motogp.com/en/news/2026/02/18/motogp-fantasy-play-smart-and-win-big/874823"
+   "hardFail": false
   }
  },
  {
@@ -4857,9 +4563,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:11.872Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://motocrossactionmag.com/fantasy-mx-sx/"
+   "hardFail": false
   }
  },
  {
@@ -4892,9 +4596,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:11.961Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasygames.nascar.com/live/page/rules"
+   "hardFail": false
   }
  },
  {
@@ -4927,9 +4629,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:11.988Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.nba.com/news/2026-nba-pick-em-bracket-challenge-is-now-live"
+   "hardFail": false
   }
  },
  {
@@ -4962,9 +4662,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.002Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://ncga.org/majorschallenge"
+   "hardFail": false
   }
  },
  {
@@ -4997,9 +4695,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.021Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://nflpickwatch.com/contest/nfl/2026"
+   "hardFail": false
   }
  },
  {
@@ -5033,9 +4729,7 @@
    "status": 404,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.072Z",
-   "hardFail": true,
-   "state": "dead",
-   "finalUrl": "https://bracketchallenge.nhl.com/en/how-to-play"
+   "hardFail": true
   }
  },
  {
@@ -5061,7 +4755,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -5069,9 +4763,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.168Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://nrlfantasy.zendesk.com/hc/en-us/articles/15492067192861-Prizes"
+   "hardFail": false
   }
  },
  {
@@ -5097,7 +4789,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -5105,9 +4797,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.189Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://oddspedia.com/us/picks/capper-contests/wc2026-competition"
+   "hardFail": false
   }
  },
  {
@@ -5140,9 +4830,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.177Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.premierleague.com/"
+   "hardFail": false
   }
  },
  {
@@ -5176,9 +4864,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.202Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://ustrottingnews.com/ohhas-fantasy-league-returns-with-more-ways-to-win/"
+   "hardFail": false
   }
  },
  {
@@ -5211,9 +4897,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.177Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.premierleague.com/"
+   "hardFail": false
   }
  },
  {
@@ -5246,9 +4930,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.222Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasygolf.pgatour.com/prizes"
+   "hardFail": false
   }
  },
  {
@@ -5282,9 +4964,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.240Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://apps.apple.com/us/app/pick-em-sports-nfl-cfb/id6737177213"
+   "hardFail": false
   }
  },
  {
@@ -5317,9 +4997,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:09.177Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.premierleague.com/"
+   "hardFail": false
   }
  },
  {
@@ -5352,9 +5030,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.261Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.pooltracker.com/game_info/english-premier-league-predictor.asp"
+   "hardFail": false
   }
  },
  {
@@ -5387,9 +5063,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.278Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://premierleaguepredictor.co.uk/"
+   "hardFail": false
   }
  },
  {
@@ -5422,9 +5096,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.440Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.rotoballer.com/free-fantasy-football-tournament-rotoballer-challenge-2026/1900460"
+   "hardFail": false
   }
  },
  {
@@ -5457,9 +5129,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.510Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://runaces.com/racing/live-racing/fantasy-horse-racing-league/"
+   "hardFail": false
   }
  },
  {
@@ -5492,9 +5162,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.537Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasy.sixnationsrugby.com/m6n/"
+   "hardFail": false
   }
  },
  {
@@ -5527,9 +5195,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.541Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.skysports.com/football/news/12359927/sky-sports-fantasy-football-is-live-create-your-team-for-free-and-win-lb50-000"
+   "hardFail": false
   }
  },
  {
@@ -5562,9 +5228,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.544Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://nflmockdraft.app.splashsports.com/nfl-mock-draft/my-entry"
+   "hardFail": false
   }
  },
  {
@@ -5598,9 +5262,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.592Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://apps.apple.com/us/app/sports-predictor-fantasy-game/id1445043792"
+   "hardFail": false
   }
  },
  {
@@ -5633,9 +5295,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.732Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://cheltenhamfestival.fans/stable-stars/"
+   "hardFail": false
   }
  },
  {
@@ -5668,9 +5328,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.734Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://stablestakes.com/"
+   "hardFail": false
   }
  },
  {
@@ -5704,9 +5362,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.758Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://apps.apple.com/us/app/streak-contest/id1623816920"
+   "hardFail": false
   }
  },
  {
@@ -5739,9 +5395,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.774Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.streakforthecash.com/"
+   "hardFail": false
   }
  },
  {
@@ -5774,9 +5428,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.832Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.superbru.com/worldcup_predictor/prizes.php"
+   "hardFail": false
   }
  },
  {
@@ -5809,9 +5461,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.916Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.nbl.com.au/news/supercoach-nbl-start-picking-your-team-now"
+   "hardFail": false
   }
  },
  {
@@ -5844,9 +5494,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.960Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://tattico.com/"
+   "hardFail": false
   }
  },
  {
@@ -5879,9 +5527,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.971Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.teepster.com/the-open-championship/"
+   "hardFail": false
   }
  },
  {
@@ -5914,9 +5560,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:12.976Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fantasyfootball.telegraph.co.uk/"
+   "hardFail": false
   }
  },
  {
@@ -5950,9 +5594,7 @@
    "status": 0,
    "error": "ENOTFOUND",
    "checkedAt": "2026-11-01T13:47:12.991Z",
-   "hardFail": true,
-   "state": "dead",
-   "finalUrl": "https://fantasyracing.telegraph.co.uk/cheltenham/how-to-play"
+   "hardFail": true
   }
  },
  {
@@ -5986,9 +5628,7 @@
    "status": 0,
    "error": "ENOTFOUND",
    "checkedAt": "2026-11-01T13:47:13.110Z",
-   "hardFail": true,
-   "state": "dead",
-   "finalUrl": "https://fantazilig.tff.org/"
+   "hardFail": true
   }
  },
  {
@@ -6021,9 +5661,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:13.181Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.thecricketdraft.com/prizes"
+   "hardFail": false
   }
  },
  {
@@ -6056,9 +5694,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:13.197Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.thedraftpro.com/"
+   "hardFail": false
   }
  },
  {
@@ -6092,9 +5728,7 @@
    "status": 0,
    "error": "ERR_TLS_CERT_ALTNAME_INVALID",
    "checkedAt": "2026-11-01T13:47:13.245Z",
-   "hardFail": true,
-   "state": "dead",
-   "finalUrl": "https://favorites.actionnetwork.com/games/the-favorites"
+   "hardFail": true
   }
  },
  {
@@ -6127,9 +5761,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:13.441Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.thehundred.com/terms/fantasy"
+   "hardFail": false
   }
  },
  {
@@ -6162,9 +5794,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:13.457Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.dota2.com/home"
+   "hardFail": false
   }
  },
  {
@@ -6197,9 +5827,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:13.470Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.theopen.com/fantasy/prizes"
+   "hardFail": false
   }
  },
  {
@@ -6232,9 +5860,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:13.514Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://holding.thespecialone.co.uk/"
+   "hardFail": false
   }
  },
  {
@@ -6267,9 +5893,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:13.571Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.dreamteamfc.com/"
+   "hardFail": false
   }
  },
  {
@@ -6330,9 +5954,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:13.667Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.thesportsgeek.com/contests/nfl-playoff-pickem/"
+   "hardFail": false
   }
  },
  {
@@ -6365,9 +5987,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:13.700Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.timhortons.ca/tims-nhl-hockey-challenge"
+   "hardFail": false
   }
  },
  {
@@ -6401,9 +6021,7 @@
    "status": 0,
    "error": "AbortError",
    "checkedAt": "2026-11-01T13:47:13.735Z",
-   "hardFail": true,
-   "state": "dead",
-   "finalUrl": "https://gaming.uefa.com/en/uclfantasy"
+   "hardFail": true
   }
  },
  {
@@ -6436,9 +6054,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:13.794Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://ultimatefantasytennis.com/blog/what-is-fantasy-tennis"
+   "hardFail": false
   }
  },
  {
@@ -6472,9 +6088,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:13.860Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://x.com/ValorantEsports/status/1963633815282405466"
+   "hardFail": false
   }
  },
  {
@@ -6507,9 +6121,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:13.886Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/vnl-fantasy-unveiling-the-new-fantasy-experience"
+   "hardFail": false
   }
  },
  {
@@ -6543,9 +6155,7 @@
    "status": 0,
    "error": "ENOTFOUND",
    "checkedAt": "2026-11-01T13:47:13.908Z",
-   "hardFail": true,
-   "state": "dead",
-   "finalUrl": "https://fantasy.football.scot/"
+   "hardFail": true
   }
  },
  {
@@ -6579,9 +6189,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:13.945Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.tottenhamhotspur.com/news/1086226/women-everything-you-need-to-know-about-the-wsls-new-fantasy-game"
+   "hardFail": false
   }
  },
  {
@@ -6614,9 +6222,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:13.962Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://help.yahoo.com/kb/SLN36907.html"
+   "hardFail": false
   }
  },
  {
@@ -6649,9 +6255,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.039Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://sports.yahoo.com/fantasy/article/yahoo-fantasy-bracket-mayhem-is-back-the-best-bracket-in-both-the-mens-and-womens-college-basketball-contests-will-win-25k-each-225407876.html"
+   "hardFail": false
   }
  },
  {
@@ -6684,9 +6288,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.114Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://football.fantasysports.yahoo.com/"
+   "hardFail": false
   }
  },
  {
@@ -6719,9 +6321,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.267Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://bullrush.com/competition-types/"
+   "hardFail": false
   }
  },
  {
@@ -6754,9 +6354,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.336Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes"
+   "hardFail": false
   }
  },
  {
@@ -6782,7 +6380,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -6790,9 +6388,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.342Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://fbs.com/"
+   "hardFail": false
   }
  },
  {
@@ -6825,9 +6421,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.345Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fortraders.com/tournaments"
+   "hardFail": false
   }
  },
  {
@@ -6860,9 +6454,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.378Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://fundedfast.com/trading-competition"
+   "hardFail": false
   }
  },
  {
@@ -6895,9 +6487,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.379Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://help.fundednext.com/en/articles/11982105-how-to-win-fundednext-cfd-monthly-competition"
+   "hardFail": false
   }
  },
  {
@@ -6924,7 +6514,7 @@
   "flags": [
    "official-page-not-read",
    "source-not-operator",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -6932,9 +6522,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.421Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://www.myfxbook.com/press-release/headway-launches-no-limits-demo/41776"
+   "hardFail": false
   }
  },
  {
@@ -6960,7 +6548,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -6968,9 +6556,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.423Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://www.hfm.com/int/en/promotions/demo-contest"
+   "hardFail": false
   }
  },
  {
@@ -7003,9 +6589,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.449Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.litefinance.org/contests/demo/best/"
+   "hardFail": false
   }
  },
  {
@@ -7038,9 +6622,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.482Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.nasdaq.com/press-release/moomoos-second-global-paper-trading-competition-powered-nasdaq-totalview-hits-150000"
+   "hardFail": false
   }
  },
  {
@@ -7066,7 +6648,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -7074,9 +6656,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.485Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://tradfi.multibankgroup.com/en/lp-n/demo-competition"
+   "hardFail": false
   }
  },
  {
@@ -7109,9 +6689,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.514Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://ninjatrader.com/ninjatrader-arena/"
+   "hardFail": false
   }
  },
  {
@@ -7144,9 +6722,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.538Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.nmarkets.org/"
+   "hardFail": false
   }
  },
  {
@@ -7179,9 +6755,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.558Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://roboforex.com/"
+   "hardFail": false
   }
  },
  {
@@ -7214,9 +6788,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.564Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.tickmill.com/promotions/nfp-machine"
+   "hardFail": false
   }
  },
  {
@@ -7249,9 +6821,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.635Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.trading.com/us/forex-trading-competition"
+   "hardFail": false
   }
  },
  {
@@ -7317,9 +6887,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.764Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.tradingview.com/the-leap/tradestation-july-2026/rules/"
+   "hardFail": false
   }
  },
  {
@@ -7352,9 +6920,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.854Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.wallstreetsurvivor.com/contest-valentines-2026/"
+   "hardFail": false
   }
  },
  {
@@ -7381,7 +6947,7 @@
   "flags": [
    "official-page-not-read",
    "source-not-operator",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -7389,9 +6955,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.912Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://www.myfxbook.com/press-release/xmrsquos-anniversary-demo-competitions-now-live-ndash-join-the-celebration-with-a-100000-prize-pool-/33454"
+   "hardFail": false
   }
  },
  {
@@ -7424,9 +6988,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.946Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://help.battlefy.com/en/articles/3940531-where-is-my-prize"
+   "hardFail": false
   }
  },
  {
@@ -7459,9 +7021,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.986Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.papaya.com/faq"
+   "hardFail": false
   }
  },
  {
@@ -7494,9 +7054,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.996Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://support.challengermode.com/en/start-here/how-to-get-started-with-challengermode"
+   "hardFail": false
   }
  },
  {
@@ -7565,9 +7123,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:15.146Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.checkmategaming.com/free-tournaments"
+   "hardFail": false
   }
  },
  {
@@ -7600,9 +7156,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:15.232Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.chess.com/announcements/view/chess-com-community-events"
+   "hardFail": false
   }
  },
  {
@@ -7635,9 +7189,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:15.265Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.gamersaloon.com/promos/1rounder/"
+   "hardFail": false
   }
  },
  {
@@ -7670,9 +7222,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:15.370Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.pokemon.com/us/play-pokemon"
+   "hardFail": false
   }
  },
  {
@@ -7705,9 +7255,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:15.427Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.playerslounge.com/madden"
+   "hardFail": false
   }
  },
  {
@@ -7740,9 +7288,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:15.432Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.aviagames.com/"
+   "hardFail": false
   }
  },
  {
@@ -7768,7 +7314,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -7776,9 +7322,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:15.514Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://www.skillz.com/"
+   "hardFail": false
   }
  },
  {
@@ -7811,9 +7355,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:14.986Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.papaya.com/faq"
+   "hardFail": false
   }
  },
  {
@@ -7846,9 +7388,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:15.541Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.start.gg/"
+   "hardFail": false
   }
  },
  {
@@ -7906,9 +7446,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:15.582Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://givling.com/"
+   "hardFail": false
   }
  },
  {
@@ -7934,7 +7472,7 @@
   "sourceKind": "unverified-link",
   "flags": [
    "official-page-not-read",
-   "link-not-confirmed"
+   "link-unreachable-to-bot"
   ],
   "fit": null,
   "link": {
@@ -7942,9 +7480,7 @@
    "status": 403,
    "error": "",
    "checkedAt": "2026-11-01T13:47:15.583Z",
-   "hardFail": false,
-   "state": "bot-blocked",
-   "finalUrl": "https://help.swagbucks.com/hc/en-us/articles/15374709231764-What-is-Swagbucks-Daily-Trivia"
+   "hardFail": false
   }
  },
  {
@@ -7977,9 +7513,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:15.666Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://www.funofficepools.com/"
+   "hardFail": false
   }
  },
  {
@@ -8012,9 +7546,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:15.743Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://gridirongames.com/football-pools/nfl-survivor/"
+   "hardFail": false
   }
  },
  {
@@ -8047,9 +7579,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:15.763Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://home.myfantasyleague.com/"
+   "hardFail": false
   }
  },
  {
@@ -8082,9 +7612,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:15.779Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://mysurvivorpool.com/"
+   "hardFail": false
   }
  },
  {
@@ -8117,9 +7645,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:15.920Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://officepoolstop.com/"
+   "hardFail": false
   }
  },
  {
@@ -8180,9 +7706,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:16.004Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://trofeo.live/nfl-confidence-pool"
+   "hardFail": false
   }
  },
  {
@@ -8216,9 +7740,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:16.058Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://mlcontests.com/"
+   "hardFail": false
   }
  },
  {
@@ -8252,9 +7774,7 @@
    "status": 200,
    "error": "",
    "checkedAt": "2026-11-01T13:47:16.142Z",
-   "hardFail": false,
-   "state": "ok",
-   "finalUrl": "https://reedsy.com/resources/writing-contests/"
+   "hardFail": false
   }
  }
 ]

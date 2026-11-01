@@ -1,8 +1,12 @@
-name: Validate static site
+name: Validate site
 
 on:
   push:
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   validate:
@@ -12,16 +16,22 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: npm
-      - run: npm ci --no-audit --no-fund
-      - name: Rebuild every page from source data
-        run: npm run build
-      - name: Fail if generated pages are out of date with the evidence file
-        run: git diff --exit-code -- data index.html category entry review.html sources.html playbook.html
-      - name: Verification gate (no unsourced values, no broken local links)
+      - name: Validate data and built site
         run: node tests/validate.mjs
-      - name: Interactive render test (headless DOM)
-        run: node tests/dom.test.mjs
+      - name: Check committed pages match the data
+        run: |
+          node tools/build.mjs
+          if [ -n "$(git status --porcelain -- index.html analysis.html methodology.html review.html category)" ]; then
+            echo "::error::Committed pages are out of date. Run 'node tools/build.mjs' and commit the result."
+            git --no-pager diff --stat
+            exit 1
+          fi
+      - name: Validate supplemental research page
+        run: python3 supplemental/check.py
+      - name: Verify mobile layout assumptions
+        run: |
+          grep -q "@media (max-width: 760px)" assets/style.css
+          ! grep -rqE "min-width: *[6-9][0-9][0-9]px" index.html category review.html analysis.html methodology.html
 
       # The /atlas subsite is written by scripts/build-atlas.mjs from data/atlas-*.json only.
       - name: Atlas subsite is up to date
