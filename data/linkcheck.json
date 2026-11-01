@@ -1,0 +1,14 @@
+{
+ "generated": "tools/check_links.py",
+ "pages_checked": 18,
+ "internal_links_checked": 892,
+ "external_links_inventoried": 329,
+ "external_domains_inventoried": 225,
+ "external_liveness": "NOT TESTED \u2014 no shell route to operator domains in this sandbox; only pages listed in data/verification.json were opened, via the agent page-fetch tool.",
+ "broken_internal_links": [],
+ "broken_anchors": [],
+ "coverage_errors": [],
+ "meta_errors": [],
+ "rows_without_operator_link": [],
+ "result": "pass"
+}

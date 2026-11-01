@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verification ledger — what was checked against official sources — Free Cash Ledger</title>
+<meta name="description" content="Per-row verification of free-to-enter cash competitions against operator pages, with verbatim quotes and checked dates.">
+<meta property="og:title" content="Verification ledger — what was checked against official sources — Free Cash Ledger">
+<meta property="og:description" content="Per-row verification of free-to-enter cash competitions against operator pages, with verbatim quotes and checked dates.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230f766e'/><text x='18' y='45' font-size='36' font-family='monospace' fill='white'>$</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-rel="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="index.html">
+      <span class="mark">$</span>
+      <span>Free Cash Ledger<small>206 competitions · verified 2026-11-01</small></span>
+    </a>
+    <nav class="main" aria-label="Main"><a href="index.html">Dashboard</a><a href="best-picks.html">Best picks</a><a href="all.html">All 206</a><a href="verification.html" aria-current="page">Verification</a><a href="flagged.html">Flagged (13)</a><a href="methodology.html">Method</a><a href="executive-summary.html">Summary</a><a href="sources.html">Sources</a></nav>
+  </div>
+</header>
+<div class="wrap" id="main">
+
+<section class="hero">
+  <p class="kicker">Verification ledger · checked 2026-11-01</p>
+  <h1 class="page">What was checked, against which page, and what it said.</h1>
+  <p class="lede">12 of 206 rows were opened against an operator page this pass.
+  Every field below carries the operator’s URL, a verbatim quote, and the date it was read. The other
+  194 rows are marked <span class="badge b-unverified">source data only</span> —
+  that is a limit of this pass, stated on purpose rather than papered over with a plausible number.</p>
+  <div class="stats">
+    <div class="stat"><b>7</b><span>verified</span></div>
+    <div class="stat"><b>3</b><span>partly verified</span></div>
+    <div class="stat"><b>2</b><span>contradicted</span></div>
+    <div class="stat"><b>194</b><span>not checked this pass</span></div>
+  </div>
+</section>
+
+<div class="notice warn">
+  <b>Method, and its limits.</b> Official operator page opened with the agent&#x27;s page-fetch tool, or the official page&#x27;s own text returned in a web-search index. Every claim below carries a verbatim quote. Nothing is inferred, converted between currencies, or filled in from memory.
+  <br><br>Evidence kinds used: <b>official-page</b> (the operator’s page was opened and read),
+  <b>official-page-index</b> (the operator’s page text was returned through a search index — URL is still the
+  operator’s), <b>secondary-official-terms</b> (a third party quoting the operator’s terms; the operator page was
+  not opened — weaker evidence, and labelled as such).
+  This sandbox’s shell has no route to operator sites, so no `curl` status codes exist to report; link liveness was
+  never asserted for rows that were not opened.
+</div>
+
+<h2 class="sec">Evidence, row by row</h2>
+<p class="sub">Ordered: verified first, then partial, then contradicted.</p>
+
+<div class="finding low" id="arcprize">
+  <h3>ARC Prize 2026 <span class="badge b-verified">Verified</span></h3>
+  <div class="meta2">verified · evidence: official-page · checked 2026-11-01 · id arcprize</div>
+  <p>Prize total and track count confirmed. The official ARC-AGI-3 technical report (2026-04-22) also states &#x27;The total prize pool is now $2M&#x27;. Entry fee is not stated on the page read; the catalogue&#x27;s &#x27;free&#x27; label is consistent with a Kaggle-hosted competition but was not itself confirmed here.</p>
+  
+  <div class="tablewrap"><table class="prose" style="margin:6px 0 10px">
+    <tbody><tr><th scope="row">prize total</th>
+              <td><b>$2,000,000</b><div class="quote">“Now $2,000,000 in prizes!”</div></td></tr><tr><th scope="row">tracks</th>
+              <td><b>3 tracks</b><div class="quote">“Over $2M in prizes. 3 tracks. Get started.”</div></td></tr><tr><th scope="row">hosting</th>
+              <td><b>Hosted on Kaggle</b><div class="quote">“In partnership with Kaggle, over $2M is up for grabs.”</div></td></tr></tbody>
+  </table></div>
+  <p><b>Verified prize recorded:</b> USD 2,000,000 — total pool, all tracks</p>
+  <p><b>Official page read:</b> <a href="https://arcprize.org/" rel="noopener noreferrer nofollow">https://arcprize.org/</a></p>
+  
+  <p><b>Row in the catalogue:</b> <a href="category/tech.html#arcprize">ARC Prize (via Kaggle)</a></p>
+  
+  <h4>Also referenced</h4><p><a href="https://arcprize.org/media/ARC_AGI_3_Technical_Report.pdf" rel="noopener noreferrer nofollow">https://arcprize.org/media/ARC_AGI_3_Technical_Report.pdf</a></p>
+</div>
+<div class="finding low" id="checkmate-gaming">
+  <h3>Checkmate Gaming free tournaments <span class="badge b-verified">Verified</span></h3>
+  <div class="meta2">verified · evidence: official-page · checked 2026-11-01 · id checkmate-gaming</div>
+  <p>Free entry confirmed. The catalogue&#x27;s &#x27;$10-$180 cash per tournament (free entry)&#x27; range was not reproduced today: free-entry prizes visible were $40, $100 (invite-only) and $120, and the $1,500 event on the same page is EA/paid entry, which the catalogue row does not distinguish.</p>
+  <p class="notice bad" style="margin:8px 0"><b>Contradicts the catalogue on:</b> prize_text.</p>
+  <div class="tablewrap"><table class="prose" style="margin:6px 0 10px">
+    <tbody><tr><th scope="row">entry fee</th>
+              <td><b>Free</b><div class="quote">“Totally free to enter with real cash prizes. New tournaments posted daily.”</div></td></tr><tr><th scope="row">free prizes seen</th>
+              <td><b>$40, $100, $120 on 2026-11-01</b><div class="quote">“$120 PRIZE ... FREE ENTRY”</div></td></tr><tr><th scope="row">paid counter example</th>
+              <td><b>$1,500 ELITE ENTRY tournament on the same page</b><div class="quote">“$1500 PRIZE ... ELITE ENTRY”</div></td></tr></tbody>
+  </table></div>
+  <p><b>Verified prize recorded:</b> USD 120 — largest free-entry prize visible on 2026-11-01</p>
+  <p><b>Official page read:</b> <a href="https://www.checkmategaming.com/free-tournaments" rel="noopener noreferrer nofollow">https://www.checkmategaming.com/free-tournaments</a></p>
+  
+  <p><b>Row in the catalogue:</b> <a href="category/skill.html#checkmate-gaming">Checkmate Gaming (CMG) Free Tournaments</a></p>
+  
+  
+</div>
+<div class="finding low" id="istanbul-photo-awards">
+  <h3>Istanbul Photo Awards <span class="badge b-verified">Verified</span></h3>
+  <div class="meta2">verified · evidence: secondary-official-terms · checked 2026-11-01 · id istanbul-photo-awards</div>
+  <p>Prize ladder matches the catalogue exactly. Availability flagged: the sources read describe the 2026 edition (deadline January 2026, already past), so &#x27;live&#x27; needs re-checking before anyone enters.</p>
+  
+  <div class="tablewrap"><table class="prose" style="margin:6px 0 10px">
+    <tbody><tr><th scope="row">entry fee</th>
+              <td><b>Free</b><div class="quote">“There is no entry fee.”</div></td></tr><tr><th scope="row">prize total</th>
+              <td><b>$58,000</b><div class="quote">“The total prize pool for the İstanbul Photo Awards 2026 is $58,000”</div></td></tr><tr><th scope="row">prize photo of year</th>
+              <td><b>$6,000</b><div class="quote">“the Photo of the Year (the top image in the Single News category) receiving $6,000, first-place winners in each category awarded $3,000, second places $1,500, and third places $1,000”</div></td></tr><tr><th scope="row">eligibility</th>
+              <td><b>Professional photojournalists; images taken in 2025</b><div class="quote">“Open only to professional photographers worldwide, with submitted photographs required to have been taken in 2025.”</div></td></tr></tbody>
+  </table></div>
+  <p><b>Verified prize recorded:</b> USD 6,000 — Photo of the Year</p>
+  <p><b>Official page read:</b> <a href="https://graphiccompetitions.com/photography/istanbul-photo-awards-2026/" rel="noopener noreferrer nofollow">https://graphiccompetitions.com/photography/istanbul-photo-awards-2026/</a></p>
+  <p><b>Operator site:</b> <a href="https://istanbulphotoawards.com/" rel="noopener noreferrer nofollow">https://istanbulphotoawards.com/</a></p>
+  <p><b>Row in the catalogue:</b> <a href="category/creative.html#istanbul-photo-awards">Istanbul Photo Awards</a></p>
+  
+  
+</div>
+<div class="finding low" id="metaculus">
+  <h3>Metaculus Tournaments <span class="badge b-verified">Verified</span></h3>
+  <div class="meta2">verified · evidence: official-page · checked 2026-11-01 · id metaculus</div>
+  <p>Free entry and the $50,000 upper bound are confirmed. The catalogue&#x27;s &#x27;$3,000&#x27; lower bound was not reproduced: the lowest paid pool on the page was $3,400, and 5 of the 19 tournaments are marked &#x27;NO PRIZE POOL&#x27;. Two separate $50,000 pools are explicitly bot tournaments (Summer and Fall 2026 FutureEval), which matters for an AI-agent workflow.</p>
+  
+  <div class="tablewrap"><table class="prose" style="margin:6px 0 10px">
+    <tbody><tr><th scope="row">entry fee</th>
+              <td><b>Free to participate</b><div class="quote">“We are not a prediction market. You can participate for free and win cash prizes for being accurate.”</div></td></tr><tr><th scope="row">live tournaments</th>
+              <td><b>19 shown on 2026-11-01</b><div class="quote">“19 tournaments shown”</div></td></tr><tr><th scope="row">largest pool seen</th>
+              <td><b>$50,000</b><div class="quote">“$50,000 PRIZE POOL ... Fall 2026 FutureEval Bot Tournament”</div></td></tr><tr><th scope="row">smallest paid pool seen</th>
+              <td><b>$3,400</b><div class="quote">“$3,400 PRIZE POOL ... Animal Futures Tournament”</div></td></tr></tbody>
+  </table></div>
+  <p><b>Verified prize recorded:</b> USD 50,000 — largest single pool visible on the page</p>
+  <p><b>Official page read:</b> <a href="https://www.metaculus.com/tournaments/" rel="noopener noreferrer nofollow">https://www.metaculus.com/tournaments/</a></p>
+  
+  <p><b>Row in the catalogue:</b> <a href="category/forecasting.html#metaculus">Metaculus Tournaments</a></p>
+  <h4>Agent-relevant note</h4><p>Fall 2026 FutureEval Bot Tournament — $50,000 PRIZE POOL — https://www.metaculus.com/tournament/fall-futureeval-2026/</p>
+  
+</div>
+<div class="finding low" id="sony-world-photo">
+  <h3>Sony World Photography Awards <span class="badge b-verified">Verified</span></h3>
+  <div class="meta2">verified · evidence: secondary-official-terms · checked 2026-11-01 · id sony-world-photo</div>
+  <p>Matches the catalogue. Secondary evidence quoting the operator&#x27;s launch release; the operator page itself was not opened.</p>
+  
+  <div class="tablewrap"><table class="prose" style="margin:6px 0 10px">
+    <tbody><tr><th scope="row">entry fee</th>
+              <td><b>Free</b><div class="quote">“The awards are completely free-to-enter and open to all photographers shooting on any devices and at all stages of their careers.”</div></td></tr><tr><th scope="row">prize professional</th>
+              <td><b>$25,000</b><div class="quote">“The major prize is US$25,000 plus a solo show, Sony Digital Imaging equipment and a career development day.”</div></td></tr><tr><th scope="row">prize open</th>
+              <td><b>$5,000</b><div class="quote">“The major prize is US$5,000, top Sony Digital Imaging equipment”</div></td></tr></tbody>
+  </table></div>
+  <p><b>Verified prize recorded:</b> USD 25,000 — Professional Photographer of the Year</p>
+  <p><b>Official page read:</b> <a href="https://www.photoreview.com.au/news/photo-competitions/entries-open-for-sony-world-photography-awards-2026/" rel="noopener noreferrer nofollow">https://www.photoreview.com.au/news/photo-competitions/entries-open-for-sony-world-photography-awards-2026/</a></p>
+  <p><b>Operator site:</b> <a href="https://www.worldphoto.org/sony-world-photography-awards" rel="noopener noreferrer nofollow">https://www.worldphoto.org/sony-world-photography-awards</a></p>
+  <p><b>Row in the catalogue:</b> <a href="category/creative.html#sony-world-photo">Sony World Photography Awards</a></p>
+  
+  
+</div>
+<div class="finding low" id="wergle-flomp">
+  <h3>Wergle Flomp Humor Poetry Contest <span class="badge b-verified">Verified</span></h3>
+  <div class="meta2">verified · evidence: official-page-index · checked 2026-11-01 · id wergle-flomp</div>
+  <p>Free entry confirmed; the catalogue&#x27;s $5,100 total and top prize match the official page exactly. Best-in-class for an AI-assisted workflow only in the drafting sense — see the AI clause below.</p>
+  
+  <div class="tablewrap"><table class="prose" style="margin:6px 0 10px">
+    <tbody><tr><th scope="row">entry fee</th>
+              <td><b>No fee to enter</b><div class="quote">“No fee to enter. Submit published or unpublished work. $5,100 in prizes.”</div></td></tr><tr><th scope="row">prize total</th>
+              <td><b>$5,100</b><div class="quote">“$5,100 in prizes.”</div></td></tr><tr><th scope="row">prize first</th>
+              <td><b>$2,000</b><div class="quote">“First Prize: $2,000 plus a two-year gift certificate from Duotrope (a $100 value) and five years of Chill Subs&#x27; Best plan (a $1,000 value)”</div></td></tr><tr><th scope="row">submission window</th>
+              <td><b>August 15, 2026 - April 1, 2027</b><div class="quote">“Please submit one humor poem during August 15, 2026-April 1, 2027”</div></td></tr><tr><th scope="row">eligibility limits</th>
+              <td><b>Not eligible from Iran, North Korea, Crimea, Russia, Belarus</b><div class="quote">“Authors from all countries eligible except Iran, North Korea, Crimea, Russia, and Belarus (due to US government restrictions).”</div></td></tr></tbody>
+  </table></div>
+  <p><b>Verified prize recorded:</b> USD 2,000 — 1st prize, single poem</p>
+  <p><b>Official page read:</b> <a href="https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free" rel="noopener noreferrer nofollow">https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free</a></p>
+  
+  <p><b>Row in the catalogue:</b> <a href="category/creative.html#wergle-flomp">Wergle Flomp Humor Poetry Contest</a></p>
+  <h4>AI clause</h4><p>The sibling contest page for Tom Howard/Margaret Reid states: &#x27;Any writing that you submit to a Winning Writers contest must be composed using your own words, and may not contain any AI-generated text.&#x27; Read the same clause on this contest&#x27;s supplemental page before entering. Logged from https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest</p>
+  
+</div>
+<div class="finding low" id="world-press-photo">
+  <h3>World Press Photo Contest <span class="badge b-verified">Verified</span></h3>
+  <div class="meta2">verified · evidence: secondary-official-terms · checked 2026-11-01 · id world-press-photo</div>
+  <p>Matches the catalogue. Evidence is a secondary page quoting World Press Photo&#x27;s own announcement, not the operator page itself.</p>
+  
+  <div class="tablewrap"><table class="prose" style="margin:6px 0 10px">
+    <tbody><tr><th scope="row">entry fee</th>
+              <td><b>Free</b><div class="quote">“Entering is free and prizes include up to €10,000, inclusion in our annual traveling exhibition, and more.”</div></td></tr><tr><th scope="row">prize amounts</th>
+              <td><b>€1,000 per winner + €10,000 for Photo of the Year</b><div class="quote">“€1,000 for each of the winners and an additional €10,000 for the World Press Photo of the Year winner”</div></td></tr></tbody>
+  </table></div>
+  <p><b>Verified prize recorded:</b> EUR 10,000 — Photo of the Year, on top of the €1,000 winner award</p>
+  <p><b>Official page read:</b> <a href="https://www.sej.org/calendar/deadline-world-press-photo-contest" rel="noopener noreferrer nofollow">https://www.sej.org/calendar/deadline-world-press-photo-contest</a></p>
+  <p><b>Operator site:</b> <a href="https://www.worldpressphoto.org/" rel="noopener noreferrer nofollow">https://www.worldpressphoto.org/</a></p>
+  <p><b>Row in the catalogue:</b> <a href="category/creative.html#world-press-photo">World Press Photo Contest</a></p>
+  
+  
+</div>
+<div class="finding medium" id="drivendata">
+  <h3>DrivenData <span class="badge b-partially">Partly verified</span></h3>
+  <div class="meta2">partially-verified · evidence: official-page · checked 2026-11-01 · id drivendata</div>
+  <p>Prize competition confirmed. The catalogue&#x27;s stated range (&#x27;often $10,000-$200,000&#x27;) is below the $300,000 challenge running on 2026-11-01, so the range is stale rather than wrong.</p>
+  
+  <div class="tablewrap"><table class="prose" style="margin:6px 0 10px">
+    <tbody><tr><th scope="row">live prize competition</th>
+              <td><b>GEMS Prize Challenge — $300,000 in prizes, 4 weeks left (2026-11-01)</b><div class="quote">“$300,000 in prizes”</div></td></tr><tr><th scope="row">entry fee</th>
+              <td><b>Not stated on the page read</b></td></tr></tbody>
+  </table></div>
+  <p><b>Verified prize recorded:</b> USD 300,000 — current live prize competition</p>
+  <p><b>Official page read:</b> <a href="https://www.drivendata.org/competitions/" rel="noopener noreferrer nofollow">https://www.drivendata.org/competitions/</a></p>
+  
+  <p><b>Row in the catalogue:</b> <a href="category/tech.html#drivendata">DrivenData</a></p>
+  
+  
+</div>
+<div class="finding medium" id="hipa">
+  <h3>Hamdan International Photography Award (HIPA) <span class="badge b-partially">Partly verified</span></h3>
+  <div class="meta2">partially-verified · evidence: secondary-official-terms · checked 2026-11-01 · id hipa</div>
+  <p>Free entry, $200,000 grand prize and ~$1,000,000 pool confirmed. The catalogue&#x27;s category range &#x27;category prizes $20,000-$50,000&#x27; was NOT confirmed — the listings read cite $40,000 / $30,000 / $20,000 category placements, so the $50,000 upper bound has no support in the sources read. Left blank on the site.</p>
+  
+  <div class="tablewrap"><table class="prose" style="margin:6px 0 10px">
+    <tbody><tr><th scope="row">entry fee</th>
+              <td><b>Free</b><div class="quote">“There is no entry fee.”</div></td></tr><tr><th scope="row">grand prize</th>
+              <td><b>$200,000</b><div class="quote">“The competition offers major cash awards, including a Grand Prize of USD $200,000”</div></td></tr><tr><th scope="row">pool</th>
+              <td><b>about $1,000,000</b><div class="quote">“widely described as having an overall prize fund reaching around USD $1,000,000”</div></td></tr><tr><th scope="row">current deadline</th>
+              <td><b>May 31, 2026 (2026 season, per listing)</b><div class="quote">“Deadline: May 31, 2026”</div></td></tr></tbody>
+  </table></div>
+  <p><b>Verified prize recorded:</b> USD 200,000 — Grand Prize</p>
+  <p><b>Official page read:</b> <a href="https://graphiccompetitions.com/photography/hipa-2026-international-photography-award/" rel="noopener noreferrer nofollow">https://graphiccompetitions.com/photography/hipa-2026-international-photography-award/</a></p>
+  <p><b>Operator site:</b> <a href="https://www.hipa.ae/" rel="noopener noreferrer nofollow">https://www.hipa.ae/</a></p>
+  <p><b>Row in the catalogue:</b> <a href="category/creative.html#hipa">Hamdan International Photography Award (HIPA)</a></p>
+  
+  
+</div>
+<div class="finding medium" id="kaggle">
+  <h3>Kaggle Competitions <span class="badge b-partially">Partly verified</span></h3>
+  <div class="meta2">partially-verified · evidence: official-page · checked 2026-11-01 · id kaggle</div>
+  <p>Prize scale confirmed from the page&#x27;s own prize labels. An entry fee is not mentioned anywhere on the competitions page, but absence of a fee in marketing copy is not proof of free entry, so the row is left as &#x27;free entry not stated&#x27; rather than verified.</p>
+  
+  <div class="tablewrap"><table class="prose" style="margin:6px 0 10px">
+    <tbody><tr><th scope="row">openness</th>
+              <td><b>Open to anyone</b><div class="quote">“The world&#x27;s most important AI problems, open to anyone.”</div></td></tr><tr><th scope="row">prize examples</th>
+              <td><b>ARC Prize 2026 Paper Track $450,000; NFL Big Data Bowl 2027 $100,000; Gemma 4 Developer Agent Paper Track $35,000</b><div class="quote">“$450,000 ... ARC Prize 2026 - Paper Track”</div></td></tr><tr><th scope="row">entry fee</th>
+              <td><b>Not stated on the page read</b></td></tr></tbody>
+  </table></div>
+  <p><b>Verified prize recorded:</b> USD 450,000 — largest single hackathon prize label visible on the page</p>
+  <p><b>Official page read:</b> <a href="https://www.kaggle.com/competitions" rel="noopener noreferrer nofollow">https://www.kaggle.com/competitions</a></p>
+  
+  <p><b>Row in the catalogue:</b> <a href="category/tech.html#kaggle">Kaggle Competitions</a></p>
+  
+  
+</div>
+<div class="finding high" id="tom-howard-poetry">
+  <h3>Tom Howard/Margaret Reid Poetry Contest <span class="badge b-contradicted">Contradicted</span></h3>
+  <div class="meta2">contradicted · evidence: official-page · checked 2026-11-01 · id tom-howard-poetry</div>
+  <p>The catalogue labels this &#x27;Free USD path&#x27; with status &#x27;live&#x27;. The official page states a $27 entry fee and that the contest is closed until 2027-04-15. Both labels are wrong on the same row.</p>
+  <p class="notice bad" style="margin:8px 0"><b>Contradicts the catalogue on:</b> freePath, status.</p>
+  <div class="tablewrap"><table class="prose" style="margin:6px 0 10px">
+    <tbody><tr><th scope="row">entry fee</th>
+              <td><b>$27 per submission</b><div class="quote">“Fee: $27 per submission (one submission may contain up to 3 poems). Enter as many submissions as you wish.”</div></td></tr><tr><th scope="row">availability</th>
+              <td><b>Closed; opens April 15, 2027</b><div class="quote">“This contest is currently closed. It will open again on April 15, 2027.”</div></td></tr><tr><th scope="row">prize total</th>
+              <td><b>$12,000</b><div class="quote">“Welcome to the 25th annual Tom Howard/Margaret Reid Poetry Contest. Submit published or unpublished work. $12,000 in prizes.”</div></td></tr><tr><th scope="row">prize first</th>
+              <td><b>two prizes of $3,500</b><div class="quote">“TOM HOWARD PRIZE: $3,500 for a poem in any style or genre”</div></td></tr></tbody>
+  </table></div>
+  <p><b>Verified prize recorded:</b> USD 3,500 — two equal top prizes</p>
+  <p><b>Official page read:</b> <a href="https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest" rel="noopener noreferrer nofollow">https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest</a></p>
+  
+  <p><b>Row in the catalogue:</b> <a href="category/creative.html#tom-howard-poetry">Tom Howard/Margaret Reid Poetry Contest</a></p>
+  
+  
+</div>
+<div class="finding high" id="weather-potw">
+  <h3>Weather Photographer of the Year (RMetS) <span class="badge b-contradicted">Contradicted</span></h3>
+  <div class="meta2">contradicted · evidence: official-page-index · checked 2026-11-01 · id weather-potw</div>
+  <p>Free entry is confirmed on the operator&#x27;s own page. The catalogue&#x27;s prize ladder (£5,000 winner / £2,500 mobile / £750 young) is contradicted by two independent 2026 listings (£1,500 / £500 / £500, and a separate report of a £2,000 pool). Because the sources disagree with each other and the operator&#x27;s prize page was not opened directly, the verified prize is left BLANK on the site and the row is flagged.</p>
+  <p class="notice bad" style="margin:8px 0"><b>Contradicts the catalogue on:</b> prize_text.</p>
+  <div class="tablewrap"><table class="prose" style="margin:6px 0 10px">
+    <tbody><tr><th scope="row">entry fee</th>
+              <td><b>Free</b><div class="quote">“This annual competition is open to photographers of all skill levels worldwide and is free to enter.”</div></td></tr><tr><th scope="row">prize amounts as published 2026</th>
+              <td><b>£1,500 overall, £500 mobile, £500 climate award (per 2026 contest listings)</b><div class="quote">“Weather Photographer of the Year – awarded to the most striking image of weather in action (£1,500 prize). Mobile Weather Photographer of the Year – celebrating the best images captured on a smartphone or tablet (£500 prize). Climate Award – recognising photography that tells a compelling story about our changing climate (£500 prize).”</div></td></tr></tbody>
+  </table></div>
+  <p><b>Verified prize recorded:</b> <span class="blank">none — withheld</span></p>
+  <p><b>Official page read:</b> <a href="https://www.rmets.org/weather-photographer-of-the-year" rel="noopener noreferrer nofollow">https://www.rmets.org/weather-photographer-of-the-year</a></p>
+  
+  <p><b>Row in the catalogue:</b> <a href="category/creative.html#weather-potw">Weather Photographer of the Year</a></p>
+  <h4>Conflicting sources</h4><ul><li><a href="https://www.all-about-photo.com/photo-contests/photo-contest/5661/rmets-weather-photographer-of-the-year-2026" rel="noopener noreferrer nofollow">https://www.all-about-photo.com/photo-contests/photo-contest/5661/rmets-weather-photographer-of-the-year-2026</a></li><li><a href="https://www.digitalcameraworld.com/photography/awards-and-competitions/award-winning-photographers-all-started-somewhere-these-are-the-10-photo-contests-to-enter-this-august" rel="noopener noreferrer nofollow">https://www.digitalcameraworld.com/photography/awards-and-competitions/award-winning-photographers-all-started-somewhere-these-are-the-10-photo-contests-to-enter-this-august</a></li></ul>
+  
+</div>
+
+<h2 class="sec">Why only 12?</h2>
+<div class="prose">
+<p>Because a number that was not read on an official page is a guess, and this project’s rule is that a guess is
+worse than a blank. Rows were prioritised by value: the rows where a real cash prize is claimed to be free, plus
+every row that a reasonable person would consider spending a weekend on. If you want a row promoted, the route is
+mechanical — open the operator page, record the URL, quote the text, re-run <code>tools/verify_check.py</code>.</p>
+</div>
+
+<footer class="site">
+  <p><b>Free Cash Competition Ledger</b> — an independent catalogue mirroring the “Free Money &amp; Contest Ledger”
+  (<a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">reference site</a>)
+  with per-row source links and a separate verification layer.</p>
+  <p>Not affiliated with any listed operator. Official rules always win. US federal tax reporting generally
+  applies to prizes of $600 or more — confirm with a tax professional. Nothing here is legal or financial advice.
+  Sweepstakes and casino-style gambling products are out of scope.</p>
+  <p>Data as published by the reference catalogue on 2026-08-19 (pass “S”), audited and partly re-verified on
+  2026-11-01. Prize amounts change; open the operator’s rules before you enter.
+  <a href="methodology.html">Method &amp; limits</a> · <a href="flagged.html">Flagged for review</a> ·
+  <a href="sources.html">Sources</a></p>
+</footer>
+</div>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

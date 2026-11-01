@@ -228,7 +228,7 @@ def main() -> int:
     )
 
     # ---------- R11: stale masthead date ----------
-    idx = (ROOT / "research" / "reference-index.html")
+    idx = ROOT / "data" / "reference-index.html.txt"
     stale = None
     if idx.exists():
         m = re.search(r"<small>([^<]*)</small>", idx.read_text(encoding="utf-8", errors="ignore"))

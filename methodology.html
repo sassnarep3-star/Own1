@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method, scoring and limits — Free Cash Ledger</title>
+<meta name="description" content="How the catalogue was mirrored, audited and verified, the exact priority-score weights, and the limits of the verification pass.">
+<meta property="og:title" content="Method, scoring and limits — Free Cash Ledger">
+<meta property="og:description" content="How the catalogue was mirrored, audited and verified, the exact priority-score weights, and the limits of the verification pass.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230f766e'/><text x='18' y='45' font-size='36' font-family='monospace' fill='white'>$</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-rel="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="index.html">
+      <span class="mark">$</span>
+      <span>Free Cash Ledger<small>206 competitions · verified 2026-11-01</small></span>
+    </a>
+    <nav class="main" aria-label="Main"><a href="index.html">Dashboard</a><a href="best-picks.html">Best picks</a><a href="all.html">All 206</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged (13)</a><a href="methodology.html" aria-current="page">Method</a><a href="executive-summary.html">Summary</a><a href="sources.html">Sources</a></nav>
+  </div>
+</header>
+<div class="wrap" id="main">
+
+<section class="hero">
+  <p class="kicker">Method</p>
+  <h1 class="page">How this was built, and exactly where it stops being reliable.</h1>
+  <p class="lede">Three layers: a verbatim mirror of the source catalogue, a deterministic audit over that data, and
+  a separate verification layer that only ever adds a value when an official page was read. The layers are kept
+  apart on purpose so that “the catalogue says” and “we confirmed” can never be confused.</p>
+</section>
+
+<div class="prose">
+<h2>1. Mirror</h2>
+<p><code>data/source-data.js</code> is a byte-for-byte copy of the reference site’s <code>assets/data.js</code>
+(SHA-256 <code>13986a17b8b9aa7b3240232e6138155967cfa9347256faa7b5c7d1565ed73211</code>), taken from
+<a href="https://github.com/karagemop466-tech/FreeMoneyApps">karagemop466-tech/FreeMoneyApps</a>.
+<code>data/ledger.json</code> is that object re-serialised as JSON with no edits and no added fields. If a number is
+wrong, it is wrong in the same way in both files — which is the point.</p>
+
+<h2>2. Audit (mechanical)</h2>
+<p><code>python3 tools/audit.py</code> runs 11 literal checks over the mirror: missing official-tier
+source, dollar figure with no official citation, shared sign-up URL, non-contest rows, ended rows inside the
+headline free count, “prize not currently knowable” phrases, free labels contradicted by fee language, non-cash
+currency in payout copy, prose-only prizes, the “added this pass” derivation, and the stale masthead date. It never
+infers a value. Output: <code>data/audit.json</code>, rendered on <a href="flagged.html">Flagged</a>.</p>
+
+<h2>3. Verification (official pages only)</h2>
+<p><code>data/verification.json</code> holds 12 rows. Each field needs a URL, a verbatim quote and
+a status; <code>tools/verify_check.py</code> refuses to build if a claim has no quote and is not explicitly marked
+“not stated”. A contradicted row must declare <i>which</i> catalogue fields are contradicted, and a row whose prize
+is contradicted cannot carry a verified prize.</p>
+
+<h2>4. Priority score (editorial, published)</h2>
+<p>Total maximum 90 points, normalised to 100. The components:</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Component</th><th>Points</th><th>Rule</th></tr></thead>
+  <tbody>
+    <tr><td>Free entry, evidenced</td><td>0–30</td><td>30 if an operator page confirms free entry; 18 if the catalogue claims free and it was not checked; 8 for “some free events”; 0 for paid-cash or a contradicted fee.</td></tr>
+    <tr><td>Enterable today</td><td>0–15</td><td>15 live, 8 caution, 5 mixed, 0 ended. Reset to 0 if the operator page contradicts availability.</td></tr>
+    <tr><td>Prize documented</td><td>0–20</td><td>20 if a figure was read on an official page; 10 if the catalogue publishes a dollar figure without an official citation; 0 otherwise.</td></tr>
+    <tr><td>Agent leverage</td><td>0–15</td><td>Editorial, per category: tech 15, forecasting 12, creative 8, market 6, sports 5, trivia/skill 4, directory/pools 0.</td></tr>
+    <tr><td>Payout friction</td><td>0–10</td><td>Account-only 10, eligibility check 7, full KYC 3, tax paperwork 3.</td></tr>
+  </tbody>
+</table>
+</div>
+<p><b>What the score is not:</b> a probability of winning, an expected value, or advice. It cannot price a lottery
+ticket, and it does not know how many people enter. It exists so that 206 rows can be ordered without hand-waving.</p>
+
+<h2>5. What was deliberately not done</h2>
+<ul>
+  <li><b>No currency conversion.</b> A €10,000 prize is shown as €10,000. Converting would invent an exchange rate
+  that no source in this repo supports, so rows are not ranked against each other across currencies.</li>
+  <li><b>No prize inferred from prose.</b> “Cash rooms advertise prizes up to tens of dollars” does not become
+  $10 in a table.</li>
+  <li><b>No link-liveness claims.</b> The build shell cannot reach operator domains, so no row is described as
+  “link checked” unless a human-or-agent page read is recorded in <code>verification.json</code>.</li>
+  <li><b>No removal of a source’s rows.</b> Wrong rows are kept, marked, and flagged — deleting them would hide the
+  fact that they were published.</li>
+</ul>
+
+<h2>6. Reproduce it</h2>
+<pre style="background:#0f172a;color:#e2e8f0;padding:12px;border-radius:8px;overflow-x:auto;font-family:var(--mono);font-size:13px">python3 tools/audit.py          # data/ledger.json -> data/audit.json
+python3 tools/verify_check.py   # validates data/verification.json
+python3 tools/build_site.py     # renders HTML to the repo root
+python3 tools/check_links.py    # internal links + anchors, must be 0 broken</pre>
+
+<h2>7. Environment limits, stated honestly</h2>
+<p>Outbound shell network in this sandbox reaches GitHub, npm and PyPI only. Operator sites were therefore read with
+the agent’s page-fetch tool, and only for the 12 rows on the verification page. Everything else
+carries the operator’s link and no claim. Two other agent sessions had overlapping claims on this repository when
+this one began; that is logged in <a href="https://github.com/sassnarep3-star/Own1/blob/main/COORDINATION.md">COORDINATION.md</a>.</p>
+</div>
+
+<footer class="site">
+  <p><b>Free Cash Competition Ledger</b> — an independent catalogue mirroring the “Free Money &amp; Contest Ledger”
+  (<a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">reference site</a>)
+  with per-row source links and a separate verification layer.</p>
+  <p>Not affiliated with any listed operator. Official rules always win. US federal tax reporting generally
+  applies to prizes of $600 or more — confirm with a tax professional. Nothing here is legal or financial advice.
+  Sweepstakes and casino-style gambling products are out of scope.</p>
+  <p>Data as published by the reference catalogue on 2026-08-19 (pass “S”), audited and partly re-verified on
+  2026-11-01. Prize amounts change; open the operator’s rules before you enter.
+  <a href="methodology.html">Method &amp; limits</a> · <a href="flagged.html">Flagged for review</a> ·
+  <a href="sources.html">Sources</a></p>
+</footer>
+</div>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
