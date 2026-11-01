@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A mobile-first dashboard of free-to-enter cash prize competitions. Every verified figure links to the operator page; unconfirmed values are blank and flagged for review.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0f766e">
+<title>Prize Atlas — free-to-enter cash competitions, verified line by line</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%230f766e%22%2F%3E%3Cpath%20d%3D%22M16%207l2.4%205.6L24%2015l-5.6%202.4L16%2023l-2.4-5.6L8%2015l5.6-2.4z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E">
+<link rel="stylesheet" href="./assets/style.css">
+</head>
+<body data-base="./" data-view="home" data-category=""><div style="position:relative;z-index:999;background:#3b0764;color:#faf5ff;padding:10px 14px;font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center"><b>Archived build (sessions 4e1fdad5 / 27a86924 lineage).</b> Preserved for review. The current site is <a style="color:#f0abfc" href="../../index.html">PrizeDesk</a> · <a style="color:#f0abfc" href="../../research.html">source audit</a> · <a style="color:#f0abfc" href="../../verification.html">verification</a></div>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="brand" href="./index.html"><span class="mark" aria-hidden="true">✳</span><span>Prize Atlas</span></a>
+    <nav class="nav" aria-label="Main"><a href="./index.html" aria-current="page">Overview</a><a href="./shortlist.html">Shortlist</a><a href="./categories.html">Categories</a><a href="./summary.html">Summary</a><a href="./methodology.html">Method</a><a href="./review.html">Flagged</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero"><div class="wrap">
+  <p class="eyebrow">Source-first prize research</p>
+  <h1>Find the competitions worth your time — and see the evidence for each one.</h1>
+  <p class="lead">Every entry here links to the operator’s own page. Prize money, entry cost and deadlines appear only where that page prints them; everything else is left blank and flagged. No deposits, no affiliate links, no estimated payouts.</p>
+  <div class="hero-actions"><a class="btn btn-primary" href="shortlist.html">See the shortlist</a><a class="btn btn-quiet" href="#browse">Browse all entries</a><a class="btn btn-quiet" href="methodology.html">How verification works</a></div>
+</div></section>
+<div class="wrap"><div class="stats" id="stats">
+  <div class="stat"><span class="stat-n" data-stat="total">—</span><span class="stat-l">entries tracked</span></div>
+  <div class="stat"><span class="stat-n" data-stat="verified">—</span><span class="stat-l">verified on an official page</span></div>
+  <div class="stat"><span class="stat-n" data-stat="freecash">—</span><span class="stat-l">verified free entry + cash</span></div>
+  <div class="stat"><span class="stat-n" data-stat="open">—</span><span class="stat-l">open when checked</span></div>
+</div></div>
+<div class="wrap"><div class="notice notice-warn"><strong>What “verified” means here.</strong> A person opened the official page on 1 November 2026 and read the figure that is shown. It does not mean the contest is still open, that you are eligible, or that winning is likely. Rows marked <em>unverified lead</em> are names worth checking, nothing more. <a href="methodology.html">Read the method</a> or <a href="review.html">see what is still open</a>.</div></div>
+<section class="wrap section" id="start">
+  <div class="section-head">
+    <h2>Best documented free entries right now</h2>
+    <p>Ranked by the actionability score — how complete and current the verified facts are, not by expected winnings.</p>
+  </div>
+  <div id="top-picks" class="picks"><p class="loading">Loading entries…</p></div>
+</section>
+<section class="wrap section">
+  <div class="section-head">
+    <h2>Browse by category</h2>
+    <p>Nine categories. Two are tools rather than contests, and are labelled as such.</p>
+  </div>
+  <div class="cats" id="category-grid"><a class="cat" href="category/tech.html">
+  <span class="cat-icon" aria-hidden="true">⌘</span>
+  <span class="cat-body">
+    <span class="cat-name">Tech, data &amp; AI</span>
+    <span class="cat-short">Model-building, code and research prizes</span>
+    <span class="cat-count">18 entries</span>
+  </span>
+</a>
+<a class="cat" href="category/forecasting.html">
+  <span class="cat-icon" aria-hidden="true">◎</span>
+  <span class="cat-body">
+    <span class="cat-name">Forecasting</span>
+    <span class="cat-short">Probability and prediction tournaments</span>
+    <span class="cat-count">4 entries</span>
+  </span>
+</a>
+<a class="cat" href="category/creative.html">
+  <span class="cat-icon" aria-hidden="true">✳</span>
+  <span class="cat-body">
+    <span class="cat-name">Creative &amp; writing</span>
+    <span class="cat-short">Writing, photography and film prizes</span>
+    <span class="cat-count">18 entries</span>
+  </span>
+</a>
+<a class="cat" href="category/sports.html">
+  <span class="cat-icon" aria-hidden="true">◈</span>
+  <span class="cat-body">
+    <span class="cat-name">Fantasy &amp; pick&#39;em</span>
+    <span class="cat-short">Sports picks, survivor and fantasy games</span>
+    <span class="cat-count">129 entries</span>
+  </span>
+</a>
+<a class="cat" href="category/market.html">
+  <span class="cat-icon" aria-hidden="true">▥</span>
+  <span class="cat-body">
+    <span class="cat-name">Market simulations</span>
+    <span class="cat-short">Demo and paper-trading competitions</span>
+    <span class="cat-count">19 entries</span>
+  </span>
+</a>
+<a class="cat" href="category/skill.html">
+  <span class="cat-icon" aria-hidden="true">⚡</span>
+  <span class="cat-body">
+    <span class="cat-name">Skill games</span>
+    <span class="cat-short">Mobile skill tournaments and esports</span>
+    <span class="cat-count">12 entries</span>
+  </span>
+</a>
+<a class="cat" href="category/trivia.html">
+  <span class="cat-icon" aria-hidden="true">?</span>
+  <span class="cat-body">
+    <span class="cat-name">Trivia &amp; rewards</span>
+    <span class="cat-short">Quiz and reward apps</span>
+    <span class="cat-count">2 entries</span>
+  </span>
+</a>
+<a class="cat" href="category/pools.html">
+  <span class="cat-icon" aria-hidden="true">▦</span>
+  <span class="cat-body">
+    <span class="cat-name">Pool tools</span>
+    <span class="cat-short">Software for office and survivor pools</span>
+    <span class="cat-count">7 entries</span>
+  </span>
+</a>
+<a class="cat" href="category/directory.html">
+  <span class="cat-icon" aria-hidden="true">↗</span>
+  <span class="cat-body">
+    <span class="cat-name">Directories</span>
+    <span class="cat-short">Indexes that list many contests</span>
+    <span class="cat-count">2 entries</span>
+  </span>
+</a></div>
+</section>
+<section class="wrap section" id="browse">
+  <div class="section-head">
+    <h2>All entries</h2>
+    <p>Filter by evidence level, entry cost and status. Tap any row for eligibility, notes and flags.</p>
+    <a href="all.html">Static version (no JavaScript) →</a>
+  </div>
+  <div class="panel" id="panel">
+  <div class="toolbar">
+    <div class="field grow"><label for="q">Search</label><input id="q" type="search" placeholder="Name, prize, eligibility…" autocomplete="off"></div>
+    <div class="field"><label for="f-cat">Category</label><select id="f-cat"><option value="">All categories</option></select></div>
+    <div class="field"><label for="f-status">Evidence</label><select id="f-status">
+      <option value="">All</option>
+      <option value="verified">Verified on official page</option>
+      <option value="platform">Platform index</option>
+      <option value="lead">Unverified lead</option>
+    </select></div>
+    <div class="field"><label for="f-entry">Entry</label><select id="f-entry">
+      <option value="">Any</option>
+      <option value="free">Free</option>
+      <option value="conditional">Conditional</option>
+      <option value="paid">Paid</option>
+      <option value="unknown">Not stated</option>
+    </select></div>
+    <div class="field"><label for="f-sort">Sort</label><select id="f-sort">
+      <option value="score">Actionability</option>
+      <option value="deadline">Deadline</option>
+      <option value="prize">Prize size</option>
+      <option value="name">Name</option>
+    </select></div>
+    <label class="check"><input type="checkbox" id="f-cash"> Cash confirmed</label>
+    <label class="check"><input type="checkbox" id="f-open"> Open now</label>
+  </div>
+  <div id="rows" aria-live="polite"><p class="loading">Loading entries…</p></div>
+  <div class="tfoot"><span id="count">Loading…</span><button class="linkbtn" type="button" id="reset">Reset filters</button></div>
+</div>
+<noscript><div class="wrap"><div class="notice notice-warn">This dashboard filters the data in your browser, so JavaScript is required for the interactive table. The <a href="./all.html">full static table</a> contains every entry and works without JavaScript.</div></div></noscript>
+</section>
+<section class="wrap section">
+  <div class="section-head"><h2>How to use this in three steps</h2></div>
+  <ol class="steps">
+    <li><strong>Pick from the shortlist.</strong> Start with entries whose entry cost and prize are both confirmed. The shortlist page groups them into tiers so you can see why.</li>
+    <li><strong>Read the operator page before you commit.</strong> Eligibility, taxes, AI rules and deadlines change. The link in each row is the only authority.</li>
+    <li><strong>Check the review queue for the rest.</strong> 180 entries are still leads. They are published with blank financial fields so nothing looks better than the evidence supports.</li>
+  </ol>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p><strong>Prize Atlas</strong> — a source-first research dashboard. Not financial, legal or tax advice. Rules change without notice: always read the operator's own page before you spend time or money.</p>
+    <p>Data last verified <time datetime="2026-11-01">1 November 2026</time> · <a href="./methodology.html">Method</a> · <a href="./review.html">Flagged for review</a> · <a href="./archive.html">Archive</a> · <a href="https://github.com/sassnarep3-star/Own1">Repository</a></p>
+  </div>
+</footer>
+<script src="./assets/app.js" defer></script>
+</body>
+</html>

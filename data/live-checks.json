@@ -1,0 +1,228 @@
+{
+  "checkedAt": "2026-11-01",
+  "checker": "arena-041e7ad1",
+  "method": "Sandbox has no general outbound internet. Each URL below was fetched once with a page-fetch tool on 2026-11-01 and the returned title/body was read and compared against the ledger row. 'outcome' describes what the checker actually received. Nothing else in the dataset (195 of 206 rows) was re-fetched this session.",
+  "checks": [
+    {
+      "url": "https://www.cbssports.com/fantasy/football/games/pickem/rules",
+      "listingIds": [
+        "cbs-pro-pickem"
+      ],
+      "outcome": "loaded",
+      "pageTitle": "2026 CBSSports.com Pro Football Pick'em Contest Rules - CBSSports.com",
+      "confirmed": [
+        "The contest is FREE to play: 'No purchase, wireless device or entry fee necessary to enter or win.'",
+        "Eligibility: legal residents of the 50 US states + DC, 18+ or age of majority.",
+        "2026 Challenge period runs 2026-09-09 to 2027-01-10 with 18 weekly contests."
+      ],
+      "notConfirmed": [
+        "Prize amounts were not in the fetched section of the rules page."
+      ],
+      "notes": "Official rules page is live and on-topic. Free entry confirmed.",
+      "openEntryObserved": true
+    },
+    {
+      "url": "https://www.kaggle.com/competitions",
+      "listingIds": [
+        "kaggle"
+      ],
+      "outcome": "loaded",
+      "pageTitle": "Kaggle Competitions",
+      "confirmed": [
+        "Competitions are open to anyone and are free to enter.",
+        "Live prize-bearing competitions were visible on 2026-11-01, e.g. ARC Prize 2026 Paper Track ($450,000), NFL Big Data Bowl 2027 ($100,000), Google Gemma 4 Developer Agent Paper Track ($35,000)."
+      ],
+      "notConfirmed": [
+        "No single 'prize pool' figure applies to Kaggle as a whole — prizes are per competition."
+      ],
+      "notes": "Confirms the listing is live and free; the published prize depends on which competition you enter.",
+      "openEntryObserved": true
+    },
+    {
+      "url": "https://www.papaya.com/faq",
+      "listingIds": [
+        "solitaire-cash"
+      ],
+      "outcome": "loaded",
+      "pageTitle": "Papaya Gaming FAQ | About Papaya and the Platform",
+      "confirmed": [
+        "'PAPAYA offers both free competitions using Gems and cash competitions.'",
+        "Business model: 'taking a platform fee out of the total entry fees pool in each tournament.'",
+        "'PAPAYA currently does not use bots in any of its games' with a linked FTI Consulting certificate."
+      ],
+      "notConfirmed": [
+        "No prize figure appears on the FAQ page. The ledger's prize text ('Cash rooms advertise prizes up to tens of dollars per event') is NOT supported by the cited official source."
+      ],
+      "notes": "Official page is live. The free-vs-cash distinction is confirmed; the prize figure is not.",
+      "openEntryObserved": true
+    },
+    {
+      "url": "http://www.squarespool.com/",
+      "listingIds": [
+        "squarespool"
+      ],
+      "outcome": "loaded",
+      "pageTitle": "Football Squares Pool | Squares Pool Online (Free) - SquaresPool.com",
+      "confirmed": [
+        "The pool tool is free: 'Get your own pool page in minutes — completely free.'",
+        "It is a tool for running your own pool; there is no operator-funded prize."
+      ],
+      "notConfirmed": [],
+      "notes": "Served the page over https despite the http:// link. The link works but should be updated to https (irregularity I-09).",
+      "openEntryObserved": true
+    },
+    {
+      "url": "https://apps.apple.com/us/app/solitaire-cash-win-real-money/id1252281551",
+      "listingIds": [
+        "solitaire-cash"
+      ],
+      "outcome": "error-page",
+      "pageTitle": "App Store — 'An Error Occurred'",
+      "confirmed": [],
+      "notConfirmed": [
+        "The iOS listing could not be loaded."
+      ],
+      "notes": "Returned Apple's 'An Error Occurred' page, while another apps.apple.com URL fetched in the same session rendered normally (see skillz-arena check). Most likely the app is no longer available on the US storefront, but this is a single observation — flagged for manual confirmation, not asserted as removed.",
+      "openEntryObserved": null,
+      "openEntryNote": "Page did not load, so no entry window could be observed."
+    },
+    {
+      "url": "https://apps.apple.com/us/app/skillz-arena/id6761981587",
+      "listingIds": [
+        "skillz"
+      ],
+      "outcome": "loaded",
+      "pageTitle": "Skillz Arena App - App Store",
+      "confirmed": [
+        "App is live on the US App Store, developer Skillz Inc., age rating 18+.",
+        "'Gemz' is the in-app practice currency used for free rounds.",
+        "Cash-out rails listed: Apple Pay, PayPal, debit card, bank transfer."
+      ],
+      "notConfirmed": [
+        "No specific match prize table is stated on the App Store page."
+      ],
+      "notes": "Also served as the control for the App Store error above: apps.apple.com is fetchable, so the Solitaire Cash failure is not a blanket block.",
+      "openEntryObserved": true
+    },
+    {
+      "url": "https://betfanatics.com/",
+      "listingIds": [
+        "fanatics-survivor"
+      ],
+      "outcome": "loaded",
+      "pageTitle": "Fanatics Sports & Casino — Bet $20 Get $350 in FanCash",
+      "confirmed": [
+        "The linked domain is Fanatics' real-money sportsbook and casino product, including 'Sportsbook' and 'Casino' state availability lists and a bet-to-earn promo."
+      ],
+      "notConfirmed": [
+        "No NFL Survivor League rules or prize table appeared on the fetched homepage."
+      ],
+      "notes": "Evidence for irregularity I-10: the ledger links a free-to-play contest directly to an online sportsbook, which conflicts with the ledger's own stated exclusion of bookmaker/sportsbook accounts.",
+      "openEntryObserved": null,
+      "openEntryNote": "Survivor League entry was not visible on the fetched homepage; only sportsbook/casino promos were."
+    },
+    {
+      "url": "https://www.metaculus.com/tournaments/",
+      "listingIds": [
+        "metaculus"
+      ],
+      "outcome": "loaded",
+      "pageTitle": "Tournaments | Metaculus",
+      "confirmed": [
+        "'We are not a prediction market. You can participate for free and win cash prizes for being accurate.'",
+        "19 tournaments listed on 2026-11-01 with published prize pools, e.g. Fall 2026 FutureEval Bot Tournament ($50,000), POTUS Predictions ($15,000), US Midterms 2026 ($10,000).",
+        "Some tournaments carry no prize pool — prize availability is per tournament."
+      ],
+      "notConfirmed": [],
+      "notes": "Strongest free-to-enter cash-prize row in the ledger for an AI-assisted entrant: prizes are awarded for forecast accuracy and one open tournament is explicitly for bot entrants.",
+      "openEntryObserved": true
+    },
+    {
+      "url": "https://www.worldpressphoto.org/",
+      "listingIds": [
+        "world-press-photo"
+      ],
+      "outcome": "loaded",
+      "pageTitle": "Home | World Press Photo",
+      "confirmed": [
+        "The contest is an active annual programme; 2026 winners are published and new Nature & Sports awards were announced for the 2027 contest."
+      ],
+      "notConfirmed": [
+        "The €10,000 / €1,000 figures in the ledger are not stated on the homepage; the contest's prize page was not fetched."
+      ],
+      "notes": "Official site is live; prize figures remain unverified for this pass.",
+      "openEntryObserved": null,
+      "openEntryNote": "Entry window for the 2027 contest was not open on the fetched page (2026 winners just published), so \"open now\" was not established either way."
+    },
+    {
+      "url": "https://www.tradingview.com/the-leap/",
+      "listingIds": [
+        "tradingview-leap"
+      ],
+      "outcome": "loaded",
+      "pageTitle": "The Leap — Paper Trading Competition by TradingView",
+      "confirmed": [
+        "'Risk-free trading competitions with real-money prizes' using virtual money.",
+        "On 2026-11-01 every event shown on the landing page was marked Completed or pending, the most recent being October 7–20, 2026."
+      ],
+      "notConfirmed": [
+        "The ledger's $50,000 / $10,000 / $7,000 table is not stated on the landing page."
+      ],
+      "notes": "The ledger's rules URL points at the 'tradestation-july-2026' event rules — a past contest. Irregularity I-06.",
+      "openEntryObserved": false,
+      "openEntryNote": "No open event on 2026-11-01: every listed competition was marked Completed or pending results. The programme recurs, but nothing was enterable that day."
+    },
+    {
+      "url": "https://reedsy.com/resources/writing-contests/",
+      "listingIds": [
+        "reedsy-dir"
+      ],
+      "outcome": "loaded",
+      "pageTitle": "The Ultimate List of Writing Contests in 2026 • Win Cash Prizes!",
+      "confirmed": [
+        "Reedsy's directory lists 458 contests.",
+        "Many listed contests charge entry fees — $5, $11, $12, $15, $20, $25 and $49 were observed in the fetched section."
+      ],
+      "notConfirmed": [
+        "The ledger's prize text ('hundreds to tens of thousands') is a directory-wide range, not a prize for any single contest."
+      ],
+      "notes": "Directory is live, but it is not a free-to-enter resource: it is a catalogue that includes paid contests. Must be labelled that way on our site.",
+      "openEntryObserved": true
+    },
+    {
+      "url": "https://www.swagbucks.com/",
+      "listingIds": [
+        "swagbucks-trivia"
+      ],
+      "outcome": "loaded",
+      "pageTitle": "Swagbucks: Get Paid for Games & Surveys | Earn Real Cash",
+      "confirmed": [
+        "Site is live and free to join: 'It's completely free to join'.",
+        "'Swagbucks Daily Trivia challenges' are named on the homepage as one of the ways to earn.",
+        "Rewards are Swagbucks points redeemed for PayPal cash or gift cards — a points currency, not a direct prize pool."
+      ],
+      "notConfirmed": [
+        "No cash prize amount for Daily Trivia is stated; the ledger's 'redeemable for PayPal cash / gift cards' wording matches, but no figure exists to verify."
+      ],
+      "notes": "Confirms the row is live but reinforces irregularity I-11: the prize is a points currency, not USD.",
+      "openEntryObserved": true
+    }
+  ],
+  "coverage": {
+    "rowsInDataset": 206,
+    "rowsLiveChecked": 12,
+    "rowsNotRechecked": 194,
+    "categoriesCovered": [
+      "skill",
+      "sports",
+      "tech",
+      "creative",
+      "forecasting",
+      "market",
+      "directory",
+      "pools",
+      "trivia"
+    ],
+    "categoriesNotCovered": []
+  }
+}

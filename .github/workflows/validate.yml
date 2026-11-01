@@ -32,13 +32,3 @@ jobs:
         run: |
           grep -q "@media (max-width: 760px)" assets/style.css
           ! grep -rqE "min-width: *[6-9][0-9][0-9]px" index.html category review.html analysis.html methodology.html
-
-      # The /atlas subsite is written by scripts/build-atlas.mjs from data/atlas-*.json only.
-      - name: Atlas subsite is up to date
-        run: |
-          node scripts/build-atlas.mjs
-          git diff --exit-code -- atlas data/atlas-entries.json
-
-      # Atlas evidence policy plus a link audit covering every HTML file in the repository.
-      - name: Validate the atlas subsite
-        run: node tests/validate-atlas.mjs

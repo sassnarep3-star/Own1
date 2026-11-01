@@ -51,32 +51,3 @@ No dependencies, no build step at deploy time. GitHub Pages serves the repositor
 4. Set `sourceStatus` to `checked` and `entryFree` to `yes`, `no` or blank.
 5. Add a `triage.json` entry with a written rationale if the row should appear in the shortlist.
 6. Run `node tools/build.mjs && node tests/validate.mjs`, then commit.
-
-## `/atlas` — the operator-verified subsite
-
-`atlas/index.html` is a second layer, built by a separate generator, under one stricter rule: **prize,
-entry, deadline and eligibility are written only when the operator's own page was opened.** Everything
-else stays blank with an explicit flag.
-
-| | Root layer (this build) | `/atlas` subsite |
-| --- | --- | --- |
-| Generator | `npm run build` → `scripts/build-data.mjs`, `scripts/build-site.mjs` | `node scripts/build-atlas.mjs` |
-| Data | `data/verification.json`, `data/entries.json`, `data/stats.json` | `data/verified.json`, `data/legacy.json`, `data/atlas-findings.json`, `data/atlas-entries.json`, `data/atlas-categories.json` |
-| Rows checked against an operator page | 20 page-checked + 6 partly | 44, each with prize, entry, deadline, eligibility and the page read |
-| Unconfirmed catalogue claims | shown per row, tagged unverified | quarantined in a *legacy claim (unverified)* column |
-| Findings | on `review.html` and `sources.html` | 17 sourced findings on `atlas/review.html` |
-| Mobile tables | filterable, horizontally scrollable | become labelled cards under 900px |
-
-Atlas pages: `atlas/index.html` (dashboard), `atlas/shortlist.html`, `atlas/categories.html` and
-`atlas/category/<id>.html`, `atlas/summary.html`, `atlas/review.html`, `atlas/method.html`,
-`atlas/ledger-pass.html`.
-
-Its own gate: `node tests/validate-atlas.mjs` — 3,700+ assertions, including "no verified field is
-copied from a legacy claim", "lead rows never populate prize/fee/deadline", "every internal link in the
-repository resolves" and "every published page is reachable from the dashboard". CI rebuilds `atlas/`,
-fails on any diff, then runs that gate.
-
-> The two generators never write the same file: the root build owns the root pages and `category/*`,
-> `scripts/build-atlas.mjs` owns `atlas/**`. Atlas data files are namespaced `atlas-*` so the two
-> evidence sets cannot silently overwrite each other.
-

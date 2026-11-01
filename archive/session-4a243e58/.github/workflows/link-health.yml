@@ -1,0 +1,55 @@
+name: Link health (non-blocking)
+
+# Deliberately not wired to push or to the Pages deploy: this job can never block publication.
+# It records what every outbound link actually returns, so the site can show real link status
+# instead of claiming links work. Download the artifact to refresh data/link-health.json.
+
+on:
+  push:
+    paths:
+      - 'data/entries.json'
+      - 'scripts/linkcheck.mjs'
+      - '.github/workflows/link-health.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'
+
+permissions:
+  contents: write
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run data build (so the URL list exists)
+        run: node scripts/build-data.mjs
+      - name: Check every outbound link
+        run: node scripts/linkcheck.mjs
+        continue-on-error: true
+      - name: Upload report (artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-health
+          path: data/link-health.json
+          if-no-files-found: warn
+      # Artifacts cannot always be reached from the environment that assembles the site,
+      # so the report is also published to its own branch, which plain git can fetch.
+      - name: Publish report to link-health-data branch
+        run: |
+          set -e
+          test -f data/link-health.json
+          git config user.name "link-health-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan link-health-data
+          git rm -rf --cached . >/dev/null 2>&1 || true
+          git add -f data/link-health.json
+          git commit -m "Link health report $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push --force origin link-health-data
+      - name: Summarise
+        run: |
+          node -e "const d=require('./data/link-health.json');console.log('checked '+d.total+' urls, '+d.ok+' ok, '+d.failing+' not ok')" || true
