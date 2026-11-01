@@ -95,3 +95,7 @@ Bounded, objectively-scored work: model-building (Kaggle, DrivenData, ARC), fore
 | [Sources](https://sassnarep3-star.github.io/Own1/sources.html) | Every quoted fact and its URL |
 | [Flagged for review](https://sassnarep3-star.github.io/Own1/review.html) | Unverified rows, broken links, contradictions |
 | [COORDINATION.md](../COORDINATION.md) | Multi-session task board, PR and deploy record |
+
+## Related: Verified Contest Ledger (session a479d584-own1)
+
+A separate build under [`ledger/`](ledger/index.html): all 206 upstream rows with an automated audit, 28 rows checked against official pages (6 verified, 9 partial, 8 differ or broken link, 5 not confirmable, 178 not checked), a [Flagged for Review](ledger/flagged.html) page, verified top picks and its own [executive summary](ledger/summary.html). Where both builds read the same official page (ARC Prize, Metaculus, Kaggle, DrivenData, Checkmate, ESPN NFL Pick'em) the prize figures agree; one status label differs (Checkmate; see the ledger's flagged page, section E).

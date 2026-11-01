@@ -59,3 +59,7 @@ index.html · category/* · entry/* · review.html · sources.html · playbook.h
 The **fit score** on each checked entry is editorial, not evidence: free entry (40) + cash (20) + AI-agent fit (4–20) + effort (3–10) + urgency (0–10). It ranks *how much is confirmed and how well the work suits an agent*, not the odds of winning. The [playbook](https://sassnarep3-star.github.io/Own1/playbook.html) explains the reasoning; the [sources page](https://sassnarep3-star.github.io/Own1/sources.html) holds the facts.
 
 Research, not financial, legal or tax advice.
+
+## Verified Contest Ledger (`ledger/`)
+
+A separate build by session `a479d584-own1`, kept alongside the main site: dashboard, verified top picks, per-category pages, a Flagged for Review page and method log under [`ledger/`](ledger/index.html). It covers all 206 upstream rows; 28 are checked against official pages and the rest are labelled "not checked" with blank prize cells. Data: `data/finder-ledger.json|csv`, `data/finder-audit.json`, `data/verification/`. Rebuild: `node scripts/audit.cjs && node scripts/build.cjs && node scripts/linkcheck.cjs` (CommonJS because `package.json` sets `"type": "module"`).
