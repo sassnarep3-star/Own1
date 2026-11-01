@@ -194,7 +194,6 @@ const totals = {
 };
 
 fs.writeFileSync(path.join(ROOT, 'data/verification.json'), JSON.stringify({
-  generatedAt: new Date().toISOString(),
   verifiedOn: CHECK_DATE,
   sourceReviewed: SOURCE_REVIEW_DATE,
   staleDays: STALE_DAYS,
@@ -517,7 +516,6 @@ const register = [
 ];
 
 fs.writeFileSync(path.join(ROOT, 'data/irregularities.json'), JSON.stringify({
-  generatedAt: new Date().toISOString(),
   verifiedOn: CHECK_DATE,
   statusMeaning: 'needs review',
   items: register

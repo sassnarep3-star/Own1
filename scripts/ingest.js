@@ -130,8 +130,8 @@ for (const key of Object.keys(ledger)) {
 /* ---------- write canonical dataset ---------- */
 
 const out = {
-  generatedAt: new Date().toISOString(),
   generatedBy: 'scripts/ingest.js',
+  generatedForDate: prov.capturedAt,
   provenance: {
     sourceRepo: prov.sourceRepo,
     sourceLiveSite: prov.sourceLiveSite,
