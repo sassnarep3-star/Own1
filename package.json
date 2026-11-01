@@ -1,0 +1,14 @@
+{
+  "name": "prizedesk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mobile-first dashboard of free-to-enter cash competitions, built from a pinned dataset with per-row verification status.",
+  "scripts": {
+    "ingest": "node scripts/ingest.js",
+    "verify": "node scripts/verify.js",
+    "build:site": "node scripts/build.js",
+    "docs": "node scripts/render-docs.js",
+    "check": "node scripts/checklinks.js",
+    "build": "node scripts/ingest.js && node scripts/verify.js && node scripts/build.js && node scripts/render-docs.js && node scripts/checklinks.js"
+  }
+}

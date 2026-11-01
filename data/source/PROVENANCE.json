@@ -1,0 +1,16 @@
+{
+  "capturedAt": "2026-11-01",
+  "sourceRepo": "https://github.com/karagemop466-tech/FreeMoneyApps",
+  "sourceLiveSite": "https://karagemop466-tech.github.io/FreeMoneyApps/",
+  "sourceRepoCommit": "466f7c1e7a14b52b4a0d36beb84a00d68fd409b7",
+  "sourceRepoCommitDate": "2026-08-19T22:07:51Z",
+  "sourceFile": "assets/data.js",
+  "sourceFileSha256": "13986a17b8b9aa7b3240232e6138155967cfa9347256faa7b5c7d1565ed73211",
+  "sourceFileBytes": 367221,
+  "vendoredAs": "data/source/ledger.source.js",
+  "declaredReviewDate": "2026-08-19",
+  "declaredPass": "S",
+  "declaredListingCount": 206,
+  "method": "File copied byte-for-byte from the source repository, then parsed as strict JSON after stripping the 'window.LEDGER = ' prefix and trailing ';'. The JavaScript is never evaluated.",
+  "note": "The source file is third-party research, not an official operator document. Every row on this site links to the operator's own page; the source file only tells us where to look."
+}
