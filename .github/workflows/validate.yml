@@ -16,19 +16,45 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate data and built site
-        run: node tests/validate.mjs
-      - name: Check committed pages match the data
+
+      # One generator owns the published pages. Rebuilding must reproduce them byte for byte, which
+      # also proves the build is deterministic (no timestamps or unordered maps in the output).
+      - name: Rebuild the published site
+        run: node scripts/build.js
+
+      - name: Generated pages are current
         run: |
-          node tools/build.mjs
-          if [ -n "$(git status --porcelain -- index.html analysis.html methodology.html review.html category)" ]; then
-            echo "::error::Committed pages are out of date. Run 'node tools/build.mjs' and commit the result."
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::Rebuilding changed tracked files. Run 'npm run build' and commit the result."
             git --no-pager diff --stat
+            git --no-pager diff -- index.html | head -40
             exit 1
           fi
-      - name: Validate supplemental research page
-        run: python3 supplemental/check.py
-      - name: Verify mobile layout assumptions
+
+      # Data contract: every published figure is backed by an official source, every blank has a
+      # stated reason, and every table row links out to an operator page.
+      - name: Validate the dataset and the published pages
+        run: node tests/validate.mjs
+
+      # Every internal link across the live site and the preserved builds resolves.
+      - name: Check every internal link and anchor
+        run: node scripts/checklinks.js
+
+      # The earlier parallel build is preserved under archive/prize-atlas/ and must stay navigable.
+      - name: Validate the archived Prize Atlas build
+        run: node tests/validate-prize-atlas.mjs
+
+      # The stylesheet is mobile-first: base rules target the phone, and every breakpoint is a
+      # min-width step up. This asserts that shape plus a viewport tag on every published page,
+      # instead of demanding one particular max-width query.
+      - name: Mobile layout assumptions
         run: |
-          grep -q "@media (max-width: 760px)" assets/style.css
-          ! grep -rqE "min-width: *[6-9][0-9][0-9]px" index.html category review.html analysis.html methodology.html
+          grep -q "@media (min-width: 520px)" assets/css/site.css
+          grep -q "@media (min-width: 960px)" assets/css/site.css
+          missing=$(grep -rL 'name="viewport"' --include='*.html' . \
+            | grep -vE '^./archive/' || true)
+          if [ -n "$missing" ]; then
+            echo "::error::Pages without a viewport meta tag:"
+            echo "$missing"
+            exit 1
+          fi

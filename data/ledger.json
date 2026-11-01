@@ -1,6 +1,91 @@
 {
+ "generatedBy": "scripts/ingest.js",
+ "generatedForDate": "2026-11-01",
+ "provenance": {
+  "sourceRepo": "https://github.com/karagemop466-tech/FreeMoneyApps",
+  "sourceLiveSite": "https://karagemop466-tech.github.io/FreeMoneyApps/",
+  "sourceRepoCommit": "466f7c1e7a14b52b4a0d36beb84a00d68fd409b7",
+  "sourceRepoCommitDate": "2026-08-19T22:07:51Z",
+  "sourceFile": "assets/data.js",
+  "sourceFileSha256": "13986a17b8b9aa7b3240232e6138155967cfa9347256faa7b5c7d1565ed73211",
+  "declaredReviewDate": "2026-08-19",
+  "declaredPass": "S",
+  "capturedAt": "2026-11-01",
+  "note": "The source file is third-party research, not an official operator document. Every row on this site links to the operator's own page; the source file only tells us where to look."
+ },
  "reviewed": "2026-08-19",
+ "additionsMerged": 5,
+ "crossChecksMerged": 10,
  "pass": "S",
+ "types": [
+  {
+   "id": "skill",
+   "name": "Skill tournaments",
+   "blurb": "Head-to-head or multiplayer skill games. Free rooms usually pay gems, not cash. Real USD almost always requires an entry fee."
+  },
+  {
+   "id": "trivia",
+   "name": "Trivia competitions",
+   "blurb": "Live or async quiz contests. Free daily plays exist on some apps. Prize pools are split among remaining winners."
+  },
+  {
+   "id": "sports",
+   "name": "Fantasy & sports picks",
+   "blurb": "Daily fantasy freerolls and sweepstakes sportsbooks. Free tickets or free coins can win USD; most large pools are paid-entry."
+  },
+  {
+   "id": "creative",
+   "name": "Creative contests",
+   "blurb": "Writing, photo, and brand challenges judged on a submission. Some are free; some lock cash prizes behind a membership."
+  },
+  {
+   "id": "forecasting",
+   "name": "Forecasting tournaments",
+   "blurb": "Judgement competitions scored on calibrated accuracy. You submit probability estimates, not wagers — nothing is staked and prizes come from sponsors."
+  },
+  {
+   "id": "market",
+   "name": "Market competitions",
+   "blurb": "Paper-trading and simulated-investing contests scored on portfolio return. Free to enter; prizes are funded by the operator, not your own stake."
+  },
+  {
+   "id": "tech",
+   "name": "Tech & data competitions",
+   "blurb": "Hackathons and machine-learning contests with published USD prize pools. Free to enter; winners complete tax and identity checks."
+  },
+  {
+   "id": "directory",
+   "name": "Directories & forums",
+   "blurb": "Places that list many current contests. Use them to find new promotions, then verify each contest’s own official rules."
+  },
+  {
+   "id": "pools",
+   "name": "Free pool & league platforms",
+   "blurb": "Free tools for running your own pick’em, survivor, squares, or fantasy league. The platform is free; the prize pot is funded by your group."
+  }
+ ],
+ "verificationLevels": [
+  {
+   "id": "account",
+   "name": "Account only",
+   "meaning": "Email or social login is enough to play. Prize claims usually still require a matching name and contact info."
+  },
+  {
+   "id": "eligibility",
+   "name": "Eligibility check",
+   "meaning": "Age, residency, and one-account rules are enforced. Winners sign an affidavit or confirm identity before payment."
+  },
+  {
+   "id": "kyc",
+   "name": "Full KYC",
+   "meaning": "Government photo ID, proof of address, and sometimes a selfie or source-of-funds check before any USD redemption."
+  },
+  {
+   "id": "tax",
+   "name": "Tax paperwork",
+   "meaning": "US prizes of $600+ typically require a W-9. Non-US winners may need a W-8BEN. Taxes are the winner’s responsibility."
+  }
+ ],
  "featured": [
   "kaggle",
   "espn-pickem",
@@ -83,73 +168,231 @@
   "myfantasyleague",
   "trofeo"
  ],
- "types": [
+ "removedThisPass": [
   {
-   "id": "skill",
-   "name": "Skill tournaments",
-   "blurb": "Head-to-head or multiplayer skill games. Free rooms usually pay gems, not cash. Real USD almost always requires an entry fee."
+   "id": "pch",
+   "name": "Publishers Clearing House",
+   "why": "sweepstakes category removed"
   },
   {
-   "id": "trivia",
-   "name": "Trivia competitions",
-   "blurb": "Live or async quiz contests. Free daily plays exist on some apps. Prize pools are split among remaining winners."
+   "id": "lucktastic",
+   "name": "Lucktastic",
+   "why": "sweepstakes category removed"
   },
   {
-   "id": "sports",
-   "name": "Fantasy & sports picks",
-   "blurb": "Daily fantasy freerolls and sweepstakes sportsbooks. Free tickets or free coins can win USD; most large pools are paid-entry."
+   "id": "high5",
+   "name": "High 5 Casino",
+   "why": "sweepstakes category removed"
   },
   {
-   "id": "creative",
-   "name": "Creative contests",
-   "blurb": "Writing, photo, and brand challenges judged on a submission. Some are free; some lock cash prizes behind a membership."
+   "id": "pulsz",
+   "name": "Pulsz",
+   "why": "sweepstakes category removed"
   },
   {
-   "id": "forecasting",
-   "name": "Forecasting tournaments",
-   "blurb": "Judgement competitions scored on calibrated accuracy. You submit probability estimates, not wagers — nothing is staked and prizes come from sponsors."
+   "id": "chumba",
+   "name": "Chumba Casino",
+   "why": "sweepstakes category removed"
   },
   {
-   "id": "market",
-   "name": "Market competitions",
-   "blurb": "Paper-trading and simulated-investing contests scored on portfolio return. Free to enter; prizes are funded by the operator, not your own stake."
+   "id": "luckyland",
+   "name": "LuckyLand Slots",
+   "why": "sweepstakes category removed"
   },
   {
-   "id": "tech",
-   "name": "Tech & data competitions",
-   "blurb": "Hackathons and machine-learning contests with published USD prize pools. Free to enter; winners complete tax and identity checks."
+   "id": "crowncoins",
+   "name": "Crown Coins Casino",
+   "why": "sweepstakes category removed"
   },
   {
-   "id": "directory",
-   "name": "Directories & forums",
-   "blurb": "Places that list many current contests. Use them to find new promotions, then verify each contest’s own official rules."
+   "id": "stakeus",
+   "name": "Stake.us",
+   "why": "sweepstakes category removed"
   },
   {
-   "id": "pools",
-   "name": "Free pool & league platforms",
-   "blurb": "Free tools for running your own pick’em, survivor, squares, or fantasy league. The platform is free; the prize pot is funded by your group."
-  }
- ],
- "verificationLevels": [
-  {
-   "id": "account",
-   "name": "Account only",
-   "meaning": "Email or social login is enough to play. Prize claims usually still require a matching name and contact info."
+   "id": "fliff",
+   "name": "Fliff",
+   "why": "sweepstakes/AMOE model removed"
   },
   {
-   "id": "eligibility",
-   "name": "Eligibility check",
-   "meaning": "Age, residency, and one-account rules are enforced. Winners sign an affidavit or confirm identity before payment."
+   "id": "online-sweepstakes",
+   "name": "Online-Sweepstakes.com",
+   "why": "sweepstakes directory removed"
   },
   {
-   "id": "kyc",
-   "name": "Full KYC",
-   "meaning": "Government photo ID, proof of address, and sometimes a selfie or source-of-funds check before any USD redemption."
+   "id": "reddit-sweeps",
+   "name": "r/sweepstakes & r/Sweepstake",
+   "why": "sweepstakes directory removed"
   },
   {
-   "id": "tax",
-   "name": "Tax paperwork",
-   "meaning": "US prizes of $600+ typically require a W-9. Non-US winners may need a W-8BEN. Taxes are the winner’s responsibility."
+   "id": "aarp",
+   "name": "AARP Sweepstakes",
+   "why": "sweepstakes category removed"
+  },
+  {
+   "id": "hgtv",
+   "name": "HGTV / Food Network Giveaways",
+   "why": "sweepstakes category removed"
+  },
+  {
+   "id": "iheart",
+   "name": "iHeartRadio Contests",
+   "why": "sweepstakes category removed"
+  },
+  {
+   "id": "meredith",
+   "name": "People / BHG / Meredith magazine sweeps",
+   "why": "sweepstakes category removed"
+  },
+  {
+   "id": "mcluck",
+   "name": "McLuck",
+   "why": "sweepstakes category removed"
+  },
+  {
+   "id": "wowvegas",
+   "name": "WOW Vegas",
+   "why": "sweepstakes category removed"
+  },
+  {
+   "id": "realprize",
+   "name": "RealPrize",
+   "why": "sweepstakes category removed"
+  },
+  {
+   "id": "sweeps-fanatics",
+   "name": "Sweepstakes Fanatics",
+   "why": "sweepstakes directory removed"
+  },
+  {
+   "id": "contest-girl",
+   "name": "Contest Girl",
+   "why": "sweepstakes directory removed"
+  },
+  {
+   "id": "ultracontest",
+   "name": "UltraContest",
+   "why": "sweepstakes directory removed"
+  },
+  {
+   "id": "sweepsadvantage",
+   "name": "Sweepstakes Advantage",
+   "why": "sweepstakes directory removed"
+  },
+  {
+   "id": "freebieshark",
+   "name": "FreebieShark",
+   "why": "sweepstakes directory removed"
+  },
+  {
+   "id": "sweepwidget",
+   "name": "SweepWidget Giveaways",
+   "why": "sweepstakes directory removed"
+  },
+  {
+   "id": "solitaire-smash",
+   "name": "Solitaire Smash",
+   "why": "DEAD: App Store ID 6444781403 does not render a listing; unverifiable"
+  },
+  {
+   "id": "bingo-billions",
+   "name": "Bingo Billions",
+   "why": "DEAD: App Store ID 6446250848 returns \"page cannot be found\"; sole source unreachable"
+  },
+  {
+   "id": "luckyday",
+   "name": "Lucky Day",
+   "why": "sweepstakes category removed"
+  },
+  {
+   "id": "hqtrivia",
+   "name": "HQ Trivia",
+   "why": "DEAD: Service dissolved February 2020"
+  },
+  {
+   "id": "usatoday-survivor",
+   "name": "USA TODAY Pro Football Survivor",
+   "why": "DEAD: usatoday.com/sports/contests/survivor-pool redirects to the USA TODAY homepage"
+  },
+  {
+   "id": "football-nation",
+   "name": "Football Nation USA Weekly Pick'Em",
+   "why": "DEAD: footballnationusa.com/pickems contains no pick’em and no prize"
+  },
+  {
+   "id": "draftkings",
+   "name": "DraftKings Fantasy",
+   "why": "Casino product — iOS listing is \"DraftKings Sportsbook & Casino\""
+  },
+  {
+   "id": "fanduel",
+   "name": "FanDuel Fantasy",
+   "why": "Casino product — iOS listing is \"FanDuel Sportsbook & Casino\""
+  },
+  {
+   "id": "backspin",
+   "name": "Backspin Games",
+   "why": "Casino product — listed in the App Store Casino category (chart #35 Casino), 18+, slots/bingo suite"
+  },
+  {
+   "id": "verse-gaming",
+   "name": "Verse Gaming",
+   "why": "Sweepstakes model — operator FAQ states \"VerseCash is a promotional sweepstakes currency\" and contests are sweepstakes-style ($50 min redemption after 1x playthrough)"
+  },
+  {
+   "id": "lockmypicks",
+   "name": "LockMyPicks",
+   "why": "No cash path — site states \"No fees · No paywalls\" and prizes are coins/cosmetics only. Also sells $1–$5 cosmetic packs and currently exposes admin controls (password reset, streak recalculation) on its public homepage."
+  },
+  {
+   "id": "prizepicks-jackpot",
+   "name": "PrizePicks Free NFL Jackpot",
+   "why": "Real-money DFS operator — free jackpot is an acquisition funnel"
+  },
+  {
+   "id": "fanduel-shuffle",
+   "name": "FanDuel Daily Shuffle",
+   "why": "Requires a FanDuel Sportsbook account; prize is Bonus Bets, not cash"
+  },
+  {
+   "id": "betmgm-survivor",
+   "name": "BetMGM Football Survivor",
+   "why": "Requires a BetMGM account (bookmaker and casino operator)"
+  },
+  {
+   "id": "dk-f2p",
+   "name": "DraftKings Free-to-Play contests",
+   "why": "Requires a DraftKings account (Sportsbook & Casino)"
+  },
+  {
+   "id": "sky-super6",
+   "name": "Sky Bet Super 6",
+   "why": "Requires a Sky Bet account (licensed bookmaker operating Sky Vegas / Sky Casino)"
+  },
+  {
+   "id": "bet365-6scores",
+   "name": "bet365 6 Scores Challenge",
+   "why": "Requires a bet365 account (licensed bookmaker and casino operator)"
+  },
+  {
+   "id": "betmgm-goldengoals",
+   "name": "BetMGM Golden Goals",
+   "why": "Requires a BetMGM UK account (LeoVegas Gaming plc — bookmaker and casino operator)"
+  },
+  {
+   "id": "paddypower-drop",
+   "name": "Paddy Power Beat The Drop",
+   "why": "Requires a Paddy Power account (Flutter — bookmaker and casino operator)"
+  },
+  {
+   "id": "dabble",
+   "name": "Dabble Fantasy",
+   "why": "Real-money DFS operator — $10 no-deposit credit is an acquisition funnel"
+  },
+  {
+   "id": "parlayplay",
+   "name": "ParlayPlay",
+   "why": "Real-money DFS operator — $5 free entry is an acquisition funnel"
   }
  ],
  "listings": [
@@ -589,7 +832,19 @@
      "tier": "official"
     }
    ],
-   "lastChecked": "2026-08-19"
+   "lastChecked": "2026-08-19",
+   "crossCheck": {
+    "url": "https://www.kaggle.com/competitions",
+    "checkedDate": "2026-11-01",
+    "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
+    "confirmed": [
+     "Featured competitions carry prizes; practice and community competitions may not."
+    ],
+    "caveats": [
+     "Prize and entry terms are per competition, not platform-wide."
+    ],
+    "deadline": null
+   }
   },
   {
    "id": "devpost",
@@ -711,7 +966,23 @@
      "tier": "official"
     }
    ],
-   "lastChecked": "2026-08-19"
+   "lastChecked": "2026-08-19",
+   "crossCheck": {
+    "url": "https://arcprize.org/competitions/2026",
+    "checkedDate": "2026-11-01",
+    "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
+    "confirmed": [
+     "$2,000,000 across three tracks.",
+     "Code and methods must be open-sourced to be eligible for prizes.",
+     "No internet access during Kaggle evaluation."
+    ],
+    "caveats": [
+     "Submission deadline 2026-11-02 and paper deadline 2026-11-08 — both fall within days of this build.",
+     "No entry fee is stated on the page; the earlier build deliberately left the fee cell blank rather than assume free."
+    ],
+    "deadline": "2026-11-02"
+   },
+   "deadline": "2026-11-02"
   },
   {
    "id": "reedsy-dir",
@@ -825,7 +1096,19 @@
      "tier": "official"
     }
    ],
-   "lastChecked": "2026-08-19"
+   "lastChecked": "2026-08-19",
+   "crossCheck": {
+    "url": "https://www.drivendata.org/competitions/",
+    "checkedDate": "2026-11-01",
+    "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
+    "confirmed": [
+     "Prize competitions and practice benchmarks are listed separately."
+    ],
+    "caveats": [
+     "Eligibility and terms vary per competition."
+    ],
+    "deadline": null
+   }
   },
   {
    "id": "herox",
@@ -1038,9 +1321,31 @@
      "title": "ESPN NFL Pick'em",
      "url": "https://fantasy.espn.com/games/nfl-pickem-2026/make-picks",
      "tier": "official"
+    },
+    {
+     "title": "Official page — independently checked 2026-11-01",
+     "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules",
+     "tier": "official",
+     "crossChecked": true,
+     "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1"
     }
    ],
-   "lastChecked": "2026-08-19"
+   "lastChecked": "2026-08-19",
+   "crossCheck": {
+    "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules",
+    "checkedDate": "2026-11-01",
+    "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
+    "confirmed": [
+     "Free entry: NO PURCHASE NECESSARY.",
+     "Prize total $102,000, which includes a $5,000 random-drawing prize (not a skill prize).",
+     "Season runs through 2027-01-10."
+    ],
+    "caveats": [
+     "ESPN's own FAQ contradicts itself on the maximum number of entries (five vs ten)."
+    ],
+    "deadline": "2027-01-10"
+   },
+   "deadline": "2027-01-10"
   },
   {
    "id": "espn-survivor",
@@ -3292,7 +3597,20 @@
      "tier": "official"
     }
    ],
-   "lastChecked": "2026-08-19"
+   "lastChecked": "2026-08-19",
+   "crossCheck": {
+    "url": "https://www.metaculus.com/tournaments/",
+    "checkedDate": "2026-11-01",
+    "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
+    "confirmed": [
+     "Platform states participation is free and that accurate forecasters can win cash prizes.",
+     "Prize pools are per tournament."
+    ],
+    "caveats": [
+     "Some listed tournaments have no prize pool at all."
+    ],
+    "deadline": null
+   }
   },
   {
    "id": "aicrowd",
@@ -8533,391 +8851,265 @@
     }
    ],
    "lastChecked": "2026-08-19"
+  },
+  {
+   "id": "gems-prize-2026",
+   "name": "GEMS Prize Challenge (DrivenData)",
+   "short": "US DOE prize competition hosted on DrivenData: $300,000 pool, closes 2026-12-03 23:59 UTC.",
+   "type": "tech",
+   "status": "live",
+   "freePath": "unknown",
+   "platforms": [
+    "web"
+   ],
+   "signupUrl": "https://www.drivendata.org/competitions/306/competition-doe-gems/",
+   "rulesUrl": "https://www.drivendata.org/competitions/306/competition-doe-gems/",
+   "prizeUsd": "$300,000 total",
+   "prizeNote": "$300,000 total prize pool, per the operator page read on 2026-11-01. Final-round awards depend on scoring. No entry fee was stated on the inspected page, so none is asserted here.",
+   "minCashout": "",
+   "payoutMethods": [],
+   "eligibility": "",
+   "restricted": "Final-round awards depend on scoring; confirm eligibility in the official rules.",
+   "verification": {
+    "level": "unknown",
+    "steps": []
+   },
+   "sources": [
+    {
+     "title": "Official competition page",
+     "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/",
+     "tier": "official"
+    }
+   ],
+   "lastChecked": "2026-11-01",
+   "deadline": "2026-12-03",
+   "mergedFrom": "Prize Atlas data/entries.json + research/SOURCES.md",
+   "addedByParallelSession": "arena/27a86924-own1 and arena/90c9f78c-own1",
+   "mergedBy": "arena-041e7ad1",
+   "crossCheck": {
+    "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/",
+    "checkedDate": "2026-11-01",
+    "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
+    "confirmed": [
+     "$300,000 total prize pool.",
+     "Closes 2026-12-03 at 23:59 UTC."
+    ],
+    "caveats": [
+     "Final-round awards depend on scoring; no fee is stated on the inspected page."
+    ],
+    "deadline": "2026-12-03"
+   }
+  },
+  {
+   "id": "midterms-2026",
+   "name": "US Midterms 2026 (Metaculus tournament)",
+   "short": "Single Metaculus tournament with a $10,000 pool, closing 2026-11-04 — days after this build.",
+   "type": "forecasting",
+   "status": "live",
+   "freePath": "full",
+   "platforms": [
+    "web"
+   ],
+   "signupUrl": "https://www.metaculus.com/tournament/midterms-2026/",
+   "rulesUrl": "https://www.metaculus.com/tournament/midterms-2026/",
+   "prizeUsd": "$10,000 pool",
+   "prizeNote": "$10,000 prize pool per the tournament page read on 2026-11-01. Metaculus states platform-wide that participation is free and accurate forecasters can win cash prizes.",
+   "minCashout": "",
+   "payoutMethods": [],
+   "eligibility": "Free participation per Metaculus' platform statement; consult the tournament rules for eligibility.",
+   "restricted": "Closes 2026-11-04. Check the tournament rules before entering.",
+   "verification": {
+    "level": "unknown",
+    "steps": []
+   },
+   "sources": [
+    {
+     "title": "Official tournament page",
+     "url": "https://www.metaculus.com/tournament/midterms-2026/",
+     "tier": "official"
+    },
+    {
+     "title": "Metaculus tournaments index",
+     "url": "https://www.metaculus.com/tournaments/",
+     "tier": "official"
+    }
+   ],
+   "lastChecked": "2026-11-01",
+   "deadline": "2026-11-04",
+   "mergedFrom": "Prize Atlas data/entries.json + research/SOURCES.md",
+   "addedByParallelSession": "arena/27a86924-own1 and arena/90c9f78c-own1",
+   "mergedBy": "arena-041e7ad1",
+   "crossCheck": {
+    "url": "https://www.metaculus.com/tournament/midterms-2026/",
+    "checkedDate": "2026-11-01",
+    "checkedBy": "arena/90c9f78c-own1",
+    "confirmed": [
+     "$10,000 prize pool.",
+     "Free entry per the platform statement."
+    ],
+    "caveats": [
+     "Closes 2026-11-04 — three days after this build. Confirm eligibility in the tournament rules."
+    ],
+    "deadline": "2026-11-04"
+   }
+  },
+  {
+   "id": "codex-twitchcon-2026",
+   "name": "Codex x TwitchCon Hackathon",
+   "short": "Devpost hackathon: build a Twitch-connected project using Codex. $10,000 first place, closes 2026-11-02 14:00 Pacific.",
+   "type": "tech",
+   "status": "live",
+   "freePath": "full",
+   "platforms": [
+    "web"
+   ],
+   "signupUrl": "https://twitchcon-codex.devpost.com/rules",
+   "rulesUrl": "https://twitchcon-codex.devpost.com/rules",
+   "prizeUsd": "$10,000 first place",
+   "prizeNote": "$10,000 first place, read from the official Devpost rules page on 2026-11-01 by a parallel session. Time-critical: closes 2026-11-02 at 2pm Pacific, one day after this build.",
+   "minCashout": "",
+   "payoutMethods": [],
+   "eligibility": "No purchase necessary. 18 or age of majority, whichever is older; geographic and other restrictions apply.",
+   "restricted": "Deadline 2026-11-02, 2pm Pacific. Requires a Codex session ID and a demo.",
+   "verification": {
+    "level": "unknown",
+    "steps": []
+   },
+   "sources": [
+    {
+     "title": "Official rules (Devpost)",
+     "url": "https://twitchcon-codex.devpost.com/rules",
+     "tier": "official"
+    }
+   ],
+   "lastChecked": "2026-11-01",
+   "deadline": "2026-11-02",
+   "mergedFrom": "Prize Atlas supplemental research page",
+   "addedByParallelSession": "arena/27a86924-own1 and arena/90c9f78c-own1",
+   "mergedBy": "arena-041e7ad1",
+   "crossCheck": {
+    "url": "https://twitchcon-codex.devpost.com/rules",
+    "checkedDate": "2026-11-01",
+    "checkedBy": "arena/37aed701-own1",
+    "confirmed": [
+     "$10,000 first place.",
+     "No purchase necessary; 18+ or age of majority.",
+     "AI coding assistants are permitted; a Codex session ID and demo are required."
+    ],
+    "caveats": [
+     "Closes 2026-11-02 at 2pm Pacific — one day after this build."
+    ],
+    "deadline": "2026-11-02"
+   }
+  },
+  {
+   "id": "paypal-ai-hackathon-2026",
+   "name": "PayPal AI Hackathon",
+   "short": "Devpost hackathon using the free PayPal sandbox plus any AI tool. $12,000 first place, closes 2026-11-12 12:00 Pacific.",
+   "type": "tech",
+   "status": "live",
+   "freePath": "full",
+   "platforms": [
+    "web"
+   ],
+   "signupUrl": "https://paypalaihackathon.devpost.com/rules",
+   "rulesUrl": "https://paypalaihackathon.devpost.com/rules",
+   "prizeUsd": "$12,000 first place",
+   "prizeNote": "$12,000 first place quoted from the official rules. Note the discrepancy logged as I-20: the event page advertises $67,500 cash / $69,750 total prizes while the rules list individual awards including non-cash credits.",
+   "minCashout": "",
+   "payoutMethods": [],
+   "eligibility": "No purchase necessary. Age of majority; geographic and other restrictions apply.",
+   "restricted": "Deadline 2026-11-12, 12pm Pacific. Functional demo and public source repository required.",
+   "verification": {
+    "level": "unknown",
+    "steps": []
+   },
+   "sources": [
+    {
+     "title": "Official rules (Devpost)",
+     "url": "https://paypalaihackathon.devpost.com/rules",
+     "tier": "official"
+    },
+    {
+     "title": "Official event page (Devpost)",
+     "url": "https://paypalaihackathon.devpost.com/",
+     "tier": "official"
+    }
+   ],
+   "lastChecked": "2026-11-01",
+   "deadline": "2026-11-12",
+   "mergedFrom": "Prize Atlas supplemental research page",
+   "addedByParallelSession": "arena/27a86924-own1 and arena/90c9f78c-own1",
+   "mergedBy": "arena-041e7ad1",
+   "crossCheck": {
+    "url": "https://paypalaihackathon.devpost.com/rules",
+    "checkedDate": "2026-11-01",
+    "checkedBy": "arena/37aed701-own1",
+    "confirmed": [
+     "$12,000 first place per the rules page.",
+     "No purchase necessary.",
+     "Functional demo and public source repository required."
+    ],
+    "caveats": [
+     "The event page advertises a much larger headline figure than the rules itemise — see I-20."
+    ],
+    "deadline": "2026-11-12"
+   }
+  },
+  {
+   "id": "global-virtual-hackathon-2026",
+   "name": "Global Virtual Hackathon 2026",
+   "short": "Free student hackathon for ages 14–18 in teams of 2–4 with a supervising teacher. $1,000 first place per division.",
+   "type": "tech",
+   "status": "live",
+   "freePath": "full",
+   "platforms": [
+    "web"
+   ],
+   "signupUrl": "https://gvhackathon.com/",
+   "rulesUrl": "https://gvhackathon.com/fairness",
+   "prizeUsd": "$1,000 first place per division; two $250 runners-up per division",
+   "prizeNote": "Cash awards read from the official event page on 2026-11-01 by a parallel session. AI tools are explicitly allowed and expected; team members must be able to defend their own work on camera.",
+   "minCashout": "",
+   "payoutMethods": [],
+   "eligibility": "Free. Students aged 14–18; teams of 2–4 with a supervising teacher (see terms for exceptions and consent).",
+   "restricted": "Register by 2026-11-13 23:59 AoE; submit by 2026-11-25. Team and teacher requirements apply.",
+   "verification": {
+    "level": "unknown",
+    "steps": []
+   },
+   "sources": [
+    {
+     "title": "Official event page",
+     "url": "https://gvhackathon.com/",
+     "tier": "official"
+    },
+    {
+     "title": "Official AI & fairness page",
+     "url": "https://gvhackathon.com/fairness",
+     "tier": "official"
+    }
+   ],
+   "lastChecked": "2026-11-01",
+   "deadline": "2026-11-13",
+   "mergedFrom": "Prize Atlas supplemental research page",
+   "addedByParallelSession": "arena/27a86924-own1 and arena/90c9f78c-own1",
+   "mergedBy": "arena-041e7ad1",
+   "crossCheck": {
+    "url": "https://gvhackathon.com/",
+    "checkedDate": "2026-11-01",
+    "checkedBy": "arena/37aed701-own1",
+    "confirmed": [
+     "Free to enter.",
+     "$1,000 first place per division plus two $250 runners-up per division.",
+     "AI tools allowed and expected; work must be defensible on camera."
+    ],
+    "caveats": [
+     "Students aged 14–18 only, in teams of 2–4 with a supervising teacher.",
+     "Registration closes 2026-11-13 23:59 AoE; submission 2026-11-25."
+    ],
+    "deadline": "2026-11-13"
+   }
   }
- ],
- "removedThisPass": [
-  {
-   "id": "pch",
-   "name": "Publishers Clearing House",
-   "why": "sweepstakes category removed"
-  },
-  {
-   "id": "lucktastic",
-   "name": "Lucktastic",
-   "why": "sweepstakes category removed"
-  },
-  {
-   "id": "high5",
-   "name": "High 5 Casino",
-   "why": "sweepstakes category removed"
-  },
-  {
-   "id": "pulsz",
-   "name": "Pulsz",
-   "why": "sweepstakes category removed"
-  },
-  {
-   "id": "chumba",
-   "name": "Chumba Casino",
-   "why": "sweepstakes category removed"
-  },
-  {
-   "id": "luckyland",
-   "name": "LuckyLand Slots",
-   "why": "sweepstakes category removed"
-  },
-  {
-   "id": "crowncoins",
-   "name": "Crown Coins Casino",
-   "why": "sweepstakes category removed"
-  },
-  {
-   "id": "stakeus",
-   "name": "Stake.us",
-   "why": "sweepstakes category removed"
-  },
-  {
-   "id": "fliff",
-   "name": "Fliff",
-   "why": "sweepstakes/AMOE model removed"
-  },
-  {
-   "id": "online-sweepstakes",
-   "name": "Online-Sweepstakes.com",
-   "why": "sweepstakes directory removed"
-  },
-  {
-   "id": "reddit-sweeps",
-   "name": "r/sweepstakes & r/Sweepstake",
-   "why": "sweepstakes directory removed"
-  },
-  {
-   "id": "aarp",
-   "name": "AARP Sweepstakes",
-   "why": "sweepstakes category removed"
-  },
-  {
-   "id": "hgtv",
-   "name": "HGTV / Food Network Giveaways",
-   "why": "sweepstakes category removed"
-  },
-  {
-   "id": "iheart",
-   "name": "iHeartRadio Contests",
-   "why": "sweepstakes category removed"
-  },
-  {
-   "id": "meredith",
-   "name": "People / BHG / Meredith magazine sweeps",
-   "why": "sweepstakes category removed"
-  },
-  {
-   "id": "mcluck",
-   "name": "McLuck",
-   "why": "sweepstakes category removed"
-  },
-  {
-   "id": "wowvegas",
-   "name": "WOW Vegas",
-   "why": "sweepstakes category removed"
-  },
-  {
-   "id": "realprize",
-   "name": "RealPrize",
-   "why": "sweepstakes category removed"
-  },
-  {
-   "id": "sweeps-fanatics",
-   "name": "Sweepstakes Fanatics",
-   "why": "sweepstakes directory removed"
-  },
-  {
-   "id": "contest-girl",
-   "name": "Contest Girl",
-   "why": "sweepstakes directory removed"
-  },
-  {
-   "id": "ultracontest",
-   "name": "UltraContest",
-   "why": "sweepstakes directory removed"
-  },
-  {
-   "id": "sweepsadvantage",
-   "name": "Sweepstakes Advantage",
-   "why": "sweepstakes directory removed"
-  },
-  {
-   "id": "freebieshark",
-   "name": "FreebieShark",
-   "why": "sweepstakes directory removed"
-  },
-  {
-   "id": "sweepwidget",
-   "name": "SweepWidget Giveaways",
-   "why": "sweepstakes directory removed"
-  },
-  {
-   "id": "solitaire-smash",
-   "name": "Solitaire Smash",
-   "why": "DEAD: App Store ID 6444781403 does not render a listing; unverifiable"
-  },
-  {
-   "id": "bingo-billions",
-   "name": "Bingo Billions",
-   "why": "DEAD: App Store ID 6446250848 returns \"page cannot be found\"; sole source unreachable"
-  },
-  {
-   "id": "luckyday",
-   "name": "Lucky Day",
-   "why": "sweepstakes category removed"
-  },
-  {
-   "id": "hqtrivia",
-   "name": "HQ Trivia",
-   "why": "DEAD: Service dissolved February 2020"
-  },
-  {
-   "id": "usatoday-survivor",
-   "name": "USA TODAY Pro Football Survivor",
-   "why": "DEAD: usatoday.com/sports/contests/survivor-pool redirects to the USA TODAY homepage"
-  },
-  {
-   "id": "football-nation",
-   "name": "Football Nation USA Weekly Pick'Em",
-   "why": "DEAD: footballnationusa.com/pickems contains no pick’em and no prize"
-  },
-  {
-   "id": "draftkings",
-   "name": "DraftKings Fantasy",
-   "why": "Casino product — iOS listing is \"DraftKings Sportsbook & Casino\""
-  },
-  {
-   "id": "fanduel",
-   "name": "FanDuel Fantasy",
-   "why": "Casino product — iOS listing is \"FanDuel Sportsbook & Casino\""
-  },
-  {
-   "id": "backspin",
-   "name": "Backspin Games",
-   "why": "Casino product — listed in the App Store Casino category (chart #35 Casino), 18+, slots/bingo suite"
-  },
-  {
-   "id": "verse-gaming",
-   "name": "Verse Gaming",
-   "why": "Sweepstakes model — operator FAQ states \"VerseCash is a promotional sweepstakes currency\" and contests are sweepstakes-style ($50 min redemption after 1x playthrough)"
-  },
-  {
-   "id": "lockmypicks",
-   "name": "LockMyPicks",
-   "why": "No cash path — site states \"No fees · No paywalls\" and prizes are coins/cosmetics only. Also sells $1–$5 cosmetic packs and currently exposes admin controls (password reset, streak recalculation) on its public homepage."
-  },
-  {
-   "id": "prizepicks-jackpot",
-   "name": "PrizePicks Free NFL Jackpot",
-   "why": "Real-money DFS operator — free jackpot is an acquisition funnel"
-  },
-  {
-   "id": "fanduel-shuffle",
-   "name": "FanDuel Daily Shuffle",
-   "why": "Requires a FanDuel Sportsbook account; prize is Bonus Bets, not cash"
-  },
-  {
-   "id": "betmgm-survivor",
-   "name": "BetMGM Football Survivor",
-   "why": "Requires a BetMGM account (bookmaker and casino operator)"
-  },
-  {
-   "id": "dk-f2p",
-   "name": "DraftKings Free-to-Play contests",
-   "why": "Requires a DraftKings account (Sportsbook & Casino)"
-  },
-  {
-   "id": "sky-super6",
-   "name": "Sky Bet Super 6",
-   "why": "Requires a Sky Bet account (licensed bookmaker operating Sky Vegas / Sky Casino)"
-  },
-  {
-   "id": "bet365-6scores",
-   "name": "bet365 6 Scores Challenge",
-   "why": "Requires a bet365 account (licensed bookmaker and casino operator)"
-  },
-  {
-   "id": "betmgm-goldengoals",
-   "name": "BetMGM Golden Goals",
-   "why": "Requires a BetMGM UK account (LeoVegas Gaming plc — bookmaker and casino operator)"
-  },
-  {
-   "id": "paddypower-drop",
-   "name": "Paddy Power Beat The Drop",
-   "why": "Requires a Paddy Power account (Flutter — bookmaker and casino operator)"
-  },
-  {
-   "id": "dabble",
-   "name": "Dabble Fantasy",
-   "why": "Real-money DFS operator — $10 no-deposit credit is an acquisition funnel"
-  },
-  {
-   "id": "parlayplay",
-   "name": "ParlayPlay",
-   "why": "Real-money DFS operator — $5 free entry is an acquisition funnel"
-  }
- ],
- "addedThisPassG": [
-  "mlb-beat-the-streak",
-  "metaculus",
-  "aicrowd",
-  "zindi",
-  "codabench",
-  "grand-challenge",
-  "crunchdao",
-  "mlcontests",
-  "espn-tourney-challenge",
-  "espn-tc-eliminator"
- ],
- "addedThisPassH": [
-  "nascar-fantasy-live",
-  "pga-fantasy-golf",
-  "nhl-bracket-challenge",
-  "espn-nba-playoff",
-  "nba-pickem",
-  "bundesliga-fantasy",
-  "laliga-fantasy",
-  "swagbucks-trivia",
-  "99designs",
-  "freelancer-contests",
-  "battlefy",
-  "challengermode"
- ],
- "addedThisPassI": [
-  "atp-fantasy",
-  "f1-fantasy",
-  "ewc-play",
-  "espn-hockey-playoff",
-  "espn-cfp-bracket",
-  "espn-knockout-bracket",
-  "mlb-hr-derby-pickem",
-  "tradingview-leap",
-  "wall-street-survivor",
-  "start-gg"
- ],
- "addedThisPassJ": [
-  "chesscom-tournaments",
-  "play-pokemon",
-  "designcrowd",
-  "crowdspring",
-  "espn-womens-tourney",
-  "yahoo-bracket-mayhem",
-  "bullrush",
-  "signate",
-  "tianchi",
-  "hypermind"
- ],
- "addedThisPassK": [
-  "moomoo-paper-trading",
-  "superbru",
-  "afl-fantasy",
-  "nrl-fantasy",
-  "espn-bowl-mania",
-  "ligue1-fantasy",
-  "lol-pickem",
-  "six-nations-fantasy",
-  "tattico-serie-a",
-  "supercoach-bbl"
- ],
- "addedThisPassL": [
-  "fundednext",
-  "for-traders",
-  "ninjatrader-arena",
-  "yahoo-daily-draw",
-  "dp-world-tour-fantasy",
-  "the-open-fantasy",
-  "sun-dream-team",
-  "sky-sports-ff",
-  "cricket-draft",
-  "icc-t20-fantasy"
- ],
- "addedThisPassM": [
-  "tim-hortons-hockey",
-  "darts-corner-predictor",
-  "spfl-fantasy",
-  "euroleague-fantasy",
-  "valorant-pickem",
-  "eredivisie-fantasy",
-  "deriv-tournaments",
-  "multibank-demo",
-  "xm-demo",
-  "headway-demo"
- ],
- "addedThisPassN": [
-  "hfm-demo",
-  "litefinance-best",
-  "tradingcom-paper",
-  "tickmill-nfp",
-  "roboforex-demo",
-  "fbs-pro-demo",
-  "npbfx-demo",
-  "cev-volley-fantasy",
-  "vnl-fantasy",
-  "cev-predictor"
- ],
- "addedThisPassO": [
-  "super-league-fantasy",
-  "super-league-predictor",
-  "motogp-fantasy",
-  "the-hundred-fantasy",
-  "indycar-fantasy",
-  "super-rugby-fantasy",
-  "fantasy-gaa",
-  "film-prize",
-  "pensacola-songwriting",
-  "young-lions"
- ],
- "addedThisPassP": [
-  "afl-tipping",
-  "aflw-tipping",
-  "supercoach-afl",
-  "supercoach-nrl",
-  "supercoach-nbl",
-  "wsl-fantasy",
-  "ti-compendium",
-  "ibu-ecup",
-  "tom-howard-poetry",
-  "wergle-flomp"
- ],
- "addedThisPassQ": [
-  "aflw-fantasy",
-  "tff-fantezi-lig",
-  "mxa-fantasy",
-  "kinolime",
-  "bridgewater-forecast",
-  "streak-contest",
-  "premiership-rugby-fantasy",
-  "aleague-fantasy",
-  "agentmma",
-  "formula-e-predictor"
- ],
- "addedThisPassR": [
-  "telegraph-fantasy-racing",
-  "stable-stars",
-  "stablestakes",
-  "ohha-harness",
-  "running-aces-harness",
-  "ultimate-fantasy-tennis",
-  "ncga-majors-challenge",
-  "majors-challenge",
-  "teepster",
-  "fantasy-golf-challenge"
- ],
- "addedThisPassS": [
-  "checkmate-gaming",
-  "buzz-fantasy-golf",
-  "fundedfast-open",
-  "hipa",
-  "sony-world-photo",
-  "world-press-photo",
-  "weather-potw",
-  "epoty",
-  "spie-light",
-  "istanbul-photo-awards"
  ]
 }

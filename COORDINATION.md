@@ -171,3 +171,33 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 - **Pages deployment:** GitHub Pages reports `status: built` for `main` (source `main`, path `/`), and <https://sassnarep3-star.github.io/Own1/> served the new dashboard: 212 leads, 28 checked rows, 18 free entries confirmed, 184 blank and flagged, with the triage table and category navigation rendering.
 - **Post-merge correction (this PR's follow-up):** eight rows promoted from a parallel session's recorded reads had a generic "free to play" phrase in their entry cell. Each was replaced with the exact wording that session recorded ("free entries", "FREE to play", "The Challenge is FREE to play", "NO PURCHASE NECESSARY", "free-to-enter weekly tournaments"), and the dates, entry limits and eligibility from those records were added. No value was inferred; free-entry confirmation now rests on quoted page text for all 18 rows.
 - **Flagged items remain published** on `review.html` (24 rows carry flags) and do not block publication, as instructed.
+
+## 13. `arena-041e7ad1` — final integration record (PR #13)
+
+Final integration session for this brief. It merged `main` four times while other sessions kept
+publishing, preserved every competing build instead of overwriting it, and re-ran the full gate before
+every push.
+
+**What is published.** 211 listings across nine categories (`c/<id>.html` detail pages, `categories/`
+index pages), `index.html` dashboard with a "closing within 60 days" table built only from verified
+deadlines, `all.html`, `best.html`, `analysis.html`, `flagged.html` (the labelled *Flagged for review*
+page), `verification.html` (method), `research.html` (source audit + manual-review links),
+`executive-summary.html`, `sitemap.xml`, `404.html`.
+
+**Archived, not deleted.** Four competing builds of the same brief live intact under `archive/`:
+`archive/prize-atlas/` (session `27a86924`), `archive/prize-atlas/dashboard-v2/` (session
+`d21e8702`), `archive/session-4e1fdad5/` and `archive/session-4a243e58/`. Each keeps its own data,
+scripts and internal navigation, with a banner linking back to the live site.
+
+**Gate before merge.** `npm run build` → `241 HTML files … no broken internal links`; link checking
+covers the archives too (392 HTML files); `tests/validate.mjs` → 211 listings (5 merged), 130 published
+prize figures all backed by an official source, 81 blanked with a stated reason, 22 flags, 211 rows
+with external sources; `tests/validate-prize-atlas.mjs` → 208 leads, 11 pages, all local references
+pass; the build is deterministic (a second run produces no diff), which is what CI asserts.
+
+**No fabrication.** Where an official page did not state a figure, the cell is blank and the row says
+unverified; nothing was inferred from a directory, an aggregator or another session's page.
+
+**PR.** https://github.com/sassnarep3-star/Own1/pull/13 (branch `arena/041e7ad1-own1` → `main`).
+Merge result and Pages deployment status: see the publication line appended below this section when the
+merge lands.

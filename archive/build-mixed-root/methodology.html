@@ -6,7 +6,7 @@
 <meta name="description" content="The verification rules, the exact official pages read, and the automated checks behind every row.">
 <meta name="color-scheme" content="light">
 <title>Method and sources · Prize Atlas</title>
-<link rel="stylesheet" href="../prize-atlas/assets/style.css">
+<link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -16,7 +16,7 @@
       <span class="brand-mark" aria-hidden="true">&#10022;</span>
       <span>Prize Atlas<small>Free-to-enter cash competitions</small></span>
     </a>
-    <nav class="nav" aria-label="Main"><a href="./index.html">Overview</a><a href="./index.html#categories">Categories</a><a href="./index.html#best-bets">Best bets</a><a href="./analysis.html">Analysis</a><a href="./methodology.html" aria-current="page">Method</a><a href="../../index.html">Supplemental</a><a href="./review.html">Flagged for review</a></nav>
+    <nav class="nav" aria-label="Main"><a href="./index.html">Overview</a><a href="./index.html#categories">Categories</a><a href="./index.html#best-bets">Best bets</a><a href="./analysis.html">Analysis</a><a href="./methodology.html" aria-current="page">Method</a><a href="./supplemental/index.html">Supplemental</a><a href="./review.html">Flagged for review</a></nav>
   </div>
 </header>
 <main id="main">
@@ -38,7 +38,7 @@
     <p>The 212 rows start from the reference ledger at <a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/data.js" target="_blank" rel="noopener noreferrer">karagemop466-tech/FreeMoneyApps (assets/data.js)</a>, which was last stamped 2026-08-19 and lists 206 entries. Its names and category assignments were imported as <em>leads only</em>; none of its August claims about prizes, free paths or status were carried across as facts. Two rows were added in this pass after reading their operator pages directly (Reedsy’s weekly contest and the USA.gov federal challenge directory).</p>
 
     <h2>Checked rows and exactly what was read</h2>
-    <p>20 rows were read directly in this integration pass. 8 rows carry a read recorded by a parallel session in this repository (a479d584-own1); their evidence files are <code>data/verification/batchA.jsonl</code>. Attribution is shown on each row, and their values were not altered — only copied.</p>
+    <p>21 rows were read directly in this integration pass. 8 rows carry a read recorded by a parallel session in this repository (a479d584-own1); their evidence files are <code>data/verification/batchA.jsonl</code>. Attribution is shown on each row, and their values were not altered — only copied.</p>
     <div class="panel"><div class="table-scroll"><table>
       <thead><tr><th scope="col">Listing</th><th scope="col">Official page read</th><th scope="col">Values copied</th><th scope="col">Not stated / limits</th></tr></thead>
       <tbody><tr>
@@ -142,6 +142,12 @@
   <td data-label="Official page read">https://www.metaculus.com/tournaments/</td>
   <td data-label="Values copied"><span class="cell-sub">• entry: &#39;You can participate for free and win cash prizes for being accurate.&#39;</span><span class="cell-sub">• prize: tournament cards list prize pools, including &#39;NO PRIZE POOL&#39; for some</span></td>
   <td data-label="Not stated / limits"><span class="cell-sub">• eligibility</span><span class="cell-sub">• per-question scoring rules</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes" target="_blank" rel="noopener noreferrer">Deriv Trading Tournaments</a></td>
+  <td data-label="Official page read">https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes</td>
+  <td data-label="Values copied"><span class="cell-sub">• Free entry, no deposit required</span><span class="cell-sub">• $1,000 / $600 / $400 monthly prizes</span><span class="cell-sub">• $10,000 virtual funds, real cash prizes</span><span class="cell-sub">• Skill-based, no random draws</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• Eligible countries</span><span class="cell-sub">• Exact tournament dates</span></td>
 </tr>
 <tr>
   <td data-label="Listing"><a href="https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest" target="_blank" rel="noopener noreferrer">Tom Howard/Margaret Reid Poetry Contest</a></td>
@@ -297,13 +303,13 @@
     <ul>
       <li><a href="review.html">Review page</a>: the 28 row-by-row reads recorded in <code>data/verification/batchA.jsonl</code>, each with its outcome, prize text and official URL.</li>
       <li><a href="../method.html">Archived method page</a> from the parallel build, which explains its 90-point priority score.</li>
-      <li><a href="../../index.html">Verified ledger build</a>: all 206 imported rows with an automated audit and its own flagged page.</li>
+      <li><a href="ledger/index.html">Verified ledger build</a>: all 206 imported rows with an automated audit and its own flagged page.</li>
       <li><code>data/ledger.json</code>, <code>data/audit.json</code>, <code>data/verification.json</code>, <code>data/finder-ledger.json</code>: the machine-readable evidence stores, unchanged.</li>
     </ul>
 
     <h2>Known limits of this pass</h2>
     <ul>
-      <li>184 rows were not read on an operator page and are published blank and flagged.</li>
+      <li>183 rows were not read on an operator page and are published blank and flagged.</li>
       <li>Prize and deadline values age quickly. The reading date is shown on every checked row.</li>
       <li>Eligibility summaries are shortened from longer rules; the linked page wins in any dispute.</li>
       <li>Pages that render only with JavaScript (Topcoder, Zindi, the Reedsy contest entries) could not be read reliably, so they stay unverified.</li>
@@ -315,9 +321,9 @@
 <footer class="site-footer">
   <div class="wrap">
     <span>Prize Atlas · Research, not financial, legal or tax advice · Sources re-read 2026-11-01</span>
-    <span><a href="./methodology.html">Method &amp; sources</a> · <a href="./review.html">Flagged for review</a> · <a href="../../all.html">Archived builds</a> · <a href="../../index.html">Verified ledger</a> · <a href="https://github.com/sassnarep3-star/Own1">Repository</a></span>
+    <span><a href="./methodology.html">Method &amp; sources</a> · <a href="./review.html">Flagged for review</a> · <a href="../all.html">Archived builds</a> · <a href="./ledger/index.html">Verified ledger</a> · <a href="https://github.com/sassnarep3-star/Own1">Repository</a></span>
   </div>
 </footer>
-<script src="../prize-atlas/assets/app.js" defer></script>
+<script src="./assets/app.js" defer></script>
 </body>
 </html>
