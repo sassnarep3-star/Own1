@@ -165,9 +165,12 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 - Claim committed and pushed before any shared output changed (`76fd2f1`).
 - Integration merge of `origin/main` resolved without discarding any session's work (table above).
 - Build and checks re-run **after** the merge, on the combined data.
-- PR: _filled in below after the pull request is opened._
-- Merge: _filled in after merge._
-- Pages deployment: _filled in after the deployment check._
+- **PR:** [#17](https://github.com/sassnarep3-star/Own1/pull/17) — "Verified mobile-first dashboard: 212 leads, 20 checked against official pages, all flags published". Because four other sessions merged ten PRs into `main` while this branch was open, the branch was re-based onto the newest `main` as a single integration commit (content unchanged) so the publish was not blocked; every other session's build, data and documents were carried forward.
+- **Merge:** merged into `main` at 2026-11-01T13:57:56Z, merge commit `c7cd119ba0c19153c8892097af1e4a9f21973fe4`. No approval waited for, as instructed.
+- **CI on the PR:** `validate` → pass; `linkcheck` → pass.
+- **Pages deployment:** GitHub Pages reports `status: built` for `main` (source `main`, path `/`), and <https://sassnarep3-star.github.io/Own1/> served the new dashboard: 212 leads, 28 checked rows, 18 free entries confirmed, 184 blank and flagged, with the triage table and category navigation rendering.
+- **Post-merge correction (this PR's follow-up):** eight rows promoted from a parallel session's recorded reads had a generic "free to play" phrase in their entry cell. Each was replaced with the exact wording that session recorded ("free entries", "FREE to play", "The Challenge is FREE to play", "NO PURCHASE NECESSARY", "free-to-enter weekly tournaments"), and the dates, entry limits and eligibility from those records were added. No value was inferred; free-entry confirmation now rests on quoted page text for all 18 rows.
+- **Flagged items remain published** on `review.html` (24 rows carry flags) and do not block publication, as instructed.
 
 ---
 

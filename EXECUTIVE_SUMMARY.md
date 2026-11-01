@@ -2,7 +2,7 @@
 
 **Live site:** https://sassnarep3-star.github.io/Own1/
 **Prepared:** 2026-11-01 (UTC) · **Integrated by:** session `181b7279-own1`
-**Status:** 212 leads · 28 checked against an official page (20 read in this pass, 8 attributed to a parallel session) · 17 with free entry confirmed · 184 published blank and flagged
+**Status:** 212 leads · 28 checked against an official page (20 read in this pass, 8 attributed to a parallel session) · 18 with free entry confirmed · 184 published blank and flagged
 
 Not financial, legal or tax advice, and not a guarantee of winnings. Every row is a research lead until its operator page is read.
 
@@ -78,7 +78,7 @@ Kaggle, DrivenData, Metaculus, Devpost and Vocal are platforms, not single prize
 
 ## 6. Data summary
 
-- 212 leads · 28 page-checked · 17 free entry confirmed · 1 paid entry · 184 unverified · 2 with no usable operator link (`thelines-survivor`, `squarespool`)
+- 212 leads · 28 page-checked · 18 free entry confirmed · 1 paid entry · 184 unverified · 2 with no usable operator link (`thelines-survivor`, `squarespool`)
 - Every unverified row shows *Unverified* and *Not confirmed* instead of a value
 - Triage scores exist only for the 28 checked rows, and the arithmetic is printed under each score
 
