@@ -17,17 +17,20 @@ jobs:
         with:
           node-version: '22'
 
-      # The site is generated from data/*.json, so the committed HTML must match the data.
-      - name: Rebuild pages
+      # The Atlas layer (/atlas) is generated from data/*.json; committed HTML must match the data.
+      - name: Rebuild the Atlas layer
         run: node scripts/build.mjs
 
-      - name: Fail if the committed HTML is stale
+      - name: Fail if the committed Atlas HTML is stale
         run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            echo "::error::Generated pages are out of date. Run 'node scripts/build.mjs' and commit the result."
-            git --no-pager diff --stat
+          if [ -n "$(git status --porcelain atlas data/atlas-entries.json)" ]; then
+            echo "::error::Atlas pages are out of date. Run 'node scripts/build.mjs' and commit the result."
+            git --no-pager diff --stat -- atlas data/atlas-entries.json
             exit 1
           fi
 
-      - name: Validate data, pages and links
+      - name: Validate the Atlas layer (data, evidence standard, every internal link)
+        run: node tests/validate-atlas.mjs
+
+      - name: Validate the remaining site layers
         run: node tests/validate.mjs

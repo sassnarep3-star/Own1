@@ -161,6 +161,8 @@ NAV = [
     ("executive-summary.html", "Summary"),
     ("sources.html", "Sources"),
     ("cross-session.html", "Cross-session"),
+    ("ledger/index.html", "Verified ledger"),
+    ("atlas/index.html", "Atlas (44 checked)"),
 ]
 
 
@@ -834,13 +836,17 @@ is contradicted cannot carry a verified prize.</p>
 
 <h2>4. Priority score (editorial, published)</h2>
 <p>Total maximum {MAX_SCORE} points, normalised to 100. The components:</p>
+<p><b>Evidence counts differently.</b> A prize confirmed on the operator’s own page and a prize confirmed on a page
+<i>quoting</i> the operator’s terms are both scored 20, because the second is still a verbatim statement of the
+operator’s rules — but they are never conflated: every row’s evidence kind is printed on
+<a href="verification.html">the verification page</a>, and the 4 secondary rows are marked as such.</p>
 <div class="tablewrap">
 <table>
   <thead><tr><th>Component</th><th>Points</th><th>Rule</th></tr></thead>
   <tbody>
     <tr><td>Free entry, evidenced</td><td>0–30</td><td>30 if an operator page confirms free entry; 18 if the catalogue claims free and it was not checked; 8 for “some free events”; 0 for paid-cash or a contradicted fee.</td></tr>
     <tr><td>Enterable today</td><td>0–15</td><td>15 live, 8 caution, 5 mixed, 0 ended. Reset to 0 if the operator page contradicts availability.</td></tr>
-    <tr><td>Prize documented</td><td>0–20</td><td>20 if a figure was read on an official page; 10 if the catalogue publishes a dollar figure without an official citation; 0 otherwise.</td></tr>
+    <tr><td>Prize documented</td><td>0–20</td><td>20 if a figure was read on a page carrying the operator’s own prize terms — either the operator page itself (8 rows) or a third-party page quoting those terms verbatim (4 rows, labelled <code>secondary-official-terms</code> on the verification page); 10 if the catalogue publishes a dollar figure with no citation; 0 otherwise.</td></tr>
     <tr><td>Agent leverage</td><td>0–15</td><td>Editorial, per category: tech 15, forecasting 12, creative 8, market 6, sports 5, trivia/skill 4, directory/pools 0.</td></tr>
     <tr><td>Payout friction</td><td>0–10</td><td>Account-only 10, eligibility check 7, full KYC 3, tax paperwork 3.</td></tr>
   </tbody>

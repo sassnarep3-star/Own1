@@ -192,8 +192,11 @@ const NAV = [
   ['ledger-pass.html', 'Ledger pass'],
 ];
 
-const shell = ({ page, title, description, body, heroHtml = '', D = '../' }) => {
-  const nav = NAV.map(([href, label]) => `<a href="${D}${href}"${page === href ? ' aria-current="page" class="active"' : ''}>${label}</a>`).join('');
+const shell = ({ page, title, description, body, heroHtml = '', S = '' }) => {
+  /* S = depth of the page relative to the Atlas root ('' or '../').
+     D = depth relative to the repository root, used for shared assets. */
+  const D = `${S}../`;
+  const nav = NAV.map(([href, label]) => `<a href="${S}${href}"${page === href ? ' aria-current="page" class="active"' : ''}>${label}</a>`).join('');
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -210,16 +213,16 @@ const shell = ({ page, title, description, body, heroHtml = '', D = '../' }) => 
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="topbar">
   <div class="shell topbar-inner">
-    <a class="brand" href="${D}index.html"><span class="mark" aria-hidden="true">◈</span><span>Prize Atlas</span></a>
+    <a class="brand" href="${S}index.html"><span class="mark" aria-hidden="true">◈</span><span>Prize Atlas</span></a>
     <nav class="topnav" aria-label="Main">${nav}</nav>
   </div>
 </header>
-${heroHtml.replaceAll('{{D}}', D)}
-<main id="main" class="shell main">${body.replaceAll('{{D}}', D)}</main>
+${heroHtml.replaceAll('{{D}}', S)}
+<main id="main" class="shell main">${body.replaceAll('{{D}}', S).replaceAll('{{R}}', D)}</main>
 <footer class="footer">
   <div class="shell footer-inner">
     <p><strong>Prize Atlas</strong> — free-to-enter cash competition research. Facts verified against operator pages on ${TODAY} UTC. Not financial, legal or tax advice.</p>
-    <p class="footer-links"><a href="${D}summary.html">Executive summary</a><a href="${D}method.html">Method &amp; sources</a><a href="${D}review.html">Flagged for review</a><a href="../">Repo home</a><a href="${REPO}" target="_blank" rel="noopener noreferrer">Repository ↗</a></p>
+    <p class="footer-links"><a href="${S}summary.html">Executive summary</a><a href="${S}method.html">Method &amp; sources</a><a href="${S}review.html">Flagged for review</a><a href="${D}">Repo home</a><a href="${REPO}" target="_blank" rel="noopener noreferrer">Repository ↗</a></p>
   </div>
 </footer>
 </body>
@@ -412,7 +415,7 @@ ${
       title: c.name,
       description: `${c.name}: verified free-to-enter cash competitions and unverified leads, with official sources.`,
       body,
-      D: '../../',
+      S: '../',
     })
   );}
 
@@ -621,7 +624,7 @@ ${pageIntro({
 <div class="table-card"><div class="table-scroll"><table class="data-table">
   <thead><tr><th scope="col">Page</th><th scope="col">What it contains</th></tr></thead>
   <tbody>
-    ${ledgerPages.map(([href, title, blurb]) => `<tr><td data-label="Page"><a class="source-link" href="${D}${href}">${esc(title)} ↗</a></td><td data-label="What it contains">${esc(blurb)}</td></tr>`).join('')}
+    ${ledgerPages.map(([href, title, blurb]) => `<tr><td data-label="Page"><a class="source-link" href="{{R}}${href}">${esc(title)} ↗</a></td><td data-label="What it contains">${esc(blurb)}</td></tr>`).join('')}
   </tbody>
 </table></div></div>
 <div class="prose-card">
