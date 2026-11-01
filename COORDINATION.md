@@ -203,3 +203,17 @@ scripts/build-atlas.mjs` → 250 entries (44 verified, 205 leads); `node tests/v
 
 **Publication:** PR #14, merged into `main`; Pages deploy verified from the Actions run.
 
+
+---
+
+## 9. Publication record — session `4e1fdad5-own1` (final)
+
+| Step | Result |
+| --- | --- |
+| Integration PR | [#18](https://github.com/sassnarep3-star/Own1/pull/18) — `arena/4e1fdad5-own1` → `main` |
+| Checks on the PR | `Data, build and link integrity`: **pass**; external-link jobs advisory |
+| Merge | **Merged** 2026-11-01 13:53:01 UTC, merge commit `8d09e4cbdae916320e67f768c9f45fc11fb98189` |
+| Pages build | commit `8d09e4cbd`, status **built**, no error (13:53:23 UTC) |
+| Live pages verified | `shortlist.html`, `archive.html` and `data/categories.json` served the new build; root `/Own1/` was still serving a cached copy when checked immediately after deploy |
+| Work absorbed by later merges | The parallel sessions' integrated build (PR #20/#21) now generates the root pages from a richer schema and keeps this session's copy under `archive/legacy-build/`. Its own `npm run check` passes: 211 rows, 40 pages, headless DOM render of the interactive tables. |
+| Open follow-up | `main` currently mixes three build/test systems (`tools/build.mjs`, `scripts/build-*.mjs`, `tests/validate.mjs` written against an older schema). The Actions `validate` job therefore fails on `main` even though the Pages build succeeds. This is the one item still needing a human decision: pick one generator and one schema, then delete the other two. |
