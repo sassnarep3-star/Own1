@@ -59,7 +59,7 @@ ${body}
 <footer class="foot">
   <div class="wrap foot-in">
     <p><strong>Prize Atlas</strong> — a source-first research dashboard. Not financial, legal or tax advice. Rules change without notice: always read the operator's own page before you spend time or money.</p>
-    <p>Data last verified <time datetime="${SITE.updated}">1 November 2026</time> · <a href="${base}methodology.html">Method</a> · <a href="${base}review.html">Flagged for review</a> · <a href="${SITE.repo}">Repository</a></p>
+    <p>Data last verified <time datetime="${SITE.updated}">1 November 2026</time> · <a href="${base}methodology.html">Method</a> · <a href="${base}review.html">Flagged for review</a> · <a href="${base}archive.html">Archive</a> · <a href="${SITE.repo}">Repository</a></p>
   </div>
 </footer>
 <script src="${base}assets/app.js" defer></script>

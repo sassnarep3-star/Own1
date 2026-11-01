@@ -302,7 +302,7 @@ ${pageHead({
 
   <section>
     <h2>Provenance</h2>
-    <p>The 206 imported names come from the reference catalogue’s data file (stamped 2026-08-19). Names and category assignments were kept; every financial and timing claim was cleared until an operator page confirmed it. The two added rows (GEMS, US Midterms 2026) were added from their operator pages. Full page-by-page notes: <a href="${SITE.repo}/blob/main/research/VERIFICATION.md">research/VERIFICATION.md</a>.</p>
+    <p>The 206 imported names come from the reference catalogue’s data file (stamped 2026-08-19). Names and category assignments were kept; every financial and timing claim was cleared until an operator page confirmed it. The two added rows (GEMS, US Midterms 2026) were added from their operator pages. Full page-by-page notes: <a href="${SITE.repo}/blob/main/research/VERIFICATION.md">research/VERIFICATION.md</a>. Pages and evidence files produced by other agent sessions working in this repository at the same time are preserved and listed on the <a href="archive.html">archive page</a>.</p>
   </section>
 </div>`;
   return shell({
