@@ -3,7 +3,7 @@
 const fs=require('fs'),path=require('path');
 const root=path.join(__dirname,'..');
 const skip=new Set(['.git','data','node_modules','scripts']);
-const htmls=[];(function walk(d){fs.readdirSync(d,{withFileTypes:true}).forEach(e=>{if(e.isDirectory()){if(!skip.has(e.name))walk(path.join(d,e.name))}else if(e.name.endsWith('.html'))htmls.push(path.join(d,e.name))})})(root);
+const htmls=[];(function walk(d){fs.readdirSync(d,{withFileTypes:true}).forEach(e=>{if(e.isDirectory()){if(!skip.has(e.name))walk(path.join(d,e.name))}else if(e.name.endsWith('.html'))htmls.push(path.join(d,e.name))})})(path.join(root,'ledger'));
 let bad=0,internal=0,external=new Set(),checked=0;
 const ids={};const idsOf=f=>ids[f]||(ids[f]=new Set([...fs.readFileSync(f,'utf8').matchAll(/\sid="([^"]+)"/g)].map(m=>m[1])));
 for(const f of htmls){

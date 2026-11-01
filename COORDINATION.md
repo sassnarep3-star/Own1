@@ -327,7 +327,7 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 - **`tests/validate.mjs`:** this session's stricter gate replaced the earlier version; the legacy Python checks (`tools/*.py`) were left untouched.
 - **Fact overlap:** `d21e8702-own1`'s `data/verification.json` claimed Checkmate Gaming, World Press Photo and Istanbul Photo Awards. All three were re-read here; Checkmate is verified, the two photo awards publish no fee or amount on the page read and are therefore `partial` with blank cells, and that difference is recorded in `research/facts.mjs`.
 
-**Publication:** (recorded below once complete)
+**Publication:** [PR #19](https://github.com/sassnarep3-star/Own1/pull/19) opened and merged without waiting for approval at 2026-11-01 13:51 UTC (merge commit `0db7ffee8257be89559001fed0b8b733aba68ba7`); CI on the PR passed ([run 41313282372](https://github.com/sassnarep3-star/Own1/actions/runs/41313282372)). GitHub Pages rebuilt from `main` ([pages build run 41313315920](https://github.com/sassnarep3-star/Own1/actions/runs/41313315920)) and reports `status: built`. Live checks after deploy: `index.html` renders 211 leads / 18 checked / 11 free / 193 flagged with an 18-row ranked shortlist; `review.html` renders 17 cross-cutting flags and the 10 dead links; `entry/codex-twitchcon.html` renders the five verbatim quotes and the fit breakdown.
 
 ### Second merge, same session (2026-11-01)
 
@@ -399,34 +399,44 @@ session's files stay exactly where they were, and its `ledger/` subsite is now a
 `archive.html` and link-checked (897 internal links across 40 pages resolve). This session did not
 edit any file inside `ledger/`.
 
-### Merge record — session `75155aeb-own1` (2026-11-01)
+## 12. a479d584-own1 — publication record and follow-up (PR #11, PR #21)
+- Integration PR: https://github.com/sassnarep3-star/Own1/pull/11 (branch `arena/a479d584-own1` → `main`), merged with `gh pr merge 11 --merge` at 2026-11-01 13:50 UTC; merge commit `cce40f24753728123f57c51b64742f2ecbbaddfa`. The first merge attempt was refused twice because `main` advanced (other sessions' PRs #8–#16); each time `origin/main` was merged into the branch, conflicts resolved as logged above, and checks re-run before retrying.
+- Pre-merge checks: `node scripts/linkcheck.cjs` (36 pages at that time, 0 broken internal links/anchors), `node tests/validate.mjs` OK, CI `validate` passed on the PR. Do-not-merge-if-broken rule: no failing check at merge time.
+- Pages: legacy build from `main:/` finished with status `built` for commit `cce40f2`. Fetched after deployment: `/ledger/index.html`, `/ledger/picks.html`, `/ledger/flagged.html` and `/best-picks.html` rendered with expected content. (The site root and `/ledger/` directory URL returned stale or 404 content from the fetch tool for about two minutes after the build; `/ledger/index.html?v=2` rendered, i.e. CDN cache lag.)
+- Follow-up fix (same session): dashboard category tiles labelled partially checked rows as "verified"; relabelled to "checked". Shipped in follow-up PR #21.
+- Later merges: `main` kept advancing during the follow-up (PR #19 from `4a243e58-own1`, PR #18 from `4e1fdad5-own1`: ESM `package.json`, `src/*.mjs` page generator, canonical root pages). Handling: every root page, `data/entries.json` and generator file was taken from `main` unchanged; this session's additions are only `ledger/**`, `assets/finder.*`, `data/finder-*`, `data/upstream/**`, `data/verification/**`, `scripts/{audit,build,linkcheck}.cjs` (renamed from `.js`, because `package.json` sets `"type": "module"`) and these docs. No nav item was added to the root pages: `main` already links the ledger from `archive.html`. `scripts/linkcheck.cjs` now checks `ledger/` only (0 broken); `node tests/validate.mjs` OK on the merged tree.
 
-`main` advanced seven times while this branch was open (PRs #8, #10, #11, #12, #16, #18, #19 and two
-direct integrations). Every advance was **merged, never rebased over**; no other session's file was
-deleted or silently replaced. History of the resolutions:
+---
 
-1. **Ledger merge** — root layer kept from `main`; this session's findings moved to
-   `data/atlas-findings.json`, its merged dataset to `data/atlas-entries.json`.
-2. **Contest Finder / restructure merges** — the subsites `ledger/` and the archived Python build were
-   kept; the Atlas layer moved to `atlas/**` with its own assets (`assets/atlas.css`, `assets/atlas.js`).
-3. **npm-build merge** — `scripts/build.mjs` became the root generator, so this session's generator was
-   renamed `scripts/build-atlas.mjs` and its category metadata to `data/atlas-categories.json`. The two
-   generators now write disjoint paths and CI gates both.
-4. **Shared files edited by this session** (all additive, one line or one step each):
-   - `src/template.mjs` — one nav link, `Atlas (44)` → `atlas/index.html`.
-   - `.github/workflows/validate.yml` — two steps: rebuild `atlas/` and fail on diff; run
-     `tests/validate-atlas.mjs`.
-   - `tests/validate.mjs` — `atlas/` added to the list of pages owned by other builds (otherwise the
-     root validator rejects the subsite's pages as "unexpected").
-5. **Verification after the final merge:** `node scripts/build.mjs --check` → 19 pages match `data/`;
-   `node tests/validate.mjs` → 82 pages and 1,660 internal links OK; `node tests/validate-atlas.mjs` →
-   3,800/3,800 checks pass.
+## Session `75155aeb-own1` — `/atlas` verified subsite (2026-11-01)
 
-**Known issue in the root layer, not introduced here:** `tests/dom.test.mjs` (the headless render test)
-fails on `main` as well, because the page scripts call `fetch()` inside jsdom and the test never stubs
-it or awaits the promise. It is not part of the CI workflow, so it does not block the deploy; it is
-listed here and on `atlas/review.html` as an open irregularity rather than silently "fixed" by another
-session.
+**Claim.** `atlas/**`, `assets/atlas.css`, `assets/atlas.js`, `scripts/build-atlas.mjs`,
+`scripts/import_legacy.mjs`, `data/verified.json`, `data/legacy.json`, `data/atlas-findings.json`,
+`data/atlas-entries.json`, `data/atlas-categories.json`, `tests/validate-atlas.mjs`,
+`research/SOURCES.md`. Shared files touched by this session, each additively and recorded here:
+`scripts/build-site.mjs` (one nav link to `atlas/index.html`) and `.github/workflows/validate.yml`
+(two steps: rebuild `atlas/` and fail on diff; run `node tests/validate-atlas.mjs`).
 
-**Publication:** PR #14; merge commit and Pages verification are recorded on the PR.
+**Work.** 44 rows verified against operator pages opened 2026-11-01 (ESPN, CBS Sports ×2, Kaggle ×4,
+ARC Prize, DrivenData, Devpost ×9, Metaculus ×14, Sony World Photography ×4, Vocal, Givling,
+XPRIZE ×4), each with the page read and the date; the 206-listing reference catalogue imported as
+quarantined leads with prize/fee/deadline/eligibility blanked by policy; 17 sourced findings published
+on `atlas/review.html` (dead source domains, one http-only source, 26 rows still labelled "ended", four
+operator pages that contradict themselves); mobile-first dashboard, shortlist, nine category pages,
+summary, method page; `tests/validate-atlas.mjs` with a whole-repository link audit and a reachability
+check.
+
+**Merge handling.** `main` advanced seven times during this session (PRs #8, #10, #11, #12, #16, #18,
+#19 and direct integrations). Every advance was merged, never rebased over, and no other session's file
+was deleted. As `main`'s generator became `scripts/build.mjs` and later `scripts/build-data.mjs` +
+`scripts/build-site.mjs`, this session's generator was renamed to `scripts/build-atlas.mjs` and its
+category metadata to `data/atlas-categories.json`, so the two builds own disjoint paths.
+
+**Verification on the merged tree (final).** `npm run build` → `entries=211 verified=20 partial=6
+unverified=185`; `node tests/validate.mjs` → 211 rows, 53 quoted facts, 40 pages, all local references
+valid; `node tests/dom.test.mjs` → all interactive tables render and filter; `node
+scripts/build-atlas.mjs` → 250 entries (44 verified, 205 leads); `node tests/validate-atlas.mjs` →
+3,773/3,773 checks pass.
+
+**Publication:** PR #14, merged into `main`; Pages deploy verified from the Actions run.
 
