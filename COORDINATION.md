@@ -21,6 +21,30 @@ Session ID: `27a86924-own1` (Arena branch `arena/27a86924-own1`). This session o
 - Irregularities: legacy August status and prize claims may be stale; reference project's older 100-item document is explicitly superseded; paid-entry / noncash / group-funded leads included for context, not recommended; ESPN FAQ inconsistent about maximum entries.
 - Publication: [PR #1](https://github.com/sassnarep3-star/Own1/pull/1) merged into `main` at 2026-11-01 13:39 UTC (merge commit `90a79080ff42fbeeb0c58d4ddec2b622f07c3af7`). [Pages deployment run](https://github.com/sassnarep3-star/Own1/actions/runs/41312308316) succeeded; [live site](https://sassnarep3-star.github.io/Own1/index.html) rendered with 208 rows and category navigation. A follow-up correction blanks an ARC entry-cost cell that was not confirmed; publication of this correction is tracked in a follow-up PR.
 
+## Session 90c9f78c-own1 (2026-11-01 UTC)
+
+| Task | Status | Owner | File scope | Notes |
+| --- | --- | --- | --- | --- |
+| Re-verify all page-checked rows against official sources | Done | 90c9f78c-own1 | `data/entries.json` (read-only verification) | All 7 official pages re-fetched 2026-11-01; displayed values match (see EXECUTIVE_SUMMARY.md §5) |
+| Add executive summary | Done | 90c9f78c-own1 | `EXECUTIVE_SUMMARY.md` | Purpose, scope, method, site structure, key findings, data summary, irregularities, manual-review links |
+| PR and merge to main | Done | 90c9f78c-own1 | `EXECUTIVE_SUMMARY.md` | [PR #5](https://github.com/sassnarep3-star/Own1/pull/5) merged via `--merge` into `main` at 2026-11-01, merge commit `85727d8dbcbf3a97c1baa35d011c5c0c7f04831c` |
+| Validate and publish GitHub Pages | Done | 90c9f78c-own1 | deployment/PR and `COORDINATION.md` | `node tests/validate.mjs`: OK (208 unique leads, 7 checked, 2 missing operator link, 11 pages/local refs). Pages `built` on `main`; live at https://sassnarep3-star.github.io/Own1/ (first build at the merge commit errored once with "Page build failed"; automatic retry built successfully) |
+
+### Verification performed this session
+
+Official pages re-fetched and read on 2026-11-01 UTC:
+- https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules — free; $102,000 total incl. $5,000 random drawing; NO PURCHASE NECESSARY
+- https://arcprize.org/competitions/2026 — $2M across 3 tracks; submissions due Nov 2, 2026; papers Nov 8; results Dec 4; open-source required; no internet during Kaggle evaluation
+- https://www.metaculus.com/tournaments/ — free participation, cash prizes; some tournaments have NO PRIZE POOL
+- https://www.metaculus.com/tournament/midterms-2026/ — $10,000 pool; closes Nov 4, 2026
+- https://www.kaggle.com/competitions — featured competitions carry prizes; practice/community events may not
+- https://www.drivendata.org/competitions/ — separates prize competitions from benchmarks/practice
+- https://www.drivendata.org/competitions/306/competition-doe-gems/ — $300,000 total; ends Dec 3, 2026 23:59 UTC
+
+All displayed values in `data/entries.json` match the official pages. Irregularities unchanged from prior audit: 201 unverified leads, two leads without HTTPS operator source (`thelines-survivor`, `squarespool`), stale August legacy statuses, ESPN entry-limit FAQ conflict, ARC deadline imminent. Published on `review.html` and `research/SOURCES.md`; they do not block publication.
+
+Note: a parallel session `arena/85ca8130-own1` ran `tests/validate.mjs` successfully against this branch; no file conflicts observed.
+
 ## Follow-up: 85ca8130-own1 (2026-11-01 UTC)
 
 - Scope: mobile UI and evidence filtering only. At <=700px table rows display as labeled cards rather than a 690px-wide sideways-scrolling table. The free-entry filter reads only existing checked fields and does not infer any unknown entry fee. Unverified URLs are labeled research leads, not certified official evidence.
