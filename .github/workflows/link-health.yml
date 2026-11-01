@@ -15,7 +15,7 @@ on:
     - cron: '0 6 * * 1'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   linkcheck:
@@ -31,9 +31,25 @@ jobs:
       - name: Check every outbound link
         run: node scripts/linkcheck.mjs
         continue-on-error: true
-      - name: Upload report
+      - name: Upload report (artifact)
         uses: actions/upload-artifact@v4
         with:
           name: link-health
           path: data/link-health.json
           if-no-files-found: warn
+      # Artifacts cannot always be reached from the environment that assembles the site,
+      # so the report is also published to its own branch, which plain git can fetch.
+      - name: Publish report to link-health-data branch
+        run: |
+          set -e
+          test -f data/link-health.json
+          git config user.name "link-health-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan link-health-data
+          git rm -rf --cached . >/dev/null 2>&1 || true
+          git add -f data/link-health.json
+          git commit -m "Link health report $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push --force origin link-health-data
+      - name: Summarise
+        run: |
+          node -e "const d=require('./data/link-health.json');console.log('checked '+d.total+' urls, '+d.ok+' ok, '+d.failing+' not ok')" || true

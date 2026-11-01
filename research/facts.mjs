@@ -449,3 +449,50 @@ Object.assign(facts, {
     notes: 'Only the filter shell of the challenge board rendered on 2026-11-01; no individual challenge, prize or deadline could be confirmed.',
   },
 });
+
+// Added by the integration session after independently re-reading both rules pages on 2026-11-01.
+// Original leads came from session 37aed701-own1's supplemental research; every value below was re-checked here.
+Object.assign(facts, {
+  'codex-twitchcon': {
+    name: 'Codex x TwitchCon Hackathon',
+    status: 'verified',
+    operator: 'Amazon Advertising LLC / OpenAI (administered by Devpost)',
+    officialUrl: 'https://twitchcon-codex.devpost.com/rules',
+    freeEntry: true,
+    cashPrize: true,
+    prize: '$25,000 in prizes (as stated in the event page title)',
+    deadline: '2026-11-02',
+    cycle: 'One-off',
+    eligibility: '18+ or age of majority; open to individuals and teams; excludes Brazil, Quebec, Russia, Crimea, Cuba, Iran, North Korea and other sanctioned territories',
+    effort: 'high',
+    agentFit: 'high',
+    evidence: [
+      { url: 'https://twitchcon-codex.devpost.com/rules', fact: 'No purchase necessary', quote: 'NO PURCHASE OR PAYMENT NECESSARY TO ENTER OR WIN. A PURCHASE OR PAYMENT WILL NOT INCREASE YOUR CHANCES OF WINNING.' },
+      { url: 'https://twitchcon-codex.devpost.com/rules', fact: 'Submission period', quote: 'Submission Period: October 23, 2026 (10:00 am Pacific Time) – November 2, 2026 (2:00 pm Pacific Time). Winners Announced: On or around November 15, 2026 at TwitchCon San Diego 2026.' },
+      { url: 'https://twitchcon-codex.devpost.com/rules', fact: 'Eligibility', quote: 'Individuals who are at least eighteen (18) years old or the age of majority where they reside as of the time of entry, whichever is older ... Individuals who are residents of a country, state, province or territory where the laws of the United States or local law prohibits participating or receiving a prize (including, but not limited to, Brazil, Quebec, Russia, Crimea, Cuba, Iran, and North Korea)' },
+      { url: 'https://twitchcon-codex.devpost.com/rules', fact: 'AI assistants explicitly allowed; Codex session ID required', quote: 'Participants may use standard development tools, including frameworks, libraries, starter templates, and AI coding assistants. ... Provide the Codex session ID for the Codex thread where the Project was built.' },
+      { url: 'https://twitchcon-codex.devpost.com/rules', fact: 'Total prize pool as published in the page title', quote: '$25,000 in prizes, and the top 5 are shown on the Codex Booth stage at TwitchCon' },
+    ],
+    notes: 'Closes within about 24 hours of this audit (2:00 pm Pacific on 2026-11-02). The individual prize breakdown is in section 8 of the rules and was not read here, so only the published total is shown. AI coding assistants are expressly permitted, which makes this the most agent-suited live event in the catalog.',
+  },
+  'paypal-ai-hackathon': {
+    name: 'PayPal AI Hackathon',
+    status: 'verified',
+    operator: 'PayPal Inc. (administered by Devpost)',
+    officialUrl: 'https://paypalaihackathon.devpost.com/rules',
+    freeEntry: true,
+    cashPrize: true,
+    prize: '',
+    deadline: '2026-11-12',
+    cycle: 'One-off',
+    eligibility: 'Age of majority; individuals, teams and organisations; excludes Brazil, Quebec, Russia, Crimea, Cuba, Iran, North Korea and other sanctioned territories',
+    effort: 'high',
+    agentFit: 'high',
+    evidence: [
+      { url: 'https://paypalaihackathon.devpost.com/rules', fact: 'No purchase necessary', quote: 'NO PURCHASE OR PAYMENT NECESSARY TO ENTER OR WIN.' },
+      { url: 'https://paypalaihackathon.devpost.com/rules', fact: 'Submission period', quote: 'Submission Period: Thursday Oct 1, 2026 (9:15 am Pacific Time) – Thursday Nov 12, 2026 (12:00 pm Pacific Time). Winners Announced: On or around Monday, Dec 21, 2026.' },
+      { url: 'https://paypalaihackathon.devpost.com/rules', fact: 'Free sandbox and any AI tool', quote: 'Entrants must build or update an application that integrates the PayPal developer platform (using the free sandbox environment) along with an AI tool, model, or platform of their choice ... Any AI tool works, as long as PayPal integration is central to the project.' },
+    ],
+    notes: 'The event page and its own rules have been reported to state different totals ($67,500 vs $69,750) and the rules include non-cash credits, so no prize figure is asserted here. Read section 8 of the rules before relying on any amount.',
+  },
+});

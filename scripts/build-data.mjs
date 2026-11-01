@@ -24,6 +24,8 @@ export const CATEGORIES = [
 
 // Extra leads verified in this session that were not in the reference catalog.
 const EXTRA = [
+  { id: 'codex-twitchcon', name: 'Codex x TwitchCon Hackathon', category: 'tech' },
+  { id: 'paypal-ai-hackathon', name: 'PayPal AI Hackathon', category: 'tech' },
   { id: 'nfl-big-data-bowl', name: 'NFL Big Data Bowl 2027', category: 'tech' },
   { id: 'wergle-flomp', name: 'Wergle Flomp Humor Poetry Contest', category: 'creative' },
   { id: 'gems-prize-2026', name: 'GEMS Prize Challenge (DOE)', category: 'tech' },
@@ -96,6 +98,31 @@ for (const [id, lead] of byId) {
   if (entry.id === 'espn-pickem') entry.flags.push('source-self-contradiction');
   entries.push(entry);
 }
+
+// Editorial fit score. This is a transparent prioritisation aid, NOT a probability of winning.
+// Weights are disclosed on the site so any row can be recomputed by hand.
+function fitScore(e) {
+  if (e.status === 'unverified') return null;
+  let score = 0;
+  const parts = [];
+  if (e.freeEntry === true) { score += 40; parts.push(['Confirmed free entry', 40]); }
+  if (e.cashPrize === true) { score += 20; parts.push(['Confirmed cash prize', 20]); }
+  const agent = { high: 20, medium: 12, low: 4 }[e.agentFit] ?? 0;
+  if (agent) { score += agent; parts.push([`AI-agent fit: ${e.agentFit}`, agent]); }
+  const effort = { low: 10, medium: 6, high: 3 }[e.effort] ?? 0;
+  if (effort) { score += effort; parts.push([`Effort: ${e.effort}`, effort]); }
+  if (e.deadline) {
+    const days = Math.round((new Date(e.deadline + 'T23:59:59Z') - new Date(READ_ON)) / 86400000);
+    const urg = days < 0 ? 0 : days <= 14 ? 10 : days <= 60 ? 6 : 3;
+    score += urg;
+    parts.push([days < 0 ? 'Deadline has passed' : `Deadline in ${days} day(s)`, urg]);
+  } else {
+    score += 3;
+    parts.push(['No published deadline', 3]);
+  }
+  return { score, parts };
+}
+for (const e of entries) e.fit = fitScore(e);
 
 // Deterministic order: category order, then name.
 const catIndex = new Map(CATEGORIES.map((c, i) => [c.id, i]));

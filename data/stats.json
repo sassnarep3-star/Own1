@@ -1,12 +1,12 @@
 {
  "readOn": "2026-11-01",
- "total": 209,
- "verified": 15,
+ "total": 211,
+ "verified": 17,
  "partial": 4,
  "unverified": 190,
- "freeConfirmed": 8,
+ "freeConfirmed": 10,
  "paidConfirmed": 1,
- "cashConfirmed": 11,
+ "cashConfirmed": 13,
  "noSource": 2,
  "categories": [
   {
