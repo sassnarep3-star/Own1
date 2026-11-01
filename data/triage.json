@@ -1,0 +1,143 @@
+{
+  "_readme": "Editorial triage inputs. Only rows whose facts were read on an official page (sourceStatus = checked) are listed. scale = 0-3 for the documented headline cash prize (0 = no cash amount stated, 1 = under $10k, 2 = $10k-$99,999, 3 = $100k or more). effort = low | medium | high, describing the work needed to enter a credible submission. These are editorial judgements, not measurements, and they are shown next to every score on the site.",
+  "espn-pickem": {
+    "scale": 2,
+    "effort": "low",
+    "rationale": "Free, weekly picks, $102,000 documented, and no build work — the lowest-effort verified cash path in the dataset."
+  },
+  "kaggle": {
+    "scale": 3,
+    "effort": "high",
+    "rationale": "Per-competition prizes including a $450,000 paper track, but winning requires a strong ML model or research paper."
+  },
+  "arcprize": {
+    "scale": 3,
+    "effort": "high",
+    "rationale": "$2,000,000 across three tracks, but the 2026 submission deadline is 2026-11-02 — only usable now as a next-cycle reference."
+  },
+  "drivendata": {
+    "scale": 3,
+    "effort": "high",
+    "rationale": "Hosts six-figure prize challenges (GEMS: $300,000); entry needs a full modelling submission."
+  },
+  "gems-prize-2026": {
+    "scale": 3,
+    "effort": "high",
+    "rationale": "$300,000, closes 2026-12-03, needs a geological fault-detection model."
+  },
+  "metaculus": {
+    "scale": 2,
+    "effort": "low",
+    "rationale": "Free entry, pools up to $50,000, and the work is forecasting rather than building."
+  },
+  "midterms-2026": {
+    "scale": 2,
+    "effort": "low",
+    "rationale": "$10,000 pool, free entry, closes 2026-11-04 — act now or skip."
+  },
+  "sony-world-photo": {
+    "scale": 2,
+    "effort": "medium",
+    "rationale": "Free entry, $25,000 overall Series prize, deadline 2027-01-12; needs a 5-10 image body of work."
+  },
+  "wergle-flomp": {
+    "scale": 1,
+    "effort": "low",
+    "rationale": "No fee, $5,100 total, one 250-line humor poem, open until 2027-04-01."
+  },
+  "reedsy-weekly": {
+    "scale": 1,
+    "effort": "low",
+    "rationale": "$250 weekly with a new prompt each week, but the official page does not state an entry fee, so free entry is unconfirmed."
+  },
+  "weather-potw": {
+    "scale": 0,
+    "effort": "medium",
+    "rationale": "Free entry confirmed, prize amount not stated on the page read."
+  },
+  "epoty": {
+    "scale": 0,
+    "effort": "medium",
+    "rationale": "Free entry confirmed for all ages, prize amount and current deadline not stated in text on the page read."
+  },
+  "vocal": {
+    "scale": 0,
+    "effort": "low",
+    "rationale": "Free to enter non-Vocal+ challenges; prize amounts vary per challenge."
+  },
+  "devpost": {
+    "scale": 2,
+    "effort": "high",
+    "rationale": "Prize totals are large but must be built for; entry fee and eligibility are not stated on the listing page."
+  },
+  "tom-howard-poetry": {
+    "scale": 1,
+    "effort": "low",
+    "rationale": "$12,000 in prizes but $27 per submission, so it is excluded from free-entry ranking."
+  },
+  "givling": {
+    "scale": 0,
+    "effort": "low",
+    "rationale": "Crowdfunding queue rather than a judged contest; no documented cash prize for skill."
+  },
+  "herox": {
+    "scale": 0,
+    "effort": "high",
+    "rationale": "Directory of federal challenges; individual prize sizes are not on the directory page."
+  },
+  "usagov-challenges": {
+    "scale": 0,
+    "effort": "high",
+    "rationale": "Official U.S. government directory of active federal prize competitions; it lists contests but does not itself award a prize."
+  },
+  "codex-twitchcon": {
+    "scale": 2,
+    "effort": "high",
+    "rationale": "$25,000 in prizes with free entry, but submissions close 2026-11-02 and a complete Codex build plus demo video is required."
+  },
+  "paypal-ai-hackathon": {
+    "scale": 0,
+    "effort": "high",
+    "rationale": "Free entry confirmed and the event advertises $67,500, but no cash amount was read in the rules, so it earns no prize points."
+  },
+  "espn-survivor": {
+    "scale": 2,
+    "effort": "low",
+    "rationale": "$25,000 grand prize confirmed on the official page, but entry creation had closed by 2026-11-01."
+  },
+  "espn-wintotals": {
+    "scale": 1,
+    "effort": "low",
+    "rationale": "$5,000 total prizes confirmed; low effort, small pool."
+  },
+  "espn-playoff": {
+    "scale": 2,
+    "effort": "low",
+    "rationale": "$10,000 grand prize confirmed, but the game was locked at the time of the parallel read."
+  },
+  "espn-cfb": {
+    "scale": 2,
+    "effort": "low",
+    "rationale": "$86,000 across 46 prizes confirmed; free to enter, weekly commitment."
+  },
+  "cbs-pro-pickem": {
+    "scale": 1,
+    "effort": "low",
+    "rationale": "Weekly $1,000 and season-long $5,000 confirmed; the advertised $100,000 perfect bracket is a contingency prize."
+  },
+  "mlb-beat-the-streak": {
+    "scale": 3,
+    "effort": "low",
+    "rationale": "A $5,600,000 annuity is documented, but the official window ends with the 2026 regular season, so it is not enterable at this reading date."
+  },
+  "gamersaloon": {
+    "scale": 0,
+    "effort": "low",
+    "rationale": "$10 per weekly 1-Rounder, paid as Bonus Cash that cannot be withdrawn."
+  },
+  "rotoballer": {
+    "scale": 1,
+    "effort": "low",
+    "rationale": "$500 cash grand prize confirmed, but the draft window ended 2026-09-08."
+  }
+}

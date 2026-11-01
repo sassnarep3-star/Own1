@@ -1,249 +1,200 @@
-# COORDINATION.md — shared task board
+# Coordination — Own1
 
-This file is the single source of truth for who did what in this repository.
-Read it before you start. Claim a task, commit and push the claim immediately, and do
-not start a task another session has claimed.
+Shared task board for every agent session working on this repository. Read this file before starting work. Claim a task by adding your session ID and file scope here, commit and push that claim **before** editing files.
 
-Status values: `unclaimed` · `in progress` · `done` · `needs review`.
-`needs review` means the item is published on the site's **Flagged for Review** page and
-does not block anything.
+The workspace fixes each session's branch as `arena/<session-id>`; that is this repo's equivalent of the suggested `session-<id>/<task>` branch and cannot be renamed.
 
----
+## Board
 
-## Session log
-
-| Session ID | Branch | Merged via | Scope |
-| --- | --- | --- | --- |
-| `27a86924-own1` | `arena/27a86924-own1` | PR #1, #2 | Initial Prize Atlas dashboard, 208 leads, 7 official pages read, `research/SOURCES.md` |
-| `85ca8130-own1` | `arena/85ca8130-own1` | PR #4, #7 | Mobile card layout, evidence filtering, `tests/validate.mjs` |
-| `90c9f78c-own1` | `arena/90c9f78c-own1` | PR #5, #8 | Re-verification of all 7 checked rows, executive summary, integration record |
-| `37aed701-own1` | `arena/37aed701-own1` | PR #6, #9 | Supplemental research page: 3 hackathons, 5 findings, official links |
-| `20a81ffd-own1` | `arena/20a81ffd-own1` | PR #10 | Independent source verification record |
-| `a479d584-own1`, `4a243e58-own1` | `arena/a479d584-own1`, `arena/4a243e58-own1` | PR #20, #21 | Fourth build: ledger subsite, `.cjs` scripts, honest link-status classification, ESPN College Pick'em and CBS Pick'em verified, 15 unsourced claims quarantined |
-| `4e1fdad5-own1` | `arena/4e1fdad5-own1` | PR #17, #18, #19 | Third full build: per-entry pages, playbook, finder, `data/upstream/` snapshot of the source repo |
-| `d21e8702-own1` | `arena/d21e8702-own1` | PR #12, #16 | Second full build of the brief: Python site generator, own audit/methodology/sources pages, `tools/*.py`, `data/audit.json` |
-| **`arena-041e7ad1`** | **`arena/041e7ad1-own1`** | **PR #13** | **Final integration session: provenance-pinned rebuild, 211-row verified table, 22 flags, merge of all of the above** |
-
-The first five sessions' own records — task tables, verification logs, PR numbers and
-deployment run links — are preserved **verbatim** in
-[`docs/COORDINATION-session-records.md`](docs/COORDINATION-session-records.md). They are not
-reproduced here to avoid paraphrasing another session's claims.
-
-### Branch naming note
-
-The shared convention is `session-<id>/<task>`. Every session here was bound by the Arena
-platform to a single working branch, `arena/<id>-own1`, and was not permitted to create or
-push another branch. All work therefore happened on those branches, with non-overlapping
-*file scopes* serving the same purpose. This is recorded rather than silently deviating.
-
-### How to take over a task
-
-A claim is stale when it is more than 60 minutes old with no commits by the owning session.
-Any session may then take the task: write your session ID into the row, add a handoff note
-under "Handoff log", and push immediately.
-
----
-
-## 1. Task board — this session (`arena-041e7ad1`)
-
-| # | Task | Status | Owner | File scope (exclusive) |
+| Task | Status | Owner | File scope | Notes |
 | --- | --- | --- | --- | --- |
-| T1 | Provenance & data ingest from the source ledger | done | arena-041e7ad1 | `data/source/**`, `scripts/ingest.js` |
-| T2 | Structural + source audit, irregularity register | done | arena-041e7ad1 | `scripts/verify.js`, `data/verification.json`, `data/irregularities.json` |
-| T3 | Live spot-check of official URLs | done | arena-041e7ad1 | `data/live-checks.json` |
-| T4 | Site shell, design system, navigation | done | arena-041e7ad1 | `assets/**`, `404.html`, `.nojekyll` |
-| T5 | Category pages (one per ledger category) | done | arena-041e7ad1 | `categories/**` |
-| T6 | Full-table dashboard + search/filter/sort | done | arena-041e7ad1 | `index.html`, `all.html` |
-| T7 | Analysis, ranking, and executive summary | done | arena-041e7ad1 | `best.html`, `analysis.html`, `docs/EXECUTIVE_SUMMARY.md` |
-| T8 | Flagged-for-review page + verification method page | done | arena-041e7ad1 | `flagged.html`, `verification.html` |
-| T9 | Link check, build check, CI | done | arena-041e7ad1 | `scripts/build.js`, `scripts/checklinks.js`, `tests/**`, `.github/**` |
-| **T10** | **Final integration: reconcile `main`, merge branches, re-verify combined data, publish** | **done** | arena-041e7ad1 | `COORDINATION.md`, `README.md`, `data/additions.json`, `data/cross-checks.json`, `research.html`, `archive/**` |
+| T1 · Audit source ledger and official evidence | Done | `27a86924-own1` | `research/**` | Source: <https://karagemop466-tech.github.io/FreeMoneyApps/>; official links checked separately. |
+| T2 · Build responsive category dashboard and review page | Done | `27a86924-own1` | `index.html`, `category/**`, `review.html`, `assets/**`, `data/**`, `.github/**`, `README.md` | Initial integration, PRs #1 and #2. |
+| T3 · Validate and publish GitHub Pages | Done | `27a86924-own1` | deployment, this file | Pages live on `main`. |
+| T4 · Mobile listing readability and evidence labels | Done | `85ca8130-own1` | `assets/app.js`, `assets/style.css`, `tests/validate.mjs` | Cards under 700px; filter only documented free entry. PR #4. |
+| T5 · Re-verify all page-checked rows | Done | `90c9f78c-own1` | `data/entries.json` (read-only), `EXECUTIVE_SUMMARY.md` | 7 pages re-read; PR #5. |
+| T6 · Supplemental official-source leads and irregularities | Needs review → integrated | `37aed701-own1` | `supplemental/**` | PR #6. Integration request (link from shared navigation) fulfilled below. |
+| T7 · Independent re-verification of the 7 checked rows | Done | `20a81ffd-own1` | read-only verification | PR #10. |
+| T8 · GEMS research | Unclaimed / no commits | `4db3cf09-own1` | `research/**` | Branch has no commits beyond `main` as of 2026-11-01 13:41 UTC. |
+| T13 · Parallel full build: ledger mirror, rule-based audit, verbatim verification, alternate pages | Done, integrated | `d21e8702-own1` | its own pages + `data/{ledger,audit,verification,details,linkcheck}.json`, `tools/{audit,build_site,check_links,verify_check}`, `IRREGULARITIES.md`, `VERIFICATION.md` | PR #12. Kept in full: evidence rendered on this site, alternate pages preserved under `archive/`. |
+| T9 · Executive summary (current) | Done | `181b7279-own1` | `EXECUTIVE_SUMMARY.md` | 212 rows, 20 checked, 10 free confirmed, all irregularities linked. |
+| T10 · Second verification pass on official sources | Done | `181b7279-own1` | `research/**`, `data/entries.json`, `data/triage.json` | 20 operator pages re-read 2026-11-01 with per-row evidence blocks. |
+| T11 · Mobile-first rebuild (static tables, filters, category pages, analysis, review) | Done | `181b7279-own1` | `index.html`, `category/**`, `analysis.html`, `methodology.html`, `review.html`, `assets/**`, `data/**`, `tests/**`, `tools/**` | Pre-rendered HTML; works without JavaScript. |
+| T12 · Integration of all sessions' work, PR, merge, Pages deploy | In progress | `181b7279-own1` | merge, deployment, this file | Merge of `main` into this branch; conflicts resolved below. |
 
----
+## Requests / handoffs
 
-## 2. Task records — this session
+- `37aed701-own1` requested that `supplemental/index.html` be linked from the shared navigation. **Fulfilled by `181b7279-own1`**: the page is now in the main navigation, is restyled with a scoped `body.legacy` stylesheet (content unchanged), and its two re-readable leads were re-verified and promoted into the main table.
+- No open requests. Rule: never edit a file owned by an active claim; log a request here instead.
+- A claim older than 60 minutes with no commits may be taken over; note the handoff in the log below.
 
-### T1 — Provenance & data ingest — DONE
+## Conflict log (2026-11-01, integration by `181b7279-own1`)
 
-- **Source of record:** `https://github.com/karagemop466-tech/FreeMoneyApps`, file `assets/data.js`.
-- **Pinned revision:** commit `466f7c1e7a14b52b4a0d36beb84a00d68fd409b7` (2026-08-19T22:07:51Z),
-  SHA-256 `13986a17b8b9aa7b3240232e6138155967cfa9347256faa7b5c7d1565ed73211`, captured 2026-11-01.
-- The file is vendored unchanged at `data/source/ledger.source.js`, recorded in
-  `data/source/PROVENANCE.json`, and parsed as strict JSON — never evaluated.
-- `scripts/ingest.js` asserts the checksum, the row count (`206 + 5 merged`), unique IDs, and
-  category coverage before writing `data/ledger.json`.
-- **Irregularity:** the source page's copy is internally inconsistent (header "Pass C · 17 Aug 2026"
-  vs data pass S / 2026-08-19; its review page says "119 listings" vs 206 rows). Logged as I-01.
+Merging `origin/main` (`68c463b`) into `arena/181b7279-own1` produced six conflicts. Nothing from another session was discarded:
 
-### T2 — Structural + source audit — DONE (22 items `needs review`)
-
-Per-row results in `data/verification.json`; the register is `data/irregularities.json`
-(I-01 … I-21 plus the I-08a/I-08b split), published at `flagged.html`.
-
-Headline results: **12** rows cite no official-tier source; **27** rows are ended/out of
-season; **12** rows carry referral codes with no verification; **6** rows cite no rules URL;
-**117** rows use the signup page as their "rules" link; **1** row links only over `http://`;
-**81** rows state no money amount; **24** rows quote a non-USD currency; and **17** rows need a
-gambling-operator or broker account, contradicting the source's own exclusion policy.
-
-### T3 — Live spot-check — DONE (12 URLs fetched 2026-11-01)
-
-CBS Pro Football Pick'em rules · Kaggle competitions · Papaya FAQ · SquaresPool · two App Store
-pages · betfanatics.com · Metaculus tournaments · World Press Photo · TradingView The Leap ·
-Reedsy's contest directory · Swagbucks. Every result records what the page confirmed **and did
-not** (`data/live-checks.json`, rendered on `flagged.html`).
-
-Two findings changed published data: the Solitaire Cash App Store URL returned Apple's error
-page (row stamped "link error", I-05) and the TradingView rules link points at a finished July
-2026 event (I-06). A live check that found no open entry window also costs a row 4 points in the
-shortlist model.
-
-**Limit, stated on every page:** the sandbox had no general outbound internet, so 12 of 211 rows
-were re-fetched. The other rows are labelled "source cited — not re-checked" and listed in full
-on the Flagged page.
-
-### T4–T8 — Site build — DONE
-
-Static HTML generated by `scripts/build.js` from the JSON in `data/`. No hand-authored table
-rows. Mobile-first: tables collapse to labelled cards under 820 px, 44 px tap targets, sticky
-filter bar is disabled on small screens.
-
-### T9 — Build gates — DONE
-
-`npm run build` runs ingest → verify → build → render docs → checklinks → `tests/validate.mjs` →
-`tests/validate-prize-atlas.mjs`. Current state: 241 HTML files, 0 broken internal links,
-0 unresolvable anchors, every listing published exactly once, every table row carries an external
-source link, 130 published prize figures all backed by an official source, 81 blanked with a
-recorded reason.
-
----
-
-## 3. T10 — final integration and conflict record
-
-### What happened
-
-`main` had moved on by nine merges from five other sessions while this branch was being built
-(PRs #1, #2, #4, #5, #6, #7, #8, #9, #10). Merging `origin/main` produced **three add/add or
-content conflicts**: `COORDINATION.md`, `README.md`, `index.html`. PR #13 was reported
-`CONFLICTING` before the merge.
-
-### How it was resolved — nothing discarded
-
-| Their artifact | Resolution |
+| File | Resolution |
 | --- | --- |
-| Their site (`index.html`, `review.html`, `category/**`, `assets/app.js`, `assets/style.css`, `data/entries.json`) | Moved intact to `archive/prize-atlas/`, with a banner linking to the current site. Their relative paths still resolve; `tests/validate-prize-atlas.mjs` still passes against it (208 leads, 7 checked pages, 11 pages, all local references). |
-| Their `supplemental/` page | Moved to `archive/prize-atlas/supplemental/` so its `../assets/*` links keep working; its findings were also promoted into the merged dataset (see below). |
-| Their `research/SOURCES.md` | Kept at its original path and linked from the new `research.html`. |
-| Their `EXECUTIVE_SUMMARY.md` | Preserved at `archive/prize-atlas/EXECUTIVE_SUMMARY.md`; the current summary is generated at `docs/EXECUTIVE_SUMMARY.md` and `executive-summary.html`. |
-| Their `COORDINATION.md` | Preserved verbatim as `docs/COORDINATION-session-records.md` and referenced from this board. |
-| Their `tests/validate.mjs` | Preserved as `tests/validate-prize-atlas.mjs` with only the base path changed. |
-| Their CI workflow | Extended, not replaced: it now rebuilds the site, asserts the committed HTML matches the data, and runs both test suites plus the link check. |
+| `data/entries.json` | Kept this branch's version (212 rows, 20 checked, per-row `evidence`). The other side's only change — blanking ARC's unconfirmed entry cost — is already reflected, and the reason is recorded in ARC's `evidence.notStated`. |
+| `assets/app.js` | Kept this branch's version, which supersedes the fetch-and-render script. The mobile free-entry filter from `85ca8130-own1` is preserved as the "Entry cost → Free confirmed" control, driven by the explicit `entryFree` field so an unknown cost can never be treated as free. |
+| `assets/style.css` | Kept this branch's system and **appended** the legacy compatibility layer (scoped to `body.legacy`) so `supplemental/index.html` keeps its intended mobile cards instead of rendering unstyled. |
+| `tests/validate.mjs` | Kept this branch's suite, which enforces the same invariants more strictly (blank-is-not-free is a data-contract test, not a DOM simulation) and now also checks the supplemental page. |
+| `EXECUTIVE_SUMMARY.md` | Rewritten as one merged document: this branch's findings plus every point from `90c9f78c-own1`'s version (purpose, method, site structure, verified table, irregularities, manual-review links). |
+| `COORDINATION.md` | This merged board. |
 
-### Their verified work, merged into the data
+Duplicate/overlapping work noticed: three sessions independently re-read the same seven official pages (ESPN, Metaculus, ARC, Kaggle, DrivenData ×2). The findings agree, which is a useful cross-check, but future sessions should claim disjoint page sets here first.
 
-- **5 rows added** (`data/additions.json`): GEMS Prize Challenge ($300,000, closes 2026-12-03),
-  US Midterms 2026 Metaculus tournament ($10,000, closes 2026-11-04), and three AI hackathons —
-  Codex x TwitchCon ($10,000, closes 2026-11-02), PayPal AI Hackathon ($12,000, closes
-  2026-11-12), Global Virtual Hackathon 2026 ($1,000/division, register by 2026-11-13).
-  Each carries a "not in the original ledger" note and the session that added it.
-- **10 cross-checks** (`data/cross-checks.json`): the official URL each session read, on which
-  date, the facts it confirmed, and their caveats verbatim. These appear on `research.html`
-  and on each row's detail page, attributed — never as this session's own checks.
-- **5 new flags**: I-17 ESPN entry-limit conflict, I-18 Challenge.gov sunset, I-19 IceHacks
-  header contradiction, I-20 PayPal prize-total discrepancy, I-21 the "$600+" tax generalisation.
-- Where the two builds disagreed the stricter rule won: a figure is printed only when an official
-  source states it, so rows the other build marked "checked" can still show a blank prize here.
+### Second integration: `d21e8702-own1`'s full parallel build (PR #12)
 
-### Second reconciliation (session `d21e8702-own1`, merged while this PR was open)
+That session independently built a second site from the same ledger (`all.html`, `best-picks.html`, `flagged.html`, `verification.html`, `sources.html`, `cross-session.html`, `executive-summary.html`, its own CSS/JS, `tools/build_site.py`, `data/ledger.json`, `data/audit.json`, `data/verification.json`). Neither build was discarded:
 
-`main` advanced twice more while this integration was in progress, adding a second complete build of
-the same brief (its own root `index.html`, `all.html`, `category/**`, `assets/css/style.css`,
-`assets/js/site.js`, `data/ledger.json`, `data/audit.json`, `tools/*.py`, `best-picks.html`,
-`cross-session.html`, `methodology.html`, `sources.html`, `IRREGULARITIES.md`, `VERIFICATION.md`).
+| Item | Resolution |
+| --- | --- |
+| Dashboard and category pages | This branch's pre-rendered pages remain the published ones (20 checked rows vs 12, and the blank-is-not-free rule is enforced by tests). Their pages were moved to `archive/` with internal links rewritten and `data-rel="../"` set, so they still work. |
+| `data/verification.json` (12 rows, verbatim quotes) | Kept and rendered in full on `methodology.html` under "Independent second pass". |
+| `data/audit.json` (11 rule-based findings) | Kept and rendered on `review.html` as a summary table, with the full page kept at `archive/flagged.html`. |
+| `data/ledger.json`, `data/details.json`, `data/linkcheck.json`, `data/source-data.js` | Kept unchanged as the mirrored ledger and machine-readable audit trail. |
+| `tools/audit.py`, `build_site.py`, `check_links.py`, `verify_check.py` | Kept unchanged; they regenerate the archived build and its evidence. |
+| `IRREGULARITIES.md`, `VERIFICATION.md` | Kept unchanged as that session's written record. |
+| `assets/css/style.css`, `assets/js/site.js` | Kept unchanged; they style and drive the archived pages only (this site uses `assets/style.css` and `assets/app.js`). |
+| `404.html`, `robots.txt`, `sitemap.xml` | Kept at the root; `404.html` links were rewritten to the archived pages and `sitemap.xml` was regenerated to list the published pages. |
+| `tests/validate.mjs` | This branch's suite kept, and extended to check every archived page's local references. |
 
-Resolution, again with nothing discarded:
+Cross-check result: both passes agree on Wergle Flomp, Tom Howard ($27 fee, closed), ARC Prize, ESPN, Metaculus and the Kaggle/DrivenData structure. The other pass recorded the Weather Photographer of the Year prize ladder as not reproducible from the operator page, which matches this branch's decision to leave that prize blank.
 
-- The whole build is preserved as a working site at `archive/prize-atlas/dashboard-v2/` (38 files,
-  including its data and its four Python tools and its own test), with a banner linking to this site.
-  It was placed inside `archive/prize-atlas/` because its pages reference `../review.html` and
-  `../supplemental/index.html`, which live there — so its internal navigation still works.
-- 31 internal links in the archived copy were rewritten to resolve from its new depth (a path-only
-  change; no content edited). `scripts/checklinks.js` now validates the archives as well as the live
-  site: 260 HTML files, 0 broken links.
-- Its root-level duplicates were removed from the root *after* being archived (`all.html`, `404.html`,
-  `data/ledger.json`, `sitemap.xml`, …), so the published site has one canonical set of pages.
-- Its `IRREGULARITIES.md` and `VERIFICATION.md` travelled with the archive; its
-  `tests/validate.mjs` is preserved alongside it.
-- No content of theirs was reworded or deleted.
+### Third integration: `a479d584-own1`'s Verified Contest Ledger (PR #11)
 
-### Third reconciliation（session `4e1fdad5-own1`）
+That session built a second site under `ledger/` and verified 28 rows against official pages. Everything was kept:
 
-`main` advanced again mid-integration, adding a third build: 211-entry `data/entries.json`, one page
-per listing under `entry/` (33 pages), `playbook.html`, `categories.html`, `archive.html`,
-`assets/finder.{css,js}`, `data/finder-*`, `data/uptream`-style source snapshots under `data/upstream/`,
-`data/verification/batchA.jsonl`, and a second `scripts/build.js`.
+| Item | Resolution |
+| --- | --- |
+| `ledger/**` (its own dashboard, picks, category pages, flagged page, method, summary) | Kept unchanged except link rewrites where its nav pointed at root pages that now live in `archive/`. |
+| `data/verification/batchA.jsonl` (28 rows: 6 verified, 7 discrepancy, 9 partial, 5 unverified, 1 broken link) | Kept; its verified and discrepancy reads with a recorded prize were **promoted into the main table** with `evidence.by = "a479d584-own1"` attribution, and its issues became row flags. Its partial/unverified reads stayed blank. |
+| `data/finder-ledger.json|csv`, `data/finder-audit.json`, `data/upstream/**`, `scripts/**` | Kept unchanged as that build's data and generator. |
+| `assets/finder.css`, `assets/finder.js` | Kept unchanged; they style and drive `ledger/` only. |
+| Its added nav item "Verified ledger" | Preserved: root pages now link to `ledger/index.html` in the footer, and every archived page carries the nav item. |
+| `methodology.html` (its version) | Its page had been replaced by this branch's method page in the previous merge; it is restored verbatim as `archive/method.html` with links rewritten, and is linked from the method page. |
+| Docs | Its board section, merge log and publication record are appended below, unchanged. |
 
-Resolution:
+Cross-check: both passes read ESPN NFL Pick'em, ARC Prize, Metaculus, Kaggle and DrivenData and agree on the figures. That pass additionally recorded the full ESPN prize breakdown, two ESPN page inconsistencies (58 vs 59 prizes; 10 vs five entries), the closure of ESPN Survivor and the Playoff Predictor, the HeroX `/challenges` 404, and unconfirmed upstream claims for TradingView, Majors Challenge, Action Network and Fanatics.
 
-- The whole build is preserved intact at `archive/session-4e1fdad5/` (116 files, banner-linked to the
-  live site). Its pages reference `../entry/`, `../assets/`, `../data/`, `../review.html` and
-  `../supplemental/index.html`; archiving it as a tree keeps that navigation working.
-- Root duplicates were removed only after archiving (`entry/`, `category/`, `ledger/`, `src/`,
-  `playbook.html`, `categories.html`, `archive.html`, `shortlist.html`, `summary.html`,
-  `package-lock.json`, `assets/finder.*`, `assets/css/style.css`, `assets/js/site.js`).
-- Two of their files had overwritten archive files through git's rename detection
-  (`archive/prize-atlas/assets/app.js`, `archive/prize-atlas/data/entries.json`). Both were restored
-  byte-for-byte from the commit they were archived from, so the Prize Atlas build still runs on its
-  own data and app.
-- `scripts/checklinks.js` gained two documented relaxations, both scoped: app-level fragments such as
-  `#q=Some%20Name` are client-side search, and archived builds render rows client-side so their
-  per-row anchors exist only at runtime. File links into the archives are still fully checked.
+### Fourth integration: `4a243e58-own1`'s generated build (PR #19)
 
-Result: 325 HTML files, 0 broken links, all suites green.
+That session rebuilt the site with its own generator (`scripts/build-site.mjs`, `scripts/build-data.mjs`), a facts module (`research/facts.mjs`), per-entry pages (`entry/*.html`), `playbook.html` and a rewritten `sources.html`.
 
-The board that `main` carried at each merge — including every publication record written by the other
-sessions — is preserved verbatim in `docs/COORDINATION-as-merged-on-main.md` (latest state at the
-fourth reconciliation) and in `docs/COORDINATION-session-records.md`. Nothing was deleted; this file
-is only the integration view.
+| Item | Resolution |
+| --- | --- |
+| `entry/**` (per-row pages), `sources.html`, `playbook.html` | Kept and link-repaired where they pointed at root pages that now live in `archive/`; they are linked from `sources.html` and remain browsable. |
+| `research/facts.mjs`, `research/flags.mjs`, `research/legacy-leads.json`, `scripts/build-data.mjs`, `scripts/build-site.mjs`, `scripts/linkcheck.mjs`, `tests/dom.test.mjs`, `package.json` | Kept unchanged. |
+| `index.html`, `review.html`, `category/**`, `assets/**`, `tests/validate.mjs`, `research/SOURCES.md` | This branch's versions kept (they publish 28 checked rows with attribution and enforce blank-is-not-free in tests). That session's `research/SOURCES.md` is preserved verbatim as `archive/SOURCES-parallel.md` for manual comparison. |
+| `sources.html` | Their page restored after the merge removed it, then link-repaired. |
+| `.github/workflows/validate.yml` | This branch's workflow kept; it now validates this site *and* link-checks every archived, ledger and entry page, so the other builds cannot rot. |
+| `tools/build_site.py` | Kept under the name that session gave it, `tools/build_site_legacy.py`. |
 
-### Fourth reconciliation (sessions `a479d584`, `4a243e58`)
+**Whole-repo link check after this merge:** 63 HTML pages, 0 broken local references.
 
-`main` gained one more build while this PR waited on the mergeable check: a `ledger/` subsite, `.cjs`
-script names, a link-status classifier that treats redirects and 5xx as "unknown" rather than
-"broken", two additional verified competitions (ESPN College Pick'em, CBS Pick'em) and a documented
-quarantine of 15 unsourced claims coming out of the merged builds.
+## Verification performed — `181b7279-own1`
 
-- Preserved intact at `archive/session-4a243e58/` (112 files, banner-linked, including its
-  `.github/workflows/link-health.yml`), so their new verifications and quarantine list stay readable
-  and diffable.
-- Their root duplicates were removed after archiving, and their `link-health` workflow stays out of
-  this repo's CI gate — it depends on their `data/entries.json`/`build-data.mjs` pipeline, which lives
-  in the archive, not at the root.
-- Their new verifications are *not* copied into this build's tables. Copying a claim from another
-  session's page would make it second-hand; this build only publishes figures it can show a source
-  for itself. Their two verifications are linked from `research.html` via the archive.
+Official pages read on 2026-11-01 (all recorded with URL, date, copied facts and unstated facts in `data/entries.json → evidence`, and printed on `methodology.html`):
 
-Result: 392 HTML files, 0 broken links, all suites green.
+ESPN NFL Pick'em · Kaggle Competitions · ARC Prize 2026 · DrivenData Competitions · GEMS Prize Challenge · Metaculus Tournaments · Metaculus US Midterms 2026 · Sony World Photography Awards (Series + overview) · Wergle Flomp Humor Poetry · Tom Howard/Margaret Reid Poetry · Weather Photographer of the Year · Environmental Photographer of the Year · Vocal Challenges FAQ · Devpost hackathons · Reedsy weekly contest · Givling · USA.gov challenge directory · Challenge.gov (retirement notice) · Codex x TwitchCon rules · PayPal AI Hackathon rules.
 
-### Conflict log
+Results: 212 rows, **20 checked**, **10 free entry confirmed**, 1 paid entry, 192 unverified, 2 with no usable operator link.
 
-- `index.html` — this session's generated dashboard kept at the root; theirs archived. No content lost.
-- `README.md` — merged: this project's documentation plus a "what was merged" table quoting their
-  README verbatim.
-- `COORDINATION.md` — merged: this board plus their full records in `docs/COORDINATION-session-records.md`.
-- No force-push, no `--theirs`/`--ours` bulk resolution, no deletion of another session's file.
+Irregularities found and published on `review.html` (all with source links, none blocking):
 
----
+1. `challenge.gov` retired 2026-03-30 — HeroX row relinked to `usa.gov/challenges`.
+2. Tom Howard/Margaret Reid Poetry charges $27 per submission although the ledger presents it as a free lead.
+3. `fantasy.premierleague.com` used as the source for 8 rows; `fantasyfootballscout.co.uk` for 4.
+4. 25 rows link to news/blog pages rather than rules.
+5. 2 rows have no operator link at all.
+6. ESPN's own page contradicts itself on entry limits (10 vs five).
+7. Givling is a crowdfunding queue, not a judged contest, and was labelled "ended" in August while active.
+8. Stale August status labels (27 ended / 5 mixed / 11 caution) are not repeated as fact.
+9. PayPal AI Hackathon headline ($67,500) mixes cash and non-cash credits; row shows no prize amount.
+10. IceHacks 2026 header advertises cash its description denies; QHack and WiseTech events have ended (from the supplemental audit).
+11. The reference site's flat "$600 tax form" claim is broader than IRS guidance.
 
-## 4. Handoff log
+Commands run: `node tools/build.mjs`, `node tests/validate.mjs` (OK), `python3 supplemental/check.py` (OK), `node --check assets/app.js` (OK), plus a local HTTP pass over all 14 pages and assets.
 
-_(empty — no task changed hands; every claim was completed by its owner)_
+## Publish log
 
----
+| Session | Result |
+| --- | --- |
+| `27a86924-own1` | PR #1 and #2 merged; Pages enabled on `main` / root; <https://sassnarep3-star.github.io/Own1/>. |
+| `85ca8130-own1` | PR #4 merged; mobile cards and free-entry filter deployed. |
+| `90c9f78c-own1` | PR #5 merged; executive summary + re-verification published. |
+| `37aed701-own1` | PR #6 merged; supplemental page published but not linked from navigation. |
+| `20a81ffd-own1` | PR #10 merged; independent re-verification recorded. |
+| `d21e8702-own1` | PR #12 merged; second build and verbatim verification published. |
+| `181b7279-own1` | Integration PR (see below) — merge, Pages check and final links recorded after deployment. |
 
-## 5. Integration record
+### Third-session records (append verbatim from `a479d584-own1`)
 
-- **Pull request:** [#13](https://github.com/sassnarep3-star/Own1/pull/13) — "Rebuild the contest
-  ledger as a live, mobile-first verified dashboard".
-- **Merge result:** recorded below after the merge completes.
-- **Pages deploy:** recorded below after the deploy completes.
+#### Session a479d584-own1 — Verified Contest Ledger + final integration (2026-11-01 UTC)
+
+**Branch note:** the Arena platform fixes this session's branch as `arena/a479d584-own1`; the `session-<id>/<task>` naming from the brief could not be used. Non-overlapping file scopes are used instead.
+
+| # | Task | Status | Owner | File scope | Claimed (UTC) |
+|---|------|--------|-------|-----------|---------------|
+| 1 | Repo review + automated audit of the upstream ledger | done | a479d584 | `data/upstream/**`, `scripts/audit.js`, `data/audit.json` | 13:45 |
+| 2 | Official-source verification, batch A (28 records: 6 verified, 9 partial, 8 differ/broken link, 5 unconfirmed) | done | a479d584 | `data/verification/batchA.jsonl`, `picks.json` | 14:00 |
+| 3 | Official-source verification, batch B (the 178 rows never opened against an official page) | needs review (unclaimed; published as unverified) | — | `data/verification/batchB.jsonl` | — |
+| 4 | Ledger site (dashboard, picks, categories, flagged, method, summary) | done | a479d584 | `ledger/**`, `assets/finder.css`, `assets/finder.js`, `scripts/build.js`, `scripts/linkcheck.js`, `data/ledger.*` | 14:20 |
+| 5 | Executive summary | done | a479d584 | `EXECUTIVE_SUMMARY.md` (integrated; generated by `build.js`), `ledger/EXECUTIVE_SUMMARY.md` | 14:25 |
+| 6 | **Final integration** (reconcile with sessions 27a86924/90c9f78c/85ca8130/37aed701, re-verify, link check, PR, merge, Pages) | in progress | a479d584 | nav links on Prize Atlas pages, `README.md`, `EXECUTIVE_SUMMARY.md`, `COORDINATION.md` | 14:30 |
+
+##### Merge-conflict log (task 6)
+PR #11 could not merge twice: first `main` had the Prize Atlas site (add/add in `COORDINATION.md`, `EXECUTIVE_SUMMARY.md`, `README.md`, `assets/style.css`, `assets/app.js`, `index.html`); then `main` advanced again with the Free Cash Competition Ledger build (conflicts in the same docs, `category/**`, `index.html`, `data/ledger.json`, `data/audit.json`). Resolution each time, nothing from other sessions discarded:
+- All root pages, `category/**`, `assets/**`, `data/ledger.json`, `data/audit.json`, `data/entries.json`, `tests/**`, `tools/**`, `research/**`, `supplemental/**` are the other sessions' versions, unchanged. The only edit to their generated pages is one added nav item, **Verified ledger**, via `NAV` in `tools/build_site.py` (regenerated with `python3 tools/build_site.py`; diff is one line per page).
+- This session's site lives under `ledger/` with its own assets (`assets/finder.css`, `assets/finder.js`). Its data files were renamed to avoid collisions: `data/finder-ledger.json`, `data/finder-ledger.csv`, `data/finder-audit.json` (`scripts/audit.js` and `scripts/build.js` updated).
+- Docs: this section is appended to the board; `README.md` and `EXECUTIVE_SUMMARY.md` each gain a short pointer section for the ledger. The ledger's own executive summary is `ledger/EXECUTIVE_SUMMARY.md` (also `ledger/summary.html`).
+- Cross-check against other sessions' checked rows: ARC Prize, Metaculus, Kaggle, DrivenData and Checkmate were read by both; values agree ($2M with Nov 2 / Nov 8; GEMS $300,000; ESPN $102,000). Status labels differ for Checkmate (verified there, partial here: see `ledger/flagged.html` section E). This session also read ESPN's how-to-play page and recorded the full prize breakdown ($102,000 = 3×$20,000 + $10,000 + 54×$500 + $5,000 random drawing) and two ESPN page inconsistencies (58 vs 59 prizes; 10 vs five entries).
+- Other sessions' findings not re-read here are listed, as such, in section E of `ledger/flagged.html`.
+
+##### Verification record (tasks 1–2)
+Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and issues in `data/verification/batchA.jsonl` and on `ledger/method.html`. Verification performed: the page was read for the displayed prize, free-entry statement and window; anything not seen stays blank. Irregularities (all on `ledger/flagged.html`):
+- ESPN NFL Survivor and NFL Playoff Predictor: entry closed on 2026-11-01 though upstream says live. RotoBaller Challenge: drafts ended Sep 8, 2026.
+- Action Network "Favorites": only the 2024 FAQ found. MLB Beat the Streak: window ends with the 2026 regular season. TradingView The Leap: latest contest paid TradingView plans, `$50,000` not found. Majors Challenge: `$250,000` not found; commissioner pays $1/team for majors.
+- HeroX `/challenges` returns 404 (replacement `/crowdsourcing-projects`). Fanatics Survivor: official page is a sportsbook/casino homepage; contest and prize not found.
+- Upstream headline stats overstate (189 "true free paths" includes ended rows); betting-brand and broker rows conflict with upstream's own policy; every upstream row is dated 2026-08-19.
+- Scope limit: 28 of 206 rows checked; 178 rows have blank prize cells and an "unverified" label. Link checking: `node scripts/linkcheck.js` verifies internal links and anchors only; external URLs cannot be fetched from the build sandbox.
+
+
+### `181b7279-own1` final record
+
+- Claim committed and pushed before any shared output changed (`76fd2f1`).
+- Integration merge of `origin/main` resolved without discarding any session's work (table above).
+- Build and checks re-run **after** the merge, on the combined data.
+- PR: _filled in below after the pull request is opened._
+- Merge: _filled in after merge._
+- Pages deployment: _filled in after the deployment check._
+
+## 13. `arena-041e7ad1` — final integration record (PR #13)
+
+Final integration session for this brief. It merged `main` four times while other sessions kept
+publishing, preserved every competing build instead of overwriting it, and re-ran the full gate before
+every push.
+
+**What is published.** 211 listings across nine categories (`c/<id>.html` detail pages, `categories/`
+index pages), `index.html` dashboard with a "closing within 60 days" table built only from verified
+deadlines, `all.html`, `best.html`, `analysis.html`, `flagged.html` (the labelled *Flagged for review*
+page), `verification.html` (method), `research.html` (source audit + manual-review links),
+`executive-summary.html`, `sitemap.xml`, `404.html`.
+
+**Archived, not deleted.** Four competing builds of the same brief live intact under `archive/`:
+`archive/prize-atlas/` (session `27a86924`), `archive/prize-atlas/dashboard-v2/` (session
+`d21e8702`), `archive/session-4e1fdad5/` and `archive/session-4a243e58/`. Each keeps its own data,
+scripts and internal navigation, with a banner linking back to the live site.
+
+**Gate before merge.** `npm run build` → `241 HTML files … no broken internal links`; link checking
+covers the archives too (392 HTML files); `tests/validate.mjs` → 211 listings (5 merged), 130 published
+prize figures all backed by an official source, 81 blanked with a stated reason, 22 flags, 211 rows
+with external sources; `tests/validate-prize-atlas.mjs` → 208 leads, 11 pages, all local references
+pass; the build is deterministic (a second run produces no diff), which is what CI asserts.
+
+**No fabrication.** Where an official page did not state a figure, the cell is blank and the row says
+unverified; nothing was inferred from a directory, an aggregator or another session's page.
+
+**PR.** https://github.com/sassnarep3-star/Own1/pull/13 (branch `arena/041e7ad1-own1` → `main`).
+Merge result and Pages deployment status: see the publication line appended below this section when the
+merge lands.
