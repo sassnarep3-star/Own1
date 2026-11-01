@@ -220,21 +220,82 @@ scripts/build-atlas.mjs` → 250 entries (44 verified, 205 leads); `node tests/v
 
 **Publication:** PR #14, merged into `main`; Pages deploy verified from the Actions run.
 
+
+## 13. `arena-041e7ad1` — final integration record (PR #13)
+
+Final integration session for this brief. It merged `main` four times while other sessions kept
+publishing, preserved every competing build instead of overwriting it, and re-ran the full gate before
+every push.
+
+**What is published.** 211 listings across nine categories (`c/<id>.html` detail pages, `categories/`
+index pages), `index.html` dashboard with a "closing within 60 days" table built only from verified
+deadlines, `all.html`, `best.html`, `analysis.html`, `flagged.html` (the labelled *Flagged for review*
+page), `verification.html` (method), `research.html` (source audit + manual-review links),
+`executive-summary.html`, `sitemap.xml`, `404.html`.
+
+**Archived, not deleted.** Four competing builds of the same brief live intact under `archive/`:
+`archive/prize-atlas/` (session `27a86924`), `archive/prize-atlas/dashboard-v2/` (session
+`d21e8702`), `archive/session-4e1fdad5/` and `archive/session-4a243e58/`. Each keeps its own data,
+scripts and internal navigation, with a banner linking back to the live site.
+
+**Gate before merge.** `npm run build` → `241 HTML files … no broken internal links`; link checking
+covers the archives too (392 HTML files); `tests/validate.mjs` → 211 listings (5 merged), 130 published
+prize figures all backed by an official source, 81 blanked with a stated reason, 22 flags, 211 rows
+with external sources; `tests/validate-prize-atlas.mjs` → 208 leads, 11 pages, all local references
+pass; the build is deterministic (a second run produces no diff), which is what CI asserts.
+
+**No fabrication.** Where an official page did not state a figure, the cell is blank and the row says
+unverified; nothing was inferred from a directory, an aggregator or another session's page.
+
+**PR.** https://github.com/sassnarep3-star/Own1/pull/13 (branch `arena/041e7ad1-own1` → `main`).
+Merge result and Pages deployment status: see the publication line appended below this section when the
+merge lands.
+
+---
+
+## Session `75155aeb-own1` — the `/atlas` subsite
+
+**Claim.** `atlas/**`, `assets/atlas.css`, `assets/atlas.js`, `scripts/build-atlas.mjs`,
+`scripts/import_legacy.mjs`, `data/verified.json`, `data/legacy.json`, `data/atlas-findings.json`,
+`data/atlas-entries.json`, `data/atlas-categories.json`, `tests/validate-atlas.mjs`,
+`research/SOURCES.md`. Shared edits, both additive: one nav entry in `scripts/build.js`
+(`['atlas/index.html', 'Atlas (44)']`) and two CI steps (rebuild `atlas/` and fail on diff; run
+`node tests/validate-atlas.mjs`).
+
+**What it is.** 44 rows verified against operator pages opened on 2026-11-01 (ESPN, CBS Sports ×2,
+Kaggle ×4, ARC Prize, DrivenData, Devpost ×9, Metaculus ×14, Sony World Photography ×4, Vocal,
+Givling, XPRIZE ×4), each with the page read and the date; the 206-listing reference catalogue imported
+as quarantined leads with prize, fee, deadline and eligibility blanked by policy; 17 sourced findings
+published on `atlas/review.html`; a mobile-first dashboard, shortlist, nine category pages, summary,
+method page and a ledger-pass hub that links to the other layers.
+
+**Publication history.** PR #14 → merged as `511c73d`; PR #25 → merged as `e5728d4`. Both were
+deployed: `pages/builds/latest` reported `built` for those commits and
+<https://sassnarep3-star.github.io/Own1/atlas/> was read back over the public URL.
+
+**Regression found and repaired.** Commit `bf00b8d` ("Restore one canonical build…") moved `atlas/`,
+`assets/atlas.*`, `scripts/build-atlas.mjs` and `data/atlas-*.json` into
+`archive/build-mixed-root/`. The pages were preserved, but the published URL would have 404'd on the
+next deploy, and the subsite's generator no longer sat at its documented path. This branch restores the
+subsite at `atlas/` with its generator and data at their canonical paths, keeps the archived copy
+untouched (nothing is deleted), and re-attaches it to the root navigation. The archived copy is a
+snapshot; `atlas/` is the live one.
+
+**Design note for whoever consolidates next.** The subsite is deliberately a separate generator over
+separate data. Folding it into the root build means reconciling two evidence schemas (root: per-row
+`sources[]` + blanking reasons; atlas: per-field quote, page read and date). Doing that by deleting one
+of them loses verified rows, which is what `bf00b8d` narrowly avoided by archiving instead.
+
+**Verification on the merged tree.** `node scripts/build.js` → 230 files, 211 listings, 211 detail
+pages, 22 flags; `node tests/validate.mjs` → OK (211 listings, 130 published prize figures with
+sources, 81 blanked with a reason, 22 flags); `node scripts/build-atlas.mjs` → 250 entries (44
+verified, 205 leads); `node tests/validate-atlas.mjs` → 3,848/3,848 checks.
+
 ### Requests to the sessions that own the root layer (logged, not actioned here)
 
-Both were observed on `main` and are **not** caused by the `/atlas` layer; this session does not edit
-another session's data or navigation.
-
-1. **`node tests/validate.mjs` fails on `main`** with `kaggle: invalid sourceStatus`,
-   `kaggle: checked row needs a source` and `herox: evidence needs confirmed facts`. `data/verification.json`
-   records Kaggle as `partially-verified` while `data/entries.json` carries it as a checked row, so the
-   two files disagree about the same operator. Whoever owns that data needs to reconcile `sourceStatus`
-   with the evidence object, or demote the row to `unverified` and let the fields go blank. Until then
-   the root CI step is red independently of any other layer.
-2. **`best.html` and `research.html` are published but nothing links to them.** A page reachable only by
-   URL is invisible to a reader: either add them to the root navigation or drop them from the build.
-   `tests/validate-atlas.mjs` prints their names as a WARN rather than failing another layer's
-   in-flight commit.
-
-The atlas layer is green on the same commit: `node tests/validate-atlas.mjs` → 3,898/3,898 checks.
+- `tests/validate.mjs` previously failed on `kaggle` (`sourceStatus` disagreed with
+  `data/verification.json`) and `herox`; it is green on the consolidated build, so this is recorded only
+  as history.
+- `atlas/` must stay at its published path. If the root build needs to own every page, add a redirect
+  rather than moving the directory: the URL has been shared.
 

@@ -3,161 +3,380 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Flagged for review — irregularities in the free competition catalogue — Free Cash Ledger</title>
-<meta name="description" content="Every integrity finding and contradicted row in the free-to-enter cash competition catalogue, with operator source links.">
-<meta property="og:title" content="Flagged for review — irregularities in the free competition catalogue — Free Cash Ledger">
-<meta property="og:description" content="Every integrity finding and contradicted row in the free-to-enter cash competition catalogue, with operator source links.">
+<title>Flagged for review — PrizeDesk</title>
+<meta name="description" content="22 irregularities with evidence and source links, plus the list of rows that were not re-checked.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Flagged for review — PrizeDesk">
+<meta property="og:description" content="22 irregularities with evidence and source links, plus the list of rows that were not re-checked.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230f766e'/><text x='18' y='45' font-size='36' font-family='monospace' fill='white'>$</text></svg>">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E%24%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/site.css">
+
 </head>
-<body data-rel="">
-<a class="skip" href="#main">Skip to content</a>
-<header class="top">
-  <div class="top-inner">
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
     <a class="brand" href="index.html">
-      <span class="mark">$</span>
-      <span>Free Cash Ledger<small>206 competitions · verified 2026-11-01</small></span>
+      <span class="brand-mark" aria-hidden="true">$</span>
+      <span class="brand-text">
+        <b>PrizeDesk</b>
+        <span>Source reviewed 19 Aug 2026</span>
+      </span>
     </a>
-    <nav class="main" aria-label="Main"><a href="index.html">Dashboard</a><a href="best-picks.html">Best picks</a><a href="all.html">All 206</a><a href="verification.html">Verification</a><a href="flagged.html" aria-current="page">Flagged (13)</a><a href="methodology.html">Method</a><a href="executive-summary.html">Summary</a><a href="sources.html">Sources</a><a href="cross-session.html">Cross-session</a><a href="ledger/index.html">Verified ledger</a></nav>
+    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="analysis.html">Analysis</a><a href="research.html">Source audit</a><a href="verification.html">Verification</a><a href="flagged.html" aria-current="page">Flagged for review</a><a href="atlas/index.html">Atlas (44)</a></nav>
   </div>
 </header>
-<div class="wrap" id="main">
+<main id="main" class="wrap">
 
 <section class="hero">
-  <p class="kicker">Flagged for review</p>
-  <h1 class="page">Everything that does not add up, with the source that shows it.</h1>
-  <p class="lede">These items do not block publication — they are published here so you can decide. Each one is
-  mechanical: it comes from <code>tools/audit.py</code> over the mirrored data, or from a page read on
-  2026-11-01. Nothing in this list is an opinion about a company; it is a mismatch between what a row claims and
-  what its own citation shows.</p>
+  <p class="kicker">Status: needs review · does not block publication</p>
+  <h1>Flagged for review</h1>
+  <p class="lede">Everything we could not settle, could not verify, or found inconsistent — 22 items,
+  5 of them high severity. Each carries its evidence and a link to the source. None of these stopped the
+  site from publishing; all of them are here so you can decide.</p>
 </section>
 
-<div class="notice bad">
-  <b>11 audit findings + 2 contradicted rows.</b> Severity is about how much a row could
-  cost you: <b>high</b> means a prize or a fee claim has no official support or is outright wrong;
-  <b>medium</b> means the row is misleading; <b>low/info</b> means the catalogue’s own presentation is inconsistent.
+<div class="callout info">
+  <p><b>What "needs review" means.</b> The item is published on this page with its source links and is not
+  blocking. Unverified values are blank in the data tables rather than filled in — see
+  <a href="verification.html">how verification works</a>.</p>
 </div>
 
-<h2 class="sec">Contradicted by the operator</h2>
+<nav class="chip-row" style="margin:16px 0" aria-label="Jump to item">
+  <a class="chip" href="#I-01">I-01 Source site contradicts itself…</a><a class="chip" href="#I-02">I-02 Every prize figure is 74 days…</a><a class="chip" href="#I-03">I-03 Ended / out-of-season contests…</a><a class="chip" href="#I-04">I-04 No official-source link on the…</a><a class="chip" href="#I-05">I-05 Official iOS link returns an…</a><a class="chip" href="#I-06">I-06 Rules link points at a past,…</a><a class="chip" href="#I-07">I-07 Referral / promo codes published…</a><a class="chip" href="#I-08a">I-08a No rules URL at all</a><a class="chip" href="#I-08b">I-08b &quot;Rules&quot; link is just the signup…</a><a class="chip" href="#I-09">I-09 Insecure (http://) link</a><a class="chip" href="#I-10">I-10 Gambling-operator and…</a><a class="chip" href="#I-11">I-11 Prizes that are points, gems or…</a><a class="chip" href="#I-12">I-12 No stated prize amount</a><a class="chip" href="#I-13">I-13 Non-USD prize currencies in a…</a><a class="chip" href="#I-14">I-14 Directory listings are not…</a><a class="chip" href="#I-15">I-15 Category copy tells readers to…</a><a class="chip" href="#I-17">I-17 ESPN&#39;s own rules contradict each…</a><a class="chip" href="#I-18">I-18 Challenge.gov is listed as a…</a><a class="chip" href="#I-19">I-19 IceHacks advertises cash in its…</a><a class="chip" href="#I-20">I-20 PayPal AI Hackathon: headline…</a><a class="chip" href="#I-21">I-21 The blanket claim that &quot;US tax…</a><a class="chip" href="#I-16">I-16 Most rows were not re-checked in…</a>
+</nav>
 
-<div class="finding high" id="conf-tom-howard-poetry">
-  <h3>Contradicted by the operator’s page: Tom Howard/Margaret Reid Poetry Contest</h3>
-  <div class="meta2">verified 2026-11-01 · official-page</div>
-  <p>The catalogue labels this &#x27;Free USD path&#x27; with status &#x27;live&#x27;. The official page states a $27 entry fee and that the contest is closed until 2027-04-15. Both labels are wrong on the same row.</p>
-  <ul>
-    <li><b>entry fee</b>: $27 per submission — “Fee: $27 per submission (one submission may contain up to 3 poems). Enter as many submissions as you wish.”</li><li><b>availability</b>: Closed; opens April 15, 2027 — “This contest is currently closed. It will open again on April 15, 2027.”</li><li><b>prize total</b>: $12,000 — “Welcome to the 25th annual Tom Howard/Margaret Reid Poetry Contest. Submit published or unpublished work. $12,000 in prizes.”</li><li><b>prize first</b>: two prizes of $3,500 — “TOM HOWARD PRIZE: $3,500 for a poem in any style or genre”</li>
-  </ul>
-  <p><a href="https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest" rel="noopener noreferrer nofollow">Official page ↗</a></p>
-</div>
-<div class="finding high" id="conf-weather-potw">
-  <h3>Contradicted by the operator’s page: Weather Photographer of the Year (RMetS)</h3>
-  <div class="meta2">verified 2026-11-01 · official-page-index</div>
-  <p>Free entry is confirmed on the operator&#x27;s own page. The catalogue&#x27;s prize ladder (£5,000 winner / £2,500 mobile / £750 young) is contradicted by two independent 2026 listings (£1,500 / £500 / £500, and a separate report of a £2,000 pool). Because the sources disagree with each other and the operator&#x27;s prize page was not opened directly, the verified prize is left BLANK on the site and the row is flagged.</p>
-  <ul>
-    <li><b>entry fee</b>: Free — “This annual competition is open to photographers of all skill levels worldwide and is free to enter.”</li><li><b>prize amounts as published 2026</b>: £1,500 overall, £500 mobile, £500 climate award (per 2026 contest listings) — “Weather Photographer of the Year – awarded to the most striking image of weather in action (£1,500 prize). Mobile Weather Photographer of the Year – celebrating the best images captured on a smartphone or tablet (£500 prize). Climate Award – recognising photography that tells a compelling story about our changing climate (£500 prize).”</li>
-  </ul>
-  <p><a href="https://www.rmets.org/weather-photographer-of-the-year" rel="noopener noreferrer nofollow">Official page ↗</a></p>
-</div>
+<section class="section">
+  <h2>Unverified rows (198)</h2>
+  <p class="note-tiny">These rows cite a source but were <b>not</b> re-fetched on 1 Nov 2026.
+  Their figures are the source's claims from 19 Aug 2026. This list exists so the
+  verification gap is visible rather than implied.</p>
+  <details class="card">
+    <summary><b>Show the 198 not-re-checked rows</b></summary>
+    <p style="margin-top:10px"><a href="c/pocket7.html">Pocket7Games</a> · <a href="c/givling.html">Givling</a> · <a href="c/vocal.html">Vocal Challenges</a> · <a href="c/devpost.html">Devpost Hackathons</a> · <a href="c/arcprize.html">ARC Prize (via Kaggle)</a> · <a href="c/drivendata.html">DrivenData</a> · <a href="c/herox.html">HeroX / Challenge.gov</a> · <a href="c/xprize.html">XPRIZE</a> · <a href="c/topcoder.html">Topcoder</a> · <a href="c/espn-pickem.html">ESPN NFL Pick&#39;em</a> · <a href="c/espn-survivor.html">ESPN NFL Survivor</a> · <a href="c/espn-wintotals.html">ESPN NFL Win Totals</a> · <a href="c/espn-playoff.html">ESPN NFL Playoff Predictor</a> · <a href="c/espn-pigskin.html">ESPN Pigskin Bracket Challenge</a> · <a href="c/espn-cfb.html">ESPN College Football Pick&#39;em</a> · <a href="c/cbs-cfb-pickem.html">CBS Sports College Football Pick&#39;em</a> · <a href="c/fox-super6.html">FOX Super 6</a> · <a href="c/yahoo-survival.html">Yahoo Survival Football</a> · <a href="c/pickwatch.html">NFL Pickwatch Contest</a> · <a href="c/beat-the-geek.html">Beat The Geek</a> · <a href="c/tsg-playoff.html">TheSportsGeek NFL Playoff Pick&#39;em</a> · <a href="c/favorites-pickem.html">The Favorites Podcast Pick&#39;em</a> · <a href="c/thelines-survivor.html">TheLines Free NFL Survivor</a> · <a href="c/rams-pickem.html">LA Rams Pick&#39;em</a> · <a href="c/draft-pro.html">The Draft Pro — Perfect Draft Challenge</a> · <a href="c/splash-mock.html">Splash Sports NFL Mock Draft</a> · <a href="c/fftoday-draft.html">FFToday NFL Draft Contest</a> · <a href="c/rotoballer.html">RotoBaller Challenge</a> · <a href="c/apex-fantasy.html">Apex Fantasy Free League Entry</a> · <a href="c/fpl-official.html">Official FPL (Premier League)</a> · <a href="c/fpl-second-chance.html">FPL Second Chance League</a> · <a href="c/fpl-draft.html">FPL Draft</a> · <a href="c/fantasy-efl.html">Fantasy EFL</a> · <a href="c/telegraph-ff.html">Telegraph Fantasy Football</a> · <a href="c/ucl-fantasy.html">UCL Fantasy</a> · <a href="c/pl-predictor.html">Premier League Predictor</a> · <a href="c/pooltracker-epl.html">Pooltracker EPL Predictor</a> · <a href="c/ffs-fpl.html">Fantasy Football Scout FPL league</a> · <a href="c/ffs-ucl.html">FFScout UCL Fantasy league</a> · <a href="c/ffs-efl.html">FFScout Fantasy EFL league</a> · <a href="c/ffs-tattico.html">FFScout Tattico Serie A league</a> · <a href="c/football-mad.html">Football Mad FPL league</a> · <a href="c/fantasy-arena.html">Fantasy Arena FPL league</a> · <a href="c/lazyfpl.html">LazyFPL league</a> · <a href="c/fplhub.html">FPL Hub league</a> · <a href="c/bona-fide.html">Bona Fide Sports league</a> · <a href="c/olka.html">OLKA Express league</a> · <a href="c/fplmanager-india.html">FPLManagerIndia league</a> · <a href="c/fplstore.html">fplStore_ league</a> · <a href="c/pitchbooking.html">Pitchbooking.com league</a> · <a href="c/dirty-dozen.html">Dirty Dozen (Gambling.com)</a> · <a href="c/the-special-one.html">The Special One</a> · <a href="c/andys-predictor.html">Andy&#39;s Bet Club £1M Predictor</a> · <a href="c/pickem-sports.html">Pick &#39;Em Sports (iOS)</a> · <a href="c/sports-predictor.html">Sports Predictor (iOS)</a> · <a href="c/goaloracle.html">GoalOracle</a> · <a href="c/oddspedia.html">Oddspedia Handicapping Contests</a> · <a href="c/streak-for-cash.html">Streak for the Cash</a> · <a href="c/gamersaloon.html">GamerSaloon 1-Rounders</a> · <a href="c/playerslounge.html">Players&#39; Lounge Free Tournaments</a> · <a href="c/officepoolstop.html">OfficePoolStop</a> · <a href="c/funofficepools.html">FunOfficePools</a> · <a href="c/mysurvivorpool.html">MySurvivorPool</a> · <a href="c/gridirongames.html">Gridiron Games</a> · <a href="c/myfantasyleague.html">MyFantasyLeague</a> · <a href="c/trofeo.html">Trofeo.live</a> · <a href="c/mlb-beat-the-streak.html">MLB Beat the Streak</a> · <a href="c/aicrowd.html">AIcrowd Challenges</a> · <a href="c/zindi.html">Zindi</a> · <a href="c/codabench.html">Codabench / CodaLab</a> · <a href="c/grand-challenge.html">Grand Challenge (medical imaging)</a> · <a href="c/crunchdao.html">CrunchDAO / ADIA Lab Challenges</a> · <a href="c/mlcontests.html">ML Contests</a> · <a href="c/espn-tourney-challenge.html">ESPN Men’s Tournament Challenge</a> · <a href="c/espn-tc-eliminator.html">ESPN Tournament Challenge Eliminator</a> · <a href="c/nascar-fantasy-live.html">NASCAR Fantasy Live</a> · <a href="c/pga-fantasy-golf.html">PGA TOUR Fantasy Golf</a> · <a href="c/nhl-bracket-challenge.html">NHL Stanley Cup Playoffs Bracket Challenge</a> · <a href="c/espn-nba-playoff.html">ESPN NBA Playoff Challenge</a> · <a href="c/nba-pickem.html">NBA Pick&#39;Em</a> · <a href="c/bundesliga-fantasy.html">Bundesliga Fantasy Manager</a> · <a href="c/laliga-fantasy.html">La Liga Fantasy</a> · <a href="c/99designs.html">99designs Design Contests</a> · <a href="c/freelancer-contests.html">Freelancer.com Contests</a> · <a href="c/battlefy.html">Battlefy Esports Tournaments</a> · <a href="c/challengermode.html">Challengermode</a> · <a href="c/atp-fantasy.html">ATP Fantasy (Official ATP Tour)</a> · <a href="c/f1-fantasy.html">F1 Fantasy (Official Formula 1)</a> · <a href="c/ewc-play.html">Esports World Cup (EWC) Play — Fantasy &amp; Pick&#39;em</a> · <a href="c/espn-hockey-playoff.html">ESPN Playoff Hockey Challenge</a> · <a href="c/espn-cfp-bracket.html">ESPN College Football Playoff Bracket Challenge</a> · <a href="c/espn-knockout-bracket.html">ESPN Knockout Bracket Challenge (World Cup)</a> · <a href="c/mlb-hr-derby-pickem.html">MLB Home Run Derby Pick&#39;Em (T-Mobile)</a> · <a href="c/wall-street-survivor.html">Wall Street Survivor Trading Contests</a> · <a href="c/start-gg.html">Start.gg (formerly smash.gg)</a> · <a href="c/chesscom-tournaments.html">Chess.com Prize Tournaments</a> · <a href="c/play-pokemon.html">Play! Pokémon Championship Series</a> · <a href="c/designcrowd.html">DesignCrowd Design Contests</a> · <a href="c/crowdspring.html">CrowdSpring Design Contests</a> · <a href="c/espn-womens-tourney.html">ESPN Women&#39;s Tournament Challenge</a> · <a href="c/yahoo-bracket-mayhem.html">Yahoo Fantasy Bracket Mayhem</a> · <a href="c/bullrush.html">BullRush Trading Competitions</a> · <a href="c/signate.html">Signate (Japan) Data Competitions</a> · <a href="c/tianchi.html">Tianchi (Alibaba Cloud)</a> · <a href="c/hypermind.html">Hypermind Forecasting Contests</a> · <a href="c/moomoo-paper-trading.html">moomoo Paper Trading Competition</a> · <a href="c/superbru.html">Superbru</a> · <a href="c/afl-fantasy.html">AFL Fantasy</a> · <a href="c/nrl-fantasy.html">NRL Fantasy</a> · <a href="c/espn-bowl-mania.html">ESPN Capital One Bowl Mania</a> · <a href="c/ligue1-fantasy.html">Ligue 1 Fantasy</a> · <a href="c/lol-pickem.html">LoL Esports Pick&#39;Em</a> · <a href="c/six-nations-fantasy.html">Six Nations Fantasy Rugby</a> · <a href="c/tattico-serie-a.html">Tattico Fantasy Serie A</a> · <a href="c/supercoach-bbl.html">KFC SuperCoach BBL</a> · <a href="c/fundednext.html">FundedNext Monthly Trading Competition</a> · <a href="c/for-traders.html">For Traders Tournaments</a> · <a href="c/ninjatrader-arena.html">NinjaTrader Arena</a> · <a href="c/yahoo-daily-draw.html">Yahoo Daily Draw</a> · <a href="c/dp-world-tour-fantasy.html">Fantasy DP World Tour</a> · <a href="c/the-open-fantasy.html">The Open Championship Fantasy (Match Ups)</a> · <a href="c/sun-dream-team.html">The Sun Dream Team</a> · <a href="c/sky-sports-ff.html">Sky Sports Fantasy Football</a> · <a href="c/cricket-draft.html">The Cricket Draft</a> · <a href="c/icc-t20-fantasy.html">ICC T20 World Cup Fantasy</a> · <a href="c/tim-hortons-hockey.html">Tim Hortons NHL Hockey Challenge</a> · <a href="c/darts-corner-predictor.html">Darts Corner Premier League Darts Predictor</a> · <a href="c/spfl-fantasy.html">William Hill Premiership (SPFL) Fantasy Football</a> · <a href="c/euroleague-fantasy.html">EuroLeague Fantasy Challenge</a> · <a href="c/valorant-pickem.html">Valorant Champions Pick&#39;Em</a> · <a href="c/eredivisie-fantasy.html">ESPN Fantasy Voetbal (Eredivisie)</a> · <a href="c/deriv-tournaments.html">Deriv Trading Tournaments</a> · <a href="c/multibank-demo.html">MultiBank Group Demo Trading Competition</a> · <a href="c/xm-demo.html">XM Demo Competition (Demo Weekly)</a> · <a href="c/headway-demo.html">Headway No Limits Demo Contest</a> · <a href="c/hfm-demo.html">HFM Virtual to Real Demo Contest</a> · <a href="c/litefinance-best.html">LiteFinance Best of the Best Demo Contest</a> · <a href="c/tradingcom-paper.html">Trading.com Paper Trading Competition</a> · <a href="c/tickmill-nfp.html">Tickmill NFP Machine</a> · <a href="c/roboforex-demo.html">RoboForex Demo Contest</a> · <a href="c/fbs-pro-demo.html">FBS Pro Demo Contest</a> · <a href="c/npbfx-demo.html">NPBFX Trading Battle Demo Contest</a> · <a href="c/cev-volley-fantasy.html">CEV Champions League Volley Fantasy</a> · <a href="c/vnl-fantasy.html">VNL Fantasy (Volleyball Nations League)</a> · <a href="c/cev-predictor.html">CEV Champions League Predictor Game</a> · <a href="c/super-league-fantasy.html">Betfred Super League Fantasy (Rugby League)</a> · <a href="c/super-league-predictor.html">Betfred Super League Predictor</a> · <a href="c/motogp-fantasy.html">MotoGP Fantasy (Official)</a> · <a href="c/the-hundred-fantasy.html">The Hundred Fantasy (ECB)</a> · <a href="c/indycar-fantasy.html">INDYCAR Fantasy Challenge</a> · <a href="c/super-rugby-fantasy.html">Fantasy Super Rugby Pacific</a> · <a href="c/fantasy-gaa.html">Fantasy Gaelic Football (GAA)</a> · <a href="c/film-prize.html">Louisiana Film Prize (Prize Fest)</a> · <a href="c/pensacola-songwriting.html">Pensacola Beach Songwriters Festival Competition</a> · <a href="c/young-lions.html">Young Lions Fiction Award (NYPL)</a> · <a href="c/afl-tipping.html">AFL Tipping</a> · <a href="c/aflw-tipping.html">AFLW Tipping</a> · <a href="c/supercoach-afl.html">KFC SuperCoach AFL</a> · <a href="c/supercoach-nrl.html">KFC SuperCoach NRL</a> · <a href="c/supercoach-nbl.html">SuperCoach NBL</a> · <a href="c/wsl-fantasy.html">WSL Fantasy (Barclays Women&#39;s Super League)</a> · <a href="c/ti-compendium.html">The International (Dota 2) Compendium Fantasy</a> · <a href="c/ibu-ecup.html">IBU eCup (Winter Sports Mania)</a> · <a href="c/tom-howard-poetry.html">Tom Howard/Margaret Reid Poetry Contest</a> · <a href="c/wergle-flomp.html">Wergle Flomp Humor Poetry Contest</a> · <a href="c/aflw-fantasy.html">AFLW Fantasy</a> · <a href="c/tff-fantezi-lig.html">TFF Fantezi Lig (Turkish Süper Lig)</a> · <a href="c/mxa-fantasy.html">MXA Fantasy League (Supercross/Motocross)</a> · <a href="c/kinolime.html">Kinolime Script-to-Screen Competition</a> · <a href="c/bridgewater-forecast.html">Bridgewater Forecasting the Future Challenge</a> · <a href="c/streak-contest.html">Streak Contest (MobLab)</a> · <a href="c/premiership-rugby-fantasy.html">Fantasy Premiership Rugby</a> · <a href="c/aleague-fantasy.html">A-Leagues Fantasy</a> · <a href="c/agentmma.html">AgentMMA UFC Fantasy Contest</a> · <a href="c/formula-e-predictor.html">Formula E Predictor</a> · <a href="c/telegraph-fantasy-racing.html">Telegraph Fantasy Racing</a> · <a href="c/stable-stars.html">Stable Stars (Cheltenham Festival)</a> · <a href="c/stablestakes.html">StableStakes (Fantasy Horse Racing)</a> · <a href="c/ohha-harness.html">OHHA Harness Racing Fantasy League</a> · <a href="c/running-aces-harness.html">Running Aces Fantasy Horse Racing League</a> · <a href="c/ultimate-fantasy-tennis.html">Ultimate Fantasy Tennis</a> · <a href="c/ncga-majors-challenge.html">NCGA Majors Challenge</a> · <a href="c/majors-challenge.html">Majors Challenge Perfect Team Contest</a> · <a href="c/teepster.html">Teepster Fantasy Golf</a> · <a href="c/fantasy-golf-challenge.html">Fantasy Golf Challenge (GolfBalls.com)</a> · <a href="c/checkmate-gaming.html">Checkmate Gaming (CMG) Free Tournaments</a> · <a href="c/buzz-fantasy-golf.html">Buzz Fantasy Golf</a> · <a href="c/fundedfast-open.html">FundedFast Open</a> · <a href="c/hipa.html">Hamdan International Photography Award (HIPA)</a> · <a href="c/sony-world-photo.html">Sony World Photography Awards</a> · <a href="c/weather-potw.html">Weather Photographer of the Year</a> · <a href="c/epoty.html">Environmental Photographer of the Year (EPOTY)</a> · <a href="c/spie-light.html">SPIE International Day of Light Photo Contest</a> · <a href="c/istanbul-photo-awards.html">Istanbul Photo Awards</a> · <a href="c/gems-prize-2026.html">GEMS Prize Challenge (DrivenData)</a> · <a href="c/codex-twitchcon-2026.html">Codex x TwitchCon Hackathon</a> · <a href="c/paypal-ai-hackathon-2026.html">PayPal AI Hackathon</a> · <a href="c/global-virtual-hackathon-2026.html">Global Virtual Hackathon 2026</a></p>
+  </details>
+</section>
 
-<h2 class="sec">Catalogue integrity findings</h2>
+<section class="section">
+  <h2>The register</h2>
+  <article class="flag " id="I-01">
+    <div class="meta">I-01 · medium severity · provenance · status: needs review</div>
+    <h3>Source site contradicts itself on scope and size</h3>
+    <p>The source page header says &quot;Pass C · 17 Aug 2026&quot;, its dataset says pass S / reviewed 2026-08-19, and its own review.html says the ledger &quot;now runs to 119 listings&quot; while the data holds 206. The numbers on the source homepage (206 / 189 / 62 / 60) are computed by its JavaScript, not written into the data.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>index.html of the source site: subtitle &quot;Pass C · 17 Aug 2026&quot;.</li><li>assets/data.js header: &quot;pass S, 2026-08-19&quot;, reviewed: &quot;2026-08-19&quot;.</li><li>review.html of the source site: &quot;the ledger now runs to 119 listings&quot;.</li></ul></div>
+    <p class="ids"><b>Sources:</b> <a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">Source site ↗</a> · <a href="https://github.com/karagemop466-tech/FreeMoneyApps/commit/466f7c1e7a14b52b4a0d36beb84a00d68fd409b7" rel="noopener noreferrer">Source repository (pinned commit) ↗</a></p>
+    
+    <p class="action"><b>What this site does about it:</b> We publish the dataset&#39;s own numbers and state the pass and date we used. No figure on our site is taken from the source page&#39;s marketing header.</p>
+  </article>
+<article class="flag high" id="I-02">
+    <div class="meta">I-02 · high severity · freshness · status: needs review</div>
+    <h3>Every prize figure is 74 days stale at publication</h3>
+    <p>All 206 rows carry &quot;last checked 2026-08-19&quot;. Today is 2026-11-01 — a 74-day gap. Contest prize tables, seasons and eligibility change on that timescale, and several sports contests in the set are seasonal.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>Ledger field lastChecked = &quot;2026-08-19&quot; on all 206 rows.</li><li>Source repository last commit 2026-08-19T22:07:51Z.</li></ul></div>
+    <p class="ids"><b>Sources:</b> <a href="https://github.com/karagemop466-tech/FreeMoneyApps/commit/466f7c1e7a14b52b4a0d36beb84a00d68fd409b7" rel="noopener noreferrer">Source repository commit ↗</a></p>
+    
+    <p class="action"><b>What this site does about it:</b> Shown on every page as &quot;source reviewed 2026-08-19&quot;. Prize figures are labelled as the source&#39;s claims, and each row links to the operator so the live figure can be read before entering.</p>
+  </article>
+<article class="flag " id="I-03">
+    <div class="meta">I-03 · medium severity · data-quality · status: needs review</div>
+    <h3>Ended / out-of-season contests are still listed with prize figures</h3>
+    <p>27 listings are marked &quot;ended / out of season&quot; by the source itself yet still carry a prize figure. They must not be presented as things to enter today.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>Rows with status &quot;ended&quot; (e.g. espn-pigskin, fox-super6, nba-pickem, yahoo-bracket-mayhem).</li></ul></div>
+    
+    <p class="ids"><b>Affected rows (27):</b> <a href="c/givling.html">Givling</a> · <a href="c/espn-pigskin.html">ESPN Pigskin Bracket Challenge</a> · <a href="c/fox-super6.html">FOX Super 6</a> · <a href="c/pickwatch.html">NFL Pickwatch Contest</a> · <a href="c/thelines-survivor.html">TheLines Free NFL Survivor</a> · <a href="c/splash-mock.html">Splash Sports NFL Mock Draft</a> · <a href="c/fftoday-draft.html">FFToday NFL Draft Contest</a> · <a href="c/fpl-second-chance.html">FPL Second Chance League</a> · <a href="c/the-special-one.html">The Special One</a> · <a href="c/goaloracle.html">GoalOracle</a> · <a href="c/oddspedia.html">Oddspedia Handicapping Contests</a> · <a href="c/espn-tourney-challenge.html">ESPN Men’s Tournament Challenge</a> · <a href="c/espn-tc-eliminator.html">ESPN Tournament Challenge Eliminator</a> · <a href="c/nhl-bracket-challenge.html">NHL Stanley Cup Playoffs Bracket Challenge</a> · <a href="c/espn-nba-playoff.html">ESPN NBA Playoff Challenge</a> · <a href="c/nba-pickem.html">NBA Pick&#39;Em</a> · <a href="c/espn-hockey-playoff.html">ESPN Playoff Hockey Challenge</a> · <a href="c/espn-cfp-bracket.html">ESPN College Football Playoff Bracket Challenge</a> · <a href="c/espn-knockout-bracket.html">ESPN Knockout Bracket Challenge (World Cup)</a> · <a href="c/mlb-hr-derby-pickem.html">MLB Home Run Derby Pick&#39;Em (T-Mobile)</a> · <a href="c/espn-womens-tourney.html">ESPN Women&#39;s Tournament Challenge</a> · <a href="c/yahoo-bracket-mayhem.html">Yahoo Fantasy Bracket Mayhem</a> · <a href="c/espn-bowl-mania.html">ESPN Capital One Bowl Mania</a> · <a href="c/the-open-fantasy.html">The Open Championship Fantasy (Match Ups)</a> · <a href="c/darts-corner-predictor.html">Darts Corner Premier League Darts Predictor</a> · <a href="c/bridgewater-forecast.html">Bridgewater Forecasting the Future Challenge</a> · <a href="c/aleague-fantasy.html">A-Leagues Fantasy</a></p>
+    <p class="action"><b>What this site does about it:</b> Separated on the site: excluded from every shortlist and from the &quot;enter now&quot; count; shown with an &quot;Ended&quot; stamp in the full table and on its category page.</p>
+  </article>
+<article class="flag high" id="I-04">
+    <div class="meta">I-04 · high severity · sourcing · status: needs review</div>
+    <h3>No official-source link on the row — prize figure has no official basis</h3>
+    <p>12 listings cite only affiliate or forum sources. Three of them say so in their own text: the prize table was taken from review sites, not the operator.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>Rows whose sources array contains no entry with tier &quot;official&quot;.</li><li>roboforex-demo restricted field: &quot;Prize table sourced from review sites, not the official domain — re-confirm before relying on it.&quot;</li><li>fbs-pro-demo and npbfx-demo carry the same note.</li></ul></div>
+    
+    <p class="ids"><b>Affected rows (12):</b> <a href="c/thelines-survivor.html">TheLines Free NFL Survivor</a> · <a href="c/fantasy-arena.html">Fantasy Arena FPL league</a> · <a href="c/fplhub.html">FPL Hub league</a> · <a href="c/bona-fide.html">Bona Fide Sports league</a> · <a href="c/olka.html">OLKA Express league</a> · <a href="c/fplmanager-india.html">FPLManagerIndia league</a> · <a href="c/fplstore.html">fplStore_ league</a> · <a href="c/pitchbooking.html">Pitchbooking.com league</a> · <a href="c/roboforex-demo.html">RoboForex Demo Contest</a> · <a href="c/fbs-pro-demo.html">FBS Pro Demo Contest</a> · <a href="c/npbfx-demo.html">NPBFX Trading Battle Demo Contest</a> · <a href="c/tff-fantezi-lig.html">TFF Fantezi Lig (Turkish Süper Lig)</a></p>
+    <p class="action"><b>What this site does about it:</b> The prize cell is left BLANK for these rows on the site, marked &quot;unverified&quot;, and the row is listed here. The dataset&#39;s own wording is shown in the row detail, clearly labelled as an unconfirmed claim.</p>
+  </article>
+<article class="flag high" id="I-05">
+    <div class="meta">I-05 · high severity · broken-link · status: needs review</div>
+    <h3>Official iOS link returns an error page</h3>
+    <p>The App Store link for Solitaire Cash (id1252281551) returned Apple&#39;s &quot;An Error Occurred&quot; page on 2026-11-01, while a different apps.apple.com link fetched in the same session loaded normally. The app is likely no longer on the US storefront, but one observation is not proof.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>Fetch of https://apps.apple.com/us/app/solitaire-cash-win-real-money/id1252281551 returned title &quot;App Store&quot;, body &quot;An Error Occurred&quot;.</li><li>Control fetch of https://apps.apple.com/us/app/skillz-arena/id6761981587 rendered a full app page.</li></ul></div>
+    <p class="ids"><b>Sources:</b> <a href="https://apps.apple.com/us/app/solitaire-cash-win-real-money/id1252281551" rel="noopener noreferrer">Broken App Store link (check manually) ↗</a> · <a href="https://apps.apple.com/us/app/skillz-arena/id6761981587" rel="noopener noreferrer">Control app that loaded fine ↗</a> · <a href="https://www.papaya.com/" rel="noopener noreferrer">Operator site ↗</a></p>
+    <p class="ids"><b>Affected rows (1):</b> <a href="c/solitaire-cash.html">Solitaire Cash (Papaya)</a></p>
+    <p class="action"><b>What this site does about it:</b> Row keeps the operator link and shows the App Store link marked &quot;reported error 2026-11-01&quot;. Human confirmation needed.</p>
+  </article>
+<article class="flag " id="I-06">
+    <div class="meta">I-06 · medium severity · stale-link · status: needs review</div>
+    <h3>Rules link points at a past, finished contest</h3>
+    <p>The TradingView row links its &quot;rules&quot; to the named July 2026 event, and on 2026-11-01 the programme&#39;s landing page showed every event as completed. The generic entry point is the useful link, not a single expired event&#39;s rules.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>rulesUrl: https://www.tradingview.com/the-leap/tradestation-july-2026/rules/</li><li>Landing page on 2026-11-01 listed events through &quot;October 7 – 20, 2026&quot;, marked Completed.</li></ul></div>
+    <p class="ids"><b>Sources:</b> <a href="https://www.tradingview.com/the-leap/" rel="noopener noreferrer">Programme landing page ↗</a> · <a href="https://www.tradingview.com/the-leap/tradestation-july-2026/rules/" rel="noopener noreferrer">Expired rules link cited by the source ↗</a></p>
+    <p class="ids"><b>Affected rows (1):</b> <a href="c/tradingview-leap.html">TradingView — The Leap</a></p>
+    <p class="action"><b>What this site does about it:</b> Row leads with the programme page; the expired rules link is shown as &quot;past contest rules&quot; rather than presented as current terms.</p>
+  </article>
+<article class="flag high" id="I-07">
+    <div class="meta">I-07 · high severity · unverifiable-claim · status: needs review</div>
+    <h3>Referral / promo codes published with no verification</h3>
+    <p>12 rows carry a referral or league code. Eight are explicitly marked codeVerified: false and four have no verification flag at all. Referral codes are personal or affiliate incentives, they change without notice, and a code can never be confirmed as &quot;the operator&#39;s official offer&quot;.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>Rows with a &quot;code&quot; field, e.g. ffs-fpl (eikrq4), fplhub (00ul99), olka (5nysyw), pitchbooking (5hwilh).</li><li>codeVerified is false on 8 of the 12 and unspecified on the other 4.</li></ul></div>
+    
+    <p class="ids"><b>Affected rows (12):</b> <a href="c/ffs-fpl.html">Fantasy Football Scout FPL league</a> · <a href="c/ffs-ucl.html">FFScout UCL Fantasy league</a> · <a href="c/ffs-efl.html">FFScout Fantasy EFL league</a> · <a href="c/football-mad.html">Football Mad FPL league</a> · <a href="c/fantasy-arena.html">Fantasy Arena FPL league</a> · <a href="c/lazyfpl.html">LazyFPL league</a> · <a href="c/fplhub.html">FPL Hub league</a> · <a href="c/bona-fide.html">Bona Fide Sports league</a> · <a href="c/olka.html">OLKA Express league</a> · <a href="c/fplmanager-india.html">FPLManagerIndia league</a> · <a href="c/fplstore.html">fplStore_ league</a> · <a href="c/pitchbooking.html">Pitchbooking.com league</a></p>
+    <p class="action"><b>What this site does about it:</b> Codes are NOT published on this site. The row is shown without a code and this entry explains why. If you want them, take them from the operator page, not from this ledger.</p>
+  </article>
+<article class="flag " id="I-08a">
+    <div class="meta">I-08a · medium severity · sourcing · status: needs review</div>
+    <h3>No rules URL at all</h3>
+    <p>6 rows have no rules/terms URL, so a reader cannot check eligibility or prize terms from the row.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>Rows where rulesUrl is null/empty.</li></ul></div>
+    
+    <p class="ids"><b>Affected rows (6):</b> <a href="c/aicrowd.html">AIcrowd Challenges</a> · <a href="c/codabench.html">Codabench / CodaLab</a> · <a href="c/grand-challenge.html">Grand Challenge (medical imaging)</a> · <a href="c/crunchdao.html">CrunchDAO / ADIA Lab Challenges</a> · <a href="c/mlcontests.html">ML Contests</a> · <a href="c/bundesliga-fantasy.html">Bundesliga Fantasy Manager</a></p>
+    <p class="action"><b>What this site does about it:</b> Row shows the operator site only, with a &quot;no rules page cited&quot; note in the detail panel.</p>
+  </article>
+<article class="flag " id="I-08b">
+    <div class="meta">I-08b · low severity · sourcing · status: needs review</div>
+    <h3>&quot;Rules&quot; link is just the signup page</h3>
+    <p>117 of 206 rows point their rules URL at exactly the same address as the signup URL. The rules are then not a separate, linkable document — the reader lands on a marketing or entry page.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>Rows where rulesUrl === signupUrl.</li></ul></div>
+    
+    <p class="ids"><b>Affected rows (117):</b> <a href="c/skillz.html">Skillz / Blackout Bingo / Skillz Arena</a> · <a href="c/pocket7.html">Pocket7Games</a> · <a href="c/givling.html">Givling</a> · <a href="c/kaggle.html">Kaggle Competitions</a> · <a href="c/devpost.html">Devpost Hackathons</a> · <a href="c/reedsy-dir.html">Reedsy Writing Contest List</a> · <a href="c/drivendata.html">DrivenData</a> · <a href="c/xprize.html">XPRIZE</a> · <a href="c/topcoder.html">Topcoder</a> · <a href="c/espn-pickem.html">ESPN NFL Pick&#39;em</a> · <a href="c/espn-survivor.html">ESPN NFL Survivor</a> · <a href="c/espn-wintotals.html">ESPN NFL Win Totals</a> · <a href="c/espn-playoff.html">ESPN NFL Playoff Predictor</a> · <a href="c/espn-pigskin.html">ESPN Pigskin Bracket Challenge</a> · <a href="c/espn-cfb.html">ESPN College Football Pick&#39;em</a> · <a href="c/cbs-pro-pickem.html">CBS Sports Pro Football Pick&#39;em</a> · <a href="c/cbs-cfb-pickem.html">CBS Sports College Football Pick&#39;em</a> · <a href="c/fox-super6.html">FOX Super 6</a> · <a href="c/yahoo-survival.html">Yahoo Survival Football</a> · <a href="c/pickwatch.html">NFL Pickwatch Contest</a> · <a href="c/beat-the-geek.html">Beat The Geek</a> · <a href="c/tsg-playoff.html">TheSportsGeek NFL Playoff Pick&#39;em</a> · <a href="c/favorites-pickem.html">The Favorites Podcast Pick&#39;em</a> · <a href="c/thelines-survivor.html">TheLines Free NFL Survivor</a> · <a href="c/rams-pickem.html">LA Rams Pick&#39;em</a> · <a href="c/draft-pro.html">The Draft Pro — Perfect Draft Challenge</a> · <a href="c/splash-mock.html">Splash Sports NFL Mock Draft</a> · <a href="c/fftoday-draft.html">FFToday NFL Draft Contest</a> · <a href="c/rotoballer.html">RotoBaller Challenge</a> · <a href="c/apex-fantasy.html">Apex Fantasy Free League Entry</a> · <a href="c/fpl-second-chance.html">FPL Second Chance League</a> · <a href="c/fpl-draft.html">FPL Draft</a> · <a href="c/fantasy-efl.html">Fantasy EFL</a> · <a href="c/telegraph-ff.html">Telegraph Fantasy Football</a> · <a href="c/ucl-fantasy.html">UCL Fantasy</a> · <a href="c/pl-predictor.html">Premier League Predictor</a> · <a href="c/pooltracker-epl.html">Pooltracker EPL Predictor</a> · <a href="c/ffs-tattico.html">FFScout Tattico Serie A league</a> · <a href="c/dirty-dozen.html">Dirty Dozen (Gambling.com)</a> · <a href="c/the-special-one.html">The Special One</a> · <a href="c/andys-predictor.html">Andy&#39;s Bet Club £1M Predictor</a> · <a href="c/pickem-sports.html">Pick &#39;Em Sports (iOS)</a> · <a href="c/sports-predictor.html">Sports Predictor (iOS)</a> · <a href="c/goaloracle.html">GoalOracle</a> · <a href="c/oddspedia.html">Oddspedia Handicapping Contests</a> · <a href="c/streak-for-cash.html">Streak for the Cash</a> · <a href="c/gamersaloon.html">GamerSaloon 1-Rounders</a> · <a href="c/playerslounge.html">Players&#39; Lounge Free Tournaments</a> · <a href="c/officepoolstop.html">OfficePoolStop</a> · <a href="c/funofficepools.html">FunOfficePools</a> · <a href="c/mysurvivorpool.html">MySurvivorPool</a> · <a href="c/gridirongames.html">Gridiron Games</a> · <a href="c/squarespool.html">SquaresPool.com</a> · <a href="c/myfantasyleague.html">MyFantasyLeague</a> · <a href="c/trofeo.html">Trofeo.live</a> · <a href="c/nhl-bracket-challenge.html">NHL Stanley Cup Playoffs Bracket Challenge</a> · <a href="c/espn-nba-playoff.html">ESPN NBA Playoff Challenge</a> · <a href="c/espn-hockey-playoff.html">ESPN Playoff Hockey Challenge</a> · <a href="c/espn-cfp-bracket.html">ESPN College Football Playoff Bracket Challenge</a> · <a href="c/espn-knockout-bracket.html">ESPN Knockout Bracket Challenge (World Cup)</a> · <a href="c/mlb-hr-derby-pickem.html">MLB Home Run Derby Pick&#39;Em (T-Mobile)</a> · <a href="c/start-gg.html">Start.gg (formerly smash.gg)</a> · <a href="c/crowdspring.html">CrowdSpring Design Contests</a> · <a href="c/espn-womens-tourney.html">ESPN Women&#39;s Tournament Challenge</a> · <a href="c/signate.html">Signate (Japan) Data Competitions</a> · <a href="c/hypermind.html">Hypermind Forecasting Contests</a> · <a href="c/espn-bowl-mania.html">ESPN Capital One Bowl Mania</a> · <a href="c/ligue1-fantasy.html">Ligue 1 Fantasy</a> · <a href="c/tattico-serie-a.html">Tattico Fantasy Serie A</a> · <a href="c/supercoach-bbl.html">KFC SuperCoach BBL</a> · <a href="c/for-traders.html">For Traders Tournaments</a> · <a href="c/ninjatrader-arena.html">NinjaTrader Arena</a> · <a href="c/the-open-fantasy.html">The Open Championship Fantasy (Match Ups)</a> · <a href="c/sun-dream-team.html">The Sun Dream Team</a> · <a href="c/tim-hortons-hockey.html">Tim Hortons NHL Hockey Challenge</a> · <a href="c/darts-corner-predictor.html">Darts Corner Premier League Darts Predictor</a> · <a href="c/spfl-fantasy.html">William Hill Premiership (SPFL) Fantasy Football</a> · <a href="c/euroleague-fantasy.html">EuroLeague Fantasy Challenge</a> · <a href="c/valorant-pickem.html">Valorant Champions Pick&#39;Em</a> · <a href="c/multibank-demo.html">MultiBank Group Demo Trading Competition</a> · <a href="c/xm-demo.html">XM Demo Competition (Demo Weekly)</a> · <a href="c/hfm-demo.html">HFM Virtual to Real Demo Contest</a> · <a href="c/litefinance-best.html">LiteFinance Best of the Best Demo Contest</a> · <a href="c/tradingcom-paper.html">Trading.com Paper Trading Competition</a> · <a href="c/tickmill-nfp.html">Tickmill NFP Machine</a> · <a href="c/roboforex-demo.html">RoboForex Demo Contest</a> · <a href="c/fbs-pro-demo.html">FBS Pro Demo Contest</a> · <a href="c/npbfx-demo.html">NPBFX Trading Battle Demo Contest</a> · <a href="c/fantasy-gaa.html">Fantasy Gaelic Football (GAA)</a> · <a href="c/pensacola-songwriting.html">Pensacola Beach Songwriters Festival Competition</a> · <a href="c/ti-compendium.html">The International (Dota 2) Compendium Fantasy</a> · <a href="c/ibu-ecup.html">IBU eCup (Winter Sports Mania)</a> · <a href="c/tom-howard-poetry.html">Tom Howard/Margaret Reid Poetry Contest</a> · <a href="c/wergle-flomp.html">Wergle Flomp Humor Poetry Contest</a> · <a href="c/mxa-fantasy.html">MXA Fantasy League (Supercross/Motocross)</a> · <a href="c/kinolime.html">Kinolime Script-to-Screen Competition</a> · <a href="c/streak-contest.html">Streak Contest (MobLab)</a> · <a href="c/agentmma.html">AgentMMA UFC Fantasy Contest</a> · <a href="c/formula-e-predictor.html">Formula E Predictor</a> · <a href="c/stable-stars.html">Stable Stars (Cheltenham Festival)</a> · <a href="c/stablestakes.html">StableStakes (Fantasy Horse Racing)</a> · <a href="c/running-aces-harness.html">Running Aces Fantasy Horse Racing League</a> · <a href="c/ncga-majors-challenge.html">NCGA Majors Challenge</a> · <a href="c/fantasy-golf-challenge.html">Fantasy Golf Challenge (GolfBalls.com)</a> · <a href="c/checkmate-gaming.html">Checkmate Gaming (CMG) Free Tournaments</a> · <a href="c/fundedfast-open.html">FundedFast Open</a> · <a href="c/hipa.html">Hamdan International Photography Award (HIPA)</a> · <a href="c/sony-world-photo.html">Sony World Photography Awards</a> · <a href="c/world-press-photo.html">World Press Photo Contest</a> · <a href="c/weather-potw.html">Weather Photographer of the Year</a> · <a href="c/epoty.html">Environmental Photographer of the Year (EPOTY)</a> · <a href="c/spie-light.html">SPIE International Day of Light Photo Contest</a> · <a href="c/istanbul-photo-awards.html">Istanbul Photo Awards</a> · <a href="c/gems-prize-2026.html">GEMS Prize Challenge (DrivenData)</a> · <a href="c/midterms-2026.html">US Midterms 2026 (Metaculus tournament)</a> · <a href="c/codex-twitchcon-2026.html">Codex x TwitchCon Hackathon</a> · <a href="c/paypal-ai-hackathon-2026.html">PayPal AI Hackathon</a></p>
+    <p class="action"><b>What this site does about it:</b> Shown as a single &quot;Official page&quot; link instead of pretending there is a separate rules document.</p>
+  </article>
+<article class="flag " id="I-09">
+    <div class="meta">I-09 · low severity · link-hygiene · status: needs review</div>
+    <h3>Insecure (http://) link</h3>
+    <p>1 row links only http://. The host serves the same page over https, so the link should be upgraded.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>squarespool: http://www.squarespool.com/ ; the https version returned the same page on 2026-11-01.</li></ul></div>
+    <p class="ids"><b>Sources:</b> <a href="https://www.squarespool.com/" rel="noopener noreferrer">https version that works ↗</a></p>
+    <p class="ids"><b>Affected rows (1):</b> <a href="c/squarespool.html">SquaresPool.com</a></p>
+    <p class="action"><b>What this site does about it:</b> Our site links the https address. The dataset keeps the original for auditability.</p>
+  </article>
+<article class="flag high" id="I-10">
+    <div class="meta">I-10 · high severity · scope-policy · status: needs review</div>
+    <h3>Gambling-operator and broker-account contests sit inside a ledger that excludes them</h3>
+    <p>The source states that sweepstakes, casinos, and &quot;any contest that requires an account with a gambling operator (bookmaker, sportsbook or real-money DFS)&quot; are excluded. 17 rows appear to break that rule: a contest entered through Fanatics&#39; sportsbook/casino product, a contest hosted on a gambling-affiliate domain, and 15 broker demo contests whose own notes call them broker acquisition funnels. Whether they belong in a free-money ledger is your call, not ours — but it should not be silent.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>fanatics-survivor signupUrl is https://betfanatics.com/ — fetched on 2026-11-01: &quot;Fanatics Sports &amp; Casino — Bet $20 Get $350 in FanCash&quot;, with Sportsbook and Casino state lists.</li><li>dirty-dozen signupUrl is https://www.gambling.com/games/dirty-dozen — a gambling-affiliate domain, contest name &quot;(Gambling.com)&quot;.</li><li>tickmill-nfp eligibility: &quot;Live Tickmill account holders&quot;.</li><li>xm-demo / hfm-demo / litefinance-best restricted notes: &quot;Broker acquisition funnel&quot;, prizes are trading bonuses or credits.</li><li>The source&#39;s own category blurb for sports advertises &quot;sweepstakes sportsbooks&quot; while the file header excludes sweepstakes (see I-15).</li></ul></div>
+    <p class="ids"><b>Sources:</b> <a href="https://betfanatics.com/" rel="noopener noreferrer">betfanatics.com (fetched 2026-11-01) ↗</a> · <a href="https://www.gambling.com/games/dirty-dozen" rel="noopener noreferrer">gambling.com contest page ↗</a> · <a href="https://www.tickmill.com/promotions/nfp-machine" rel="noopener noreferrer">Tickmill NFP Machine ↗</a></p>
+    <p class="ids"><b>Affected rows (17):</b> <a href="c/fanatics-survivor.html">Fanatics NFL Survivor League</a> · <a href="c/dirty-dozen.html">Dirty Dozen (Gambling.com)</a> · <a href="c/moomoo-paper-trading.html">moomoo Paper Trading Competition</a> · <a href="c/for-traders.html">For Traders Tournaments</a> · <a href="c/ninjatrader-arena.html">NinjaTrader Arena</a> · <a href="c/deriv-tournaments.html">Deriv Trading Tournaments</a> · <a href="c/multibank-demo.html">MultiBank Group Demo Trading Competition</a> · <a href="c/xm-demo.html">XM Demo Competition (Demo Weekly)</a> · <a href="c/headway-demo.html">Headway No Limits Demo Contest</a> · <a href="c/hfm-demo.html">HFM Virtual to Real Demo Contest</a> · <a href="c/litefinance-best.html">LiteFinance Best of the Best Demo Contest</a> · <a href="c/tradingcom-paper.html">Trading.com Paper Trading Competition</a> · <a href="c/tickmill-nfp.html">Tickmill NFP Machine</a> · <a href="c/roboforex-demo.html">RoboForex Demo Contest</a> · <a href="c/fbs-pro-demo.html">FBS Pro Demo Contest</a> · <a href="c/npbfx-demo.html">NPBFX Trading Battle Demo Contest</a> · <a href="c/fundedfast-open.html">FundedFast Open</a></p>
+    <p class="action"><b>What this site does about it:</b> These rows are kept (they are free to enter) but are stamped &quot;operator account required&quot; on the site and excluded from the &quot;best free-to-enter&quot; shortlist. Decide whether to drop them.</p>
+  </article>
+<article class="flag " id="I-11">
+    <div class="meta">I-11 · medium severity · prize-quality · status: needs review</div>
+    <h3>Prizes that are points, gems or credits, not dollars</h3>
+    <p>The ledger&#39;s premise is &quot;free competitions that can pay real money&quot;, but a number of rows pay in non-cash currency: Swagbucks SB points, Papaya Gems, Skillz Z coins, broker trading credits. The 2 rows below are the ones where the dataset itself says the free path pays in something other than dollars, or where the payout is a credit rather than cash. Others in the skill category have the same shape without saying so as plainly.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>swagbucks-trivia prize: &quot;SB points redeemable for PayPal cash / gift cards&quot;.</li><li>givling prize: &quot;Trivia removed — no longer a trivia contest&quot; (the row no longer describes a contest at all).</li><li>papaya.com/faq (fetched): free competitions use Gems; cash competitions are separate.</li></ul></div>
+    <p class="ids"><b>Sources:</b> <a href="https://www.swagbucks.com/" rel="noopener noreferrer">Swagbucks (points currency) ↗</a> · <a href="https://www.papaya.com/faq" rel="noopener noreferrer">Papaya FAQ (Gems vs cash) ↗</a></p>
+    <p class="ids"><b>Affected rows (9):</b> <a href="c/swagbucks-trivia.html">Swagbucks Daily Trivia</a> · <a href="c/givling.html">Givling</a> · <a href="c/solitaire-cash.html">Solitaire Cash (Papaya)</a> · <a href="c/bingo-cash.html">Bingo Cash (Papaya)</a> · <a href="c/skillz.html">Skillz / Blackout Bingo / Skillz Arena</a> · <a href="c/pocket7.html">Pocket7Games</a> · <a href="c/hfm-demo.html">HFM Virtual to Real Demo Contest</a> · <a href="c/litefinance-best.html">LiteFinance Best of the Best Demo Contest</a> · <a href="c/deriv-tournaments.html">Deriv Trading Tournaments</a></p>
+    <p class="action"><b>What this site does about it:</b> Each row states its payout currency explicitly (&quot;points&quot;, &quot;gems&quot;, &quot;account credit&quot;); the shortlist requires a cash-equivalent payout.</p>
+  </article>
+<article class="flag " id="I-12">
+    <div class="meta">I-12 · medium severity · data-quality · status: needs review</div>
+    <h3>No stated prize amount</h3>
+    <p>133 rows state a money amount; the other 78 do not. They use placeholder text such as &quot;Prizes decided by your group&quot;, &quot;Varies&quot;, &quot;Confirm in-app&quot; or &quot;Unverified&quot;. These rows cannot be ranked on prize value.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>Rows where the prize field contains no currency amount.</li></ul></div>
+    
+    <p class="ids"><b>Affected rows (78):</b> <a href="c/solitaire-cash.html">Solitaire Cash (Papaya)</a> · <a href="c/bingo-cash.html">Bingo Cash (Papaya)</a> · <a href="c/skillz.html">Skillz / Blackout Bingo / Skillz Arena</a> · <a href="c/pocket7.html">Pocket7Games</a> · <a href="c/givling.html">Givling</a> · <a href="c/reedsy-dir.html">Reedsy Writing Contest List</a> · <a href="c/topcoder.html">Topcoder</a> · <a href="c/fox-super6.html">FOX Super 6</a> · <a href="c/pickwatch.html">NFL Pickwatch Contest</a> · <a href="c/thelines-survivor.html">TheLines Free NFL Survivor</a> · <a href="c/splash-mock.html">Splash Sports NFL Mock Draft</a> · <a href="c/fpl-official.html">Official FPL (Premier League)</a> · <a href="c/fpl-second-chance.html">FPL Second Chance League</a> · <a href="c/fpl-draft.html">FPL Draft</a> · <a href="c/fantasy-efl.html">Fantasy EFL</a> · <a href="c/ucl-fantasy.html">UCL Fantasy</a> · <a href="c/pl-predictor.html">Premier League Predictor</a> · <a href="c/pooltracker-epl.html">Pooltracker EPL Predictor</a> · <a href="c/ffs-efl.html">FFScout Fantasy EFL league</a> · <a href="c/football-mad.html">Football Mad FPL league</a> · <a href="c/fantasy-arena.html">Fantasy Arena FPL league</a> · <a href="c/fplhub.html">FPL Hub league</a> · <a href="c/bona-fide.html">Bona Fide Sports league</a> · <a href="c/olka.html">OLKA Express league</a> · <a href="c/fplmanager-india.html">FPLManagerIndia league</a> · <a href="c/fplstore.html">fplStore_ league</a> · <a href="c/pitchbooking.html">Pitchbooking.com league</a> · <a href="c/the-special-one.html">The Special One</a> · <a href="c/pickem-sports.html">Pick &#39;Em Sports (iOS)</a> · <a href="c/sports-predictor.html">Sports Predictor (iOS)</a> · <a href="c/goaloracle.html">GoalOracle</a> · <a href="c/streak-for-cash.html">Streak for the Cash</a> · <a href="c/playerslounge.html">Players&#39; Lounge Free Tournaments</a> · <a href="c/officepoolstop.html">OfficePoolStop</a> · <a href="c/funofficepools.html">FunOfficePools</a> · <a href="c/mysurvivorpool.html">MySurvivorPool</a> · <a href="c/gridirongames.html">Gridiron Games</a> · <a href="c/squarespool.html">SquaresPool.com</a> · <a href="c/myfantasyleague.html">MyFantasyLeague</a> · <a href="c/trofeo.html">Trofeo.live</a> · <a href="c/crunchdao.html">CrunchDAO / ADIA Lab Challenges</a> · <a href="c/mlcontests.html">ML Contests</a> · <a href="c/bundesliga-fantasy.html">Bundesliga Fantasy Manager</a> · <a href="c/laliga-fantasy.html">La Liga Fantasy</a> · <a href="c/swagbucks-trivia.html">Swagbucks Daily Trivia</a> · <a href="c/99designs.html">99designs Design Contests</a> · <a href="c/battlefy.html">Battlefy Esports Tournaments</a> · <a href="c/challengermode.html">Challengermode</a> · <a href="c/atp-fantasy.html">ATP Fantasy (Official ATP Tour)</a> · <a href="c/start-gg.html">Start.gg (formerly smash.gg)</a> · <a href="c/play-pokemon.html">Play! Pokémon Championship Series</a> · <a href="c/designcrowd.html">DesignCrowd Design Contests</a> · <a href="c/crowdspring.html">CrowdSpring Design Contests</a> · <a href="c/signate.html">Signate (Japan) Data Competitions</a> · <a href="c/hypermind.html">Hypermind Forecasting Contests</a> · <a href="c/superbru.html">Superbru</a> · <a href="c/ligue1-fantasy.html">Ligue 1 Fantasy</a> · <a href="c/lol-pickem.html">LoL Esports Pick&#39;Em</a> · <a href="c/supercoach-bbl.html">KFC SuperCoach BBL</a> · <a href="c/ninjatrader-arena.html">NinjaTrader Arena</a> · <a href="c/dp-world-tour-fantasy.html">Fantasy DP World Tour</a> · <a href="c/icc-t20-fantasy.html">ICC T20 World Cup Fantasy</a> · <a href="c/euroleague-fantasy.html">EuroLeague Fantasy Challenge</a> · <a href="c/valorant-pickem.html">Valorant Champions Pick&#39;Em</a> · <a href="c/eredivisie-fantasy.html">ESPN Fantasy Voetbal (Eredivisie)</a> · <a href="c/cev-volley-fantasy.html">CEV Champions League Volley Fantasy</a> · <a href="c/cev-predictor.html">CEV Champions League Predictor Game</a> · <a href="c/super-league-predictor.html">Betfred Super League Predictor</a> · <a href="c/motogp-fantasy.html">MotoGP Fantasy (Official)</a> · <a href="c/the-hundred-fantasy.html">The Hundred Fantasy (ECB)</a> · <a href="c/wsl-fantasy.html">WSL Fantasy (Barclays Women&#39;s Super League)</a> · <a href="c/ti-compendium.html">The International (Dota 2) Compendium Fantasy</a> · <a href="c/ibu-ecup.html">IBU eCup (Winter Sports Mania)</a> · <a href="c/tff-fantezi-lig.html">TFF Fantezi Lig (Turkish Süper Lig)</a> · <a href="c/premiership-rugby-fantasy.html">Fantasy Premiership Rugby</a> · <a href="c/agentmma.html">AgentMMA UFC Fantasy Contest</a> · <a href="c/formula-e-predictor.html">Formula E Predictor</a> · <a href="c/ultimate-fantasy-tennis.html">Ultimate Fantasy Tennis</a></p>
+    <p class="action"><b>What this site does about it:</b> Prize shown as &quot;—&quot; on the site with the reason, and the row is ineligible for the big-prize shortlist.</p>
+  </article>
+<article class="flag " id="I-13">
+    <div class="meta">I-13 · low severity · data-quality · status: needs review</div>
+    <h3>Non-USD prize currencies in a USD-framed ledger</h3>
+    <p>Some prize figures are in £ or €. They are not converted here — a conversion would be an invented number.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>Rows whose prize text contains £ or € and no $.</li></ul></div>
+    
+    <p class="ids"><b>Affected rows (24):</b> <a href="c/telegraph-ff.html">Telegraph Fantasy Football</a> · <a href="c/ffs-fpl.html">Fantasy Football Scout FPL league</a> · <a href="c/ffs-ucl.html">FFScout UCL Fantasy league</a> · <a href="c/ffs-tattico.html">FFScout Tattico Serie A league</a> · <a href="c/lazyfpl.html">LazyFPL league</a> · <a href="c/dirty-dozen.html">Dirty Dozen (Gambling.com)</a> · <a href="c/andys-predictor.html">Andy&#39;s Bet Club £1M Predictor</a> · <a href="c/oddspedia.html">Oddspedia Handicapping Contests</a> · <a href="c/f1-fantasy.html">F1 Fantasy (Official Formula 1)</a> · <a href="c/six-nations-fantasy.html">Six Nations Fantasy Rugby</a> · <a href="c/tattico-serie-a.html">Tattico Fantasy Serie A</a> · <a href="c/the-open-fantasy.html">The Open Championship Fantasy (Match Ups)</a> · <a href="c/sun-dream-team.html">The Sun Dream Team</a> · <a href="c/sky-sports-ff.html">Sky Sports Fantasy Football</a> · <a href="c/cricket-draft.html">The Cricket Draft</a> · <a href="c/darts-corner-predictor.html">Darts Corner Premier League Darts Predictor</a> · <a href="c/spfl-fantasy.html">William Hill Premiership (SPFL) Fantasy Football</a> · <a href="c/super-league-fantasy.html">Betfred Super League Fantasy (Rugby League)</a> · <a href="c/fantasy-gaa.html">Fantasy Gaelic Football (GAA)</a> · <a href="c/telegraph-fantasy-racing.html">Telegraph Fantasy Racing</a> · <a href="c/stable-stars.html">Stable Stars (Cheltenham Festival)</a> · <a href="c/world-press-photo.html">World Press Photo Contest</a> · <a href="c/weather-potw.html">Weather Photographer of the Year</a> · <a href="c/epoty.html">Environmental Photographer of the Year (EPOTY)</a></p>
+    <p class="action"><b>What this site does about it:</b> Original currency shown as written; no conversion applied anywhere on the site.</p>
+  </article>
+<article class="flag " id="I-14">
+    <div class="meta">I-14 · medium severity · scope · status: needs review</div>
+    <h3>Directory listings are not themselves free contests</h3>
+    <p>The directory rows are catalogues. Fetched on 2026-11-01, Reedsy&#39;s writing-contest list showed 458 contests, many of them charging entry fees ($5–$49 observed), and its &quot;prize&quot; is a directory-wide range rather than a prize.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>reedsy-dir prize text: &quot;Listed per contest (hundreds to tens of thousands)&quot;.</li><li>Fetched page: entry fees $5, $11, $12, $15, $20, $25 and $49 on listed contests.</li></ul></div>
+    <p class="ids"><b>Sources:</b> <a href="https://reedsy.com/resources/writing-contests/" rel="noopener noreferrer">Reedsy contest directory ↗</a></p>
+    <p class="ids"><b>Affected rows (2):</b> <a href="c/reedsy-dir.html">Reedsy Writing Contest List</a> · <a href="c/mlcontests.html">ML Contests</a></p>
+    <p class="action"><b>What this site does about it:</b> Directory rows carry an explicit warning on their detail page, are scored −6 in the shortlist model and never appear in a &quot;best picks&quot; list.</p>
+  </article>
+<article class="flag " id="I-15">
+    <div class="meta">I-15 · medium severity · scope-policy · status: needs review</div>
+    <h3>Category copy tells readers to use sweepstakes sportsbooks, which the same file excludes</h3>
+    <p>The sports category blurb in the source data reads: &quot;Daily fantasy freerolls and sweepstakes sportsbooks.&quot; The file header says sweepstakes are excluded by policy. Both cannot be true.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>types[sports].blurb: &quot;Daily fantasy freerolls and sweepstakes sportsbooks. Free tickets or free coins can win USD; most large pools are paid-entry.&quot;</li></ul></div>
+    <p class="ids"><b>Sources:</b> <a href="https://github.com/karagemop466-tech/FreeMoneyApps" rel="noopener noreferrer">Source repository ↗</a></p>
+    
+    <p class="action"><b>What this site does about it:</b> We do not repeat that blurb. Our category description is written from what the rows actually contain.</p>
+  </article>
+<article class="flag " id="I-17">
+    <div class="meta">I-17 · low severity · source-conflict · status: needs review</div>
+    <h3>ESPN&#39;s own rules contradict each other on how many entries you may submit</h3>
+    <p>Found by the parallel sessions on 2026-11-01: ESPN&#39;s FAQ says five entries while the intro and the current picks UI say ten. Both cannot be right, and it changes how a multi-entry strategy works.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>ESPN NFL Pick&#39;em FAQ vs the current picks page, read 2026-11-01 by arena/27a86924-own1 and re-read by arena/90c9f78c-own1 (see research/SOURCES.md).</li></ul></div>
+    <p class="ids"><b>Sources:</b> <a href="https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules" rel="noopener noreferrer">ESPN Pick&#39;em complete rules ↗</a></p>
+    <p class="ids"><b>Affected rows (1):</b> <a href="c/espn-pickem.html">ESPN NFL Pick&#39;em</a></p>
+    <p class="action"><b>What this site does about it:</b> The caveat is carried on the row&#39;s detail page verbatim as a cross-check note. We do not pick a number.</p>
+  </article>
+<article class="flag " id="I-18">
+    <div class="meta">I-18 · medium severity · stale-source · status: needs review</div>
+    <h3>Challenge.gov is listed as a live lead, but the government says the platform was sunset on 2026-03-30</h3>
+    <p>Found by a parallel session on 2026-11-01: the reference work groups Challenge.gov with other contest platforms, while the government&#39;s own site states the platform was sunset in March 2026. A dead directory sends readers to nothing.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>challenge.gov notice read 2026-11-01 (see the archived supplemental research page).</li></ul></div>
+    <p class="ids"><b>Sources:</b> <a href="https://www.challenge.gov/" rel="noopener noreferrer">Challenge.gov (government notice) ↗</a></p>
+    
+    <p class="action"><b>What this site does about it:</b> No Challenge.gov row exists in this ledger, so nothing was removed. Recorded here because the source material presents it as a current directory.</p>
+  </article>
+<article class="flag " id="I-19">
+    <div class="meta">I-19 · low severity · source-conflict · status: needs review</div>
+    <h3>IceHacks advertises cash in its header but its own description says there are no cash prizes</h3>
+    <p>A parallel session found a page contradicting itself: the header advertises cash, the description says no cash prizes. Header copy is not a prize.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>icehacks.devpost.com read 2026-11-01.</li></ul></div>
+    <p class="ids"><b>Sources:</b> <a href="https://icehacks.devpost.com/" rel="noopener noreferrer">IceHacks event page ↗</a></p>
+    
+    <p class="action"><b>What this site does about it:</b> IceHacks is not carried as a row, so no prize is published for it. Recorded so the pattern (headline vs rules) stays visible.</p>
+  </article>
+<article class="flag " id="I-20">
+    <div class="meta">I-20 · medium severity · prize-discrepancy · status: needs review</div>
+    <h3>PayPal AI Hackathon: headline prize total and itemised rules disagree</h3>
+    <p>The event page advertises $67,500 cash and $69,750 total prizes; the rules itemise individual awards including non-cash credits. This site quotes only the clearly stated first-place cash award ($12,000) and nothing else.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>Event page vs rules page, read 2026-11-01 by arena/37aed701-own1.</li></ul></div>
+    <p class="ids"><b>Sources:</b> <a href="https://paypalaihackathon.devpost.com/" rel="noopener noreferrer">Event page ↗</a> · <a href="https://paypalaihackathon.devpost.com/rules" rel="noopener noreferrer">Official rules ↗</a></p>
+    <p class="ids"><b>Affected rows (1):</b> <a href="c/paypal-ai-hackathon-2026.html">PayPal AI Hackathon</a></p>
+    <p class="action"><b>What this site does about it:</b> The row states &quot;$12,000 first place&quot; only, with this discrepancy noted on its detail page. No total is published.</p>
+  </article>
+<article class="flag " id="I-21">
+    <div class="meta">I-21 · low severity · tax-claim · status: needs review</div>
+    <h3>The blanket claim that &quot;US tax forms apply at $600+&quot; is a generalisation, not a rule</h3>
+    <p>A parallel session flagged that the reference work presents a $600 threshold as universal. Reporting depends on the type of income and the filer&#39;s circumstances; IRS guidance distinguishes prizes/awards from gambling winnings.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>The source dataset&#39;s own verification-level text: &quot;US prizes of $600+ typically require a W-9&quot;.</li><li>IRS Publication 525 and IRS Topic 419 distinguish other income from gambling winnings.</li></ul></div>
+    <p class="ids"><b>Sources:</b> <a href="https://www.irs.gov/publications/p525" rel="noopener noreferrer">IRS Publication 525 (taxable and nontaxable income) ↗</a> · <a href="https://www.irs.gov/taxtopics/tc419" rel="noopener noreferrer">IRS Topic 419 (gambling income and losses) ↗</a></p>
+    
+    <p class="action"><b>What this site does about it:</b> Every page that mentions tax says &quot;the source&#39;s generalisation&quot; and links this entry. Nothing here is tax advice.</p>
+  </article>
+<article class="flag info" id="I-16">
+    <div class="meta">I-16 · info severity · verification-coverage · status: needs review</div>
+    <h3>Most rows were not re-checked in this pass</h3>
+    <p>13 of 211 rows were fetched live on 2026-11-01. The build sandbox has no general outbound web access, so a 206-row crawl was not possible here. The other 198 rows are published as &quot;source cited — not re-checked this session&quot;.</p>
+    <div class="evidence"><b>Evidence</b><ul><li>live-checks.json records 12 fetches; no other URL was retrieved this session.</li></ul></div>
+    
+    
+    <p class="action"><b>What this site does about it:</b> Listed openly. Each row carries its own status badge so a reader can tell a live-checked row from a merely cited one.</p>
+  </article>
+</section>
 
-<div class="finding high" id="F01">
-  <h3>Listings with no official-tier source</h3>
-  <div class="meta2"><span class="sev high">high</span> · rule R1 · 12 rows</div>
-  <p>The source file states its own rule: “any listing that states a specific prize figure must cite the operator&#x27;s own rules or game page”, with tiers official | affiliate | forum. These listings cite only affiliate or forum pages.</p>
-  <ul><li><b>TheLines Free NFL Survivor</b> — <a href="https://www.thelines.com/free-nfl-contest-pools-games-week-1-2024/" rel="noopener noreferrer nofollow">operator page ↗</a> — cited: affiliate: https://www.thelines.com/free-nfl-contest-pools-games-week-1-2024/</li><li><b>Fantasy Arena FPL league</b> — <a href="https://fantasy.premierleague.com/" rel="noopener noreferrer nofollow">operator page ↗</a> — cited: affiliate: https://allaboutfpl.com/2025/07/list-of-free-to-join-prize-fpl-mini-leagues-ahead-of-25-26-season/</li><li><b>FPL Hub league</b> — <a href="https://fantasy.premierleague.com/" rel="noopener noreferrer nofollow">operator page ↗</a> — cited: affiliate: https://fpltips.com/fpl-leagues-with-prizes/</li><li><b>Bona Fide Sports league</b> — <a href="https://fantasy.premierleague.com/" rel="noopener noreferrer nofollow">operator page ↗</a> — cited: forum: https://www.reddit.com/r/FantasyPL/comments/1v4h6th/fpl_202627_minileagues_thread/</li><li><b>OLKA Express league</b> — <a href="https://fantasy.premierleague.com/" rel="noopener noreferrer nofollow">operator page ↗</a> — cited: forum: https://www.reddit.com/r/FantasyPL/comments/1m6naoy/league_codes_megathread/</li><li><b>FPLManagerIndia league</b> — <a href="https://fantasy.premierleague.com/" rel="noopener noreferrer nofollow">operator page ↗</a> — cited: affiliate: https://allaboutfpl.com/2025/07/list-of-free-to-join-prize-fpl-mini-leagues-ahead-of-25-26-season/</li><li><b>fplStore_ league</b> — <a href="https://fantasy.premierleague.com/" rel="noopener noreferrer nofollow">operator page ↗</a> — cited: affiliate: https://fpltips.com/fpl-leagues-with-prizes/</li><li><b>Pitchbooking.com league</b> — <a href="https://fantasy.premierleague.com/" rel="noopener noreferrer nofollow">operator page ↗</a> — cited: forum: https://www.reddit.com/r/FantasyPL/comments/wecme0/list_of_free_to_enter_fpl_leagues_with_prizes/</li><li><b>RoboForex Demo Contest</b> — <a href="https://roboforex.com/" rel="noopener noreferrer nofollow">operator page ↗</a> — cited: affiliate: https://tradingbrokers.com/roboforex-demo-contest/</li><li><b>FBS Pro Demo Contest</b> — <a href="https://fbs.com/" rel="noopener noreferrer nofollow">operator page ↗</a> — cited: affiliate: https://fofan.org/contest/fbs-pro-demo-trading-contest/</li><li><b>NPBFX Trading Battle Demo Contest</b> — <a href="https://npbfx.com/" rel="noopener noreferrer nofollow">operator page ↗</a> — cited: affiliate: https://www.ndfxbonus.com/2026/07/npbfx-trading-battle-demo-contest-win.html</li><li><b>TFF Fantezi Lig (Turkish Süper Lig)</b> — <a href="https://fantazilig.tff.org/" rel="noopener noreferrer nofollow">operator page ↗</a> — cited: affiliate: https://en.shiftdelete.net/tff-launches-official-fantasy-league-mobile-game-for-super-lig/</li></ul>
-</div>
-<div class="finding high" id="F02">
-  <h3>Dollar prize figures that cite no official page</h3>
-  <div class="meta2"><span class="sev high">high</span> · rule R2 · 3 rows</div>
-  <p>A specific prize ladder is published for these entries while the only citation is an affiliate page. The figures are reproduced in the tables as *source data, unverified*, never as a verified amount.</p>
-  <ul><li><b>RoboForex Demo Contest</b> — prize: 1st $700, 2nd $550, 3rd $420 … 10th $50 (ten prizes) — <a href="https://roboforex.com/" rel="noopener noreferrer nofollow">operator page ↗</a></li><li><b>FBS Pro Demo Contest</b> — prize: 1st $450, 2nd $250, 3rd $150, 4th $100, 5th $50 ($1,000 fund) — <a href="https://fbs.com/" rel="noopener noreferrer nofollow">operator page ↗</a></li><li><b>NPBFX Trading Battle Demo Contest</b> — prize: 1st $1,000 (+ iPhone), 2nd $500, 3rd $250, 4th $150, 5th–10th $100, 11th–20th $50 — <a href="https://npbfx.com/" rel="noopener noreferrer nofollow">operator page ↗</a></li></ul>
-</div>
-<div class="finding high" id="F03">
-  <h3>Several listings share one sign-up URL</h3>
-  <div class="meta2"><span class="sev high">high</span> · rule R3 · 19 rows</div>
-  <p>These rows do not link to a distinct prize page. For the Fantasy Premier League group, the shared URL is the game itself, which publishes no cash prize — the cash claims come from third-party mini-leagues with private rules.</p>
-  <ul><li><code>https://championsleague.cev.eu/</code> shared by 2 rows: <a href="category/sports.html#cev-volley-fantasy">cev-volley-fantasy</a>, <a href="category/sports.html#cev-predictor">cev-predictor</a></li><li><code>https://fantasy.premierleague.com/</code> shared by 11 rows: <a href="category/sports.html#fpl-official">fpl-official</a>, <a href="category/sports.html#ffs-fpl">ffs-fpl</a>, <a href="category/sports.html#football-mad">football-mad</a>, <a href="category/sports.html#fantasy-arena">fantasy-arena</a>, <a href="category/sports.html#lazyfpl">lazyfpl</a>, <a href="category/sports.html#fplhub">fplhub</a>, <a href="category/sports.html#bona-fide">bona-fide</a>, <a href="category/sports.html#olka">olka</a>, <a href="category/sports.html#fplmanager-india">fplmanager-india</a>, <a href="category/sports.html#fplstore">fplstore</a>, <a href="category/sports.html#pitchbooking">pitchbooking</a></li><li><code>https://gaming.uefa.com/en/uclfantasy</code> shared by 2 rows: <a href="category/sports.html#ucl-fantasy">ucl-fantasy</a>, <a href="category/sports.html#ffs-ucl">ffs-ucl</a></li><li><code>https://tipping.afl.com.au/</code> shared by 2 rows: <a href="category/sports.html#afl-tipping">afl-tipping</a>, <a href="category/sports.html#aflw-tipping">aflw-tipping</a></li><li><code>https://www.papaya.com/</code> shared by 2 rows: <a href="category/skill.html#solitaire-cash">solitaire-cash</a>, <a href="category/skill.html#bingo-cash">bingo-cash</a></li></ul>
-</div>
-<div class="finding medium" id="F04">
-  <h3>Listings that are not themselves prize competitions</h3>
-  <div class="meta2"><span class="sev medium">medium</span> · rule R4 · 9 rows</div>
-  <p>Directories and pool-host tools publish no prize of their own; any money comes from the user&#x27;s own private group. They are counted in the headline &#x27;free path&#x27; total on the reference site.</p>
-  <ul><li><b>Reedsy Writing Contest List</b> — prize: Listed per contest (hundreds to tens of thousands)</li><li><b>OfficePoolStop</b> — prize: Prizes decided by your group</li><li><b>FunOfficePools</b> — prize: Prizes decided by your group</li><li><b>MySurvivorPool</b> — prize: Prizes decided by your group</li><li><b>Gridiron Games</b> — prize: Prizes decided by your group — commissioner pays a hosting fee</li><li><b>SquaresPool.com</b> — prize: Prizes decided by your group</li><li><b>MyFantasyLeague</b> — prize: Prizes decided by your league</li><li><b>Trofeo.live</b> — prize: Pools with friends</li><li><b>ML Contests</b> — prize: n/a — directory</li></ul>
-</div>
-<div class="finding medium" id="F05">
-  <h3>Ended / out-of-season entries inside the headline free-path count</h3>
-  <div class="meta2"><span class="sev medium">medium</span> · rule R5 · 27 rows</div>
-  <p>27 listings carry status &#x27;ended&#x27; and 26 of them are counted by the reference site&#x27;s JavaScript in &#x27;True free paths&#x27; (it counts freePath==&#x27;full&#x27; with no status filter). They cannot be entered today.</p>
-  
-</div>
-<div class="finding medium" id="F06">
-  <h3>Prize is explicitly not currently knowable</h3>
-  <div class="meta2"><span class="sev medium">medium</span> · rule R6 · 18 rows</div>
-  <p>The source data itself says the prize is unpublished, not running, or unconfirmed. The Prize (USD) column is therefore left blank for these rows; nothing is estimated.</p>
-  <ul><li><b>Givling</b> — prize: Trivia removed — no longer a trivia contest</li><li><b>FOX Super 6</b> — prize: Not currently published — confirm on the live game page</li><li><b>NFL Pickwatch Contest</b> — prize: Not running for 2026</li><li><b>TheLines Free NFL Survivor</b> — prize: Not confirmed for 2026</li><li><b>Splash Sports NFL Mock Draft</b> — prize: Not verified outside the entry window</li><li><b>Football Mad FPL league</b> — prize: Prize pool not confirmed for 2026/27</li><li><b>Fantasy Arena FPL league</b> — prize: Prize not confirmed for 2026/27</li><li><b>FPL Hub league</b> — prize: Prize not confirmed for 2026/27</li><li><b>Bona Fide Sports league</b> — prize: Prize not confirmed for 2026/27</li><li><b>OLKA Express league</b> — prize: Prize not confirmed for 2026/27</li><li><b>FPLManagerIndia league</b> — prize: Prize not confirmed for 2026/27</li><li><b>fplStore_ league</b> — prize: Prize not confirmed for 2026/27</li><li><b>Pitchbooking.com league</b> — prize: Prize not confirmed for 2026/27</li><li><b>CrunchDAO / ADIA Lab Challenges</b> — prize: Prize pool not stated on the competition overview — confirm before entering</li><li><b>ML Contests</b> — prize: n/a — directory</li><li><b>99designs Design Contests</b> — prize: Client-funded prize per contest (varies)</li><li><b>DesignCrowd Design Contests</b> — prize: Client-funded prize per contest (varies); community contests free with monetary prizes</li><li><b>CrowdSpring Design Contests</b> — prize: Client-funded prize per contest (varies)</li></ul>
-</div>
-<div class="finding medium" id="F07">
-  <h3>Marked &#x27;Free USD path&#x27; although the description mentions an entry fee or deposit</h3>
-  <div class="meta2"><span class="sev medium">medium</span> · rule R7 · 6 rows</div>
-  <p>The fee may correctly apply only to a separate cash room, but the label and the copy disagree on the same row and need a human read.</p>
-  <ul><li><b>Esports World Cup (EWC) Play — Fantasy &amp; Pick&#x27;em</b> — The official EWC free fantasy and pick&#x27;em game. No entry fee or wager of any kind; cash prizes for top finishers.</li><li><b>Deriv Trading Tournaments</b> — Deriv&#x27;s free monthly demo trading tournaments with real cash prizes, no deposit required.</li><li><b>MultiBank Group Demo Trading Competition</b> — MultiBank&#x27;s free demo trading competition with $15,000 in real cash every round plus a year-end car.</li><li><b>Trading.com Paper Trading Competition</b> — Trading.com&#x27;s free monthly paper-trading competition (US only) — $6,000 / $3,000 / $1,000 cash prizes.</li><li><b>Tickmill NFP Machine</b> — Tickmill&#x27;s monthly price-prediction contest — predict the NFP price for a chance at $500 cash.</li><li><b>Louisiana Film Prize (Prize Fest)</b> — The world&#x27;s largest cash prize for a short film — $50,000, with a $0 entry fee (film must be shot in Louisiana).</li></ul>
-</div>
-<div class="finding low" id="F08">
-  <h3>Non-cash currency named in the payout copy of a &#x27;free&#x27; row</h3>
-  <div class="meta2"><span class="sev low">low</span> · rule R8 · 15 rows</div>
-  <p>Gems, tickets, Z coins and bonus cash are not withdrawable dollars. Rows are kept, but they are not ranked as cash prizes.</p>
-  <ul><li><b>LA Rams Pick&#x27;em</b> — prize: Pechanga resort stay + $250 credit; weekly tickets and signed merchandise</li><li><b>ATP Fantasy (Official ATP Tour)</b> — prize: ATP merchandise and 2027 tickets (no cash)</li><li><b>F1 Fantasy (Official Formula 1)</b> — prize: 2027 F1 tickets + VIP grid walk (1st); grandstand tickets (2nd); £500 F1 Store voucher (3rd)</li><li><b>Superbru</b> — prize: Sponsor-funded prizes per game (tickets, vouchers, experiences)</li><li><b>Six Nations Fantasy Rugby</b> — prize: 2x tickets + flights/accommodation (overall); signed ball (top 5); £100 Fanatics gift card (round)</li><li><b>EuroLeague Fantasy Challenge</b> — prize: Game tickets, jerseys, basketballs and EuroLeague TV subscriptions (non-cash)</li><li><b>CEV Champions League Volley Fantasy</b> — prize: Final 2026 tickets (season winner); jerseys + match balls (2nd–3rd); match ball + EuroVolley.TV (4th–5th)</li><li><b>CEV Champions League Predictor Game</b> — prize: Tickets to the Final Four 2027 (non-cash)</li><li><b>Betfred Super League Fantasy (Rugby League)</b> — prize: Monthly: PS5/Xbox + £600 games; season: hospitality tickets + SuperLeague+ pass + signed shirt</li><li><b>Betfred Super League Predictor</b> — prize: Season winner: launch invite + 4 event tickets + SuperLeague+ pass; monthly/weekly tickets; streak prizes</li><li><b>MotoGP Fantasy (Official)</b> — prize: 1st signed Marquez helmet; 2nd PS5 + MotoGP26; 3rd signed knee slider; weekly GP tickets</li><li><b>The Hundred Fantasy (ECB)</b> — prize: 1st signed bat; 2nd Citizen watch + tickets; 3rd; block winners get Final tickets (non-cash)</li><li><b>IBU eCup (Winter Sports Mania)</b> — prize: 2x VIP tickets to the BMW IBU World Cup for monthly winners (non-cash)</li><li><b>Fantasy Premiership Rugby</b> — prize: Overall winner: VIP Final package; runner-up: signed shirt + 4 tickets; per-round: 2 tickets</li><li><b>A-Leagues Fantasy</b> — prize: $4,000 major prize; $600 2nd; $400 3rd; weekly double-pass tickets</li></ul>
-</div>
-<div class="finding info" id="F09">
-  <h3>Prize published as prose, not a figure</h3>
-  <div class="meta2"><span class="sev info">info</span> · rule R9 · 102 rows</div>
-  <p>102 of 206 listings describe the prize in words without a dollar amount. No amount is derived from prose; the Prize (USD) column stays blank until an official page is read (see data/verification.json).</p>
-  
-</div>
-<div class="finding low" id="F10">
-  <h3>Headline &#x27;Added this pass&#x27; is one sub-list, not the set of additions</h3>
-  <div class="meta2"><span class="sev low">low</span> · rule R10</div>
-  <p>The reference site renders &#x27;Added this pass&#x27; from `addedThisPassC` (60 ids) and badges rows as &#x27;New&#x27; only if they appear in `addedThisPass` or `addedThisPassC`. The file also carries passes G–S (132 ids); the union of every addedThisPass* list is 192 ids, so most later additions never get the badge.</p>
-  <ul><li><code>addedThisPass</code>: 10 ids</li><li><code>addedThisPassC</code>: 60 ids</li><li><code>addedThisPassG</code>: 10 ids</li><li><code>addedThisPassH</code>: 12 ids</li><li><code>addedThisPassI</code>: 10 ids</li><li><code>addedThisPassJ</code>: 10 ids</li><li><code>addedThisPassK</code>: 10 ids</li><li><code>addedThisPassL</code>: 10 ids</li><li><code>addedThisPassM</code>: 10 ids</li><li><code>addedThisPassN</code>: 10 ids</li><li><code>addedThisPassO</code>: 10 ids</li><li><code>addedThisPassP</code>: 10 ids</li><li><code>addedThisPassQ</code>: 10 ids</li><li><code>addedThisPassR</code>: 10 ids</li><li><code>addedThisPassS</code>: 10 ids</li></ul>
-</div>
-<div class="finding low" id="F11">
-  <h3>Reference site masthead date disagrees with its data</h3>
-  <div class="meta2"><span class="sev low">low</span> · rule R11</div>
-  <p>`index.html` prints “Pass C · 17 Aug 2026” in the masthead while `assets/data.js` declares `reviewed: 2026-08-19`, `pass: &quot;S&quot;`. Any reader using the masthead is three passes and two days behind. (Literal masthead read from the mirrored copy: &#x27;Pass C · 17 Aug 2026&#x27;.)</p>
-  
-</div>
-
-<h2 class="sec">What is deliberately left blank on the site</h2>
-<div class="prose">
-<ul>
-  <li>Any prize amount not read on an official page — including the large trading-demo prize ladders that are cited
-  only to affiliate sites.</li>
-  <li>The Weather Photographer of the Year prize, where two 2026 sources disagree with the catalogue.</li>
-  <li>HIPA’s “$20,000–$50,000 category prizes”: the $50,000 upper bound has no support in the sources read.</li>
-  <li>Entry fees for Kaggle and DrivenData: the pages read do not state a fee, and “no fee stated in marketing copy”
-  is not the same as “free”, so the row is not marked confirmed-free.</li>
-</ul>
-</div>
-
-<footer class="site">
-  <p><b>Free Cash Competition Ledger</b> — an independent catalogue mirroring the “Free Money &amp; Contest Ledger”
-  (<a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">reference site</a>)
-  with per-row source links and a separate verification layer.</p>
-  <p>Not affiliated with any listed operator. Official rules always win. US federal tax reporting generally
-  applies to prizes of $600 or more — confirm with a tax professional. Nothing here is legal or financial advice.
-  Sweepstakes and casino-style gambling products are out of scope.</p>
-  <p>Data as published by the reference catalogue on 2026-08-19 (pass “S”), audited and partly re-verified on
-  2026-11-01. Prize amounts change; open the operator’s rules before you enter.
-  <a href="methodology.html">Method &amp; limits</a> · <a href="flagged.html">Flagged for review</a> ·
-  <a href="sources.html">Sources</a> · <a href="cross-session.html">Cross-session</a></p>
-  <p><b>Built in parallel with other agent sessions.</b> Their pages still ship and are linked here:
-  <a href="review.html">their review queue</a> ·
-  <a href="supplemental/index.html">their supplemental evidence</a> ·
-  <a href="https://github.com/sassnarep3-star/Own1/blob/main/research/SOURCES.md" rel="noopener noreferrer">their source audit</a>.</p>
+<section class="section">
+  <h2>Live checks performed this pass (12)</h2>
+  <p class="note-tiny">One fetch per URL on 1 Nov 2026. This is the complete list of what
+  was actually retrieved — no row is described as checked unless it appears here.</p>
+  <div class="table-scroll">
+    <table class="ledger">
+      <thead><tr><th>URL fetched</th><th>Outcome</th><th>Page title returned</th><th>Confirmed on the page</th><th>Not confirmed</th></tr></thead>
+      <tbody><tr>
+    <td data-label="URL"><a href="https://www.cbssports.com/fantasy/football/games/pickem/rules" rel="noopener noreferrer">https://www.cbssports.com/fantasy/football/games/pickem/rules</a>
+      <span class="cell-sub">CBS Sports Pro Football Pick&#39;em</span></td>
+    <td data-label="Outcome"><span class="badge good">loaded</span></td>
+    <td data-label="Page title">2026 CBSSports.com Pro Football Pick&#39;em Contest Rules - CBSSports.com</td>
+    <td data-label="Confirmed"><ul class="list" style="margin:0"><li>The contest is FREE to play: &#39;No purchase, wireless device or entry fee necessary to enter or win.&#39;</li><li>Eligibility: legal residents of the 50 US states + DC, 18+ or age of majority.</li><li>2026 Challenge period runs 2026-09-09 to 2027-01-10 with 18 weekly contests.</li></ul></td>
+    <td data-label="Not confirmed"><ul class="list" style="margin:0"><li>Prize amounts were not in the fetched section of the rules page.</li></ul></td>
+  </tr><tr>
+    <td data-label="URL"><a href="https://www.kaggle.com/competitions" rel="noopener noreferrer">https://www.kaggle.com/competitions</a>
+      <span class="cell-sub">Kaggle Competitions</span></td>
+    <td data-label="Outcome"><span class="badge good">loaded</span></td>
+    <td data-label="Page title">Kaggle Competitions</td>
+    <td data-label="Confirmed"><ul class="list" style="margin:0"><li>Competitions are open to anyone and are free to enter.</li><li>Live prize-bearing competitions were visible on 2026-11-01, e.g. ARC Prize 2026 Paper Track ($450,000), NFL Big Data Bowl 2027 ($100,000), Google Gemma 4 Developer Agent Paper Track ($35,000).</li></ul></td>
+    <td data-label="Not confirmed"><ul class="list" style="margin:0"><li>No single &#39;prize pool&#39; figure applies to Kaggle as a whole — prizes are per competition.</li></ul></td>
+  </tr><tr>
+    <td data-label="URL"><a href="https://www.papaya.com/faq" rel="noopener noreferrer">https://www.papaya.com/faq</a>
+      <span class="cell-sub">Solitaire Cash (Papaya)</span></td>
+    <td data-label="Outcome"><span class="badge good">loaded</span></td>
+    <td data-label="Page title">Papaya Gaming FAQ | About Papaya and the Platform</td>
+    <td data-label="Confirmed"><ul class="list" style="margin:0"><li>&#39;PAPAYA offers both free competitions using Gems and cash competitions.&#39;</li><li>Business model: &#39;taking a platform fee out of the total entry fees pool in each tournament.&#39;</li><li>&#39;PAPAYA currently does not use bots in any of its games&#39; with a linked FTI Consulting certificate.</li></ul></td>
+    <td data-label="Not confirmed"><ul class="list" style="margin:0"><li>No prize figure appears on the FAQ page. The ledger&#39;s prize text (&#39;Cash rooms advertise prizes up to tens of dollars per event&#39;) is NOT supported by the cited official source.</li></ul></td>
+  </tr><tr>
+    <td data-label="URL"><a href="http://www.squarespool.com/" rel="noopener noreferrer">http://www.squarespool.com/</a>
+      <span class="cell-sub">SquaresPool.com</span></td>
+    <td data-label="Outcome"><span class="badge good">loaded</span></td>
+    <td data-label="Page title">Football Squares Pool | Squares Pool Online (Free) - SquaresPool.com</td>
+    <td data-label="Confirmed"><ul class="list" style="margin:0"><li>The pool tool is free: &#39;Get your own pool page in minutes — completely free.&#39;</li><li>It is a tool for running your own pool; there is no operator-funded prize.</li></ul></td>
+    <td data-label="Not confirmed"><span class="blank">—</span></td>
+  </tr><tr>
+    <td data-label="URL"><a href="https://apps.apple.com/us/app/solitaire-cash-win-real-money/id1252281551" rel="noopener noreferrer">https://apps.apple.com/us/app/solitaire-cash-win-real-money/id1252281551</a>
+      <span class="cell-sub">Solitaire Cash (Papaya)</span></td>
+    <td data-label="Outcome"><span class="badge danger">error-page</span></td>
+    <td data-label="Page title">App Store — &#39;An Error Occurred&#39;</td>
+    <td data-label="Confirmed"><span class="blank">—</span></td>
+    <td data-label="Not confirmed"><ul class="list" style="margin:0"><li>The iOS listing could not be loaded.</li></ul></td>
+  </tr><tr>
+    <td data-label="URL"><a href="https://apps.apple.com/us/app/skillz-arena/id6761981587" rel="noopener noreferrer">https://apps.apple.com/us/app/skillz-arena/id6761981587</a>
+      <span class="cell-sub">Skillz / Blackout Bingo / Skillz Arena</span></td>
+    <td data-label="Outcome"><span class="badge good">loaded</span></td>
+    <td data-label="Page title">Skillz Arena App - App Store</td>
+    <td data-label="Confirmed"><ul class="list" style="margin:0"><li>App is live on the US App Store, developer Skillz Inc., age rating 18+.</li><li>&#39;Gemz&#39; is the in-app practice currency used for free rounds.</li><li>Cash-out rails listed: Apple Pay, PayPal, debit card, bank transfer.</li></ul></td>
+    <td data-label="Not confirmed"><ul class="list" style="margin:0"><li>No specific match prize table is stated on the App Store page.</li></ul></td>
+  </tr><tr>
+    <td data-label="URL"><a href="https://betfanatics.com/" rel="noopener noreferrer">https://betfanatics.com/</a>
+      <span class="cell-sub">Fanatics NFL Survivor League</span></td>
+    <td data-label="Outcome"><span class="badge good">loaded</span></td>
+    <td data-label="Page title">Fanatics Sports &amp; Casino — Bet $20 Get $350 in FanCash</td>
+    <td data-label="Confirmed"><ul class="list" style="margin:0"><li>The linked domain is Fanatics&#39; real-money sportsbook and casino product, including &#39;Sportsbook&#39; and &#39;Casino&#39; state availability lists and a bet-to-earn promo.</li></ul></td>
+    <td data-label="Not confirmed"><ul class="list" style="margin:0"><li>No NFL Survivor League rules or prize table appeared on the fetched homepage.</li></ul></td>
+  </tr><tr>
+    <td data-label="URL"><a href="https://www.metaculus.com/tournaments/" rel="noopener noreferrer">https://www.metaculus.com/tournaments/</a>
+      <span class="cell-sub">Metaculus Tournaments</span></td>
+    <td data-label="Outcome"><span class="badge good">loaded</span></td>
+    <td data-label="Page title">Tournaments | Metaculus</td>
+    <td data-label="Confirmed"><ul class="list" style="margin:0"><li>&#39;We are not a prediction market. You can participate for free and win cash prizes for being accurate.&#39;</li><li>19 tournaments listed on 2026-11-01 with published prize pools, e.g. Fall 2026 FutureEval Bot Tournament ($50,000), POTUS Predictions ($15,000), US Midterms 2026 ($10,000).</li><li>Some tournaments carry no prize pool — prize availability is per tournament.</li></ul></td>
+    <td data-label="Not confirmed"><span class="blank">—</span></td>
+  </tr><tr>
+    <td data-label="URL"><a href="https://www.worldpressphoto.org/" rel="noopener noreferrer">https://www.worldpressphoto.org/</a>
+      <span class="cell-sub">World Press Photo Contest</span></td>
+    <td data-label="Outcome"><span class="badge good">loaded</span></td>
+    <td data-label="Page title">Home | World Press Photo</td>
+    <td data-label="Confirmed"><ul class="list" style="margin:0"><li>The contest is an active annual programme; 2026 winners are published and new Nature &amp; Sports awards were announced for the 2027 contest.</li></ul></td>
+    <td data-label="Not confirmed"><ul class="list" style="margin:0"><li>The €10,000 / €1,000 figures in the ledger are not stated on the homepage; the contest&#39;s prize page was not fetched.</li></ul></td>
+  </tr><tr>
+    <td data-label="URL"><a href="https://www.tradingview.com/the-leap/" rel="noopener noreferrer">https://www.tradingview.com/the-leap/</a>
+      <span class="cell-sub">TradingView — The Leap</span></td>
+    <td data-label="Outcome"><span class="badge good">loaded</span></td>
+    <td data-label="Page title">The Leap — Paper Trading Competition by TradingView</td>
+    <td data-label="Confirmed"><ul class="list" style="margin:0"><li>&#39;Risk-free trading competitions with real-money prizes&#39; using virtual money.</li><li>On 2026-11-01 every event shown on the landing page was marked Completed or pending, the most recent being October 7–20, 2026.</li></ul></td>
+    <td data-label="Not confirmed"><ul class="list" style="margin:0"><li>The ledger&#39;s $50,000 / $10,000 / $7,000 table is not stated on the landing page.</li></ul></td>
+  </tr><tr>
+    <td data-label="URL"><a href="https://reedsy.com/resources/writing-contests/" rel="noopener noreferrer">https://reedsy.com/resources/writing-contests/</a>
+      <span class="cell-sub">Reedsy Writing Contest List</span></td>
+    <td data-label="Outcome"><span class="badge good">loaded</span></td>
+    <td data-label="Page title">The Ultimate List of Writing Contests in 2026 • Win Cash Prizes!</td>
+    <td data-label="Confirmed"><ul class="list" style="margin:0"><li>Reedsy&#39;s directory lists 458 contests.</li><li>Many listed contests charge entry fees — $5, $11, $12, $15, $20, $25 and $49 were observed in the fetched section.</li></ul></td>
+    <td data-label="Not confirmed"><ul class="list" style="margin:0"><li>The ledger&#39;s prize text (&#39;hundreds to tens of thousands&#39;) is a directory-wide range, not a prize for any single contest.</li></ul></td>
+  </tr><tr>
+    <td data-label="URL"><a href="https://www.swagbucks.com/" rel="noopener noreferrer">https://www.swagbucks.com/</a>
+      <span class="cell-sub">Swagbucks Daily Trivia</span></td>
+    <td data-label="Outcome"><span class="badge good">loaded</span></td>
+    <td data-label="Page title">Swagbucks: Get Paid for Games &amp; Surveys | Earn Real Cash</td>
+    <td data-label="Confirmed"><ul class="list" style="margin:0"><li>Site is live and free to join: &#39;It&#39;s completely free to join&#39;.</li><li>&#39;Swagbucks Daily Trivia challenges&#39; are named on the homepage as one of the ways to earn.</li><li>Rewards are Swagbucks points redeemed for PayPal cash or gift cards — a points currency, not a direct prize pool.</li></ul></td>
+    <td data-label="Not confirmed"><ul class="list" style="margin:0"><li>No cash prize amount for Daily Trivia is stated; the ledger&#39;s &#39;redeemable for PayPal cash / gift cards&#39; wording matches, but no figure exists to verify.</li></ul></td>
+  </tr></tbody>
+    </table>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="all.html">All 211 competitions</a>
+      <a href="best.html">Best picks</a>
+      <a href="analysis.html">Analysis</a>
+      <a href="research.html">Source audit</a>
+      <a href="verification.html">Verification method</a>
+      <a href="flagged.html">Flagged for review (22)</a>
+      <a href="executive-summary.html">Executive summary</a>
+    </div>
+    <p><b>PrizeDesk</b> is an independent workbench built on the Free Money &amp; Contest
+    Ledger dataset (pinned commit <code>466f7c1</code>, source reviewed
+    19 Aug 2026). It is not affiliated with any operator listed.
+    Prize figures are the source dataset's claims, not this site's promises — open the operator's
+    rules before you enter. Contest law varies by state and country; play only where legal. 18+/21+.</p>
+    <p class="note-tiny">Figures verified on this site: 13 of 211 rows were
+    fetched live on 1 Nov 2026. Everything else is labelled
+    "source cited — not re-checked". See <a href="verification.html">how verification works</a>.</p>
+  </div>
 </footer>
-</div>
-<script src="assets/js/site.js"></script>
+
 </body>
 </html>
