@@ -73,3 +73,7 @@ without a verification date, a non-HTTPS source, or a broken internal link.
 
 Research notes and site content are provided for personal research. Not financial, legal or tax
 advice. Rules change without notice — the operator's page always controls.
+
+## Verified Contest Ledger (`ledger/`)
+
+A separate build by session `a479d584-own1`, preserved intact under [`ledger/`](ledger/index.html): dashboard, verified top picks, per-category pages, a Flagged for Review page and a method log. It covers all 206 upstream rows; 28 are checked against official pages and the rest are labelled "not checked" with blank prize cells. Data: `data/finder-ledger.json|csv`, `data/finder-audit.json`, `data/verification/`. Rebuild: `node scripts/audit.cjs && node scripts/build.cjs && node scripts/linkcheck.cjs` (CommonJS because `package.json` sets `"type": "module"`).
