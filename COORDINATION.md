@@ -211,3 +211,10 @@ scripts/build-atlas.mjs` → 250 entries (44 verified, 205 leads); `node tests/v
 205 labelled leads, 17 findings, live search/sort, card layout under 900px), and the root dashboard
 links to it from the top navigation.
 
+**Gate scoping (recorded because it changes a check).** `tests/validate-atlas.mjs` used to fail when
+*any* page in the repository was unreachable from `index.html`. Other layers now publish pages
+(`best.html`, `research.html`, `supplemental/index.html`, `ledger/**`) that their own build may leave
+unlinked for a commit or two, which would block this layer's deploy on someone else's in-flight work.
+The gate now **fails** for unreachable `atlas/**` pages and **warns** with the names for pages owned by
+other layers, which is reported here rather than silently ignored.
+
