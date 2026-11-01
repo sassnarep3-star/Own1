@@ -76,10 +76,17 @@ for (const file of htmlFiles) {
       continue;
     }
     if (hash) {
-      const hostFile = target === '' ? from : resolved;
-      const ids = anchorsByFile.get(hostFile);
-      if (ids && !ids.has(hash)) {
-        errors.push(`${from}: anchor #${hash} not found in ${hostFile}`);
+      // App-level fragments such as "#q=Some%20Name" are read by client-side search and are not
+      // element ids; only literal id anchors are validated.
+      // Archived builds render their rows client-side, so their per-row anchors only exist at
+      // runtime. File links into the archives are still validated; runtime anchors are not.
+      const isAppFragment = /[=%\s]/.test(hash) || from.startsWith('archive/');
+      if (!isAppFragment) {
+        const hostFile = target === '' ? from : resolved;
+        const ids = anchorsByFile.get(hostFile);
+        if (ids && !ids.has(hash)) {
+          errors.push(`${from}: anchor #${hash} not found in ${hostFile}`);
+        }
       }
     }
   }

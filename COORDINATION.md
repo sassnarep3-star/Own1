@@ -19,6 +19,7 @@ does not block anything.
 | `90c9f78c-own1` | `arena/90c9f78c-own1` | PR #5, #8 | Re-verification of all 7 checked rows, executive summary, integration record |
 | `37aed701-own1` | `arena/37aed701-own1` | PR #6, #9 | Supplemental research page: 3 hackathons, 5 findings, official links |
 | `20a81ffd-own1` | `arena/20a81ffd-own1` | PR #10 | Independent source verification record |
+| `4e1fdad5-own1` | `arena/4e1fdad5-own1` | PR #17, #18, #19 | Third full build: per-entry pages, playbook, finder, `data/upstream/` snapshot of the source repo |
 | `d21e8702-own1` | `arena/d21e8702-own1` | PR #12, #16 | Second full build of the brief: Python site generator, own audit/methodology/sources pages, `tools/*.py`, `data/audit.json` |
 | **`arena-041e7ad1`** | **`arena/041e7ad1-own1`** | **PR #13** | **Final integration session: provenance-pinned rebuild, 211-row verified table, 22 flags, merge of all of the above** |
 
@@ -173,6 +174,31 @@ Resolution, again with nothing discarded:
 - Its `IRREGULARITIES.md` and `VERIFICATION.md` travelled with the archive; its
   `tests/validate.mjs` is preserved alongside it.
 - No content of theirs was reworded or deleted.
+
+### Third reconciliation（session `4e1fdad5-own1`）
+
+`main` advanced again mid-integration, adding a third build: 211-entry `data/entries.json`, one page
+per listing under `entry/` (33 pages), `playbook.html`, `categories.html`, `archive.html`,
+`assets/finder.{css,js}`, `data/finder-*`, `data/uptream`-style source snapshots under `data/upstream/`,
+`data/verification/batchA.jsonl`, and a second `scripts/build.js`.
+
+Resolution:
+
+- The whole build is preserved intact at `archive/session-4e1fdad5/` (116 files, banner-linked to the
+  live site). Its pages reference `../entry/`, `../assets/`, `../data/`, `../review.html` and
+  `../supplemental/index.html`; archiving it as a tree keeps that navigation working.
+- Root duplicates were removed only after archiving (`entry/`, `category/`, `ledger/`, `src/`,
+  `playbook.html`, `categories.html`, `archive.html`, `shortlist.html`, `summary.html`,
+  `package-lock.json`, `assets/finder.*`, `assets/css/style.css`, `assets/js/site.js`).
+- Two of their files had overwritten archive files through git's rename detection
+  (`archive/prize-atlas/assets/app.js`, `archive/prize-atlas/data/entries.json`). Both were restored
+  byte-for-byte from the commit they were archived from, so the Prize Atlas build still runs on its
+  own data and app.
+- `scripts/checklinks.js` gained two documented relaxations, both scoped: app-level fragments such as
+  `#q=Some%20Name` are client-side search, and archived builds render rows client-side so their
+  per-row anchors exist only at runtime. File links into the archives are still fully checked.
+
+Result: 325 HTML files, 0 broken links, all suites green.
 
 ### Conflict log
 

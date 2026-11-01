@@ -74,6 +74,7 @@ build time, so the site cannot drift from the dataset.
 | Their validation script and CI workflow | `tests/validate-prize-atlas.mjs` (base path adjusted) and `.github/workflows/validate.yml`, which now runs both suites |
 | Their source audit | `research/SOURCES.md`, linked from `research.html` |
 | A second full build (session `d21e8702`): own generator, audit, methodology, sources and cross-session pages | Preserved working at `archive/prize-atlas/dashboard-v2/`, with its Python tools, data and test |
+| A third full build (session `4e1fdad5`): per-entry pages, playbook, finder, upstream data snapshot | Preserved working at `archive/session-4e1fdad5/` (116 files) |
 
 Their README, for the record:
 
