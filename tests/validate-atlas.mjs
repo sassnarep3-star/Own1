@@ -29,7 +29,7 @@ function check(name, condition, detail = '') {
 
 const verified = readJSON('data/verified.json');
 const leads = readJSON('data/legacy.json');
-const categories = readJSON('data/categories.json');
+const categories = readJSON('data/atlas-categories.json');
 const audit = readJSON('data/atlas-findings.json'); // this build's findings (the ledger pass has its own data/audit.json)
 
 /* ------------------------------------------------------------------ 1. schema */

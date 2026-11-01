@@ -167,7 +167,6 @@ NAV = [
     ("sources.html", "Sources"),
     ("cross-session.html", "Cross-session"),
     ("ledger/index.html", "Verified ledger"),
-    ("atlas/index.html", "Atlas (44 checked)"),
 ]
 
 

@@ -53,7 +53,7 @@
   <p>Tier 1 is the operator's own rules or competition page. Tier 2 is a platform listing that the operator publishes (for example a Devpost or Kaggle event card). Tier 3 is third-party commentary, which is used here only to raise a question, never to answer one. Some verified rows rest on tier 2 evidence and say so in their flags — a prize that only exists on a platform card is weaker evidence than one in a rules document.</p>
 
   <h2>Reproducing this</h2>
-  <p>Everything is static. <code>scripts/build.mjs</code> merges <code>data/verified.json</code> and <code>data/legacy.json</code> into the pages you are reading and into <code>data/entries.json</code>. Run <code>node scripts/build.mjs &amp;&amp; node tests/validate.mjs</code> from the repository root to rebuild and re-check. The build is deterministic, so a clean rebuild produces no diff.</p>
+  <p>Everything is static. <code>scripts/build-atlas.mjs</code> merges <code>data/verified.json</code> and <code>data/legacy.json</code> into the pages you are reading and into <code>data/atlas-entries.json</code>. Run <code>node scripts/build-atlas.mjs &amp;&amp; node tests/validate-atlas.mjs</code> from the repository root to rebuild and re-check. The build is deterministic, so a clean rebuild produces no diff.</p>
 </div></main>
 <footer class="footer">
   <div class="shell footer-inner">

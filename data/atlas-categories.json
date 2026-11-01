@@ -1,0 +1,56 @@
+[
+  {
+    "id": "tech",
+    "name": "Tech, data & hackathons",
+    "icon": "⌘",
+    "blurb": "Model-building competitions, research paper tracks, and sponsored hackathons. The strongest category for work an AI coding agent can help produce."
+  },
+  {
+    "id": "forecasting",
+    "name": "Forecasting & prediction",
+    "icon": "◎",
+    "blurb": "Probability tournaments scored on accuracy. Free to enter, cash pools published per tournament, and most of the work is research and calibration."
+  },
+  {
+    "id": "sports",
+    "name": "Sports & fantasy picks",
+    "icon": "◈",
+    "blurb": "Free-to-play pick'em and fantasy games from media and league operators. Low effort per week, but the field is large and payouts are concentrated at the top."
+  },
+  {
+    "id": "creative",
+    "name": "Creative & photography",
+    "icon": "✳",
+    "blurb": "Judged writing and photography prizes. Free entry exists, but eligibility and submission windows are strict and prizes are often part equipment."
+  },
+  {
+    "id": "trivia",
+    "name": "Trivia & quizzes",
+    "icon": "?",
+    "blurb": "Knowledge games that advertise cash. Most models pay in points or crowdfunding position rather than a fixed operator prize pool."
+  },
+  {
+    "id": "skill",
+    "name": "Skill tournaments",
+    "icon": "⚡",
+    "blurb": "Mobile skill games. Free rooms typically pay gems, not dollars; real cash usually sits behind an entry fee. Check before spending time."
+  },
+  {
+    "id": "market",
+    "name": "Market simulations",
+    "icon": "▥",
+    "blurb": "Paper-trading and market-prediction contests. Lead-only in this pass: every entry still needs an official rules check."
+  },
+  {
+    "id": "pools",
+    "name": "Pool software",
+    "icon": "▦",
+    "blurb": "Tools for running office pools. The money is contributed by your group, not paid by the operator, so these are not cash-prize competitions."
+  },
+  {
+    "id": "directory",
+    "name": "Directories",
+    "icon": "↗",
+    "blurb": "Lists and aggregators that help you find events. Useful for discovery, but they are not competitions and cannot verify a prize."
+  }
+]
