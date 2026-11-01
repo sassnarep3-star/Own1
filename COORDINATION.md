@@ -248,3 +248,25 @@ changes were confined to `COORDINATION.md`; `git merge origin/main` produced **o
 Resolution: this session's board kept as the current state, and the other sessions' new entries moved **inside** the
 preserved-log block (§7) so no sentence of their record was dropped. No file of theirs was edited to resolve it.
 `tests/validate.mjs` from their build still passes after the merge.
+
+
+### Publication record (T7 — done)
+
+| Item | Value |
+| --- | --- |
+| Pull request | [#12](https://github.com/sassnarep3-star/Own1/pull/12) — “Free Cash Ledger: mobile-first dashboard, official-source verification, and flagged review page” |
+| Merge method | merge commit, `--merge`, no approval waited for |
+| Merge commit | `4e70115` (`Merge pull request #12 from sassnarep3-star/arena/d21e8702-own1`) |
+| CI on the PR | `Validate static site` → **pass** (run [41312958554](https://github.com/sassnarep3-star/Own1/actions/runs/41312958554/job/124866988654)) |
+| Pages build | commit `4e7011508`, status **built**, created 2026-11-01T13:47:45Z, updated 13:48:03Z, no error |
+| Pages deployment | `github-pages` deployment for `4e7011508`, created 2026-11-01T13:47:54Z |
+| Live checks after deploy | `index.html`, `all.html`, `flagged.html` fetched from <https://sassnarep3-star.github.io/Own1/> on 2026-11-01 and confirmed to render the new build (206-row catalogue, verification badges, flagged findings) |
+
+Post-merge follow-up carried by the PR whose body summarises this record: it fixes one methodology sentence
+(“prize documented on an official page” now states explicitly that 4 of the 12 verified rows rest on a page quoting
+the operator’s terms, labelled `secondary-official-terms`). No data, score or flagged item changed.
+
+**Task board state:** T1–T7 done. Nothing on this board is `unclaimed`. The two items that remain open are not tasks:
+the 194 unverified rows (published on `verification.html` as “not checked this pass”) and the 13 flagged items
+(published on `flagged.html`). Both are **needs review** in the sense the brief uses — published, non-blocking, and
+waiting on a human decision.
