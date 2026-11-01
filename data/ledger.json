@@ -1051,7 +1051,7 @@
     ],
     "issues": [
      "Upstream status 'live', but the official rules window ends with the final game of the 2026 regular season — re-check whether it can be entered on 2026-11-01",
-     "Headline $5.6M is only awarded for a 57-game streak; most players win nothing (the $10,000 'Top Streak' figure in upstream was not seen on the page fetched)"
+     "Official page: the $5,600,000 prize is awarded only if an eligible participant achieves a 57-game hitting streak; the upstream '$10,000 Top Streak' figure was not seen on the page fetched"
     ]
    }
   },
@@ -1162,7 +1162,7 @@
     ],
     "issues": [
      "The only official page found is the 2024 FAQ; a 2026 edition was NOT confirmed — upstream lists it as 'live' with '$100,000+' for 2026 (prize left blank)",
-     "21+ eligibility (stricter than most contests)"
+     "The 2024 FAQ requires being 21+ at sign-up"
     ]
    }
   },
