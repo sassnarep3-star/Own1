@@ -304,7 +304,7 @@ writeFileSync(
     heroHtml: hero({
       eyebrow: 'Verified footholds, not hype',
       title: 'Find the free competitions worth your time — and see the source for every number.',
-      lead: `The reference catalogue has ${stats.total} listings and no search. This rebuild keeps all of them, verifies ${stats.verified} against the operator's own pages, and leaves the rest visibly unverified so you can tell the difference at a glance.`,
+      lead: `The reference catalogue lists 206 competitions on a single page with no search. This rebuild covers all of them: ${stats.verified} rows verified against the operator's own pages, the rest kept as clearly labelled unverified leads with their prize and fee fields left blank.`,
       actions: `<a class="btn btn-primary" href="./shortlist.html">Open the verified shortlist</a>
         <a class="btn btn-ghost" href="./summary.html">Read the executive summary</a>`,
     }),
