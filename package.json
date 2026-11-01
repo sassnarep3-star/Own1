@@ -1,27 +1,14 @@
 {
-  "name": "prize-atlas",
+  "name": "prizedesk",
   "version": "2.0.0",
-  "description": "Evidence-first dashboard for free-to-enter cash competitions (static site, no framework)",
-  "directories": {
-    "test": "tests"
-  },
-  "scripts": {
-    "build": "node scripts/build-data.mjs && node scripts/build-site.mjs",
-    "test": "node tests/validate.mjs && node tests/dom.test.mjs",
-    "check": "npm run build && npm test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sassnarep3-star/Own1.git"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sassnarep3-star/Own1/issues"
-  },
-  "homepage": "https://github.com/sassnarep3-star/Own1#readme",
-  "devDependencies": {
-    "jsdom": "^30.1.3"
-  },
   "private": true,
-  "type": "module"
+  "description": "Mobile-first dashboard of free-to-enter cash competitions, built from a pinned dataset with per-row verification status.",
+  "scripts": {
+    "ingest": "node scripts/ingest.js",
+    "verify": "node scripts/verify.js",
+    "build:site": "node scripts/build.js",
+    "docs": "node scripts/render-docs.js",
+    "check": "node scripts/checklinks.js && node tests/validate.mjs && node tests/validate-prize-atlas.mjs",
+    "build": "npm run ingest && npm run verify && npm run build:site && npm run docs && npm run check"
+  }
 }

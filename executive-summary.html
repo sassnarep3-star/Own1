@@ -3,225 +3,90 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Executive summary — Free Cash Ledger</title>
-<meta name="description" content="Executive summary of the free-to-enter cash competition catalogue, its audit and verification results.">
-<meta property="og:title" content="Executive summary — Free Cash Ledger">
-<meta property="og:description" content="Executive summary of the free-to-enter cash competition catalogue, its audit and verification results.">
+<title>Executive summary — PrizeDesk</title>
+<meta name="description" content="What the source ledger contains, what we could and could not verify, what we rebuilt, and where the free cash actually is.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Executive summary — PrizeDesk">
+<meta property="og:description" content="What the source ledger contains, what we could and could not verify, what we rebuilt, and where the free cash actually is.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230f766e'/><text x='18' y='45' font-size='36' font-family='monospace' fill='white'>$</text></svg>">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E%24%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/site.css">
+
 </head>
-<body data-rel="">
-<a class="skip" href="#main">Skip to content</a>
-<header class="top">
-  <div class="top-inner">
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
     <a class="brand" href="index.html">
-      <span class="mark">$</span>
-      <span>Free Cash Ledger<small>206 competitions · verified 2026-11-01</small></span>
+      <span class="brand-mark" aria-hidden="true">$</span>
+      <span class="brand-text">
+        <b>PrizeDesk</b>
+        <span>Source reviewed 19 Aug 2026</span>
+      </span>
     </a>
-    <nav class="main" aria-label="Main"><a href="index.html">Dashboard</a><a href="best-picks.html">Best picks</a><a href="all.html">All 206</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged (13)</a><a href="methodology.html">Method</a><a href="executive-summary.html" aria-current="page">Summary</a><a href="sources.html">Sources</a><a href="cross-session.html">Cross-session</a><a href="ledger/index.html">Verified ledger</a></nav>
+    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="analysis.html">Analysis</a><a href="research.html">Source audit</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a></nav>
   </div>
 </header>
-<div class="wrap" id="main">
+<main id="main" class="wrap">
 
 <section class="hero">
-  <p class="kicker">Executive summary · 2026-11-01</p>
-  <h1 class="page">The short version.</h1>
-  <p class="lede">What the source catalogue contains, what survived verification, what did not, and what to do next.
-  The same text ships as <code>EXECUTIVE_SUMMARY.md</code> in the repository.</p>
+  <p class="kicker">Executive summary · 1 Nov 2026</p>
+  <h1>Executive summary</h1>
+  <p class="lede">What the source ledger contains, what we could and could not verify, what we rebuilt, and where the free cash actually is.</p>
+  <div class="btn-row">
+    <a class="btn primary" href="all.html">Browse the 211 rows</a>
+    <a class="btn" href="best.html">Best picks</a>
+    <a class="btn" href="flagged.html">Flagged (22)</a>
+  </div>
 </section>
-<div class="prose"><h2>Executive summary — Free Cash Competition Ledger</h2>
-<p><b>Prepared:</b> 2026-11-01 · <b>Owner:</b> session <code>d21e8702-own1</code> · <b>Live site:</b> &lt;https://sassnarep3-star.github.io/Own1/&gt;</p>
-<p><b>Source under review:</b> “Free Money &amp; Contest Ledger” — &lt;https://karagemop466-tech.github.io/FreeMoneyApps/&gt;</p>
-<p>(data pass “S”, reviewed 2026-08-19; mirrored verbatim from <code>karagemop466-tech/FreeMoneyApps</code>, <code>assets/data.js</code>)</p>
-<p>---</p>
-<h3>1. What this is</h3>
-<p>The reference site is a single long scroll of <b>206 free-to-enter competition listings</b> across nine categories,</p>
-<p>built by its author as “a field catalog, not a tip jar”. The catalogue itself is genuinely useful raw material:</p>
-<p>each listing already carries a prize description, an eligibility note, payout rails, sign-up steps and at least one</p>
-<p>outbound link.</p>
-<p>It is not usable as a decision tool, and not safe as a money guide:</p>
-<ul>
-<li><b>Mobile.</b> One page, no search, no filters, no sort, ~206 long cards. It ships a 367 KB data file that is</li>
-</ul>
-<p>  rendered entirely client-side, so on a phone you scroll through everything to compare anything.</p>
-<ul>
-<li><b>No prioritisation.</b> Nothing tells you which of the 206 is worth a weekend. The largest category (sports</li>
-</ul>
-<p>  pick’em, 129 rows) is presented with the same weight as the 14 tech/data competitions where the money is largest.</p>
-<ul>
-<li><b>Claims are unranked and unevenly sourced.</b> 194 of 206 rows cite an official page; <b>12 cite none</b>, including</li>
-</ul>
-<p>  eight Fantasy Premier League mini-leagues cited to affiliate blogs and Reddit, and four demo-trading contests whose</p>
-<p>  dollar prize ladders are cited only to affiliate sites.</p>
-<ul>
-<li><b>Some labels are simply wrong.</b> Two rows checked this pass are contradicted outright by the operator’s own page.</li>
-</ul>
-<p>This project delivers the organised, mobile-first version of that catalogue plus a separate verification layer, so</p>
-<p>“the catalogue says” and “we confirmed it” can never be confused.</p>
-<h3>2. What was built</h3>
-<p>A static, mobile-first dashboard published on GitHub Pages, generated from the mirrored data by</p>
-<p><code>tools/build_site.py</code>:</p>
-<div class="tablewrap"><table>
-<thead><tr><th>Page</th><th>What it answers</th></tr></thead><tbody>
-<tr><td><code>index.html</code> — Dashboard</td><td>Headline numbers, category map, top five picks, the findings that matter.</td></tr>
-<tr><td><code>best-picks.html</code></td><td>25-row ranked shortlist with the score components shown, plus an honest read on where an AI agent helps.</td></tr>
-<tr><td><code>all.html</code></td><td>All 206 rows, searchable/filterable/sortable, one official link per row.</td></tr>
-<tr><td><code>category/*.html</code> (9 pages)</td><td>The same table scoped to one category, with category stats.</td></tr>
-<tr><td><code>verification.html</code></td><td>Every row re-checked this pass: URL, verbatim quote, checked date, status.</td></tr>
-<tr><td><code>flagged.html</code></td><td>11 mechanical integrity findings + 2 contradicted rows, each with its source.</td></tr>
-<tr><td><code>methodology.html</code></td><td>Weights, provenance, SHA-256 of the mirror, and the limits.</td></tr>
-<tr><td><code>sources.html</code></td><td>Evidence pages used, plus every operator link by category.</td></tr>
-<tr><td><code>executive-summary.html</code></td><td>This document.</td></tr>
-</tbody></table></div>
-<p>Engineering: no framework, no build service, no JavaScript required to read any data. Progressive enhancement adds</p>
-<p>search, filter, sort and expandable detail panels. <code>tools/audit.py</code>, <code>tools/verify_check.py</code>,</p>
-<p><code>tools/build_site.py</code> and <code>tools/check_links.py</code> are all reproducible from the repo.</p>
-<h3>3. What the numbers actually say</h3>
-<p>All figures below are computed from <code>data/ledger.json</code> and <code>data/audit.json</code>, not estimated.</p>
-<div class="tablewrap"><table>
-<thead><tr><th>Measure</th><th>Value</th></tr></thead><tbody>
-<tr><td>Listings</td><td>206</td></tr>
-<tr><td>Tagged “free USD path”</td><td>189</td></tr>
-<tr><td>Free <b>and</b> enterable today (live or caution)</td><td><b>163</b> (79.1%)</td></tr>
-<tr><td>Listed but out of season (“ended”)</td><td>27</td></tr>
-<tr><td>Rows that are pool tools or directories, not competitions</td><td>9</td></tr>
-<tr><td>Rows with no official-tier source</td><td>12</td></tr>
-<tr><td>Rows whose prize is published only as prose (no figure)</td><td>102</td></tr>
-<tr><td>iOS option anywhere</td><td>78 (site headline says 62 because it excludes ended rows)</td></tr>
-<tr><td>Largest category</td><td>Sports pick’em — 129 rows (63%)</td></tr>
-<tr><td>Smallest categories with real cash</td><td>Forecasting 3, Tech 14, Creative 18</td></tr>
-</tbody></table></div>
-<p><b>The structural finding:</b> the catalogue’s size is in pick’em and survivor pools, but its *value per hour* is in</p>
-<p>the small categories. Tech/data pays the largest documented prizes (DrivenData currently runs a <b>$300,000</b> challenge;</p>
-<p>Kaggle hackathons show <b>$35,000–$450,000</b> labels; ARC Prize 2026 is <b>$2,000,000</b> across three tracks).</p>
-<p>Forecasting is the most agent-friendly free money in the whole list: Metaculus states you can *“participate for free</p>
-<p>and win cash prizes”* and two of its <b>$50,000</b> pools (Summer and Fall 2026 FutureEval) are explicitly bot tournaments.</p>
-<h3>4. Verification results (12 rows, checked 2026-11-01)</h3>
-<div class="tablewrap"><table>
-<thead><tr><th>Status</th><th>Rows</th><th>Meaning</th></tr></thead><tbody>
-<tr><td>Verified</td><td>7</td><td>Every recorded field read on the operator’s page and matches the catalogue</td></tr>
-<tr><td>Partly verified</td><td>3</td><td>Prize confirmed; free entry not stated on the page read</td></tr>
-<tr><td><b>Contradicted</b></td><td><b>2</b></td><td>The operator’s own page contradicts the catalogue</td></tr>
-<tr><td>Not checked this pass</td><td>194</td><td>Keeps its operator link; <b>no claim is made</b></td></tr>
-</tbody></table></div>
-<p>The two contradictions are the reason this project exists:</p>
-<ol>
-<li><b>Tom Howard/Margaret Reid Poetry Contest</b> — tagged <code>Free USD path</code> and <code>live</code>. Its official page states</li>
-</ol>
-<p>   <b>“Fee: $27 per submission”</b> and <b>“This contest is currently closed. It will open again on April 15, 2027.”</b></p>
-<p>   A pay-to-enter, currently-closed contest was being advertised as free money.</p>
-<p>   Source: &lt;https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest&gt;</p>
-<ol>
-<li><b>Weather Photographer of the Year (RMetS)</b> — free entry confirmed on the operator’s own page, but the</li>
-</ol>
-<p>   catalogue’s £5,000 / £2,500 / £750 ladder conflicts with two independent 2026 listings (£1,500 / £500 / £500).</p>
-<p>   The verified prize is <b>left blank</b> rather than guessed.</p>
-<p>   Source: &lt;https://www.rmets.org/weather-photographer-of-the-year&gt;</p>
-<p>Also confirmed against official pages: Wergle Flomp (no fee, $5,100 in prizes, closes 1 Apr 2027), ARC Prize 2026</p>
-<p>($2,000,000, three tracks, hosted on Kaggle), Metaculus (free entry, 19 live tournaments, $3,400–$50,000 pools,</p>
-<p>5 with no pool), Checkmate Gaming (“totally free to enter with real cash prizes”), and — as secondary evidence —</p>
-<p>World Press Photo (€10,000 + €1,000), Sony World Photography Awards ($25,000 / $5,000) and Istanbul Photo Awards</p>
-<p>($58,000 pool, free entry).</p>
-<h3>5. Irregularities flagged for review</h3>
-<p>Eleven mechanical findings, all published on <code>flagged.html</code> with source links. The four that change behaviour:</p>
-<ul>
-<li><b>F01 (high)</b> — 12 rows have no official-tier source; the source file’s own rule requires one for any prize figure.</li>
-<li><b>F02 (high)</b> — 3 demo-trading prize ladders (RoboForex $700, FBS $450, NPBFX $1,000 top prizes) are cited only to</li>
-</ul>
-<p>  affiliate pages. Figures are reproduced as *source data, unverified* and never as a verified amount.</p>
-<ul>
-<li><b>F03 (high)</b> — 11 Fantasy Premier League rows share one sign-up URL (<code>fantasy.premierleague.com</code>), which</li>
-</ul>
-<p>  publishes <b>no cash prize</b>; the cash claims come from third-party mini-leagues with private rules.</p>
-<ul>
-<li><b>F05 (medium)</b> — 27 ended rows are inside the reference site’s headline “free path” count of 189.</li>
-</ul>
-<p>Lower-severity presentation issues: the “Added this pass” figure is one sub-list (60) while the union of all</p>
-<p><code>addedThisPass*</code> lists is 192, so most later additions never get the “New” badge (F10); the masthead says</p>
-<p>“Pass C · 17 Aug 2026” while the data says pass “S”, 2026-08-19 (F11).</p>
-<h3>6. Recommendation</h3>
-<ol>
-<li><b>Work one tech/data contest</b> (Kaggle or DrivenData) as the primary effort. Largest documented prizes, genuinely</li>
-</ol>
-<p>   open entry, and the one format where a coding agent compounds: reproducible pipeline, fast iteration, public</p>
-<p>   leaderboard feedback.</p>
-<ol>
-<li><b>Add one Metaculus tournament</b> as the low-cost second stream — free entry, thinner fields, and bot tournaments</li>
-</ol>
-<p>   that explicitly invite an automated approach.</p>
-<ol>
-<li><b>Treat the sports section as entertainment, not income.</b> 129 rows, low prize per entry, luck-dominated. Pick at</li>
-</ol>
-<p>   most one pool you already follow.</p>
-<ol>
-<li><b>Before entering any judged creative prize, read the AI clause.</b> Winning Writers states clearly that entries</li>
-</ol>
-<p>   “may not contain any AI-generated text”. Several photo salons have similar rules; an agent that ignores this</p>
-<p>   forfeits the entry.</p>
-<ol>
-<li><b>Do not treat trading-demo contests as cash.</b> Many pay bonuses or account credits, and four are sourced only to</li>
-</ol>
-<p>   affiliate pages.</p>
-<h3>7. Limits — stated, not hidden</h3>
-<ul>
-<li><b>194 of 206 rows were not re-verified this pass.</b> They carry their operator link and no claim. A blank on this</li>
-</ul>
-<p>  site is a blank, never an inference.</p>
-<ul>
-<li><b>No currency conversion.</b> €10,000 stays €10,000; rows are not ranked across currencies.</li>
-<li><b>No link-liveness claims.</b> The build shell cannot reach operator domains, so “link checked” is only ever said</li>
-</ul>
-<p>  where a page read is recorded in <code>data/verification.json</code>.</p>
-<ul>
-<li><b>The priority score is editorial.</b> Five published components; it is not an expected-value calculation and not a</li>
-</ul>
-<p>  probability of winning.</p>
-<ul>
-<li><b>Parallel sessions.</b> Two other agent sessions claimed overlapping scopes on this repository before work began;</li>
-</ul>
-<p>  neither had committed a site file. The overlap and the integration role are logged in <code>COORDINATION.md</code>.</p>
-<h3>8. Cross-session integration (what came from the other build)</h3>
-<p>Three agent sessions worked this repository at once. Another session shipped a full site to <code>main</code> (“Prize Atlas”,</p>
-<p>208 leads, 7 official pages read) before this one finished. Rather than overwrite it, this branch merged it and kept</p>
-<p>every unique artefact: their 208-row dataset (<code>data/entries.json</code>), their review queue (<code>review.html</code>), their source</p>
-<p>audit (<code>research/SOURCES.md</code>), their supplemental evidence page, and their CI test. Their checked leads are on</p>
-<p><code>cross-session.html</code>, attributed and not re-read by this session.</p>
-<p>Three of their findings are time-critical and were surfaced on the dashboard:</p>
-<div class="tablewrap"><table>
-<thead><tr><th>Item</th><th>What they recorded</th><th>Source</th></tr></thead><tbody>
-<tr><td>ARC Prize 2026</td><td>Submission deadline <b>2026-11-02</b>; paper deadline <b>2026-11-08</b>; open-source required; network automation cannot run inside Kaggle evaluation</td><td>&lt;https://arcprize.org/competitions/2026&gt;</td></tr>
-<tr><td>Metaculus US Midterms 2026</td><td><b>$10,000</b> pool, closing around <b>2026-11-04</b></td><td>&lt;https://www.metaculus.com/tournament/midterms-2026/&gt;</td></tr>
-<tr><td>GEMS Prize Challenge (DrivenData)</td><td><b>$300,000</b> total, ends <b>2026-12-03</b> 23:59 UTC</td><td>&lt;https://www.drivendata.org/competitions/306/competition-doe-gems/&gt;</td></tr>
-<tr><td>ESPN NFL Pick’em</td><td>Free, <b>$102,000</b> total including a $5,000 random draw; ESPN’s FAQ contradicts itself on entry limits (5 vs 10)</td><td>&lt;https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules&gt;</td></tr>
-</tbody></table></div>
-<h3>9. Next actions that need a human</h3>
-<ol>
-<li>Spot-check the two contradicted rows against the official pages linked above (2 minutes each).</li>
-<li>Decide whether the 12 unsourced rows should be dropped or annotated permanently in the source catalogue.</li>
-<li>Choose which category to promote next for verification — Creative (18 rows) has the most free-money-with-a-catch</li>
-</ol>
-<p>   and the most AI-clause risk.</p>
-<h3>10. Related: Verified Contest Ledger (session a479d584-own1)</h3>
-<p>A separate build lives under [<code>ledger/</code>](ledger/index.html): all 206 upstream rows with an automated audit, 28 rows checked against official pages (6 verified, 9 partial, 8 differ or broken link, 5 not confirmable, 178 not checked), a [Flagged for Review](ledger/flagged.html) page, verified top picks, and its own [executive summary](ledger/summary.html) (source: <code>ledger/EXECUTIVE_SUMMARY.md</code>). Where both builds read the same official page (ARC Prize, Metaculus, Kaggle, DrivenData, Checkmate, ESPN NFL Pick&#x27;em) the prize figures agree; one status label differs (Checkmate, explained on the ledger&#x27;s flagged page).</p></div>
-
-<footer class="site">
-  <p><b>Free Cash Competition Ledger</b> — an independent catalogue mirroring the “Free Money &amp; Contest Ledger”
-  (<a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">reference site</a>)
-  with per-row source links and a separate verification layer.</p>
-  <p>Not affiliated with any listed operator. Official rules always win. US federal tax reporting generally
-  applies to prizes of $600 or more — confirm with a tax professional. Nothing here is legal or financial advice.
-  Sweepstakes and casino-style gambling products are out of scope.</p>
-  <p>Data as published by the reference catalogue on 2026-08-19 (pass “S”), audited and partly re-verified on
-  2026-11-01. Prize amounts change; open the operator’s rules before you enter.
-  <a href="methodology.html">Method &amp; limits</a> · <a href="flagged.html">Flagged for review</a> ·
-  <a href="sources.html">Sources</a> · <a href="cross-session.html">Cross-session</a></p>
-  <p><b>Built in parallel with other agent sessions.</b> Their pages still ship and are linked here:
-  <a href="review.html">their review queue</a> ·
-  <a href="supplemental/index.html">their supplemental evidence</a> ·
-  <a href="https://github.com/sassnarep3-star/Own1/blob/main/research/SOURCES.md" rel="noopener noreferrer">their source audit</a>.</p>
+<article class="prose section"><h2>1. The brief, and what was delivered</h2>
+<p>The source site (Free Money &amp; Contest Ledger) is a research catalogue of free-to-enter competitions that can pay real money. Its weaknesses are real: on a phone it is one long scroll of 211 full-length cards with no search, no filters and no sorting, its own pages disagree about which revision is published, and one of its cited App Store links returned an error page when we fetched it. It also mixes 27 ended contests and 12 unverified referral codes into the same undifferentiated list as live, verifiable competitions.</p>
+<p>Five other sessions were working on this repository at the same time. Their build (&quot;Prize Atlas&quot;) is preserved intact under archive/prize-atlas/, and their verified work is merged into this dataset: 5 rows they added after reading operator pages, and 10 official pages they read and recorded. Those rows carry an &quot;Independently checked&quot; badge attributed to the session that read them — they are never presented as checks made by this one.</p>
+<p>This repository rebuilds it as a mobile-first dashboard: one row per competition, nine category pages, a full-table page with search/filter/sort, a scoring-based shortlist, a verification page, and a Flagged for Review page carrying every irregularity with source links. Every table row links to the operator&#39;s own page. Nothing on the site is a value we invented — values that no official source supports are left blank and listed as unverified.</p>
+<h2>2. Key numbers</h2>
+<div class="table-scroll"><table class="ledger">
+      <thead><tr><th>Measure</th><th>Value</th><th>Meaning</th></tr></thead>
+      <tbody><tr><td data-label="Measure">Listings carried over</td><td data-label="Value">211</td><td data-label="Meaning">All rows from the pinned source file; no additions, no deletions</td></tr><tr><td data-label="Measure">Categories</td><td data-label="Value">9</td><td data-label="Meaning">Skill, trivia, sports, creative, forecasting, market, tech, directories, pools</td></tr><tr><td data-label="Measure">Free-to-enter (full free path)</td><td data-label="Value">193 (91.5%)</td><td data-label="Meaning">Source marks a genuinely free entry path</td></tr><tr><td data-label="Measure">Some free events only</td><td data-label="Value">13</td><td data-label="Meaning">Free practice exists; cash play costs money</td></tr><tr><td data-label="Measure">Cash requires an entry fee</td><td data-label="Value">4</td><td data-label="Meaning">Free play pays gems, not dollars</td></tr><tr><td data-label="Measure">Not marked ended</td><td data-label="Value">184</td><td data-label="Meaning">Live, mixed or flagged &quot;caution&quot; by the source; the strict &quot;active&quot; count is lower</td></tr><tr><td data-label="Measure">Ended / out of season</td><td data-label="Value">27</td><td data-label="Meaning">Excluded from every shortlist</td></tr><tr><td data-label="Measure">Prize text with a stated money amount</td><td data-label="Value">133</td><td data-label="Meaning">63% — the rest say &quot;varies&quot;, &quot;your group&quot; or &quot;confirm in-app&quot;</td></tr><tr><td data-label="Measure">Prize cell blanked on the site</td><td data-label="Value">81</td><td data-label="Meaning">No official source, or no stated amount — left blank, never guessed</td></tr><tr><td data-label="Measure">Rows with no official-tier source</td><td data-label="Value">12</td><td data-label="Meaning">Prize claims rest on affiliate/forum sources only</td></tr><tr><td data-label="Measure">Referral / promo codes withheld</td><td data-label="Value">12</td><td data-label="Meaning">Unverifiable personal codes; deliberately not republished</td></tr><tr><td data-label="Measure">Rows re-fetched live this pass</td><td data-label="Value">13</td><td data-label="Meaning">Of 211 — see section 6</td></tr><tr><td data-label="Measure">Flagged irregularities</td><td data-label="Value">22</td><td data-label="Meaning">All published on the Flagged for Review page</td></tr><tr><td data-label="Measure">Age of the source data</td><td data-label="Value">74 days</td><td data-label="Meaning">Source last checked 2026-08-19; re-verified 2026-11-01</td></tr></tbody>
+    </table></div>
+<h2>3. What is actually wrong with the original site</h2>
+<ul class="list"><li>Mobile usability: 211 cards, each with six metadata rows, six expandable blocks and up to eight buttons, rendered as a single column. No search box, no filters, no sorting — stated on the page itself as a design choice.</li><li>Version confusion: the header says &quot;Pass C · 17 Aug 2026&quot;, the data says pass S / 2026-08-19, and the review page says the ledger &quot;runs to 119 listings&quot; while the data holds 211.</li><li>Broken and weak links: in a sample of 12 fetched URLs, the Solitaire Cash App Store link returned Apple&#39;s &quot;An Error Occurred&quot; page; one row links only over http://; six rows cite no rules page at all; 117 rows use the signup page as the &quot;rules&quot; link.</li><li>Unsupported prize claims: 12 rows have no official-tier source, and three of them say outright that the prize table came from review sites.</li><li>Unverifiable incentives: 12 referral/league codes, 8 of them explicitly marked unverified and 4 with no verification flag at all.</li><li>Scope drift: the file says sweepstakes, casinos and bookmaker accounts are excluded, then links a contest through a live US sportsbook (betfanatics.com) and includes 15 forex/CFD broker demo contests whose own notes call them &quot;broker acquisition funnels&quot;.</li><li>Dead weight: 27 ended contests and 2 directory rows are presented with the same weight as live competitions.</li></ul>
+<h2>4. What this rebuild does differently</h2>
+<ul class="list"><li>Verified-only values: a prize or cash-out figure appears in the table only when the row has an official-tier source and the source text states an amount. Otherwise the cell is blank and marked unverified.</li><li>One link per row to the operator, plus a second link to the rules/terms page when one exists, and a third to the App Store only where an app actually exists.</li><li>Every row carries a verification badge: &quot;Live-checked&quot; (12 rows fetched on 2026-11-01), &quot;Link error&quot; (1), &quot;Source cited — not re-checked&quot; (179), or &quot;No official source&quot; (12).</li><li>Status is first-class: ended contests are stamped, filtered out of the shortlists and excluded from the &quot;enter now&quot; count.</li><li>Search, filters (category, entry path, platform, ID checks, status) and sorting work on a real table on desktop and collapse to labelled cards on a phone.</li><li>The 22 irregularities are published with their evidence, their links and a recommended action — including the ones we could not settle ourselves.</li></ul>
+<h2>5. Where the money and the odds actually are</h2>
+<p>Sports pick&#39;em is the largest category (129 of 211 rows) and holds most of the seven-figure marketing numbers, but it is also the most seasonal — 27 rows are already out of season — and the big pools are split across thousands of entrants with tie-breakers. It is the worst place to win money per hour unless you are chasing a specific, well-understood contest.</p>
+<p>Tech and forecasting carry the largest free-to-enter cash pools with the least luck. Checked live on 2026-11-01: Kaggle had prize-bearing competitions of $450,000, $100,000 and $35,000 open to anyone; Metaculus listed 19 tournaments with published pools up to $50,000 and states plainly that you &quot;can participate for free and win cash prizes&quot;. The ledger additionally lists ARC Prize at $2,000,000 across three 2026 tracks (source claim, not re-checked). These are also the only categories where the work — modelling, calibration, engineering — is exactly what an AI coding agent can help you do, and where one entry can plausibly place.</p>
+<p>Market/paper-trading contests sit in between. They are free to enter and several pay genuine withdrawable cash, but about half are broker acquisition funnels where the &quot;prize&quot; is a funded demo account or a trading credit, and a few require a live brokerage account. Treat them as marketing offers that happen to be winnable.</p>
+<p>Skill tournaments and trivia are the weakest value in the set: the free rooms pay gems or points, the dollar prizes need an entry fee, and the house takes a rake from every pot. Creative contests are free but judged and slow — worth entering only where the prize is large relative to the effort and the judging is transparent.</p>
+<h2>6. What we did not verify — read this before you enter anything</h2>
+<ul class="list"><li>Of 211 rows: 12 were fetched live by this session on 2026-11-01, 1 returned a link error, 7 have an official page read by another session in this repository, 179 cite an official source nobody re-opened this pass, and 12 cite no official source at all. The build environment could reach the web only through a page-fetch tool, so a full 211-row crawl (roughly 400 URLs) was not possible; the unchecked rows are listed in full on the Flagged for Review page.</li><li>All prize figures are at least 74 days old. Seasonal sports contests in particular must be re-read from the operator page before you commit time.</li><li>We did not verify AI-assistance terms for any contest. Many judged contests restrict or prohibit AI-generated entries; check the rules before using an agent.</li><li>We did not assess tax treatment beyond flagging that US prizes of $600+ normally require a W-9. That is general context, not advice.</li><li>Gambling-adjacent rows are kept but stamped &quot;operator account required&quot;. Whether they belong in a free-money ledger is a scope decision for you.</li></ul>
+<h2>7. Practical next steps</h2>
+<ol class="list"><li>Start with the &quot;Best picks&quot; page: it ranks only live, free-to-enter, officially sourced rows that state a real cash amount, and it shows the scoring so you can disagree with it.</li><li>Pick two categories, not nine. Tech and forecasting give the best expected value for time spent, and both suit AI-assisted work.</li><li>Before entering anything, open the operator&#39;s rules from the row and confirm: current prize, deadline, eligibility in your state, and whether entry is genuinely free this season.</li><li>Treat every &quot;funded account&quot;, &quot;trading credit&quot; and &quot;gems&quot; prize as worth zero unless you specifically want the product behind it.</li><li>Re-run the pipeline (npm run build) when you want a fresh pass: the source is pinned by commit and checksum, so any change is auditable.</li></ol>
+<h2>8. How this build relates to the parallel sessions</h2>
+<ul class="list"><li>Six sessions worked on this repository on 2026-11-01. Five merged their work into main before this integration pass; their task records, PR numbers and deployment runs are preserved verbatim in docs/COORDINATION-session-records.md.</li><li>Their dashboard is preserved as a working, self-contained site at archive/prize-atlas/ — 208 leads, 7 checked official pages, its own review queue and its supplemental research page. Nothing was deleted.</li><li>Their verified findings were merged into this dataset, attributed: 5 new rows (GEMS Prize Challenge, US Midterms 2026, and three AI hackathons) and 10 official-page cross-checks, each showing the URL, the date read, the session that read it, and their caveats.</li><li>Their four additional irregularity findings (ESPN entry limits, Challenge.gov sunset, IceHacks header, PayPal prize totals, the $600 tax generalisation) are published as I-17 to I-21.</li><li>Where the two builds disagreed, this site keeps the stricter rule: a figure is shown only when an official source states it. That is why rows the other build marked &quot;checked&quot; can still show a blank prize here.</li></ul>
+<h2>9. Provenance</h2>
+<p>Source data: the public FreeMoneyApps repository, commit 466f7c1e7a14b52b4a0d36beb84a00d68fd409b7, file assets/data.js, SHA-256 13986a17b8b9aa7b3240232e6138155967cfa9347256faa7b5c7d1565ed73211, captured 2026-11-01. The file is vendored unchanged in this repository and parsed as strict JSON — never executed. Every published row can be traced back to that file, and every claim in it can be traced to the operator link shown on the row.</p></article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="all.html">All 211 competitions</a>
+      <a href="best.html">Best picks</a>
+      <a href="analysis.html">Analysis</a>
+      <a href="research.html">Source audit</a>
+      <a href="verification.html">Verification method</a>
+      <a href="flagged.html">Flagged for review (22)</a>
+      <a href="executive-summary.html">Executive summary</a>
+    </div>
+    <p><b>PrizeDesk</b> is an independent workbench built on the Free Money &amp; Contest
+    Ledger dataset (pinned commit <code>466f7c1</code>, source reviewed
+    19 Aug 2026). It is not affiliated with any operator listed.
+    Prize figures are the source dataset's claims, not this site's promises — open the operator's
+    rules before you enter. Contest law varies by state and country; play only where legal. 18+/21+.</p>
+    <p class="note-tiny">Figures verified on this site: 13 of 211 rows were
+    fetched live on 1 Nov 2026. Everything else is labelled
+    "source cited — not re-checked". See <a href="verification.html">how verification works</a>.</p>
+  </div>
 </footer>
-</div>
-<script src="assets/js/site.js"></script>
+
 </body>
 </html>

@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://sassnarep3-star.github.io/Own1/sitemap.xml
