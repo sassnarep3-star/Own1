@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { crossFlags } from '../research/flags.mjs';
+import { parallelClaims } from '../research/parallel-claims.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 const entries = JSON.parse(fs.readFileSync(path.join(root, 'data/entries.json'), 'utf8'));
@@ -302,9 +303,13 @@ for (const e of entries.filter((x) => x.status !== 'unverified')) {
           ? '<span class="mutedtext">Not covered by the automated check</span>'
           : e.link.ok
           ? `<span class="pill good">Responded OK</span> <span class="small">checked ${esc(e.link.checkedAt.slice(0, 10))}</span>`
-          : e.link.hardFail
-          ? `<span class="pill bad">Failed: ${esc(e.link.status || e.link.error)}</span> <span class="small">checked ${esc(e.link.checkedAt.slice(0, 10))}</span>`
-          : `<span class="pill warn">Bot-blocked (${esc(e.link.status || e.link.error)}) — not evidence the page is gone</span>`
+          : e.link.state === 'dead'
+          ? `<span class="pill bad">Did not resolve: ${esc(e.link.status || e.link.error)}</span> <span class="small">checked ${esc(e.link.checkedAt.slice(0, 10))}</span>`
+          : e.link.state === 'redirect'
+          ? `<span class="pill warn">Redirect (${esc(e.link.status)}) not followed by the checker</span> <span class="small">open it manually before relying on this row</span>`
+          : e.link.state === 'bot-blocked'
+          ? `<span class="pill warn">Bot-blocked (${esc(e.link.status)}) — not evidence the page is gone</span>`
+          : `<span class="pill warn">Not confirmed (${esc(e.link.status || e.link.error)})</span>`
       }</dd>
     </dl>
     ${e.notes ? `<p class="small" style="margin-top:14px"><strong>Audit note.</strong> ${esc(e.notes)}</p>` : ''}
@@ -370,6 +375,17 @@ const reviewBody = `
   <div class="panel"><div class="table-wrap"><table>
     <thead><tr><th>Item</th><th>Finding</th><th>Source</th></tr></thead>
     <tbody>${flagRows}</tbody></table></div></div>
+
+  <div class="section-head"><div><h2>Claims recorded by another session, not verified here</h2>
+    <p>These prize and deadline values appear in a parallel build that was merged into this repository. That build marked the rows verified but recorded no quote for them, so they are published here as claims with their link — never in the prize column.</p></div></div>
+  <div class="panel"><div class="table-wrap"><table>
+    <thead><tr><th>Row id</th><th>Claim as recorded</th><th>Why it is not verified here</th><th>Link used</th></tr></thead>
+    <tbody>${parallelClaims.map((c) => `<tr>
+      <td data-label="Row"><span class="name">${esc(c.id)}</span></td>
+      <td data-label="Claim">${esc(c.claim)}</td>
+      <td data-label="Why">${esc(c.reason)}</td>
+      <td data-label="Link"><a href="${esc(c.url)}" target="_blank" rel="noopener noreferrer">Open ↗</a></td></tr>`).join('')}</tbody></table></div>
+    <div class="table-foot">To promote one of these into the verified ledger, read the official page, add the exact quote to <code>research/facts.mjs</code>, and rebuild.</div></div>
 
   <div class="section-head"><div><h2>Links that failed a real check</h2>
     <p>Every outbound URL was requested by an automated runner on ${esc((stats.linkCheckedOn || '').slice(0, 10) || stats.readOn)}. These ${hardFail.length} did not resolve at all. ${softFail.length} more answered with a bot block (403/429), which is <em>not</em> evidence the page is gone.</p></div></div>

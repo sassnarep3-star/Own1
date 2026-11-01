@@ -35,7 +35,7 @@ Two rules govern every page:
 | Leads with no operator link | 2 |
 | Links that failed a real check | 10 |
 
-**The honest headline: 8% of this catalog has been verified.** That is not a shortfall to hide — it is the actual state of the evidence, and the site is built so the difference is impossible to miss. Merging the reference catalog's August 2026 claims into the tables would have produced a prettier, fully-populated, unreliable site. This is the alternative.
+**The honest headline: 9% of this catalog has been verified.** That is not a shortfall to hide — it is the actual state of the evidence, and the site is built so the difference is impossible to miss. Merging the reference catalog's August 2026 claims into the tables would have produced a prettier, fully-populated, unreliable site. This is the alternative.
 
 ## 4. What the verified layer actually found
 
@@ -47,7 +47,8 @@ Two rules govern every page:
 | US Midterms 2026 (Metaculus) | Free | $10,000 pool | 2026-11-04 |
 | PayPal AI Hackathon | Free | Stated totals conflict — not asserted | 2026-11-12 |
 | Metaculus tournaments (13 funded) | Free | Largest active pool $50,000 | Rolling |
-| ESPN NFL Pick'em | Free | $102,000 total | Season |
+| ESPN NFL + College Pick'em | Free | $102,000 / $86,000 | Season |
+| CBS Pro Football Pick'em | Free | Amounts in rules §3 (not read) → blank | 2027-01-10 |
 | Wergle Flomp Humor Poetry | Free | $5,100 total | 2027-04-01 |
 | Sony World Photography Awards | Free | $25,000 / $5,000 | 2027-01-12 |
 | Environmental + Weather Photographer of the Year | Free | Not stated on page → blank | Annual |
@@ -66,7 +67,8 @@ Two rules govern every page:
 6. **PayPal's hackathon page and its own rules disagree** on the prize total; no figure is asserted.
 7. **Challenge.gov was sunset** on 2026-03-30 yet still appears in the reference catalog.
 8. **Two contests publish no cash amount** (EPOTY, Weather Photographer of the Year) — the prize cells are blank rather than filled from memory.
-9. **AI rules differ sharply.** Winning Writers prohibits AI-written entries; ARC Prize bans internet access during evaluation; Codex x TwitchCon explicitly permits AI coding assistants. Entering the wrong way voids the effort.
+9. **A parallel build marked 28 rows "verified" with no recorded quote.** Fifteen of its claims could not be confirmed from an official page and are published as claims, not facts; two of them were verified independently (ESPN College Pick'em, CBS Pick'em) and promoted.
+10. **AI rules differ sharply.** Winning Writers prohibits AI-written entries; ARC Prize bans internet access during evaluation; Codex x TwitchCon explicitly permits AI coding assistants. Entering the wrong way voids the effort.
 
 ## 6. What an AI agent is actually good for here
 

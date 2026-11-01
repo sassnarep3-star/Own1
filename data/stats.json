@@ -1,12 +1,12 @@
 {
  "readOn": "2026-11-01",
  "total": 211,
- "verified": 18,
+ "verified": 20,
  "partial": 6,
- "unverified": 187,
- "freeConfirmed": 11,
+ "unverified": 185,
+ "freeConfirmed": 13,
  "paidConfirmed": 1,
- "cashConfirmed": 14,
+ "cashConfirmed": 16,
  "noSource": 2,
  "categories": [
   {
@@ -69,5 +69,8 @@
  "linkOk": 166,
  "linkHardFail": 10,
  "linkSoftFail": 27,
+ "linkRedirect": 2,
+ "linkServerErr": 1,
+ "linkBotBlocked": 24,
  "linkHealthGenerated": "2026-11-01T13:47:33.737Z"
 }
