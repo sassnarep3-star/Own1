@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Static site generator. Reads data/upstream/ledger.json + data/finder-audit.json + data/verification/*.jsonl|picks.json
 // and writes: data/finder-ledger.json, data/finder-ledger.csv, index.html, picks.html, all.html, flagged.html, method.html,
-// summary.html, categories/*.html, EXECUTIVE_SUMMARY.md.   Run: node scripts/build.js
+// summary.html, categories/*.html, EXECUTIVE_SUMMARY.md.   Run: node scripts/build.cjs
 const fs = require('fs'), path = require('path');
 const root = path.join(__dirname, '..');
 const rd = f => fs.readFileSync(path.join(root, f), 'utf8');
@@ -225,16 +225,16 @@ page({
 <h2>Limitations (read this)</h2><ul>
 <li>Pages were read through a text fetcher, not a full browser: JavaScript-rendered listings (e.g. Zindi) and login-walled pages can't be read, and are reported as unverified.</li>
 <li>Only ${N.checked} of ${N.total} rows were opened against an official page. The rest are published with blank prize cells and the upstream claim tucked under “Details”. Re-run verification in a follow-up session; the board in <a href="${REPO}/blob/main/COORDINATION.md">COORDINATION.md</a> lists it as unclaimed.</li>
-<li>Outbound network access in the build environment is limited, so external links on the site cannot be machine-checked at build time; <code>scripts/linkcheck.js</code> validates every <i>internal</i> link and anchor, and external links were checked only where listed below.</li>
+<li>Outbound network access in the build environment is limited, so external links on the site cannot be machine-checked at build time; <code>scripts/linkcheck.cjs</code> validates every <i>internal</i> link and anchor, and external links were checked only where listed below.</li>
 <li>Eligibility, tax forms and full rules were read only where stated in a row's Details.</li></ul>
 <h2>Official pages fetched on ${CHECK_DATE}</h2><div class="tw"><table class="tbl simple"><thead><tr><th>Entry</th><th>Result</th><th>Official URL fetched</th></tr></thead><tbody>${logRows}</tbody></table></div>
-<h2>Reproduce</h2><pre>node scripts/audit.js   # automated checks → data/finder-audit.json
-node scripts/build.js   # merge + generate site
-node scripts/linkcheck.js</pre>`
+<h2>Reproduce</h2><pre>node scripts/audit.cjs   # automated checks → data/finder-audit.json
+node scripts/build.cjs   # merge + generate site
+node scripts/linkcheck.cjs</pre>`
 });
 
 // Dashboard
-const catCards = UP.types.map(t => { const l = rows.filter(r => r.type === t.id); const v = l.filter(r => ['verified', 'partial'].includes(r.check.outcome)).length; return `<a class="card cat" href="categories/${t.id}.html"><b>${esc(t.name)}</b><span class="big">${l.length}</span><span class="muted">${v} verified · ${l.filter(r => r.upstreamStatus === 'ended').length} ended</span></a>`; }).join('');
+const catCards = UP.types.map(t => { const l = rows.filter(r => r.type === t.id); const v = l.filter(r => r.check.outcome !== 'not-checked').length; return `<a class="card cat" href="categories/${t.id}.html"><b>${esc(t.name)}</b><span class="big">${l.length}</span><span class="muted">${v} checked · ${l.filter(r => r.upstreamStatus === 'ended').length} ended</span></a>`; }).join('');
 const soon = PICKS.filter(p => /2026-11-0[2-9]|Nov (0[2-9]|1[0-8])|Ends in 3 days/.test(p.window));
 page({
   file: 'index.html', title: 'Dashboard', active: 'index.html', desc: 'Find the best free-to-enter cash prize competitions. Every figure checked against official pages or left blank.',
@@ -268,7 +268,7 @@ Collect, organize and analyze free-to-enter competitions that can pay real cash,
 ## What was built
 - A GitHub Pages site (this repo): dashboard, verified **Top picks**, ${UP.types.length} category pages, an all-entries table with search/filters, a **Flagged for Review** page, a method/verification log, and CSV/JSON data exports.
 - Mobile-first layout: tables collapse to cards on phones, no web fonts, search and filters on every table.
-- Offline audit and build scripts (\`scripts/audit.js\`, \`scripts/build.js\`, \`scripts/linkcheck.js\`) so results are reproducible.
+- Offline audit and build scripts (\`scripts/audit.cjs\`, \`scripts/build.cjs\`, \`scripts/linkcheck.cjs\`) so results are reproducible.
 
 ## Verification result (read this first)
 | Outcome | Rows |
