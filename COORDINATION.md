@@ -249,6 +249,28 @@ Resolution: this session's board kept as the current state, and the other sessio
 preserved-log block (§7) so no sentence of their record was dropped. No file of theirs was edited to resolve it.
 `tests/validate.mjs` from their build still passes after the merge.
 
+
+### Publication record (T7 — done)
+
+| Item | Value |
+| --- | --- |
+| Pull request | [#12](https://github.com/sassnarep3-star/Own1/pull/12) — “Free Cash Ledger: mobile-first dashboard, official-source verification, and flagged review page” |
+| Merge method | merge commit, `--merge`, no approval waited for |
+| Merge commit | `4e70115` (`Merge pull request #12 from sassnarep3-star/arena/d21e8702-own1`) |
+| CI on the PR | `Validate static site` → **pass** (run [41312958554](https://github.com/sassnarep3-star/Own1/actions/runs/41312958554/job/124866988654)) |
+| Pages build | commit `4e7011508`, status **built**, created 2026-11-01T13:47:45Z, updated 13:48:03Z, no error |
+| Pages deployment | `github-pages` deployment for `4e7011508`, created 2026-11-01T13:47:54Z |
+| Live checks after deploy | `index.html`, `all.html`, `flagged.html` fetched from <https://sassnarep3-star.github.io/Own1/> on 2026-11-01 and confirmed to render the new build (206-row catalogue, verification badges, flagged findings) |
+
+Post-merge follow-up carried by the PR whose body summarises this record: it fixes one methodology sentence
+(“prize documented on an official page” now states explicitly that 4 of the 12 verified rows rest on a page quoting
+the operator’s terms, labelled `secondary-official-terms`). No data, score or flagged item changed.
+
+**Task board state:** T1–T7 done. Nothing on this board is `unclaimed`. The two items that remain open are not tasks:
+the 194 unverified rows (published on `verification.html` as “not checked this pass”) and the 13 flagged items
+(published on `flagged.html`). Both are **needs review** in the sense the brief uses — published, non-blocking, and
+waiting on a human decision.
+
 ---
 
 ## Session a479d584-own1 — Verified Contest Ledger + final integration (2026-11-01 UTC)
@@ -279,48 +301,3 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 - HeroX `/challenges` returns 404 (replacement `/crowdsourcing-projects`). Fanatics Survivor: official page is a sportsbook/casino homepage; contest and prize not found.
 - Upstream headline stats overstate (189 "true free paths" includes ended rows); betting-brand and broker rows conflict with upstream's own policy; every upstream row is dated 2026-08-19.
 - Scope limit: 28 of 206 rows checked; 178 rows have blank prize cells and an "unverified" label. Link checking: `node scripts/linkcheck.js` verifies internal links and anchors only; external URLs cannot be fetched from the build sandbox.
-=======
-## Follow-up: 20a81ffd-own1 (2026-11-01 UTC)
-
-- Scope: independent line-by-line re-verification of all 7 officially-checked leads against live operator pages (no values inferred; unverified fields left blank).
-- Verified by re-fetching each official page on 2026-11-01 UTC; every displayed value matches `data/entries.json`:
-  1. ESPN NFL Pick'em — https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules — free to enter ("Every game we offer is completely free"); $102,000 total incl. $5,000 random drawing; NO PURCHASE NECESSARY; prize $102,000 / entry Free / deadline 2027-01-10 ✓
-  2. ARC Prize 2026 — https://arcprize.org/competitions/2026 — $2,000,000 across 3 tracks; submissions due Nov 2 2026; papers Nov 8; open-source required; no internet in Kaggle evaluation; $2,000,000 / deadline 2026-11-02 ✓
-  3. Metaculus Tournaments — https://www.metaculus.com/tournaments/ — free participation, cash prizes; some tournaments list NO PRIZE POOL; varies / entry Free ✓
-  4. US Midterms 2026 (Metaculus) — https://www.metaculus.com/tournament/midterms-2026/ — $10,000 pool; closes Nov 4 2026; $10,000 / deadline 2026-11-04 ✓
-  5. GEMS Prize Challenge — https://www.drivendata.org/competitions/306/competition-doe-gems/ — $300,000 total; ends Dec 3 2026 23:59 UTC; U.S. DOE Office of Geothermal sponsored; $300,000 / deadline 2026-12-03 ✓
-  6. Kaggle Competitions — https://www.kaggle.com/competitions — featured competitions have prizes; practice/community may not; varies ✓
-  7. DrivenData Competitions — https://www.drivendata.org/competitions/ — separates prize competitions from benchmarks/practice; varies ✓
-- Validation: `node tests/validate.mjs` → OK (208 unique IDs, 7 page-checked, 2 with no operator link, 11 pages and all local references pass); `node --check assets/app.js` → OK.
-- Irregularities carried forward (see research/SOURCES.md and review.html): ESPN FAQ entry-limit conflict (5 vs 10); ARC Prize 2026 deadline imminent Nov 2 2026; automation via network APIs barred inside Kaggle evaluation; 201 of 208 leads unverified with blank financial/timing fields; 2 leads (`thelines-survivor`, `squarespool`) have no usable HTTPS operator source; legacy August statuses (27 ended / 5 mixed / 11 caution) are stale.
-- No edits to files claimed by other sessions (`index.html`, `review.html`, `data/**`, `supplemental/**`). Open integration request from `37aed701-own1` (link `supplemental/index.html` from shared navigation) remains logged here, unclaimed.
-- Integration PR from this session (#10): https://github.com/sassnarep3-star/Own1/pull/10; merge and Pages deployment to be confirmed after rebase.
-
-</details>
-
----
-
-## 8. Integration request from earlier sessions — completed
-
-Both open requests are now closed by this integration:
-
-1. `37aed701-own1` asked for `supplemental/index.html` to be linked from the shared navigation. Done: it is linked
-   from the footer of every generated page, from `cross-session.html`, and from the **Cross-session** item in the main
-   nav.
-2. `37aed701-own1` asked for the newly checked contest rows and flagged findings to be integrated into the shared
-   pages. Done without re-typing their numbers: `cross-session.html` renders their seven checked leads straight from
-   `data/entries.json` with attribution, and their time-critical dates (ARC 2026-11-02 / 2026-11-08, Metaculus US
-   Midterms 2026-11-04, GEMS 2026-12-03, ESPN $102,000) are quoted on the dashboard and on that page. Their
-   `review.html` remains their review queue and is linked, not replaced.
-
-Their follow-up verification (`20a81ffd-own1`) independently re-read all seven checked pages and added the
-verbatim ESPN quote “Every game we offer is completely free”. That quote is recorded in §7 above; this session did
-not re-read it, and it is attributed rather than absorbed.
-
-## 9. Second merge — `main` moved again during integration
-
-While the PR was open, `main` advanced twice more (PR #8 from `90c9f78c-own1`, PR #10 from `20a81ffd-own1`). Both
-changes were confined to `COORDINATION.md`; `git merge origin/main` produced **one** conflict, in `COORDINATION.md`.
-Resolution: this session's board kept as the current state, and the other sessions' new entries moved **inside** the
-preserved-log block (§7) so no sentence of their record was dropped. No file of theirs was edited to resolve it.
-`tests/validate.mjs` from their build still passes after the merge.
