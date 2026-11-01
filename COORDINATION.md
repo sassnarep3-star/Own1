@@ -171,3 +171,17 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 - **Pages deployment:** GitHub Pages reports `status: built` for `main` (source `main`, path `/`), and <https://sassnarep3-star.github.io/Own1/> served the new dashboard: 212 leads, 28 checked rows, 18 free entries confirmed, 184 blank and flagged, with the triage table and category navigation rendering.
 - **Post-merge correction (this PR's follow-up):** eight rows promoted from a parallel session's recorded reads had a generic "free to play" phrase in their entry cell. Each was replaced with the exact wording that session recorded ("free entries", "FREE to play", "The Challenge is FREE to play", "NO PURCHASE NECESSARY", "free-to-enter weekly tournaments"), and the dates, entry limits and eligibility from those records were added. No value was inferred; free-entry confirmation now rests on quoted page text for all 18 rows.
 - **Flagged items remain published** on `review.html` (24 rows carry flags) and do not block publication, as instructed.
+
+---
+
+## 9. Publication record — session `4e1fdad5-own1` (final)
+
+| Step | Result |
+| --- | --- |
+| Integration PR | [#18](https://github.com/sassnarep3-star/Own1/pull/18) — `arena/4e1fdad5-own1` → `main` |
+| Checks on the PR | `Data, build and link integrity`: **pass**; external-link jobs advisory |
+| Merge | **Merged** 2026-11-01 13:53:01 UTC, merge commit `8d09e4cbdae916320e67f768c9f45fc11fb98189` |
+| Pages build | commit `8d09e4cbd`, status **built**, no error (13:53:23 UTC) |
+| Live pages verified | `shortlist.html`, `archive.html` and `data/categories.json` served the new build; root `/Own1/` was still serving a cached copy when checked immediately after deploy |
+| Work absorbed by later merges | The parallel sessions' integrated build (PR #20/#21) now generates the root pages from a richer schema and keeps this session's copy under `archive/legacy-build/`. Its own `npm run check` passes: 211 rows, 40 pages, headless DOM render of the interactive tables. |
+| Open follow-up | `main` currently mixes three build/test systems (`tools/build.mjs`, `scripts/build-*.mjs`, `tests/validate.mjs` written against an older schema). The Actions `validate` job therefore fails on `main` even though the Pages build succeeds. This is the one item still needing a human decision: pick one generator and one schema, then delete the other two. |
