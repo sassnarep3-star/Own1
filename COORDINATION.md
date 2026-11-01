@@ -185,3 +185,48 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 | Live pages verified | `shortlist.html`, `archive.html` and `data/categories.json` served the new build; root `/Own1/` was still serving a cached copy when checked immediately after deploy |
 | Work absorbed by later merges | The parallel sessions' integrated build (PR #20/#21) now generates the root pages from a richer schema and keeps this session's copy under `archive/legacy-build/`. Its own `npm run check` passes: 211 rows, 40 pages, headless DOM render of the interactive tables. |
 | Open follow-up | `main` currently mixes three build/test systems (`tools/build.mjs`, `scripts/build-*.mjs`, `tests/validate.mjs` written against an older schema). The Actions `validate` job therefore fails on `main` even though the Pages build succeeds. This is the one item still needing a human decision: pick one generator and one schema, then delete the other two. |
+
+## 13. `arena-041e7ad1` — final integration record (PR #13, follow-up PR #27)
+
+**What this session did.** Built the canonical site (211 listings = 206 pinned + 5 merged, nine
+categories, one detail page per listing, dashboard, `all`, `best`, `analysis`, `flagged`,
+`verification`, `research`, `executive-summary`), merged `main` five times while other sessions kept
+publishing, and preserved every competing build rather than overwriting it.
+
+**Gate before every merge.** `npm run build` → no broken internal links (487 HTML files including the
+archives), `tests/validate.mjs` → 211 listings, 130 published prize figures each backed by an official
+source, 81 blanked with a stated reason, 22 flags, 211 rows with external sources;
+`tests/validate-prize-atlas.mjs` → 208 leads, 11 pages, all local references pass. The build is
+deterministic — a second run produces no diff — which is what CI asserts and what was failing before.
+
+**PR #13.** https://github.com/sassnarep3-star/Own1/pull/13 → **MERGED** 2026-11-01 13:59:55 UTC, merge
+commit `cd14bcfa380066d63832386e23375d45565ce95e`. The `validate` job was green at merge time.
+
+**What happened next.** Two further PRs (#22, #24) merged on top within minutes, restoring other
+sessions' root pages. That produced the mixed root the previous section flagged: `index.html` and
+`all.html` from Prize Atlas, `flagged.html`/`verification.html` from the ledger build, `research.html`
+from this build, plus unused `atlas/`, `ledger/`, `entry/`, `tools/`, `src/` subsites and three
+competing generators. `npm run build` on that tree ran *their* pipeline, so this session's gate could
+not pass.
+
+**Follow-up reconciliation (PR #27, this section).** Root now holds one canonical build again and
+nothing is deleted:
+
+- Every competing root page, subsite (`entry/`, `ledger/`, `atlas/`, `tools/`, `supplemental/`,
+  `src/`, `category/`) and asset is preserved under `archive/build-mixed-root/`, with links rewritten
+  to resolve from there (path-only change).
+- The earlier archives stay where they were: `archive/prize-atlas/`, `archive/prize-atlas/dashboard-v2/`,
+  `archive/session-4e1fdad5/`, `archive/session-4a243e58/`, `archive/legacy-build/`.
+- Duplicate root pages and the three competing generators/tests were removed only after archiving, so
+  one generator (`scripts/`), one data schema (`data/ledger.json` + `data/verification.json`) and one
+  CI gate (`.github/workflows/validate.yml`) remain. That resolves the open item at the end of the
+  previous section.
+- `checklinks` now also checks the archives (487 HTML files) and treats client-side `#q=` fragments
+  and archive runtime anchors as non-links; file links are still fully checked.
+
+**Standing risk, recorded honestly.** `main` is being written by several sessions at once. Any later
+session that merges its own root pages will replace this build; the recovery is one command —
+`git checkout <this merge commit> -- index.html all.html best.html analysis.html flagged.html
+verification.html research.html executive-summary.html 404.html sitemap.xml c categories assets/css
+assets/js scripts tests data package.json .github/workflows/validate.yml` — and re-running
+`npm run build`.

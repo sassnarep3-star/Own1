@@ -1,12 +1,8 @@
-name: Validate site
+name: Validate static site
 
 on:
   push:
   pull_request:
-  workflow_dispatch:
-
-permissions:
-  contents: read
 
 jobs:
   validate:
@@ -16,19 +12,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate data and built site
+
+      # Rebuild every page from the pinned data, then run the gates.
+      - name: Rebuild site from data
+        run: npm run build
+
+      # No build output may differ from what is committed: catches hand-edited HTML.
+      - name: Generated site is current
+        run: git diff --exit-code --stat
+
+      - name: Validate merged dataset and published pages
         run: node tests/validate.mjs
-      - name: Check committed pages match the data
-        run: |
-          node tools/build.mjs
-          if [ -n "$(git status --porcelain -- index.html analysis.html methodology.html review.html category)" ]; then
-            echo "::error::Committed pages are out of date. Run 'node tools/build.mjs' and commit the result."
-            git --no-pager diff --stat
-            exit 1
-          fi
-      - name: Validate supplemental research page
-        run: python3 supplemental/check.py
-      - name: Verify mobile layout assumptions
-        run: |
-          grep -q "@media (max-width: 760px)" assets/style.css
-          ! grep -rqE "min-width: *[6-9][0-9][0-9]px" index.html category review.html analysis.html methodology.html
+
+      - name: Validate the archived Prize Atlas build (parallel sessions)
+        run: node tests/validate-prize-atlas.mjs
+
+      - name: Check every internal link and anchor
+        run: node scripts/checklinks.js
