@@ -1,139 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Trivia competitions — free-to-enter cash competitions — Free Cash Ledger</title>
-<meta name="description" content="Live or async quiz contests. Free daily plays exist on some apps. Prize pools are split among remaining winners. 2 competitions, each with an official source link.">
-<meta property="og:title" content="Trivia competitions — free-to-enter cash competitions — Free Cash Ledger">
-<meta property="og:description" content="Live or async quiz contests. Free daily plays exist on some apps. Prize pools are split among remaining winners. 2 competitions, each with an official source link.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230f766e'/><text x='18' y='45' font-size='36' font-family='monospace' fill='white'>$</text></svg>">
-<link rel="stylesheet" href="../assets/css/style.css">
+<meta name="description" content="Trivia &amp; quizzes: free-to-enter cash competition leads with official-source verification status.">
+<title>Trivia &amp; quizzes · Prize Atlas</title>
+<link rel="stylesheet" href="../assets/style.css">
 </head>
-<body data-rel="../">
-<a class="skip" href="#main">Skip to content</a>
-<header class="top">
-  <div class="top-inner">
-    <a class="brand" href="../index.html">
-      <span class="mark">$</span>
-      <span>Free Cash Ledger<small>206 competitions · verified 2026-11-01</small></span>
-    </a>
-    <nav class="main" aria-label="Main"><a href="../index.html">Dashboard</a><a href="../best-picks.html">Best picks</a><a href="../all.html">All 206</a><a href="../verification.html">Verification</a><a href="../flagged.html">Flagged (13)</a><a href="../methodology.html">Method</a><a href="../executive-summary.html">Summary</a><a href="../sources.html">Sources</a><a href="../cross-session.html">Cross-session</a><a href="../ledger/index.html">Verified ledger</a></nav>
-  </div>
-</header>
-<div class="wrap" id="main">
+<body data-base="../" data-page="category" data-category="trivia">
+<header class="topbar"><div class="shell">
+  <a class="brand" href="../index.html"><span class="mark">✳</span> Prize Atlas</a>
+  <nav class="topnav" aria-label="Main">
+    <a href="../index.html">Dashboard</a>
+    <a href="../playbook.html">Playbook</a>
+    <a href="../sources.html">Sources</a>
+    <a href="../review.html" class="review-link">Flagged (193)</a>
+    
+  </nav>
+</div></header>
 
-<section class="hero">
-  <p class="kicker"><a href="../index.html">Dashboard</a> / Category</p>
-  <h1 class="page">Trivia competitions <span style="color:#64748b;font-size:.6em">(2)</span></h1>
-  <p class="lede">Live or async quiz contests. Free daily plays exist on some apps. Prize pools are split among remaining winners.</p>
-  <div class="stats">
-    <div class="stat"><b>2</b><span>rows in this category</span></div>
-    <div class="stat"><b>1</b><span>free &amp; enterable today</span></div>
-    <div class="stat"><b>0</b><span>re-verified this pass</span></div>
-    <div class="stat"><b>Low</b><span>AI-agent fit (editorial)</span></div>
+<main class="shell main">
+  <div class="page-intro" style="margin:18px 0 6px">
+    <div class="eyebrow">Category</div>
+    <h1 style="margin:6px 0 8px;font-size:clamp(24px,5vw,34px);letter-spacing:-.02em">Trivia &amp; quizzes</h1>
+    <p class="small" style="max-width:70ch">Quiz and knowledge formats. 1 of 2 entries have had an official page read; the rest are leads with blank cells.</p>
   </div>
-</section>
-  <div class="legend" style="font-size:12.5px;color:#64748b;margin:0 0 10px;line-height:1.9">
-    <b style="color:#101828">Legend</b> ·
-    <span class="badge b-free">Free to enter</span> catalogue says entry is free ·
-    <span class="badge b-partial">Some free events</span> mixed ·
-    <span class="badge b-paid">Cash needs an entry fee</span> ·
-    <span class="badge b-verified">Verified</span> checked against the operator’s page ·
-    <span class="badge b-partially">Partly verified</span> some fields only ·
-    <span class="badge b-contradicted">Contradicted</span> operator page disagrees ·
-    <span class="badge b-unverified">Source data only</span> not re-checked.
-    “Prize (as published)” is the catalogue’s own wording; “Verified prize” is only filled from a quoted official page.
-  </div>
-  <div class="toolbar">
-    <input id="q" type="search" placeholder="Search name, category, prize…" aria-label="Search competitions">
-    <label class="chip"><input type="checkbox" id="freeOnly"> Free to enter only</label>
-    <label class="chip"><input type="checkbox" id="liveOnly"> Live only</label>
-    <select id="sort" aria-label="Sort">
-      <option value="score">Sort: priority score</option>
-      <option value="prize">Sort: verified prize</option>
-      <option value="name">Sort: name</option>
-    </select>
-    <span class="count" id="shown">—</span>
-  </div>
-  <div class="table" id="catalogue">
-    <div class="thead">
-      <div>Competition</div><div>Free to enter</div><div>Prize (as published)</div>
-      <div>Verified prize</div><div>Official source</div>
-    </div>
-      <div class="row" id="swagbucks-trivia" data-id="swagbucks-trivia" data-name="Swagbucks Daily Trivia"
-           data-free="full" data-live="1"
-           data-score="52" data-prize="0" data-search="swagbucks-trivia swagbucks daily trivia free live and on-demand trivia games that pay in sb points, redeemable for paypal cash or gift cards. trivia competitions live sb points redeemable for paypal cash / gift cards">
-        <div class="cell">
-          <div class="name"><a href="#swagbucks-trivia">Swagbucks Daily Trivia</a></div>
-          <p class="short">Free live and on-demand trivia games that pay in SB points, redeemable for PayPal cash or gift cards.</p>
-          <div class="badges">
-            <span class="badge ">Trivia competitions</span>
-            <span class="badge b-live">Live</span>
-            <span class="badge b-unverified">source data only</span>
-          </div>
-          <details class="more" data-entry="swagbucks-trivia">
-            <summary>Details</summary>
-            <div class="detail-slot"></div>
-          </details>
-        </div>
-        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-free">Free to enter (per catalogue)</span></div>
-        <div class="cell"><span class="lbl">Prize (as published)</span>
-          <div class="prize">SB points redeemable for PayPal cash / gift cards</div></div>
-        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
-        <div class="cell"><span class="lbl">Official source</span>
-          <div class="links"><a class="btn primary" href="https://www.swagbucks.com/" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://help.swagbucks.com/hc/en-us/articles/15374709231764-What-is-Swagbucks-Daily-Trivia" rel="noopener noreferrer nofollow">Rules ↗</a><a class="btn" href="https://apps.apple.com/us/app/swagbucks-trivia-for-money/id1325285782" rel="noopener noreferrer nofollow">iOS ↗</a></div>
-          <span class="badge ">priority 52/100</span>
-        </div>
-      </div>
-      <div class="row" id="givling" data-id="givling" data-name="Givling"
-           data-free="partial" data-live="0"
-           data-score="21" data-prize="0" data-search="givling givling ios/android trivia. two free plays per day. weekly team jackpots in usd plus a controversial student-loan queue. trivia competitions ended / out of season trivia removed — no longer a trivia contest">
-        <div class="cell">
-          <div class="name"><a href="#givling">Givling</a></div>
-          <p class="short">iOS/Android trivia. Two free plays per day. Weekly team jackpots in USD plus a controversial student-loan queue.</p>
-          <div class="badges">
-            <span class="badge ">Trivia competitions</span>
-            <span class="badge b-ended">Ended / out of season</span>
-            <span class="badge b-unverified">source data only</span>
-          </div>
-          <details class="more" data-entry="givling">
-            <summary>Details</summary>
-            <div class="detail-slot"></div>
-          </details>
-        </div>
-        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-partial">Some free events</span></div>
-        <div class="cell"><span class="lbl">Prize (as published)</span>
-          <div class="prize">Trivia removed — no longer a trivia contest</div></div>
-        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
-        <div class="cell"><span class="lbl">Official source</span>
-          <div class="links"><a class="btn primary" href="https://www.givling.com/" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://apps.apple.com/us/app/givling/id966107040" rel="noopener noreferrer nofollow">iOS ↗</a></div>
-          <span class="badge ">priority 21/100</span>
-        </div>
-      </div>
-  </div>
-
-<h2 class="sec">Other categories</h2>
-<div class="links"><a class="btn" href="skill.html">Skill tournaments (12)</a><a class="btn" href="sports.html">Fantasy &amp; sports picks (129)</a><a class="btn" href="creative.html">Creative contests (18)</a><a class="btn" href="forecasting.html">Forecasting tournaments (3)</a><a class="btn" href="market.html">Market competitions (19)</a><a class="btn" href="tech.html">Tech &amp; data competitions (14)</a><a class="btn" href="directory.html">Directories &amp; forums (2)</a><a class="btn" href="pools.html">Free pool &amp; league platforms (7)</a></div>
-
-<footer class="site">
-  <p><b>Free Cash Competition Ledger</b> — an independent catalogue mirroring the “Free Money &amp; Contest Ledger”
-  (<a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">reference site</a>)
-  with per-row source links and a separate verification layer.</p>
-  <p>Not affiliated with any listed operator. Official rules always win. US federal tax reporting generally
-  applies to prizes of $600 or more — confirm with a tax professional. Nothing here is legal or financial advice.
-  Sweepstakes and casino-style gambling products are out of scope.</p>
-  <p>Data as published by the reference catalogue on 2026-08-19 (pass “S”), audited and partly re-verified on
-  2026-11-01. Prize amounts change; open the operator’s rules before you enter.
-  <a href="../methodology.html">Method &amp; limits</a> · <a href="../flagged.html">Flagged for review</a> ·
-  <a href="../sources.html">Sources</a> · <a href="../cross-session.html">Cross-session</a></p>
-  <p><b>Built in parallel with other agent sessions.</b> Their pages still ship and are linked here:
-  <a href="../review.html">their review queue</a> ·
-  <a href="../supplemental/index.html">their supplemental evidence</a> ·
-  <a href="https://github.com/sassnarep3-star/Own1/blob/main/research/SOURCES.md" rel="noopener noreferrer">their source audit</a>.</p>
-</footer>
+  
+  <div class="panel">
+    <div class="toolbar">
+  <input class="f-search" type="search" placeholder="Search name, operator, prize…" aria-label="Search listings">
+  <select class="f-status" aria-label="Verification status">
+    <option value="">All statuses</option><option value="verified">Page checked</option>
+    <option value="partial">Partly checked</option><option value="unverified">Unverified</option>
+  </select>
+  
+  <select class="f-sort" aria-label="Sort"><option value="fit">Sort: best fit</option><option value="deadline">Sort: deadline</option><option value="status">Sort: status</option><option value="name">Sort: name</option></select>
 </div>
-<script src="../assets/js/site.js"></script>
-</body>
-</html>
+    <div id="rows" aria-live="polite">Loading…</div>
+    <div class="table-foot">Loading…</div>
+  </div>
+  <div class="notice"><strong>How to read a row.</strong> “Page checked” links to that entry's evidence page with the exact quote. “Lead link” is an unverified URL inherited from the reference catalog — it may be stale or wrong, and a good URL is not proof of a prize.</div>
+  <p class="small"><a href="../index.html">← All categories</a> · <a href="../playbook.html">How to choose one</a> · <a href="../review.html">What is flagged</a></p>
+</main>
+<footer class="footer"><div class="shell">
+  <span>Prize Atlas — an evidence ledger, not a tip jar. Research, not financial or legal advice. Facts read 2026-11-01.</span>
+  <span><a href="../sources.html">Method &amp; sources</a> · <a href="../review.html">Flagged for review</a> · <a href="../supplemental/index.html">Supplemental audit</a> · <a href="https://github.com/sassnarep3-star/Own1">Repository</a></span>
+</div></footer>
+<script src="../data/site-data.js"></script>
+<script src="../assets/app.js" defer></script>
+</body></html>

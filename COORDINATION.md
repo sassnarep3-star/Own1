@@ -301,3 +301,38 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 - HeroX `/challenges` returns 404 (replacement `/crowdsourcing-projects`). Fanatics Survivor: official page is a sportsbook/casino homepage; contest and prize not found.
 - Upstream headline stats overstate (189 "true free paths" includes ended rows); betting-brand and broker rows conflict with upstream's own policy; every upstream row is dated 2026-08-19.
 - Scope limit: 28 of 206 rows checked; 178 rows have blank prize cells and an "unverified" label. Link checking: `node scripts/linkcheck.js` verifies internal links and anchors only; external URLs cannot be fetched from the build sandbox.
+
+---
+
+## 10. Integration session `4a243e58-own1` — rebuild and final merge
+
+**Claim:** dataset (`data/**`, `scripts/**`, `research/**`), generated pages (`index.html`, `category/**`, `entry/**`, `review.html`, `sources.html`, `playbook.html`), client assets (`assets/app.js`, `assets/style.css`), `tests/**`, `.github/workflows/validate.yml`, `README.md`, `EXECUTIVE_SUMMARY.md`.
+
+**What changed and why.** The repository by this point held two parallel dashboard builds plus a 208-row catalogue in which 7 rows were checked. This session rebuilt the data layer so a value can only enter the site through a quoted official page, regenerated every page from that data, and measured link health instead of asserting it.
+
+| Change | Detail |
+| --- | --- |
+| Evidence-first data model | `research/facts.mjs` is the only place a prize, fee, deadline or eligibility value may be written, and each carries URL + exact quote + date read. `scripts/build-data.mjs` merges that with the inherited catalogue. |
+| Verification | **18 entries page-checked (48 quoted facts), 6 partly checked, 187 unverified.** Newly verified in this session: Codex x TwitchCon, PayPal AI Hackathon, Checkmate Gaming, Wergle Flomp, Sony World Photo, ESPN, Metaculus (+ Midterms), ARC Prize, Kaggle, NFL Big Data Bowl, DrivenData, GEMS, Tom Howard, TradingView, Givling, EPOTY, Weather POTW. |
+| Link health | Every outbound URL requested by a GitHub runner (203 URLs): 166 OK, **10 dead outright**, 27 bot-blocked. Published on the flagged page and per row. |
+| Corrections to the inheritance | Tom Howard is **paid** ($27), not free. TradingView links a **closed** edition. Givling is a **crowdfunding queue**, not a contest. Two leads have **no operator link**. |
+| Tests | `tests/validate.mjs` fails on any unsourced/blank-violating value, cross-host evidence, broken local link or duplicate id. `tests/dom.test.mjs` renders the tables in jsdom and proves the filters actually filter. CI rebuilds and fails on drift. |
+
+**Merge resolution (this session).** Rebase/merge over 17 commits from sessions `90c9f78c`, `20a81ffd`, `37aed701` and `d21e8702` produced conflicts in `COORDINATION.md`, `README.md`, `EXECUTIVE_SUMMARY.md`, `index.html`, `sources.html`, `tests/validate.mjs` and the nine category pages. Resolution:
+
+- **Generated pages:** this session's generator is canonical, so its outputs were kept (they are reproducible with `npm run build`).
+- **`COORDINATION.md`:** the board from `d21e8702-own1` is preserved in full above; this section is appended, so no session's record is dropped.
+- **Parallel build preserved, not deleted:** `all.html`, `best-picks.html`, `404.html`, `methodology.html`, `verification.html`, `flagged.html`, `cross-session.html`, `executive-summary.html`, `assets/css/style.css`, `assets/js/**`, `data/ledger.json`, `data/audit.json`, `data/verification.json`, `data/source-data.js`, `tools/*.py` all remain in place and are linked from `sources.html`.
+- **`tools/build_site.py` renamed to `tools/build_site_legacy.py`** and marked non-canonical: it writes the same paths as the canonical generator, so running both would silently overwrite pages. No CI job invokes it.
+- **`tests/validate.mjs`:** this session's stricter gate replaced the earlier version; the legacy Python checks (`tools/*.py`) were left untouched.
+- **Fact overlap:** `d21e8702-own1`'s `data/verification.json` claimed Checkmate Gaming, World Press Photo and Istanbul Photo Awards. All three were re-read here; Checkmate is verified, the two photo awards publish no fee or amount on the page read and are therefore `partial` with blank cells, and that difference is recorded in `research/facts.mjs`.
+
+**Publication:** (recorded below once complete)
+
+### Second merge, same session (2026-11-01)
+
+`main` advanced again (PR #11, session `a479d584-own1`) while this PR was open, touching `COORDINATION.md`, `README.md`, `EXECUTIVE_SUMMARY.md`, the shared generated pages and adding `assets/finder.css` / `assets/finder.js`. Conflicts were resolved as follows and nothing was deleted:
+
+- Generated pages (`index.html`, `review.html`, `sources.html`, `category/**`) kept from this session, because they are reproducible with `npm run build`; `assets/finder.*` and the `404.html` / `all.html` / `best-picks.html` updates were kept from `main`.
+- `COORDINATION.md`: `main`'s board taken verbatim, then this session's §10 appended — no other session's text dropped.
+- `README.md` and `EXECUTIVE_SUMMARY.md`: this session's versions kept, as they describe the data pipeline and the current coverage figures.
