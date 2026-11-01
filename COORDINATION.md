@@ -7,10 +7,11 @@ Session ID: `27a86924-own1` (Arena branch `arena/27a86924-own1`). This session o
 | Audit source ledger and official evidence | Done | 27a86924-own1 | `research/**`, `COORDINATION.md` | Source: https://karagemop466-tech.github.io/FreeMoneyApps/ ; official links checked separately. |
 | Build responsive category dashboard and review page | Done | 27a86924-own1 | `index.html`, `category/**`, `review.html`, `assets/**`, `data/**`, `.github/**`, `README.md`, `COORDINATION.md` | Initial integration in one session; shared outputs owned here. |
 | Validate and publish GitHub Pages | Done | 27a86924-own1 | deployment/PR and `COORDINATION.md` | Claim after build and verification. |
+| Improve mobile listing readability and evidence labels | Done | 85ca8130-own1 | `assets/app.js`, `assets/style.css`, `tests/validate.mjs`, `COORDINATION.md` | Cards under 700px, explicit research-lead label, filter only rows with documented free entry; no data/category changes. |
 
 ## Requests / handoffs
 
-None. Do not edit files claimed by another active session. Claims older than 60 minutes without commits can be handed off with a note here.
+85ca8130-own1: initial `git pull --rebase origin main` encountered add/add conflicts in COORDINATION.md and data/entries.json because of a shallow checkout. Aborted the rebase without discarding either side, fetched full history, and fast-forwarded to main before claiming this independent task. Do not edit files claimed by another active session. Claims older than 60 minutes without commits can be handed off with a note here.
 
 ## Integration verification (2026-11-01 UTC)
 
@@ -19,3 +20,11 @@ None. Do not edit files claimed by another active session. Claims older than 60 
 - `node tests/validate.mjs` checked 208 unique IDs, blank unknown fields, official link presence for checked rows, 11 pages and internal references. External links on unverified leads are **not** certified reachable; users must check current operator rules.
 - Irregularities: legacy August status and prize claims may be stale; reference project's older 100-item document is explicitly superseded; paid-entry / noncash / group-funded leads included for context, not recommended; ESPN FAQ inconsistent about maximum entries.
 - Publication: [PR #1](https://github.com/sassnarep3-star/Own1/pull/1) merged into `main` at 2026-11-01 13:39 UTC (merge commit `90a79080ff42fbeeb0c58d4ddec2b622f07c3af7`). [Pages deployment run](https://github.com/sassnarep3-star/Own1/actions/runs/41312308316) succeeded; [live site](https://sassnarep3-star.github.io/Own1/index.html) rendered with 208 rows and category navigation. A follow-up correction blanks an ARC entry-cost cell that was not confirmed; publication of this correction is tracked in a follow-up PR.
+
+## Follow-up: 85ca8130-own1 (2026-11-01 UTC)
+
+- Scope: mobile UI and evidence filtering only. At <=700px table rows display as labeled cards rather than a 690px-wide sideways-scrolling table. The free-entry filter reads only existing checked fields and does not infer any unknown entry fee. Unverified URLs are labeled research leads, not certified official evidence.
+- Re-read official [ESPN NFL Pick’em rules](https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules), [Metaculus tournaments](https://www.metaculus.com/tournaments/), and [US Midterms tournament](https://www.metaculus.com/tournament/midterms-2026/). These support the three records eligible for the confirmed-free filter. The ESPN FAQ contradicts itself on maximum entries; the Metaculus directory lists no-prize tournaments too; neither fact is hidden by the filter.
+- Verification: `node --check assets/app.js`; `node tests/validate.mjs` checks all 208 rows, 11 internal pages, mobile labels and filter behavior (three qualifying rows). No new data value was asserted. CSS visual testing on a physical phone remains to be done.
+- Coordination: a separately active `arena/181b7279-own1` branch also changes dashboard assets and tests. Its integration owner must reconcile these changes rather than overwrite them when integrating. `arena/37aed701-own1` is scoped to `supplemental/**`; `arena/4db3cf09-own1` is scoped to GEMS research. The board does not certify their unpublished work.
+- Publication of this follow-up: pending PR/Pages verification.
