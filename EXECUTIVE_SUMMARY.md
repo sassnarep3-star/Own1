@@ -1,148 +1,168 @@
-# Executive Summary — Own1 (integrated)
+# Executive summary — Free Cash Competition Ledger
 
-Several sessions published work to this repo in parallel. Both are kept, cross-linked and described below; neither overwrote the other.
-
-| Part | What it is | Live |
-| --- | --- | --- |
-| 1 · Prize Atlas | 208 research leads, 7 rows read against official pages, review queue, supplemental findings (sessions 27a86924, 90c9f78c, 85ca8130, 37aed701) | https://sassnarep3-star.github.io/Own1/ |
-| 2 · Verified Contest Ledger | all 206 upstream rows with automated audit, 28 rows checked against official pages, flagged page, verified picks (session a479d584) | https://sassnarep3-star.github.io/Own1/ledger/ |
-
-Where both parts checked the same page (ESPN NFL Pick'em, ARC Prize, Metaculus, Kaggle, DrivenData GEMS) their values agree. Anything neither part read from an official page is blank and flagged. The consolidated flagged-items view is https://sassnarep3-star.github.io/Own1/ledger/flagged.html and the Prize Atlas queue is https://sassnarep3-star.github.io/Own1/review.html.
+**Prepared:** 2026-11-01 · **Owner:** session `d21e8702-own1` · **Live site:** <https://sassnarep3-star.github.io/Own1/>
+**Source under review:** “Free Money & Contest Ledger” — <https://karagemop466-tech.github.io/FreeMoneyApps/>
+(data pass “S”, reviewed 2026-08-19; mirrored verbatim from `karagemop466-tech/FreeMoneyApps`, `assets/data.js`)
 
 ---
 
-# Part 1 — Prize Atlas (as published by earlier sessions, unchanged)
+## 1. What this is
 
+The reference site is a single long scroll of **206 free-to-enter competition listings** across nine categories,
+built by its author as “a field catalog, not a tip jar”. The catalogue itself is genuinely useful raw material:
+each listing already carries a prize description, an eligibility note, payout rails, sign-up steps and at least one
+outbound link.
 
-**Status:** live on GitHub Pages · https://sassnarep3-star.github.io/Own1/index.html
-**Prepared:** 2026-11-01 UTC · Source-first research dashboard — not financial or legal advice, not a guarantee of winnings.
+It is not usable as a decision tool, and not safe as a money guide:
 
-## 1. Purpose
+- **Mobile.** One page, no search, no filters, no sort, ~206 long cards. It ships a 367 KB data file that is
+  rendered entirely client-side, so on a phone you scroll through everything to compare anything.
+- **No prioritisation.** Nothing tells you which of the 206 is worth a weekend. The largest category (sports
+  pick’em, 129 rows) is presented with the same weight as the 14 tech/data competitions where the money is largest.
+- **Claims are unranked and unevenly sourced.** 194 of 206 rows cite an official page; **12 cite none**, including
+  eight Fantasy Premier League mini-leagues cited to affiliate blogs and Reddit, and four demo-trading contests whose
+  dollar prize ladders are cited only to affiliate sites.
+- **Some labels are simply wrong.** Two rows checked this pass are contradicted outright by the operator’s own page.
 
-Prize Atlas helps users find free-to-enter cash-prize competitions and decide where to spend time competing. Every listing is a **research lead**, not a recommendation. The site is intentionally evidence-first: blank cells mean a value was not confirmed from an official operator page, and nothing is ever inferred or filled in.
+This project delivers the organised, mobile-first version of that catalogue plus a separate verification layer, so
+“the catalogue says” and “we confirmed it” can never be confused.
 
-## 2. Scope and data source
+## 2. What was built
 
-- Reference ledger: [FreeMoneyApps — assets/data.js](https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/data.js), 206 listings last stamped 2026-08-19. Imported as **unverified leads (names and categories only)**; its prize/fee/deadline claims were never trusted as facts.
-- The reference project's older [100_VERIFIED_CONTESTS.md](https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/100_VERIFIED_CONTESTS.md) is explicitly superseded (it lists false claims) and was **not** used.
-- Two additional leads were checked against official operator pages: GEMS Prize Challenge and US Midterms 2026 (Metaculus).
-- **Total catalog: 208 leads across 9 categories.**
+A static, mobile-first dashboard published on GitHub Pages, generated from the mirrored data by
+`tools/build_site.py`:
 
-## 3. Method
-
-1. One record per lead in `data/entries.json` with id, name, category, kind, prize, entry, deadline, note, source, sourceStatus.
-2. `sourceStatus === "checked"` only when the linked official operator page was read and the displayed facts were confirmed. Otherwise `"unverified"`.
-3. Unverified rows keep prize, entry, deadline, and kind **blank** — deliberately empty until an official source confirms them.
-4. Every `source` must be HTTPS; two legacy leads have no usable HTTPS operator source and are shown blank rather than with a misleading link.
-5. Paid-entry skill games, directories, group-funded pool tools, and non-cash items are kept for completeness, **not** recommended as free-cash opportunities.
-
-## 4. Site structure
-
-| Page | Contents |
+| Page | What it answers |
 | --- | --- |
-| [index.html](https://sassnarep3-star.github.io/Own1/index.html) | Landing dashboard: category cards, table of page-checked leads, metrics, executive summary |
-| [category/sports.html](https://sassnarep3-star.github.io/Own1/category/sports.html) | Fantasy & sports picks (129 leads) |
-| [category/tech.html](https://sassnarep3-star.github.io/Own1/category/tech.html) | Tech & data (15 leads) |
-| [category/creative.html](https://sassnarep3-star.github.io/Own1/category/creative.html) | Creative contests (18 leads) |
-| [category/market.html](https://sassnarep3-star.github.io/Own1/category/market.html) | Market simulations (19 leads) |
-| [category/skill.html](https://sassnarep3-star.github.io/Own1/category/skill.html) | Skill tournaments (12 leads) |
-| [category/forecasting.html](https://sassnarep3-star.github.io/Own1/category/forecasting.html) | Forecasting (4 leads) |
-| [category/pools.html](https://sassnarep3-star.github.io/Own1/category/pools.html) | Pool tools (7 leads) |
-| [category/directory.html](https://sassnarep3-star.github.io/Own1/category/directory.html) | Directories (2 leads) |
-| [review.html](https://sassnarep3-star.github.io/Own1/review.html) | Flagged for review: all 201 unverified leads plus known exceptions |
-| [research/SOURCES.md](https://github.com/sassnarep3-star/Own1/blob/main/research/SOURCES.md) | Full source audit, official pages read, irregularities |
-| [COORDINATION.md](https://github.com/sassnarep3-star/Own1/blob/main/COORDINATION.md) | Shared task board, PR and deployment record |
+| `index.html` — Dashboard | Headline numbers, category map, top five picks, the findings that matter. |
+| `best-picks.html` | 25-row ranked shortlist with the score components shown, plus an honest read on where an AI agent helps. |
+| `all.html` | All 206 rows, searchable/filterable/sortable, one official link per row. |
+| `category/*.html` (9 pages) | The same table scoped to one category, with category stats. |
+| `verification.html` | Every row re-checked this pass: URL, verbatim quote, checked date, status. |
+| `flagged.html` | 11 mechanical integrity findings + 2 contradicted rows, each with its source. |
+| `methodology.html` | Weights, provenance, SHA-256 of the mirror, and the limits. |
+| `sources.html` | Evidence pages used, plus every operator link by category. |
+| `executive-summary.html` | This document. |
 
-All pages are mobile-responsive, searchable, and filterable by evidence status and listing type. No build step or dependencies; GitHub Pages serves `main` from `/`.
+Engineering: no framework, no build service, no JavaScript required to read any data. Progressive enhancement adds
+search, filter, sort and expandable detail panels. `tools/audit.py`, `tools/verify_check.py`,
+`tools/build_site.py` and `tools/check_links.py` are all reproducible from the repo.
 
-## 5. Key findings — official pages read and confirmed (re-verified 2026-11-01 UTC)
+## 3. What the numbers actually say
 
-Only 7 of 208 leads have been checked against official operator pages; the rest are unverified leads with blank financial/timing fields.
+All figures below are computed from `data/ledger.json` and `data/audit.json`, not estimated.
 
-| # | Lead | Confirmed from official page | Official page |
-| --- | --- | --- | --- |
-| 1 | ESPN NFL Pick'em | Free to enter ("Every game we offer is completely free"); $102,000 total prizes incl. $5,000 random drawing; NO PURCHASE NECESSARY; void in Puerto Rico/other U.S. territories/Quebec/where prohibited | https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules |
-| 2 | ARC Prize 2026 | $2,000,000 across three tracks (ARC-AGI-3, ARC-AGI-2, Paper Prize); submissions due Nov 2, 2026; papers due Nov 8, 2026; results Dec 4, 2026; open-source submission required; no internet during Kaggle evaluation | https://arcprize.org/competitions/2026 |
-| 3 | Metaculus Tournaments | Free participation, cash prizes; some listed tournaments have NO PRIZE POOL — check each tournament | https://www.metaculus.com/tournaments/ |
-| 4 | US Midterms 2026 (Metaculus) | $10,000 prize pool; closes Nov 4, 2026; governed by Metaculus competition rules | https://www.metaculus.com/tournament/midterms-2026/ |
-| 5 | Kaggle Competitions | Platform hosts featured competitions with prizes plus practice/community competitions that may not pay; confirm each event | https://www.kaggle.com/competitions |
-| 6 | DrivenData Competitions | Separates prize competitions from benchmarks/practice; exact terms vary by event | https://www.drivendata.org/competitions/ |
-| 7 | GEMS Prize Challenge | $300,000 total prize pool ($50k initial round + $250k final round); ends Dec 3, 2026 23:59 UTC; U.S. DOE Office of Geothermal sponsored | https://www.drivendata.org/competitions/306/competition-doe-gems/ |
+| Measure | Value |
+| --- | --- |
+| Listings | 206 |
+| Tagged “free USD path” | 189 |
+| Free **and** enterable today (live or caution) | **163** (79.1%) |
+| Listed but out of season (“ended”) | 27 |
+| Rows that are pool tools or directories, not competitions | 9 |
+| Rows with no official-tier source | 12 |
+| Rows whose prize is published only as prose (no figure) | 102 |
+| iOS option anywhere | 78 (site headline says 62 because it excludes ended rows) |
+| Largest category | Sports pick’em — 129 rows (63%) |
+| Smallest categories with real cash | Forecasting 3, Tech 14, Creative 18 |
 
-All seven displayed values in `data/entries.json` match the official pages read on 2026-11-01. Re-verification log is in section 9.
+**The structural finding:** the catalogue’s size is in pick’em and survivor pools, but its *value per hour* is in
+the small categories. Tech/data pays the largest documented prizes (DrivenData currently runs a **$300,000** challenge;
+Kaggle hackathons show **$35,000–$450,000** labels; ARC Prize 2026 is **$2,000,000** across three tracks).
+Forecasting is the most agent-friendly free money in the whole list: Metaculus states you can *“participate for free
+and win cash prizes”* and two of its **$50,000** pools (Summer and Fall 2026 FutureEval) are explicitly bot tournaments.
 
-## 6. Data summary
+## 4. Verification results (12 rows, checked 2026-11-01)
 
-- 208 total leads · 7 page-checked · 201 unverified · 2 with no usable HTTPS operator source (`thelines-survivor`, `squarespool`)
-- Unverified leads: every prize / entry / deadline / kind cell is blank on purpose
-- Category counts: sports 129, tech 15, creative 18, market 19, skill 12, forecasting 4, pools 7, trivia 2, directory 2
+| Status | Rows | Meaning |
+| --- | --- | --- |
+| Verified | 7 | Every recorded field read on the operator’s page and matches the catalogue |
+| Partly verified | 3 | Prize confirmed; free entry not stated on the page read |
+| **Contradicted** | **2** | The operator’s own page contradicts the catalogue |
+| Not checked this pass | 194 | Keeps its operator link; **no claim is made** |
 
-## 7. Irregularities and review queue (published on review.html)
+The two contradictions are the reason this project exists:
 
-None of these blocks publication; all are listed for your review with source links:
+1. **Tom Howard/Margaret Reid Poetry Contest** — tagged `Free USD path` and `live`. Its official page states
+   **“Fee: $27 per submission”** and **“This contest is currently closed. It will open again on April 15, 2027.”**
+   A pay-to-enter, currently-closed contest was being advertised as free money.
+   Source: <https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest>
+2. **Weather Photographer of the Year (RMetS)** — free entry confirmed on the operator’s own page, but the
+   catalogue’s £5,000 / £2,500 / £750 ladder conflicts with two independent 2026 listings (£1,500 / £500 / £500).
+   The verified prize is **left blank** rather than guessed.
+   Source: <https://www.rmets.org/weather-photographer-of-the-year>
 
-- **201 of 208 leads are not individually checked** against current operator rules. A URL labeled official in the old ledger does not verify anything; some links may be stale or broken. Users must check current operator rules before entering.
-- **Two leads have no operator source:** `thelines-survivor` (TheLines Free NFL Survivor) and `squarespool` (SquaresPool.com). No HTTPS operator page was substituted.
-- **Legacy status labels are stale:** 27 `ended`, 5 `mixed`, 11 `caution` from the August 2026 ledger. None proves the situation today.
-- **ESPN FAQ conflict:** ESPN's own FAQ gives conflicting maximum-entry guidance (five vs ten entries). Check official rules/current UI before submitting.
-- **ARC Prize 2026 deadline is imminent (Nov 2, 2026)**, and automation via network APIs cannot run inside Kaggle evaluation per ARC rules.
-- **Paid-entry skill games, directories, pool software, and non-cash items** are included for completeness only — not recommended as free cash paths.
+Also confirmed against official pages: Wergle Flomp (no fee, $5,100 in prizes, closes 1 Apr 2027), ARC Prize 2026
+($2,000,000, three tracks, hosted on Kaggle), Metaculus (free entry, 19 live tournaments, $3,400–$50,000 pools,
+5 with no pool), Checkmate Gaming (“totally free to enter with real cash prizes”), and — as secondary evidence —
+World Press Photo (€10,000 + €1,000), Sony World Photography Awards ($25,000 / $5,000) and Istanbul Photo Awards
+($58,000 pool, free entry).
 
-## 8. Verification performed this session (2026-11-01 UTC)
+## 5. Irregularities flagged for review
 
-Each official page in section 5 was re-fetched live and read; displayed values match `data/entries.json`. Local validation: `node tests/validate.mjs` passes (208 unique IDs, blank unknown fields, HTTPS-only sources, 11 pages and all local references OK). GitHub Actions workflow `.github/workflows/validate.yml` runs the same check on every push and pull request. GitHub Pages build status: **built** (source: `main`, path `/`).
+Eleven mechanical findings, all published on `flagged.html` with source links. The four that change behaviour:
 
-## 9. Links for manual review
+- **F01 (high)** — 12 rows have no official-tier source; the source file’s own rule requires one for any prize figure.
+- **F02 (high)** — 3 demo-trading prize ladders (RoboForex $700, FBS $450, NPBFX $1,000 top prizes) are cited only to
+  affiliate pages. Figures are reproduced as *source data, unverified* and never as a verified amount.
+- **F03 (high)** — 11 Fantasy Premier League rows share one sign-up URL (`fantasy.premierleague.com`), which
+  publishes **no cash prize**; the cash claims come from third-party mini-leagues with private rules.
+- **F05 (medium)** — 27 ended rows are inside the reference site’s headline “free path” count of 189.
 
-- Live site: https://sassnarep3-star.github.io/Own1/index.html
-- Full audit: [research/SOURCES.md](https://github.com/sassnarep3-star/Own1/blob/main/research/SOURCES.md)
-- Review queue: [review.html](https://sassnarep3-star.github.io/Own1/review.html)
-- Task board: [COORDINATION.md](https://github.com/sassnarep3-star/Own1/blob/main/COORDINATION.md)
-- Reference ledger (research lead only, not an official prize source): https://github.com/karagemop466-tech/FreeMoneyApps
+Lower-severity presentation issues: the “Added this pass” figure is one sub-list (60) while the union of all
+`addedThisPass*` lists is 192, so most later additions never get the “New” badge (F10); the masthead says
+“Pass C · 17 Aug 2026” while the data says pass “S”, 2026-08-19 (F11).
 
+## 6. Recommendation
 
----
+1. **Work one tech/data contest** (Kaggle or DrivenData) as the primary effort. Largest documented prizes, genuinely
+   open entry, and the one format where a coding agent compounds: reproducible pipeline, fast iteration, public
+   leaderboard feedback.
+2. **Add one Metaculus tournament** as the low-cost second stream — free entry, thinner fields, and bot tournaments
+   that explicitly invite an automated approach.
+3. **Treat the sports section as entertainment, not income.** 129 rows, low prize per entry, luck-dominated. Pick at
+   most one pool you already follow.
+4. **Before entering any judged creative prize, read the AI clause.** Winning Writers states clearly that entries
+   “may not contain any AI-generated text”. Several photo salons have similar rules; an agent that ignores this
+   forfeits the entry.
+5. **Do not treat trading-demo contests as cash.** Many pay bonuses or account credits, and four are sourced only to
+   affiliate pages.
 
-# Part 2 — Verified Contest Ledger
+## 7. Limits — stated, not hidden
 
+- **194 of 206 rows were not re-verified this pass.** They carry their operator link and no claim. A blank on this
+  site is a blank, never an inference.
+- **No currency conversion.** €10,000 stays €10,000; rows are not ranked across currencies.
+- **No link-liveness claims.** The build shell cannot reach operator domains, so “link checked” is only ever said
+  where a page read is recorded in `data/verification.json`.
+- **The priority score is editorial.** Five published components; it is not an expected-value calculation and not a
+  probability of winning.
+- **Parallel sessions.** Two other agent sessions claimed overlapping scopes on this repository before work began;
+  neither had committed a site file. The overlap and the integration role are logged in `COORDINATION.md`.
 
-**Date of verification:** 2026-11-01 · **Upstream ledger reviewed:** 2026-08-19 (pass S) · **Live site:** https://sassnarep3-star.github.io/Own1/ledger/
+## 8. Cross-session integration (what came from the other build)
 
-## Purpose
-Collect, organize and analyze free-to-enter competitions that can pay real cash, and surface the best ones to compete in with an AI coding agent. The starting point was the [Free Money & Contest Ledger](https://karagemop466-tech.github.io/FreeMoneyApps/) (206 listings), which was hard to use on mobile and contained at least one verified broken link (HeroX).
+Three agent sessions worked this repository at once. Another session shipped a full site to `main` (“Prize Atlas”,
+208 leads, 7 official pages read) before this one finished. Rather than overwrite it, this branch merged it and kept
+every unique artefact: their 208-row dataset (`data/entries.json`), their review queue (`review.html`), their source
+audit (`research/SOURCES.md`), their supplemental evidence page, and their CI test. Their checked leads are on
+`cross-session.html`, attributed and not re-read by this session.
 
-## What was built
-- A GitHub Pages site (this repo): dashboard, verified **Top picks**, 9 category pages, an all-entries table with search/filters, a **Flagged for Review** page, a method/verification log, and CSV/JSON data exports.
-- Mobile-first layout: tables collapse to cards on phones, no web fonts, search and filters on every table.
-- Offline audit and build scripts (`scripts/audit.js`, `scripts/build.js`, `scripts/linkcheck.js`) so results are reproducible.
+Three of their findings are time-critical and were surfaced on the dashboard:
 
-## Verification result (read this first)
-| Outcome | Rows |
-|---|---|
-| Verified against an official page on 2026-11-01 | 6 |
-| Partly verified | 9 |
-| Differs from official page / broken link | 8 |
-| Opened, not confirmable | 5 |
-| **Not checked in this session (prize cell left blank)** | **178** |
+| Item | What they recorded | Source |
+| --- | --- | --- |
+| ARC Prize 2026 | Submission deadline **2026-11-02**; paper deadline **2026-11-08**; open-source required; network automation cannot run inside Kaggle evaluation | <https://arcprize.org/competitions/2026> |
+| Metaculus US Midterms 2026 | **$10,000** pool, closing around **2026-11-04** | <https://www.metaculus.com/tournament/midterms-2026/> |
+| GEMS Prize Challenge (DrivenData) | **$300,000** total, ends **2026-12-03** 23:59 UTC | <https://www.drivendata.org/competitions/306/competition-doe-gems/> |
+| ESPN NFL Pick’em | Free, **$102,000** total including a $5,000 random draw; ESPN’s FAQ contradicts itself on entry limits (5 vs 10) | <https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules> |
 
-Only 28 of 206 rows were opened against an official page. The remaining rows keep the upstream claim visible under *Details* but their verified-prize cell is blank and flagged. Nothing was inferred or filled in.
+## 9. Next actions that need a human
 
-## Key findings
-1. **8 of 28 checked entries disagree with the ledger.** ESPN NFL Survivor and NFL Playoff Predictor no longer accept new entries; the RotoBaller Challenge's draft window closed Sep 8; the Action Network "Favorites" $100K page is the 2024 edition; MLB Beat the Streak's official window ends with the 2026 regular season; TradingView's latest "The Leap" contest advertised TradingView plans, not cash; Majors Challenge's $250,000 prize was not on its official page; the HeroX sign-up link returns 404.
-2. **Verified, large, free, US-friendly pools:** ESPN NFL Pick'em ($102,000, free, through 2027-01-10), ESPN College Pick'em ($86,000), CBS Pro Football Pick'em ($1,000 weekly, $5,000 season, $100,000 contingency), CBS College Pick'em ($1,000 weekly). Eligibility: CBS rules say 50 US states + DC, 18+.
-3. **Best fit for an AI coding agent (our analysis, not an official claim):** ARC Prize 2026 ($2,000,000; **submissions due 2026-11-02**, papers 2026-11-08; open-source required; no API LLMs at evaluation), Metaculus Fall 2026 FutureEval Bot Tournament ($50,000), DrivenData GEMS Prize ($300,000), Kaggle NFL Big Data Bowl 2027 ($100,000), and Devpost hackathons up to $1,000,000 (Meta VR Start, to 2026-11-18).
-4. **"Free" often means non-cash:** 9 rows have non-cash-only prize text and 52 mix cash with gift cards, trips or credits (automatic text match, unverified). GamerSaloon's $10 is Bonus Cash that cannot be withdrawn.
-5. **Original headline stats overstate:** "189 true free paths" includes 26 entries the ledger itself marks ended; "60 added this pass" is a stale list length.
-6. **Policy conflicts:** 3 rows are run by betting brands (e.g. Fanatics sportsbook) and 19 are broker/trading-platform promotions, although upstream says gambling-operator funnels were removed.
-7. **Every row is stale by default:** the upstream "last checked" date is 2026-08-19, 74 days before verification; seasonal contests (NFL, FPL) change quickly.
+1. Spot-check the two contradicted rows against the official pages linked above (2 minutes each).
+2. Decide whether the 12 unsourced rows should be dropped or annotated permanently in the source catalogue.
+3. Choose which category to promote next for verification — Creative (18 rows) has the most free-money-with-a-catch
+   and the most AI-clause risk.
 
-## Recommended next steps
-1. Spend time now on the time-boxed AI/data contests above (ARC Prize closes first), then the free US pick'em pools for steady weekly prizes.
-2. Run a follow-up verification session over the 178 unchecked rows (task 3 on the board) — start with US-eligible, cash-prize, live rows.
-3. Decide scope: keep or drop betting-brand and broker promotions; decide whether non-cash prizes belong in a "cash prize" site.
-4. Read each contest's official rules before investing effort (tax-form thresholds, eligibility, open-source terms). The upstream ledger says US tax forms apply at $600+; that figure was not verified here.
+## 10. Related: Verified Contest Ledger (session a479d584-own1)
 
-## Review links
-- Flagged for Review: https://sassnarep3-star.github.io/Own1/ledger/flagged.html
-- Verification log: https://sassnarep3-star.github.io/Own1/ledger/method.html
-- Task board and PR record: [COORDINATION.md](https://github.com/sassnarep3-star/Own1/blob/main/COORDINATION.md)
+A separate build lives under [`ledger/`](ledger/index.html): all 206 upstream rows with an automated audit, 28 rows checked against official pages (6 verified, 9 partial, 8 differ or broken link, 5 not confirmable, 178 not checked), a [Flagged for Review](ledger/flagged.html) page, verified top picks, and its own [executive summary](ledger/summary.html) (source: `ledger/EXECUTIVE_SUMMARY.md`). Where both builds read the same official page (ARC Prize, Metaculus, Kaggle, DrivenData, Checkmate, ESPN NFL Pick'em) the prize figures agree; one status label differs (Checkmate, explained on the ledger's flagged page).

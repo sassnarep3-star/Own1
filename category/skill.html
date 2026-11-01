@@ -1,1 +1,389 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A source-first research dashboard for free-to-enter cash prize competitions and unverified leads."><title>Skill tournaments · Prize Atlas</title><link rel="stylesheet" href="../assets/style.css"></head><body data-base="../" data-page="category" data-category="skill"><header class="topbar"><div class="shell"><a class="brand" href="../index.html"><span class="mark">✳</span> Prize Atlas</a><nav class="topnav" aria-label="Main navigation"><a href="../index.html">Overview</a><a href="../category/sports.html">Browse categories</a><a href="../ledger/index.html">Verified ledger</a><a href="../supplemental/index.html">Supplemental</a><a class="review-link" href="../review.html">Flagged for review</a></nav></div></header><main class="shell main"><div class="breadcrumb"><a href="../index.html">Overview</a> / Categories / Skill tournaments</div><div class="page-intro"><div class="eyebrow">Category / skill</div><h1>Skill tournaments</h1><p>Beware: free practice currency is not withdrawable cash. These entries include unverified legacy leads. Only green rows have checked official-page facts; blank cells are intentional.</p></div><div class="notice">Research leads are not endorsements or proof of a free cash path. Check the operator’s current rules before spending time or money. <a href="../review.html">Understand the review queue →</a></div><div class="section-head"><div><h2>Listings</h2><p>Search and filter within this category.</p></div></div><div class="panel"><div class="toolbar"><input id="search" type="search" placeholder="Search listings or sources…" aria-label="Search listings"><select id="status" aria-label="Evidence status"><option value="">All evidence</option><option value="checked">Page checked</option><option value="unverified">Unverified</option></select><select id="kind" aria-label="Listing type"><option value="">All types</option><option value="Contest">Contest</option><option value="Platform">Platform</option></select></div><div id="rows" aria-live="polite"></div><div class="table-foot" id="result-count">Loading…</div></div></main><footer class="footer"><div class="shell"><span>Prize Atlas · Research, not financial or legal advice · Updated 2026-11-01 UTC</span><span><a href="../review.html">Review queue</a> · <a href="https://github.com/sassnarep3-star/Own1/blob/main/research/SOURCES.md">Method & sources</a></span></div></footer><script src="../assets/app.js" defer></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skill tournaments — free-to-enter cash competitions — Free Cash Ledger</title>
+<meta name="description" content="Head-to-head or multiplayer skill games. Free rooms usually pay gems, not cash. Real USD almost always requires an entry fee. 12 competitions, each with an official source link.">
+<meta property="og:title" content="Skill tournaments — free-to-enter cash competitions — Free Cash Ledger">
+<meta property="og:description" content="Head-to-head or multiplayer skill games. Free rooms usually pay gems, not cash. Real USD almost always requires an entry fee. 12 competitions, each with an official source link.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230f766e'/><text x='18' y='45' font-size='36' font-family='monospace' fill='white'>$</text></svg>">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-rel="../">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="../index.html">
+      <span class="mark">$</span>
+      <span>Free Cash Ledger<small>206 competitions · verified 2026-11-01</small></span>
+    </a>
+    <nav class="main" aria-label="Main"><a href="../index.html">Dashboard</a><a href="../best-picks.html">Best picks</a><a href="../all.html">All 206</a><a href="../verification.html">Verification</a><a href="../flagged.html">Flagged (13)</a><a href="../methodology.html">Method</a><a href="../executive-summary.html">Summary</a><a href="../sources.html">Sources</a><a href="../cross-session.html">Cross-session</a><a href="../ledger/index.html">Verified ledger</a></nav>
+  </div>
+</header>
+<div class="wrap" id="main">
+
+<section class="hero">
+  <p class="kicker"><a href="../index.html">Dashboard</a> / Category</p>
+  <h1 class="page">Skill tournaments <span style="color:#64748b;font-size:.6em">(12)</span></h1>
+  <p class="lede">Head-to-head or multiplayer skill games. Free rooms usually pay gems, not cash. Real USD almost always requires an entry fee.</p>
+  <div class="stats">
+    <div class="stat"><b>12</b><span>rows in this category</span></div>
+    <div class="stat"><b>1</b><span>free &amp; enterable today</span></div>
+    <div class="stat"><b>1</b><span>re-verified this pass</span></div>
+    <div class="stat"><b>Low</b><span>AI-agent fit (editorial)</span></div>
+  </div>
+</section>
+  <div class="legend" style="font-size:12.5px;color:#64748b;margin:0 0 10px;line-height:1.9">
+    <b style="color:#101828">Legend</b> ·
+    <span class="badge b-free">Free to enter</span> catalogue says entry is free ·
+    <span class="badge b-partial">Some free events</span> mixed ·
+    <span class="badge b-paid">Cash needs an entry fee</span> ·
+    <span class="badge b-verified">Verified</span> checked against the operator’s page ·
+    <span class="badge b-partially">Partly verified</span> some fields only ·
+    <span class="badge b-contradicted">Contradicted</span> operator page disagrees ·
+    <span class="badge b-unverified">Source data only</span> not re-checked.
+    “Prize (as published)” is the catalogue’s own wording; “Verified prize” is only filled from a quoted official page.
+  </div>
+  <div class="toolbar">
+    <input id="q" type="search" placeholder="Search name, category, prize…" aria-label="Search competitions">
+    <label class="chip"><input type="checkbox" id="freeOnly"> Free to enter only</label>
+    <label class="chip"><input type="checkbox" id="liveOnly"> Live only</label>
+    <select id="sort" aria-label="Sort">
+      <option value="score">Sort: priority score</option>
+      <option value="prize">Sort: verified prize</option>
+      <option value="name">Sort: name</option>
+    </select>
+    <span class="count" id="shown">—</span>
+  </div>
+  <div class="table" id="catalogue">
+    <div class="thead">
+      <div>Competition</div><div>Free to enter</div><div>Prize (as published)</div>
+      <div>Verified prize</div><div>Official source</div>
+    </div>
+      <div class="row" id="checkmate-gaming" data-id="checkmate-gaming" data-name="Checkmate Gaming (CMG) Free Tournaments"
+           data-free="full" data-live="1"
+           data-score="84" data-prize="120" data-search="checkmate-gaming checkmate gaming (cmg) free tournaments free-entry call of duty / valorant esports tournaments with cash prizes posted daily. skill tournaments live $10–$180 cash per tournament (free entry)">
+        <div class="cell">
+          <div class="name"><a href="#checkmate-gaming">Checkmate Gaming (CMG) Free Tournaments</a></div>
+          <p class="short">Free-entry Call of Duty / Valorant esports tournaments with cash prizes posted daily.</p>
+          <div class="badges">
+            <span class="badge ">Skill tournaments</span>
+            <span class="badge b-live">Live</span>
+            <span class="badge b-verified">Verified</span>
+          </div>
+          <details class="more" data-entry="checkmate-gaming">
+            <summary>Details</summary>
+            <div class="detail-slot"></div>
+          </details>
+        </div>
+        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-free">Free to enter (per catalogue)</span></div>
+        <div class="cell"><span class="lbl">Prize (as published)</span>
+          <div class="prize">$10–$180 cash per tournament (free entry)</div></div>
+        <div class="cell"><span class="lbl">Verified prize</span><span class="prize"><b>USD 120</b><br><a href="../verification.html#checkmate-gaming">quote &amp; scope →</a></span></div>
+        <div class="cell"><span class="lbl">Official source</span>
+          <div class="links"><a class="btn primary" href="https://www.checkmategaming.com/free-tournaments" rel="noopener noreferrer nofollow">Official site ↗</a></div>
+          <span class="badge ">priority 84/100</span>
+        </div>
+      </div>
+      <div class="row" id="chesscom-tournaments" data-id="chesscom-tournaments" data-name="Chess.com Prize Tournaments"
+           data-free="partial" data-live="1"
+           data-score="52" data-prize="0" data-search="chesscom-tournaments chess.com prize tournaments free-to-enter chess arenas and swiss events with cash prizes for top finishers — but the cash tiers are gated by title or streaming. skill tournaments live arena kings up to $2,500/month; variant championships $2,500–$5,000; titled tuesday cash for titled players">
+        <div class="cell">
+          <div class="name"><a href="#chesscom-tournaments">Chess.com Prize Tournaments</a></div>
+          <p class="short">Free-to-enter chess arenas and Swiss events with cash prizes for top finishers — but the cash tiers are gated by title or streaming.</p>
+          <div class="badges">
+            <span class="badge ">Skill tournaments</span>
+            <span class="badge b-live">Live</span>
+            <span class="badge b-unverified">source data only</span>
+          </div>
+          <details class="more" data-entry="chesscom-tournaments">
+            <summary>Details</summary>
+            <div class="detail-slot"></div>
+          </details>
+        </div>
+        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-partial">Some free events</span></div>
+        <div class="cell"><span class="lbl">Prize (as published)</span>
+          <div class="prize">Arena Kings up to $2,500/month; variant championships $2,500–$5,000; Titled Tuesday cash for titled players</div></div>
+        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
+        <div class="cell"><span class="lbl">Official source</span>
+          <div class="links"><a class="btn primary" href="https://www.chess.com/tournaments" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://support.chess.com/en/articles/9062345-chess-com-tournaments-schedule" rel="noopener noreferrer nofollow">Rules ↗</a></div>
+          <span class="badge ">priority 52/100</span>
+        </div>
+      </div>
+      <div class="row" id="gamersaloon" data-id="gamersaloon" data-name="GamerSaloon 1-Rounders"
+           data-free="partial" data-live="1"
+           data-score="49" data-prize="0" data-search="gamersaloon gamersaloon 1-rounders free single-round esports brackets (madden, ea fc, nba 2k) paying $10 as bonus cash. skill tournaments live $10 cash per bracket">
+        <div class="cell">
+          <div class="name"><a href="#gamersaloon">GamerSaloon 1-Rounders</a></div>
+          <p class="short">Free single-round esports brackets (Madden, EA FC, NBA 2K) paying $10 as bonus cash.</p>
+          <div class="badges">
+            <span class="badge ">Skill tournaments</span>
+            <span class="badge b-live">Live</span>
+            <span class="badge b-unverified">source data only</span>
+          </div>
+          <details class="more" data-entry="gamersaloon">
+            <summary>Details</summary>
+            <div class="detail-slot"></div>
+          </details>
+        </div>
+        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-partial">Some free events</span></div>
+        <div class="cell"><span class="lbl">Prize (as published)</span>
+          <div class="prize">$10 cash per bracket</div></div>
+        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
+        <div class="cell"><span class="lbl">Official source</span>
+          <div class="links"><a class="btn primary" href="https://www.gamersaloon.com/promos/1rounder/" rel="noopener noreferrer nofollow">Official site ↗</a></div>
+          <span class="badge ">priority 49/100</span>
+        </div>
+      </div>
+      <div class="row" id="battlefy" data-id="battlefy" data-name="Battlefy Esports Tournaments"
+           data-free="partial" data-live="1"
+           data-score="41" data-prize="0" data-search="battlefy battlefy esports tournaments tournament platform used by publishers and communities. hosts free-to-enter brackets with cash prizes alongside paid events. skill tournaments live prizes set per tournament by the organizer">
+        <div class="cell">
+          <div class="name"><a href="#battlefy">Battlefy Esports Tournaments</a></div>
+          <p class="short">Tournament platform used by publishers and communities. Hosts free-to-enter brackets with cash prizes alongside paid events.</p>
+          <div class="badges">
+            <span class="badge ">Skill tournaments</span>
+            <span class="badge b-live">Live</span>
+            <span class="badge b-unverified">source data only</span>
+          </div>
+          <details class="more" data-entry="battlefy">
+            <summary>Details</summary>
+            <div class="detail-slot"></div>
+          </details>
+        </div>
+        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-partial">Some free events</span></div>
+        <div class="cell"><span class="lbl">Prize (as published)</span>
+          <div class="prize">Prizes set per tournament by the organizer</div></div>
+        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
+        <div class="cell"><span class="lbl">Official source</span>
+          <div class="links"><a class="btn primary" href="https://battlefy.com/" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://help.battlefy.com/en/articles/3940531-where-is-my-prize" rel="noopener noreferrer nofollow">Rules ↗</a></div>
+          <span class="badge ">priority 41/100</span>
+        </div>
+      </div>
+      <div class="row" id="challengermode" data-id="challengermode" data-name="Challengermode"
+           data-free="partial" data-live="1"
+           data-score="41" data-prize="0" data-search="challengermode challengermode esports tournament platform across 200+ games. most tournaments are free to enter and pay cash, gift cards or products. skill tournaments live per tournament — cash, gift cards, riot points, products">
+        <div class="cell">
+          <div class="name"><a href="#challengermode">Challengermode</a></div>
+          <p class="short">Esports tournament platform across 200+ games. Most tournaments are free to enter and pay cash, gift cards or products.</p>
+          <div class="badges">
+            <span class="badge ">Skill tournaments</span>
+            <span class="badge b-live">Live</span>
+            <span class="badge b-unverified">source data only</span>
+          </div>
+          <details class="more" data-entry="challengermode">
+            <summary>Details</summary>
+            <div class="detail-slot"></div>
+          </details>
+        </div>
+        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-partial">Some free events</span></div>
+        <div class="cell"><span class="lbl">Prize (as published)</span>
+          <div class="prize">Per tournament — cash, gift cards, Riot Points, products</div></div>
+        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
+        <div class="cell"><span class="lbl">Official source</span>
+          <div class="links"><a class="btn primary" href="https://www.challengermode.com/" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://support.challengermode.com/en/start-here/how-to-get-started-with-challengermode" rel="noopener noreferrer nofollow">Rules ↗</a></div>
+          <span class="badge ">priority 41/100</span>
+        </div>
+      </div>
+      <div class="row" id="start-gg" data-id="start-gg" data-name="Start.gg (formerly smash.gg)"
+           data-free="partial" data-live="1"
+           data-score="41" data-prize="0" data-search="start-gg start.gg (formerly smash.gg) the fighting-game community&#x27;s tournament platform. free-to-enter brackets; prizes are funded by organizers. skill tournaments live per tournament — set and paid by the organizer">
+        <div class="cell">
+          <div class="name"><a href="#start-gg">Start.gg (formerly smash.gg)</a></div>
+          <p class="short">The fighting-game community&#x27;s tournament platform. Free-to-enter brackets; prizes are funded by organizers.</p>
+          <div class="badges">
+            <span class="badge ">Skill tournaments</span>
+            <span class="badge b-live">Live</span>
+            <span class="badge b-unverified">source data only</span>
+          </div>
+          <details class="more" data-entry="start-gg">
+            <summary>Details</summary>
+            <div class="detail-slot"></div>
+          </details>
+        </div>
+        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-partial">Some free events</span></div>
+        <div class="cell"><span class="lbl">Prize (as published)</span>
+          <div class="prize">Per tournament — set and paid by the organizer</div></div>
+        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
+        <div class="cell"><span class="lbl">Official source</span>
+          <div class="links"><a class="btn primary" href="https://start.gg/" rel="noopener noreferrer nofollow">Official site ↗</a></div>
+          <span class="badge ">priority 41/100</span>
+        </div>
+      </div>
+      <div class="row" id="play-pokemon" data-id="play-pokemon" data-name="Play! Pokémon Championship Series"
+           data-free="partial" data-live="1"
+           data-score="38" data-prize="0" data-search="play-pokemon play! pokémon championship series the official pokémon tcg / vgc / go competitive circuit. regional and international championships pay usd prize money. skill tournaments live usd prize money at regional / international / world championships (scholarships or visa prepaid for minors)">
+        <div class="cell">
+          <div class="name"><a href="#play-pokemon">Play! Pokémon Championship Series</a></div>
+          <p class="short">The official Pokémon TCG / VGC / GO competitive circuit. Regional and International Championships pay USD prize money.</p>
+          <div class="badges">
+            <span class="badge ">Skill tournaments</span>
+            <span class="badge b-live">Live</span>
+            <span class="badge b-unverified">source data only</span>
+          </div>
+          <details class="more" data-entry="play-pokemon">
+            <summary>Details</summary>
+            <div class="detail-slot"></div>
+          </details>
+        </div>
+        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-partial">Some free events</span></div>
+        <div class="cell"><span class="lbl">Prize (as published)</span>
+          <div class="prize">USD prize money at Regional / International / World Championships (scholarships or Visa prepaid for minors)</div></div>
+        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
+        <div class="cell"><span class="lbl">Official source</span>
+          <div class="links"><a class="btn primary" href="https://www.pokemon.com/us/play-pokemon" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://support.pokemon.com/hc/en-us/articles/40087224703508-Prizing-and-Fees" rel="noopener noreferrer nofollow">Rules ↗</a></div>
+          <span class="badge ">priority 38/100</span>
+        </div>
+      </div>
+      <div class="row" id="playerslounge" data-id="playerslounge" data-name="Players&#x27; Lounge Free Tournaments"
+           data-free="partial" data-live="1"
+           data-score="38" data-prize="0" data-search="playerslounge players&#x27; lounge free tournaments free madden and ea fc tournaments with cash prizes. skill tournaments live cash">
+        <div class="cell">
+          <div class="name"><a href="#playerslounge">Players&#x27; Lounge Free Tournaments</a></div>
+          <p class="short">Free Madden and EA FC tournaments with cash prizes.</p>
+          <div class="badges">
+            <span class="badge ">Skill tournaments</span>
+            <span class="badge b-live">Live</span>
+            <span class="badge b-unverified">source data only</span>
+          </div>
+          <details class="more" data-entry="playerslounge">
+            <summary>Details</summary>
+            <div class="detail-slot"></div>
+          </details>
+        </div>
+        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-partial">Some free events</span></div>
+        <div class="cell"><span class="lbl">Prize (as published)</span>
+          <div class="prize">Cash</div></div>
+        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
+        <div class="cell"><span class="lbl">Official source</span>
+          <div class="links"><a class="btn primary" href="https://www.playerslounge.com/madden" rel="noopener noreferrer nofollow">Official site ↗</a></div>
+          <span class="badge ">priority 38/100</span>
+        </div>
+      </div>
+      <div class="row" id="bingo-cash" data-id="bingo-cash" data-name="Bingo Cash (Papaya)"
+           data-free="paid-cash" data-live="0"
+           data-score="13" data-prize="0" data-search="bingo-cash bingo cash (papaya) same papaya engine as solitaire cash, bingo format. free gem rooms; cash rooms need an entry fee. skill tournaments mixed cash-room prize tables vary">
+        <div class="cell">
+          <div class="name"><a href="#bingo-cash">Bingo Cash (Papaya)</a></div>
+          <p class="short">Same Papaya engine as Solitaire Cash, bingo format. Free Gem rooms; cash rooms need an entry fee.</p>
+          <div class="badges">
+            <span class="badge ">Skill tournaments</span>
+            <span class="badge b-mixed">Mixed</span>
+            <span class="badge b-unverified">source data only</span>
+          </div>
+          <details class="more" data-entry="bingo-cash">
+            <summary>Details</summary>
+            <div class="detail-slot"></div>
+          </details>
+        </div>
+        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-paid">Cash needs an entry fee</span></div>
+        <div class="cell"><span class="lbl">Prize (as published)</span>
+          <div class="prize">Cash-room prize tables vary</div></div>
+        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
+        <div class="cell"><span class="lbl">Official source</span>
+          <div class="links"><a class="btn primary" href="https://www.papaya.com/" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://www.papaya.com/faq" rel="noopener noreferrer nofollow">Rules ↗</a><a class="btn" href="https://www.papaya.com/terms-of-use" rel="noopener noreferrer nofollow">Terms ↗</a><a class="btn" href="https://apps.apple.com/us/app/bingo-cash-win-real-money/id1263102011" rel="noopener noreferrer nofollow">iOS ↗</a></div>
+          <span class="badge ">priority 13/100</span>
+        </div>
+      </div>
+      <div class="row" id="pocket7" data-id="pocket7" data-name="Pocket7Games"
+           data-free="paid-cash" data-live="0"
+           data-score="13" data-prize="0" data-search="pocket7 pocket7games ios multi-game skill venue (solitaire, bingo, 21, pool). free tickets exist; cash events need an entry. skill tournaments mixed cash tournament prize pools">
+        <div class="cell">
+          <div class="name"><a href="#pocket7">Pocket7Games</a></div>
+          <p class="short">iOS multi-game skill venue (solitaire, bingo, 21, pool). Free tickets exist; cash events need an entry.</p>
+          <div class="badges">
+            <span class="badge ">Skill tournaments</span>
+            <span class="badge b-mixed">Mixed</span>
+            <span class="badge b-unverified">source data only</span>
+          </div>
+          <details class="more" data-entry="pocket7">
+            <summary>Details</summary>
+            <div class="detail-slot"></div>
+          </details>
+        </div>
+        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-paid">Cash needs an entry fee</span></div>
+        <div class="cell"><span class="lbl">Prize (as published)</span>
+          <div class="prize">Cash tournament prize pools</div></div>
+        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
+        <div class="cell"><span class="lbl">Official source</span>
+          <div class="links"><a class="btn primary" href="https://www.pocket7games.com/" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://apps.apple.com/us/app/pocket7games-win-money/id1076225744" rel="noopener noreferrer nofollow">iOS ↗</a></div>
+          <span class="badge ">priority 13/100</span>
+        </div>
+      </div>
+      <div class="row" id="skillz" data-id="skillz" data-name="Skillz / Blackout Bingo / Skillz Arena"
+           data-free="paid-cash" data-live="0"
+           data-score="13" data-prize="0" data-search="skillz skillz / blackout bingo / skillz arena largest us skill-cash platform. free practice with z/gemz. cash prizes require a cash entry in enabled states. skill tournaments mixed cash match prizes vary by entry; platform has paid out large historical totals">
+        <div class="cell">
+          <div class="name"><a href="#skillz">Skillz / Blackout Bingo / Skillz Arena</a></div>
+          <p class="short">Largest US skill-cash platform. Free practice with Z/Gemz. Cash prizes require a cash entry in enabled states.</p>
+          <div class="badges">
+            <span class="badge ">Skill tournaments</span>
+            <span class="badge b-mixed">Mixed</span>
+            <span class="badge b-unverified">source data only</span>
+          </div>
+          <details class="more" data-entry="skillz">
+            <summary>Details</summary>
+            <div class="detail-slot"></div>
+          </details>
+        </div>
+        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-paid">Cash needs an entry fee</span></div>
+        <div class="cell"><span class="lbl">Prize (as published)</span>
+          <div class="prize">Cash match prizes vary by entry; platform has paid out large historical totals</div></div>
+        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
+        <div class="cell"><span class="lbl">Official source</span>
+          <div class="links"><a class="btn primary" href="https://www.skillz.com/" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://www.skillz.com/terms-of-service/" rel="noopener noreferrer nofollow">Terms ↗</a><a class="btn" href="https://apps.apple.com/us/app/skillz-arena/id6761981587" rel="noopener noreferrer nofollow">iOS ↗</a></div>
+          <span class="badge ">priority 13/100</span>
+        </div>
+      </div>
+      <div class="row" id="solitaire-cash" data-id="solitaire-cash" data-name="Solitaire Cash (Papaya)"
+           data-free="paid-cash" data-live="0"
+           data-score="13" data-prize="0" data-search="solitaire-cash solitaire cash (papaya) ios skill solitaire. free gem tournaments exist. usd prizes sit in separate cash rooms that charge an entry fee. skill tournaments mixed cash rooms advertise prizes up to tens of dollars per event">
+        <div class="cell">
+          <div class="name"><a href="#solitaire-cash">Solitaire Cash (Papaya)</a></div>
+          <p class="short">iOS skill solitaire. Free Gem tournaments exist. USD prizes sit in separate cash rooms that charge an entry fee.</p>
+          <div class="badges">
+            <span class="badge ">Skill tournaments</span>
+            <span class="badge b-mixed">Mixed</span>
+            <span class="badge b-unverified">source data only</span>
+          </div>
+          <details class="more" data-entry="solitaire-cash">
+            <summary>Details</summary>
+            <div class="detail-slot"></div>
+          </details>
+        </div>
+        <div class="cell"><span class="lbl">Free to enter</span><span class="badge b-paid">Cash needs an entry fee</span></div>
+        <div class="cell"><span class="lbl">Prize (as published)</span>
+          <div class="prize">Cash rooms advertise prizes up to tens of dollars per event</div></div>
+        <div class="cell"><span class="lbl">Verified prize</span><span class="prize blank">not verified this pass</span></div>
+        <div class="cell"><span class="lbl">Official source</span>
+          <div class="links"><a class="btn primary" href="https://www.papaya.com/" rel="noopener noreferrer nofollow">Official site ↗</a><a class="btn" href="https://www.papaya.com/faq" rel="noopener noreferrer nofollow">Rules ↗</a><a class="btn" href="https://www.papaya.com/terms-of-use" rel="noopener noreferrer nofollow">Terms ↗</a><a class="btn" href="https://apps.apple.com/us/app/solitaire-cash-win-real-money/id1252281551" rel="noopener noreferrer nofollow">iOS ↗</a></div>
+          <span class="badge ">priority 13/100</span>
+        </div>
+      </div>
+  </div>
+
+<h2 class="sec">Other categories</h2>
+<div class="links"><a class="btn" href="trivia.html">Trivia competitions (2)</a><a class="btn" href="sports.html">Fantasy &amp; sports picks (129)</a><a class="btn" href="creative.html">Creative contests (18)</a><a class="btn" href="forecasting.html">Forecasting tournaments (3)</a><a class="btn" href="market.html">Market competitions (19)</a><a class="btn" href="tech.html">Tech &amp; data competitions (14)</a><a class="btn" href="directory.html">Directories &amp; forums (2)</a><a class="btn" href="pools.html">Free pool &amp; league platforms (7)</a></div>
+
+<footer class="site">
+  <p><b>Free Cash Competition Ledger</b> — an independent catalogue mirroring the “Free Money &amp; Contest Ledger”
+  (<a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">reference site</a>)
+  with per-row source links and a separate verification layer.</p>
+  <p>Not affiliated with any listed operator. Official rules always win. US federal tax reporting generally
+  applies to prizes of $600 or more — confirm with a tax professional. Nothing here is legal or financial advice.
+  Sweepstakes and casino-style gambling products are out of scope.</p>
+  <p>Data as published by the reference catalogue on 2026-08-19 (pass “S”), audited and partly re-verified on
+  2026-11-01. Prize amounts change; open the operator’s rules before you enter.
+  <a href="../methodology.html">Method &amp; limits</a> · <a href="../flagged.html">Flagged for review</a> ·
+  <a href="../sources.html">Sources</a> · <a href="../cross-session.html">Cross-session</a></p>
+  <p><b>Built in parallel with other agent sessions.</b> Their pages still ship and are linked here:
+  <a href="../review.html">their review queue</a> ·
+  <a href="../supplemental/index.html">their supplemental evidence</a> ·
+  <a href="https://github.com/sassnarep3-star/Own1/blob/main/research/SOURCES.md" rel="noopener noreferrer">their source audit</a>.</p>
+</footer>
+</div>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

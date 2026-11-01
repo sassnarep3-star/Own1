@@ -1,3197 +1,964 @@
 {
- "generated": "2026-11-01",
- "rows": [
-  {
-   "id": "solitaire-cash",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 1 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "bingo-cash",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 1 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "skillz",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "pocket7",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "givling",
-   "prizeKind": "unconfirmed",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Trivia removed — no longer a trivia contest\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "vocal",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "kaggle",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "devpost",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "arcprize",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "reedsy-dir",
-   "prizeKind": "unclear",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "FREE_PATH_FEE_MENTION",
-     "msg": "Marked free-path \"full\" but text mentions a fee/deposit/paid tier — read the rules."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "drivendata",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "FREE_PATH_FEE_MENTION",
-     "msg": "Marked free-path \"full\" but text mentions a fee/deposit/paid tier — read the rules."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "herox",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "FREE_PATH_FEE_MENTION",
-     "msg": "Marked free-path \"full\" but text mentions a fee/deposit/paid tier — read the rules."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "xprize",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "topcoder",
-   "prizeKind": "unclear",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "FREE_PATH_FEE_MENTION",
-     "msg": "Marked free-path \"full\" but text mentions a fee/deposit/paid tier — read the rules."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "espn-pickem",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "espn-survivor",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "espn-wintotals",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "espn-playoff",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "espn-pigskin",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "espn-cfb",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "cbs-pro-pickem",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "cbs-cfb-pickem",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "fox-super6",
-   "prizeKind": "unconfirmed",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Not currently published — confirm on the live game page\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "fanatics-survivor",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "GAMBLING_OPERATOR_HOST",
-     "msg": "Operator host betfanatics.com is a betting/gambling brand; upstream README says gambling-operator contests were removed."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "yahoo-survival",
-   "prizeKind": "mixed",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "pickwatch",
-   "prizeKind": "unconfirmed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Not running for 2026\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "beat-the-geek",
-   "prizeKind": "mixed",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "tsg-playoff",
-   "prizeKind": "mixed",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "favorites-pickem",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "thelines-survivor",
-   "prizeKind": "unconfirmed",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "NO_OFFICIAL_SOURCE",
-     "msg": "No source with tier \"official\" (tiers: affiliate)."
-    },
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Not confirmed for 2026\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "rams-pickem",
-   "prizeKind": "mixed",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "draft-pro",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "splash-mock",
-   "prizeKind": "unconfirmed",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Not verified outside the entry window\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "fftoday-draft",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "rotoballer",
-   "prizeKind": "cash",
-   "region": "AU",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "apex-fantasy",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "fpl-official",
-   "prizeKind": "non-cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 10 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "NON_CASH_PRIZE",
-     "msg": "Prize text appears non-cash: \"VIP trip + Surface Laptop + Puma gear\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "fpl-second-chance",
-   "prizeKind": "non-cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "NON_CASH_PRIZE",
-     "msg": "Prize text appears non-cash: \"Puma gear + EA FC 26 + FPL bundle\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "fpl-draft",
-   "prizeKind": "unclear",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "fantasy-efl",
-   "prizeKind": "unclear",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "telegraph-ff",
-   "prizeKind": "cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "ucl-fantasy",
-   "prizeKind": "non-cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 1 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "NON_CASH_PRIZE",
-     "msg": "Prize text appears non-cash: \"UCL Final trip + PS5\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "pl-predictor",
-   "prizeKind": "cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "pooltracker-epl",
-   "prizeKind": "unclear",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "ffs-fpl",
-   "prizeKind": "mixed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host fantasy.premierleague.com differs from every source host (fantasyfootballscout.co.uk)."
-    },
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 10 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    },
-    {
-     "code": "UNVERIFIED_LEAGUE_CODE",
-     "msg": "League/join code present but codeVerified is not set."
-    }
-   ]
-  },
-  {
-   "id": "ffs-ucl",
-   "prizeKind": "mixed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host gaming.uefa.com differs from every source host (fantasyfootballscout.co.uk)."
-    },
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 1 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    },
-    {
-     "code": "UNVERIFIED_LEAGUE_CODE",
-     "msg": "League/join code present but codeVerified is not set."
-    }
-   ]
-  },
-  {
-   "id": "ffs-efl",
-   "prizeKind": "non-cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host fantasy.efl.com differs from every source host (fantasyfootballscout.co.uk)."
-    },
-    {
-     "code": "NON_CASH_PRIZE",
-     "msg": "Prize text appears non-cash: \"Mega Bundle\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    },
-    {
-     "code": "UNVERIFIED_LEAGUE_CODE",
-     "msg": "League/join code present but codeVerified is not set."
-    }
-   ]
-  },
-  {
-   "id": "ffs-tattico",
-   "prizeKind": "cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "football-mad",
-   "prizeKind": "unconfirmed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host fantasy.premierleague.com differs from every source host (footballmad.co.uk)."
-    },
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 10 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Prize pool not confirmed for 2026/27\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    },
-    {
-     "code": "UNVERIFIED_LEAGUE_CODE",
-     "msg": "League/join code present but codeVerified is not set."
-    }
-   ]
-  },
-  {
-   "id": "fantasy-arena",
-   "prizeKind": "unconfirmed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "NO_OFFICIAL_SOURCE",
-     "msg": "No source with tier \"official\" (tiers: affiliate)."
-    },
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host fantasy.premierleague.com differs from every source host (allaboutfpl.com)."
-    },
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 10 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Prize not confirmed for 2026/27\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    },
-    {
-     "code": "UNVERIFIED_LEAGUE_CODE",
-     "msg": "League/join code present but codeVerified is not set."
-    }
-   ]
-  },
-  {
-   "id": "lazyfpl",
-   "prizeKind": "cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host fantasy.premierleague.com differs from every source host (lazyfpl.com, fpltips.com)."
-    },
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 10 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    },
-    {
-     "code": "UNVERIFIED_LEAGUE_CODE",
-     "msg": "League/join code present but codeVerified is not set."
-    }
-   ]
-  },
-  {
-   "id": "fplhub",
-   "prizeKind": "unconfirmed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "NO_OFFICIAL_SOURCE",
-     "msg": "No source with tier \"official\" (tiers: affiliate)."
-    },
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host fantasy.premierleague.com differs from every source host (fpltips.com)."
-    },
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 10 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Prize not confirmed for 2026/27\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    },
-    {
-     "code": "UNVERIFIED_LEAGUE_CODE",
-     "msg": "League/join code present but codeVerified is not set."
-    }
-   ]
-  },
-  {
-   "id": "bona-fide",
-   "prizeKind": "unconfirmed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "NO_OFFICIAL_SOURCE",
-     "msg": "No source with tier \"official\" (tiers: forum)."
-    },
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host fantasy.premierleague.com differs from every source host (reddit.com)."
-    },
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 10 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Prize not confirmed for 2026/27\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    },
-    {
-     "code": "UNVERIFIED_LEAGUE_CODE",
-     "msg": "League/join code present but codeVerified is not set."
-    }
-   ]
-  },
-  {
-   "id": "olka",
-   "prizeKind": "unconfirmed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "NO_OFFICIAL_SOURCE",
-     "msg": "No source with tier \"official\" (tiers: forum)."
-    },
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host fantasy.premierleague.com differs from every source host (reddit.com)."
-    },
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 10 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Prize not confirmed for 2026/27\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    },
-    {
-     "code": "UNVERIFIED_LEAGUE_CODE",
-     "msg": "League/join code present but codeVerified is not set."
-    }
-   ]
-  },
-  {
-   "id": "fplmanager-india",
-   "prizeKind": "unconfirmed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "NO_OFFICIAL_SOURCE",
-     "msg": "No source with tier \"official\" (tiers: affiliate)."
-    },
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host fantasy.premierleague.com differs from every source host (allaboutfpl.com)."
-    },
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 10 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Prize not confirmed for 2026/27\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    },
-    {
-     "code": "UNVERIFIED_LEAGUE_CODE",
-     "msg": "League/join code present but codeVerified is not set."
-    }
-   ]
-  },
-  {
-   "id": "fplstore",
-   "prizeKind": "unconfirmed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "NO_OFFICIAL_SOURCE",
-     "msg": "No source with tier \"official\" (tiers: affiliate)."
-    },
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host fantasy.premierleague.com differs from every source host (fpltips.com)."
-    },
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 10 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Prize not confirmed for 2026/27\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    },
-    {
-     "code": "UNVERIFIED_LEAGUE_CODE",
-     "msg": "League/join code present but codeVerified is not set."
-    }
-   ]
-  },
-  {
-   "id": "pitchbooking",
-   "prizeKind": "unconfirmed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "NO_OFFICIAL_SOURCE",
-     "msg": "No source with tier \"official\" (tiers: forum)."
-    },
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host fantasy.premierleague.com differs from every source host (reddit.com)."
-    },
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 10 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Prize not confirmed for 2026/27\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    },
-    {
-     "code": "UNVERIFIED_LEAGUE_CODE",
-     "msg": "League/join code present but codeVerified is not set."
-    }
-   ]
-  },
-  {
-   "id": "dirty-dozen",
-   "prizeKind": "cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "GAMBLING_OPERATOR_HOST",
-     "msg": "Operator host gambling.com is a betting/gambling brand; upstream README says gambling-operator contests were removed."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "the-special-one",
-   "prizeKind": "unconfirmed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Paused\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "andys-predictor",
-   "prizeKind": "cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "GAMBLING_OPERATOR_HOST",
-     "msg": "Operator host andysbetclub.co.uk is a betting/gambling brand; upstream README says gambling-operator contests were removed."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "pickem-sports",
-   "prizeKind": "unclear",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "sports-predictor",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "FREE_PATH_FEE_MENTION",
-     "msg": "Marked free-path \"full\" but text mentions a fee/deposit/paid tier — read the rules."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "goaloracle",
-   "prizeKind": "unconfirmed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Contest complete\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "oddspedia",
-   "prizeKind": "cash",
-   "region": "EU/other",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "streak-for-cash",
-   "prizeKind": "unconfirmed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Unverified\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "gamersaloon",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "playerslounge",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "officepoolstop",
-   "prizeKind": "unclear",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "funofficepools",
-   "prizeKind": "unclear",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "mysurvivorpool",
-   "prizeKind": "unclear",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "gridirongames",
-   "prizeKind": "unclear",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "squarespool",
-   "prizeKind": "unclear",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "INSECURE_URL",
-     "msg": "At least one link is http:// not https://."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "myfantasyleague",
-   "prizeKind": "unclear",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "trofeo",
-   "prizeKind": "unclear",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "mlb-beat-the-streak",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "metaculus",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "aicrowd",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "zindi",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "POSSIBLY_STALE_DATES",
-     "msg": "Status \"live\" but prize note cites 2024/2025 dates."
-    },
-    {
-     "code": "FREE_PATH_FEE_MENTION",
-     "msg": "Marked free-path \"full\" but text mentions a fee/deposit/paid tier — read the rules."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "codabench",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "grand-challenge",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "crunchdao",
-   "prizeKind": "unconfirmed",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "PRIZE_UNCONFIRMED",
-     "msg": "Prize text says it is unconfirmed/ended/unknown: \"Prize pool not stated on the competition overview — confirm before entering\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "mlcontests",
-   "prizeKind": "unclear",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "espn-tourney-challenge",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "espn-tc-eliminator",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "nascar-fantasy-live",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "pga-fantasy-golf",
-   "prizeKind": "mixed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "nhl-bracket-challenge",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "espn-nba-playoff",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "nba-pickem",
-   "prizeKind": "mixed",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "bundesliga-fantasy",
-   "prizeKind": "mixed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "laliga-fantasy",
-   "prizeKind": "mixed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "swagbucks-trivia",
-   "prizeKind": "mixed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "99designs",
-   "prizeKind": "unclear",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "FREE_PATH_FEE_MENTION",
-     "msg": "Marked free-path \"full\" but text mentions a fee/deposit/paid tier — read the rules."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "freelancer-contests",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "FREE_PATH_FEE_MENTION",
-     "msg": "Marked free-path \"full\" but text mentions a fee/deposit/paid tier — read the rules."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "battlefy",
-   "prizeKind": "unclear",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "challengermode",
-   "prizeKind": "mixed",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "atp-fantasy",
-   "prizeKind": "mixed",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "f1-fantasy",
-   "prizeKind": "mixed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "ewc-play",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "FREE_PATH_FEE_MENTION",
-     "msg": "Marked free-path \"full\" but text mentions a fee/deposit/paid tier — read the rules."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "espn-hockey-playoff",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "espn-cfp-bracket",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "espn-knockout-bracket",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "mlb-hr-derby-pickem",
-   "prizeKind": "mixed",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "tradingview-leap",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "wall-street-survivor",
-   "prizeKind": "mixed",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "start-gg",
-   "prizeKind": "unclear",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "POSSIBLY_STALE_DATES",
-     "msg": "Status \"live\" but prize note cites 2024/2025 dates."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "chesscom-tournaments",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "play-pokemon",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "designcrowd",
-   "prizeKind": "unclear",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "FREE_PATH_FEE_MENTION",
-     "msg": "Marked free-path \"full\" but text mentions a fee/deposit/paid tier — read the rules."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "crowdspring",
-   "prizeKind": "unclear",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "FREE_PATH_FEE_MENTION",
-     "msg": "Marked free-path \"full\" but text mentions a fee/deposit/paid tier — read the rules."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "espn-womens-tourney",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "yahoo-bracket-mayhem",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "bullrush",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "signate",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "POSSIBLY_STALE_DATES",
-     "msg": "Status \"live\" but prize note cites 2024/2025 dates."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "tianchi",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "POSSIBLY_STALE_DATES",
-     "msg": "Status \"live\" but prize note cites 2024/2025 dates."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "hypermind",
-   "prizeKind": "mixed",
-   "region": "EU/other",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "FREE_PATH_FEE_MENTION",
-     "msg": "Marked free-path \"full\" but text mentions a fee/deposit/paid tier — read the rules."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "moomoo-paper-trading",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "POSSIBLY_STALE_DATES",
-     "msg": "Status \"live\" but prize note cites 2024/2025 dates."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "superbru",
-   "prizeKind": "non-cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "NON_CASH_PRIZE",
-     "msg": "Prize text appears non-cash: \"Sponsor-funded prizes per game (tickets, vouchers, experiences)\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "afl-fantasy",
-   "prizeKind": "cash",
-   "region": "AU",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "nrl-fantasy",
-   "prizeKind": "mixed",
-   "region": "AU",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host nrl.com differs from every source host (nrlfantasy.zendesk.com)."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "POSSIBLY_STALE_DATES",
-     "msg": "Status \"live\" but prize note cites 2024/2025 dates."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "espn-bowl-mania",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "ligue1-fantasy",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "lol-pickem",
-   "prizeKind": "mixed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "six-nations-fantasy",
-   "prizeKind": "mixed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "tattico-serie-a",
-   "prizeKind": "cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "supercoach-bbl",
-   "prizeKind": "mixed",
-   "region": "AU",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "fundednext",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "for-traders",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "ninjatrader-arena",
-   "prizeKind": "mixed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "yahoo-daily-draw",
-   "prizeKind": "mixed",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "dp-world-tour-fantasy",
-   "prizeKind": "mixed",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "the-open-fantasy",
-   "prizeKind": "cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "sun-dream-team",
-   "prizeKind": "cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "POSSIBLY_STALE_DATES",
-     "msg": "Status \"live\" but prize note cites 2024/2025 dates."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "sky-sports-ff",
-   "prizeKind": "cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "cricket-draft",
-   "prizeKind": "mixed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "icc-t20-fantasy",
-   "prizeKind": "mixed",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host icc-cricket.com differs from every source host (play.google.com)."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "tim-hortons-hockey",
-   "prizeKind": "mixed",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "darts-corner-predictor",
-   "prizeKind": "mixed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "spfl-fantasy",
-   "prizeKind": "cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "euroleague-fantasy",
-   "prizeKind": "mixed",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "valorant-pickem",
-   "prizeKind": "mixed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host valorantesports.com differs from every source host (x.com)."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "eredivisie-fantasy",
-   "prizeKind": "unclear",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host fantasyvoetbal.nl differs from every source host (eredivisie.com)."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "deriv-tournaments",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "FREE_PATH_FEE_MENTION",
-     "msg": "Marked free-path \"full\" but text mentions a fee/deposit/paid tier — read the rules."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "multibank-demo",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "xm-demo",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host xm.com differs from every source host (myfxbook.com)."
-    },
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "headway-demo",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host hw.online differs from every source host (myfxbook.com)."
-    },
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "hfm-demo",
-   "prizeKind": "mixed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "litefinance-best",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "tradingcom-paper",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "tickmill-nfp",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "roboforex-demo",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "NO_OFFICIAL_SOURCE",
-     "msg": "No source with tier \"official\" (tiers: affiliate)."
-    },
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host roboforex.com differs from every source host (tradingbrokers.com)."
-    },
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "fbs-pro-demo",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "NO_OFFICIAL_SOURCE",
-     "msg": "No source with tier \"official\" (tiers: affiliate)."
-    },
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host fbs.com differs from every source host (fofan.org)."
-    },
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "npbfx-demo",
-   "prizeKind": "mixed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "NO_OFFICIAL_SOURCE",
-     "msg": "No source with tier \"official\" (tiers: affiliate)."
-    },
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host npbfx.com differs from every source host (ndfxbonus.com)."
-    },
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "cev-volley-fantasy",
-   "prizeKind": "non-cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host championsleague.cev.eu differs from every source host (cevmatchpredictor.zendesk.com)."
-    },
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 1 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "NON_CASH_PRIZE",
-     "msg": "Prize text appears non-cash: \"Final 2026 tickets (season winner); jerseys + match balls (2nd–3rd); match ball \"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "vnl-fantasy",
-   "prizeKind": "mixed",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "cev-predictor",
-   "prizeKind": "mixed",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 1 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "super-league-fantasy",
-   "prizeKind": "mixed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "super-league-predictor",
-   "prizeKind": "non-cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "NON_CASH_PRIZE",
-     "msg": "Prize text appears non-cash: \"Season winner: launch invite + 4 event tickets + SuperLeague+ pass; monthly/week\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "motogp-fantasy",
-   "prizeKind": "non-cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "NON_CASH_PRIZE",
-     "msg": "Prize text appears non-cash: \"1st signed Marquez helmet; 2nd PS5 + MotoGP26; 3rd signed knee slider; weekly GP\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "the-hundred-fantasy",
-   "prizeKind": "mixed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "indycar-fantasy",
-   "prizeKind": "mixed",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "super-rugby-fantasy",
-   "prizeKind": "cash",
-   "region": "AU",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "fantasy-gaa",
-   "prizeKind": "cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "film-prize",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "FREE_PATH_FEE_MENTION",
-     "msg": "Marked free-path \"full\" but text mentions a fee/deposit/paid tier — read the rules."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "pensacola-songwriting",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "young-lions",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "afl-tipping",
-   "prizeKind": "mixed",
-   "region": "AU",
-   "flags": [
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 1 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "aflw-tipping",
-   "prizeKind": "cash",
-   "region": "AU",
-   "flags": [
-    {
-     "code": "SHARED_SIGNUP_URL",
-     "msg": "Sign-up URL is shared with 1 other row(s); the link goes to a generic page, not an entry-specific page."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "supercoach-afl",
-   "prizeKind": "cash",
-   "region": "AU",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "supercoach-nrl",
-   "prizeKind": "cash",
-   "region": "AU",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "supercoach-nbl",
-   "prizeKind": "cash",
-   "region": "AU",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "wsl-fantasy",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host wslfantasy.com differs from every source host (tottenhamhotspur.com)."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "ti-compendium",
-   "prizeKind": "mixed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "ibu-ecup",
-   "prizeKind": "mixed",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "tom-howard-poetry",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "wergle-flomp",
-   "prizeKind": "mixed",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "aflw-fantasy",
-   "prizeKind": "mixed",
-   "region": "AU",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host aflwfantasy.afl differs from every source host (afl.com.au)."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "tff-fantezi-lig",
-   "prizeKind": "unclear",
-   "region": "EU/other",
-   "flags": [
-    {
-     "code": "NO_OFFICIAL_SOURCE",
-     "msg": "No source with tier \"official\" (tiers: affiliate)."
-    },
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host fantazilig.tff.org differs from every source host (en.shiftdelete.net)."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "mxa-fantasy",
-   "prizeKind": "mixed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "kinolime",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "bridgewater-forecast",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "streak-contest",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "premiership-rugby-fantasy",
-   "prizeKind": "non-cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host fantasy.premiershiprugby.com differs from every source host (leicestertigers.com)."
-    },
-    {
-     "code": "NON_CASH_PRIZE",
-     "msg": "Prize text appears non-cash: \"Overall winner: VIP Final package; runner-up: signed shirt + 4 tickets; per-roun\"."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "aleague-fantasy",
-   "prizeKind": "mixed",
-   "region": "AU",
-   "flags": [
-    {
-     "code": "ENDED_BUT_FREE_FULL",
-     "msg": "Status is \"ended\" but still counted as a \"true free path\" in the headline stats."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "agentmma",
-   "prizeKind": "unclear",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "formula-e-predictor",
-   "prizeKind": "mixed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "telegraph-fantasy-racing",
-   "prizeKind": "cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "stable-stars",
-   "prizeKind": "mixed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "stablestakes",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "ohha-harness",
-   "prizeKind": "cash",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host ohha.com differs from every source host (ustrottingnews.com)."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "running-aces-harness",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "ultimate-fantasy-tennis",
-   "prizeKind": "mixed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "ncga-majors-challenge",
-   "prizeKind": "mixed",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "majors-challenge",
-   "prizeKind": "mixed",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "SIGNUP_HOST_NOT_IN_SOURCES",
-     "msg": "Sign-up host majorschallenge.com differs from every source host (thegolfwire.com)."
-    },
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "teepster",
-   "prizeKind": "mixed",
-   "region": "AU",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "fantasy-golf-challenge",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "checkmate-gaming",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "FREE_PATH_FEE_MENTION",
-     "msg": "Marked free-path \"full\" but text mentions a fee/deposit/paid tier — read the rules."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "buzz-fantasy-golf",
-   "prizeKind": "mixed",
-   "region": "US/CA",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "fundedfast-open",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "BROKER_PROMO",
-     "msg": "Market-competition row: operator is a trading platform/broker promotion. Review regulatory/risk exposure and whether it fits \"no deposit\" intent."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "hipa",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "sony-world-photo",
-   "prizeKind": "cash",
-   "region": "Global",
-   "flags": [
-    {
-     "code": "FREE_PATH_FEE_MENTION",
-     "msg": "Marked free-path \"full\" but text mentions a fee/deposit/paid tier — read the rules."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "world-press-photo",
-   "prizeKind": "cash",
-   "region": "EU/other",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "weather-potw",
-   "prizeKind": "cash",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "epoty",
-   "prizeKind": "mixed",
-   "region": "UK/EU",
-   "flags": [
-    {
-     "code": "MIXED_PRIZE",
-     "msg": "Prize text mixes cash with non-cash items."
-    },
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "spie-light",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
-  },
-  {
-   "id": "istanbul-photo-awards",
-   "prizeKind": "cash",
-   "region": "Unstated",
-   "flags": [
-    {
-     "code": "STALE_CHECK",
-     "msg": "Upstream \"lastChecked\" 2026-08-19 is 74 days before 2026-11-01."
-    }
-   ]
+ "generated_from": "data/ledger.json",
+ "ledger_reviewed": "2026-08-19",
+ "ledger_pass": "S",
+ "checks_run": 11,
+ "stats": {
+  "listings": 206,
+  "types": 9,
+  "free_path_full": 189,
+  "free_path_partial": 13,
+  "free_path_paid_cash": 4,
+  "status": {
+   "mixed": 5,
+   "ended": 27,
+   "live": 163,
+   "caution": 11
+  },
+  "by_type": {
+   "skill": 12,
+   "trivia": 2,
+   "creative": 18,
+   "tech": 14,
+   "directory": 2,
+   "sports": 129,
+   "pools": 7,
+   "forecasting": 3,
+   "market": 19
+  },
+  "free_and_enterable_today": 163,
+  "free_enterable_pct_of_catalogue": 79.1,
+  "free_enterable_and_verified_this_pass": 0,
+  "ended": 27,
+  "ios_all": 78,
+  "official_source_rows": 194,
+  "official_source_coverage_pct": 94.2,
+  "type_rows": [
+   {
+    "id": "skill",
+    "name": "Skill tournaments",
+    "blurb": "Head-to-head or multiplayer skill games. Free rooms usually pay gems, not cash. Real USD almost always requires an entry fee.",
+    "total": 12,
+    "free_full": 1,
+    "live": 8,
+    "free_and_live": 1,
+    "verified": 1,
+    "no_official_source": 0
+   },
+   {
+    "id": "trivia",
+    "name": "Trivia competitions",
+    "blurb": "Live or async quiz contests. Free daily plays exist on some apps. Prize pools are split among remaining winners.",
+    "total": 2,
+    "free_full": 1,
+    "live": 1,
+    "free_and_live": 1,
+    "verified": 0,
+    "no_official_source": 0
+   },
+   {
+    "id": "sports",
+    "name": "Fantasy & sports picks",
+    "blurb": "Daily fantasy freerolls and sweepstakes sportsbooks. Free tickets or free coins can win USD; most large pools are paid-entry.",
+    "total": 129,
+    "free_full": 128,
+    "live": 93,
+    "free_and_live": 103,
+    "verified": 0,
+    "no_official_source": 9
+   },
+   {
+    "id": "creative",
+    "name": "Creative contests",
+    "blurb": "Writing, photo, and brand challenges judged on a submission. Some are free; some lock cash prizes behind a membership.",
+    "total": 18,
+    "free_full": 17,
+    "live": 17,
+    "free_and_live": 17,
+    "verified": 4,
+    "no_official_source": 0
+   },
+   {
+    "id": "forecasting",
+    "name": "Forecasting tournaments",
+    "blurb": "Judgement competitions scored on calibrated accuracy. You submit probability estimates, not wagers \u2014 nothing is staked and prizes come from sponsors.",
+    "total": 3,
+    "free_full": 3,
+    "live": 2,
+    "free_and_live": 2,
+    "verified": 1,
+    "no_official_source": 0
+   },
+   {
+    "id": "market",
+    "name": "Market competitions",
+    "blurb": "Paper-trading and simulated-investing contests scored on portfolio return. Free to enter; prizes are funded by the operator, not your own stake.",
+    "total": 19,
+    "free_full": 18,
+    "live": 19,
+    "free_and_live": 18,
+    "verified": 0,
+    "no_official_source": 3
+   },
+   {
+    "id": "tech",
+    "name": "Tech & data competitions",
+    "blurb": "Hackathons and machine-learning contests with published USD prize pools. Free to enter; winners complete tax and identity checks.",
+    "total": 14,
+    "free_full": 14,
+    "live": 14,
+    "free_and_live": 14,
+    "verified": 1,
+    "no_official_source": 0
+   },
+   {
+    "id": "directory",
+    "name": "Directories & forums",
+    "blurb": "Places that list many current contests. Use them to find new promotions, then verify each contest\u2019s own official rules.",
+    "total": 2,
+    "free_full": 2,
+    "live": 2,
+    "free_and_live": 2,
+    "verified": 0,
+    "no_official_source": 0
+   },
+   {
+    "id": "pools",
+    "name": "Free pool & league platforms",
+    "blurb": "Free tools for running your own pick\u2019em, survivor, squares, or fantasy league. The platform is free; the prize pot is funded by your group.",
+    "total": 7,
+    "free_full": 5,
+    "live": 7,
+    "free_and_live": 5,
+    "verified": 0,
+    "no_official_source": 0
+   }
+  ]
+ },
+ "findings": [
+  {
+   "id": "F01",
+   "rule": "R1",
+   "severity": "high",
+   "title": "Listings with no official-tier source",
+   "detail": "The source file states its own rule: \u201cany listing that states a specific prize figure must cite the operator's own rules or game page\u201d, with tiers official | affiliate | forum. These listings cite only affiliate or forum pages.",
+   "listing_ids": [
+    "thelines-survivor",
+    "fantasy-arena",
+    "fplhub",
+    "bona-fide",
+    "olka",
+    "fplmanager-india",
+    "fplstore",
+    "pitchbooking",
+    "roboforex-demo",
+    "fbs-pro-demo",
+    "npbfx-demo",
+    "tff-fantezi-lig"
+   ],
+   "count": 12,
+   "rows": [
+    {
+     "id": "thelines-survivor",
+     "name": "TheLines Free NFL Survivor",
+     "url": "https://www.thelines.com/free-nfl-contest-pools-games-week-1-2024/",
+     "sources": [
+      "affiliate: https://www.thelines.com/free-nfl-contest-pools-games-week-1-2024/"
+     ]
+    },
+    {
+     "id": "fantasy-arena",
+     "name": "Fantasy Arena FPL league",
+     "url": "https://fantasy.premierleague.com/",
+     "sources": [
+      "affiliate: https://allaboutfpl.com/2025/07/list-of-free-to-join-prize-fpl-mini-leagues-ahead-of-25-26-season/"
+     ]
+    },
+    {
+     "id": "fplhub",
+     "name": "FPL Hub league",
+     "url": "https://fantasy.premierleague.com/",
+     "sources": [
+      "affiliate: https://fpltips.com/fpl-leagues-with-prizes/"
+     ]
+    },
+    {
+     "id": "bona-fide",
+     "name": "Bona Fide Sports league",
+     "url": "https://fantasy.premierleague.com/",
+     "sources": [
+      "forum: https://www.reddit.com/r/FantasyPL/comments/1v4h6th/fpl_202627_minileagues_thread/"
+     ]
+    },
+    {
+     "id": "olka",
+     "name": "OLKA Express league",
+     "url": "https://fantasy.premierleague.com/",
+     "sources": [
+      "forum: https://www.reddit.com/r/FantasyPL/comments/1m6naoy/league_codes_megathread/"
+     ]
+    },
+    {
+     "id": "fplmanager-india",
+     "name": "FPLManagerIndia league",
+     "url": "https://fantasy.premierleague.com/",
+     "sources": [
+      "affiliate: https://allaboutfpl.com/2025/07/list-of-free-to-join-prize-fpl-mini-leagues-ahead-of-25-26-season/"
+     ]
+    },
+    {
+     "id": "fplstore",
+     "name": "fplStore_ league",
+     "url": "https://fantasy.premierleague.com/",
+     "sources": [
+      "affiliate: https://fpltips.com/fpl-leagues-with-prizes/"
+     ]
+    },
+    {
+     "id": "pitchbooking",
+     "name": "Pitchbooking.com league",
+     "url": "https://fantasy.premierleague.com/",
+     "sources": [
+      "forum: https://www.reddit.com/r/FantasyPL/comments/wecme0/list_of_free_to_enter_fpl_leagues_with_prizes/"
+     ]
+    },
+    {
+     "id": "roboforex-demo",
+     "name": "RoboForex Demo Contest",
+     "url": "https://roboforex.com/",
+     "sources": [
+      "affiliate: https://tradingbrokers.com/roboforex-demo-contest/"
+     ]
+    },
+    {
+     "id": "fbs-pro-demo",
+     "name": "FBS Pro Demo Contest",
+     "url": "https://fbs.com/",
+     "sources": [
+      "affiliate: https://fofan.org/contest/fbs-pro-demo-trading-contest/"
+     ]
+    },
+    {
+     "id": "npbfx-demo",
+     "name": "NPBFX Trading Battle Demo Contest",
+     "url": "https://npbfx.com/",
+     "sources": [
+      "affiliate: https://www.ndfxbonus.com/2026/07/npbfx-trading-battle-demo-contest-win.html"
+     ]
+    },
+    {
+     "id": "tff-fantezi-lig",
+     "name": "TFF Fantezi Lig (Turkish S\u00fcper Lig)",
+     "url": "https://fantazilig.tff.org/",
+     "sources": [
+      "affiliate: https://en.shiftdelete.net/tff-launches-official-fantasy-league-mobile-game-for-super-lig/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "F02",
+   "rule": "R2",
+   "severity": "high",
+   "title": "Dollar prize figures that cite no official page",
+   "detail": "A specific prize ladder is published for these entries while the only citation is an affiliate page. The figures are reproduced in the tables as *source data, unverified*, never as a verified amount.",
+   "listing_ids": [
+    "roboforex-demo",
+    "fbs-pro-demo",
+    "npbfx-demo"
+   ],
+   "count": 3,
+   "rows": [
+    {
+     "id": "roboforex-demo",
+     "name": "RoboForex Demo Contest",
+     "prize": "1st $700, 2nd $550, 3rd $420 \u2026 10th $50 (ten prizes)",
+     "url": "https://roboforex.com/"
+    },
+    {
+     "id": "fbs-pro-demo",
+     "name": "FBS Pro Demo Contest",
+     "prize": "1st $450, 2nd $250, 3rd $150, 4th $100, 5th $50 ($1,000 fund)",
+     "url": "https://fbs.com/"
+    },
+    {
+     "id": "npbfx-demo",
+     "name": "NPBFX Trading Battle Demo Contest",
+     "prize": "1st $1,000 (+ iPhone), 2nd $500, 3rd $250, 4th $150, 5th\u201310th $100, 11th\u201320th $50",
+     "url": "https://npbfx.com/"
+    }
+   ]
+  },
+  {
+   "id": "F03",
+   "rule": "R3",
+   "severity": "high",
+   "title": "Several listings share one sign-up URL",
+   "detail": "These rows do not link to a distinct prize page. For the Fantasy Premier League group, the shared URL is the game itself, which publishes no cash prize \u2014 the cash claims come from third-party mini-leagues with private rules.",
+   "listing_ids": [
+    "afl-tipping",
+    "aflw-tipping",
+    "bingo-cash",
+    "bona-fide",
+    "cev-predictor",
+    "cev-volley-fantasy",
+    "fantasy-arena",
+    "ffs-fpl",
+    "ffs-ucl",
+    "football-mad",
+    "fpl-official",
+    "fplhub",
+    "fplmanager-india",
+    "fplstore",
+    "lazyfpl",
+    "olka",
+    "pitchbooking",
+    "solitaire-cash",
+    "ucl-fantasy"
+   ],
+   "count": 19,
+   "groups": [
+    {
+     "url": "https://championsleague.cev.eu/",
+     "ids": [
+      "cev-volley-fantasy",
+      "cev-predictor"
+     ]
+    },
+    {
+     "url": "https://fantasy.premierleague.com/",
+     "ids": [
+      "fpl-official",
+      "ffs-fpl",
+      "football-mad",
+      "fantasy-arena",
+      "lazyfpl",
+      "fplhub",
+      "bona-fide",
+      "olka",
+      "fplmanager-india",
+      "fplstore",
+      "pitchbooking"
+     ]
+    },
+    {
+     "url": "https://gaming.uefa.com/en/uclfantasy",
+     "ids": [
+      "ucl-fantasy",
+      "ffs-ucl"
+     ]
+    },
+    {
+     "url": "https://tipping.afl.com.au/",
+     "ids": [
+      "afl-tipping",
+      "aflw-tipping"
+     ]
+    },
+    {
+     "url": "https://www.papaya.com/",
+     "ids": [
+      "solitaire-cash",
+      "bingo-cash"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "F04",
+   "rule": "R4",
+   "severity": "medium",
+   "title": "Listings that are not themselves prize competitions",
+   "detail": "Directories and pool-host tools publish no prize of their own; any money comes from the user's own private group. They are counted in the headline 'free path' total on the reference site.",
+   "listing_ids": [
+    "reedsy-dir",
+    "officepoolstop",
+    "funofficepools",
+    "mysurvivorpool",
+    "gridirongames",
+    "squarespool",
+    "myfantasyleague",
+    "trofeo",
+    "mlcontests"
+   ],
+   "count": 9,
+   "rows": [
+    {
+     "id": "reedsy-dir",
+     "name": "Reedsy Writing Contest List",
+     "type": "directory",
+     "prize": "Listed per contest (hundreds to tens of thousands)"
+    },
+    {
+     "id": "officepoolstop",
+     "name": "OfficePoolStop",
+     "type": "pools",
+     "prize": "Prizes decided by your group"
+    },
+    {
+     "id": "funofficepools",
+     "name": "FunOfficePools",
+     "type": "pools",
+     "prize": "Prizes decided by your group"
+    },
+    {
+     "id": "mysurvivorpool",
+     "name": "MySurvivorPool",
+     "type": "pools",
+     "prize": "Prizes decided by your group"
+    },
+    {
+     "id": "gridirongames",
+     "name": "Gridiron Games",
+     "type": "pools",
+     "prize": "Prizes decided by your group \u2014 commissioner pays a hosting fee"
+    },
+    {
+     "id": "squarespool",
+     "name": "SquaresPool.com",
+     "type": "pools",
+     "prize": "Prizes decided by your group"
+    },
+    {
+     "id": "myfantasyleague",
+     "name": "MyFantasyLeague",
+     "type": "pools",
+     "prize": "Prizes decided by your league"
+    },
+    {
+     "id": "trofeo",
+     "name": "Trofeo.live",
+     "type": "pools",
+     "prize": "Pools with friends"
+    },
+    {
+     "id": "mlcontests",
+     "name": "ML Contests",
+     "type": "directory",
+     "prize": "n/a \u2014 directory"
+    }
+   ]
+  },
+  {
+   "id": "F05",
+   "rule": "R5",
+   "severity": "medium",
+   "title": "Ended / out-of-season entries inside the headline free-path count",
+   "detail": "27 listings carry status 'ended' and 26 of them are counted by the reference site's JavaScript in 'True free paths' (it counts freePath=='full' with no status filter). They cannot be entered today.",
+   "listing_ids": [
+    "givling",
+    "espn-pigskin",
+    "fox-super6",
+    "pickwatch",
+    "thelines-survivor",
+    "splash-mock",
+    "fftoday-draft",
+    "fpl-second-chance",
+    "the-special-one",
+    "goaloracle",
+    "oddspedia",
+    "espn-tourney-challenge",
+    "espn-tc-eliminator",
+    "nhl-bracket-challenge",
+    "espn-nba-playoff",
+    "nba-pickem",
+    "espn-hockey-playoff",
+    "espn-cfp-bracket",
+    "espn-knockout-bracket",
+    "mlb-hr-derby-pickem",
+    "espn-womens-tourney",
+    "yahoo-bracket-mayhem",
+    "espn-bowl-mania",
+    "the-open-fantasy",
+    "darts-corner-predictor",
+    "bridgewater-forecast",
+    "aleague-fantasy"
+   ],
+   "count": 27,
+   "ended_free_ids": [
+    "espn-pigskin",
+    "fox-super6",
+    "pickwatch",
+    "thelines-survivor",
+    "splash-mock",
+    "fftoday-draft",
+    "fpl-second-chance",
+    "the-special-one",
+    "goaloracle",
+    "oddspedia",
+    "espn-tourney-challenge",
+    "espn-tc-eliminator",
+    "nhl-bracket-challenge",
+    "espn-nba-playoff",
+    "nba-pickem",
+    "espn-hockey-playoff",
+    "espn-cfp-bracket",
+    "espn-knockout-bracket",
+    "mlb-hr-derby-pickem",
+    "espn-womens-tourney",
+    "yahoo-bracket-mayhem",
+    "espn-bowl-mania",
+    "the-open-fantasy",
+    "darts-corner-predictor",
+    "bridgewater-forecast",
+    "aleague-fantasy"
+   ]
+  },
+  {
+   "id": "F06",
+   "rule": "R6",
+   "severity": "medium",
+   "title": "Prize is explicitly not currently knowable",
+   "detail": "The source data itself says the prize is unpublished, not running, or unconfirmed. The Prize (USD) column is therefore left blank for these rows; nothing is estimated.",
+   "listing_ids": [
+    "givling",
+    "fox-super6",
+    "pickwatch",
+    "thelines-survivor",
+    "splash-mock",
+    "football-mad",
+    "fantasy-arena",
+    "fplhub",
+    "bona-fide",
+    "olka",
+    "fplmanager-india",
+    "fplstore",
+    "pitchbooking",
+    "crunchdao",
+    "mlcontests",
+    "99designs",
+    "designcrowd",
+    "crowdspring"
+   ],
+   "count": 18,
+   "rows": [
+    {
+     "id": "givling",
+     "name": "Givling",
+     "prize": "Trivia removed \u2014 no longer a trivia contest",
+     "status": "ended"
+    },
+    {
+     "id": "fox-super6",
+     "name": "FOX Super 6",
+     "prize": "Not currently published \u2014 confirm on the live game page",
+     "status": "ended"
+    },
+    {
+     "id": "pickwatch",
+     "name": "NFL Pickwatch Contest",
+     "prize": "Not running for 2026",
+     "status": "ended"
+    },
+    {
+     "id": "thelines-survivor",
+     "name": "TheLines Free NFL Survivor",
+     "prize": "Not confirmed for 2026",
+     "status": "ended"
+    },
+    {
+     "id": "splash-mock",
+     "name": "Splash Sports NFL Mock Draft",
+     "prize": "Not verified outside the entry window",
+     "status": "ended"
+    },
+    {
+     "id": "football-mad",
+     "name": "Football Mad FPL league",
+     "prize": "Prize pool not confirmed for 2026/27",
+     "status": "caution"
+    },
+    {
+     "id": "fantasy-arena",
+     "name": "Fantasy Arena FPL league",
+     "prize": "Prize not confirmed for 2026/27",
+     "status": "caution"
+    },
+    {
+     "id": "fplhub",
+     "name": "FPL Hub league",
+     "prize": "Prize not confirmed for 2026/27",
+     "status": "caution"
+    },
+    {
+     "id": "bona-fide",
+     "name": "Bona Fide Sports league",
+     "prize": "Prize not confirmed for 2026/27",
+     "status": "caution"
+    },
+    {
+     "id": "olka",
+     "name": "OLKA Express league",
+     "prize": "Prize not confirmed for 2026/27",
+     "status": "caution"
+    },
+    {
+     "id": "fplmanager-india",
+     "name": "FPLManagerIndia league",
+     "prize": "Prize not confirmed for 2026/27",
+     "status": "caution"
+    },
+    {
+     "id": "fplstore",
+     "name": "fplStore_ league",
+     "prize": "Prize not confirmed for 2026/27",
+     "status": "caution"
+    },
+    {
+     "id": "pitchbooking",
+     "name": "Pitchbooking.com league",
+     "prize": "Prize not confirmed for 2026/27",
+     "status": "caution"
+    },
+    {
+     "id": "crunchdao",
+     "name": "CrunchDAO / ADIA Lab Challenges",
+     "prize": "Prize pool not stated on the competition overview \u2014 confirm before entering",
+     "status": "live"
+    },
+    {
+     "id": "mlcontests",
+     "name": "ML Contests",
+     "prize": "n/a \u2014 directory",
+     "status": "live"
+    },
+    {
+     "id": "99designs",
+     "name": "99designs Design Contests",
+     "prize": "Client-funded prize per contest (varies)",
+     "status": "live"
+    },
+    {
+     "id": "designcrowd",
+     "name": "DesignCrowd Design Contests",
+     "prize": "Client-funded prize per contest (varies); community contests free with monetary prizes",
+     "status": "live"
+    },
+    {
+     "id": "crowdspring",
+     "name": "CrowdSpring Design Contests",
+     "prize": "Client-funded prize per contest (varies)",
+     "status": "live"
+    }
+   ]
+  },
+  {
+   "id": "F07",
+   "rule": "R7",
+   "severity": "medium",
+   "title": "Marked 'Free USD path' although the description mentions an entry fee or deposit",
+   "detail": "The fee may correctly apply only to a separate cash room, but the label and the copy disagree on the same row and need a human read.",
+   "listing_ids": [
+    "ewc-play",
+    "deriv-tournaments",
+    "multibank-demo",
+    "tradingcom-paper",
+    "tickmill-nfp",
+    "film-prize"
+   ],
+   "count": 6,
+   "rows": [
+    {
+     "id": "ewc-play",
+     "name": "Esports World Cup (EWC) Play \u2014 Fantasy & Pick'em",
+     "short": "The official EWC free fantasy and pick'em game. No entry fee or wager of any kind; cash prizes for top finishers."
+    },
+    {
+     "id": "deriv-tournaments",
+     "name": "Deriv Trading Tournaments",
+     "short": "Deriv's free monthly demo trading tournaments with real cash prizes, no deposit required."
+    },
+    {
+     "id": "multibank-demo",
+     "name": "MultiBank Group Demo Trading Competition",
+     "short": "MultiBank's free demo trading competition with $15,000 in real cash every round plus a year-end car."
+    },
+    {
+     "id": "tradingcom-paper",
+     "name": "Trading.com Paper Trading Competition",
+     "short": "Trading.com's free monthly paper-trading competition (US only) \u2014 $6,000 / $3,000 / $1,000 cash prizes."
+    },
+    {
+     "id": "tickmill-nfp",
+     "name": "Tickmill NFP Machine",
+     "short": "Tickmill's monthly price-prediction contest \u2014 predict the NFP price for a chance at $500 cash."
+    },
+    {
+     "id": "film-prize",
+     "name": "Louisiana Film Prize (Prize Fest)",
+     "short": "The world's largest cash prize for a short film \u2014 $50,000, with a $0 entry fee (film must be shot in Louisiana)."
+    }
+   ]
+  },
+  {
+   "id": "F08",
+   "rule": "R8",
+   "severity": "low",
+   "title": "Non-cash currency named in the payout copy of a 'free' row",
+   "detail": "Gems, tickets, Z coins and bonus cash are not withdrawable dollars. Rows are kept, but they are not ranked as cash prizes.",
+   "listing_ids": [
+    "rams-pickem",
+    "atp-fantasy",
+    "f1-fantasy",
+    "superbru",
+    "six-nations-fantasy",
+    "euroleague-fantasy",
+    "cev-volley-fantasy",
+    "cev-predictor",
+    "super-league-fantasy",
+    "super-league-predictor",
+    "motogp-fantasy",
+    "the-hundred-fantasy",
+    "ibu-ecup",
+    "premiership-rugby-fantasy",
+    "aleague-fantasy"
+   ],
+   "count": 15,
+   "rows": [
+    {
+     "id": "rams-pickem",
+     "name": "LA Rams Pick'em",
+     "prize": "Pechanga resort stay + $250 credit; weekly tickets and signed merchandise",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "atp-fantasy",
+     "name": "ATP Fantasy (Official ATP Tour)",
+     "prize": "ATP merchandise and 2027 tickets (no cash)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "f1-fantasy",
+     "name": "F1 Fantasy (Official Formula 1)",
+     "prize": "2027 F1 tickets + VIP grid walk (1st); grandstand tickets (2nd); \u00a3500 F1 Store voucher (3rd)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "superbru",
+     "name": "Superbru",
+     "prize": "Sponsor-funded prizes per game (tickets, vouchers, experiences)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "six-nations-fantasy",
+     "name": "Six Nations Fantasy Rugby",
+     "prize": "2x tickets + flights/accommodation (overall); signed ball (top 5); \u00a3100 Fanatics gift card (round)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "euroleague-fantasy",
+     "name": "EuroLeague Fantasy Challenge",
+     "prize": "Game tickets, jerseys, basketballs and EuroLeague TV subscriptions (non-cash)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "cev-volley-fantasy",
+     "name": "CEV Champions League Volley Fantasy",
+     "prize": "Final 2026 tickets (season winner); jerseys + match balls (2nd\u20133rd); match ball + EuroVolley.TV (4th\u20135th)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "cev-predictor",
+     "name": "CEV Champions League Predictor Game",
+     "prize": "Tickets to the Final Four 2027 (non-cash)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "super-league-fantasy",
+     "name": "Betfred Super League Fantasy (Rugby League)",
+     "prize": "Monthly: PS5/Xbox + \u00a3600 games; season: hospitality tickets + SuperLeague+ pass + signed shirt",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "super-league-predictor",
+     "name": "Betfred Super League Predictor",
+     "prize": "Season winner: launch invite + 4 event tickets + SuperLeague+ pass; monthly/weekly tickets; streak prizes",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "motogp-fantasy",
+     "name": "MotoGP Fantasy (Official)",
+     "prize": "1st signed Marquez helmet; 2nd PS5 + MotoGP26; 3rd signed knee slider; weekly GP tickets",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "the-hundred-fantasy",
+     "name": "The Hundred Fantasy (ECB)",
+     "prize": "1st signed bat; 2nd Citizen watch + tickets; 3rd; block winners get Final tickets (non-cash)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "ibu-ecup",
+     "name": "IBU eCup (Winter Sports Mania)",
+     "prize": "2x VIP tickets to the BMW IBU World Cup for monthly winners (non-cash)",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "premiership-rugby-fantasy",
+     "name": "Fantasy Premiership Rugby",
+     "prize": "Overall winner: VIP Final package; runner-up: signed shirt + 4 tickets; per-round: 2 tickets",
+     "cashout": "Winner claim only"
+    },
+    {
+     "id": "aleague-fantasy",
+     "name": "A-Leagues Fantasy",
+     "prize": "$4,000 major prize; $600 2nd; $400 3rd; weekly double-pass tickets",
+     "cashout": "Winner claim only"
+    }
+   ]
+  },
+  {
+   "id": "F09",
+   "rule": "R9",
+   "severity": "info",
+   "title": "Prize published as prose, not a figure",
+   "detail": "102 of 206 listings describe the prize in words without a dollar amount. No amount is derived from prose; the Prize (USD) column stays blank until an official page is read (see data/verification.json).",
+   "listing_ids": [
+    "solitaire-cash",
+    "bingo-cash",
+    "skillz",
+    "pocket7",
+    "givling",
+    "reedsy-dir",
+    "topcoder",
+    "fox-super6",
+    "pickwatch",
+    "thelines-survivor",
+    "splash-mock",
+    "fpl-official",
+    "fpl-second-chance",
+    "fpl-draft",
+    "fantasy-efl",
+    "telegraph-ff",
+    "ucl-fantasy",
+    "pl-predictor",
+    "pooltracker-epl",
+    "ffs-fpl",
+    "ffs-ucl",
+    "ffs-efl",
+    "ffs-tattico",
+    "football-mad",
+    "fantasy-arena",
+    "lazyfpl",
+    "fplhub",
+    "bona-fide",
+    "olka",
+    "fplmanager-india",
+    "fplstore",
+    "pitchbooking",
+    "dirty-dozen",
+    "the-special-one",
+    "andys-predictor",
+    "pickem-sports",
+    "sports-predictor",
+    "goaloracle",
+    "oddspedia",
+    "streak-for-cash",
+    "playerslounge",
+    "officepoolstop",
+    "funofficepools",
+    "mysurvivorpool",
+    "gridirongames",
+    "squarespool",
+    "myfantasyleague",
+    "trofeo",
+    "crunchdao",
+    "mlcontests",
+    "bundesliga-fantasy",
+    "laliga-fantasy",
+    "swagbucks-trivia",
+    "99designs",
+    "battlefy",
+    "challengermode",
+    "atp-fantasy",
+    "f1-fantasy",
+    "start-gg",
+    "play-pokemon",
+    "designcrowd",
+    "crowdspring",
+    "signate",
+    "hypermind",
+    "superbru",
+    "ligue1-fantasy",
+    "lol-pickem",
+    "six-nations-fantasy",
+    "tattico-serie-a",
+    "supercoach-bbl",
+    "ninjatrader-arena",
+    "dp-world-tour-fantasy",
+    "the-open-fantasy",
+    "sun-dream-team",
+    "sky-sports-ff",
+    "cricket-draft",
+    "icc-t20-fantasy",
+    "darts-corner-predictor",
+    "spfl-fantasy",
+    "euroleague-fantasy",
+    "valorant-pickem",
+    "eredivisie-fantasy",
+    "cev-volley-fantasy",
+    "cev-predictor",
+    "super-league-fantasy",
+    "super-league-predictor",
+    "motogp-fantasy",
+    "the-hundred-fantasy",
+    "fantasy-gaa",
+    "wsl-fantasy",
+    "ti-compendium",
+    "ibu-ecup",
+    "tff-fantezi-lig",
+    "premiership-rugby-fantasy",
+    "agentmma",
+    "formula-e-predictor",
+    "telegraph-fantasy-racing",
+    "stable-stars",
+    "ultimate-fantasy-tennis",
+    "world-press-photo",
+    "weather-potw",
+    "epoty"
+   ],
+   "count": 102,
+   "count_of_listings": 206
+  },
+  {
+   "id": "F10",
+   "rule": "R10",
+   "severity": "low",
+   "title": "Headline 'Added this pass' is one sub-list, not the set of additions",
+   "detail": "The reference site renders 'Added this pass' from `addedThisPassC` (60 ids) and badges rows as 'New' only if they appear in `addedThisPass` or `addedThisPassC`. The file also carries passes G\u2013S (132 ids); the union of every addedThisPass* list is 192 ids, so most later additions never get the badge.",
+   "listing_ids": [],
+   "count": 0,
+   "per_key": {
+    "addedThisPass": 10,
+    "addedThisPassC": 60,
+    "addedThisPassG": 10,
+    "addedThisPassH": 12,
+    "addedThisPassI": 10,
+    "addedThisPassJ": 10,
+    "addedThisPassK": 10,
+    "addedThisPassL": 10,
+    "addedThisPassM": 10,
+    "addedThisPassN": 10,
+    "addedThisPassO": 10,
+    "addedThisPassP": 10,
+    "addedThisPassQ": 10,
+    "addedThisPassR": 10,
+    "addedThisPassS": 10
+   },
+   "union": 192
+  },
+  {
+   "id": "F11",
+   "rule": "R11",
+   "severity": "low",
+   "title": "Reference site masthead date disagrees with its data",
+   "detail": "`index.html` prints \u201cPass C \u00b7 17 Aug 2026\u201d in the masthead while `assets/data.js` declares `reviewed: 2026-08-19`, `pass: \"S\"`. Any reader using the masthead is three passes and two days behind. (Literal masthead read from the mirrored copy: 'Pass C \u00b7 17 Aug 2026'.)",
+   "listing_ids": [],
+   "count": 0
   }
  ],
- "claims": {
-  "headlineTotal": {
-   "claimed": 206,
-   "actual": 206
-  },
-  "headlineFree": {
-   "claimed": 189,
-   "actual": 189,
-   "note": "includes 26 ended and 10 caution rows"
-  },
-  "headlineIos": {
-   "claimed": 62,
-   "actual": 62
-  },
-  "headlineNew": {
-   "claimed": 60,
-   "actual": 60,
-   "note": "Value is the length of the stale \"addedThisPassC\" list (pass C, Aug 17), not the latest pass S (10 entries)."
-  },
-  "headerLabel": {
-   "shown": "Pass C · 17 Aug 2026",
-   "dataSays": "pass S, reviewed 2026-08-19"
-  },
-  "missingIdsInPassLists": [],
-  "duplicateIds": 0
- },
- "summary": {
-  "SHARED_SIGNUP_URL": 19,
-  "STALE_CHECK": 206,
-  "PRIZE_UNCONFIRMED": 17,
-  "FREE_PATH_FEE_MENTION": 16,
-  "ENDED_BUT_FREE_FULL": 26,
-  "GAMBLING_OPERATOR_HOST": 3,
-  "MIXED_PRIZE": 52,
-  "NO_OFFICIAL_SOURCE": 12,
-  "NON_CASH_PRIZE": 9,
-  "SIGNUP_HOST_NOT_IN_SOURCES": 28,
-  "UNVERIFIED_LEAGUE_CODE": 12,
-  "INSECURE_URL": 1,
-  "POSSIBLY_STALE_DATES": 7,
-  "BROKER_PROMO": 19
- }
+ "environment_limits": [
+  "External links are not probed from the shell (no outbound network except GitHub/npm/PyPI in this sandbox).",
+  "Prize prose is never converted to a number; Prize (USD) is blank unless an official page was read."
+ ]
 }

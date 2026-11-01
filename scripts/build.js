@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Static site generator. Reads data/upstream/ledger.json + data/audit.json + data/verification/*.jsonl|picks.json
-// and writes: data/ledger.json, data/ledger.csv, index.html, picks.html, all.html, flagged.html, method.html,
+// Static site generator. Reads data/upstream/ledger.json + data/finder-audit.json + data/verification/*.jsonl|picks.json
+// and writes: data/finder-ledger.json, data/finder-ledger.csv, index.html, picks.html, all.html, flagged.html, method.html,
 // summary.html, categories/*.html, EXECUTIVE_SUMMARY.md.   Run: node scripts/build.js
 const fs = require('fs'), path = require('path');
 const root = path.join(__dirname, '..');
@@ -8,7 +8,7 @@ const rd = f => fs.readFileSync(path.join(root, f), 'utf8');
 const wr = (f, s) => { fs.mkdirSync(path.dirname(path.join(root, f)), { recursive: true }); fs.writeFileSync(path.join(root, f), s); };
 
 const UP = JSON.parse(rd('data/upstream/ledger.json'));
-const AUD = JSON.parse(rd('data/audit.json'));
+const AUD = JSON.parse(rd('data/finder-audit.json'));
 const PICKS = JSON.parse(rd('data/verification/picks.json'));
 const VER = {};
 fs.readdirSync(path.join(root, 'data/verification')).filter(f => f.endsWith('.jsonl')).forEach(f =>
@@ -64,10 +64,10 @@ const N = {
   unconfirmedPrize: count(r => r.prizeKind === 'unconfirmed'),
   discrepancies: rows.filter(r => ['discrepancy', 'broken-link'].includes(r.check.outcome)).length,
 };
-wr('data/ledger.json', JSON.stringify({ generated: CHECK_DATE, upstreamReviewed: UP.reviewed, note: 'Upstream fields are UNVERIFIED claims. Only the "check" object reflects verification against official pages on ' + CHECK_DATE + '.', rows }, null, 1));
+wr('data/finder-ledger.json', JSON.stringify({ generated: CHECK_DATE, upstreamReviewed: UP.reviewed, note: 'Upstream fields are UNVERIFIED claims. Only the "check" object reflects verification against official pages on ' + CHECK_DATE + '.', rows }, null, 1));
 const csv = [['id', 'name', 'category', 'upstream_status', 'free_path_upstream', 'region_auto', 'check_outcome', 'verified_prize', 'official_url', 'flags'].join(',')]
   .concat(rows.map(r => [r.id, r.name, r.type, r.upstreamStatus, r.freePath, r.region, r.check.outcome, r.check.verifiedPrize, r.officialUrl, r.flags.map(f => f.code).join('|')].map(x => '"' + String(x).replace(/"/g, '""') + '"').join(',')));
-wr('data/ledger.csv', csv.join('\n') + '\n');
+wr('data/finder-ledger.csv', csv.join('\n') + '\n');
 
 // ---------- layout ----------
 const NAV = [['index.html', 'Dashboard'], ['picks.html', 'Top picks'], ['all.html', 'All entries'], ['flagged.html', 'Flagged for review'], ['summary.html', 'Executive summary'], ['method.html', 'Method']];
@@ -86,7 +86,7 @@ function page({ file, title, desc, body, active }) {
 <div class="wrap"><nav class="cats" aria-label="Categories"><span class="catlabel">Categories</span>${cats}</nav></div></header>
 <main id="main" class="wrap">${body}</main>
 <footer class="wrap foot"><p>Data date: upstream ledger reviewed <b>${esc(UP.reviewed)}</b>; verification run <b>${CHECK_DATE}</b>. Not financial or legal advice. Official rules always govern; taxes are the winner's responsibility.
-Source ledger: <a href="https://github.com/karagemop466-tech/FreeMoneyApps">karagemop466-tech/FreeMoneyApps</a> · <a href="${REPO}">this repo</a> · <a href="${root_}data/ledger.csv">CSV</a> · <a href="${root_}data/ledger.json">JSON</a></p></footer>
+Source ledger: <a href="https://github.com/karagemop466-tech/FreeMoneyApps">karagemop466-tech/FreeMoneyApps</a> · <a href="${REPO}">this repo</a> · <a href="${root_}data/finder-ledger.csv">CSV</a> · <a href="${root_}data/finder-ledger.json">JSON</a></p></footer>
 <script src="${root_}assets/finder.js" defer></script></body></html>`);
 }
 const badge = o => `<span class="badge ${OUT[o][1]}">${OUT[o][0]}</span>`;
@@ -191,7 +191,7 @@ ${Object.entries(CODE_INFO).filter(([c]) => byCode[c]).map(([c, [t, d]]) => `<de
 <h2 id="d">D · Unverified rows</h2>
 <p><b>${N.byOutcome['not-checked']}</b> of ${N.total} rows were not opened against their official page in this session, and ${N.byOutcome.unverified} more were opened but could not be confirmed. Their prize cells are blank by design. <a href="all.html#check=not-checked">Show the not-checked rows →</a></p>
 <h2 id="e">E · Findings reported by other sessions (not re-read here)</h2>
-<p>These come from the <a href="${REPO}/blob/main/COORDINATION.md">coordination board</a> and <a href="../supplemental/index.html">supplemental page</a> written by other sessions. This session has <b>not</b> re-opened the links below except where listed in section A; read the official pages before relying on them. The full Prize Atlas queue is at <a href="../review.html">review.html</a>.</p>
+<p>These come from the <a href="${REPO}/blob/main/COORDINATION.md">coordination board</a> and <a href="../supplemental/index.html">supplemental page</a> written by other sessions. This session has <b>not</b> re-opened the links below except where listed in section A; read the official pages before relying on them. Pages by other sessions: <a href="../verification.html">verification.html</a> (12 rows checked with verbatim quotes, including the contradicted rows <code>tom-howard-poetry</code> and <code>weather-potw</code>, which this ledger did not check), <a href="../flagged.html">flagged.html</a>, <a href="../review.html">review.html</a> and <a href="../cross-session.html">cross-session.html</a>.</p>
 <ul>
 <li><b>Challenge.gov sunset:</b> reported on the supplemental page; official site ${ext('https://www.challenge.gov/', 'challenge.gov')}. Relevant because HeroX/Challenge.gov rows above point to it.</li>
 <li><b>IceHacks (Devpost):</b> reported to show a contradictory cash header — ${ext('https://icehacks.devpost.com/', 'icehacks.devpost.com')}.</li>
@@ -199,6 +199,7 @@ ${Object.entries(CODE_INFO).filter(([c]) => byCode[c]).map(([c, [t, d]]) => `<de
 <li><b>Ended events:</b> ${ext('https://qhack.ai/terms-and-conditions/', 'QHack')} and ${ext('https://groklearning.com/wtg-programming-competition/', 'WiseTech programming competition')} are reported as ended.</li>
 <li><b>Papaya:</b> reported distinction between free Gem and cash competitions — ${ext('https://www.papaya.com/faq', 'papaya.com/faq')}.</li>
 <li><b>Tax statement:</b> the original site's blanket tax statement is reported to overreach compared with ${ext('https://www.irs.gov/publications/p525', 'IRS Publication 525')}.</li>
+<li><b>Checkmate Gaming:</b> another session marks its free-tournament page <i>verified</i>; this ledger marks it <i>partial</i> because the upstream “$10–$180” range was not confirmed (only $40, $100 and $120 free-entry prizes were seen) and the entry terms of the $1,500 “ELITE ENTRY” tournament on the same page were not verified. Both records are kept.</li>
 <li><b>Two rows with no usable HTTPS operator link:</b> <code>thelines-survivor</code> and <code>squarespool</code> in the Prize Atlas data.</li>
 </ul>`;
 page({ file: 'flagged.html', title: 'Flagged for review', active: 'flagged.html', desc: 'Discrepancies, unverified items and irregularities, with source links.', body: flaggedBody });
@@ -227,7 +228,7 @@ page({
 <li>Outbound network access in the build environment is limited, so external links on the site cannot be machine-checked at build time; <code>scripts/linkcheck.js</code> validates every <i>internal</i> link and anchor, and external links were checked only where listed below.</li>
 <li>Eligibility, tax forms and full rules were read only where stated in a row's Details.</li></ul>
 <h2>Official pages fetched on ${CHECK_DATE}</h2><div class="tw"><table class="tbl simple"><thead><tr><th>Entry</th><th>Result</th><th>Official URL fetched</th></tr></thead><tbody>${logRows}</tbody></table></div>
-<h2>Reproduce</h2><pre>node scripts/audit.js   # automated checks → data/audit.json
+<h2>Reproduce</h2><pre>node scripts/audit.js   # automated checks → data/finder-audit.json
 node scripts/build.js   # merge + generate site
 node scripts/linkcheck.js</pre>`
 });
@@ -301,29 +302,6 @@ Only ${N.checked} of ${N.total} rows were opened against an official page. The r
 - Task board and PR record: [COORDINATION.md](${REPO}/blob/main/COORDINATION.md)
 `;
 wr('ledger/EXECUTIVE_SUMMARY.md', md);
-// Root EXECUTIVE_SUMMARY.md = integrated overview + earlier sessions' Prize Atlas summary (verbatim) + this ledger's summary.
-wr('EXECUTIVE_SUMMARY.md', `# Executive Summary — Own1 (integrated)
-
-Several sessions published work to this repo in parallel. Both are kept, cross-linked and described below; neither overwrote the other.
-
-| Part | What it is | Live |
-| --- | --- | --- |
-| 1 · Prize Atlas | 208 research leads, 7 rows read against official pages, review queue, supplemental findings (sessions 27a86924, 90c9f78c, 85ca8130, 37aed701) | ${SITE} |
-| 2 · Verified Contest Ledger | all 206 upstream rows with automated audit, ${N.checked} rows checked against official pages, flagged page, verified picks (session a479d584) | ${SITE}ledger/ |
-
-Where both parts checked the same page (ESPN NFL Pick'em, ARC Prize, Metaculus, Kaggle, DrivenData GEMS) their values agree. Anything neither part read from an official page is blank and flagged. The consolidated flagged-items view is ${SITE}ledger/flagged.html and the Prize Atlas queue is ${SITE}review.html.
-
----
-
-# Part 1 — Prize Atlas (as published by earlier sessions, unchanged)
-
-` + fs.readFileSync(path.join(root, 'research/PRIZE_ATLAS_SUMMARY.md'), 'utf8').replace(/^# .*\n/, '') + `
-
----
-
-# Part 2 — Verified Contest Ledger
-
-` + md.replace(/^# .*\n/, ''));
 function mdToHtml(src) {
   const inl = s => esc(s).replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>').replace(/\*([^*]+)\*/g, '<i>$1</i>').replace(/`([^`]+)`/g, '<code>$1</code>').replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
   const out = []; let list = null, tbl = null;

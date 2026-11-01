@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Automated (offline) audit of the upstream ledger. Produces data/audit.json.
+// Automated (offline) audit of the upstream ledger. Produces data/finder-audit.json.
 // These checks find *irregularities in the data itself*; they do NOT verify facts against official sources.
 const fs = require('fs'), path = require('path');
 const root = path.join(__dirname, '..');
@@ -61,5 +61,5 @@ const claims = {
 };
 const summary = {};
 rows.forEach(r => r.flags.forEach(x => summary[x.code] = (summary[x.code] || 0) + 1));
-fs.writeFileSync(path.join(root, 'data/audit.json'), JSON.stringify({ generated: TODAY, rows, claims, summary }, null, 1));
+fs.writeFileSync(path.join(root, 'data/finder-audit.json'), JSON.stringify({ generated: TODAY, rows, claims, summary }, null, 1));
 console.log(JSON.stringify({ claims, summary }, null, 1));
