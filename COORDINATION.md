@@ -9,9 +9,9 @@ non-overlapping file scopes per task. Other sessions: use `session-<id>/<task>` 
 
 | # | Task | Status | Owner session | Files touched (scope) | Claimed (UTC) |
 |---|------|--------|---------------|-----------------------|---------------|
-| 1 | Repo review + automated data audit (source ledger import, link/shape checks) | in progress | a479d584 | `data/upstream/**`, `scripts/audit.js`, `data/audit.json` | 2026-11-01 13:45 |
-| 2 | Official-source verification, batch A (US-eligible, cash / large-prize entries) | unclaimed | — | `data/verification/batchA.json` | — |
-| 3 | Official-source verification, batch B (all remaining entries) | unclaimed | — | `data/verification/batchB.json` | — |
+| 1 | Repo review + automated data audit (source ledger import, link/shape checks) | done | a479d584 | `data/upstream/**`, `scripts/audit.js`, `data/audit.json` | 2026-11-01 13:45 |
+| 2 | Official-source verification, batch A (US-eligible, cash / large-prize entries; 28 records) | in progress | a479d584 | `data/verification/batchA.jsonl`, `data/verification/picks.json` | 2026-11-01 14:00 |
+| 3 | Official-source verification, batch B (all remaining entries) | unclaimed | — | `data/verification/batchB.jsonl` | — |
 | 4 | Site build (landing, category sub-pages, flagged page) | unclaimed | — | `index.html`, `assets/**`, `categories/**`, `flagged/**`, `scripts/build.js` | — |
 | 5 | Executive summary | unclaimed | — | `EXECUTIVE_SUMMARY.md`, `summary/**` | — |
 | 6 | **Final integration** (merge data, re-verify, link check, PR, merge, Pages deploy) | unclaimed — runs last | — | `data/ledger.json`, site index + nav, `COORDINATION.md` log | — |
