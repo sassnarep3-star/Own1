@@ -1,0 +1,4 @@
+466f7c1e7a14b52b4a0d36beb84a00d68fd409b7
+Repo: https://github.com/karagemop466-tech/FreeMoneyApps  (live: https://karagemop466-tech.github.io/FreeMoneyApps/)
+Snapshot file: assets/data.js (window.LEDGER, pass S, "reviewed": 2026-08-19), imported unchanged as data.js.orig and converted to ledger.json.
+Imported 2026-11-01 by session a479d584. NOTHING in these files has been verified; they are the *claims* we are auditing.

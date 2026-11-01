@@ -108,14 +108,15 @@ const ARCHIVE_PAGES = [
   'best-picks.html', 'verification.html', 'flagged.html', 'sources.html',
   'executive-summary.html', 'cross-session.html', 'supplemental/index.html',
 ];
-const unexpected = htmlFiles.filter((f) => !expectedPages.includes(f) && !ARCHIVE_PAGES.includes(f));
+const isArchivePage = (f) => ARCHIVE_PAGES.includes(f) || f.startsWith('ledger/');
+const unexpected = htmlFiles.filter((f) => !expectedPages.includes(f) && !isArchivePage(f));
 assert.equal(unexpected.length, 0, `unexpected extra html pages: ${unexpected}`);
 
 let linkCount = 0;
 for (const page of htmlFiles) {
   const html = fs.readFileSync(path.join(ROOT, page), 'utf8');
   const dir = path.dirname(page);
-  const isMine = !ARCHIVE_PAGES.includes(page);
+  const isMine = !isArchivePage(page);
   if (isMine) {
     assert.ok(html.includes('name="viewport"'), `${page}: missing viewport meta`);
     assert.ok(html.includes('aria-label="Main"'), `${page}: missing main navigation`);

@@ -445,6 +445,7 @@ ${pageHead({
 
 export function archivePage() {
   const rows = [
+    ['ledger/index.html', 'Separate “ledger” subsite (session a479d584)', 'A second full build kept under /ledger/ with its own category pages, picks, method and flagged pages, preserved intact rather than merged into this dashboard.'],
     ['verification.html', 'Independent verification pass (session d21e8702)', 'A separate audit of 12 entries with verbatim quotes from each operator page, including a documented contradiction on the Tom Howard poetry fee and the Weather Photographer of the Year prize.'],
     ['best-picks.html', 'Best-picks view from that same build', 'The tiered shortlist as that session ordered it, kept for comparison.'],
     ['flagged.html', 'Flagged page from that same build', 'Unverified rows and contradictions as that session grouped them.'],
