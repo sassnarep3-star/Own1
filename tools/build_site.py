@@ -331,7 +331,18 @@ def table_block(rows: list[dict], page_id: str, *, rel: str = "", show_toolbar: 
     <span class="count" id="shown">—</span>
   </div>
 """
-    return f"""{toolbar}  <div class="table" id="catalogue">
+    return f"""  <div class="legend" style="font-size:12.5px;color:#64748b;margin:0 0 10px;line-height:1.9">
+    <b style="color:#101828">Legend</b> ·
+    <span class="badge b-free">Free to enter</span> catalogue says entry is free ·
+    <span class="badge b-partial">Some free events</span> mixed ·
+    <span class="badge b-paid">Cash needs an entry fee</span> ·
+    <span class="badge b-verified">Verified</span> checked against the operator’s page ·
+    <span class="badge b-partially">Partly verified</span> some fields only ·
+    <span class="badge b-contradicted">Contradicted</span> operator page disagrees ·
+    <span class="badge b-unverified">Source data only</span> not re-checked.
+    “Prize (as published)” is the catalogue’s own wording; “Verified prize” is only filled from a quoted official page.
+  </div>
+{toolbar}  <div class="table" id="catalogue">
     <div class="thead">
       <div>Competition</div><div>Free to enter</div><div>Prize (as published)</div>
       <div>Verified prize</div><div>Official source</div>
@@ -528,7 +539,7 @@ def page_best_picks() -> str:
   multiplies. Prizes are the largest in the catalogue (DrivenData currently shows a $300,000 challenge; Kaggle
   hackathons show $35,000–$450,000 labels), and entry is open to anyone.</li>
   <li><b>Forecasting (3 rows) — the most under-rated.</b> Metaculus states you can “participate for free and win
-  cash prizes”, and two of its live $50,000 pools are explicitly <i>bot tournaments</i>. Read that as a formal
+  cash prizes”, and two of its $50,000 pools (Summer and Fall 2026 FutureEval) are explicitly <i>bot tournaments</i>. Read that as a formal
   invitation to bring an automated system. Prize pools are smaller but the field is thinner than Kaggle’s.</li>
   <li><b>Judged creative (18 rows) — situational, and often banned.</b> Photo and writing prizes pay well and are
   free to enter, but Winning Writers’ rules, for example, state that entries “may not contain any AI-generated

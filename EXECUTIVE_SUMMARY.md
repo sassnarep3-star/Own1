@@ -69,7 +69,7 @@ All figures below are computed from `data/ledger.json` and `data/audit.json`, no
 the small categories. Tech/data pays the largest documented prizes (DrivenData currently runs a **$300,000** challenge;
 Kaggle hackathons show **$35,000–$450,000** labels; ARC Prize 2026 is **$2,000,000** across three tracks).
 Forecasting is the most agent-friendly free money in the whole list: Metaculus states you can *“participate for free
-and win cash prizes”* and two of its live **$50,000** pools are explicitly bot tournaments.
+and win cash prizes”* and two of its **$50,000** pools (Summer and Fall 2026 FutureEval) are explicitly bot tournaments.
 
 ## 4. Verification results (12 rows, checked 2026-11-01)
 
