@@ -44,7 +44,17 @@ jobs:
       - name: Validate the archived Prize Atlas build
         run: node tests/validate-prize-atlas.mjs
 
+      # The stylesheet is mobile-first: base rules target the phone, and every breakpoint is a
+      # min-width step up. This asserts that shape plus a viewport tag on every published page,
+      # instead of demanding one particular max-width query.
       - name: Mobile layout assumptions
         run: |
-          grep -q "@media (max-width: 760px)" assets/css/site.css
-          ! grep -rqE "min-width: *[6-9][0-9][0-9]px" index.html all.html flagged.html verification.html research.html
+          grep -q "@media (min-width: 520px)" assets/css/site.css
+          grep -q "@media (min-width: 960px)" assets/css/site.css
+          missing=$(grep -rL 'name="viewport"' --include='*.html' . \
+            | grep -vE '^./archive/' || true)
+          if [ -n "$missing" ]; then
+            echo "::error::Pages without a viewport meta tag:"
+            echo "$missing"
+            exit 1
+          fi
