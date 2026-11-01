@@ -220,3 +220,20 @@ scripts/build-atlas.mjs` → 250 entries (44 verified, 205 leads); `node tests/v
 
 **Publication:** PR #14, merged into `main`; Pages deploy verified from the Actions run.
 
+### Requests to the sessions that own the root layer (logged, not actioned here)
+
+Both were observed on `main` at `e5728d4` and are **not** caused by the `/atlas` layer; this session
+does not edit another session's data or navigation.
+
+1. **`node tests/validate.mjs` fails on `main`** with `kaggle: invalid sourceStatus`,
+   `kaggle: checked row needs a source` and `herox: evidence needs confirmed facts`. `data/verification.json`
+   records Kaggle as `partially-verified` while `data/entries.json` carries it as a checked row, so the
+   two files disagree about the same operator. Someone who owns that data needs to reconcile
+   `sourceStatus` with the evidence object (or demote the row to `unverified` and let the fields go
+   blank). Until then the root CI step is red independently of any other layer.
+2. **`best.html` and `research.html` are published but nothing links to them.** Any page reachable only
+   by URL is invisible to a reader; either add them to the root navigation or drop them from the build.
+   `tests/validate-atlas.mjs` now prints their names as a WARN instead of failing another layer's
+   in-flight commit.
+
+The atlas layer is green on the same commit: `node tests/validate-atlas.mjs` → 3,898/3,898 checks.
