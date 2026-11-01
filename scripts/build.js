@@ -72,22 +72,22 @@ wr('data/ledger.csv', csv.join('\n') + '\n');
 // ---------- layout ----------
 const NAV = [['index.html', 'Dashboard'], ['picks.html', 'Top picks'], ['all.html', 'All entries'], ['flagged.html', 'Flagged for review'], ['summary.html', 'Executive summary'], ['method.html', 'Method']];
 function page({ file, title, desc, body, active }) {
-  const depth = file.split('/').length - 1, rel = '../'.repeat(depth);
-  const nav = NAV.map(([h, t]) => `<a href="${rel}${h}"${h === active ? ' aria-current="page"' : ''}>${t}</a>`).join('');
+  const depth = file.split('/').length - 1, rel = '../'.repeat(depth), root_ = '../'.repeat(depth + 1); // pages live under ledger/
+  const nav = NAV.map(([h, t]) => `<a href="${rel}${h}"${h === active ? ' aria-current="page"' : ''}>${t}</a>`).join('') + `<a href="${root_}index.html">Prize Atlas leads</a><a href="${root_}supplemental/index.html">Supplemental findings</a>`;
   const cats = UP.types.map(t => `<a href="${rel}categories/${t.id}.html"${file === 'categories/' + t.id + '.html' ? ' aria-current="page"' : ''}>${esc(t.name)}</a>`).join('');
-  wr(file, `<!DOCTYPE html>
+  wr('ledger/' + file, `<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)} · Free Cash Contest Finder</title><meta name="description" content="${esc(desc)}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b6b4f'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='white' font-family='sans-serif'%3E$%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="${rel}assets/style.css"></head>
+<link rel="stylesheet" href="${root_}assets/finder.css"></head>
 <body><a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap bar"><a class="brand" href="${rel}index.html"><span class="logo">$</span><span>Free Cash Contest Finder</span></a>
 <nav class="nav" aria-label="Main">${nav}</nav></div>
 <div class="wrap"><nav class="cats" aria-label="Categories"><span class="catlabel">Categories</span>${cats}</nav></div></header>
 <main id="main" class="wrap">${body}</main>
 <footer class="wrap foot"><p>Data date: upstream ledger reviewed <b>${esc(UP.reviewed)}</b>; verification run <b>${CHECK_DATE}</b>. Not financial or legal advice. Official rules always govern; taxes are the winner's responsibility.
-Source ledger: <a href="https://github.com/karagemop466-tech/FreeMoneyApps">karagemop466-tech/FreeMoneyApps</a> · <a href="${REPO}">this repo</a> · <a href="${rel}data/ledger.csv">CSV</a> · <a href="${rel}data/ledger.json">JSON</a></p></footer>
-<script src="${rel}assets/app.js" defer></script></body></html>`);
+Source ledger: <a href="https://github.com/karagemop466-tech/FreeMoneyApps">karagemop466-tech/FreeMoneyApps</a> · <a href="${REPO}">this repo</a> · <a href="${root_}data/ledger.csv">CSV</a> · <a href="${root_}data/ledger.json">JSON</a></p></footer>
+<script src="${root_}assets/finder.js" defer></script></body></html>`);
 }
 const badge = o => `<span class="badge ${OUT[o][1]}">${OUT[o][0]}</span>`;
 const ext = (u, t, cls = '') => `<a class="${cls}" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(t)}</a>`;
@@ -186,10 +186,21 @@ ${Object.entries(CODE_INFO).filter(([c]) => byCode[c]).map(([c, [t, d]]) => `<de
 <li><b>Headline stats mislead:</b> “189 true free paths” includes ${N.endedFree} entries the ledger itself marks <i>ended</i> and ${rows.filter(r => r.freePath === 'full' && r.upstreamStatus === 'caution').length} marked <i>caution</i>; “60 added this pass” is the length of an old pass-C list (the latest pass S added 10); the page header still says “Pass C · 17 Aug 2026” while the data says pass ${esc(UP.pass)}, reviewed ${esc(UP.reviewed)}.</li>
 <li><b>Mobile usability:</b> the original renders ${rows.length} full cards in one long scroll with no search or filters (by design, per its own intro), and loads three Google Fonts files; it is hard to scan on a phone.</li>
 <li><b>Dead weight in repo:</b> <code>100_VERIFIED_CONTESTS.md</code> in the upstream repo is marked <i>superseded</i> because its own “verified” claims were false; 15 audit files (AUDIT_2026-08-19*.md) are narrative claims, not evidence. We did not rely on any of them.</li>
-<li><b>Own1 repo:</b> contained only a one-line README before this work; “review the repo” therefore meant reviewing the upstream ledger repo, which we imported unchanged to <code>data/upstream/</code> (commit <code>466f7c1</code>).</li>
+<li><b>Own1 repo:</b> contained only a one-line README when this session started (other sessions have since merged the separate Prize Atlas site); “review the repo” therefore meant reviewing the upstream ledger repo, which we imported unchanged to <code>data/upstream/</code> (commit <code>466f7c1</code>).</li>
 </ul>
 <h2 id="d">D · Unverified rows</h2>
-<p><b>${N.byOutcome['not-checked']}</b> of ${N.total} rows were not opened against their official page in this session, and ${N.byOutcome.unverified} more were opened but could not be confirmed. Their prize cells are blank by design. <a href="all.html#check=not-checked">Show the not-checked rows →</a></p>`;
+<p><b>${N.byOutcome['not-checked']}</b> of ${N.total} rows were not opened against their official page in this session, and ${N.byOutcome.unverified} more were opened but could not be confirmed. Their prize cells are blank by design. <a href="all.html#check=not-checked">Show the not-checked rows →</a></p>
+<h2 id="e">E · Findings reported by other sessions (not re-read here)</h2>
+<p>These come from the <a href="${REPO}/blob/main/COORDINATION.md">coordination board</a> and <a href="../supplemental/index.html">supplemental page</a> written by other sessions. This session has <b>not</b> re-opened the links below except where listed in section A; read the official pages before relying on them. The full Prize Atlas queue is at <a href="../review.html">review.html</a>.</p>
+<ul>
+<li><b>Challenge.gov sunset:</b> reported on the supplemental page; official site ${ext('https://www.challenge.gov/', 'challenge.gov')}. Relevant because HeroX/Challenge.gov rows above point to it.</li>
+<li><b>IceHacks (Devpost):</b> reported to show a contradictory cash header — ${ext('https://icehacks.devpost.com/', 'icehacks.devpost.com')}.</li>
+<li><b>PayPal AI Hackathon:</b> prize totals on the listing page reported to differ from the rules — ${ext('https://paypalaihackathon.devpost.com/rules', 'rules')}.</li>
+<li><b>Ended events:</b> ${ext('https://qhack.ai/terms-and-conditions/', 'QHack')} and ${ext('https://groklearning.com/wtg-programming-competition/', 'WiseTech programming competition')} are reported as ended.</li>
+<li><b>Papaya:</b> reported distinction between free Gem and cash competitions — ${ext('https://www.papaya.com/faq', 'papaya.com/faq')}.</li>
+<li><b>Tax statement:</b> the original site's blanket tax statement is reported to overreach compared with ${ext('https://www.irs.gov/publications/p525', 'IRS Publication 525')}.</li>
+<li><b>Two rows with no usable HTTPS operator link:</b> <code>thelines-survivor</code> and <code>squarespool</code> in the Prize Atlas data.</li>
+</ul>`;
 page({ file: 'flagged.html', title: 'Flagged for review', active: 'flagged.html', desc: 'Discrepancies, unverified items and irregularities, with source links.', body: flaggedBody });
 
 // Method
@@ -248,7 +259,7 @@ page({
 // Executive summary (md source + html)
 const md = `# Executive summary — Free Cash Contest Finder
 
-**Date of verification:** ${CHECK_DATE} · **Upstream ledger reviewed:** ${UP.reviewed} (pass ${UP.pass}) · **Live site:** ${SITE}
+**Date of verification:** ${CHECK_DATE} · **Upstream ledger reviewed:** ${UP.reviewed} (pass ${UP.pass}) · **Live site:** ${SITE}ledger/
 
 ## Purpose
 Collect, organize and analyze free-to-enter competitions that can pay real cash, and surface the best ones to compete in with an AI coding agent. The starting point was the [Free Money & Contest Ledger](https://karagemop466-tech.github.io/FreeMoneyApps/) (${N.total} listings), which was hard to use on mobile and contained at least one verified broken link (HeroX).
@@ -285,11 +296,34 @@ Only ${N.checked} of ${N.total} rows were opened against an official page. The r
 4. Read each contest's official rules before investing effort (tax-form thresholds, eligibility, open-source terms). The upstream ledger says US tax forms apply at $600+; that figure was not verified here.
 
 ## Review links
-- Flagged for Review: ${SITE}flagged.html
-- Verification log: ${SITE}method.html
+- Flagged for Review: ${SITE}ledger/flagged.html
+- Verification log: ${SITE}ledger/method.html
 - Task board and PR record: [COORDINATION.md](${REPO}/blob/main/COORDINATION.md)
 `;
-wr('EXECUTIVE_SUMMARY.md', md);
+wr('ledger/EXECUTIVE_SUMMARY.md', md);
+// Root EXECUTIVE_SUMMARY.md = integrated overview + earlier sessions' Prize Atlas summary (verbatim) + this ledger's summary.
+wr('EXECUTIVE_SUMMARY.md', `# Executive Summary — Own1 (integrated)
+
+Several sessions published work to this repo in parallel. Both are kept, cross-linked and described below; neither overwrote the other.
+
+| Part | What it is | Live |
+| --- | --- | --- |
+| 1 · Prize Atlas | 208 research leads, 7 rows read against official pages, review queue, supplemental findings (sessions 27a86924, 90c9f78c, 85ca8130, 37aed701) | ${SITE} |
+| 2 · Verified Contest Ledger | all 206 upstream rows with automated audit, ${N.checked} rows checked against official pages, flagged page, verified picks (session a479d584) | ${SITE}ledger/ |
+
+Where both parts checked the same page (ESPN NFL Pick'em, ARC Prize, Metaculus, Kaggle, DrivenData GEMS) their values agree. Anything neither part read from an official page is blank and flagged. The consolidated flagged-items view is ${SITE}ledger/flagged.html and the Prize Atlas queue is ${SITE}review.html.
+
+---
+
+# Part 1 — Prize Atlas (as published by earlier sessions, unchanged)
+
+` + fs.readFileSync(path.join(root, 'research/PRIZE_ATLAS_SUMMARY.md'), 'utf8').replace(/^# .*\n/, '') + `
+
+---
+
+# Part 2 — Verified Contest Ledger
+
+` + md.replace(/^# .*\n/, ''));
 function mdToHtml(src) {
   const inl = s => esc(s).replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>').replace(/\*([^*]+)\*/g, '<i>$1</i>').replace(/`([^`]+)`/g, '<code>$1</code>').replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
   const out = []; let list = null, tbl = null;
@@ -303,6 +337,6 @@ function mdToHtml(src) {
     else if (l.trim()) { close(); out.push(`<p>${inl(l)}</p>`); } else close();
   }); close(); return out.join('\n');
 }
-page({ file: 'summary.html', title: 'Executive summary', active: 'summary.html', desc: 'Executive summary of findings.', body: `<article class="prose">${mdToHtml(md)}</article>` });
+page({ file: 'summary.html', title: 'Executive summary (ledger part)', active: 'summary.html', desc: 'Executive summary of findings.', body: `<article class="prose">${mdToHtml(md)}</article>` });
 
 console.log('built', rows.length, 'rows;', JSON.stringify(N.byOutcome));
