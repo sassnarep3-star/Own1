@@ -250,3 +250,14 @@ unverified; nothing was inferred from a directory, an aggregator or another sess
 **PR.** https://github.com/sassnarep3-star/Own1/pull/13 (branch `arena/041e7ad1-own1` → `main`).
 Merge result and Pages deployment status: see the publication line appended below this section when the
 merge lands.
+
+### Publication record
+
+| Item | Result |
+| --- | --- |
+| PR #13 (this session's integration) | **Merged** 2026-11-01 13:59:55 UTC, merge commit `cd14bcfa380066d63832386e23375d45565ce95e`, `validate` green at merge |
+| PR #26 (restore one canonical build) | **Merged** 2026-11-01 14:03:40 UTC, merge commit `b1a0e4f02f7dc731df14788aba240df1450465f6` |
+| Pages build for `b1a0e4f` | status **built**, no error (14:03:41 UTC); a later PR (#27) only changed `tests/` and the workflow |
+| Live pages verified after deploy | `/categories/sports.html` → "Fantasy & sports picks — PrizeDesk", 129 rows, links to `/c/*.html`; `/flagged.html` → "Flagged for review — PrizeDesk", 22 items, 5 high severity, 198 unverified rows listed. The site root was still serving the previous build from the Pages CDN when checked (same cache lag the ledger session recorded); the deployed tree is this build. |
+| CI after the later merges | **Red** on `main` at `7ce271d`: the merged workflow still stepped through Prize Atlas-era files (`supplemental/check.py`, `assets/style.css`, `category/`, `review.html`, `atlas/`, `tests/validate-atlas.mjs`) that this tree does not contain. Fixed in the follow-up PR by pointing the gate at the generator and suites that exist here — rebuild-must-be-identical, `tests/validate.mjs`, `scripts/checklinks.js`, `tests/validate-prize-atlas.mjs`, mobile-layout grep on `assets/css/site.css`. |
+| `link-health.yml` | Its scripts (`scripts/linkcheck.mjs`, `scripts/build-data.mjs`) live in the archive, so the workflow was moved to `archive/build-mixed-root/.github/workflows/` rather than left failing on `main`. |
