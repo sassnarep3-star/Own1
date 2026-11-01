@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>All 206 competitions — PrizeDesk</title>
-<meta name="description" content="Every one of the 206 competitions, searchable and filterable, with the operator link and verification status on each row.">
+<title>All 211 competitions — PrizeDesk</title>
+<meta name="description" content="Every one of the 211 competitions, searchable and filterable, with the operator link and verification status on each row.">
 <meta name="color-scheme" content="light dark">
-<meta property="og:title" content="All 206 competitions — PrizeDesk">
-<meta property="og:description" content="Every one of the 206 competitions, searchable and filterable, with the operator link and verification status on each row.">
+<meta property="og:title" content="All 211 competitions — PrizeDesk">
+<meta property="og:description" content="Every one of the 211 competitions, searchable and filterable, with the operator link and verification status on each row.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E%24%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/css/site.css">
@@ -24,13 +24,13 @@
         <span>Source reviewed 19 Aug 2026</span>
       </span>
     </a>
-    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html" aria-current="page">All competitions</a><a href="best.html">Best picks</a><a href="analysis.html">Analysis</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a></nav>
+    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html" aria-current="page">All competitions</a><a href="best.html">Best picks</a><a href="analysis.html">Analysis</a><a href="research.html">Source audit</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a></nav>
   </div>
 </header>
 <main id="main" class="wrap">
 
 <section class="hero">
-  <p class="kicker">Full table · 206 rows</p>
+  <p class="kicker">Full table · 211 rows</p>
   <h1>All competitions</h1>
   <p class="lede">Sorted active-first, then alphabetically. Filter with the controls below; every row links to
   its detail page, and the Source column always points at the operator (or says plainly that no official
@@ -40,7 +40,7 @@
 <div class="filters">
     <div class="filter-row">
       <div class="search-wrap">
-        <input id="q" type="search" placeholder="Search 206 competitions…" aria-label="Search competitions" autocomplete="off">
+        <input id="q" type="search" placeholder="Search 211 competitions…" aria-label="Search competitions" autocomplete="off">
       </div>
       <select data-filter="category" aria-label="Filter by category">
         <option value="">All categories</option>
@@ -51,6 +51,7 @@
         <option value="full">Free entry</option>
         <option value="partial">Some free events</option>
         <option value="paid-cash">Cash needs a fee</option>
+        <option value="unknown">Entry cost not stated</option>
       </select>
       <select data-filter="verif" aria-label="Filter by ID checks">
         <option value="">Any ID checks</option>
@@ -84,7 +85,7 @@
       <button class="chip" type="button" data-chip="flags" aria-pressed="false">Has a flag</button>
       <button class="chip" type="button" id="reset">Reset</button>
     </div>
-    <p class="filter-count" id="count">206 of 206 competitions shown</p>
+    <p class="filter-count" id="count">211 of 211 competitions shown</p>
   </div>
 
 <div id="empty" class="callout warn" hidden><p>No competition matches those filters. Try
@@ -265,7 +266,7 @@
     data-flags="0"><td class="cell-name" data-label="Competition">
       <a href="c/arcprize.html">ARC Prize (via Kaggle)</a>
       <span class="cell-sub">High-dollar abstraction-and-reasoning competition hosted with Kaggle. Free to submit; open-source requirements apply.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span></span>
+      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span><span class="badge info">Independently checked</span></span>
     </td><td data-label="Category"><a href="categories/tech.html">Tech &amp; data competitions</a></td><td data-label="Prize (claimed)"><span class="prize">$2,000,000 across three 2026 tracks</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Tax paperwork</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://arcprize.org/competitions/2026" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+2</span> </td></tr>
 <tr id="row-atp-fantasy"
     data-name="ATP Fantasy (Official ATP Tour)"
@@ -539,6 +540,23 @@
       <span class="cell-sub">Open-source academic benchmark platform. 1,471 public competitions, free to enter and to host.</span>
       <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span></span>
     </td><td data-label="Category"><a href="categories/tech.html">Tech &amp; data competitions</a></td><td data-label="Prize (claimed)"><span class="prize">Per benchmark — many are unpaid; ML Contests logged $248,000 across 2025</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Account only</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://www.codabench.org/" rel="noopener noreferrer">Official page ↗</a> </td></tr>
+<tr id="row-codex-twitchcon-2026"
+    data-name="Codex x TwitchCon Hackathon"
+    data-short="Devpost hackathon: build a Twitch-connected project using Codex. $10,000 first place, closes 2026-11-02 14:00 Pacific."
+    data-category="tech"
+    data-status="live"
+    data-free="full"
+    data-verif="unknown"
+    data-platforms="web"
+    data-checked="no"
+    data-figure="yes"
+    data-usd="10000"
+    data-prize="$10,000 first place"
+    data-flags="1"><td class="cell-name" data-label="Competition">
+      <a href="c/codex-twitchcon-2026.html">Codex x TwitchCon Hackathon</a>
+      <span class="cell-sub">Devpost hackathon: build a Twitch-connected project using Codex. $10,000 first place, closes 2026-11-02 14:00 Pacific.</span>
+      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span><span class="badge info">Independently checked</span></span>
+    </td><td data-label="Category"><a href="categories/tech.html">Tech &amp; data competitions</a></td><td data-label="Prize (claimed)"><span class="prize">$10,000 first place</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Not stated</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://twitchcon-codex.devpost.com/rules" rel="noopener noreferrer">Official page ↗</a> </td></tr>
 <tr id="row-crowdspring"
     data-name="CrowdSpring Design Contests"
     data-short="Premium crowdsourced design marketplace. Enter contests free; the winner receives the prize minus a platform fee."
@@ -656,7 +674,7 @@
     data-flags="1"><td class="cell-name" data-label="Competition">
       <a href="c/drivendata.html">DrivenData</a>
       <span class="cell-sub">Social-impact data-science contests with published USD purses. Free to enter; winners paid by check or wire after…</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span></span>
+      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span><span class="badge info">Independently checked</span></span>
     </td><td data-label="Category"><a href="categories/tech.html">Tech &amp; data competitions</a></td><td data-label="Prize (claimed)"><span class="prize">Per contest — often $10,000–$200,000 total purses</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Tax paperwork</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://www.drivendata.org/competitions/" rel="noopener noreferrer">Official page ↗</a> </td></tr>
 <tr id="row-epoty"
     data-name="Environmental Photographer of the Year (EPOTY)"
@@ -724,8 +742,8 @@
     data-flags="1"><td class="cell-name" data-label="Competition">
       <a href="c/espn-pickem.html">ESPN NFL Pick&#39;em</a>
       <span class="cell-sub">Free season-long pick&#39;em. Ten free entries a week; 58 prizes split the six-figure pot.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span></span>
-    </td><td data-label="Category"><a href="categories/sports.html">Fantasy &amp; sports picks</a></td><td data-label="Prize (claimed)"><span class="prize">$102,000 total across 58 prizes</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web, iOS app</td><td data-label="ID checks">Eligibility check</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://fantasy.espn.com/games/nfl-pickem-2026/make-picks" rel="noopener noreferrer">Official page ↗</a> </td></tr>
+      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span><span class="badge info">Independently checked</span></span>
+    </td><td data-label="Category"><a href="categories/sports.html">Fantasy &amp; sports picks</a></td><td data-label="Prize (claimed)"><span class="prize">$102,000 total across 58 prizes</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web, iOS app</td><td data-label="ID checks">Eligibility check</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://fantasy.espn.com/games/nfl-pickem-2026/make-picks" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span> </td></tr>
 <tr id="row-espn-playoff"
     data-name="ESPN NFL Playoff Predictor"
     data-short="Predict the playoff field before the season. Free entry."
@@ -1134,6 +1152,40 @@
       <span class="cell-sub">Free single-round esports brackets (Madden, EA FC, NBA 2K) paying $10 as bonus cash.</span>
       <span class="badges" style="margin-top:6px"><span class="badge warn">Some free events</span></span>
     </td><td data-label="Category"><a href="categories/skill.html">Skill tournaments</a></td><td data-label="Prize (claimed)"><span class="prize">$10 cash per bracket</span></td><td data-label="Entry"><span class="badge warn">Some free events</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Eligibility check</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://www.gamersaloon.com/promos/1rounder/" rel="noopener noreferrer">Official page ↗</a> </td></tr>
+<tr id="row-gems-prize-2026"
+    data-name="GEMS Prize Challenge (DrivenData)"
+    data-short="US DOE prize competition hosted on DrivenData: $300,000 pool, closes 2026-12-03 23:59 UTC."
+    data-category="tech"
+    data-status="live"
+    data-free="unknown"
+    data-verif="unknown"
+    data-platforms="web"
+    data-checked="no"
+    data-figure="yes"
+    data-usd="300000"
+    data-prize="$300,000 total"
+    data-flags="1"><td class="cell-name" data-label="Competition">
+      <a href="c/gems-prize-2026.html">GEMS Prize Challenge (DrivenData)</a>
+      <span class="cell-sub">US DOE prize competition hosted on DrivenData: $300,000 pool, closes 2026-12-03 23:59 UTC.</span>
+      <span class="badges" style="margin-top:6px"><span class="badge warn">Entry cost not stated</span><span class="badge info">Independently checked</span></span>
+    </td><td data-label="Category"><a href="categories/tech.html">Tech &amp; data competitions</a></td><td data-label="Prize (claimed)"><span class="prize">$300,000 total</span></td><td data-label="Entry"><span class="badge warn">Entry cost not stated</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Not stated</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://www.drivendata.org/competitions/306/competition-doe-gems/" rel="noopener noreferrer">Official page ↗</a> </td></tr>
+<tr id="row-global-virtual-hackathon-2026"
+    data-name="Global Virtual Hackathon 2026"
+    data-short="Free student hackathon for ages 14–18 in teams of 2–4 with a supervising teacher. $1,000 first place per division."
+    data-category="tech"
+    data-status="live"
+    data-free="full"
+    data-verif="unknown"
+    data-platforms="web"
+    data-checked="no"
+    data-figure="yes"
+    data-usd="1000"
+    data-prize="$1,000 first place per division; two $250 runners-up per division"
+    data-flags="0"><td class="cell-name" data-label="Competition">
+      <a href="c/global-virtual-hackathon-2026.html">Global Virtual Hackathon 2026</a>
+      <span class="cell-sub">Free student hackathon for ages 14–18 in teams of 2–4 with a supervising teacher. $1,000 first place per division.</span>
+      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span><span class="badge info">Independently checked</span></span>
+    </td><td data-label="Category"><a href="categories/tech.html">Tech &amp; data competitions</a></td><td data-label="Prize (claimed)"><span class="prize">$1,000 first place per division; two $250 runners-up per division</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Not stated</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://gvhackathon.com/" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span> </td></tr>
 <tr id="row-grand-challenge"
     data-name="Grand Challenge (medical imaging)"
     data-short="Medical image analysis challenges from MICCAI, RSNA and university hospitals. 264 hosted to date."
@@ -1831,6 +1883,23 @@
       <span class="cell-sub">The Ohio Harness Horsemen&#39;s Association&#39;s free fantasy stable league with $5,000 in cash prizes.</span>
       <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span></span>
     </td><td data-label="Category"><a href="categories/sports.html">Fantasy &amp; sports picks</a></td><td data-label="Prize (claimed)"><span class="prize">$5,000 total: $1,500 1st, $800 2nd, $400 3rd, $100 4th–10th + $100 last</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Eligibility check</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://ustrottingnews.com/ohhas-fantasy-league-returns-with-more-ways-to-win/" rel="noopener noreferrer">Official page ↗</a> </td></tr>
+<tr id="row-paypal-ai-hackathon-2026"
+    data-name="PayPal AI Hackathon"
+    data-short="Devpost hackathon using the free PayPal sandbox plus any AI tool. $12,000 first place, closes 2026-11-12 12:00 Pacific."
+    data-category="tech"
+    data-status="live"
+    data-free="full"
+    data-verif="unknown"
+    data-platforms="web"
+    data-checked="no"
+    data-figure="yes"
+    data-usd="12000"
+    data-prize="$12,000 first place"
+    data-flags="1"><td class="cell-name" data-label="Competition">
+      <a href="c/paypal-ai-hackathon-2026.html">PayPal AI Hackathon</a>
+      <span class="cell-sub">Devpost hackathon using the free PayPal sandbox plus any AI tool. $12,000 first place, closes 2026-11-12 12:00…</span>
+      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span><span class="badge info">Independently checked</span></span>
+    </td><td data-label="Category"><a href="categories/tech.html">Tech &amp; data competitions</a></td><td data-label="Prize (claimed)"><span class="prize">$12,000 first place</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Not stated</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://paypalaihackathon.devpost.com/rules" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span> </td></tr>
 <tr id="row-pensacola-songwriting"
     data-name="Pensacola Beach Songwriters Festival Competition"
     data-short="A free-entry songwriting competition with a $1,000 grand prize and $150 category prizes."
@@ -2630,6 +2699,23 @@
       <span class="cell-sub">A free season-long fantasy tennis game, with Topps autographed cards as Open Play prizes.</span>
       <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span></span>
     </td><td data-label="Category"><a href="categories/sports.html">Fantasy &amp; sports picks</a></td><td data-label="Prize (claimed)"><span class="prize none">—</span><span class="cell-sub">no amount stated by the source</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Account only</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://ultimatefantasytennis.com/blog/what-is-fantasy-tennis" rel="noopener noreferrer">Official page ↗</a> </td></tr>
+<tr id="row-midterms-2026"
+    data-name="US Midterms 2026 (Metaculus tournament)"
+    data-short="Single Metaculus tournament with a $10,000 pool, closing 2026-11-04 — days after this build."
+    data-category="forecasting"
+    data-status="live"
+    data-free="full"
+    data-verif="unknown"
+    data-platforms="web"
+    data-checked="yes"
+    data-figure="yes"
+    data-usd="10000"
+    data-prize="$10,000 pool"
+    data-flags="1"><td class="cell-name" data-label="Competition">
+      <a href="c/midterms-2026.html">US Midterms 2026 (Metaculus tournament)</a>
+      <span class="cell-sub">Single Metaculus tournament with a $10,000 pool, closing 2026-11-04 — days after this build.</span>
+      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span><span class="badge good">Live-checked</span></span>
+    </td><td data-label="Category"><a href="categories/forecasting.html">Forecasting tournaments</a></td><td data-label="Prize (claimed)"><span class="prize">$10,000 pool</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Not stated</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://www.metaculus.com/tournament/midterms-2026/" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span> <span class="badge good">live-checked</span></td></tr>
 <tr id="row-valorant-pickem"
     data-name="Valorant Champions Pick&#39;Em"
     data-short="Riot&#39;s official free prediction game for VCT Champions — in-game rewards for accurate picks."
@@ -3606,11 +3692,12 @@
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-links">
-      <a href="all.html">All 206 competitions</a>
+      <a href="all.html">All 211 competitions</a>
       <a href="best.html">Best picks</a>
       <a href="analysis.html">Analysis</a>
+      <a href="research.html">Source audit</a>
       <a href="verification.html">Verification method</a>
-      <a href="flagged.html">Flagged for review (17)</a>
+      <a href="flagged.html">Flagged for review (22)</a>
       <a href="executive-summary.html">Executive summary</a>
     </div>
     <p><b>PrizeDesk</b> is an independent workbench built on the Free Money &amp; Contest
@@ -3618,7 +3705,7 @@
     19 Aug 2026). It is not affiliated with any operator listed.
     Prize figures are the source dataset's claims, not this site's promises — open the operator's
     rules before you enter. Contest law varies by state and country; play only where legal. 18+/21+.</p>
-    <p class="note-tiny">Figures verified on this site: 12 of 206 rows were
+    <p class="note-tiny">Figures verified on this site: 13 of 211 rows were
     fetched live on 1 Nov 2026. Everything else is labelled
     "source cited — not re-checked". See <a href="verification.html">how verification works</a>.</p>
   </div>

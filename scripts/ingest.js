@@ -43,11 +43,59 @@ try {
   fail('source is not strict JSON: ' + err.message);
 }
 
+/* ---------- merge independent cross-checks and added rows ---------- */
+
+const CROSS = path.join(ROOT, 'data/cross-checks.json');
+const ADD = path.join(ROOT, 'data/additions.json');
+const cross = fs.existsSync(CROSS) ? JSON.parse(fs.readFileSync(CROSS, 'utf8')) : { checks: [] };
+const additions = fs.existsSync(ADD) ? JSON.parse(fs.readFileSync(ADD, 'utf8')) : { listings: [] };
+
+const crossById = new Map(cross.checks.map((c) => [c.id, c]));
+
+// Rows added by parallel sessions are appended to the ledger, tagged, and never silently mixed in.
+for (const extra of additions.listings || []) {
+  if (ledger.listings.some((l) => l.id === extra.id)) {
+    fail('addition ' + extra.id + ' duplicates an existing listing');
+  }
+  ledger.listings.push({
+    ...extra,
+    addedByParallelSession: additions.addedBy,
+    mergedBy: additions.mergedBy
+  });
+  console.warn('merged added row: ' + extra.id);
+}
+
+// Cross-checked official URLs are attached to the row's sources so the published table can show them.
+for (const item of ledger.listings) {
+  const cc = crossById.get(item.id);
+  if (!cc) continue;
+  const already = (item.sources || []).some((s) => s.url === cc.url);
+  if (!already) {
+    item.sources = (item.sources || []).concat([{
+      title: 'Official page — independently checked ' + cc.checkedDate,
+      url: cc.url,
+      tier: 'official',
+      crossChecked: true,
+      checkedBy: cc.checkedBy
+    }]);
+  }
+  item.crossCheck = {
+    url: cc.url,
+    checkedDate: cc.checkedDate,
+    checkedBy: cc.checkedBy,
+    confirmed: cc.confirmed,
+    caveats: cc.caveats,
+    deadline: cc.deadline || item.deadline || null
+  };
+  if (cc.deadline) item.deadline = cc.deadline;
+}
+
 /* ---------- structural assertions on the source ---------- */
 
 if (!Array.isArray(ledger.listings)) fail('listings is not an array');
-if (ledger.listings.length !== prov.declaredListingCount) {
-  fail(`listing count ${ledger.listings.length} != declared ${prov.declaredListingCount}`);
+const expected = prov.declaredListingCount + (additions.listings || []).length;
+if (ledger.listings.length !== expected) {
+  fail(`listing count ${ledger.listings.length} != expected ${expected}`);
 }
 
 const ids = new Set();
@@ -97,6 +145,8 @@ const out = {
     note: prov.note
   },
   reviewed: ledger.reviewed,
+  additionsMerged: (additions.listings || []).length,
+  crossChecksMerged: cross.checks.length,
   pass: ledger.pass,
   types: ledger.types,
   verificationLevels: ledger.verificationLevels,
@@ -113,7 +163,9 @@ const byType = {};
 for (const item of ledger.listings) byType[item.type] = (byType[item.type] || 0) + 1;
 
 console.log('ingest ok');
-console.log('  listings:', ledger.listings.length);
+console.log('  listings:', ledger.listings.length,
+  '(source ' + prov.declaredListingCount + ' + merged ' + (additions.listings || []).length + ')');
+console.log('  cross-checked rows merged:', cross.checks.length);
 console.log('  categories:', ledger.types.length);
 console.log('  by type:', JSON.stringify(byType));
 console.log('  written:', path.relative(ROOT, OUT));

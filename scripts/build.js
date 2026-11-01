@@ -44,6 +44,7 @@ const NAV = [
   ['all.html', 'All competitions'],
   ['best.html', 'Best picks'],
   ['analysis.html', 'Analysis'],
+  ['research.html', 'Source audit'],
   ['verification.html', 'Verification'],
   ['flagged.html', 'Flagged for review']
 ];
@@ -59,9 +60,10 @@ const attr = esc;
 const FREE_LABEL = {
   full: 'Free entry',
   partial: 'Some free events',
-  'paid-cash': 'Cash needs fee'
+  'paid-cash': 'Cash needs fee',
+  unknown: 'Entry cost not stated'
 };
-const FREE_TONE = { full: 'good', partial: 'warn', 'paid-cash': 'danger' };
+const FREE_TONE = { full: 'good', partial: 'warn', 'paid-cash': 'danger', unknown: 'warn' };
 const STATUS_LABEL = {
   live: 'Active',
   mixed: 'Mixed',
@@ -73,7 +75,8 @@ const VERIF_LABEL = {
   account: 'Account only',
   eligibility: 'Eligibility check',
   kyc: 'Full KYC',
-  tax: 'Tax paperwork'
+  tax: 'Tax paperwork',
+  unknown: 'Not stated'
 };
 const TIER_LABEL = { official: 'Official', affiliate: 'Affiliate', forum: 'Forum' };
 
@@ -163,6 +166,7 @@ ${opts.body}
       <a href="${base}all.html">All ${T.rows} competitions</a>
       <a href="${base}best.html">Best picks</a>
       <a href="${base}analysis.html">Analysis</a>
+      <a href="${base}research.html">Source audit</a>
       <a href="${base}verification.html">Verification method</a>
       <a href="${base}flagged.html">Flagged for review (${irr.items.length})</a>
       <a href="${base}executive-summary.html">Executive summary</a>
@@ -195,6 +199,7 @@ function badgesFor(item, row) {
     out.push(`<span class="badge ${item.status === 'ended' ? 'danger' : 'warn'}">${esc(STATUS_LABEL[item.status])}</span>`);
   }
   if (row.rowStatus === 'live-checked') out.push('<span class="badge good">Live-checked</span>');
+  if (row.rowStatus === 'cross-checked') out.push('<span class="badge info">Independently checked</span>');
   if (row.rowStatus === 'live-check-error') out.push('<span class="badge danger">Link error</span>');
   if (row.rowStatus === 'no-official-source') out.push('<span class="badge warn">No official source</span>');
   return out.join('');
@@ -291,6 +296,7 @@ function filterBar(opts) {
         <option value="full">Free entry</option>
         <option value="partial">Some free events</option>
         <option value="paid-cash">Cash needs a fee</option>
+        <option value="unknown">Entry cost not stated</option>
       </select>
       <select data-filter="verif" aria-label="Filter by ID checks">
         <option value="">Any ID checks</option>
@@ -357,6 +363,9 @@ function detailPage(item, row) {
   push('Category', `<a href="${base}categories/${attr(item.type)}.html">${esc(cat ? cat.name : item.type)}</a>`);
   push('Status', esc(STATUS_LABEL[item.status] || item.status));
   push('Source last checked', esc(fmtDate(item.lastChecked)) + ` <small>(${SITE.staleDays} days before this page was built)</small>`);
+  if (row.crossCheck && row.crossCheck.deadline) {
+    push('Verified deadline', esc(fmtDate(row.crossCheck.deadline)) + ` <small>as read on ${esc(fmtDate(row.crossCheck.checkedDate))}</small>`);
+  }
 
   const prizeNote = item.prizeNote ? `<div class="card"><h3>What the source says about the prize</h3>
     <p class="note-tiny">Direct quote from the ledger dataset. Unconfirmed unless the row is marked live-checked.</p>
@@ -379,9 +388,25 @@ function detailPage(item, row) {
       }).join('')}</ul>`
     : '<p class="note-tiny">No structural flags on this row.</p>';
 
+  const crossCard = row.crossCheck ? `<div class="card">
+      <h2>Independently checked</h2>
+      <p class="note-tiny">Read on ${esc(fmtDate(row.crossCheck.checkedDate))} by
+      <code>${esc(row.crossCheck.checkedBy || 'another session')}</code>, not by this build session.
+      The caveats are theirs, carried verbatim.</p>
+      <p><a href="${attr(row.crossCheck.url)}" rel="noopener noreferrer">${esc(shortText(row.crossCheck.url.replace(/^https?:\/\//, ''), 52))} ↗</a></p>
+      ${(row.crossCheck.confirmed || []).length ? `<h3>Confirmed on that page</h3><ul class="list">${row.crossCheck.confirmed.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+      ${(row.crossCheck.caveats || []).length ? `<h3>Caveats recorded</h3><ul class="list">${row.crossCheck.caveats.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+      ${row.crossCheck.deadline ? `<p class="note-tiny"><b>Deadline:</b> ${esc(fmtDate(row.crossCheck.deadline))}</p>` : ''}
+    </div>` : '';
+
+  const mergedNote = row.mergedFrom ? `<div class="callout info"><p><b>This row is not in the original ledger.</b>
+    It was added by a parallel session in this repository (${esc(row.mergedFrom)}) after reading the operator page.
+    Only the facts that session recorded are shown; everything it left blank is blank here.</p></div>` : '';
+
   const statusText = {
     'live-checked': 'We fetched a page of this row on ' + fmtDate(SITE.verifiedOn) + ' and it loaded with relevant content.',
     'live-check-error': 'We fetched this row\'s link on ' + fmtDate(SITE.verifiedOn) + ' and it returned an error page.',
+    'cross-checked': 'Another session in this repository read an official page for this row on ' + fmtDate(SITE.verifiedOn) + ' and recorded what it said. This session did not fetch it.',
     'official-source-cited': 'This row cites an official source, but we did not fetch it in this pass. Treat the figures as the source\'s claims, last checked ' + fmtDate(SITE.sourceReviewed) + '.',
     'no-official-source': 'This row cites no official source. Its figures are withheld from our table and listed on the Flagged for Review page.'
   }[row.rowStatus];
@@ -419,6 +444,7 @@ ${row.liveCheckError ? `<div class="callout warn"><p><b>Link problem found on ${
   ${esc(row.liveCheckError.url)} returned an error page when fetched (${esc(row.liveCheckError.pageTitle || 'error')}).
   The operator link above may still work. Flagged as <a href="${base}flagged.html#I-05">I-05</a>.</p></div>` : ''}
 
+${mergedNote}
 <div class="detail-grid section">
   <div>
     <div class="card">
@@ -441,6 +467,7 @@ ${row.liveCheckError ? `<div class="callout warn"><p><b>Link problem found on ${
       }">${esc({
         'live-checked': 'Live-checked',
         'live-check-error': 'Link error found',
+        'cross-checked': 'Independently checked',
         'official-source-cited': 'Source cited — not re-checked',
         'no-official-source': 'No official source'
       }[row.rowStatus])}</span></p>
@@ -456,6 +483,7 @@ ${row.liveCheckError ? `<div class="callout warn"><p><b>Link problem found on ${
       </div>
       <p class="note-tiny" style="margin-top:8px">Tier is the source dataset's own label. Only "Official" means the operator's own domain.</p>
     </div>
+    ${crossCard ? `<div style="margin-top:12px">${crossCard}</div>` : ''}
     ${dirNote ? `<div style="margin-top:12px">${dirNote}</div>` : ''}
     ${codeNote ? `<div style="margin-top:12px">${codeNote}</div>` : ''}
   </aside>
@@ -494,12 +522,14 @@ function score(item, row) {
 
   if (item.freePath === 'full') { s += 3; why.push('free entry +3'); }
   else if (item.freePath === 'partial') { s += 1; why.push('some free events +1'); }
+  else if (item.freePath === 'unknown') { why.push('entry cost not stated +0'); }
   else { s -= 4; why.push('entry fee needed −4'); }
 
   if (row.officialSourceCount) { s += 2; why.push('official source +2'); }
   else why.push('no official source +0');
 
   if (row.liveCheck) { s += 2; why.push('live-checked +2'); }
+  if (row.crossCheck && !row.liveCheck) { s += 1; why.push('independently checked +1'); }
   if (row.liveCheckError) { s -= 2; why.push('link error −2'); }
 
   const usd = claimUsd(row.prizeCellValue);
@@ -626,6 +656,36 @@ function buildIndex() {
   </div>
   <div class="btn-row"><a class="btn" href="best.html">Full shortlists and method →</a></div>
 </section>
+
+${(() => {
+    const today = new Date(SITE.verifiedOn + 'T00:00:00Z');
+    const soon = ledger.listings
+      .map((i) => ({ i, r: rowsById.get(i.id) }))
+      .filter((x) => x.r.deadline)
+      .map((x) => ({ ...x, days: Math.round((new Date(x.r.deadline + 'T00:00:00Z') - today) / 86400000) }))
+      .filter((x) => x.days >= 0 && x.days <= 60)
+      .sort((a, b) => a.days - b.days);
+    if (!soon.length) return '';
+    return `<section class="section">
+      <h2>Closing within 60 days</h2>
+      <p class="note-tiny">Only deadlines that another session read from an official page on
+      ${esc(fmtDate(SITE.verifiedOn))} appear here. Any row without a verified deadline is absent — not because
+      nothing closes, but because we did not confirm a date.</p>
+      <div class="table-scroll"><table class="ledger">
+        <thead><tr><th>Competition</th><th>Verified deadline</th><th>Days left</th><th>Prize (claimed)</th><th>Source</th></tr></thead>
+        <tbody>${soon.map((x) => `<tr>
+          <td class="cell-name" data-label="Competition"><a href="c/${attr(x.i.id)}.html">${esc(x.i.name)}</a></td>
+          <td data-label="Deadline">${esc(fmtDate(x.r.deadline))}</td>
+          <td data-label="Days left" class="num">${x.days === 0 ? 'today' : x.days}</td>
+          <td data-label="Prize (claimed)">${x.r.prizeCellValue ? `<span class="prize">${esc(x.r.prizeCellValue)}</span>` : '<span class="prize none">—</span>'}</td>
+          <td data-label="Source"><a class="src-link" href="${attr(x.r.crossCheck.url)}" rel="noopener noreferrer">Official ↗</a></td>
+        </tr>`).join('')}</tbody>
+      </table></div>
+      <div class="callout warn" style="margin-top:10px"><p><b>Deadlines are the strongest reason to act and the
+      easiest thing to get wrong.</b> ${soon.filter((x) => x.days <= 7).length} of these close within a week of
+      this build. Confirm the date on the operator page before you start work.</p></div>
+    </section>`;
+  })()}
 
 <section class="section">
   <h2>Categories</h2>
@@ -1165,10 +1225,123 @@ function buildFlagged() {
   });
 }
 
+
+function buildResearch() {
+  const checks = verif.rows.filter((r) => r.crossCheck);
+  const bySession = {};
+  checks.forEach((r) => {
+    (r.crossCheck.checkedBy || 'unattributed').split(/,\s*/).forEach((sess) => {
+      bySession[sess] = (bySession[sess] || 0) + 1;
+    });
+  });
+
+  const rows = checks.map((r) => {
+    const item = itemsById.get(r.id);
+    return `<tr>
+      <td class="cell-name" data-label="Listing"><a href="c/${attr(r.id)}.html">${esc(r.name)}</a>
+        <span class="cell-sub">${esc((typeById.get(r.type) || {}).name || r.type)}</span></td>
+      <td data-label="Official page"><a class="src-link" href="${attr(r.crossCheck.url)}" rel="noopener noreferrer">${esc(shortText(r.crossCheck.url.replace(/^https?:\/\//, ''), 46))} ↗</a></td>
+      <td data-label="Confirmed">${(r.crossCheck.confirmed || []).length
+        ? `<ul class="list" style="margin:0">${r.crossCheck.confirmed.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : '<span class="blank">—</span>'}</td>
+      <td data-label="Caveats">${(r.crossCheck.caveats || []).length
+        ? `<ul class="list" style="margin:0">${r.crossCheck.caveats.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : '<span class="blank">—</span>'}</td>
+      <td data-label="Deadline">${r.crossCheck.deadline ? esc(fmtDate(r.crossCheck.deadline)) : '<span class="blank">—</span>'}</td>
+      <td data-label="Checked by">${esc(r.crossCheck.checkedBy || '—')}<span class="cell-sub">${esc(fmtDate(r.crossCheck.checkedDate))}</span></td>
+    </tr>`;
+  }).join('');
+
+  const sessionList = Object.entries(bySession)
+    .map(([sess, n]) => `<li><code>${esc(sess)}</code> — ${n} of the ${checks.length} checks</li>`).join('');
+
+  const body = `
+<section class="hero">
+  <p class="kicker">Source audit · ${checks.length} official pages read by sessions in this repo</p>
+  <h1>What someone actually opened</h1>
+  <p class="lede">Two kinds of verification exist in this repository. This session fetched
+  ${live.checks.length} URLs on ${esc(fmtDate(SITE.verifiedOn))} (logged on
+  <a href="flagged.html">Flagged for review</a>). The parallel sessions that built the earlier
+  “Prize Atlas” dashboard read ${checks.length} operator pages and wrote down exactly what each one said.
+  This page carries their findings forward, attributed, rather than merging them into an anonymous “verified” badge.</p>
+</section>
+
+<div class="callout info">
+  <p><b>How to read this.</b> A row marked “Independently checked” had one of its official pages read on
+  ${esc(fmtDate(SITE.verifiedOn))} by another session in this repository — not by this one. Their caveats are
+  carried verbatim. If a page did not state a value, the value stays blank on the row.</p>
+</div>
+
+<div class="stat-grid">
+  ${stat(String(checks.length), 'official pages read by other sessions', 'good')}
+  ${stat(String(live.checks.length), 'URLs fetched by this session')}
+  ${stat(String(T.rows), 'rows in the merged ledger')}
+  ${stat(String(irr.items.length), 'flagged irregularities', 'warn')}
+</div>
+
+<section class="section">
+  <h2>Cross-checks carried forward</h2>
+  <div class="table-scroll">
+    <table class="ledger">
+      <thead><tr><th>Listing</th><th>Official page</th><th>Confirmed on the page</th><th>Caveats recorded</th><th>Deadline</th><th>Checked by</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  </div>
+  <p class="note-tiny">Attribution: ${sessionList}</p>
+</section>
+
+<section class="section">
+  <h2>What the other sessions flagged that we did not</h2>
+  <div class="card">
+    <ul class="list">
+      <li><a href="flagged.html#I-17">I-17</a> — ESPN's own rules contradict each other on maximum entries (five vs ten).</li>
+      <li><a href="flagged.html#I-18">I-18</a> — Challenge.gov, presented as a live directory, was sunset by the government on 2026-03-30.</li>
+      <li><a href="flagged.html#I-19">I-19</a> — IceHacks advertises cash in its header while its own description says there is none.</li>
+      <li><a href="flagged.html#I-20">I-20</a> — PayPal AI Hackathon's headline prize total and its itemised rules disagree.</li>
+      <li><a href="flagged.html#I-21">I-21</a> — the reference work's “$600+” tax line is a generalisation, not a rule (IRS links included).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Raw records you can read yourself</h2>
+  <div class="card">
+    <ul class="list">
+      <li><a href="research/SOURCES.md">research/SOURCES.md</a> — the parallel sessions' original source audit: which pages were read, what they confirmed, and what they could not.</li>
+      <li><a href="archive/prize-atlas/index.html">archived “Prize Atlas” dashboard</a> — the earlier build, preserved intact (208 leads, 7 checked pages) with its own review queue and supplemental research page.</li>
+      <li><a href="archive/prize-atlas/supplemental/index.html">archived supplemental research</a> — the source of the three hackathon rows and four of the flags above.</li>
+      <li><a href="docs/COORDINATION-session-records.md">docs/COORDINATION-session-records.md</a> — every session's own task record, verbatim, including their PR numbers and deployment runs.</li>
+      <li><a href="data/cross-checks.json">data/cross-checks.json</a> — the machine-readable version of this page.</li>
+      <li><a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/466f7c1e7a14b52b4a0d36beb84a00d68fd409b7/assets/data.js" rel="noopener noreferrer">the pinned ledger snapshot</a> the rows were imported from.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Rows that came from the other sessions</h2>
+  <div class="card">
+    <p>${ledger.additionsMerged} rows are not in the pinned ledger at all. They were added by parallel sessions
+    after reading the operator page, and are marked as merged rows on their detail pages:</p>
+    <ul class="list">
+      ${ledger.listings.filter((i) => i.mergedFrom).map((i) => `<li><a href="c/${attr(i.id)}.html">${esc(i.name)}</a> — ${esc(i.mergedFrom)}</li>`).join('')}
+    </ul>
+    <p class="note-tiny">Their prize figures come from the operator page that session read, on the date recorded
+    in <code>data/cross-checks.json</code>. If that page did not state a figure, the row shows “—”.</p>
+  </div>
+</section>`;
+
+  return layout({
+    title: `Source audit — ${SITE.name}`,
+    description: `${checks.length} official pages read by the parallel sessions, carried forward with attribution, caveats and links.`,
+    active: 'research.html',
+    body,
+    scripts: false
+  });
+}
+
 function buildVerification() {
   const statusRows = [
     ['Live-checked', 'live-checked', 'good', 'We fetched one of the row\'s own URLs on ' + fmtDate(SITE.verifiedOn) + ' and it returned the expected, on-topic page. Only ' + T.recheckedThisPass + ' rows qualify.'],
     ['Link error found', 'live-check-error', 'danger', 'We fetched the row\'s URL and it returned an error page. ' + T.liveCheckError + ' row.'],
+    ['Independently checked', 'cross-checked', 'info', 'Another session in this repository read an official page for this row on ' + fmtDate(SITE.verifiedOn) + ' and recorded what it said. ' + T.crossChecked + ' rows. This session did not fetch them.'],
     ['Source cited — not re-checked', 'official-source-cited', 'info', 'The row cites an official-tier URL, but we did not fetch it in this pass. ' + T.officialSourceCited + ' rows. Figures are the source\'s claims.'],
     ['No official source', 'no-official-source', 'warn', 'The row cites only affiliate or forum sources. ' + T.noOfficialSource + ' rows. The prize cell is blank in our tables.']
   ].map(([label, key, tone, meaning]) => `<tr>
@@ -1275,6 +1448,9 @@ function buildVerification() {
       link, not every sentence the source wrote.</li>
       <li>No odds, entrant counts, effort estimates or expected-value figures exist in the data, so none are
       shown anywhere on this site.</li>
+      <li><b>Tax:</b> the “US prizes of $600+ normally require a W-9” line is the source dataset's
+      generalisation, not a rule. Reporting depends on the type of income and your circumstances — see
+      <a href="flagged.html#I-21">I-21</a> and the IRS pages linked there. Nothing here is tax advice.</li>
       <li>Links on operator sites rot. The "link error" badge is one observation, not a permanent state.</li>
     </ul>
   </div>
@@ -1378,6 +1554,7 @@ written.push(write('best.html', buildBest()));
 written.push(write('analysis.html', buildAnalysis()));
 written.push(write('flagged.html', buildFlagged()));
 written.push(write('verification.html', buildVerification()));
+written.push(write('research.html', buildResearch()));
 written.push(write('executive-summary.html', buildExecutive(ctx)));
 written.push(write('404.html', build404()));
 written.push(write('sitemap.xml', buildSitemap(written.filter((p) => p.endsWith('.html')))));

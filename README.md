@@ -7,6 +7,11 @@ transparent shortlist, and a published list of everything that could not be veri
 
 **Live site:** https://sassnarep3-star.github.io/Own1/
 
+This repository is the integration of six parallel sessions that worked on the same brief on 2026-11-01.
+The earlier "Prize Atlas" build is preserved, working, under [`archive/prize-atlas/`](archive/prize-atlas/index.html);
+its verified findings are merged into this dataset and attributed on the
+[source audit page](https://sassnarep3-star.github.io/Own1/research.html).
+
 ---
 
 ## Why this exists
@@ -57,6 +62,25 @@ build time, so the site cannot drift from the dataset.
 | `data/verification.json` | Per-row verification state, flags and totals |
 | `data/live-checks.json` | The 12 URLs actually fetched this pass, with what each confirmed |
 | `data/irregularities.json` | The 17-item register published on the site |
+
+## What was merged from the parallel sessions
+
+| From the Prize Atlas build | Where it lives now |
+| --- | --- |
+| 5 rows not in the pinned ledger (GEMS Prize Challenge, US Midterms 2026, and three AI hackathons) | Merged into `data/ledger.json` from `data/additions.json`, each with a detail page and a "not in the original ledger" note |
+| 10 official pages read on 2026-11-01, with the caveats they recorded | `data/cross-checks.json`, published on `research.html` and on each row's detail page, attributed to the session that read them |
+| Their dashboard (208 leads, 7 checked pages, review queue, supplemental research) | Preserved intact at `archive/prize-atlas/` with a banner linking back here |
+| Findings: ESPN entry-limit conflict, Challenge.gov sunset, IceHacks header, PayPal prize totals, the "$600+" tax generalisation | Published as flags I-17 … I-21 on `flagged.html` |
+| Their validation script and CI workflow | `tests/validate-prize-atlas.mjs` (base path adjusted) and `.github/workflows/validate.yml`, which now runs both suites |
+| Their source audit | `research/SOURCES.md`, linked from `research.html` |
+
+Their README, for the record:
+
+> Prize Atlas — a static, mobile-friendly research dashboard for cash-prize competition leads. Only seven rows
+> have official pages read for their displayed details as of 2026-11-01; other rows are explicitly unverified.
+> `data/entries.json` contains 206 unverified/checked legacy leads imported by name and category from the
+> reference ledger, plus two newly checked contest leads. Financial details and deadlines are shown only where
+> read from an official page.
 
 ## Build
 

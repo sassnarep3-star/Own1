@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-01T13:46:33.666Z",
+ "generatedAt": "2026-11-01T13:50:19.300Z",
  "verifiedOn": "2026-11-01",
  "statusMeaning": "needs review",
  "items": [
@@ -223,7 +223,7 @@
    "title": "\"Rules\" link is just the signup page",
    "severity": "low",
    "type": "sourcing",
-   "summary": "113 of 206 rows point their rules URL at exactly the same address as the signup URL. The rules are then not a separate, linkable document — the reader lands on a marketing or entry page.",
+   "summary": "117 of 206 rows point their rules URL at exactly the same address as the signup URL. The rules are then not a separate, linkable document — the reader lands on a marketing or entry page.",
    "evidence": [
     "Rows where rulesUrl === signupUrl."
    ],
@@ -340,7 +340,11 @@
     "weather-potw",
     "epoty",
     "spie-light",
-    "istanbul-photo-awards"
+    "istanbul-photo-awards",
+    "gems-prize-2026",
+    "midterms-2026",
+    "codex-twitchcon-2026",
+    "paypal-ai-hackathon-2026"
    ],
    "links": [],
    "action": "Shown as a single \"Official page\" link instead of pretending there is a separate rules document."
@@ -452,7 +456,7 @@
    "title": "No stated prize amount",
    "severity": "medium",
    "type": "data-quality",
-   "summary": "128 rows state a money amount; the other 78 do not. They use placeholder text such as \"Prizes decided by your group\", \"Varies\", \"Confirm in-app\" or \"Unverified\". These rows cannot be ranked on prize value.",
+   "summary": "133 rows state a money amount; the other 78 do not. They use placeholder text such as \"Prizes decided by your group\", \"Varies\", \"Confirm in-app\" or \"Unverified\". These rows cannot be ranked on prize value.",
    "evidence": [
     "Rows where the prize field contains no currency amount."
    ],
@@ -618,11 +622,114 @@
    "action": "We do not repeat that blurb. Our category description is written from what the rows actually contain."
   },
   {
+   "id": "I-17",
+   "title": "ESPN's own rules contradict each other on how many entries you may submit",
+   "severity": "low",
+   "type": "source-conflict",
+   "summary": "Found by the parallel sessions on 2026-11-01: ESPN's FAQ says five entries while the intro and the current picks UI say ten. Both cannot be right, and it changes how a multi-entry strategy works.",
+   "evidence": [
+    "ESPN NFL Pick'em FAQ vs the current picks page, read 2026-11-01 by arena/27a86924-own1 and re-read by arena/90c9f78c-own1 (see research/SOURCES.md)."
+   ],
+   "affected": [
+    "espn-pickem"
+   ],
+   "links": [
+    {
+     "title": "ESPN Pick'em complete rules",
+     "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules"
+    }
+   ],
+   "action": "The caveat is carried on the row's detail page verbatim as a cross-check note. We do not pick a number."
+  },
+  {
+   "id": "I-18",
+   "title": "Challenge.gov is listed as a live lead, but the government says the platform was sunset on 2026-03-30",
+   "severity": "medium",
+   "type": "stale-source",
+   "summary": "Found by a parallel session on 2026-11-01: the reference work groups Challenge.gov with other contest platforms, while the government's own site states the platform was sunset in March 2026. A dead directory sends readers to nothing.",
+   "evidence": [
+    "challenge.gov notice read 2026-11-01 (see the archived supplemental research page)."
+   ],
+   "affected": [],
+   "links": [
+    {
+     "title": "Challenge.gov (government notice)",
+     "url": "https://www.challenge.gov/"
+    }
+   ],
+   "action": "No Challenge.gov row exists in this ledger, so nothing was removed. Recorded here because the source material presents it as a current directory."
+  },
+  {
+   "id": "I-19",
+   "title": "IceHacks advertises cash in its header but its own description says there are no cash prizes",
+   "severity": "low",
+   "type": "source-conflict",
+   "summary": "A parallel session found a page contradicting itself: the header advertises cash, the description says no cash prizes. Header copy is not a prize.",
+   "evidence": [
+    "icehacks.devpost.com read 2026-11-01."
+   ],
+   "affected": [],
+   "links": [
+    {
+     "title": "IceHacks event page",
+     "url": "https://icehacks.devpost.com/"
+    }
+   ],
+   "action": "IceHacks is not carried as a row, so no prize is published for it. Recorded so the pattern (headline vs rules) stays visible."
+  },
+  {
+   "id": "I-20",
+   "title": "PayPal AI Hackathon: headline prize total and itemised rules disagree",
+   "severity": "medium",
+   "type": "prize-discrepancy",
+   "summary": "The event page advertises $67,500 cash and $69,750 total prizes; the rules itemise individual awards including non-cash credits. This site quotes only the clearly stated first-place cash award ($12,000) and nothing else.",
+   "evidence": [
+    "Event page vs rules page, read 2026-11-01 by arena/37aed701-own1."
+   ],
+   "affected": [
+    "paypal-ai-hackathon-2026"
+   ],
+   "links": [
+    {
+     "title": "Event page",
+     "url": "https://paypalaihackathon.devpost.com/"
+    },
+    {
+     "title": "Official rules",
+     "url": "https://paypalaihackathon.devpost.com/rules"
+    }
+   ],
+   "action": "The row states \"$12,000 first place\" only, with this discrepancy noted on its detail page. No total is published."
+  },
+  {
+   "id": "I-21",
+   "title": "The blanket claim that \"US tax forms apply at $600+\" is a generalisation, not a rule",
+   "severity": "low",
+   "type": "tax-claim",
+   "summary": "A parallel session flagged that the reference work presents a $600 threshold as universal. Reporting depends on the type of income and the filer's circumstances; IRS guidance distinguishes prizes/awards from gambling winnings.",
+   "evidence": [
+    "The source dataset's own verification-level text: \"US prizes of $600+ typically require a W-9\".",
+    "IRS Publication 525 and IRS Topic 419 distinguish other income from gambling winnings."
+   ],
+   "affected": [],
+   "links": [
+    {
+     "title": "IRS Publication 525 (taxable and nontaxable income)",
+     "url": "https://www.irs.gov/publications/p525"
+    },
+    {
+     "title": "IRS Topic 419 (gambling income and losses)",
+     "url": "https://www.irs.gov/taxtopics/tc419"
+    }
+   ],
+   "action": "Every page that mentions tax says \"the source's generalisation\" and links this entry. Nothing here is tax advice."
+  },
+  {
    "id": "I-16",
    "title": "Most rows were not re-checked in this pass",
    "severity": "info",
    "type": "verification-coverage",
-   "summary": "12 of 206 rows were fetched live on 2026-11-01. The build sandbox has no general outbound web access, so a 206-row crawl was not possible here. The other 194 rows are published as \"source cited — not re-checked this session\".",
+   "summary": "13 of 211 rows were fetched live on 2026-11-01. The build sandbox has no general outbound web access, so a 206-row crawl was not possible here. The other 198 rows are published as \"source cited — not re-checked this session\".",
    "evidence": [
     "live-checks.json records 12 fetches; no other URL was retrieved this session."
    ],

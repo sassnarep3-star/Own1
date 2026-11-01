@@ -100,9 +100,11 @@ for (const item of ledger.listings) {
   const currencies = currenciesIn(item.prizeUsd);
   const hasOfficialBasis = official.length > 0;
 
+  const crossCheck = item.crossCheck || null;
   let status;
   if (lcError) status = 'live-check-error';
   else if (lcLoaded) status = 'live-checked';
+  else if (crossCheck) status = 'cross-checked';
   else if (hasOfficialBasis) status = 'official-source-cited';
   else status = 'no-official-source';
 
@@ -146,6 +148,13 @@ for (const item of ledger.listings) {
     prizeHasOfficialBasis: hasOfficialBasis,
     /** Published table value: blank unless an official source exists AND a real amount is stated. */
     prizeCellValue: hasOfficialBasis && money ? item.prizeUsd : null,
+    crossCheck: crossCheck ? {
+      url: crossCheck.url, checkedDate: crossCheck.checkedDate, checkedBy: crossCheck.checkedBy,
+      confirmed: crossCheck.confirmed, caveats: crossCheck.caveats, deadline: crossCheck.deadline
+    } : null,
+    deadline: item.deadline || null,
+    verificationLevelLabel: item.verification.level,
+    mergedFrom: item.mergedFrom || null,
     liveCheck: lcLoaded ? { url: lcLoaded.url, outcome: lcLoaded.outcome, pageTitle: lcLoaded.pageTitle, checkedAt: CHECK_DATE } : null,
     liveCheckError: lcError ? { url: lcError.url, outcome: lcError.outcome, pageTitle: lcError.pageTitle, checkedAt: CHECK_DATE } : null,
     liveChecks: lcs.map((c) => ({ url: c.url, outcome: c.outcome, checkedAt: CHECK_DATE })),
@@ -161,6 +170,7 @@ const totals = {
   rows: rows.length,
   liveChecked: count((r) => r.rowStatus === 'live-checked'),
   liveCheckError: count((r) => r.rowStatus === 'live-check-error'),
+  crossChecked: count((r) => r.rowStatus === 'cross-checked'),
   officialSourceCited: count((r) => r.rowStatus === 'official-source-cited'),
   noOfficialSource: count((r) => r.rowStatus === 'no-official-source'),
   recheckedThisPass: count((r) => r.liveCheck !== null),
@@ -177,6 +187,8 @@ const totals = {
   sourceReviewed: SOURCE_REVIEW_DATE,
   verifiedOn: CHECK_DATE,
   staleDays: STALE_DAYS,
+  addedByParallelSessions: (ledger.additionsMerged || 0),
+  crossChecks: (ledger.crossChecksMerged || 0),
   sourceRepoCommit: ledger.provenance.sourceRepoCommit,
   sourceFileSha256: ledger.provenance.sourceFileSha256
 };
@@ -190,7 +202,8 @@ fs.writeFileSync(path.join(ROOT, 'data/verification.json'), JSON.stringify({
     'Every row was parsed from the pinned source file and checked mechanically for: an official-tier source, a rules URL, https-only links, a stated money amount, and a live fetch made in this pass.',
     'Only rows whose own URL was actually fetched on ' + CHECK_DATE + ' are labelled "live-checked".',
     'Values behind no official source are blanked in the published table and flagged, never filled in.',
-    'The remaining ' + (rows.length - totals.recheckedThisPass) + ' rows carry the source\'s claim of a check on ' + SOURCE_REVIEW_DATE + ' and are published as "source cited — not re-checked this session".'
+    'The remaining ' + (rows.length - totals.recheckedThisPass - count((r) => r.rowStatus === 'cross-checked')) + ' rows carry the source\'s claim of a check on ' + SOURCE_REVIEW_DATE + ' and are published as "source cited — not re-checked this session".',
+    count((r) => r.rowStatus === 'cross-checked') + ' rows were verified on ' + CHECK_DATE + ' by the parallel sessions in this repository (see research/SOURCES.md and data/cross-checks.json). Those are labelled "independently checked" rather than being attributed to this session.'
   ],
   totals,
   rows
@@ -423,6 +436,72 @@ const register = [
     affected: [],
     links: [{ title: 'Source repository', url: 'https://github.com/karagemop466-tech/FreeMoneyApps' }],
     action: 'We do not repeat that blurb. Our category description is written from what the rows actually contain.'
+  },
+  {
+    id: 'I-17',
+    title: 'ESPN\'s own rules contradict each other on how many entries you may submit',
+    severity: 'low',
+    type: 'source-conflict',
+    summary: 'Found by the parallel sessions on 2026-11-01: ESPN\'s FAQ says five entries while the intro and the current picks UI say ten. Both cannot be right, and it changes how a multi-entry strategy works.',
+    evidence: ['ESPN NFL Pick\'em FAQ vs the current picks page, read 2026-11-01 by arena/27a86924-own1 and re-read by arena/90c9f78c-own1 (see research/SOURCES.md).'],
+    affected: ['espn-pickem'],
+    links: [
+      { title: 'ESPN Pick\'em complete rules', url: 'https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules' }
+    ],
+    action: 'The caveat is carried on the row\'s detail page verbatim as a cross-check note. We do not pick a number.'
+  },
+  {
+    id: 'I-18',
+    title: 'Challenge.gov is listed as a live lead, but the government says the platform was sunset on 2026-03-30',
+    severity: 'medium',
+    type: 'stale-source',
+    summary: 'Found by a parallel session on 2026-11-01: the reference work groups Challenge.gov with other contest platforms, while the government\'s own site states the platform was sunset in March 2026. A dead directory sends readers to nothing.',
+    evidence: ['challenge.gov notice read 2026-11-01 (see the archived supplemental research page).'],
+    affected: [],
+    links: [{ title: 'Challenge.gov (government notice)', url: 'https://www.challenge.gov/' }],
+    action: 'No Challenge.gov row exists in this ledger, so nothing was removed. Recorded here because the source material presents it as a current directory.'
+  },
+  {
+    id: 'I-19',
+    title: 'IceHacks advertises cash in its header but its own description says there are no cash prizes',
+    severity: 'low',
+    type: 'source-conflict',
+    summary: 'A parallel session found a page contradicting itself: the header advertises cash, the description says no cash prizes. Header copy is not a prize.',
+    evidence: ['icehacks.devpost.com read 2026-11-01.'],
+    affected: [],
+    links: [{ title: 'IceHacks event page', url: 'https://icehacks.devpost.com/' }],
+    action: 'IceHacks is not carried as a row, so no prize is published for it. Recorded so the pattern (headline vs rules) stays visible.'
+  },
+  {
+    id: 'I-20',
+    title: 'PayPal AI Hackathon: headline prize total and itemised rules disagree',
+    severity: 'medium',
+    type: 'prize-discrepancy',
+    summary: 'The event page advertises $67,500 cash and $69,750 total prizes; the rules itemise individual awards including non-cash credits. This site quotes only the clearly stated first-place cash award ($12,000) and nothing else.',
+    evidence: ['Event page vs rules page, read 2026-11-01 by arena/37aed701-own1.'],
+    affected: ['paypal-ai-hackathon-2026'],
+    links: [
+      { title: 'Event page', url: 'https://paypalaihackathon.devpost.com/' },
+      { title: 'Official rules', url: 'https://paypalaihackathon.devpost.com/rules' }
+    ],
+    action: 'The row states "$12,000 first place" only, with this discrepancy noted on its detail page. No total is published.'
+  },
+  {
+    id: 'I-21',
+    title: 'The blanket claim that "US tax forms apply at $600+" is a generalisation, not a rule',
+    severity: 'low',
+    type: 'tax-claim',
+    summary: 'A parallel session flagged that the reference work presents a $600 threshold as universal. Reporting depends on the type of income and the filer\'s circumstances; IRS guidance distinguishes prizes/awards from gambling winnings.',
+    evidence: [
+      'The source dataset\'s own verification-level text: "US prizes of $600+ typically require a W-9".',
+      'IRS Publication 525 and IRS Topic 419 distinguish other income from gambling winnings.'
+    ],
+    affected: [],
+    links: [
+      { title: 'IRS Publication 525 (taxable and nontaxable income)', url: 'https://www.irs.gov/publications/p525' },
+      { title: 'IRS Topic 419 (gambling income and losses)', url: 'https://www.irs.gov/taxtopics/tc419' }
+    ],
+    action: 'Every page that mentions tax says "the source\'s generalisation" and links this entry. Nothing here is tax advice.'
   },
   {
     id: 'I-16',

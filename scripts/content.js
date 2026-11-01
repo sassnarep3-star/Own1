@@ -21,6 +21,8 @@ function build(ctx) {
       { t: 'p', text:
         'The source site (Free Money & Contest Ledger) is a research catalogue of free-to-enter competitions that can pay real money. Its weaknesses are real: on a phone it is one long scroll of ' + n.rows + ' full-length cards with no search, no filters and no sorting, its own pages disagree about which revision is published, and one of its cited App Store links returned an error page when we fetched it. It also mixes ' + n.endedListings + ' ended contests and ' + n.withPromoCode + ' unverified referral codes into the same undifferentiated list as live, verifiable competitions.' },
       { t: 'p', text:
+        'Five other sessions were working on this repository at the same time. Their build ("Prize Atlas") is preserved intact under archive/prize-atlas/, and their verified work is merged into this dataset: ' + ctx.totals.addedByParallelSessions + ' rows they added after reading operator pages, and ' + ctx.totals.crossChecks + ' official pages they read and recorded. Those rows carry an "Independently checked" badge attributed to the session that read them — they are never presented as checks made by this one.' },
+      { t: 'p', text:
         'This repository rebuilds it as a mobile-first dashboard: one row per competition, nine category pages, a full-table page with search/filter/sort, a scoring-based shortlist, a verification page, and a Flagged for Review page carrying every irregularity with source links. Every table row links to the operator\'s own page. Nothing on the site is a value we invented — values that no official source supports are left blank and listed as unverified.' },
 
       { t: 'h2', text: '2. Key numbers' },
@@ -74,7 +76,7 @@ function build(ctx) {
 
       { t: 'h2', text: '6. What we did not verify — read this before you enter anything' },
       { t: 'ul', items: [
-        n.recheckedThisPass + ' of ' + n.rows + ' rows were fetched live this pass. The build environment could reach the web only through a page-fetch tool, so a full ' + n.rows + '-row crawl (roughly 400 URLs) was not possible. The remaining ' + (n.rows - n.recheckedThisPass) + ' rows are published as "source cited — not re-checked", and the full list is on the Flagged for Review page.',
+        'Of ' + n.rows + ' rows: ' + n.liveChecked + ' were fetched live by this session on ' + ctx.verifiedOn + ', ' + n.liveCheckError + ' returned a link error, ' + n.crossChecked + ' have an official page read by another session in this repository, ' + n.officialSourceCited + ' cite an official source nobody re-opened this pass, and ' + n.noOfficialSource + ' cite no official source at all. The build environment could reach the web only through a page-fetch tool, so a full ' + n.rows + '-row crawl (roughly 400 URLs) was not possible; the unchecked rows are listed in full on the Flagged for Review page.',
         'All prize figures are at least ' + n.staleDays + ' days old. Seasonal sports contests in particular must be re-read from the operator page before you commit time.',
         'We did not verify AI-assistance terms for any contest. Many judged contests restrict or prohibit AI-generated entries; check the rules before using an agent.',
         'We did not assess tax treatment beyond flagging that US prizes of $600+ normally require a W-9. That is general context, not advice.',
@@ -90,7 +92,15 @@ function build(ctx) {
         'Re-run the pipeline (' + 'npm run build' + ') when you want a fresh pass: the source is pinned by commit and checksum, so any change is auditable.'
       ]},
 
-      { t: 'h2', text: '8. Provenance' },
+      { t: 'h2', text: '8. How this build relates to the parallel sessions' },
+      { t: 'ul', items: [
+        'Six sessions worked on this repository on ' + ctx.verifiedOn + '. Five merged their work into main before this integration pass; their task records, PR numbers and deployment runs are preserved verbatim in docs/COORDINATION-session-records.md.',
+        'Their dashboard is preserved as a working, self-contained site at archive/prize-atlas/ — 208 leads, 7 checked official pages, its own review queue and its supplemental research page. Nothing was deleted.',
+        'Their verified findings were merged into this dataset, attributed: ' + ctx.totals.addedByParallelSessions + ' new rows (GEMS Prize Challenge, US Midterms 2026, and three AI hackathons) and ' + ctx.totals.crossChecks + ' official-page cross-checks, each showing the URL, the date read, the session that read it, and their caveats.',
+        'Their four additional irregularity findings (ESPN entry limits, Challenge.gov sunset, IceHacks header, PayPal prize totals, the $600 tax generalisation) are published as I-17 to I-21.',
+        'Where the two builds disagreed, this site keeps the stricter rule: a figure is shown only when an official source states it. That is why rows the other build marked "checked" can still show a blank prize here.'
+      ]},
+      { t: 'h2', text: '9. Provenance' },
       { t: 'p', text:
         'Source data: the public FreeMoneyApps repository, commit ' + ctx.commit + ', file assets/data.js, SHA-256 ' + ctx.sha256 + ', captured ' + ctx.verifiedOn + '. The file is vendored unchanged in this repository and parsed as strict JSON — never executed. Every published row can be traced back to that file, and every claim in it can be traced to the operator link shown on the row.' }
     ]

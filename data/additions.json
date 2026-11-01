@@ -1,0 +1,187 @@
+{
+  "note": "Rows present in the archived Prize Atlas build's data/entries.json but not in the pinned source ledger. Both were added by parallel sessions after reading the operator page on 2026-11-01. Only facts those sessions recorded are used; every field they left blank stays blank here. Three additional rows come from the archived supplemental research page (three devpost/organiser-checked hackathons).",
+  "addedBy": "arena/27a86924-own1 and arena/90c9f78c-own1",
+  "mergedBy": "arena-041e7ad1",
+  "listings": [
+    {
+      "id": "gems-prize-2026",
+      "name": "GEMS Prize Challenge (DrivenData)",
+      "short": "US DOE prize competition hosted on DrivenData: $300,000 pool, closes 2026-12-03 23:59 UTC.",
+      "type": "tech",
+      "status": "live",
+      "freePath": "unknown",
+      "platforms": [
+        "web"
+      ],
+      "signupUrl": "https://www.drivendata.org/competitions/306/competition-doe-gems/",
+      "rulesUrl": "https://www.drivendata.org/competitions/306/competition-doe-gems/",
+      "prizeUsd": "$300,000 total",
+      "prizeNote": "$300,000 total prize pool, per the operator page read on 2026-11-01. Final-round awards depend on scoring. No entry fee was stated on the inspected page, so none is asserted here.",
+      "minCashout": "",
+      "payoutMethods": [],
+      "eligibility": "",
+      "restricted": "Final-round awards depend on scoring; confirm eligibility in the official rules.",
+      "verification": {
+        "level": "unknown",
+        "steps": []
+      },
+      "sources": [
+        {
+          "title": "Official competition page",
+          "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/",
+          "tier": "official"
+        }
+      ],
+      "lastChecked": "2026-11-01",
+      "deadline": "2026-12-03",
+      "mergedFrom": "Prize Atlas data/entries.json + research/SOURCES.md"
+    },
+    {
+      "id": "midterms-2026",
+      "name": "US Midterms 2026 (Metaculus tournament)",
+      "short": "Single Metaculus tournament with a $10,000 pool, closing 2026-11-04 — days after this build.",
+      "type": "forecasting",
+      "status": "live",
+      "freePath": "full",
+      "platforms": [
+        "web"
+      ],
+      "signupUrl": "https://www.metaculus.com/tournament/midterms-2026/",
+      "rulesUrl": "https://www.metaculus.com/tournament/midterms-2026/",
+      "prizeUsd": "$10,000 pool",
+      "prizeNote": "$10,000 prize pool per the tournament page read on 2026-11-01. Metaculus states platform-wide that participation is free and accurate forecasters can win cash prizes.",
+      "minCashout": "",
+      "payoutMethods": [],
+      "eligibility": "Free participation per Metaculus' platform statement; consult the tournament rules for eligibility.",
+      "restricted": "Closes 2026-11-04. Check the tournament rules before entering.",
+      "verification": {
+        "level": "unknown",
+        "steps": []
+      },
+      "sources": [
+        {
+          "title": "Official tournament page",
+          "url": "https://www.metaculus.com/tournament/midterms-2026/",
+          "tier": "official"
+        },
+        {
+          "title": "Metaculus tournaments index",
+          "url": "https://www.metaculus.com/tournaments/",
+          "tier": "official"
+        }
+      ],
+      "lastChecked": "2026-11-01",
+      "deadline": "2026-11-04",
+      "mergedFrom": "Prize Atlas data/entries.json + research/SOURCES.md"
+    },
+    {
+      "id": "codex-twitchcon-2026",
+      "name": "Codex x TwitchCon Hackathon",
+      "short": "Devpost hackathon: build a Twitch-connected project using Codex. $10,000 first place, closes 2026-11-02 14:00 Pacific.",
+      "type": "tech",
+      "status": "live",
+      "freePath": "full",
+      "platforms": [
+        "web"
+      ],
+      "signupUrl": "https://twitchcon-codex.devpost.com/rules",
+      "rulesUrl": "https://twitchcon-codex.devpost.com/rules",
+      "prizeUsd": "$10,000 first place",
+      "prizeNote": "$10,000 first place, read from the official Devpost rules page on 2026-11-01 by a parallel session. Time-critical: closes 2026-11-02 at 2pm Pacific, one day after this build.",
+      "minCashout": "",
+      "payoutMethods": [],
+      "eligibility": "No purchase necessary. 18 or age of majority, whichever is older; geographic and other restrictions apply.",
+      "restricted": "Deadline 2026-11-02, 2pm Pacific. Requires a Codex session ID and a demo.",
+      "verification": {
+        "level": "unknown",
+        "steps": []
+      },
+      "sources": [
+        {
+          "title": "Official rules (Devpost)",
+          "url": "https://twitchcon-codex.devpost.com/rules",
+          "tier": "official"
+        }
+      ],
+      "lastChecked": "2026-11-01",
+      "deadline": "2026-11-02",
+      "mergedFrom": "Prize Atlas supplemental research page"
+    },
+    {
+      "id": "paypal-ai-hackathon-2026",
+      "name": "PayPal AI Hackathon",
+      "short": "Devpost hackathon using the free PayPal sandbox plus any AI tool. $12,000 first place, closes 2026-11-12 12:00 Pacific.",
+      "type": "tech",
+      "status": "live",
+      "freePath": "full",
+      "platforms": [
+        "web"
+      ],
+      "signupUrl": "https://paypalaihackathon.devpost.com/rules",
+      "rulesUrl": "https://paypalaihackathon.devpost.com/rules",
+      "prizeUsd": "$12,000 first place",
+      "prizeNote": "$12,000 first place quoted from the official rules. Note the discrepancy logged as I-20: the event page advertises $67,500 cash / $69,750 total prizes while the rules list individual awards including non-cash credits.",
+      "minCashout": "",
+      "payoutMethods": [],
+      "eligibility": "No purchase necessary. Age of majority; geographic and other restrictions apply.",
+      "restricted": "Deadline 2026-11-12, 12pm Pacific. Functional demo and public source repository required.",
+      "verification": {
+        "level": "unknown",
+        "steps": []
+      },
+      "sources": [
+        {
+          "title": "Official rules (Devpost)",
+          "url": "https://paypalaihackathon.devpost.com/rules",
+          "tier": "official"
+        },
+        {
+          "title": "Official event page (Devpost)",
+          "url": "https://paypalaihackathon.devpost.com/",
+          "tier": "official"
+        }
+      ],
+      "lastChecked": "2026-11-01",
+      "deadline": "2026-11-12",
+      "mergedFrom": "Prize Atlas supplemental research page"
+    },
+    {
+      "id": "global-virtual-hackathon-2026",
+      "name": "Global Virtual Hackathon 2026",
+      "short": "Free student hackathon for ages 14–18 in teams of 2–4 with a supervising teacher. $1,000 first place per division.",
+      "type": "tech",
+      "status": "live",
+      "freePath": "full",
+      "platforms": [
+        "web"
+      ],
+      "signupUrl": "https://gvhackathon.com/",
+      "rulesUrl": "https://gvhackathon.com/fairness",
+      "prizeUsd": "$1,000 first place per division; two $250 runners-up per division",
+      "prizeNote": "Cash awards read from the official event page on 2026-11-01 by a parallel session. AI tools are explicitly allowed and expected; team members must be able to defend their own work on camera.",
+      "minCashout": "",
+      "payoutMethods": [],
+      "eligibility": "Free. Students aged 14–18; teams of 2–4 with a supervising teacher (see terms for exceptions and consent).",
+      "restricted": "Register by 2026-11-13 23:59 AoE; submit by 2026-11-25. Team and teacher requirements apply.",
+      "verification": {
+        "level": "unknown",
+        "steps": []
+      },
+      "sources": [
+        {
+          "title": "Official event page",
+          "url": "https://gvhackathon.com/",
+          "tier": "official"
+        },
+        {
+          "title": "Official AI & fairness page",
+          "url": "https://gvhackathon.com/fairness",
+          "tier": "official"
+        }
+      ],
+      "lastChecked": "2026-11-01",
+      "deadline": "2026-11-13",
+      "mergedFrom": "Prize Atlas supplemental research page"
+    }
+  ]
+}
