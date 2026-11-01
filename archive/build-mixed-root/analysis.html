@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Findings from the verification pass: which categories pay, which entries are free, and where the reference ledger is wrong.">
+<meta name="color-scheme" content="light">
+<title>Analysis and findings · Prize Atlas</title>
+<link rel="stylesheet" href="../prize-atlas/assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="./index.html">
+      <span class="brand-mark" aria-hidden="true">&#10022;</span>
+      <span>Prize Atlas<small>Free-to-enter cash competitions</small></span>
+    </a>
+    <nav class="nav" aria-label="Main"><a href="./index.html">Overview</a><a href="./index.html#categories">Categories</a><a href="./index.html#best-bets">Best bets</a><a href="./analysis.html" aria-current="page">Analysis</a><a href="./methodology.html">Method</a><a href="../../index.html">Supplemental</a><a href="./review.html">Flagged for review</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap prose">
+    <p class="crumbs"><a href="index.html">Overview</a> / Analysis</p>
+    <p class="eyebrow">Findings</p>
+    <h1>What the evidence supports</h1>
+    <p class="lede">Every statement below is derived from the 212 rows in <code>data/entries.json</code> or from an official page read on 2026-11-01. Where a number is a judgement rather than a fact, it is labelled.</p>
+
+    <h2>1. Coverage: most of the ledger cannot be trusted yet</h2>
+    <p>28 of 212 rows have been read on an operator page. 184 remain unverified leads with blank prize, entry-cost and deadline cells. The reference ledger was last stamped August 2026 and mixes live contests, ended contests, paid-entry games, directories and pool software in one list.</p>
+    <div class="panel"><div class="table-scroll"><table>
+      <thead><tr><th scope="col">Category</th><th scope="col">Leads</th><th scope="col">Checked</th><th scope="col">Free confirmed</th><th scope="col">Paid</th></tr></thead>
+      <tbody><tr><td data-label="Category"><a href="../../categories/sports.html">Fantasy &amp; sports picks</a></td><td data-label="Leads">129</td><td data-label="Checked">8</td><td data-label="Free confirmed">8</td><td data-label="Paid">0</td></tr>
+<tr><td data-label="Category"><a href="../../categories/tech.html">Build something</a></td><td data-label="Leads">17</td><td data-label="Checked">8</td><td data-label="Free confirmed">2</td><td data-label="Paid">0</td></tr>
+<tr><td data-label="Category"><a href="../../categories/forecasting.html">Forecasting</a></td><td data-label="Leads">4</td><td data-label="Checked">2</td><td data-label="Free confirmed">2</td><td data-label="Paid">0</td></tr>
+<tr><td data-label="Category"><a href="../../categories/creative.html">Writing &amp; photography</a></td><td data-label="Leads">19</td><td data-label="Checked">7</td><td data-label="Free confirmed">5</td><td data-label="Paid">1</td></tr>
+<tr><td data-label="Category"><a href="../../categories/market.html">Market simulations</a></td><td data-label="Leads">19</td><td data-label="Checked">0</td><td data-label="Free confirmed">0</td><td data-label="Paid">0</td></tr>
+<tr><td data-label="Category"><a href="../../categories/skill.html">Skill tournaments</a></td><td data-label="Leads">12</td><td data-label="Checked">1</td><td data-label="Free confirmed">1</td><td data-label="Paid">0</td></tr>
+<tr><td data-label="Category"><a href="../../categories/trivia.html">Trivia &amp; quiz</a></td><td data-label="Leads">2</td><td data-label="Checked">1</td><td data-label="Free confirmed">0</td><td data-label="Paid">0</td></tr>
+<tr><td data-label="Category"><a href="../../categories/pools.html">Pool tools</a></td><td data-label="Leads">7</td><td data-label="Checked">0</td><td data-label="Free confirmed">0</td><td data-label="Paid">0</td></tr>
+<tr><td data-label="Category"><a href="../../categories/directory.html">Directories</a></td><td data-label="Leads">3</td><td data-label="Checked">1</td><td data-label="Free confirmed">0</td><td data-label="Paid">0</td></tr></tbody>
+    </table></div></div>
+
+    <h2>2. Where the money actually is</h2>
+    <p>Documented prizes span five orders of magnitude. The largest verified pools are technical (ARC Prize 2026: $2,000,000 across three tracks; GEMS Prize Challenge: $300,000; Kaggle’s featured competitions, where the ARC paper track alone showed $450,000). None of those can be won in an afternoon — they are research projects with open-source obligations.</p>
+    <p>The best ratio of prize to effort, for someone competing now, is in judgement games: ESPN NFL Pick’em pays $102,000 across 58 prizes and costs nothing to enter; Metaculus pays forecasting accuracy from pools that reach $50,000. The best creative options are the Wergle Flomp humor poetry contest ($5,100, explicitly no fee) and the Sony World Photography Awards (free entry, $25,000 overall Series prize).</p>
+
+    <h2>3. Free entry has to be checked, not assumed</h2>
+    <p>Six checked rows explicitly state free entry, one states a fee, and eleven do not state either. The reference ledger listed the Tom Howard/Margaret Reid poetry contest as a free cash lead; its own page charges $27 per submission. Assumption is what produces that kind of error, so blanks stay blank.</p>
+    <p>Two other traps are visible in the data. First, "free" rooms in skill-game apps pay in gems or bonus cash — the twelve skill-tournament leads are all paid-entry cash rooms or non-cash free rooms. Second, a prize pool is not a prize: Metaculus lists tournaments with "NO PRIZE POOL" alongside $50,000 ones.</p>
+
+    <h2>4. The link problem on the reference site</h2>
+    <p>25 leads point at a news article or blog post rather than a rules page, and 4 URLs are reused across several different contests. The most reused is <code>fantasy.premierleague.com</code>, linked for eight separate rows. A single site URL cannot document eight distinct cash prizes, and none of those eight rows has a prize read from an official rules page. Challenge.gov, linked from the HeroX row, was retired on 2026-03-30 and now serves a sunset notice; USA.gov hosts the official replacement directory and is used here instead.</p>
+
+    <h2>5. How to use an AI coding agent on these competitions</h2>
+    <ul>
+      <li><strong>Pick a contest with a published, machine-checkable rule set.</strong> Kaggle and DrivenData publish metric, data and submission format, so an agent can iterate without guessing.</li>
+      <li><strong>Respect the automation boundary.</strong> ARC Prize states that internet access is not available during Kaggle evaluation, so any agent must run offline inside the submission environment. Metaculus scoring is about calibration, not code speed.</li>
+      <li><strong>Budget the compliance work, not just the modelling.</strong> Open-source licences, write-ups and reproducibility requirements are eligibility conditions at ARC Prize, not optional extras.</li>
+      <li><strong>Never let an agent enter, deposit or accept terms on your behalf.</strong> Eligibility rules, tax forms and identity checks are personal and usually binding.</li>
+      <li><strong>Time-box by deadline.</strong> 10 verified rows have a future deadline; the nearest is ARC Prize (via Kaggle) on 2026-11-02 submissions due; 2026-11-08 papers due; 2026-12-04 results.</li>
+    </ul>
+
+    <h2>6. Editorial triage (labelled as judgement)</h2>
+    <p>The scores on the overview page are arithmetic on verified facts plus two editorial inputs stored in <code>data/triage.json</code> with a written rationale per row: the size of the documented prize (0–3) and the effort needed for a credible entry (low/medium/high). No probability, expected value, win rate or time-to-win figure is invented anywhere on this site, because none of the official pages read publishes one.</p>
+
+    <h2>7. Cross-check with the second independent pass</h2>
+    <p>A parallel session verified 12 rows separately and stored verbatim quotes in <code>data/verification.json</code>, printed in full on the <a href="methodology.html">method page</a>. The two passes agree on the facts they share: Wergle Flomp is free with $5,100 in prizes, Tom Howard charges $27 and is closed, ESPN is free with $102,000, ARC pays $2,000,000 and closes on 2026-11-02, and Metaculus is free with pools that include zero. Where the two passes differ, the difference is published rather than averaged: that pass marked the Weather Photographer of the Year prize ladder as not reproducible from the operator page, which is why this site leaves that prize cell blank.</p>
+
+    <h2>8. What would change the picture</h2>
+    <ul>
+      <li>Reading the remaining 184 operator pages — roughly 11 per category would cover the sports backlog.</li>
+      <li>Confirming whether the 25 news-linked leads still have live rules pages.</li>
+      <li>Re-checking the February 2026 Papaya and Skillz terms for cash-room geography, since both change state lists frequently.</li>
+    </ul>
+    <p><a href="review.html">See every open item with its source link →</a></p>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>Prize Atlas · Research, not financial, legal or tax advice · Sources re-read 2026-11-01</span>
+    <span><a href="./methodology.html">Method &amp; sources</a> · <a href="./review.html">Flagged for review</a> · <a href="../../all.html">Archived builds</a> · <a href="../../index.html">Verified ledger</a> · <a href="https://github.com/sassnarep3-star/Own1">Repository</a></span>
+  </div>
+</footer>
+<script src="../prize-atlas/assets/app.js" defer></script>
+</body>
+</html>

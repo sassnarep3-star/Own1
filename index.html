@@ -1,147 +1,240 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A mobile-friendly dashboard of free-to-enter cash prize competitions, with every displayed fact traced to a quoted official page.">
-<title>Free-to-enter cash competitions, verified · Prize Atlas</title>
-<link rel="stylesheet" href="assets/style.css">
+<title>PrizeDesk — Free-to-enter cash competitions, sourced to the operator</title>
+<meta name="description" content="A mobile-first dashboard of 211 free-to-enter competitions that can pay cash: filtered by entry path, ID checks, platform and status, with official source links on every row.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="PrizeDesk — Free-to-enter cash competitions, sourced to the operator">
+<meta property="og:description" content="A mobile-first dashboard of 211 free-to-enter competitions that can pay cash: filtered by entry path, ID checks, platform and status, with official source links on every row.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E%24%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/site.css">
+
 </head>
-<body data-base="" data-page="home" data-category="">
-<header class="topbar"><div class="shell">
-  <a class="brand" href="index.html"><span class="mark">✳</span> Prize Atlas</a>
-  <nav class="topnav" aria-label="Main">
-    <a href="index.html" aria-current="page">Dashboard</a>
-    <a href="playbook.html">Playbook</a>
-    <a href="sources.html">Sources</a>
-<a href="atlas/index.html">Atlas (44)</a>
-    <a href="review.html" class="review-link">Flagged (193)</a>
-    
-  </nav>
-</div></header>
-
-<section class="hero"><div class="shell">
-  <div class="eyebrow">Free-to-enter cash competitions · evidence ledger</div>
-  <h1>Find the few competitions worth your time.</h1>
-  <p>Every row is a lead. Only 18 have had their official page read and quoted, and those are the ones that carry a fee, a prize and a deadline. Everything else is marked unverified with its cells left blank — because a guess is worse than a gap.</p>
-  <div class="hero-actions">
-    <a class="btn btn-primary" href="#picks">See the ranked shortlist ↓</a>
-    <a class="btn btn-plain" href="#browse">Browse all 211 leads</a>
-    <a class="btn btn-plain" href="./playbook.html">How to compete with an AI agent</a>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">$</span>
+      <span class="brand-text">
+        <b>PrizeDesk</b>
+        <span>Source reviewed 19 Aug 2026</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Main"><a href="index.html" aria-current="page">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="analysis.html">Analysis</a><a href="research.html">Source audit</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a></nav>
   </div>
-</div></section>
-<main class="shell main">
-  <div class="metrics"><div class="metric"><strong>211</strong><span>leads in the ledger</span></div><div class="metric"><strong>18</strong><span>official pages read</span></div><div class="metric"><strong>11</strong><span>confirmed free entry</span></div><div class="metric"><strong>193</strong><span>flagged for review</span></div></div>
-  <div class="notice"><strong>What "page checked" means.</strong> An official page was read on 2026-11-01 and the displayed value is quoted on that entry's page. It does <em>not</em> mean the competition is still open, that you are eligible, or that the sponsor will pay. Blank cells mean the value was not confirmed on an official page — never that it is zero.</div>
+</header>
+<main id="main" class="wrap">
 
-  <div class="section-head" id="picks-head"><div>
-    <h2>Best use of your time right now</h2>
-    <p>Verified entries only, ordered by a published scoring rule. The score weighs confirmed free entry (40), confirmed cash (20), how much an AI agent can help (4–20), effort (3–10) and urgency (0–10). It is an editorial triage aid, not a forecast of winning.</p>
-  </div><a href="./playbook.html">How the score works →</a></div>
-  <div class="panel">
-    <div class="toolbar">
-  <input class="f-search" type="search" placeholder="Search name, operator, prize…" aria-label="Search listings">
-  <select class="f-status" aria-label="Verification status">
-    <option value="">All statuses</option><option value="verified">Page checked</option>
-    <option value="partial">Partly checked</option><option value="unverified">Unverified</option>
-  </select>
-  
-  <select class="f-sort" aria-label="Sort"><option value="fit">Sort: best fit</option><option value="deadline">Sort: deadline</option><option value="status">Sort: status</option><option value="name">Sort: name</option></select>
+<section class="hero">
+  <p class="kicker">Rebuilt for a phone · one row per competition · every row links to the operator</p>
+  <h1>Find the free competitions that actually pay cash.</h1>
+  <p class="lede">211 competitions from the Free Money &amp; Contest Ledger dataset, reorganised into a
+  searchable dashboard: filter by entry path, ID checks, platform and status, then open the operator's own
+  rules before you spend a minute on it. Values we could not trace to an official source are left blank.</p>
+  <div class="btn-row">
+    <a class="btn primary" href="all.html">Browse all 211 →</a>
+    <a class="btn" href="best.html">See the best picks</a>
+    <a class="btn" href="flagged.html">What we flagged (22)</a>
+  </div>
+</section>
+
+<div class="stat-grid">
+  <div class="stat"><b>211</b><span>competitions in the ledger</span></div>
+  <div class="stat is-good"><b>193</b><span>with a free entry path</span></div>
+  <div class="stat"><b>168</b><span>marked active</span></div>
+  <div class="stat"><b>133</b><span>state a cash amount</span></div>
+  <div class="stat is-good"><b>13</b><span>rows fetched live 1 Nov 2026</span></div>
+  <div class="stat is-warn"><b>27</b><span>ended / out of season</span></div>
+  <div class="stat is-warn"><b>12</b><span>no official source</span></div>
+  <div class="stat is-warn"><b>22</b><span>flagged for review</span></div>
 </div>
-    <div id="picks" aria-live="polite">Loading…</div>
-    <div class="table-foot">Ranked shortlist — every value traceable to a quoted official page.</div>
-  </div>
 
-  <div class="section-head"><div>
-    <h2>The three that close first</h2>
-    <p>Dates read from the organisers' own pages, not from the reference catalog.</p>
-  </div></div>
-  <div class="category-grid">
-    <a class="card" href="./entry/codex-twitchcon.html"><span class="icon">⏳</span>
-        <h3>Codex x TwitchCon Hackathon</h3>
-        <p>$25,000 in prizes (as stated in the event page title) · 1 day left</p>
-        <span class="count">Closes 2026-11-02 →</span></a><a class="card" href="./entry/paypal-ai-hackathon.html"><span class="icon">⏳</span>
-        <h3>PayPal AI Hackathon</h3>
-        <p>Prize not stated on the official page · 11 days left</p>
-        <span class="count">Closes 2026-11-12 →</span></a><a class="card" href="./entry/midterms-2026.html"><span class="icon">⏳</span>
-        <h3>US Midterms 2026 (Metaculus)</h3>
-        <p>$10,000 prize pool · 3 days left</p>
-        <span class="count">Closes 2026-11-04 →</span></a>
-  </div>
-
-  <div class="section-head"><div><h2>Browse by category</h2>
-    <p>Categories are organisational groups. A category being large does not make it good.</p></div></div>
-  <div class="category-grid">
-    <a class="card" href="./category/tech.html">
-        <span class="icon" aria-hidden="true">⌘</span>
-        <span class="badge">11 checked</span>
-        <h3>AI, data &amp; code</h3><p>Model-building and engineering competitions with cash prizes</p>
-        <span class="count">18 leads →</span></a><a class="card" href="./category/forecasting.html">
-        <span class="icon" aria-hidden="true">◎</span>
-        <span class="badge">2 checked</span>
-        <h3>Forecasting</h3><p>Prediction tournaments scored on accuracy</p>
-        <span class="count">4 leads →</span></a><a class="card" href="./category/creative.html">
-        <span class="icon" aria-hidden="true">✳</span>
-        <span class="badge">7 checked</span>
-        <h3>Writing, art &amp; photography</h3><p>Judged creative prizes</p>
-        <span class="count">18 leads →</span></a><a class="card" href="./category/sports.html">
-        <span class="icon" aria-hidden="true">◈</span>
-        <span class="badge">1 checked</span>
-        <h3>Sports picks &amp; fantasy</h3><p>Season-long and weekly prediction games</p>
-        <span class="count">129 leads →</span></a><a class="card" href="./category/market.html">
-        <span class="icon" aria-hidden="true">▥</span>
-        <span class="badge">1 checked</span>
-        <h3>Markets &amp; trading</h3><p>Paper-trading and demo competitions</p>
-        <span class="count">19 leads →</span></a><a class="card" href="./category/skill.html">
-        <span class="icon" aria-hidden="true">⚡</span>
-        <span class="badge">1 checked</span>
-        <h3>Skill cash games</h3><p>Mostly pay-to-enter skill tournaments and esports</p>
-        <span class="count">12 leads →</span></a><a class="card" href="./category/trivia.html">
-        <span class="icon" aria-hidden="true">?</span>
-        <span class="badge">1 checked</span>
-        <h3>Trivia &amp; quizzes</h3><p>Quiz and knowledge formats</p>
-        <span class="count">2 leads →</span></a><a class="card" href="./category/pools.html">
-        <span class="icon" aria-hidden="true">▦</span>
-        <span class="badge">none checked</span>
-        <h3>Pool software</h3><p>Tools for group pools — prizes are usually funded by players, not the operator</p>
-        <span class="count">7 leads →</span></a><a class="card" href="./category/directory.html">
-        <span class="icon" aria-hidden="true">↗</span>
-        <span class="badge">none checked</span>
-        <h3>Directories</h3><p>Lists and indexes that point to competitions</p>
-        <span class="count">2 leads →</span></a>
-  </div>
-
-  <div class="section-head" id="browse"><div><h2>All 211 leads</h2>
-    <p>Unverified rows keep their cells blank on purpose. Use the status filter to see only what has been checked.</p></div>
-    <a href="./review.html">Review queue →</a></div>
-  <div class="panel">
-    <div class="toolbar">
-  <input class="f-search" type="search" placeholder="Search name, operator, prize…" aria-label="Search listings">
-  <select class="f-status" aria-label="Verification status">
-    <option value="">All statuses</option><option value="verified">Page checked</option>
-    <option value="partial">Partly checked</option><option value="unverified">Unverified</option>
-  </select>
-  <select class="f-cat" aria-label="Category"><option value="">All categories</option><option value="tech">AI, data &amp; code</option><option value="forecasting">Forecasting</option><option value="creative">Writing, art &amp; photography</option><option value="sports">Sports picks &amp; fantasy</option><option value="market">Markets &amp; trading</option><option value="skill">Skill cash games</option><option value="trivia">Trivia &amp; quizzes</option><option value="pools">Pool software</option><option value="directory">Directories</option></select>
-  <select class="f-sort" aria-label="Sort"><option value="fit">Sort: best fit</option><option value="deadline">Sort: deadline</option><option value="status">Sort: status</option><option value="name">Sort: name</option></select>
+<div class="callout info" style="margin-top:14px">
+  <p><b>Read this first.</b> The dataset behind this site was last checked by its authors on
+  19 Aug 2026 — 74 days before this build. Only
+  13 rows were fetched live on 1 Nov 2026; the rest carry a
+  "source cited — not re-checked" badge. Prize figures are the source's claims. Open the operator's rules
+  before entering; contest law and eligibility vary by state.</p>
 </div>
-    <div id="rows" aria-live="polite">Loading…</div>
-    <div class="table-foot">Loading…</div>
-  </div>
 
-  <div class="section-head"><div><h2>Executive summary</h2><p>The short version, with the reasoning in full on the <a href="./sources.html">sources page</a>.</p></div></div>
-  <div class="panel pad">
-    <dl class="kv">
-      <dt>What this is</dt><dd>A verified-where-possible ledger of 211 free-to-enter cash-competition leads, rebuilt so every displayed fact has a quoted official source and every gap is visible.</dd>
-      <dt>What is solid</dt><dd>18 entries were checked line by line against the organiser's own pages on 2026-11-01. 11 have confirmed free entry and 14 a confirmed cash prize. Those records carry a fee status, a prize string, a deadline where one is published, and the exact quote behind each.</dd>
-      <dt>What is not</dt><dd>187 leads remain unverified name-and-link entries inherited from the reference catalog, plus 6 that could only be partly checked because their boards need JavaScript or sign-in. No prize, fee or deadline is asserted for them.</dd>
-      <dt>Best near-term moves</dt><dd>Codex x TwitchCon (closes 2026-11-02, AI assistants explicitly allowed), US Midterms 2026 on Metaculus (closes 2026-11-04, free, low effort) and the ARC Prize deadline (2026-11-02) — noting ARC has not published an entry fee and bans internet access during evaluation.</dd>
-      <dt>Biggest irregularities</dt><dd>A paid-entry poetry contest was listed as free; one trading link points at an edition that already closed; a crowdfunding queue was listed as a prize contest; Challenge.gov was sunset in March 2026; two leads have no operator link at all. Each is on the <a href="./review.html">flagged page</a> with its source.</dd>
-      <dt>How to use it</dt><dd>Start with the ranked shortlist, open the entry page, read the quoted rule, then decide. Never pay a fee to claim a prize, and expect a tax event in the US when you win.</dd>
-    </dl>
+<section class="section">
+  <h2>Start here: highest-ranked live picks</h2>
+  <p class="note-tiny">Ranked by the scoring model described on <a href="best.html">Best picks</a>:
+  free entry, official source, live check, stated cash size, low ID burden, browser entry, no operator
+  account required. This is our heuristic, not an endorsement, and the score is shown so you can disagree.</p>
+  <div class="table-scroll">
+    <table class="ledger">
+      <thead><tr><th>#</th><th>Competition</th><th>Prize (claimed)</th><th>Entry</th><th>Score</th></tr></thead>
+      <tbody><tr>
+      <td class="num" data-label="#">1</td>
+      <td class="cell-name" data-label="Competition"><a href="c/metaculus.html">Metaculus Tournaments</a>
+        <span class="cell-sub">Free forecasting tournaments with sponsor-funded cash prizes. Not a prediction market —…</span></td>
+      <td data-label="Prize (claimed)"><span class="prize">Per tournament — $3,000 to $50,000 prize pools</span></td>
+      <td data-label="Entry"><span class="badge good">Free entry</span></td>
+      <td data-label="Score" class="num">14</td>
+    </tr><tr>
+      <td class="num" data-label="#">2</td>
+      <td class="cell-name" data-label="Competition"><a href="c/midterms-2026.html">US Midterms 2026 (Metaculus tournament)</a>
+        <span class="cell-sub">Single Metaculus tournament with a $10,000 pool, closing 2026-11-04 — days after this build.</span></td>
+      <td data-label="Prize (claimed)"><span class="prize">$10,000 pool</span></td>
+      <td data-label="Entry"><span class="badge good">Free entry</span></td>
+      <td data-label="Score" class="num">14</td>
+    </tr><tr>
+      <td class="num" data-label="#">3</td>
+      <td class="cell-name" data-label="Competition"><a href="c/codex-twitchcon-2026.html">Codex x TwitchCon Hackathon</a>
+        <span class="cell-sub">Devpost hackathon: build a Twitch-connected project using Codex. $10,000 first place, closes…</span></td>
+      <td data-label="Prize (claimed)"><span class="prize">$10,000 first place</span></td>
+      <td data-label="Entry"><span class="badge good">Free entry</span></td>
+      <td data-label="Score" class="num">13</td>
+    </tr><tr>
+      <td class="num" data-label="#">4</td>
+      <td class="cell-name" data-label="Competition"><a href="c/paypal-ai-hackathon-2026.html">PayPal AI Hackathon</a>
+        <span class="cell-sub">Devpost hackathon using the free PayPal sandbox plus any AI tool. $12,000 first place, closes…</span></td>
+      <td data-label="Prize (claimed)"><span class="prize">$12,000 first place</span></td>
+      <td data-label="Entry"><span class="badge good">Free entry</span></td>
+      <td data-label="Score" class="num">13</td>
+    </tr><tr>
+      <td class="num" data-label="#">5</td>
+      <td class="cell-name" data-label="Competition"><a href="c/arcprize.html">ARC Prize (via Kaggle)</a>
+        <span class="cell-sub">High-dollar abstraction-and-reasoning competition hosted with Kaggle. Free to submit;…</span></td>
+      <td data-label="Prize (claimed)"><span class="prize">$2,000,000 across three 2026 tracks</span></td>
+      <td data-label="Entry"><span class="badge good">Free entry</span></td>
+      <td data-label="Score" class="num">12</td>
+    </tr></tbody>
+    </table>
   </div>
+  <div class="btn-row"><a class="btn" href="best.html">Full shortlists and method →</a></div>
+</section>
+
+<section class="section">
+      <h2>Closing within 60 days</h2>
+      <p class="note-tiny">Only deadlines that another session read from an official page on
+      1 Nov 2026 appear here. Any row without a verified deadline is absent — not because
+      nothing closes, but because we did not confirm a date.</p>
+      <div class="table-scroll"><table class="ledger">
+        <thead><tr><th>Competition</th><th>Verified deadline</th><th>Days left</th><th>Prize (claimed)</th><th>Source</th></tr></thead>
+        <tbody><tr>
+          <td class="cell-name" data-label="Competition"><a href="c/arcprize.html">ARC Prize (via Kaggle)</a></td>
+          <td data-label="Deadline">2 Nov 2026</td>
+          <td data-label="Days left" class="num">1</td>
+          <td data-label="Prize (claimed)"><span class="prize">$2,000,000 across three 2026 tracks</span></td>
+          <td data-label="Source"><a class="src-link" href="https://arcprize.org/competitions/2026" rel="noopener noreferrer">Official ↗</a></td>
+        </tr><tr>
+          <td class="cell-name" data-label="Competition"><a href="c/codex-twitchcon-2026.html">Codex x TwitchCon Hackathon</a></td>
+          <td data-label="Deadline">2 Nov 2026</td>
+          <td data-label="Days left" class="num">1</td>
+          <td data-label="Prize (claimed)"><span class="prize">$10,000 first place</span></td>
+          <td data-label="Source"><a class="src-link" href="https://twitchcon-codex.devpost.com/rules" rel="noopener noreferrer">Official ↗</a></td>
+        </tr><tr>
+          <td class="cell-name" data-label="Competition"><a href="c/midterms-2026.html">US Midterms 2026 (Metaculus tournament)</a></td>
+          <td data-label="Deadline">4 Nov 2026</td>
+          <td data-label="Days left" class="num">3</td>
+          <td data-label="Prize (claimed)"><span class="prize">$10,000 pool</span></td>
+          <td data-label="Source"><a class="src-link" href="https://www.metaculus.com/tournament/midterms-2026/" rel="noopener noreferrer">Official ↗</a></td>
+        </tr><tr>
+          <td class="cell-name" data-label="Competition"><a href="c/paypal-ai-hackathon-2026.html">PayPal AI Hackathon</a></td>
+          <td data-label="Deadline">12 Nov 2026</td>
+          <td data-label="Days left" class="num">11</td>
+          <td data-label="Prize (claimed)"><span class="prize">$12,000 first place</span></td>
+          <td data-label="Source"><a class="src-link" href="https://paypalaihackathon.devpost.com/rules" rel="noopener noreferrer">Official ↗</a></td>
+        </tr><tr>
+          <td class="cell-name" data-label="Competition"><a href="c/global-virtual-hackathon-2026.html">Global Virtual Hackathon 2026</a></td>
+          <td data-label="Deadline">13 Nov 2026</td>
+          <td data-label="Days left" class="num">12</td>
+          <td data-label="Prize (claimed)"><span class="prize">$1,000 first place per division; two $250 runners-up per division</span></td>
+          <td data-label="Source"><a class="src-link" href="https://gvhackathon.com/" rel="noopener noreferrer">Official ↗</a></td>
+        </tr><tr>
+          <td class="cell-name" data-label="Competition"><a href="c/gems-prize-2026.html">GEMS Prize Challenge (DrivenData)</a></td>
+          <td data-label="Deadline">3 Dec 2026</td>
+          <td data-label="Days left" class="num">32</td>
+          <td data-label="Prize (claimed)"><span class="prize">$300,000 total</span></td>
+          <td data-label="Source"><a class="src-link" href="https://www.drivendata.org/competitions/306/competition-doe-gems/" rel="noopener noreferrer">Official ↗</a></td>
+        </tr></tbody>
+      </table></div>
+      <div class="callout warn" style="margin-top:10px"><p><b>Deadlines are the strongest reason to act and the
+      easiest thing to get wrong.</b> 3 of these close within a week of
+      this build. Confirm the date on the operator page before you start work.</p></div>
+    </section>
+
+<section class="section">
+  <h2>Categories</h2>
+  <div class="cat-grid"><a class="cat-card" href="categories/skill.html">
+      <span class="count">12 competitions · 8 active</span>
+      <b>Skill tournaments</b>
+      <p>Head-to-head skill games — solitaire, bingo, blocks. The free rooms pay gems or tickets; the dollar prizes sit in cash rooms that charge an entry fee, and the house takes a rake.</p>
+    </a><a class="cat-card" href="categories/trivia.html">
+      <span class="count">2 competitions · 1 active</span>
+      <b>Trivia competitions</b>
+      <p>Quiz formats. This is the thinnest category in the ledger: one row is a closed contest and the other pays in points rather than dollars.</p>
+    </a><a class="cat-card" href="categories/sports.html">
+      <span class="count">129 competitions · 93 active</span>
+      <b>Fantasy &amp; sports picks</b>
+      <p>NFL, college and soccer pick&#39;em, survivor, bracket and fantasy contests. The largest category and the most seasonal — check status before you invest a season.</p>
+    </a><a class="cat-card" href="categories/creative.html">
+      <span class="count">18 competitions · 17 active</span>
+      <b>Creative contests</b>
+      <p>Writing, photo and judged submissions. Entry is usually free, but judging is slow and subjective, and deadlines decide whether a row is worth anything today.</p>
+    </a><a class="cat-card" href="categories/forecasting.html">
+      <span class="count">4 competitions · 3 active</span>
+      <b>Forecasting tournaments</b>
+      <p>Scored probability forecasts against other people, with prizes funded by sponsors. Free to enter, objectively scored, and the one category where a bot tournament already exists.</p>
+    </a><a class="cat-card" href="categories/market.html">
+      <span class="count">19 competitions · 19 active</span>
+      <b>Market competitions</b>
+      <p>Paper-trading and simulated-investing contests. Free to enter, but many are broker customer-acquisition funnels and some prizes are credits or funded demo accounts, not cash.</p>
+    </a><a class="cat-card" href="categories/tech.html">
+      <span class="count">18 competitions · 18 active</span>
+      <b>Tech &amp; data competitions</b>
+      <p>Machine-learning competitions and hackathons with published prize pools. Free to enter, objectively scored, and the best structural fit for an AI-assisted entrant.</p>
+    </a><a class="cat-card" href="categories/directory.html">
+      <span class="count">2 competitions · 2 active</span>
+      <b>Directories &amp; forums</b>
+      <p>Third-party catalogues of contests. Useful for discovery only — every linked contest still needs its own rules check, and many listed contests charge entry fees.</p>
+    </a><a class="cat-card" href="categories/pools.html">
+      <span class="count">7 competitions · 7 active</span>
+      <b>Free pool &amp; league platforms</b>
+      <p>Free tools for running your own pool or league. Nothing is funded by the operator; the prize pot is your group&#39;s money.</p>
+    </a></div>
+</section>
+
+<section class="section">
+  <h2>How this site differs from a link dump</h2>
+  <div class="card">
+    <ul class="list">
+      <li><b>One row, one operator link.</b> Every row has a link to the operator's own page and, where one exists, a separate rules link. No affiliate redirects.</li>
+      <li><b>Blank beats guessed.</b> 81 rows show “—” for the prize because the source states no amount or cites no official source. We never fill in a number.</li>
+      <li><b>Status is visible.</b> 27 ended contests are stamped and excluded from every shortlist instead of hiding in the scroll.</li>
+      <li><b>Badges mean something.</b> “Live-checked” = we fetched a page of that row on 1 Nov 2026. “Source cited” = we did not.</li>
+      <li><b>Problems are published, not buried.</b> 22 irregularities with evidence and links are on <a href="flagged.html">Flagged for review</a>.</li>
+    </ul>
+  </div>
+</section>
 </main>
-<footer class="footer"><div class="shell">
-  <span>Prize Atlas — an evidence ledger, not a tip jar. Research, not financial or legal advice. Facts read 2026-11-01.</span>
-  <span><a href="sources.html">Method &amp; sources</a> · <a href="review.html">Flagged for review</a> · <a href="supplemental/index.html">Supplemental audit</a> · <a href="https://github.com/sassnarep3-star/Own1">Repository</a></span>
-</div></footer>
-<script src="data/site-data.js"></script>
-<script src="assets/app.js" defer></script>
-</body></html>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="all.html">All 211 competitions</a>
+      <a href="best.html">Best picks</a>
+      <a href="analysis.html">Analysis</a>
+      <a href="research.html">Source audit</a>
+      <a href="verification.html">Verification method</a>
+      <a href="flagged.html">Flagged for review (22)</a>
+      <a href="executive-summary.html">Executive summary</a>
+    </div>
+    <p><b>PrizeDesk</b> is an independent workbench built on the Free Money &amp; Contest
+    Ledger dataset (pinned commit <code>466f7c1</code>, source reviewed
+    19 Aug 2026). It is not affiliated with any operator listed.
+    Prize figures are the source dataset's claims, not this site's promises — open the operator's
+    rules before you enter. Contest law varies by state and country; play only where legal. 18+/21+.</p>
+    <p class="note-tiny">Figures verified on this site: 13 of 211 rows were
+    fetched live on 1 Nov 2026. Everything else is labelled
+    "source cited — not re-checked". See <a href="verification.html">how verification works</a>.</p>
+  </div>
+</footer>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>

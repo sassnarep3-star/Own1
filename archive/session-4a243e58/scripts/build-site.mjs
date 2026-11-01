@@ -44,7 +44,6 @@ function layout({ rel, title, desc, page, category = '', children, navExtra = ''
     <a href="${base}index.html"${current('home')}>Dashboard</a>
     <a href="${base}playbook.html"${current('playbook')}>Playbook</a>
     <a href="${base}sources.html"${current('sources')}>Sources</a>
-    <a href="${base}atlas/index.html">Atlas (44)</a>
     <a href="${base}review.html" class="review-link"${current('review')}>Flagged (${stats.total - stats.verified})</a>
     ${navExtra}
   </nav>

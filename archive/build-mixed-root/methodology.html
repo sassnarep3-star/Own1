@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The verification rules, the exact official pages read, and the automated checks behind every row.">
+<meta name="color-scheme" content="light">
+<title>Method and sources · Prize Atlas</title>
+<link rel="stylesheet" href="../prize-atlas/assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="./index.html">
+      <span class="brand-mark" aria-hidden="true">&#10022;</span>
+      <span>Prize Atlas<small>Free-to-enter cash competitions</small></span>
+    </a>
+    <nav class="nav" aria-label="Main"><a href="./index.html">Overview</a><a href="./index.html#categories">Categories</a><a href="./index.html#best-bets">Best bets</a><a href="./analysis.html">Analysis</a><a href="./methodology.html" aria-current="page">Method</a><a href="../../index.html">Supplemental</a><a href="./review.html">Flagged for review</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap prose">
+    <p class="crumbs"><a href="index.html">Overview</a> / Method &amp; sources</p>
+    <p class="eyebrow">Verification record</p>
+    <h1>Method and sources</h1>
+
+    <h2>Rules applied to every row</h2>
+    <ol>
+      <li><strong>Every row links out.</strong> A row must carry a link to the operator’s own page. If none could be found, the row says so instead of substituting a news article or an HTTP-only page.</li>
+      <li><strong>Facts come from that page.</strong> Prize, entry cost, deadline and eligibility are copied from the linked page on the date recorded in the row’s evidence block. If the page does not state a value, the cell stays blank.</li>
+      <li><strong>Blank ≠ zero and blank ≠ free.</strong> Only an explicit statement such as "The Competition is free to enter" produces a "Free entry" badge.</li>
+      <li><strong>Nothing is inferred.</strong> No prize is rounded, converted, combined or extrapolated; no deadline is guessed from a season pattern; no probability is estimated.</li>
+      <li><strong>Disagreements are published.</strong> When an operator’s own page contradicts itself, both readings are recorded and the row is flagged rather than silently resolved.</li>
+    </ol>
+
+    <h2>Where the list came from</h2>
+    <p>The 212 rows start from the reference ledger at <a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/data.js" target="_blank" rel="noopener noreferrer">karagemop466-tech/FreeMoneyApps (assets/data.js)</a>, which was last stamped 2026-08-19 and lists 206 entries. Its names and category assignments were imported as <em>leads only</em>; none of its August claims about prizes, free paths or status were carried across as facts. Two rows were added in this pass after reading their operator pages directly (Reedsy’s weekly contest and the USA.gov federal challenge directory).</p>
+
+    <h2>Checked rows and exactly what was read</h2>
+    <p>20 rows were read directly in this integration pass. 8 rows carry a read recorded by a parallel session in this repository (a479d584-own1); their evidence files are <code>data/verification/batchA.jsonl</code>. Attribution is shown on each row, and their values were not altered — only copied.</p>
+    <div class="panel"><div class="table-scroll"><table>
+      <thead><tr><th scope="col">Listing</th><th scope="col">Official page read</th><th scope="col">Values copied</th><th scope="col">Not stated / limits</th></tr></thead>
+      <tbody><tr>
+  <td data-label="Listing"><a href="https://www.givling.com/" target="_blank" rel="noopener noreferrer">Givling</a></td>
+  <td data-label="Official page read">https://www.givling.com/</td>
+  <td data-label="Values copied"><span class="cell-sub">• prize: &#39;$50,000 through the Queue and $50,000 through the Exchange&#39;</span><span class="cell-sub">• mechanics: funding order set by Queue Points and random Spinners; Exchange pays up to $10,000 per draw</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry cost</span><span class="cell-sub">• current queue size and odds</span><span class="cell-sub">• eligibility</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://vocal.media/resources/challenges-frequently-asked-questions" target="_blank" rel="noopener noreferrer">Vocal Challenges</a></td>
+  <td data-label="Official page read">https://vocal.media/resources/challenges-frequently-asked-questions</td>
+  <td data-label="Values copied"><span class="cell-sub">• entry: &#39;You&#39;re not required to pay to enter Vocal&#39;s Challenges.&#39;</span><span class="cell-sub">• eligibility: over 13, Stripe-supported country, Stripe account needed for payout</span><span class="cell-sub">• payout: cash prizes sent to a Stripe account</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• per-challenge prize amounts and deadlines</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://www.kaggle.com/competitions" target="_blank" rel="noopener noreferrer">Kaggle Competitions</a></td>
+  <td data-label="Official page read">https://www.kaggle.com/competitions</td>
+  <td data-label="Values copied"><span class="cell-sub">• prize: per-competition prize amounts shown on the listing (e.g. NFL Big Data Bowl 2027 $100,000)</span><span class="cell-sub">• structure: &#39;Featured&#39; competitions described as &#39;Premier challenges with prizes&#39;; Playground/Getting Started are practice</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry cost</span><span class="cell-sub">• eligibility</span><span class="cell-sub">• individual competition deadlines</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://devpost.com/hackathons" target="_blank" rel="noopener noreferrer">Devpost Hackathons</a></td>
+  <td data-label="Official page read">https://devpost.com/hackathons</td>
+  <td data-label="Values copied"><span class="cell-sub">• prize: prize totals listed per hackathon, including &#39;5 non-cash prizes&#39; on one event</span><span class="cell-sub">• deadline: per-event date ranges shown</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry cost</span><span class="cell-sub">• eligibility</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://arcprize.org/competitions/2026" target="_blank" rel="noopener noreferrer">ARC Prize (via Kaggle)</a></td>
+  <td data-label="Official page read">https://arcprize.org/competitions/2026</td>
+  <td data-label="Values copied"><span class="cell-sub">• prize: &#39;$2M in prizes. 3 tracks.&#39;</span><span class="cell-sub">• deadline: November 2, 2026 submissions due; November 8, 2026 papers due; December 4, 2026 results</span><span class="cell-sub">• eligibility: open-source requirement and no internet during Kaggle evaluation</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry fee</span><span class="cell-sub">• exact per-track prize split</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://www.drivendata.org/competitions/" target="_blank" rel="noopener noreferrer">DrivenData</a></td>
+  <td data-label="Official page read">https://www.drivendata.org/competitions/</td>
+  <td data-label="Values copied"><span class="cell-sub">• structure: sections &#39;Prize competitions&#39;, &#39;Benchmarks&#39;, &#39;Practice competitions&#39;, &#39;Completed competitions&#39;</span><span class="cell-sub">• prize: GEMS Prize Challenge shown with $300,000 in prizes</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry cost</span><span class="cell-sub">• eligibility</span><span class="cell-sub">• per-competition deadlines</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://www.usa.gov/challenges" target="_blank" rel="noopener noreferrer">HeroX / Challenge.gov</a></td>
+  <td data-label="Official page read">https://www.usa.gov/challenges</td>
+  <td data-label="Values copied"><span class="cell-sub">• content: USA.gov &#39;Challenges and prize competitions&#39; directory, including &#39;Browse active challenges from the government&#39;</span><span class="cell-sub">• retirement: the Challenge.gov page states the platform was sunset on March 30, 2026 and points to USA.gov</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry cost</span><span class="cell-sub">• individual challenge prizes</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules" target="_blank" rel="noopener noreferrer">ESPN NFL Pick&#39;em</a></td>
+  <td data-label="Official page read">https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay</td>
+  <td data-label="Values copied"><span class="cell-sub">• prize: $102,000 total across 58 prizes, itemised in the Prizes section</span><span class="cell-sub">• entry: FAQ answers &#39;Are ESPN games free to play? Yes! Every game we offer is completely free.&#39;</span><span class="cell-sub">• deadline: Event Dates 09/09/2026 - 01/10/2027 shown in the game summary</span><span class="cell-sub">• eligibility: Official Rules void Puerto Rico/US territories/Quebec; 13-17 not prize-eligible</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• number of entries a single player may use (10 in the header, five in one FAQ answer)</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://fantasy.espn.com/games/nfl-survivor-2026/make-picks" target="_blank" rel="noopener noreferrer">ESPN NFL Survivor</a></td>
+  <td data-label="Official page read">https://fantasy.espn.com/games/nfl-survivor-2026/make-picks</td>
+  <td data-label="Values copied"><span class="cell-sub">• Page says free entries, up to 25, event dates 09/09/2026 - 01/10/2027</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry cost</span><span class="cell-sub">• eligibility</span><span class="cell-sub">• deadline (not captured as a dated field by that pass)</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://fantasy.espn.com/games/nfl-win-totals-2026/make-picks" target="_blank" rel="noopener noreferrer">ESPN NFL Win Totals</a></td>
+  <td data-label="Official page read">https://fantasy.espn.com/games/nfl-win-totals-2026/make-picks</td>
+  <td data-label="Values copied"><span class="cell-sub">• Page says FREE to play, max 2 entries, dates 09/09/2026 - 01/10/2027</span><span class="cell-sub">• Page shows no &#39;entry closed&#39; notice on 2026-11-01, but the page does not state whether new entries are still accepted</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry cost</span><span class="cell-sub">• eligibility</span><span class="cell-sub">• deadline (not captured as a dated field by that pass)</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://fantasy.espn.com/games/nfl-playoff-predictor-2026/make-picks" target="_blank" rel="noopener noreferrer">ESPN NFL Playoff Predictor</a></td>
+  <td data-label="Official page read">https://fantasy.espn.com/games/nfl-playoff-predictor-2026/make-picks</td>
+  <td data-label="Values copied"><span class="cell-sub">• Page says FREE to play, max 3 entries, dates 09/09/2026 - 01/10/2027</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry cost</span><span class="cell-sub">• eligibility</span><span class="cell-sub">• deadline (not captured as a dated field by that pass)</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://fantasy.espn.com/games/college-football-pickem-2026/make-picks" target="_blank" rel="noopener noreferrer">ESPN College Football Pick&#39;em</a></td>
+  <td data-label="Official page read">https://fantasy.espn.com/games/college-football-pickem-2026/make-picks</td>
+  <td data-label="Values copied"><span class="cell-sub">• Page says FREE to play, max 5 entries, dates 09/05/2026 - 12/06/2026</span><span class="cell-sub">• Picks for Week 10 (Nov 7) are listed — game still running on 2026-11-01</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry cost</span><span class="cell-sub">• eligibility</span><span class="cell-sub">• deadline (not captured as a dated field by that pass)</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://www.cbssports.com/fantasy/football/games/pickem/rules" target="_blank" rel="noopener noreferrer">CBS Sports Pro Football Pick&#39;em</a></td>
+  <td data-label="Official page read">https://www.cbssports.com/fantasy/football/games/pickem/rules</td>
+  <td data-label="Values copied"><span class="cell-sub">• Rules: &#39;The Challenge is FREE to play. No purchase, wireless device or entry fee necessary&#39;</span><span class="cell-sub">• Eligibility: registered CBSI user, legal resident of the 50 US states or DC, 18+ (or age of majority); PR/territories excluded</span><span class="cell-sub">• Challenge period 2026-09-09 to 2027-01-10; prizes paid by check or as decided by CBSI</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry cost</span><span class="cell-sub">• eligibility</span><span class="cell-sub">• deadline (not captured as a dated field by that pass)</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://www.rotoballer.com/free-fantasy-football-tournament-rotoballer-challenge-2026/1900460" target="_blank" rel="noopener noreferrer">RotoBaller Challenge</a></td>
+  <td data-label="Official page read">https://www.rotoballer.com/free-fantasy-football-tournament-rotoballer-challenge-2026/1900460</td>
+  <td data-label="Values copied"><span class="cell-sub">• 9th annual RotoBaller Challenge 2026, free, 12-team head-to-head leagues hosted on Fleaflicker; one team per person</span><span class="cell-sub">• Drafts scheduled Aug 7 - Sep 8, 2026 (league list shown through Aug 24 and beyond)</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry cost</span><span class="cell-sub">• eligibility</span><span class="cell-sub">• deadline (not captured as a dated field by that pass)</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://www.gamersaloon.com/promos/1rounder/" target="_blank" rel="noopener noreferrer">GamerSaloon 1-Rounders</a></td>
+  <td data-label="Official page read">https://www.gamersaloon.com/promos/1rounder/</td>
+  <td data-label="Values copied"><span class="cell-sub">• Free-to-enter weekly tournaments launched Saturdays 4:30 PM CT; one entry per person; many titles (EA FC 26, NBA 2K26, Madden 26, CoD, Fortnite, etc.)</span><span class="cell-sub">• Operator on page: Beyond Gaming, LLC; 18+ badge shown</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry cost</span><span class="cell-sub">• eligibility</span><span class="cell-sub">• deadline (not captured as a dated field by that pass)</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://www.mlb.com/apps/beat-the-streak" target="_blank" rel="noopener noreferrer">MLB Beat the Streak</a></td>
+  <td data-label="Official page read">https://www.mlb.com/apps/beat-the-streak</td>
+  <td data-label="Values copied"><span class="cell-sub">• Page: &#39;NO PURCHASE NECESSARY&#39;; US and Canada (excl. Quebec), MLB.com registered users, 21+</span><span class="cell-sub">• Window starts about 2026-03-24 12:00 ET and &#39;ends upon conclusion of the final game of the 2026 MLB regular season&#39;</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry cost</span><span class="cell-sub">• eligibility</span><span class="cell-sub">• deadline (not captured as a dated field by that pass)</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://www.metaculus.com/tournaments/" target="_blank" rel="noopener noreferrer">Metaculus Tournaments</a></td>
+  <td data-label="Official page read">https://www.metaculus.com/tournaments/</td>
+  <td data-label="Values copied"><span class="cell-sub">• entry: &#39;You can participate for free and win cash prizes for being accurate.&#39;</span><span class="cell-sub">• prize: tournament cards list prize pools, including &#39;NO PRIZE POOL&#39; for some</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• eligibility</span><span class="cell-sub">• per-question scoring rules</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest" target="_blank" rel="noopener noreferrer">Tom Howard/Margaret Reid Poetry Contest</a></td>
+  <td data-label="Official page read">https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest</td>
+  <td data-label="Values copied"><span class="cell-sub">• entry: &#39;Fee: $27 per submission (one submission may contain up to 3 poems).&#39;</span><span class="cell-sub">• prize: &#39;$12,000 in prizes&#39; with prize breakdown</span><span class="cell-sub">• deadline: &#39;Submit during April 15-October 1, 2027&#39;; page states the contest is currently closed</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• whether the fee is waived for any group</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free" target="_blank" rel="noopener noreferrer">Wergle Flomp Humor Poetry Contest</a></td>
+  <td data-label="Official page read">https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free</td>
+  <td data-label="Values copied"><span class="cell-sub">• entry: &#39;No fee to enter.&#39;</span><span class="cell-sub">• prize: &#39;$5,100 in prizes&#39; with the full prize list</span><span class="cell-sub">• deadline: &#39;Please submit one humor poem during August 15, 2026-April 1, 2027&#39;</span><span class="cell-sub">• eligibility: age and country rules; AI prohibition</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• number of winners beyond the listed 13</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://www.worldphoto.org/sony-world-photography-awards" target="_blank" rel="noopener noreferrer">Sony World Photography Awards</a></td>
+  <td data-label="Official page read">https://www.worldphoto.org/sony-world-photography-awards/series</td>
+  <td data-label="Values copied"><span class="cell-sub">• entry: rule 1.2.1 &#39;The Competition is free to enter.&#39;</span><span class="cell-sub">• prize: &#39;$25,000 (USD)&#39; for overall winner in the prizes table; Single Image overview states $5,000</span><span class="cell-sub">• deadline: rule 1.5 &#39;12 January, 2027 at 16.00 GMT&#39;; other competition deadlines in the awards timeline</span><span class="cell-sub">• eligibility: rule 1.3 &#39;All Entrants must be over 18.&#39;</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• total prize fund across all categories</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://www.rmets.org/weather-photographer-of-the-year" target="_blank" rel="noopener noreferrer">Weather Photographer of the Year</a></td>
+  <td data-label="Official page read">https://www.rmets.org/weather-photographer-of-the-year</td>
+  <td data-label="Values copied"><span class="cell-sub">• entry: &#39;is free to enter&#39;</span><span class="cell-sub">• timeline: submissions 11 June - 20 August; winners announced 17 November</span><span class="cell-sub">• eligibility: open worldwide to all skill levels</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• cash prize amount (not stated on the page read)</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://epoty.org/" target="_blank" rel="noopener noreferrer">Environmental Photographer of the Year (EPOTY)</a></td>
+  <td data-label="Official page read">https://www.epoty.org/</td>
+  <td data-label="Values copied"><span class="cell-sub">• entry: &#39;The competition is free to enter to photographers around the world of all ages and experience levels.&#39;</span><span class="cell-sub">• organiser: powered by CIWEM, supported by Arup and the Brave Blue World Foundation</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• cash prize amount</span><span class="cell-sub">• current edition deadline</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://www.drivendata.org/competitions/306/competition-doe-gems/" target="_blank" rel="noopener noreferrer">GEMS Prize Challenge</a></td>
+  <td data-label="Official page read">https://www.drivendata.org/competitions/306/competition-doe-gems/</td>
+  <td data-label="Values copied"><span class="cell-sub">• prize: &#39;Total Prize Pool: $300,000&#39; with the full breakdown table</span><span class="cell-sub">• deadline: &#39;Dec. 3, 2026, 11:59 p.m. UTC&#39;</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry fee</span><span class="cell-sub">• eligibility criteria (points to the official rules page)</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://www.metaculus.com/tournament/midterms-2026/" target="_blank" rel="noopener noreferrer">US Midterms 2026 (Metaculus)</a></td>
+  <td data-label="Official page read">https://www.metaculus.com/tournament/midterms-2026/</td>
+  <td data-label="Values copied"><span class="cell-sub">• prize: &#39;$10,000 Prize Pool&#39;</span><span class="cell-sub">• deadline: &#39;Closes Nov 04&#39; (started May 27)</span><span class="cell-sub">• entry: free participation stated on the tournaments index</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• eligibility</span><span class="cell-sub">• scoring detail</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://reedsy.com/creative-writing-prompts/contests/" target="_blank" rel="noopener noreferrer">Reedsy Weekly Short Story Contest</a></td>
+  <td data-label="Official page read">https://reedsy.com/creative-writing-prompts/contests/</td>
+  <td data-label="Values copied"><span class="cell-sub">• prize: contest page title &#39;Win $250 in this short story contest - every week!&#39;</span><span class="cell-sub">• deadline: &#39;#379&#39; shown LIVE until 23:59 - Nov 06, 2026 EST</span><span class="cell-sub">• cadence: weekly contests #355-#379 listed with dates</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry fee</span><span class="cell-sub">• word limit</span><span class="cell-sub">• eligibility</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://www.usa.gov/challenges" target="_blank" rel="noopener noreferrer">USA.gov Federal Challenge Directory</a></td>
+  <td data-label="Official page read">https://www.usa.gov/challenges</td>
+  <td data-label="Values copied"><span class="cell-sub">• content: official directory with &#39;Browse active challenges from the government&#39; and &#39;Other challenges from the federal government&#39;</span><span class="cell-sub">• provenance: .gov domain; links onward to usa.gov/find-active-challenge</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• entry cost of individual challenges</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://twitchcon-codex.devpost.com/rules" target="_blank" rel="noopener noreferrer">Codex x TwitchCon Hackathon</a></td>
+  <td data-label="Official page read">https://twitchcon-codex.devpost.com/rules</td>
+  <td data-label="Values copied"><span class="cell-sub">• entry: &#39;NO PURCHASE OR PAYMENT NECESSARY TO ENTER OR WIN.&#39;</span><span class="cell-sub">• deadline: Submission Period October 23, 2026 - November 2, 2026 (2:00 pm Pacific Time); winners on or around November 15, 2026</span><span class="cell-sub">• eligibility: 18+/age of majority, individuals and teams, exclusions for Brazil, Quebec, Russia, Crimea, Cuba, Iran, North Korea</span><span class="cell-sub">• prize: rules list 3rd Place $4,000 and two Runner Ups at $2,500 each; event title states $25,000 in prizes</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• 1st and 2nd place amounts (not in the section read)</span></td>
+</tr>
+<tr>
+  <td data-label="Listing"><a href="https://paypalaihackathon.devpost.com/rules" target="_blank" rel="noopener noreferrer">PayPal AI Hackathon</a></td>
+  <td data-label="Official page read">https://paypalaihackathon.devpost.com/rules</td>
+  <td data-label="Values copied"><span class="cell-sub">• entry: &#39;NO PURCHASE OR PAYMENT NECESSARY TO ENTER OR WIN.&#39;</span><span class="cell-sub">• deadline: Submission Period October 1, 2026 - November 12, 2026 (12:00 pm Pacific Time); winners on or around December 21, 2026</span><span class="cell-sub">• eligibility: age of majority, individuals/teams/organizations, exclusions for Brazil, Quebec, Russia, Crimea, Cuba, Iran, North Korea</span></td>
+  <td data-label="Not stated / limits"><span class="cell-sub">• prize amounts (the rules&#39; prizes section was not read in this pass)</span></td>
+</tr></tbody>
+    </table></div></div>
+
+    <h2>Independent second pass (verbatim quotes)</h2>
+    <p>A parallel session in this repository verified 12 rows against operator pages and stored the exact quoted wording. Those records are kept verbatim in <code>data/verification.json</code> and printed below, so both evidence stores are visible rather than one replacing the other. Where that pass contradicts a catalogue claim, the contradiction stands even when this pass left the cell blank.</p>
+    <div class="panel"><div class="table-scroll"><table>
+      <thead><tr><th scope="col">Row</th><th scope="col">Status</th><th scope="col">Quoted evidence</th><th scope="col">Page read</th></tr></thead>
+      <tbody><tr>
+        <td data-label="Row"><span class="cell-name">Wergle Flomp Humor Poetry Contest</span><span class="cell-sub">wergle-flomp</span></td>
+        <td data-label="Status"><span class="tag tag-ok">verified</span><span class="cell-sub">official-page-index</span></td>
+        <td data-label="Quoted evidence"><span class="cell-sub"><strong>entry_fee</strong>: No fee to enter — &ldquo;No fee to enter. Submit published or unpublished work. $5,100 in prizes.&rdquo;</span><span class="cell-sub"><strong>prize_total</strong>: $5,100 — &ldquo;$5,100 in prizes.&rdquo;</span><span class="cell-sub"><strong>prize_first</strong>: $2,000 — &ldquo;First Prize: $2,000 plus a two-year gift certificate from Duotrope (a $100 value) and five years of Chill Subs&#39; Best plan (a $1,000 value)&rdquo;</span><span class="cell-sub"><strong>submission_window</strong>: August 15, 2026 - April 1, 2027 — &ldquo;Please submit one humor poem during August 15, 2026-April 1, 2027&rdquo;</span><span class="cell-sub"><strong>eligibility_limits</strong>: Not eligible from Iran, North Korea, Crimea, Russia, Belarus — &ldquo;Authors from all countries eligible except Iran, North Korea, Crimea, Russia, and Belarus (due to US government restrictions).&rdquo;</span></td>
+        <td data-label="Page read"><a class="src" href="https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free" target="_blank" rel="noopener noreferrer">winningwriters.com ↗</a></td>
+      </tr>
+<tr>
+        <td data-label="Row"><span class="cell-name">Tom Howard/Margaret Reid Poetry Contest</span><span class="cell-sub">tom-howard-poetry</span></td>
+        <td data-label="Status"><span class="tag tag-paid">contradicted</span><span class="cell-sub">official-page</span></td>
+        <td data-label="Quoted evidence"><span class="cell-sub"><strong>entry_fee</strong>: $27 per submission — &ldquo;Fee: $27 per submission (one submission may contain up to 3 poems). Enter as many submissions as you wish.&rdquo;</span><span class="cell-sub"><strong>availability</strong>: Closed; opens April 15, 2027 — &ldquo;This contest is currently closed. It will open again on April 15, 2027.&rdquo;</span><span class="cell-sub"><strong>prize_total</strong>: $12,000 — &ldquo;Welcome to the 25th annual Tom Howard/Margaret Reid Poetry Contest. Submit published or unpublished work. $12,000 in prizes.&rdquo;</span><span class="cell-sub"><strong>prize_first</strong>: two prizes of $3,500 — &ldquo;TOM HOWARD PRIZE: $3,500 for a poem in any style or genre&rdquo;</span></td>
+        <td data-label="Page read"><a class="src" href="https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest" target="_blank" rel="noopener noreferrer">winningwriters.com ↗</a></td>
+      </tr>
+<tr>
+        <td data-label="Row"><span class="cell-name">ARC Prize 2026</span><span class="cell-sub">arcprize</span></td>
+        <td data-label="Status"><span class="tag tag-ok">verified</span><span class="cell-sub">official-page</span></td>
+        <td data-label="Quoted evidence"><span class="cell-sub"><strong>prize_total</strong>: $2,000,000 — &ldquo;Now $2,000,000 in prizes!&rdquo;</span><span class="cell-sub"><strong>tracks</strong>: 3 tracks — &ldquo;Over $2M in prizes. 3 tracks. Get started.&rdquo;</span><span class="cell-sub"><strong>hosting</strong>: Hosted on Kaggle — &ldquo;In partnership with Kaggle, over $2M is up for grabs.&rdquo;</span></td>
+        <td data-label="Page read"><a class="src" href="https://arcprize.org/" target="_blank" rel="noopener noreferrer">arcprize.org ↗</a></td>
+      </tr>
+<tr>
+        <td data-label="Row"><span class="cell-name">Metaculus Tournaments</span><span class="cell-sub">metaculus</span></td>
+        <td data-label="Status"><span class="tag tag-ok">verified</span><span class="cell-sub">official-page</span></td>
+        <td data-label="Quoted evidence"><span class="cell-sub"><strong>entry_fee</strong>: Free to participate — &ldquo;We are not a prediction market. You can participate for free and win cash prizes for being accurate.&rdquo;</span><span class="cell-sub"><strong>live_tournaments</strong>: 19 shown on 2026-11-01 — &ldquo;19 tournaments shown&rdquo;</span><span class="cell-sub"><strong>largest_pool_seen</strong>: $50,000 — &ldquo;$50,000 PRIZE POOL ... Fall 2026 FutureEval Bot Tournament&rdquo;</span><span class="cell-sub"><strong>smallest_paid_pool_seen</strong>: $3,400 — &ldquo;$3,400 PRIZE POOL ... Animal Futures Tournament&rdquo;</span></td>
+        <td data-label="Page read"><a class="src" href="https://www.metaculus.com/tournaments/" target="_blank" rel="noopener noreferrer">metaculus.com ↗</a></td>
+      </tr>
+<tr>
+        <td data-label="Row"><span class="cell-name">Kaggle Competitions</span><span class="cell-sub">kaggle</span></td>
+        <td data-label="Status"><span class="tag tag-warn">partially-verified</span><span class="cell-sub">official-page</span></td>
+        <td data-label="Quoted evidence"><span class="cell-sub"><strong>openness</strong>: Open to anyone — &ldquo;The world&#39;s most important AI problems, open to anyone.&rdquo;</span><span class="cell-sub"><strong>prize_examples</strong>: ARC Prize 2026 Paper Track $450,000; NFL Big Data Bowl 2027 $100,000; Gemma 4 Developer Agent Paper Track $35,000 — &ldquo;$450,000 ... ARC Prize 2026 - Paper Track&rdquo;</span><span class="cell-sub"><strong>entry_fee</strong>: Not stated on the page read — &ldquo;&rdquo;</span></td>
+        <td data-label="Page read"><a class="src" href="https://www.kaggle.com/competitions" target="_blank" rel="noopener noreferrer">kaggle.com ↗</a></td>
+      </tr>
+<tr>
+        <td data-label="Row"><span class="cell-name">DrivenData</span><span class="cell-sub">drivendata</span></td>
+        <td data-label="Status"><span class="tag tag-warn">partially-verified</span><span class="cell-sub">official-page</span></td>
+        <td data-label="Quoted evidence"><span class="cell-sub"><strong>live_prize_competition</strong>: GEMS Prize Challenge — $300,000 in prizes, 4 weeks left (2026-11-01) — &ldquo;$300,000 in prizes&rdquo;</span><span class="cell-sub"><strong>entry_fee</strong>: Not stated on the page read — &ldquo;&rdquo;</span></td>
+        <td data-label="Page read"><a class="src" href="https://www.drivendata.org/competitions/" target="_blank" rel="noopener noreferrer">drivendata.org ↗</a></td>
+      </tr>
+<tr>
+        <td data-label="Row"><span class="cell-name">Checkmate Gaming free tournaments</span><span class="cell-sub">checkmate-gaming</span></td>
+        <td data-label="Status"><span class="tag tag-ok">verified</span><span class="cell-sub">official-page</span></td>
+        <td data-label="Quoted evidence"><span class="cell-sub"><strong>entry_fee</strong>: Free — &ldquo;Totally free to enter with real cash prizes. New tournaments posted daily.&rdquo;</span><span class="cell-sub"><strong>free_prizes_seen</strong>: $40, $100, $120 on 2026-11-01 — &ldquo;$120 PRIZE ... FREE ENTRY&rdquo;</span><span class="cell-sub"><strong>paid_counter_example</strong>: $1,500 ELITE ENTRY tournament on the same page — &ldquo;$1500 PRIZE ... ELITE ENTRY&rdquo;</span></td>
+        <td data-label="Page read"><a class="src" href="https://www.checkmategaming.com/free-tournaments" target="_blank" rel="noopener noreferrer">checkmategaming.com ↗</a></td>
+      </tr>
+<tr>
+        <td data-label="Row"><span class="cell-name">World Press Photo Contest</span><span class="cell-sub">world-press-photo</span></td>
+        <td data-label="Status"><span class="tag tag-ok">verified</span><span class="cell-sub">secondary-official-terms</span></td>
+        <td data-label="Quoted evidence"><span class="cell-sub"><strong>entry_fee</strong>: Free — &ldquo;Entering is free and prizes include up to €10,000, inclusion in our annual traveling exhibition, and more.&rdquo;</span><span class="cell-sub"><strong>prize_amounts</strong>: €1,000 per winner + €10,000 for Photo of the Year — &ldquo;€1,000 for each of the winners and an additional €10,000 for the World Press Photo of the Year winner&rdquo;</span></td>
+        <td data-label="Page read"><a class="src" href="https://www.sej.org/calendar/deadline-world-press-photo-contest" target="_blank" rel="noopener noreferrer">sej.org ↗</a></td>
+      </tr>
+<tr>
+        <td data-label="Row"><span class="cell-name">Sony World Photography Awards</span><span class="cell-sub">sony-world-photo</span></td>
+        <td data-label="Status"><span class="tag tag-ok">verified</span><span class="cell-sub">secondary-official-terms</span></td>
+        <td data-label="Quoted evidence"><span class="cell-sub"><strong>entry_fee</strong>: Free — &ldquo;The awards are completely free-to-enter and open to all photographers shooting on any devices and at all stages of their careers.&rdquo;</span><span class="cell-sub"><strong>prize_professional</strong>: $25,000 — &ldquo;The major prize is US$25,000 plus a solo show, Sony Digital Imaging equipment and a career development day.&rdquo;</span><span class="cell-sub"><strong>prize_open</strong>: $5,000 — &ldquo;The major prize is US$5,000, top Sony Digital Imaging equipment&rdquo;</span></td>
+        <td data-label="Page read"><a class="src" href="https://www.photoreview.com.au/news/photo-competitions/entries-open-for-sony-world-photography-awards-2026/" target="_blank" rel="noopener noreferrer">photoreview.com.au ↗</a></td>
+      </tr>
+<tr>
+        <td data-label="Row"><span class="cell-name">Hamdan International Photography Award (HIPA)</span><span class="cell-sub">hipa</span></td>
+        <td data-label="Status"><span class="tag tag-warn">partially-verified</span><span class="cell-sub">secondary-official-terms</span></td>
+        <td data-label="Quoted evidence"><span class="cell-sub"><strong>entry_fee</strong>: Free — &ldquo;There is no entry fee.&rdquo;</span><span class="cell-sub"><strong>grand_prize</strong>: $200,000 — &ldquo;The competition offers major cash awards, including a Grand Prize of USD $200,000&rdquo;</span><span class="cell-sub"><strong>pool</strong>: about $1,000,000 — &ldquo;widely described as having an overall prize fund reaching around USD $1,000,000&rdquo;</span><span class="cell-sub"><strong>current_deadline</strong>: May 31, 2026 (2026 season, per listing) — &ldquo;Deadline: May 31, 2026&rdquo;</span></td>
+        <td data-label="Page read"><a class="src" href="https://graphiccompetitions.com/photography/hipa-2026-international-photography-award/" target="_blank" rel="noopener noreferrer">graphiccompetitions.com ↗</a></td>
+      </tr>
+<tr>
+        <td data-label="Row"><span class="cell-name">Istanbul Photo Awards</span><span class="cell-sub">istanbul-photo-awards</span></td>
+        <td data-label="Status"><span class="tag tag-ok">verified</span><span class="cell-sub">secondary-official-terms</span></td>
+        <td data-label="Quoted evidence"><span class="cell-sub"><strong>entry_fee</strong>: Free — &ldquo;There is no entry fee.&rdquo;</span><span class="cell-sub"><strong>prize_total</strong>: $58,000 — &ldquo;The total prize pool for the İstanbul Photo Awards 2026 is $58,000&rdquo;</span><span class="cell-sub"><strong>prize_photo_of_year</strong>: $6,000 — &ldquo;the Photo of the Year (the top image in the Single News category) receiving $6,000, first-place winners in each category awarded $3,000, second places $1,500, and third places $1,000&rdquo;</span><span class="cell-sub"><strong>eligibility</strong>: Professional photojournalists; images taken in 2025 — &ldquo;Open only to professional photographers worldwide, with submitted photographs required to have been taken in 2025.&rdquo;</span></td>
+        <td data-label="Page read"><a class="src" href="https://graphiccompetitions.com/photography/istanbul-photo-awards-2026/" target="_blank" rel="noopener noreferrer">graphiccompetitions.com ↗</a></td>
+      </tr>
+<tr>
+        <td data-label="Row"><span class="cell-name">Weather Photographer of the Year (RMetS)</span><span class="cell-sub">weather-potw</span></td>
+        <td data-label="Status"><span class="tag tag-paid">contradicted</span><span class="cell-sub">official-page-index</span></td>
+        <td data-label="Quoted evidence"><span class="cell-sub"><strong>entry_fee</strong>: Free — &ldquo;This annual competition is open to photographers of all skill levels worldwide and is free to enter.&rdquo;</span><span class="cell-sub"><strong>prize_amounts_as_published_2026</strong>: £1,500 overall, £500 mobile, £500 climate award (per 2026 contest listings) — &ldquo;Weather Photographer of the Year – awarded to the most striking image of weather in action (£1,500 prize). Mobile Weather Photographer of the Year – celebrating the best images captured on a smartphone or tablet (£500 prize). Climate Award – recognising photography that tells a compelling story about our changing climate (£500 prize).&rdquo;</span></td>
+        <td data-label="Page read"><a class="src" href="https://www.rmets.org/weather-photographer-of-the-year" target="_blank" rel="noopener noreferrer">rmets.org ↗</a></td>
+      </tr></tbody>
+    </table></div></div>
+    <p class="small">That session's own audit files, link check and alternate page build are preserved in <code>data/</code>, <code>tools/</code> and <code><a href="../all.html">archive/</a></code>; nothing was deleted during integration.</p>
+
+    <h2>Automated checks</h2>
+    <p><code>node tests/validate.mjs</code> runs on every push and verifies: unique ids; every category and evidence status valid; every unverified row has blank prize, entry, deadline, kind and eligibility; every checked row has an evidence block with a source URL and at least one confirmed value; every row’s source is HTTPS; every internal link and asset on all 13 pages resolves; and no table is forced wider than a 390px viewport.</p>
+
+    <h2>Parallel evidence kept in this repository</h2>
+    <ul>
+      <li><a href="review.html">Review page</a>: the 28 row-by-row reads recorded in <code>data/verification/batchA.jsonl</code>, each with its outcome, prize text and official URL.</li>
+      <li><a href="../method.html">Archived method page</a> from the parallel build, which explains its 90-point priority score.</li>
+      <li><a href="../../index.html">Verified ledger build</a>: all 206 imported rows with an automated audit and its own flagged page.</li>
+      <li><code>data/ledger.json</code>, <code>data/audit.json</code>, <code>data/verification.json</code>, <code>data/finder-ledger.json</code>: the machine-readable evidence stores, unchanged.</li>
+    </ul>
+
+    <h2>Known limits of this pass</h2>
+    <ul>
+      <li>184 rows were not read on an operator page and are published blank and flagged.</li>
+      <li>Prize and deadline values age quickly. The reading date is shown on every checked row.</li>
+      <li>Eligibility summaries are shortened from longer rules; the linked page wins in any dispute.</li>
+      <li>Pages that render only with JavaScript (Topcoder, Zindi, the Reedsy contest entries) could not be read reliably, so they stay unverified.</li>
+      <li>This is not legal, financial or tax advice. US federal tax reporting generally begins at $600 of prizes in a year, but eligibility and filing duties are personal.</li>
+    </ul>
+    <p><a href="review.html">Open items and irregularities →</a></p>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>Prize Atlas · Research, not financial, legal or tax advice · Sources re-read 2026-11-01</span>
+    <span><a href="./methodology.html">Method &amp; sources</a> · <a href="./review.html">Flagged for review</a> · <a href="../../all.html">Archived builds</a> · <a href="../../index.html">Verified ledger</a> · <a href="https://github.com/sassnarep3-star/Own1">Repository</a></span>
+  </div>
+</footer>
+<script src="../prize-atlas/assets/app.js" defer></script>
+</body>
+</html>

@@ -1,82 +1,131 @@
-# Prize Atlas
+# PrizeDesk
 
-A static, mobile-first dashboard for **free-to-enter competitions that pay real cash** — built from the reference ledger at [karagemop466-tech/FreeMoneyApps](https://karagemop466-tech.github.io/FreeMoneyApps/), with every claim either read on an official page or published as blank and flagged.
+A mobile-first dashboard of **free-to-enter competitions that can pay real money**, rebuilt from the
+[Free Money & Contest Ledger](https://karagemop466-tech.github.io/FreeMoneyApps/) dataset into something
+you can actually use on a phone: one row per competition, nine category pages, search/filter/sort, a
+transparent shortlist, and a published list of everything that could not be verified.
 
 **Live site:** https://sassnarep3-star.github.io/Own1/
 
-## What is in here
+This repository is the integration of six parallel sessions that worked on the same brief on 2026-11-01.
+The earlier "Prize Atlas" build is preserved, working, under [`archive/prize-atlas/`](archive/prize-atlas/index.html);
+its verified findings are merged into this dataset and attributed on the
+[source audit page](https://sassnarep3-star.github.io/Own1/research.html).
 
-| Path | What it is |
+---
+
+## Why this exists
+
+The source site is a single scroll of 206 full-length cards with no search, no filters and no sorting.
+Its own pages disagree about which revision is published, at least one cited App Store link is dead, and
+12 rows cite no official source while still showing prize figures. This repository keeps the research and
+fixes the delivery:
+
+- **Every table row links to the operator's own page** (plus a separate rules link where one exists).
+- **A value only appears if an official source states it.** 81 of 206 rows show “—” for the prize instead
+  of a number we could not support.
+- **Every row carries its verification state**: `live-checked` (12 rows fetched on 1 Nov 2026),
+  `source cited — not re-checked` (182), or `no official source` (12).
+- **Ended contests are stamped and excluded** from every shortlist (27 rows).
+- **17 irregularities are published** with evidence and source links on the Flagged for Review page,
+  including the ones we could not settle.
+
+Nothing in the HTML is hand-typed data. Tables, counts, shortlists and flags are generated from JSON at
+build time, so the site cannot drift from the dataset.
+
+## Pages
+
+| Page | What it is |
 | --- | --- |
-| `index.html` | Dashboard: key figures, triage shortlist, category cards, all 212 rows in one filterable table, executive summary |
-| `category/*.html` | Nine category pages (sports, tech, forecasting, creative, market, skill, trivia, pools, directories) |
-| `analysis.html` | Findings: coverage, where the money is, free-entry traps, the link problem, how to use a coding agent |
-| `methodology.html` | The verification rules and the exact official pages read, per row |
-| `review.html` | Flagged for review: unverified rows, dead/reused links, contradictions, paid-entry traps |
-| `supplemental/index.html` | Independent second audit (three hackathon leads, seven extra flags) |
-| `archive/*.html` | An alternate build of this research by a parallel session, kept working and linked from the method page |
-| `data/verification.json`, `data/audit.json`, `data/ledger.json` | Verbatim-quote verification of 12 rows, 11 rule-based audit findings over the imported ledger, and the mirrored ledger |
-| `entry/*.html`, `sources.html`, `playbook.html` | Fourth build by a parallel session: per-lead pages, a source ledger and a competition playbook |
-| `ledger/index.html` | Third build by a parallel session: all 206 imported rows with an automated audit, 28 rows checked against official pages, its own flagged and method pages |
-| `data/verification/batchA.jsonl` | That session's 28 row-by-row official-page reads; its verified and discrepancy rows are attributed in the main table |
-| `data/entries.json` | The dataset: 212 rows with per-row `evidence`, `entryFree` and `flags` |
-| `data/triage.json` | Editorial scoring inputs, one rationale per checked row |
-| `tools/build.mjs` | Zero-dependency generator that renders every page from the data |
-| `tests/validate.mjs` | Data contract + link/asset + mobile checks, run in CI |
+| `index.html` | Dashboard: headline numbers, top-ranked live picks, category cards |
+| `all.html` | All 206 rows in one sortable, filterable table |
+| `categories/*.html` | Nine category pages with the same table controls |
+| `c/<id>.html` | One page per competition: facts, steps, terms notes, sources, flags |
+| `best.html` | Four shortlists with the scoring model printed on every row |
+| `analysis.html` | Counted findings: coverage, entry paths, ID burden, currencies, concentration |
+| `verification.html` | Method, provenance, what each badge means, what was actually fetched |
+| `flagged.html` | The irregularity register and the full live-check log |
+| `executive-summary.html` | The executive summary (also in [`docs/EXECUTIVE_SUMMARY.md`](docs/EXECUTIVE_SUMMARY.md)) |
 
-`EXECUTIVE_SUMMARY.md`, `REQUIREMENTS.md`, `research/SOURCES.md` and `COORDINATION.md` carry the written analysis and the task log.
+## Data and provenance
 
-## Data policy
+- Source: `github.com/karagemop466-tech/FreeMoneyApps`, file `assets/data.js`,
+  commit `466f7c1e7a14b52b4a0d36beb84a00d68fd409b7`, SHA-256
+  `13986a17b8b9aa7b3240232e6138155967cfa9347256faa7b5c7d1565ed73211`.
+- The file is vendored unchanged at `data/source/ledger.source.js` and recorded in
+  `data/source/PROVENANCE.json`. It is parsed as strict JSON — never executed.
+- Source authors' own last-check date: **2026-08-19**. This rebuild: **2026-11-01**.
 
-- **Checked** rows were read on the linked operator page on the date in their `evidence.checkedAt` field. Prize, entry cost, deadline and eligibility are copied from that page.
-- **Unverified** rows are leads only. Their prize, entry-cost, deadline, kind and eligibility cells are forced blank by `tests/validate.mjs`; they display an *Unverified* badge.
-- Blank means *not confirmed* — never zero, never free. Only an explicit statement such as "The Competition is free to enter" produces a *Free entry* badge.
-- Nothing is converted, combined, rounded, extrapolated or estimated; no win probability is published.
+| File | Contents |
+| --- | --- |
+| `data/ledger.json` | Canonical dataset (206 rows, verbatim fields) |
+| `data/verification.json` | Per-row verification state, flags and totals |
+| `data/live-checks.json` | The 12 URLs actually fetched this pass, with what each confirmed |
+| `data/irregularities.json` | The 17-item register published on the site |
 
-## Local preview and checks
+## What was merged from the parallel sessions
+
+| From the Prize Atlas build | Where it lives now |
+| --- | --- |
+| 5 rows not in the pinned ledger (GEMS Prize Challenge, US Midterms 2026, and three AI hackathons) | Merged into `data/ledger.json` from `data/additions.json`, each with a detail page and a "not in the original ledger" note |
+| 10 official pages read on 2026-11-01, with the caveats they recorded | `data/cross-checks.json`, published on `research.html` and on each row's detail page, attributed to the session that read them |
+| Their dashboard (208 leads, 7 checked pages, review queue, supplemental research) | Preserved intact at `archive/prize-atlas/` with a banner linking back here |
+| Findings: ESPN entry-limit conflict, Challenge.gov sunset, IceHacks header, PayPal prize totals, the "$600+" tax generalisation | Published as flags I-17 … I-21 on `flagged.html` |
+| Their validation script and CI workflow | `tests/validate-prize-atlas.mjs` (base path adjusted) and `.github/workflows/validate.yml`, which now runs both suites |
+| Their source audit | `research/SOURCES.md`, linked from `research.html` |
+| A second full build (session `d21e8702`): own generator, audit, methodology, sources and cross-session pages | Preserved working at `archive/prize-atlas/dashboard-v2/`, with its Python tools, data and test |
+| A third full build (session `4e1fdad5`): per-entry pages, playbook, finder, upstream data snapshot | Preserved working at `archive/session-4e1fdad5/` (116 files) |
+| A fourth build (sessions `a479d584`, `4a243e58`): ledger subsite, link-status classifier, two extra verified competitions, 15 quarantined claims | Preserved working at `archive/session-4a243e58/` (112 files) |
+
+Their README, for the record:
+
+> Prize Atlas — a static, mobile-friendly research dashboard for cash-prize competition leads. Only seven rows
+> have official pages read for their displayed details as of 2026-11-01; other rows are explicitly unverified.
+> `data/entries.json` contains 206 unverified/checked legacy leads imported by name and category from the
+> reference ledger, plus two newly checked contest leads. Financial details and deadlines are shown only where
+> read from an official page.
+
+## Build
+
+No dependencies — Node 18+ only.
 
 ```bash
-python3 -m http.server 8000 --bind 0.0.0.0   # then open the preview
-node tools/build.mjs                          # regenerate all HTML from data/
-node tests/validate.mjs                       # must print OK
+npm run build     # ingest -> verify -> build site -> render docs -> check links
 ```
 
-No dependencies, no build step at deploy time. GitHub Pages serves the repository root of `main` (`.nojekyll` present).
+Or step by step:
 
-## Adding or verifying a row
+```bash
+node scripts/ingest.js        # checksum-check the source, write data/ledger.json
+node scripts/verify.js        # audit rows, write verification.json + irregularities.json
+node scripts/build.js         # generate every HTML page
+node scripts/render-docs.js   # regenerate docs/EXECUTIVE_SUMMARY.md
+node scripts/checklinks.js    # fail on broken internal links or missing rows
+```
 
-1. Open the operator's official page; copy the exact wording for prize, entry cost, deadline and eligibility.
-2. Fill only what the page states. Leave everything else blank.
-3. Add an `evidence` block: `url`, `checkedAt`, `confirmed[]`, `notStated[]`, `limits`.
-4. Set `sourceStatus` to `checked` and `entryFree` to `yes`, `no` or blank.
-5. Add a `triage.json` entry with a written rationale if the row should appear in the shortlist.
-6. Run `node tools/build.mjs && node tests/validate.mjs`, then commit.
+Preview locally:
 
-## `/atlas` — the operator-verified subsite
+```bash
+python3 -m http.server 8080    # then open http://localhost:8080/
+```
 
-`atlas/index.html` is a second layer, built by a separate generator, under one stricter rule: **prize,
-entry, deadline and eligibility are written only when the operator's own page was opened.** Everything
-else stays blank with an explicit flag.
+### Adding verification
 
-| | Root layer (this build) | `/atlas` subsite |
-| --- | --- | --- |
-| Generator | `npm run build` → `scripts/build-data.mjs`, `scripts/build-site.mjs` | `node scripts/build-atlas.mjs` |
-| Data | `data/verification.json`, `data/entries.json`, `data/stats.json` | `data/verified.json`, `data/legacy.json`, `data/atlas-findings.json`, `data/atlas-entries.json`, `data/atlas-categories.json` |
-| Rows checked against an operator page | 20 page-checked + 6 partly | 44, each with prize, entry, deadline, eligibility and the page read |
-| Unconfirmed catalogue claims | shown per row, tagged unverified | quarantined in a *legacy claim (unverified)* column |
-| Findings | on `review.html` and `sources.html` | 17 sourced findings on `atlas/review.html` |
-| Mobile tables | filterable, horizontally scrollable | become labelled cards under 900px |
+Append an entry to `data/live-checks.json` (url, listingIds, outcome, what the page confirmed and did not),
+then re-run `npm run build`. Rows whose URLs appear there upgrade themselves from
+“source cited — not re-checked” to “live-checked”. The flag register regenerates from the same script.
 
-Atlas pages: `atlas/index.html` (dashboard), `atlas/shortlist.html`, `atlas/categories.html` and
-`atlas/category/<id>.html`, `atlas/summary.html`, `atlas/review.html`, `atlas/method.html`,
-`atlas/ledger-pass.html`.
+## Honesty rules the build enforces
 
-Its own gate: `node tests/validate-atlas.mjs` — 3,700+ assertions, including "no verified field is
-copied from a legacy claim", "lead rows never populate prize/fee/deadline", "every internal link in the
-repository resolves" and "every published page is reachable from the dashboard". CI rebuilds `atlas/`,
-fails on any diff, then runs that gate.
+1. Copy the source verbatim; never silently correct it.
+2. Print a prize or cash-out figure only when the row has an official-tier source and states an amount.
+3. No inference, conversion or summation — £ stays £, “$1K/week + $5K season” is not “$6K”.
+4. Badge what was not checked, and publish the list of unchecked rows.
+5. Turn every inconsistency into a numbered flag with evidence and links.
 
-> The two generators never write the same file: the root build owns the root pages and `category/*`,
-> `scripts/build-atlas.mjs` owns `atlas/**`. Atlas data files are namespaced `atlas-*` so the two
-> evidence sets cannot silently overwrite each other.
+## Scope and legal
 
+This is an independent compilation. It is not affiliated with, endorsed by, or sponsored by any operator
+listed. Contest rules, prizes and eligibility change without notice — always open the operator's own rules
+before entering. Some listings are restricted by US state or country, and some involve skill-gaming or
+brokerage accounts. Play only where legal. 18+/21+. Nothing here is financial, legal or tax advice.
