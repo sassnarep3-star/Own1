@@ -1,0 +1,427 @@
+{
+ "checked_on": "2026-11-01",
+ "method": "Official operator page opened with the agent's page-fetch tool, or the official page's own text returned in a web-search index. Every claim below carries a verbatim quote. Nothing is inferred, converted between currencies, or filled in from memory.",
+ "evidence_kinds": {
+  "official-page": "The operator's own page was opened and the quoted text was read directly.",
+  "official-page-index": "The operator's own page text was returned through a search index; the URL is the operator's.",
+  "secondary-official-terms": "A third-party page quoting the operator's published terms was read; the operator page was not opened. Treated as weaker evidence."
+ },
+ "status_legend": {
+  "verified": "Every field in `fields` was read on the cited page and matches the catalogue.",
+  "partially-verified": "Some fields confirmed, at least one material field (usually free entry) is not stated on the page read.",
+  "contradicted": "At least one catalogue field is contradicted by the cited official page. The specific contradicted fields are listed in `contradicted_fields`; other fields on the row may still be verified and keep their own quotes.",
+  "not-verified": "Nothing was read this pass; the row keeps only its operator link."
+ },
+ "entries": [
+  {
+   "id": "wergle-flomp",
+   "name": "Wergle Flomp Humor Poetry Contest",
+   "status": "verified",
+   "evidence_kind": "official-page-index",
+   "official_url": "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free",
+   "fields": {
+    "entry_fee": {
+     "value": "No fee to enter",
+     "quote": "No fee to enter. Submit published or unpublished work. $5,100 in prizes."
+    },
+    "prize_total": {
+     "value": "$5,100",
+     "quote": "$5,100 in prizes."
+    },
+    "prize_first": {
+     "value": "$2,000",
+     "quote": "First Prize: $2,000 plus a two-year gift certificate from Duotrope (a $100 value) and five years of Chill Subs' Best plan (a $1,000 value)"
+    },
+    "submission_window": {
+     "value": "August 15, 2026 - April 1, 2027",
+     "quote": "Please submit one humor poem during August 15, 2026-April 1, 2027"
+    },
+    "eligibility_limits": {
+     "value": "Not eligible from Iran, North Korea, Crimea, Russia, Belarus",
+     "quote": "Authors from all countries eligible except Iran, North Korea, Crimea, Russia, and Belarus (due to US government restrictions)."
+    }
+   },
+   "prize_top": {
+    "amount": 2000,
+    "currency": "USD",
+    "scope": "1st prize, single poem"
+   },
+   "catalogue_matches": {
+    "freePath": true,
+    "prize_text": true,
+    "status": true
+   },
+   "notes": "Free entry confirmed; the catalogue's $5,100 total and top prize match the official page exactly. Best-in-class for an AI-assisted workflow only in the drafting sense — see the AI clause below.",
+   "ai_clause": "The sibling contest page for Tom Howard/Margaret Reid states: 'Any writing that you submit to a Winning Writers contest must be composed using your own words, and may not contain any AI-generated text.' Read the same clause on this contest's supplemental page before entering. Logged from https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest"
+  },
+  {
+   "id": "tom-howard-poetry",
+   "name": "Tom Howard/Margaret Reid Poetry Contest",
+   "status": "contradicted",
+   "evidence_kind": "official-page",
+   "official_url": "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest",
+   "fields": {
+    "entry_fee": {
+     "value": "$27 per submission",
+     "quote": "Fee: $27 per submission (one submission may contain up to 3 poems). Enter as many submissions as you wish."
+    },
+    "availability": {
+     "value": "Closed; opens April 15, 2027",
+     "quote": "This contest is currently closed. It will open again on April 15, 2027."
+    },
+    "prize_total": {
+     "value": "$12,000",
+     "quote": "Welcome to the 25th annual Tom Howard/Margaret Reid Poetry Contest. Submit published or unpublished work. $12,000 in prizes."
+    },
+    "prize_first": {
+     "value": "two prizes of $3,500",
+     "quote": "TOM HOWARD PRIZE: $3,500 for a poem in any style or genre"
+    }
+   },
+   "prize_top": {
+    "amount": 3500,
+    "currency": "USD",
+    "scope": "two equal top prizes"
+   },
+   "catalogue_matches": {
+    "freePath": false,
+    "prize_text": true,
+    "status": false
+   },
+   "notes": "The catalogue labels this 'Free USD path' with status 'live'. The official page states a $27 entry fee and that the contest is closed until 2027-04-15. Both labels are wrong on the same row.",
+   "contradicted_fields": [
+    "freePath",
+    "status"
+   ]
+  },
+  {
+   "id": "arcprize",
+   "name": "ARC Prize 2026",
+   "status": "verified",
+   "evidence_kind": "official-page",
+   "official_url": "https://arcprize.org/",
+   "fields": {
+    "prize_total": {
+     "value": "$2,000,000",
+     "quote": "Now $2,000,000 in prizes!"
+    },
+    "tracks": {
+     "value": "3 tracks",
+     "quote": "Over $2M in prizes. 3 tracks. Get started."
+    },
+    "hosting": {
+     "value": "Hosted on Kaggle",
+     "quote": "In partnership with Kaggle, over $2M is up for grabs."
+    }
+   },
+   "prize_top": {
+    "amount": 2000000,
+    "currency": "USD",
+    "scope": "total pool, all tracks"
+   },
+   "catalogue_matches": {
+    "freePath": true,
+    "prize_text": true,
+    "status": true
+   },
+   "notes": "Prize total and track count confirmed. The official ARC-AGI-3 technical report (2026-04-22) also states 'The total prize pool is now $2M'. Entry fee is not stated on the page read; the catalogue's 'free' label is consistent with a Kaggle-hosted competition but was not itself confirmed here.",
+   "extra_source": "https://arcprize.org/media/ARC_AGI_3_Technical_Report.pdf"
+  },
+  {
+   "id": "metaculus",
+   "name": "Metaculus Tournaments",
+   "status": "verified",
+   "evidence_kind": "official-page",
+   "official_url": "https://www.metaculus.com/tournaments/",
+   "fields": {
+    "entry_fee": {
+     "value": "Free to participate",
+     "quote": "We are not a prediction market. You can participate for free and win cash prizes for being accurate."
+    },
+    "live_tournaments": {
+     "value": "19 shown on 2026-11-01",
+     "quote": "19 tournaments shown"
+    },
+    "largest_pool_seen": {
+     "value": "$50,000",
+     "quote": "$50,000 PRIZE POOL ... Fall 2026 FutureEval Bot Tournament"
+    },
+    "smallest_paid_pool_seen": {
+     "value": "$3,400",
+     "quote": "$3,400 PRIZE POOL ... Animal Futures Tournament"
+    }
+   },
+   "prize_top": {
+    "amount": 50000,
+    "currency": "USD",
+    "scope": "largest single pool visible on the page"
+   },
+   "catalogue_matches": {
+    "freePath": true,
+    "prize_text": "mostly",
+    "status": true
+   },
+   "notes": "Free entry and the $50,000 upper bound are confirmed. The catalogue's '$3,000' lower bound was not reproduced: the lowest paid pool on the page was $3,400, and 5 of the 19 tournaments are marked 'NO PRIZE POOL'. Two separate $50,000 pools are explicitly bot tournaments (Summer and Fall 2026 FutureEval), which matters for an AI-agent workflow.",
+   "bot_note": "Fall 2026 FutureEval Bot Tournament — $50,000 PRIZE POOL — https://www.metaculus.com/tournament/fall-futureeval-2026/"
+  },
+  {
+   "id": "kaggle",
+   "name": "Kaggle Competitions",
+   "status": "partially-verified",
+   "evidence_kind": "official-page",
+   "official_url": "https://www.kaggle.com/competitions",
+   "fields": {
+    "openness": {
+     "value": "Open to anyone",
+     "quote": "The world's most important AI problems, open to anyone."
+    },
+    "prize_examples": {
+     "value": "ARC Prize 2026 Paper Track $450,000; NFL Big Data Bowl 2027 $100,000; Gemma 4 Developer Agent Paper Track $35,000",
+     "quote": "$450,000 ... ARC Prize 2026 - Paper Track"
+    },
+    "entry_fee": {
+     "value": "Not stated on the page read",
+     "quote": ""
+    }
+   },
+   "prize_top": {
+    "amount": 450000,
+    "currency": "USD",
+    "scope": "largest single hackathon prize label visible on the page"
+   },
+   "catalogue_matches": {
+    "freePath": "unconfirmed",
+    "prize_text": true,
+    "status": true
+   },
+   "notes": "Prize scale confirmed from the page's own prize labels. An entry fee is not mentioned anywhere on the competitions page, but absence of a fee in marketing copy is not proof of free entry, so the row is left as 'free entry not stated' rather than verified."
+  },
+  {
+   "id": "drivendata",
+   "name": "DrivenData",
+   "status": "partially-verified",
+   "evidence_kind": "official-page",
+   "official_url": "https://www.drivendata.org/competitions/",
+   "fields": {
+    "live_prize_competition": {
+     "value": "GEMS Prize Challenge — $300,000 in prizes, 4 weeks left (2026-11-01)",
+     "quote": "$300,000 in prizes"
+    },
+    "entry_fee": {
+     "value": "Not stated on the page read",
+     "quote": ""
+    }
+   },
+   "prize_top": {
+    "amount": 300000,
+    "currency": "USD",
+    "scope": "current live prize competition"
+   },
+   "catalogue_matches": {
+    "freePath": "unconfirmed",
+    "prize_text": "range stale",
+    "status": true
+   },
+   "notes": "Prize competition confirmed. The catalogue's stated range ('often $10,000-$200,000') is below the $300,000 challenge running on 2026-11-01, so the range is stale rather than wrong."
+  },
+  {
+   "id": "checkmate-gaming",
+   "name": "Checkmate Gaming free tournaments",
+   "status": "verified",
+   "evidence_kind": "official-page",
+   "official_url": "https://www.checkmategaming.com/free-tournaments",
+   "fields": {
+    "entry_fee": {
+     "value": "Free",
+     "quote": "Totally free to enter with real cash prizes. New tournaments posted daily."
+    },
+    "free_prizes_seen": {
+     "value": "$40, $100, $120 on 2026-11-01",
+     "quote": "$120 PRIZE ... FREE ENTRY"
+    },
+    "paid_counter_example": {
+     "value": "$1,500 ELITE ENTRY tournament on the same page",
+     "quote": "$1500 PRIZE ... ELITE ENTRY"
+    }
+   },
+   "prize_top": {
+    "amount": 120,
+    "currency": "USD",
+    "scope": "largest free-entry prize visible on 2026-11-01"
+   },
+   "catalogue_matches": {
+    "freePath": true,
+    "prize_text": false,
+    "status": true
+   },
+   "notes": "Free entry confirmed. The catalogue's '$10-$180 cash per tournament (free entry)' range was not reproduced today: free-entry prizes visible were $40, $100 (invite-only) and $120, and the $1,500 event on the same page is EA/paid entry, which the catalogue row does not distinguish."
+  },
+  {
+   "id": "world-press-photo",
+   "name": "World Press Photo Contest",
+   "status": "verified",
+   "evidence_kind": "secondary-official-terms",
+   "official_url": "https://www.sej.org/calendar/deadline-world-press-photo-contest",
+   "operator_url": "https://www.worldpressphoto.org/",
+   "fields": {
+    "entry_fee": {
+     "value": "Free",
+     "quote": "Entering is free and prizes include up to €10,000, inclusion in our annual traveling exhibition, and more."
+    },
+    "prize_amounts": {
+     "value": "€1,000 per winner + €10,000 for Photo of the Year",
+     "quote": "€1,000 for each of the winners and an additional €10,000 for the World Press Photo of the Year winner"
+    }
+   },
+   "prize_top": {
+    "amount": 10000,
+    "currency": "EUR",
+    "scope": "Photo of the Year, on top of the €1,000 winner award"
+   },
+   "catalogue_matches": {
+    "freePath": true,
+    "prize_text": true,
+    "status": true
+   },
+   "notes": "Matches the catalogue. Evidence is a secondary page quoting World Press Photo's own announcement, not the operator page itself."
+  },
+  {
+   "id": "sony-world-photo",
+   "name": "Sony World Photography Awards",
+   "status": "verified",
+   "evidence_kind": "secondary-official-terms",
+   "official_url": "https://www.photoreview.com.au/news/photo-competitions/entries-open-for-sony-world-photography-awards-2026/",
+   "operator_url": "https://www.worldphoto.org/sony-world-photography-awards",
+   "fields": {
+    "entry_fee": {
+     "value": "Free",
+     "quote": "The awards are completely free-to-enter and open to all photographers shooting on any devices and at all stages of their careers."
+    },
+    "prize_professional": {
+     "value": "$25,000",
+     "quote": "The major prize is US$25,000 plus a solo show, Sony Digital Imaging equipment and a career development day."
+    },
+    "prize_open": {
+     "value": "$5,000",
+     "quote": "The major prize is US$5,000, top Sony Digital Imaging equipment"
+    }
+   },
+   "prize_top": {
+    "amount": 25000,
+    "currency": "USD",
+    "scope": "Professional Photographer of the Year"
+   },
+   "catalogue_matches": {
+    "freePath": true,
+    "prize_text": true,
+    "status": true
+   },
+   "notes": "Matches the catalogue. Secondary evidence quoting the operator's launch release; the operator page itself was not opened."
+  },
+  {
+   "id": "hipa",
+   "name": "Hamdan International Photography Award (HIPA)",
+   "status": "partially-verified",
+   "evidence_kind": "secondary-official-terms",
+   "official_url": "https://graphiccompetitions.com/photography/hipa-2026-international-photography-award/",
+   "operator_url": "https://www.hipa.ae/",
+   "fields": {
+    "entry_fee": {
+     "value": "Free",
+     "quote": "There is no entry fee."
+    },
+    "grand_prize": {
+     "value": "$200,000",
+     "quote": "The competition offers major cash awards, including a Grand Prize of USD $200,000"
+    },
+    "pool": {
+     "value": "about $1,000,000",
+     "quote": "widely described as having an overall prize fund reaching around USD $1,000,000"
+    },
+    "current_deadline": {
+     "value": "May 31, 2026 (2026 season, per listing)",
+     "quote": "Deadline: May 31, 2026"
+    }
+   },
+   "prize_top": {
+    "amount": 200000,
+    "currency": "USD",
+    "scope": "Grand Prize"
+   },
+   "catalogue_matches": {
+    "freePath": true,
+    "prize_text": "partly",
+    "status": "check"
+   },
+   "notes": "Free entry, $200,000 grand prize and ~$1,000,000 pool confirmed. The catalogue's category range 'category prizes $20,000-$50,000' was NOT confirmed — the listings read cite $40,000 / $30,000 / $20,000 category placements, so the $50,000 upper bound has no support in the sources read. Left blank on the site."
+  },
+  {
+   "id": "istanbul-photo-awards",
+   "name": "Istanbul Photo Awards",
+   "status": "verified",
+   "evidence_kind": "secondary-official-terms",
+   "official_url": "https://graphiccompetitions.com/photography/istanbul-photo-awards-2026/",
+   "operator_url": "https://istanbulphotoawards.com/",
+   "fields": {
+    "entry_fee": {
+     "value": "Free",
+     "quote": "There is no entry fee."
+    },
+    "prize_total": {
+     "value": "$58,000",
+     "quote": "The total prize pool for the İstanbul Photo Awards 2026 is $58,000"
+    },
+    "prize_photo_of_year": {
+     "value": "$6,000",
+     "quote": "the Photo of the Year (the top image in the Single News category) receiving $6,000, first-place winners in each category awarded $3,000, second places $1,500, and third places $1,000"
+    },
+    "eligibility": {
+     "value": "Professional photojournalists; images taken in 2025",
+     "quote": "Open only to professional photographers worldwide, with submitted photographs required to have been taken in 2025."
+    }
+   },
+   "prize_top": {
+    "amount": 6000,
+    "currency": "USD",
+    "scope": "Photo of the Year"
+   },
+   "catalogue_matches": {
+    "freePath": true,
+    "prize_text": true,
+    "status": "check"
+   },
+   "notes": "Prize ladder matches the catalogue exactly. Availability flagged: the sources read describe the 2026 edition (deadline January 2026, already past), so 'live' needs re-checking before anyone enters."
+  },
+  {
+   "id": "weather-potw",
+   "name": "Weather Photographer of the Year (RMetS)",
+   "status": "contradicted",
+   "evidence_kind": "official-page-index",
+   "official_url": "https://www.rmets.org/weather-photographer-of-the-year",
+   "fields": {
+    "entry_fee": {
+     "value": "Free",
+     "quote": "This annual competition is open to photographers of all skill levels worldwide and is free to enter."
+    },
+    "prize_amounts_as_published_2026": {
+     "value": "£1,500 overall, £500 mobile, £500 climate award (per 2026 contest listings)",
+     "quote": "Weather Photographer of the Year – awarded to the most striking image of weather in action (£1,500 prize). Mobile Weather Photographer of the Year – celebrating the best images captured on a smartphone or tablet (£500 prize). Climate Award – recognising photography that tells a compelling story about our changing climate (£500 prize)."
+    }
+   },
+   "prize_top": null,
+   "catalogue_matches": {
+    "freePath": true,
+    "prize_text": false,
+    "status": "check"
+   },
+   "notes": "Free entry is confirmed on the operator's own page. The catalogue's prize ladder (£5,000 winner / £2,500 mobile / £750 young) is contradicted by two independent 2026 listings (£1,500 / £500 / £500, and a separate report of a £2,000 pool). Because the sources disagree with each other and the operator's prize page was not opened directly, the verified prize is left BLANK on the site and the row is flagged.",
+   "conflicting_sources": [
+    "https://www.all-about-photo.com/photo-contests/photo-contest/5661/rmets-weather-photographer-of-the-year-2026",
+    "https://www.digitalcameraworld.com/photography/awards-and-competitions/award-winning-photographers-all-started-somewhere-these-are-the-10-photo-contests-to-enter-this-august"
+   ],
+   "contradicted_fields": [
+    "prize_text"
+   ]
+  }
+ ]
+}

@@ -19,6 +19,7 @@ does not block anything.
 | `90c9f78c-own1` | `arena/90c9f78c-own1` | PR #5, #8 | Re-verification of all 7 checked rows, executive summary, integration record |
 | `37aed701-own1` | `arena/37aed701-own1` | PR #6, #9 | Supplemental research page: 3 hackathons, 5 findings, official links |
 | `20a81ffd-own1` | `arena/20a81ffd-own1` | PR #10 | Independent source verification record |
+| `d21e8702-own1` | `arena/d21e8702-own1` | PR #12, #16 | Second full build of the brief: Python site generator, own audit/methodology/sources pages, `tools/*.py`, `data/audit.json` |
 | **`arena-041e7ad1`** | **`arena/041e7ad1-own1`** | **PR #13** | **Final integration session: provenance-pinned rebuild, 211-row verified table, 22 flags, merge of all of the above** |
 
 The first five sessions' own records — task tables, verification logs, PR numbers and
@@ -150,6 +151,28 @@ content conflicts**: `COORDINATION.md`, `README.md`, `index.html`. PR #13 was re
   header contradiction, I-20 PayPal prize-total discrepancy, I-21 the "$600+" tax generalisation.
 - Where the two builds disagreed the stricter rule won: a figure is printed only when an official
   source states it, so rows the other build marked "checked" can still show a blank prize here.
+
+### Second reconciliation (session `d21e8702-own1`, merged while this PR was open)
+
+`main` advanced twice more while this integration was in progress, adding a second complete build of
+the same brief (its own root `index.html`, `all.html`, `category/**`, `assets/css/style.css`,
+`assets/js/site.js`, `data/ledger.json`, `data/audit.json`, `tools/*.py`, `best-picks.html`,
+`cross-session.html`, `methodology.html`, `sources.html`, `IRREGULARITIES.md`, `VERIFICATION.md`).
+
+Resolution, again with nothing discarded:
+
+- The whole build is preserved as a working site at `archive/prize-atlas/dashboard-v2/` (38 files,
+  including its data and its four Python tools and its own test), with a banner linking to this site.
+  It was placed inside `archive/prize-atlas/` because its pages reference `../review.html` and
+  `../supplemental/index.html`, which live there — so its internal navigation still works.
+- 31 internal links in the archived copy were rewritten to resolve from its new depth (a path-only
+  change; no content edited). `scripts/checklinks.js` now validates the archives as well as the live
+  site: 260 HTML files, 0 broken links.
+- Its root-level duplicates were removed from the root *after* being archived (`all.html`, `404.html`,
+  `data/ledger.json`, `sitemap.xml`, …), so the published site has one canonical set of pages.
+- Its `IRREGULARITIES.md` and `VERIFICATION.md` travelled with the archive; its
+  `tests/validate.mjs` is preserved alongside it.
+- No content of theirs was reworded or deleted.
 
 ### Conflict log
 

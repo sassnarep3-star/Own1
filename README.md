@@ -73,6 +73,7 @@ build time, so the site cannot drift from the dataset.
 | Findings: ESPN entry-limit conflict, Challenge.gov sunset, IceHacks header, PayPal prize totals, the "$600+" tax generalisation | Published as flags I-17 … I-21 on `flagged.html` |
 | Their validation script and CI workflow | `tests/validate-prize-atlas.mjs` (base path adjusted) and `.github/workflows/validate.yml`, which now runs both suites |
 | Their source audit | `research/SOURCES.md`, linked from `research.html` |
+| A second full build (session `d21e8702`): own generator, audit, methodology, sources and cross-session pages | Preserved working at `archive/prize-atlas/dashboard-v2/`, with its Python tools, data and test |
 
 Their README, for the record:
 
