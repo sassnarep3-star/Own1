@@ -201,6 +201,11 @@ Resolution:
 
 Result: 325 HTML files, 0 broken links, all suites green.
 
+The board that `main` carried at each merge — including every publication record written by the other
+sessions — is preserved verbatim in `docs/COORDINATION-as-merged-on-main.md` (latest state at the
+fourth reconciliation) and in `docs/COORDINATION-session-records.md`. Nothing was deleted; this file
+is only the integration view.
+
 ### Fourth reconciliation (sessions `a479d584`, `4a243e58`)
 
 `main` gained one more build while this PR waited on the mergeable check: a `ledger/` subsite, `.cjs`
