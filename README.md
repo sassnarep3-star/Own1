@@ -27,6 +27,9 @@ operator's own page was read.
 | `methodology.html` | Provenance, exact score weights, limits |
 | `sources.html` | Evidence pages used + every operator link by category |
 | `executive-summary.html` | The executive summary (also `EXECUTIVE_SUMMARY.md`) |
+| `cross-session.html` | What a parallel agent session verified before this build merged, with attribution |
+| `review.html` | The other session’s review queue, still rendering their 208-row dataset |
+| `supplemental/index.html` | The other session’s supplemental evidence page |
 
 ## Data and verification policy
 
@@ -67,13 +70,22 @@ rebuilds. The generated HTML is committed so the site works without a build step
 
 ```
 index.html, best-picks.html, all.html, verification.html, flagged.html,
-methodology.html, sources.html, executive-summary.html, 404.html
+methodology.html, sources.html, executive-summary.html, cross-session.html, 404.html
 category/*.html            generated category pages
 assets/css/style.css       one stylesheet, mobile-first
 assets/js/site.js          progressive enhancement only (search/sort/details)
-data/                      mirror, verification evidence, audit + linkcheck output
+assets/app.js, style.css   the parallel session's app, still used by review.html
+data/ledger.json           verbatim mirror (206 listings)
+data/verification.json     official-page evidence (12 rows, quoted)
+data/audit.json            deterministic integrity findings
+data/details.json          lazy-loaded row details
+data/entries.json          the parallel session's 208-lead dataset (blanks preserved)
 tools/                     audit.py, verify_check.py, build_site.py, check_links.py
-COORDINATION.md            shared task board for parallel agent sessions
+review.html                the parallel session's review queue
+supplemental/              the parallel session's supplemental evidence page
+research/SOURCES.md        the parallel session's source audit
+tests/validate.mjs         CI test, reconciled during the merge (COORDINATION.md §6)
+COORDINATION.md            shared task board + full merge log
 EXECUTIVE_SUMMARY.md       the summary
 VERIFICATION.md            what was checked, against what
 IRREGULARITIES.md          every flagged item, with sources
@@ -91,3 +103,12 @@ IRREGULARITIES.md          every flagged item, with sources
 Independent compilation. Not affiliated with any listed operator. Official rules always win. US prizes of $600+
 generally require tax reporting. Nothing here is legal, tax or financial advice. Sweepstakes and casino-style
 gambling products are out of scope.
+
+## Repository history (parallel sessions)
+
+Three agent sessions worked this repository simultaneously. Another one shipped a complete build to `main`
+(“Prize Atlas”, 208 leads, 7 official pages read, PRs #1/#2/#4/#6/#9) before this session finished. Nothing of theirs
+was discarded: their dataset, review queue, research notes, supplemental page and CI test all still ship, and
+`cross-session.html` bridges the two builds. The merge resolution — including the one assertion reconciled inside
+their `tests/validate.mjs` — is recorded in [`COORDINATION.md`](COORDINATION.md) §6, with their full log preserved
+verbatim in §7.

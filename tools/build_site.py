@@ -160,6 +160,7 @@ NAV = [
     ("methodology.html", "Method"),
     ("executive-summary.html", "Summary"),
     ("sources.html", "Sources"),
+    ("cross-session.html", "Cross-session"),
 ]
 
 
@@ -448,6 +449,15 @@ agent leverage and payout friction. <a href="best-picks.html">Full ranking and t
   <span class="badge b-unverified">source data only</span> on purpose — see
   <a href="methodology.html">method &amp; limits</a>.</li>
 </ul>
+</div>
+
+<h2 class="sec">Deadlines worth knowing today</h2>
+<div class="notice bad">
+  <b>Time-sensitive, from a parallel session’s source audit</b> (quoted, not re-read by this one):
+  ARC Prize 2026 submission deadline <b>2026-11-02</b> with a paper deadline <b>2026-11-08</b>;
+  Metaculus US Midterms 2026 (<b>$10,000</b> pool) closing around <b>2026-11-04</b>;
+  DrivenData’s GEMS Prize Challenge (<b>$300,000</b>) ending <b>2026-12-03</b> 23:59 UTC.
+  <a href="cross-session.html">Sources and attribution →</a>
 </div>
 
 <h2 class="sec">How to use the tables</h2>
@@ -924,6 +934,99 @@ def page_sources() -> str:
                  "", body, "sources.html")
 
 
+def cross_session_rows() -> list[dict]:
+    """Their data, their words. Never re-written into this catalogue's schema."""
+    path = ROOT / "data" / "entries.json"
+    if not path.exists():
+        return []
+    try:
+        rows = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+    return [r for r in rows if r.get("sourceStatus") == "checked"]
+
+
+def page_cross_session() -> str:
+    rows = cross_session_rows()
+    trs = "".join(
+        f"""<tr>
+          <td><b>{esc(r.get('name', r.get('id')))}</b><br><small>{esc(r.get('category', ''))}</small></td>
+          <td>{esc(r.get('prize') or '—')}</td>
+          <td>{esc(r.get('entry') or '—')}</td>
+          <td><a href="{esc(r.get('source', ''))}" rel="noopener noreferrer nofollow">{esc(urlparse(r.get('source', '')).netloc)} ↗</a></td>
+        </tr>"""
+        for r in rows
+    )
+    body = f"""
+<section class="hero">
+  <p class="kicker">Parallel sessions · integrated {BUILD_DATE}</p>
+  <h1 class="page">The other build that reached <code>main</code> first.</h1>
+  <p class="lede">Three agent sessions worked this repository at the same time. One of them shipped a full site
+  (“Prize Atlas”, 208 leads, 7 official pages read) to <code>main</code> before this session finished. Nothing of
+  theirs was thrown away: their dataset, review queue, research notes and supplemental page all still ship, and this
+  page is the bridge between the two builds.</p>
+</section>
+
+<div class="notice">
+  <b>Attribution matters.</b> The rows below were checked against operator pages by the other session on
+  2026-11-01 and are reproduced from <code>data/entries.json</code> in their own words. <b>This session did not
+  re-read those pages</b>, so they are not counted in this site’s {len(VER_BY_ID)}-row verification layer. Treat them
+  as a second opinion, with the operator link attached.
+</div>
+
+<h2 class="sec">Leads the other session verified</h2>
+<div class="tablewrap prose">
+<table>
+  <thead><tr><th>Lead</th><th>Prize (their words)</th><th>Entry (their words)</th><th>Page read</th></tr></thead>
+  <tbody>{trs or '<tr><td colspan="4">data/entries.json not found in this checkout.</td></tr>'}</tbody>
+</table>
+</div>
+
+<h2 class="sec">Time-sensitive items from their source audit</h2>
+<div class="prose">
+<p>Quoted from <a href="research/SOURCES.md">research/SOURCES.md</a> (their file, unedited). These are the items most
+likely to expire while you read this:</p>
+<ul>
+  <li><b>ARC Prize 2026</b> — they recorded a <b>November 2</b> submission deadline and a <b>November 8</b> paper
+  deadline, with an open-source requirement, and note that network/API automation cannot run inside Kaggle
+  evaluation. <a href="https://arcprize.org/competitions/2026" rel="noopener noreferrer nofollow">arcprize.org/competitions/2026 ↗</a></li>
+  <li><b>Metaculus US Midterms 2026</b> — $10,000 pool, closing around <b>November 4</b>.
+  <a href="https://www.metaculus.com/tournament/midterms-2026/" rel="noopener noreferrer nofollow">metaculus.com/tournament/midterms-2026 ↗</a></li>
+  <li><b>GEMS Prize Challenge (DrivenData)</b> — $300,000 total, ending <b>December 3, 2026</b> 23:59 UTC.
+  <a href="https://www.drivendata.org/competitions/306/competition-doe-gems/" rel="noopener noreferrer nofollow">drivendata.org/competitions/306 ↗</a></li>
+  <li><b>ESPN NFL Pick’em</b> — they read the rules page and recorded “free” plus a <b>$102,000</b> total including a
+  $5,000 random draw, and flagged that ESPN’s own FAQ contradicts itself on the entry limit (5 vs 10).
+  <a href="https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules" rel="noopener noreferrer nofollow">ESPN rules ↗</a></li>
+</ul>
+</div>
+
+<h2 class="sec">Their files, still live</h2>
+<div class="prose"><ul>
+  <li><a href="review.html">review.html</a> — their flagged review queue, rendering their full 208-row dataset.</li>
+  <li><a href="supplemental/index.html">supplemental/index.html</a> — their supplemental evidence page (hackathon rules,
+  Challenge.gov sunset, Papaya free-vs-cash distinction, IRS guidance on the tax statement).</li>
+  <li><a href="research/SOURCES.md">research/SOURCES.md</a> — their source audit: exactly which pages were read and
+  what each one does and does not prove.</li>
+  <li><a href="data/entries.json">data/entries.json</a> — their 208-lead dataset, blanks preserved on purpose.</li>
+  <li><a href="tests/validate.mjs">tests/validate.mjs</a> + <a href=".github/workflows/validate.yml">validate.yml</a> —
+  their CI test, still run on every push. This session reconciled one assertion in it (the page-list check) and logged
+  that change in <code>COORDINATION.md</code>.</li>
+</ul></div>
+
+<h2 class="sec">Why the root pages come from this session</h2>
+<div class="prose">
+<p>Both builds render the same nine categories from the same 206-row upstream catalogue. This one keeps every source
+field (sign-up steps, payout rails, identity checks, watch-outs), a separate verification layer with quoted evidence,
+and a mechanical audit. Theirs strips unverified rows to blank fields — an excellent conservative policy, and the
+reason their checked rows are quoted here with attribution instead of being re-typed. The merge resolution is recorded
+in <a href="https://github.com/sassnarep3-star/Own1/blob/main/COORDINATION.md">COORDINATION.md</a> §6.</p>
+</div>
+"""
+    return shell("Cross-session integration — the parallel build on main — Free Cash Ledger",
+                 "What a parallel agent session verified before this build merged: their checked leads, "
+                 "time-sensitive deadlines, and where their files still live.", "", body, "cross-session.html")
+
+
 def page_exec() -> str:
     md = (ROOT / "EXECUTIVE_SUMMARY.md").read_text(encoding="utf-8")
     html_body = md_to_html(md)
@@ -1062,6 +1165,7 @@ def main() -> int:
     write(ROOT / "methodology.html", page_methodology())
     write(ROOT / "sources.html", page_sources())
     write(ROOT / "executive-summary.html", page_exec())
+    write(ROOT / "cross-session.html", page_cross_session())
     write(ROOT / "404.html", page_404())
     write(ROOT / ".nojekyll", "")
     write(ROOT / "robots.txt", f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}sitemap.xml\n")
@@ -1072,7 +1176,7 @@ def main() -> int:
     written.append(details_path)
 
     pages = ["index.html", "best-picks.html", "all.html", "verification.html", "flagged.html",
-             "methodology.html", "sources.html", "executive-summary.html"] + \
+             "methodology.html", "sources.html", "executive-summary.html", "cross-session.html"] + \
             [f"category/{t['id']}.html" for t in TYPES]
     urls = "".join(
         f"  <url><loc>{BASE_URL}{p}</loc><lastmod>{BUILD_DATE}</lastmod></url>\n" for p in pages

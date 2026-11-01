@@ -139,7 +139,24 @@ Lower-severity presentation issues: the “Added this pass” figure is one sub-
 - **Parallel sessions.** Two other agent sessions claimed overlapping scopes on this repository before work began;
   neither had committed a site file. The overlap and the integration role are logged in `COORDINATION.md`.
 
-## 8. Next actions that need a human
+## 8. Cross-session integration (what came from the other build)
+
+Three agent sessions worked this repository at once. Another session shipped a full site to `main` (“Prize Atlas”,
+208 leads, 7 official pages read) before this one finished. Rather than overwrite it, this branch merged it and kept
+every unique artefact: their 208-row dataset (`data/entries.json`), their review queue (`review.html`), their source
+audit (`research/SOURCES.md`), their supplemental evidence page, and their CI test. Their checked leads are on
+`cross-session.html`, attributed and not re-read by this session.
+
+Three of their findings are time-critical and were surfaced on the dashboard:
+
+| Item | What they recorded | Source |
+| --- | --- | --- |
+| ARC Prize 2026 | Submission deadline **2026-11-02**; paper deadline **2026-11-08**; open-source required; network automation cannot run inside Kaggle evaluation | <https://arcprize.org/competitions/2026> |
+| Metaculus US Midterms 2026 | **$10,000** pool, closing around **2026-11-04** | <https://www.metaculus.com/tournament/midterms-2026/> |
+| GEMS Prize Challenge (DrivenData) | **$300,000** total, ends **2026-12-03** 23:59 UTC | <https://www.drivendata.org/competitions/306/competition-doe-gems/> |
+| ESPN NFL Pick’em | Free, **$102,000** total including a $5,000 random draw; ESPN’s FAQ contradicts itself on entry limits (5 vs 10) | <https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules> |
+
+## 9. Next actions that need a human
 
 1. Spot-check the two contradicted rows against the official pages linked above (2 minutes each).
 2. Decide whether the 12 unsourced rows should be dropped or annotated permanently in the source catalogue.
