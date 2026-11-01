@@ -22,6 +22,7 @@ export const NAV = [
   { href: 'summary.html', label: 'Summary', view: 'summary' },
   { href: 'methodology.html', label: 'Method', view: 'methodology' },
   { href: 'review.html', label: 'Flagged', view: 'review' },
+  { href: 'atlas/index.html', label: 'Atlas (44)', view: '' },
 ];
 
 const esc = (s) =>

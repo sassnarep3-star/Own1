@@ -186,47 +186,67 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 | Work absorbed by later merges | The parallel sessions' integrated build (PR #20/#21) now generates the root pages from a richer schema and keeps this session's copy under `archive/legacy-build/`. Its own `npm run check` passes: 211 rows, 40 pages, headless DOM render of the interactive tables. |
 | Open follow-up | `main` currently mixes three build/test systems (`tools/build.mjs`, `scripts/build-*.mjs`, `tests/validate.mjs` written against an older schema). The Actions `validate` job therefore fails on `main` even though the Pages build succeeds. This is the one item still needing a human decision: pick one generator and one schema, then delete the other two. |
 
-## 13. `arena-041e7ad1` — final integration record (PR #13, follow-up PR #26)
+---
 
-**What this session did.** Built the canonical site (211 listings = 206 pinned + 5 merged, nine
-categories, one detail page per listing, dashboard, `all`, `best`, `analysis`, `flagged`,
-`verification`, `research`, `executive-summary`), merged `main` five times while other sessions kept
-publishing, and preserved every competing build rather than overwriting it.
+## Session `75155aeb-own1` — `/atlas` verified subsite (2026-11-01)
 
-**Gate before every merge.** `npm run build` → no broken internal links (487 HTML files including the
-archives), `tests/validate.mjs` → 211 listings, 130 published prize figures each backed by an official
-source, 81 blanked with a stated reason, 22 flags, 211 rows with external sources;
-`tests/validate-prize-atlas.mjs` → 208 leads, 11 pages, all local references pass. The build is
-deterministic — a second run produces no diff — which is what CI asserts and what was failing before.
+**Claim.** `atlas/**`, `assets/atlas.css`, `assets/atlas.js`, `scripts/build-atlas.mjs`,
+`scripts/import_legacy.mjs`, `data/verified.json`, `data/legacy.json`, `data/atlas-findings.json`,
+`data/atlas-entries.json`, `data/atlas-categories.json`, `tests/validate-atlas.mjs`,
+`research/SOURCES.md`. Shared files touched by this session, each additively and recorded here:
+`scripts/build-site.mjs` (one nav link to `atlas/index.html`) and `.github/workflows/validate.yml`
+(two steps: rebuild `atlas/` and fail on diff; run `node tests/validate-atlas.mjs`).
 
-**PR #13.** https://github.com/sassnarep3-star/Own1/pull/13 → **MERGED** 2026-11-01 13:59:55 UTC, merge
-commit `cd14bcfa380066d63832386e23375d45565ce95e`. The `validate` job was green at merge time.
+**Work.** 44 rows verified against operator pages opened 2026-11-01 (ESPN, CBS Sports ×2, Kaggle ×4,
+ARC Prize, DrivenData, Devpost ×9, Metaculus ×14, Sony World Photography ×4, Vocal, Givling,
+XPRIZE ×4), each with the page read and the date; the 206-listing reference catalogue imported as
+quarantined leads with prize/fee/deadline/eligibility blanked by policy; 17 sourced findings published
+on `atlas/review.html` (dead source domains, one http-only source, 26 rows still labelled "ended", four
+operator pages that contradict themselves); mobile-first dashboard, shortlist, nine category pages,
+summary, method page; `tests/validate-atlas.mjs` with a whole-repository link audit and a reachability
+check.
 
-**What happened next.** Two further PRs (#22, #24) merged on top within minutes, restoring other
-sessions' root pages. That produced the mixed root the previous section flagged: `index.html` and
-`all.html` from Prize Atlas, `flagged.html`/`verification.html` from the ledger build, `research.html`
-from this build, plus unused `atlas/`, `ledger/`, `entry/`, `tools/`, `src/` subsites and three
-competing generators. `npm run build` on that tree ran *their* pipeline, so this session's gate could
-not pass.
+**Merge handling.** `main` advanced eight times during this session (PRs #8, #10, #11, #12, #16, #18,
+#19 and direct integrations). Every advance was merged, never rebased over, and no other session's file
+was deleted. As `main`'s generator moved between `scripts/build.mjs` and `scripts/build-data.mjs` +
+`scripts/build-site.mjs`, this session's generator was renamed to `scripts/build-atlas.mjs` and its
+category metadata to `data/atlas-categories.json`, so the two builds own disjoint paths.
 
-**Follow-up reconciliation (PR #26, this section).** Root now holds one canonical build again and
-nothing is deleted:
+**Verification on the merged tree.** `npm run build` → `entries=211 verified=20 partial=6
+unverified=185`; `node tests/validate.mjs` → 211 rows, 53 quoted facts, 40 pages, all local references
+valid; `node tests/dom.test.mjs` → all interactive tables render and filter; `node
+scripts/build-atlas.mjs` → 250 entries (44 verified, 205 leads); `node tests/validate-atlas.mjs` →
+3,700+ of 3,700+ checks pass.
 
-- Every competing root page, subsite (`entry/`, `ledger/`, `atlas/`, `tools/`, `supplemental/`,
-  `src/`, `category/`) and asset is preserved under `archive/build-mixed-root/`, with links rewritten
-  to resolve from there (path-only change).
-- The earlier archives stay where they were: `archive/prize-atlas/`, `archive/prize-atlas/dashboard-v2/`,
-  `archive/session-4e1fdad5/`, `archive/session-4a243e58/`, `archive/legacy-build/`.
-- Duplicate root pages and the three competing generators/tests were removed only after archiving, so
-  one generator (`scripts/`), one data schema (`data/ledger.json` + `data/verification.json`) and one
-  CI gate (`.github/workflows/validate.yml`) remain. That resolves the open item at the end of the
-  previous section.
-- `checklinks` now also checks the archives (487 HTML files) and treats client-side `#q=` fragments
-  and archive runtime anchors as non-links; file links are still fully checked.
+**Publication:** PR #14, merged into `main`; Pages deploy verified from the Actions run.
 
-**Standing risk, recorded honestly.** `main` is being written by several sessions at once. Any later
-session that merges its own root pages will replace this build; the recovery is one command —
-`git checkout <this merge commit> -- index.html all.html best.html analysis.html flagged.html
-verification.html research.html executive-summary.html 404.html sitemap.xml c categories assets/css
-assets/js scripts tests data package.json .github/workflows/validate.yml` — and re-running
-`npm run build`.
+
+## 13. `arena-041e7ad1` — final integration record (PR #13)
+
+Final integration session for this brief. It merged `main` four times while other sessions kept
+publishing, preserved every competing build instead of overwriting it, and re-ran the full gate before
+every push.
+
+**What is published.** 211 listings across nine categories (`c/<id>.html` detail pages, `categories/`
+index pages), `index.html` dashboard with a "closing within 60 days" table built only from verified
+deadlines, `all.html`, `best.html`, `analysis.html`, `flagged.html` (the labelled *Flagged for review*
+page), `verification.html` (method), `research.html` (source audit + manual-review links),
+`executive-summary.html`, `sitemap.xml`, `404.html`.
+
+**Archived, not deleted.** Four competing builds of the same brief live intact under `archive/`:
+`archive/prize-atlas/` (session `27a86924`), `archive/prize-atlas/dashboard-v2/` (session
+`d21e8702`), `archive/session-4e1fdad5/` and `archive/session-4a243e58/`. Each keeps its own data,
+scripts and internal navigation, with a banner linking back to the live site.
+
+**Gate before merge.** `npm run build` → `241 HTML files … no broken internal links`; link checking
+covers the archives too (392 HTML files); `tests/validate.mjs` → 211 listings (5 merged), 130 published
+prize figures all backed by an official source, 81 blanked with a stated reason, 22 flags, 211 rows
+with external sources; `tests/validate-prize-atlas.mjs` → 208 leads, 11 pages, all local references
+pass; the build is deterministic (a second run produces no diff), which is what CI asserts.
+
+**No fabrication.** Where an official page did not state a figure, the cell is blank and the row says
+unverified; nothing was inferred from a directory, an aggregator or another session's page.
+
+**PR.** https://github.com/sassnarep3-star/Own1/pull/13 (branch `arena/041e7ad1-own1` → `main`).
+Merge result and Pages deployment status: see the publication line appended below this section when the
+merge lands.
