@@ -112,7 +112,7 @@ function fitScore(e) {
   const effort = { low: 10, medium: 6, high: 3 }[e.effort] ?? 0;
   if (effort) { score += effort; parts.push([`Effort: ${e.effort}`, effort]); }
   if (e.deadline) {
-    const days = Math.round((new Date(e.deadline + 'T23:59:59Z') - new Date(READ_ON)) / 86400000);
+    const days = Math.round((Date.parse(e.deadline + 'T00:00:00Z') - Date.parse(READ_ON + 'T00:00:00Z')) / 86400000);
     const urg = days < 0 ? 0 : days <= 14 ? 10 : days <= 60 ? 6 : 3;
     score += urg;
     parts.push([days < 0 ? 'Deadline has passed' : `Deadline in ${days} day(s)`, urg]);
@@ -128,12 +128,20 @@ for (const e of entries) e.fit = fitScore(e);
 const catIndex = new Map(CATEGORIES.map((c, i) => [c.id, i]));
 entries.sort((a, b) => (catIndex.get(a.category) - catIndex.get(b.category)) || a.name.localeCompare(b.name));
 
-// Optional link-health overlay produced by scripts/linkcheck.mjs on a GitHub runner.
-let linkHealth = {};
+// Link-health overlay produced by scripts/linkcheck.mjs on a GitHub runner (data/link-health.json).
+// A 403/429 is a bot block, not proof a page is gone; only DNS/TLS/timeout/404 are treated as hard failures.
 const healthPath = path.join(root, 'data/link-health.json');
-if (fs.existsSync(healthPath)) {
-  const raw = JSON.parse(fs.readFileSync(healthPath, 'utf8'));
-  linkHealth = raw.results || {};
+const healthDoc = fs.existsSync(healthPath) ? JSON.parse(fs.readFileSync(healthPath, 'utf8')) : null;
+const health = healthDoc?.results || {};
+
+const HARD = (r) => !!r && !r.ok && ([404, 410].includes(r.status) || /ENOTFOUND|CERT|TLS|TIMEOUT|AbortError|ECONN/i.test(r.error || ''));
+const SOFT = (r) => !!r && !r.ok && !HARD(r);
+
+for (const e of entries) {
+  const r = e.officialUrl ? health[e.officialUrl] || null : null;
+  e.link = r ? { ok: r.ok, status: r.status, error: r.error, checkedAt: r.checkedAt, hardFail: HARD(r) } : null;
+  if (r && HARD(r)) e.flags.push('link-dead');
+  if (r && SOFT(r)) e.flags.push('link-unreachable-to-bot');
 }
 
 const stats = {
@@ -147,12 +155,17 @@ const stats = {
   cashConfirmed: entries.filter((e) => e.cashPrize === true).length,
   noSource: entries.filter((e) => !e.officialUrl).length,
   categories: CATEGORIES.length,
+  linkCheckedOn: healthDoc?.generated || null,
+  linkTotal: healthDoc?.total || 0,
+  linkOk: healthDoc?.ok || 0,
+  linkHardFail: entries.filter((e) => e.link?.hardFail).length,
+  linkSoftFail: entries.filter((e) => e.link && !e.link.ok && !e.link.hardFail).length,
 };
 
 fs.writeFileSync(path.join(root, 'data/entries.json'), JSON.stringify(entries, null, 1) + '\n');
 fs.writeFileSync(
   path.join(root, 'data/stats.json'),
-  JSON.stringify({ ...stats, categories: CATEGORIES, linkHealthGenerated: linkHealth.__generated || null }, null, 1) + '\n'
+  JSON.stringify({ ...stats, categories: CATEGORIES, linkHealthGenerated: healthDoc?.generated || null }, null, 1) + '\n'
 );
 
 console.log(

@@ -22,6 +22,8 @@ const byId = new Map(entries.map((e) => [e.id, e]));
 const verified = entries.filter((e) => e.status === 'verified');
 const ranked = verified.slice().sort((a, b) => (b.fit?.score ?? 0) - (a.fit?.score ?? 0));
 const catName = (id) => CATEGORIES.find((c) => c.id === id)?.name || id;
+const hardFail = entries.filter((e) => e.link?.hardFail);
+const softFail = entries.filter((e) => e.link && !e.link.ok && !e.link.hardFail);
 
 /* ---------------------------------------------------------------- layout */
 
@@ -135,7 +137,7 @@ const homeBody = `
       .filter((e) => e.deadline && e.deadline >= '2026-11-01')
       .slice(0, 3)
       .map((e) => {
-        const days = Math.round((new Date(e.deadline + 'T23:59:59Z') - new Date(stats.readOn)) / 86400000);
+        const days = Math.round((Date.parse(e.deadline + 'T00:00:00Z') - Date.parse(stats.readOn + 'T00:00:00Z')) / 86400000);
         return `<a class="card" href="./entry/${e.id}.html"><span class="icon">⏳</span>
         <h3>${esc(e.name)}</h3>
         <p>${esc(e.prize || 'Prize not stated on the official page')} · ${days} day${days === 1 ? '' : 's'} left</p>
@@ -295,6 +297,15 @@ for (const e of entries.filter((x) => x.status !== 'unverified')) {
       <dt>Effort</dt><dd>${e.effort ? esc(e.effort) : '<span class="mutedtext">—</span>'}</dd>
       <dt>AI-agent fit</dt><dd>${e.agentFit ? esc(e.agentFit) : '<span class="mutedtext">—</span>'} <span class="small">(editorial judgement about the work required)</span></dd>
       <dt>Official page</dt><dd><a href="${esc(e.officialUrl)}" target="_blank" rel="noopener noreferrer">${esc(e.officialUrl)} ↗</a></dd>
+      <dt>Link check</dt><dd>${
+        !e.link
+          ? '<span class="mutedtext">Not covered by the automated check</span>'
+          : e.link.ok
+          ? `<span class="pill good">Responded OK</span> <span class="small">checked ${esc(e.link.checkedAt.slice(0, 10))}</span>`
+          : e.link.hardFail
+          ? `<span class="pill bad">Failed: ${esc(e.link.status || e.link.error)}</span> <span class="small">checked ${esc(e.link.checkedAt.slice(0, 10))}</span>`
+          : `<span class="pill warn">Bot-blocked (${esc(e.link.status || e.link.error)}) — not evidence the page is gone</span>`
+      }</dd>
     </dl>
     ${e.notes ? `<p class="small" style="margin-top:14px"><strong>Audit note.</strong> ${esc(e.notes)}</p>` : ''}
   </div>
@@ -351,7 +362,7 @@ const reviewBody = `
     [stats.unverified, 'unverified leads'],
     [stats.partial, 'partly checked'],
     [crossFlags.length, 'cross-cutting flags'],
-    [stats.noSource, 'with no operator link'],
+    [hardFail.length, 'links that failed'],
   ])}
   <div class="notice warn"><strong>Why so many unverified rows?</strong> The reference catalog lists ${stats.total} leads. Reading every organiser's rules, in full, against the date of reading is the only way to verify one — and that is what was done for ${stats.verified} of them. Rather than import the catalog's August 2026 claims as facts, the rest are published as leads with blank cells.</div>
 
@@ -360,11 +371,22 @@ const reviewBody = `
     <thead><tr><th>Item</th><th>Finding</th><th>Source</th></tr></thead>
     <tbody>${flagRows}</tbody></table></div></div>
 
+  <div class="section-head"><div><h2>Links that failed a real check</h2>
+    <p>Every outbound URL was requested by an automated runner on ${esc((stats.linkCheckedOn || '').slice(0, 10) || stats.readOn)}. These ${hardFail.length} did not resolve at all. ${softFail.length} more answered with a bot block (403/429), which is <em>not</em> evidence the page is gone.</p></div></div>
+  <div class="panel"><div class="table-wrap"><table>
+    <thead><tr><th>Lead</th><th>Link</th><th>What the checker received</th></tr></thead>
+    <tbody>${hardFail.map((e) => `<tr>
+      <td data-label="Lead"><span class="name">${esc(e.name)}</span><span class="subtle">${esc(catName(e.category))}</span></td>
+      <td data-label="Link"><a href="${esc(e.officialUrl)}" target="_blank" rel="noopener noreferrer">${esc(e.officialUrl)} ↗</a></td>
+      <td data-label="Result"><span class="pill bad">${esc(e.link.status || e.link.error)}</span></td></tr>`).join('')}</tbody></table></div>
+    <div class="table-foot">A dead link is not proof the competition is gone — the organiser may have moved the page. It does mean the link in this ledger cannot be trusted until corrected.</div></div>
+  <div class="notice"><strong>One caveat, stated plainly.</strong> Topcoder's challenge page returned HTTP 404 to the automated request even though a sign-in shell rendered in a browser during this audit. Treat that row as “unreliable link”, not “closed”. The other failures are DNS or certificate errors, which no browser can paper over.</div>
+
   <div class="section-head"><div><h2>Unverified and partly checked leads (${stats.total - stats.verified})</h2>
     <p>Blank prize, fee and deadline cells are deliberate. The link is a research lead, not proof.</p></div></div>
   <div class="panel">
     ${toolbar()}
-    <div id="rows" aria-live="polite">Loading…</div>
+    <div id="rows" data-sort="name" aria-live="polite">Loading…</div>
     <div class="table-foot">Loading…</div>
   </div>
 
@@ -405,10 +427,13 @@ const evidenceRows = verified
   .join('');
 
 const healthSummary = linkHealth
-  ? `<p class="small">Link health was last measured automatically on ${esc(
-      linkHealth.generated
-    )}: ${linkHealth.ok} of ${linkHealth.total} URLs responded OK. Statuses are shown per row on the dashboard and on each entry page. A 403/429 is a bot block, not a missing page.</p>`
-  : `<p class="small">No automated link-health report has been attached yet. Links are never certified as working by assumption: a workflow (.github/workflows/link-health.yml) records the real HTTP status of every outbound URL and its report is published here once attached.</p>`;
+  ? `<p>Every outbound URL in the ledger (${linkHealth.total} unique links) was requested by an automated runner on <strong>${esc(
+      linkHealth.generated.slice(0, 16).replace('T', ' ')
+    )} UTC</strong>. ${linkHealth.ok} responded successfully, ${hardFail.length} failed outright (DNS, TLS, timeout or 404) and ${
+      softFail.length
+    } answered with a bot block such as 403 or 429.</p>
+     <p class="small">How to read that: a bot block means the site refused an automated request — several of them (Devpost, Metaculus) were read successfully in a normal browser in the same session, so those rows are not broken. A DNS or certificate failure is stronger evidence, because a browser cannot load it either. Failures are listed on the <a href="./review.html">flagged page</a>.</p>`
+  : `<p class="small">No link-health report is attached. Links are never certified by assumption: <code>.github/workflows/link-health.yml</code> records the real HTTP status of every outbound URL and republishes it weekly.</p>`;
 
 const sourcesBody = `
 <main class="shell main">

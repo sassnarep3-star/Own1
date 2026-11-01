@@ -23,7 +23,7 @@
     <h1 style="margin:6px 0 8px;font-size:clamp(24px,5vw,34px);letter-spacing:-.02em">Sources and audit trail</h1>
     <p class="small" style="max-width:75ch">Every value on this site comes from one of the quotes below. Fields that were not confirmed are blank, and the blank is listed as a flag rather than filled in.</p>
   </div>
-  <div class="metrics"><div class="metric"><strong>17</strong><span>entries checked</span></div><div class="metric"><strong>40</strong><span>quoted facts</span></div><div class="metric"><strong>194</strong><span>still open</span></div><div class="metric"><strong>pending</strong><span>links responding</span></div></div>
+  <div class="metrics"><div class="metric"><strong>17</strong><span>entries checked</span></div><div class="metric"><strong>40</strong><span>quoted facts</span></div><div class="metric"><strong>194</strong><span>still open</span></div><div class="metric"><strong>166/203</strong><span>links responding</span></div></div>
 
   <div class="section-head"><div><h2>The rules this site follows</h2></div></div>
   <div class="panel pad"><ul class="clean">
@@ -241,7 +241,8 @@
   </tr></tbody></table></div></div>
 
   <div class="section-head"><div><h2>Link health</h2><p>Checked by an automated runner, not assumed.</p></div></div>
-  <div class="panel pad"><p class="small">No automated link-health report has been attached yet. Links are never certified as working by assumption: a workflow (.github/workflows/link-health.yml) records the real HTTP status of every outbound URL and its report is published here once attached.</p>
+  <div class="panel pad"><p>Every outbound URL in the ledger (203 unique links) was requested by an automated runner on <strong>2026-11-01 13:47 UTC</strong>. 166 responded successfully, 10 failed outright (DNS, TLS, timeout or 404) and 27 answered with a bot block such as 403 or 429.</p>
+     <p class="small">How to read that: a bot block means the site refused an automated request — several of them (Devpost, Metaculus) were read successfully in a normal browser in the same session, so those rows are not broken. A DNS or certificate failure is stronger evidence, because a browser cannot load it either. Failures are listed on the <a href="./review.html">flagged page</a>.</p>
     <p class="small">The environment that assembles this repository can only reach GitHub, so no outbound link is asserted from there. The checker runs on a GitHub runner with full internet access and records status codes, redirect targets and errors.</p>
   </div>
 

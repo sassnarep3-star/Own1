@@ -81,6 +81,7 @@
     var catSel = panel.querySelector('.f-cat');
     var sortSel = panel.querySelector('.f-sort');
     var foot = panel.querySelector('.table-foot');
+    if (mount.dataset.sort && sortSel) sortSel.value = mount.dataset.sort;
     var current = initial.slice();
 
     function apply() {

@@ -45,6 +45,13 @@
      3
     ]
    ]
+  },
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.680Z",
+   "hardFail": false
   }
  },
  {
@@ -99,10 +106,17 @@
      3
     ],
     [
-     "Deadline in 2 day(s)",
+     "Deadline in 1 day(s)",
      10
     ]
    ]
+  },
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.774Z",
+   "hardFail": false
   }
  },
  {
@@ -129,7 +143,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.775Z",
+   "hardFail": false
+  }
  },
  {
   "id": "codex-twitchcon",
@@ -180,7 +201,8 @@
   "sourceKind": "unverified-link",
   "flags": [
    "free-entry-confirmed",
-   "cash-confirmed"
+   "cash-confirmed",
+   "link-unreachable-to-bot"
   ],
   "fit": {
    "score": 93,
@@ -202,10 +224,17 @@
      3
     ],
     [
-     "Deadline in 2 day(s)",
+     "Deadline in 1 day(s)",
      10
     ]
    ]
+  },
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.777Z",
+   "hardFail": false
   }
  },
  {
@@ -232,7 +261,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.778Z",
+   "hardFail": false
+  }
  },
  {
   "id": "devpost",
@@ -256,9 +292,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.779Z",
+   "hardFail": false
+  }
  },
  {
   "id": "drivendata",
@@ -311,6 +355,13 @@
      3
     ]
    ]
+  },
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.780Z",
+   "hardFail": false
   }
  },
  {
@@ -369,6 +420,13 @@
      3
     ]
    ]
+  },
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.781Z",
+   "hardFail": false
   }
  },
  {
@@ -395,7 +453,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.941Z",
+   "hardFail": false
+  }
  },
  {
   "id": "herox",
@@ -421,7 +486,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.982Z",
+   "hardFail": false
+  }
  },
  {
   "id": "kaggle",
@@ -474,6 +546,13 @@
      3
     ]
    ]
+  },
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.048Z",
+   "hardFail": false
   }
  },
  {
@@ -527,6 +606,13 @@
      3
     ]
    ]
+  },
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.185Z",
+   "hardFail": false
   }
  },
  {
@@ -569,7 +655,8 @@
   "flags": [
    "free-entry-confirmed",
    "cash-confirmed",
-   "prize-amount-not-stated"
+   "prize-amount-not-stated",
+   "link-unreachable-to-bot"
   ],
   "fit": {
    "score": 93,
@@ -591,10 +678,17 @@
      3
     ],
     [
-     "Deadline in 12 day(s)",
+     "Deadline in 11 day(s)",
      10
     ]
    ]
+  },
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.242Z",
+   "hardFail": false
   }
  },
  {
@@ -621,7 +715,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.267Z",
+   "hardFail": false
+  }
  },
  {
   "id": "tianchi",
@@ -647,7 +748,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.276Z",
+   "hardFail": false
+  }
  },
  {
   "id": "topcoder",
@@ -677,7 +785,8 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-incomplete"
+   "official-page-incomplete",
+   "link-dead"
   ],
   "fit": {
    "score": 29,
@@ -695,6 +804,13 @@
      3
     ]
    ]
+  },
+  "link": {
+   "ok": false,
+   "status": 404,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.328Z",
+   "hardFail": true
   }
  },
  {
@@ -743,6 +859,13 @@
      3
     ]
    ]
+  },
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.331Z",
+   "hardFail": false
   }
  },
  {
@@ -791,6 +914,13 @@
      3
     ]
    ]
+  },
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.498Z",
+   "hardFail": false
   }
  },
  {
@@ -817,7 +947,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.501Z",
+   "hardFail": false
+  }
  },
  {
   "id": "hypermind",
@@ -841,9 +978,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 503,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.518Z",
+   "hardFail": false
+  }
  },
  {
   "id": "metaculus",
@@ -879,7 +1024,8 @@
   "sourceKind": "unverified-link",
   "flags": [
    "free-entry-confirmed",
-   "cash-confirmed"
+   "cash-confirmed",
+   "link-unreachable-to-bot"
   ],
   "fit": {
    "score": 89,
@@ -905,6 +1051,13 @@
      3
     ]
    ]
+  },
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.703Z",
+   "hardFail": false
   }
  },
  {
@@ -941,7 +1094,8 @@
   "sourceKind": "unverified-link",
   "flags": [
    "free-entry-confirmed",
-   "cash-confirmed"
+   "cash-confirmed",
+   "link-unreachable-to-bot"
   ],
   "fit": {
    "score": 92,
@@ -963,10 +1117,17 @@
      10
     ],
     [
-     "Deadline in 4 day(s)",
+     "Deadline in 3 day(s)",
      10
     ]
    ]
+  },
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.757Z",
+   "hardFail": false
   }
  },
  {
@@ -991,9 +1152,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.761Z",
+   "hardFail": false
+  }
  },
  {
   "id": "crowdspring",
@@ -1019,7 +1188,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 202,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.769Z",
+   "hardFail": false
+  }
  },
  {
   "id": "designcrowd",
@@ -1045,7 +1221,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.785Z",
+   "hardFail": false
+  }
  },
  {
   "id": "epoty",
@@ -1103,6 +1286,13 @@
      3
     ]
    ]
+  },
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.794Z",
+   "hardFail": false
   }
  },
  {
@@ -1129,7 +1319,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.884Z",
+   "hardFail": false
+  }
  },
  {
   "id": "hipa",
@@ -1155,7 +1352,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.887Z",
+   "hardFail": false
+  }
  },
  {
   "id": "istanbul-photo-awards",
@@ -1181,7 +1385,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.892Z",
+   "hardFail": false
+  }
  },
  {
   "id": "kinolime",
@@ -1207,7 +1418,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.905Z",
+   "hardFail": false
+  }
  },
  {
   "id": "film-prize",
@@ -1233,7 +1451,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.966Z",
+   "hardFail": false
+  }
  },
  {
   "id": "pensacola-songwriting",
@@ -1257,9 +1482,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-dead"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 0,
+   "error": "CERT_HAS_EXPIRED",
+   "checkedAt": "2026-11-01T13:47:08.025Z",
+   "hardFail": true
+  }
  },
  {
   "id": "sony-world-photo",
@@ -1322,10 +1555,17 @@
      6
     ],
     [
-     "Deadline in 73 day(s)",
+     "Deadline in 72 day(s)",
      3
     ]
    ]
+  },
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.160Z",
+   "hardFail": false
   }
  },
  {
@@ -1352,7 +1592,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.288Z",
+   "hardFail": false
+  }
  },
  {
   "id": "tom-howard-poetry",
@@ -1399,7 +1646,8 @@
   "flags": [
    "paid-entry-confirmed",
    "cash-confirmed",
-   "paid-entry-vs-ledger"
+   "paid-entry-vs-ledger",
+   "link-unreachable-to-bot"
   ],
   "fit": {
    "score": 33,
@@ -1417,10 +1665,17 @@
      6
     ],
     [
-     "Deadline in 335 day(s)",
+     "Deadline in 334 day(s)",
      3
     ]
    ]
+  },
+  "link": {
+   "ok": false,
+   "status": 307,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.304Z",
+   "hardFail": false
   }
  },
  {
@@ -1447,7 +1702,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.387Z",
+   "hardFail": false
+  }
  },
  {
   "id": "weather-potw",
@@ -1505,6 +1767,13 @@
      3
     ]
    ]
+  },
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.495Z",
+   "hardFail": false
   }
  },
  {
@@ -1551,7 +1820,8 @@
   "sourceKind": "unverified-link",
   "flags": [
    "free-entry-confirmed",
-   "cash-confirmed"
+   "cash-confirmed",
+   "link-unreachable-to-bot"
   ],
   "fit": {
    "score": 73,
@@ -1573,10 +1843,17 @@
      6
     ],
     [
-     "Deadline in 152 day(s)",
+     "Deadline in 151 day(s)",
      3
     ]
    ]
+  },
+  "link": {
+   "ok": false,
+   "status": 307,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.529Z",
+   "hardFail": false
   }
  },
  {
@@ -1603,7 +1880,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.533Z",
+   "hardFail": false
+  }
  },
  {
   "id": "young-lions",
@@ -1629,7 +1913,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.670Z",
+   "hardFail": false
+  }
  },
  {
   "id": "aleague-fantasy",
@@ -1655,7 +1946,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.716Z",
+   "hardFail": false
+  }
  },
  {
   "id": "afl-fantasy",
@@ -1681,7 +1979,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.752Z",
+   "hardFail": false
+  }
  },
  {
   "id": "afl-tipping",
@@ -1707,7 +2012,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.842Z",
+   "hardFail": false
+  }
  },
  {
   "id": "aflw-fantasy",
@@ -1733,7 +2045,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.867Z",
+   "hardFail": false
+  }
  },
  {
   "id": "aflw-tipping",
@@ -1759,7 +2078,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.879Z",
+   "hardFail": false
+  }
  },
  {
   "id": "agentmma",
@@ -1783,9 +2109,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.900Z",
+   "hardFail": false
+  }
  },
  {
   "id": "andys-predictor",
@@ -1811,7 +2145,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.937Z",
+   "hardFail": false
+  }
  },
  {
   "id": "apex-fantasy",
@@ -1837,7 +2178,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.967Z",
+   "hardFail": false
+  }
  },
  {
   "id": "atp-fantasy",
@@ -1861,9 +2209,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.983Z",
+   "hardFail": false
+  }
  },
  {
   "id": "beat-the-geek",
@@ -1889,7 +2245,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.006Z",
+   "hardFail": false
+  }
  },
  {
   "id": "super-league-fantasy",
@@ -1915,7 +2278,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.049Z",
+   "hardFail": false
+  }
  },
  {
   "id": "super-league-predictor",
@@ -1941,7 +2311,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.159Z",
+   "hardFail": false
+  }
  },
  {
   "id": "bona-fide",
@@ -1967,7 +2344,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.177Z",
+   "hardFail": false
+  }
  },
  {
   "id": "bundesliga-fantasy",
@@ -1993,7 +2377,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.179Z",
+   "hardFail": false
+  }
  },
  {
   "id": "buzz-fantasy-golf",
@@ -2019,7 +2410,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.217Z",
+   "hardFail": false
+  }
  },
  {
   "id": "cbs-cfb-pickem",
@@ -2045,7 +2443,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.357Z",
+   "hardFail": false
+  }
  },
  {
   "id": "cbs-pro-pickem",
@@ -2071,7 +2476,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.369Z",
+   "hardFail": false
+  }
  },
  {
   "id": "cev-predictor",
@@ -2097,7 +2509,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.399Z",
+   "hardFail": false
+  }
  },
  {
   "id": "cev-volley-fantasy",
@@ -2121,9 +2540,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.460Z",
+   "hardFail": false
+  }
  },
  {
   "id": "darts-corner-predictor",
@@ -2149,7 +2576,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.522Z",
+   "hardFail": false
+  }
  },
  {
   "id": "dirty-dozen",
@@ -2175,7 +2609,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.524Z",
+   "hardFail": false
+  }
  },
  {
   "id": "espn-bowl-mania",
@@ -2201,7 +2642,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.529Z",
+   "hardFail": false
+  }
  },
  {
   "id": "espn-cfb",
@@ -2227,7 +2675,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.560Z",
+   "hardFail": false
+  }
  },
  {
   "id": "espn-cfp-bracket",
@@ -2253,7 +2708,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.606Z",
+   "hardFail": false
+  }
  },
  {
   "id": "eredivisie-fantasy",
@@ -2279,7 +2741,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.608Z",
+   "hardFail": false
+  }
  },
  {
   "id": "espn-knockout-bracket",
@@ -2305,7 +2774,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.649Z",
+   "hardFail": false
+  }
  },
  {
   "id": "espn-tourney-challenge",
@@ -2331,7 +2807,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.662Z",
+   "hardFail": false
+  }
  },
  {
   "id": "espn-nba-playoff",
@@ -2357,7 +2840,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.709Z",
+   "hardFail": false
+  }
  },
  {
   "id": "espn-pickem",
@@ -2425,6 +2915,13 @@
      3
     ]
    ]
+  },
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.889Z",
+   "hardFail": false
   }
  },
  {
@@ -2451,7 +2948,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.978Z",
+   "hardFail": false
+  }
  },
  {
   "id": "espn-survivor",
@@ -2477,7 +2981,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.980Z",
+   "hardFail": false
+  }
  },
  {
   "id": "espn-wintotals",
@@ -2503,7 +3014,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.993Z",
+   "hardFail": false
+  }
  },
  {
   "id": "espn-pigskin",
@@ -2529,7 +3047,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.994Z",
+   "hardFail": false
+  }
  },
  {
   "id": "espn-hockey-playoff",
@@ -2555,7 +3080,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.006Z",
+   "hardFail": false
+  }
  },
  {
   "id": "espn-tc-eliminator",
@@ -2581,7 +3113,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.017Z",
+   "hardFail": false
+  }
  },
  {
   "id": "espn-womens-tourney",
@@ -2607,7 +3146,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.084Z",
+   "hardFail": false
+  }
  },
  {
   "id": "ewc-play",
@@ -2631,9 +3177,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.112Z",
+   "hardFail": false
+  }
  },
  {
   "id": "euroleague-fantasy",
@@ -2657,9 +3211,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 429,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.122Z",
+   "hardFail": false
+  }
  },
  {
   "id": "f1-fantasy",
@@ -2685,7 +3247,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.125Z",
+   "hardFail": false
+  }
  },
  {
   "id": "fanatics-survivor",
@@ -2712,7 +3281,14 @@
    "official-page-not-read",
    "source-not-operator"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.128Z",
+   "hardFail": false
+  }
  },
  {
   "id": "fantasy-arena",
@@ -2738,7 +3314,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.177Z",
+   "hardFail": false
+  }
  },
  {
   "id": "dp-world-tour-fantasy",
@@ -2762,9 +3345,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.168Z",
+   "hardFail": false
+  }
  },
  {
   "id": "fantasy-efl",
@@ -2790,7 +3381,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.226Z",
+   "hardFail": false
+  }
  },
  {
   "id": "ffs-fpl",
@@ -2816,7 +3414,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.267Z",
+   "hardFail": false
+  }
  },
  {
   "id": "fantasy-gaa",
@@ -2840,9 +3445,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-dead"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 0,
+   "error": "UND_ERR_CONNECT_TIMEOUT",
+   "checkedAt": "2026-11-01T13:47:10.348Z",
+   "hardFail": true
+  }
  },
  {
   "id": "fantasy-golf-challenge",
@@ -2869,7 +3482,14 @@
    "official-page-not-read",
    "source-not-operator"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.425Z",
+   "hardFail": false
+  }
  },
  {
   "id": "premiership-rugby-fantasy",
@@ -2894,9 +3514,17 @@
   "sourceKind": "not-operator",
   "flags": [
    "official-page-not-read",
-   "source-not-operator"
+   "source-not-operator",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.477Z",
+   "hardFail": false
+  }
  },
  {
   "id": "super-rugby-fantasy",
@@ -2922,7 +3550,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.479Z",
+   "hardFail": false
+  }
  },
  {
   "id": "ffs-efl",
@@ -2948,7 +3583,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.497Z",
+   "hardFail": false
+  }
  },
  {
   "id": "ffs-tattico",
@@ -2974,7 +3616,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.562Z",
+   "hardFail": false
+  }
  },
  {
   "id": "ffs-ucl",
@@ -3000,7 +3649,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.497Z",
+   "hardFail": false
+  }
  },
  {
   "id": "fftoday-draft",
@@ -3024,9 +3680,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.578Z",
+   "hardFail": false
+  }
  },
  {
   "id": "football-mad",
@@ -3052,7 +3716,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.602Z",
+   "hardFail": false
+  }
  },
  {
   "id": "formula-e-predictor",
@@ -3078,7 +3749,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.662Z",
+   "hardFail": false
+  }
  },
  {
   "id": "fox-super6",
@@ -3104,7 +3782,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.772Z",
+   "hardFail": false
+  }
  },
  {
   "id": "fpl-draft",
@@ -3130,7 +3815,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.773Z",
+   "hardFail": false
+  }
  },
  {
   "id": "fplhub",
@@ -3156,7 +3848,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.177Z",
+   "hardFail": false
+  }
  },
  {
   "id": "fpl-second-chance",
@@ -3182,7 +3881,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.805Z",
+   "hardFail": false
+  }
  },
  {
   "id": "fplmanager-india",
@@ -3208,7 +3914,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.177Z",
+   "hardFail": false
+  }
  },
  {
   "id": "fplstore",
@@ -3234,7 +3947,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.177Z",
+   "hardFail": false
+  }
  },
  {
   "id": "goaloracle",
@@ -3260,7 +3980,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.834Z",
+   "hardFail": false
+  }
  },
  {
   "id": "ibu-ecup",
@@ -3286,7 +4013,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.970Z",
+   "hardFail": false
+  }
  },
  {
   "id": "icc-t20-fantasy",
@@ -3313,7 +4047,14 @@
    "official-page-not-read",
    "source-not-operator"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.972Z",
+   "hardFail": false
+  }
  },
  {
   "id": "indycar-fantasy",
@@ -3339,7 +4080,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.978Z",
+   "hardFail": false
+  }
  },
  {
   "id": "supercoach-afl",
@@ -3365,7 +4113,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.031Z",
+   "hardFail": false
+  }
  },
  {
   "id": "supercoach-bbl",
@@ -3389,9 +4144,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-dead"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 0,
+   "error": "ENOTFOUND",
+   "checkedAt": "2026-11-01T13:47:11.060Z",
+   "hardFail": true
+  }
  },
  {
   "id": "supercoach-nrl",
@@ -3415,9 +4178,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.141Z",
+   "hardFail": false
+  }
  },
  {
   "id": "laliga-fantasy",
@@ -3443,7 +4214,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.153Z",
+   "hardFail": false
+  }
  },
  {
   "id": "rams-pickem",
@@ -3469,7 +4247,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.222Z",
+   "hardFail": false
+  }
  },
  {
   "id": "lazyfpl",
@@ -3495,7 +4280,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.234Z",
+   "hardFail": false
+  }
  },
  {
   "id": "ligue1-fantasy",
@@ -3521,7 +4313,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.401Z",
+   "hardFail": false
+  }
  },
  {
   "id": "lol-pickem",
@@ -3547,7 +4346,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.403Z",
+   "hardFail": false
+  }
  },
  {
   "id": "majors-challenge",
@@ -3574,7 +4380,14 @@
    "official-page-not-read",
    "source-not-operator"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.432Z",
+   "hardFail": false
+  }
  },
  {
   "id": "mlb-beat-the-streak",
@@ -3600,7 +4413,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.526Z",
+   "hardFail": false
+  }
  },
  {
   "id": "mlb-hr-derby-pickem",
@@ -3626,7 +4446,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.655Z",
+   "hardFail": false
+  }
  },
  {
   "id": "motogp-fantasy",
@@ -3652,7 +4479,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.840Z",
+   "hardFail": false
+  }
  },
  {
   "id": "mxa-fantasy",
@@ -3679,7 +4513,14 @@
    "official-page-not-read",
    "source-not-operator"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.872Z",
+   "hardFail": false
+  }
  },
  {
   "id": "nascar-fantasy-live",
@@ -3705,7 +4546,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.961Z",
+   "hardFail": false
+  }
  },
  {
   "id": "nba-pickem",
@@ -3731,7 +4579,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.988Z",
+   "hardFail": false
+  }
  },
  {
   "id": "ncga-majors-challenge",
@@ -3757,7 +4612,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.002Z",
+   "hardFail": false
+  }
  },
  {
   "id": "pickwatch",
@@ -3783,7 +4645,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.021Z",
+   "hardFail": false
+  }
  },
  {
   "id": "nhl-bracket-challenge",
@@ -3807,9 +4676,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-dead"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 404,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.072Z",
+   "hardFail": true
+  }
  },
  {
   "id": "nrl-fantasy",
@@ -3833,9 +4710,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.168Z",
+   "hardFail": false
+  }
  },
  {
   "id": "oddspedia",
@@ -3859,9 +4744,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.189Z",
+   "hardFail": false
+  }
  },
  {
   "id": "fpl-official",
@@ -3887,7 +4780,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.177Z",
+   "hardFail": false
+  }
  },
  {
   "id": "ohha-harness",
@@ -3914,7 +4814,14 @@
    "official-page-not-read",
    "source-not-operator"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.202Z",
+   "hardFail": false
+  }
  },
  {
   "id": "olka",
@@ -3940,7 +4847,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.177Z",
+   "hardFail": false
+  }
  },
  {
   "id": "pga-fantasy-golf",
@@ -3966,7 +4880,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.222Z",
+   "hardFail": false
+  }
  },
  {
   "id": "pickem-sports",
@@ -3993,7 +4914,14 @@
    "official-page-not-read",
    "source-not-operator"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.240Z",
+   "hardFail": false
+  }
  },
  {
   "id": "pitchbooking",
@@ -4019,7 +4947,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.177Z",
+   "hardFail": false
+  }
  },
  {
   "id": "pooltracker-epl",
@@ -4045,7 +4980,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.261Z",
+   "hardFail": false
+  }
  },
  {
   "id": "pl-predictor",
@@ -4071,7 +5013,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.278Z",
+   "hardFail": false
+  }
  },
  {
   "id": "rotoballer",
@@ -4097,7 +5046,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.440Z",
+   "hardFail": false
+  }
  },
  {
   "id": "running-aces-harness",
@@ -4123,7 +5079,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.510Z",
+   "hardFail": false
+  }
  },
  {
   "id": "six-nations-fantasy",
@@ -4149,7 +5112,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.537Z",
+   "hardFail": false
+  }
  },
  {
   "id": "sky-sports-ff",
@@ -4175,7 +5145,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.541Z",
+   "hardFail": false
+  }
  },
  {
   "id": "splash-mock",
@@ -4201,7 +5178,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.544Z",
+   "hardFail": false
+  }
  },
  {
   "id": "sports-predictor",
@@ -4228,7 +5212,14 @@
    "official-page-not-read",
    "source-not-operator"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.592Z",
+   "hardFail": false
+  }
  },
  {
   "id": "stable-stars",
@@ -4254,7 +5245,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.732Z",
+   "hardFail": false
+  }
  },
  {
   "id": "stablestakes",
@@ -4280,7 +5278,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.734Z",
+   "hardFail": false
+  }
  },
  {
   "id": "streak-contest",
@@ -4307,7 +5312,14 @@
    "official-page-not-read",
    "source-not-operator"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.758Z",
+   "hardFail": false
+  }
  },
  {
   "id": "streak-for-cash",
@@ -4333,7 +5345,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.774Z",
+   "hardFail": false
+  }
  },
  {
   "id": "superbru",
@@ -4359,7 +5378,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.832Z",
+   "hardFail": false
+  }
  },
  {
   "id": "supercoach-nbl",
@@ -4385,7 +5411,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.916Z",
+   "hardFail": false
+  }
  },
  {
   "id": "tattico-serie-a",
@@ -4411,7 +5444,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.960Z",
+   "hardFail": false
+  }
  },
  {
   "id": "teepster",
@@ -4437,7 +5477,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.971Z",
+   "hardFail": false
+  }
  },
  {
   "id": "telegraph-ff",
@@ -4463,7 +5510,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.976Z",
+   "hardFail": false
+  }
  },
  {
   "id": "telegraph-fantasy-racing",
@@ -4487,9 +5541,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-dead"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 0,
+   "error": "ENOTFOUND",
+   "checkedAt": "2026-11-01T13:47:12.991Z",
+   "hardFail": true
+  }
  },
  {
   "id": "tff-fantezi-lig",
@@ -4513,9 +5575,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-dead"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 0,
+   "error": "ENOTFOUND",
+   "checkedAt": "2026-11-01T13:47:13.110Z",
+   "hardFail": true
+  }
  },
  {
   "id": "cricket-draft",
@@ -4541,7 +5611,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.181Z",
+   "hardFail": false
+  }
  },
  {
   "id": "draft-pro",
@@ -4567,7 +5644,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.197Z",
+   "hardFail": false
+  }
  },
  {
   "id": "favorites-pickem",
@@ -4591,9 +5675,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-dead"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 0,
+   "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+   "checkedAt": "2026-11-01T13:47:13.245Z",
+   "hardFail": true
+  }
  },
  {
   "id": "the-hundred-fantasy",
@@ -4619,7 +5711,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.441Z",
+   "hardFail": false
+  }
  },
  {
   "id": "ti-compendium",
@@ -4645,7 +5744,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.457Z",
+   "hardFail": false
+  }
  },
  {
   "id": "the-open-fantasy",
@@ -4671,7 +5777,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.470Z",
+   "hardFail": false
+  }
  },
  {
   "id": "the-special-one",
@@ -4697,7 +5810,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.514Z",
+   "hardFail": false
+  }
  },
  {
   "id": "sun-dream-team",
@@ -4723,7 +5843,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.571Z",
+   "hardFail": false
+  }
  },
  {
   "id": "thelines-survivor",
@@ -4750,7 +5877,8 @@
    "official-page-not-read",
    "no-source-link"
   ],
-  "fit": null
+  "fit": null,
+  "link": null
  },
  {
   "id": "tsg-playoff",
@@ -4776,7 +5904,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.667Z",
+   "hardFail": false
+  }
  },
  {
   "id": "tim-hortons-hockey",
@@ -4802,7 +5937,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.700Z",
+   "hardFail": false
+  }
  },
  {
   "id": "ucl-fantasy",
@@ -4826,9 +5968,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-dead"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 0,
+   "error": "AbortError",
+   "checkedAt": "2026-11-01T13:47:13.735Z",
+   "hardFail": true
+  }
  },
  {
   "id": "ultimate-fantasy-tennis",
@@ -4854,7 +6004,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.794Z",
+   "hardFail": false
+  }
  },
  {
   "id": "valorant-pickem",
@@ -4881,7 +6038,14 @@
    "official-page-not-read",
    "source-not-operator"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.860Z",
+   "hardFail": false
+  }
  },
  {
   "id": "vnl-fantasy",
@@ -4907,7 +6071,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.886Z",
+   "hardFail": false
+  }
  },
  {
   "id": "spfl-fantasy",
@@ -4931,9 +6102,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-dead"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 0,
+   "error": "ENOTFOUND",
+   "checkedAt": "2026-11-01T13:47:13.908Z",
+   "hardFail": true
+  }
  },
  {
   "id": "wsl-fantasy",
@@ -4960,7 +6139,14 @@
    "official-page-not-read",
    "source-not-operator"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.945Z",
+   "hardFail": false
+  }
  },
  {
   "id": "yahoo-daily-draw",
@@ -4986,7 +6172,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.962Z",
+   "hardFail": false
+  }
  },
  {
   "id": "yahoo-bracket-mayhem",
@@ -5012,7 +6205,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.039Z",
+   "hardFail": false
+  }
  },
  {
   "id": "yahoo-survival",
@@ -5038,7 +6238,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.114Z",
+   "hardFail": false
+  }
  },
  {
   "id": "bullrush",
@@ -5064,7 +6271,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.267Z",
+   "hardFail": false
+  }
  },
  {
   "id": "deriv-tournaments",
@@ -5090,7 +6304,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.336Z",
+   "hardFail": false
+  }
  },
  {
   "id": "fbs-pro-demo",
@@ -5114,9 +6335,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.342Z",
+   "hardFail": false
+  }
  },
  {
   "id": "for-traders",
@@ -5142,7 +6371,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.345Z",
+   "hardFail": false
+  }
  },
  {
   "id": "fundedfast-open",
@@ -5168,7 +6404,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.378Z",
+   "hardFail": false
+  }
  },
  {
   "id": "fundednext",
@@ -5194,7 +6437,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.379Z",
+   "hardFail": false
+  }
  },
  {
   "id": "headway-demo",
@@ -5219,9 +6469,17 @@
   "sourceKind": "not-operator",
   "flags": [
    "official-page-not-read",
-   "source-not-operator"
+   "source-not-operator",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.421Z",
+   "hardFail": false
+  }
  },
  {
   "id": "hfm-demo",
@@ -5245,9 +6503,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.423Z",
+   "hardFail": false
+  }
  },
  {
   "id": "litefinance-best",
@@ -5273,7 +6539,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.449Z",
+   "hardFail": false
+  }
  },
  {
   "id": "moomoo-paper-trading",
@@ -5299,7 +6572,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.482Z",
+   "hardFail": false
+  }
  },
  {
   "id": "multibank-demo",
@@ -5323,9 +6603,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.485Z",
+   "hardFail": false
+  }
  },
  {
   "id": "ninjatrader-arena",
@@ -5351,7 +6639,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.514Z",
+   "hardFail": false
+  }
  },
  {
   "id": "npbfx-demo",
@@ -5377,7 +6672,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.538Z",
+   "hardFail": false
+  }
  },
  {
   "id": "roboforex-demo",
@@ -5403,7 +6705,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.558Z",
+   "hardFail": false
+  }
  },
  {
   "id": "tickmill-nfp",
@@ -5429,7 +6738,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.564Z",
+   "hardFail": false
+  }
  },
  {
   "id": "tradingcom-paper",
@@ -5455,7 +6771,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.635Z",
+   "hardFail": false
+  }
  },
  {
   "id": "tradingview-leap",
@@ -5514,6 +6837,13 @@
      0
     ]
    ]
+  },
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.764Z",
+   "hardFail": false
   }
  },
  {
@@ -5540,7 +6870,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.854Z",
+   "hardFail": false
+  }
  },
  {
   "id": "xm-demo",
@@ -5565,9 +6902,17 @@
   "sourceKind": "not-operator",
   "flags": [
    "official-page-not-read",
-   "source-not-operator"
+   "source-not-operator",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.912Z",
+   "hardFail": false
+  }
  },
  {
   "id": "battlefy",
@@ -5593,7 +6938,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.946Z",
+   "hardFail": false
+  }
  },
  {
   "id": "bingo-cash",
@@ -5619,7 +6971,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.986Z",
+   "hardFail": false
+  }
  },
  {
   "id": "challengermode",
@@ -5645,7 +7004,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.996Z",
+   "hardFail": false
+  }
  },
  {
   "id": "checkmate-gaming",
@@ -5671,7 +7037,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.146Z",
+   "hardFail": false
+  }
  },
  {
   "id": "chesscom-tournaments",
@@ -5697,7 +7070,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.232Z",
+   "hardFail": false
+  }
  },
  {
   "id": "gamersaloon",
@@ -5723,7 +7103,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.265Z",
+   "hardFail": false
+  }
  },
  {
   "id": "play-pokemon",
@@ -5749,7 +7136,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.370Z",
+   "hardFail": false
+  }
  },
  {
   "id": "playerslounge",
@@ -5775,7 +7169,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.427Z",
+   "hardFail": false
+  }
  },
  {
   "id": "pocket7",
@@ -5801,7 +7202,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.432Z",
+   "hardFail": false
+  }
  },
  {
   "id": "skillz",
@@ -5825,9 +7233,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.514Z",
+   "hardFail": false
+  }
  },
  {
   "id": "solitaire-cash",
@@ -5853,7 +7269,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.986Z",
+   "hardFail": false
+  }
  },
  {
   "id": "start-gg",
@@ -5879,7 +7302,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.541Z",
+   "hardFail": false
+  }
  },
  {
   "id": "givling",
@@ -5930,6 +7360,13 @@
      3
     ]
    ]
+  },
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.582Z",
+   "hardFail": false
   }
  },
  {
@@ -5954,9 +7391,17 @@
   "legacyChecked": "2026-08-19",
   "sourceKind": "unverified-link",
   "flags": [
-   "official-page-not-read"
+   "official-page-not-read",
+   "link-unreachable-to-bot"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": false,
+   "status": 403,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.583Z",
+   "hardFail": false
+  }
  },
  {
   "id": "funofficepools",
@@ -5982,7 +7427,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.666Z",
+   "hardFail": false
+  }
  },
  {
   "id": "gridirongames",
@@ -6008,7 +7460,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.743Z",
+   "hardFail": false
+  }
  },
  {
   "id": "myfantasyleague",
@@ -6034,7 +7493,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.763Z",
+   "hardFail": false
+  }
  },
  {
   "id": "mysurvivorpool",
@@ -6060,7 +7526,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.779Z",
+   "hardFail": false
+  }
  },
  {
   "id": "officepoolstop",
@@ -6086,7 +7559,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.920Z",
+   "hardFail": false
+  }
  },
  {
   "id": "squarespool",
@@ -6113,7 +7593,8 @@
    "official-page-not-read",
    "no-source-link"
   ],
-  "fit": null
+  "fit": null,
+  "link": null
  },
  {
   "id": "trofeo",
@@ -6139,7 +7620,14 @@
   "flags": [
    "official-page-not-read"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:16.004Z",
+   "hardFail": false
+  }
  },
  {
   "id": "mlcontests",
@@ -6166,7 +7654,14 @@
    "official-page-not-read",
    "source-not-operator"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:16.058Z",
+   "hardFail": false
+  }
  },
  {
   "id": "reedsy-dir",
@@ -6193,6 +7688,13 @@
    "official-page-not-read",
    "source-not-operator"
   ],
-  "fit": null
+  "fit": null,
+  "link": {
+   "ok": true,
+   "status": 200,
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:16.142Z",
+   "hardFail": false
+  }
  }
 ]

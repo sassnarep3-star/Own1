@@ -23,7 +23,7 @@
     <h1 style="margin:6px 0 8px;font-size:clamp(24px,5vw,34px);letter-spacing:-.02em">Flagged for review</h1>
     <p class="small" style="max-width:75ch">Nothing on this page blocks publication. It is the honest remainder: records whose official page was not read, plus specific contradictions found while reading pages. Unverified means <em>unknown</em>, not false.</p>
   </div>
-  <div class="metrics"><div class="metric"><strong>190</strong><span>unverified leads</span></div><div class="metric"><strong>4</strong><span>partly checked</span></div><div class="metric"><strong>17</strong><span>cross-cutting flags</span></div><div class="metric"><strong>2</strong><span>with no operator link</span></div></div>
+  <div class="metrics"><div class="metric"><strong>190</strong><span>unverified leads</span></div><div class="metric"><strong>4</strong><span>partly checked</span></div><div class="metric"><strong>17</strong><span>cross-cutting flags</span></div><div class="metric"><strong>10</strong><span>links that failed</span></div></div>
   <div class="notice warn"><strong>Why so many unverified rows?</strong> The reference catalog lists 211 leads. Reading every organiser's rules, in full, against the date of reading is the only way to verify one — and that is what was done for 17 of them. Rather than import the catalog's August 2026 claims as facts, the rest are published as leads with blank cells.</div>
 
   <div class="section-head"><div><h2>Specific irregularities</h2><p>Each finding is linked to the page that shows it.</p></div></div>
@@ -82,6 +82,44 @@
     <td data-label="Finding">ARC Prize, Kaggle, DrivenData and GEMS state prize money but do not state an entry fee on the pages read. Their fee cells are blank and flagged rather than marked &quot;free&quot;, even though entering through Kaggle is widely understood to be free.</td>
     <td data-label="Source"><a href="https://arcprize.org/competitions/2026" target="_blank" rel="noopener noreferrer">ARC Prize 2026 ↗</a></td></tr></tbody></table></div></div>
 
+  <div class="section-head"><div><h2>Links that failed a real check</h2>
+    <p>Every outbound URL was requested by an automated runner on 2026-11-01. These 10 did not resolve at all. 27 more answered with a bot block (403/429), which is <em>not</em> evidence the page is gone.</p></div></div>
+  <div class="panel"><div class="table-wrap"><table>
+    <thead><tr><th>Lead</th><th>Link</th><th>What the checker received</th></tr></thead>
+    <tbody><tr>
+      <td data-label="Lead"><span class="name">Topcoder</span><span class="subtle">AI, data &amp; code</span></td>
+      <td data-label="Link"><a href="https://www.topcoder.com/challenges" target="_blank" rel="noopener noreferrer">https://www.topcoder.com/challenges ↗</a></td>
+      <td data-label="Result"><span class="pill bad">404</span></td></tr><tr>
+      <td data-label="Lead"><span class="name">Pensacola Beach Songwriters Festival Competition</span><span class="subtle">Writing, art &amp; photography</span></td>
+      <td data-label="Link"><a href="https://pensacolabeachsongwritersfestival.com/2026-songwriting-competition/" target="_blank" rel="noopener noreferrer">https://pensacolabeachsongwritersfestival.com/2026-songwriting-competition/ ↗</a></td>
+      <td data-label="Result"><span class="pill bad">CERT_HAS_EXPIRED</span></td></tr><tr>
+      <td data-label="Lead"><span class="name">Fantasy Gaelic Football (GAA)</span><span class="subtle">Sports picks &amp; fantasy</span></td>
+      <td data-label="Link"><a href="https://fantasygaelicfootball.com/" target="_blank" rel="noopener noreferrer">https://fantasygaelicfootball.com/ ↗</a></td>
+      <td data-label="Result"><span class="pill bad">UND_ERR_CONNECT_TIMEOUT</span></td></tr><tr>
+      <td data-label="Lead"><span class="name">KFC SuperCoach BBL</span><span class="subtle">Sports picks &amp; fantasy</span></td>
+      <td data-label="Link"><a href="https://supercoach.news.com.au/bbl/" target="_blank" rel="noopener noreferrer">https://supercoach.news.com.au/bbl/ ↗</a></td>
+      <td data-label="Result"><span class="pill bad">ENOTFOUND</span></td></tr><tr>
+      <td data-label="Lead"><span class="name">NHL Stanley Cup Playoffs Bracket Challenge</span><span class="subtle">Sports picks &amp; fantasy</span></td>
+      <td data-label="Link"><a href="https://bracketchallenge.nhl.com/en/how-to-play" target="_blank" rel="noopener noreferrer">https://bracketchallenge.nhl.com/en/how-to-play ↗</a></td>
+      <td data-label="Result"><span class="pill bad">404</span></td></tr><tr>
+      <td data-label="Lead"><span class="name">Telegraph Fantasy Racing</span><span class="subtle">Sports picks &amp; fantasy</span></td>
+      <td data-label="Link"><a href="https://fantasyracing.telegraph.co.uk/cheltenham/how-to-play" target="_blank" rel="noopener noreferrer">https://fantasyracing.telegraph.co.uk/cheltenham/how-to-play ↗</a></td>
+      <td data-label="Result"><span class="pill bad">ENOTFOUND</span></td></tr><tr>
+      <td data-label="Lead"><span class="name">TFF Fantezi Lig (Turkish Süper Lig)</span><span class="subtle">Sports picks &amp; fantasy</span></td>
+      <td data-label="Link"><a href="https://fantazilig.tff.org/" target="_blank" rel="noopener noreferrer">https://fantazilig.tff.org/ ↗</a></td>
+      <td data-label="Result"><span class="pill bad">ENOTFOUND</span></td></tr><tr>
+      <td data-label="Lead"><span class="name">The Favorites Podcast Pick&#39;em</span><span class="subtle">Sports picks &amp; fantasy</span></td>
+      <td data-label="Link"><a href="https://favorites.actionnetwork.com/games/the-favorites" target="_blank" rel="noopener noreferrer">https://favorites.actionnetwork.com/games/the-favorites ↗</a></td>
+      <td data-label="Result"><span class="pill bad">ERR_TLS_CERT_ALTNAME_INVALID</span></td></tr><tr>
+      <td data-label="Lead"><span class="name">UCL Fantasy</span><span class="subtle">Sports picks &amp; fantasy</span></td>
+      <td data-label="Link"><a href="https://gaming.uefa.com/en/uclfantasy" target="_blank" rel="noopener noreferrer">https://gaming.uefa.com/en/uclfantasy ↗</a></td>
+      <td data-label="Result"><span class="pill bad">AbortError</span></td></tr><tr>
+      <td data-label="Lead"><span class="name">William Hill Premiership (SPFL) Fantasy Football</span><span class="subtle">Sports picks &amp; fantasy</span></td>
+      <td data-label="Link"><a href="https://fantasy.football.scot/" target="_blank" rel="noopener noreferrer">https://fantasy.football.scot/ ↗</a></td>
+      <td data-label="Result"><span class="pill bad">ENOTFOUND</span></td></tr></tbody></table></div>
+    <div class="table-foot">A dead link is not proof the competition is gone — the organiser may have moved the page. It does mean the link in this ledger cannot be trusted until corrected.</div></div>
+  <div class="notice"><strong>One caveat, stated plainly.</strong> Topcoder's challenge page returned HTTP 404 to the automated request even though a sign-in shell rendered in a browser during this audit. Treat that row as “unreliable link”, not “closed”. The other failures are DNS or certificate errors, which no browser can paper over.</div>
+
   <div class="section-head"><div><h2>Unverified and partly checked leads (194)</h2>
     <p>Blank prize, fee and deadline cells are deliberate. The link is a research lead, not proof.</p></div></div>
   <div class="panel">
@@ -94,7 +132,7 @@
   
   <select class="f-sort" aria-label="Sort"><option value="fit">Sort: best fit</option><option value="deadline">Sort: deadline</option><option value="status">Sort: status</option><option value="name">Sort: name</option></select>
 </div>
-    <div id="rows" aria-live="polite">Loading…</div>
+    <div id="rows" data-sort="name" aria-live="polite">Loading…</div>
     <div class="table-foot">Loading…</div>
   </div>
 

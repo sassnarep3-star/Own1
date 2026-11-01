@@ -1,0 +1,1429 @@
+{
+ "generated": "2026-11-01T13:47:33.737Z",
+ "total": 203,
+ "ok": 166,
+ "failing": 37,
+ "results": {
+  "https://arcprize.org/competitions/2026": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://arcprize.org/competitions/2026",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.774Z"
+  },
+  "https://twitchcon-codex.devpost.com/rules": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://twitchcon-codex.devpost.com/rules",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.777Z"
+  },
+  "https://devpost.com/hackathons": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://devpost.com/hackathons",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.779Z"
+  },
+  "https://www.drivendata.org/competitions/306/competition-doe-gems/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.drivendata.org/competitions/306/competition-doe-gems/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.781Z"
+  },
+  "https://www.challenge.gov/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.challenge.gov/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.982Z"
+  },
+  "https://www.kaggle.com/competitions": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.kaggle.com/competitions",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.048Z"
+  },
+  "https://paypalaihackathon.devpost.com/rules": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://paypalaihackathon.devpost.com/rules",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.242Z"
+  },
+  "https://www.kaggle.com/competitions/nfl-big-data-bowl-2027": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.kaggle.com/competitions/nfl-big-data-bowl-2027",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.185Z"
+  },
+  "https://www.aicrowd.com/challenges": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.aicrowd.com/challenges",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.680Z"
+  },
+  "https://hub.crunchdao.com/competitions/structural-break-real-time": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://hub.crunchdao.com/competitions/structural-break-real-time",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.778Z"
+  },
+  "https://www.xprize.org/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.xprize.org/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.374Z"
+  },
+  "https://www.xprize.org/competitions": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.xprize.org/competitions",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.331Z"
+  },
+  "https://www.topcoder.com/challenges": {
+   "ok": false,
+   "status": 404,
+   "finalUrl": "https://www.topcoder.com/challenges",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.328Z"
+  },
+  "https://www.drivendata.org/competitions/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.drivendata.org/competitions/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.780Z"
+  },
+  "https://grand-challenge.org/challenges/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://grand-challenge.org/challenges/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.941Z"
+  },
+  "https://www.metaculus.com/tournaments/": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://www.metaculus.com/tournaments/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.703Z"
+  },
+  "https://www.codabench.org/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.codabench.org/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:06.775Z"
+  },
+  "https://www.metaculus.com/tournament/midterms-2026/": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://www.metaculus.com/tournament/midterms-2026/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.757Z"
+  },
+  "https://www.bridgewater.com/forecasting-the-future-a-modern-economics-challenge": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.bridgewater.com/forecasting-the-future-a-modern-economics-challenge",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.501Z"
+  },
+  "https://signate.jp/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://service.signate.jp/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.267Z"
+  },
+  "https://zindi.world/competitions": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://zindi.world/competitions",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.498Z"
+  },
+  "https://support.99designs.com/hc/en-us/articles/204761045-What-is-a-design-contest": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://support.99designs.com/hc/en-us/articles/204761045-What-is-a-design-contest",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.761Z"
+  },
+  "https://dash.hypermind.com/hypermind/app.html": {
+   "ok": false,
+   "status": 503,
+   "finalUrl": "https://dash.hypermind.com/hypermind/app.html",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.518Z"
+  },
+  "https://www.crowdspring.com/": {
+   "ok": true,
+   "status": 202,
+   "finalUrl": "https://www.crowdspring.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.769Z"
+  },
+  "https://www.designcrowd.com/help/article/what-are-community-contests-and-how-do-i-start-participating": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.designcrowd.com/help/article/what-are-community-contests-and-how-do-i-start-participating",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.785Z"
+  },
+  "https://www.freelancer.com/faq/topic.php?id=33": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.freelancer.com/faq/topic.php?id=33",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.884Z"
+  },
+  "https://www.kinolime.com/competition": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.kinolime.com/competitions",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.905Z"
+  },
+  "https://pensacolabeachsongwritersfestival.com/2026-songwriting-competition/": {
+   "ok": false,
+   "status": 0,
+   "finalUrl": "https://pensacolabeachsongwritersfestival.com/2026-songwriting-competition/",
+   "error": "CERT_HAS_EXPIRED",
+   "checkedAt": "2026-11-01T13:47:08.025Z"
+  },
+  "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest": {
+   "ok": false,
+   "status": 307,
+   "finalUrl": "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.304Z"
+  },
+  "https://www.epoty.org/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.epoty.org/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.794Z"
+  },
+  "https://vocal.media/resources/challenges-frequently-asked-questions": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://vocal.media/resources/challenges-frequently-asked-questions",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.387Z"
+  },
+  "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free": {
+   "ok": false,
+   "status": 307,
+   "finalUrl": "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.529Z"
+  },
+  "https://www.rmets.org/weather-photographer-of-the-year": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.rmets.org/weather-photographer-of-the-year",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.495Z"
+  },
+  "https://www.hipa.ae/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.hipa.ae/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.887Z"
+  },
+  "https://www.worldphoto.org/sony-world-photography-awards": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.worldphoto.org/sony-world-photography-awards",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.160Z"
+  },
+  "https://spie.org/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://spie.org/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.288Z"
+  },
+  "https://tianchi.aliyun.com/competition/entrance/532277?lang=en-us": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://tianchi.aliyun.com/competition/entrance/532277?lang=en-us",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.276Z"
+  },
+  "https://istanbulphotoawards.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://istanbulphotoawards.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.892Z"
+  },
+  "https://www.nypl.org/about/awards/young-lions-fiction-award/submission-form": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.nypl.org/about/awards/young-lions-fiction-award/submission-form",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.670Z"
+  },
+  "https://www.afl.com.au/news/1469992/play-afl-tipping-25k-up-for-grabs-new-game-launched": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.afl.com.au/news/1469992/play-afl-tipping-25k-up-for-grabs-new-game-launched",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.842Z"
+  },
+  "https://agentmma.com/contests/next": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://agentmma.com/contests/next",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.900Z"
+  },
+  "https://andysbetclub.co.uk/predictor-game/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://andysbetclub.co.uk/predictor-game/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.937Z"
+  },
+  "https://aleagues.com.au/news/official-a-leagues-fantasy-the-handbook/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://aleagues.com.au/news/official-a-leagues-fantasy-the-handbook/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.716Z"
+  },
+  "https://www.atptour.com/en/news/atp-launches-official-fantasy-game-2026": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://www.atptour.com/en/news/atp-launches-official-fantasy-game-2026",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.983Z"
+  },
+  "https://www.afl.com.au/fantasy": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.afl.com.au/fantasy",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.752Z"
+  },
+  "https://www.worldpressphoto.org/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.worldpressphoto.org/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.533Z"
+  },
+  "https://www.thesportsgeek.com/contests/beat-the-geek/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.thesportsgeek.com/contests/beat-the-geek/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.006Z"
+  },
+  "https://www.afl.com.au/aflw/news/1550791/win-a-37k-toyota-huge-prizes-on-offer-in-aflw-fantasy": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.afl.com.au/aflw/news/1550791/win-a-37k-toyota-huge-prizes-on-offer-in-aflw-fantasy",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.867Z"
+  },
+  "https://www.bundesliga.com/en/bundesliga/news/official-fantasy-manager-season-2026-27-new-features-38255": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.bundesliga.com/en/bundesliga/news/official-fantasy-manager-season-2026-27-new-features-38255",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.179Z"
+  },
+  "https://fantasy.premierleague.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.premierleague.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.177Z"
+  },
+  "https://apexfantasyleagues.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://apexfantasyleagues.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.967Z"
+  },
+  "https://www.cbssports.com/fantasy/college-football/games/pickem/rules": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.cbssports.com/fantasy/college-football/games/pickem/rules",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.357Z"
+  },
+  "https://cevmatchpredictor.zendesk.com/hc/en-us/articles/12463995830941-CEV-Champions-League-Fantasy-Terms-Conditions": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://cevmatchpredictor.zendesk.com/hc/en-us/articles/12463995830941-CEV-Champions-League-Fantasy-Terms-Conditions",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.460Z"
+  },
+  "https://fantasy.superleague.co.uk/prizes-winners": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.superleague.co.uk/prizes-winners",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.049Z"
+  },
+  "https://buzzfantasygolf.com/services/FreeGameRules": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://buzzfantasygolf.com/services/FreeGameRules",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.217Z"
+  },
+  "https://www.superleague.co.uk/article/5728/play-super-league-predictor-in-2026": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.superleague.co.uk/article/5728/play-super-league-predictor-in-2026",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.159Z"
+  },
+  "https://fantasy.espn.com/games/college-football-pickem-2026/make-picks": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.espn.com/games/college-football-pickem-2026/make-picks",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.560Z"
+  },
+  "https://fantasy.espn.com/games/college-football-bowl-mania-2025/picks": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.espn.com/games/college-football-bowl-mania-2025/picks",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.529Z"
+  },
+  "https://www.cbssports.com/fantasy/football/games/pickem/rules": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.cbssports.com/fantasy/football/games/pickem/rules",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.369Z"
+  },
+  "https://www.afl.com.au/aflw/news/1555826/aflw-tipping-is-back-for-2026-with-new-games-and-huge-prizes-to-be-won": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.afl.com.au/aflw/news/1555826/aflw-tipping-is-back-for-2026-with-new-games-and-huge-prizes-to-be-won",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:08.879Z"
+  },
+  "https://fantasy.espn.com/games/bracket": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.espn.com/games/bracket",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.662Z"
+  },
+  "https://www.dartscorner.co.uk/pages/premier-league-darts-predictor": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.dartscorner.co.uk/pages/premier-league-darts-predictor",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.522Z"
+  },
+  "https://championsleague.cev.eu/en/articles/cev-champions-league-volley-2026/win-fantastic-prizes-with-the-clvolleyw-predictor-game/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://championsleague.cev.eu/en/articles/cev-champions-league-volley-2026/win-fantastic-prizes-with-the-clvolleyw-predictor-game/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.399Z"
+  },
+  "https://www.gambling.com/games/dirty-dozen": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.gambling.com/games",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.524Z"
+  },
+  "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.889Z"
+  },
+  "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#Prizes": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.927Z"
+  },
+  "https://fantasy.espn.com/games/nfl-playoff-predictor-2026/make-picks": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.espn.com/games/nfl-playoff-predictor-2026/make-picks",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.978Z"
+  },
+  "https://fantasy.espn.com/games/nfl-survivor-2026/make-picks": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.espn.com/games/nfl-survivor-2026/make-picks",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.980Z"
+  },
+  "https://fantasy.espn.com/games/nfl-win-totals-2026/make-picks": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.espn.com/games/nfl-win-totals-2026/make-picks",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.993Z"
+  },
+  "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.972Z"
+  },
+  "https://eredivisie.com/news/this-is-espn-fantasy-voetbal-the-official-game-of-the-vriendenloterij-eredivisie/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://eredivisie.com/news/this-is-espn-fantasy-voetbal-the-official-game-of-the-vriendenloterij-eredivisie/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.608Z"
+  },
+  "https://fantasy.espn.com/games/college-football-playoff-challenge-2025/mostpickedchampions": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.espn.com/games/college-football-playoff-challenge-2025/mostpickedchampions",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.606Z"
+  },
+  "https://fantasy.espn.com/games/mens-knockout-bracket-challenge-2026/howtoplay": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.espn.com/games/mens-knockout-bracket-challenge-2026/howtoplay",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.649Z"
+  },
+  "https://fantasy.espn.com/games/nba-playoff-challenge-2026/howtoplay": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.espn.com/games/nba-playoff-challenge-2026/howtoplay",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.709Z"
+  },
+  "https://fantasy.espn.com/games/mens-tournament-challenge-eliminator-2026/howtoplay": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.espn.com/games/mens-tournament-challenge-eliminator-2026/howtoplay",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.017Z"
+  },
+  "https://esportsworldcup.com/en/play/fantasy/league-of-legends": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://esportsworldcup.com/en/play/fantasy/league-of-legends",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.112Z"
+  },
+  "https://fantasy.espn.com/games/tournament-challenge-bracket-women-2026/leaderboard": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.espn.com/games/tournament-challenge-bracket-women-2026/leaderboard",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.084Z"
+  },
+  "https://www.euroleaguebasketball.net/euroleague/fantasy/prizes-and-rules/": {
+   "ok": false,
+   "status": 429,
+   "finalUrl": "https://www.euroleaguebasketball.net/euroleague/fantasy/prizes-and-rules/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.122Z"
+  },
+  "https://www.europeantour.com/dpworld-tour/news/articles/detail/fantasy-dp-world-tour-is-back/": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://www.europeantour.com/dpworld-tour/news/articles/detail/fantasy-dp-world-tour-is-back/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.168Z"
+  },
+  "https://www.prizefest.com/film/rules/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://prizefest.com/photo/rules/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:07.966Z"
+  },
+  "https://fantasy.espn.com/games/nhl-playoff-hockey-challenge-2026/group": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.espn.com/games/nhl-playoff-hockey-challenge-2026/group",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.006Z"
+  },
+  "https://fantasy.espn.com/games/nfl-playoff-football-challenge-2026/make-picks": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.espn.com/games/nfl-playoff-football-challenge-2026/make-picks",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:09.994Z"
+  },
+  "https://www.formula1.com/en/latest/article/boost-the-fun-with-friends-and-family-this-season-f1-fantasy-is-back.2xVBBN90riZiaYXeYhOe0Z": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.formula1.com/en/latest/article/boost-the-fun-with-friends-and-family-this-season-f1-fantasy-is-back.2xVBBN90riZiaYXeYhOe0Z",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.125Z"
+  },
+  "https://www.leicestertigers.com/news/fantasy-premiership-2223-launch": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://www.leicestertigers.com/news/fantasy-premiership-2223-launch",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.477Z"
+  },
+  "https://fantasy.efl.com/prizes": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.efl.com/prizes",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.226Z"
+  },
+  "https://golfgamecentral.com/fantasy-challenge.php": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://golfgamecentral.com/fantasy-challenge.php",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.425Z"
+  },
+  "https://www.fftoday.com/contests/draftcontest.php?o=3": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://www.fftoday.com/contests/draftcontest.php?o=3",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.578Z"
+  },
+  "https://www.fiaformulae.com/en/news/9291": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.fiaformulae.com/en/news",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.662Z"
+  },
+  "https://betfanatics.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://betfanatics.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.128Z"
+  },
+  "https://www.foxsports.com/fox-super-6": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.foxsports.com/fox-super-6",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.772Z"
+  },
+  "https://www.fantasyfootballscout.co.uk/2026/08/14/win-5000-worth-of-prizes-with-fantasy-football-scout-in-2026-27": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.fantasyfootballscout.co.uk/2026/08/14/win-5000-worth-of-prizes-with-fantasy-football-scout-in-2026-27",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.267Z"
+  },
+  "https://www.fantasyfootballscout.co.uk/mini-leagues": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.fantasyfootballscout.co.uk/mini-leagues",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.497Z"
+  },
+  "https://www.footballmad.co.uk/think-youre-a-fantasy-football-genius-prove-it-5-000-in-cash-prizes-up-for-grabs/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.footballmad.co.uk/news/think-youre-a-fantasy-football-genius-prove-it-5-000-in-cash-prizes-up-for-grabs",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.602Z"
+  },
+  "https://draft.premierleague.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://draft.premierleague.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.773Z"
+  },
+  "https://www.premierleague.com/en/news/4220308/the-second-chance-league-is-live-in-fantasy": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.premierleague.com/en/news/4220308/the-second-chance-league-is-live-in-fantasy",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.805Z"
+  },
+  "https://goaloracle.io/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://goaloracle.io/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.834Z"
+  },
+  "https://www.indycar.com/fantasychallenge/indycar/fullrules": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.indycar.com/fantasychallenge/indycar/fullrules",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.978Z"
+  },
+  "https://play.google.com/store/apps/editorial?id=mc_apps_edit_icc_fantasy_fcp&gl=GB&hl=en": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://play.google.com/store/apps/editorial?id=mc_apps_edit_icc_fantasy_fcp&gl=GB&hl=en",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.972Z"
+  },
+  "https://supercoach.news.com.au/bbl/": {
+   "ok": false,
+   "status": 0,
+   "finalUrl": "https://supercoach.news.com.au/bbl/",
+   "error": "ENOTFOUND",
+   "checkedAt": "2026-11-01T13:47:11.060Z"
+  },
+  "https://playfantasyrugby.com/rugby-championship/help/game-guidelines": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://playfantasyrugby.com/rugby-championship/help/game-guidelines",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.479Z"
+  },
+  "https://www.therams.com/news/rams-pick-em-launching-2026-season-season-tickets-player-signed-merchandise-more-prizes-for-predictions": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.therams.com/news/rams-pick-em-launching-2026-season-season-tickets-player-signed-merchandise-more-prizes-for-predictions",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.222Z"
+  },
+  "https://supercoach.com.au/nrl": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://supercoach.com.au/nrl",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.141Z"
+  },
+  "https://www.lazyfpl.com/readers-mini-league": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.lazyfpl.com/readers-mini-league",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.234Z"
+  },
+  "https://www.biathlonworld.com/inside-ibu/marketing/ibu-biathlon-ecup": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.biathlonworld.com/inside-ibu/marketing/ibu-biathlon-ecup",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.970Z"
+  },
+  "https://thegolfwire.com/majors-challenge-perfect-team-contest-masters/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://thegolfwire.com/majors-challenge-perfect-team-contest-masters/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.432Z"
+  },
+  "https://lolesports.com/en-US/news/msi-2026-primer": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://lolesports.com/en-US/news/msi-2026-primer",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.403Z"
+  },
+  "https://www.laliga.com/en-GB/legal/condiciones-de-uso-fantasy": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.laliga.com/en-GB/legal/condiciones-de-uso-fantasy",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.153Z"
+  },
+  "https://motocrossactionmag.com/fantasy-mx-sx/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://motocrossactionmag.com/fantasy-mx-sx/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.872Z"
+  },
+  "https://www.mlb.com/sponsorship/home-run-derby-pick-em/official-rules": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.mlb.com/sponsorship/home-run-derby-pick-em/official-rules",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.655Z"
+  },
+  "https://fantasyfootballscout.co.uk/2026/08/15/join-our-tattico-fantasy-serie-a-league-win-750-in-prizes": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.fantasyfootballscout.co.uk/2026/08/15/join-our-tattico-fantasy-serie-a-league-win-750-in-prizes",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:10.562Z"
+  },
+  "https://www.mlb.com/apps/beat-the-streak/official-rules": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.mlb.com/apps/beat-the-streak/official-rules",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.526Z"
+  },
+  "https://fantasygames.nascar.com/live/page/rules": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasygames.nascar.com/live/page/rules",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.961Z"
+  },
+  "https://bracketchallenge.nhl.com/en/how-to-play": {
+   "ok": false,
+   "status": 404,
+   "finalUrl": "https://bracketchallenge.nhl.com/en/how-to-play",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.072Z"
+  },
+  "https://www.motogp.com/en/news/2026/02/18/motogp-fantasy-play-smart-and-win-big/874823": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.motogp.com/en/news/2026/02/18/motogp-fantasy-play-smart-and-win-big/874823",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.840Z"
+  },
+  "https://ligue1.com/en/fantasy": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://ligue1.com/en/fantasy",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.401Z"
+  },
+  "https://nrlfantasy.zendesk.com/hc/en-us/articles/15492067192861-Prizes": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://nrlfantasy.zendesk.com/hc/en-us/articles/15492067192861-Prizes",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.168Z"
+  },
+  "https://ncga.org/majorschallenge": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://ncga.org/majorschallenge",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.002Z"
+  },
+  "https://oddspedia.com/us/picks/capper-contests/wc2026-competition": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://oddspedia.com/us/picks/capper-contests/wc2026-competition",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.189Z"
+  },
+  "https://ustrottingnews.com/ohhas-fantasy-league-returns-with-more-ways-to-win/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://ustrottingnews.com/ohhas-fantasy-league-returns-with-more-ways-to-win/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.202Z"
+  },
+  "https://www.pooltracker.com/game_info/english-premier-league-predictor.asp": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.pooltracker.com/game_info/english-premier-league-predictor.asp",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.261Z"
+  },
+  "https://www.rotoballer.com/free-fantasy-football-tournament-rotoballer-challenge-2026/1900460": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.rotoballer.com/free-fantasy-football-tournament-rotoballer-challenge-2026/1900460",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.440Z"
+  },
+  "https://fantasygolf.pgatour.com/prizes": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasygolf.pgatour.com/prizes",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.222Z"
+  },
+  "https://apps.apple.com/us/app/pick-em-sports-nfl-cfb/id6737177213": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://apps.apple.com/us/app/pick-em-sports-nfl-cfb/id6737177213",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.240Z"
+  },
+  "https://runaces.com/racing/live-racing/fantasy-horse-racing-league/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://runaces.com/racing/live-racing/fantasy-horse-racing-league/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.510Z"
+  },
+  "https://premierleaguepredictor.co.uk/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://premierleaguepredictor.co.uk/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.278Z"
+  },
+  "https://www.skysports.com/football/news/11095/12359927/sky-sports-fantasy-football-is-live-create-your-team-for-free-and-win-lb50-000": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.skysports.com/football/news/12359927/sky-sports-fantasy-football-is-live-create-your-team-for-free-and-win-lb50-000",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.541Z"
+  },
+  "https://nflmockdraft.app.splashsports.com/nfl-mock-draft/my-entry": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://nflmockdraft.app.splashsports.com/nfl-mock-draft/my-entry",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.544Z"
+  },
+  "https://www.codesports.com.au/afl/supercoach-news/supercoach-afl-returns-for-2026-heres-everything-you-need-to-know/news-story/a5da766fdefa2f0cd3e31252a4848ef8": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.codesports.com.au/nocookies?a=A.flavipes",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.031Z"
+  },
+  "https://www.nba.com/news/2026-nba-pick-em-bracket-challenge-is-now-live": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.nba.com/news/2026-nba-pick-em-bracket-challenge-is-now-live",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:11.988Z"
+  },
+  "https://apps.apple.com/us/app/sports-predictor-fantasy-game/id1445043792": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://apps.apple.com/us/app/sports-predictor-fantasy-game/id1445043792",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.592Z"
+  },
+  "https://www.streakforthecash.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.streakforthecash.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.774Z"
+  },
+  "https://fantasy.sixnationsrugby.com/m6n/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasy.sixnationsrugby.com/m6n/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.537Z"
+  },
+  "https://nflpickwatch.com/contest/nfl/2026": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://nflpickwatch.com/contest/nfl/2026",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.021Z"
+  },
+  "https://apps.apple.com/us/app/streak-contest/id1623816920": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://apps.apple.com/us/app/streak-contest/id1623816920",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.758Z"
+  },
+  "https://stablestakes.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://stablestakes.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.734Z"
+  },
+  "https://cheltenhamfestival.fans/stable-stars/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://cheltenhamfestival.fans/stable-stars/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.732Z"
+  },
+  "https://fantasyracing.telegraph.co.uk/cheltenham/how-to-play": {
+   "ok": false,
+   "status": 0,
+   "finalUrl": "https://fantasyracing.telegraph.co.uk/cheltenham/how-to-play",
+   "error": "ENOTFOUND",
+   "checkedAt": "2026-11-01T13:47:12.991Z"
+  },
+  "https://www.nbl.com.au/news/supercoach-nbl-start-picking-your-team-now": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.nbl.com.au/news/supercoach-nbl-start-picking-your-team-now",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.916Z"
+  },
+  "https://tattico.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://tattico.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.960Z"
+  },
+  "https://www.thecricketdraft.com/prizes": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.thecricketdraft.com/prizes",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.181Z"
+  },
+  "https://favorites.actionnetwork.com/games/the-favorites": {
+   "ok": false,
+   "status": 0,
+   "finalUrl": "https://favorites.actionnetwork.com/games/the-favorites",
+   "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+   "checkedAt": "2026-11-01T13:47:13.245Z"
+  },
+  "https://www.thedraftpro.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.thedraftpro.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.197Z"
+  },
+  "https://www.superbru.com/worldcup/prizes.php": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.superbru.com/worldcup_predictor/prizes.php",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.832Z"
+  },
+  "https://www.thehundred.com/terms/fantasy": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.thehundred.com/terms/fantasy",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.441Z"
+  },
+  "https://fantazilig.tff.org/": {
+   "ok": false,
+   "status": 0,
+   "finalUrl": "https://fantazilig.tff.org/",
+   "error": "ENOTFOUND",
+   "checkedAt": "2026-11-01T13:47:13.110Z"
+  },
+  "https://www.theopen.com/fantasy/prizes": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.theopen.com/fantasy/prizes",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.470Z"
+  },
+  "https://www.teepster.com/the-open-championship/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.teepster.com/the-open-championship/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.971Z"
+  },
+  "https://thespecialone.co.uk/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://holding.thespecialone.co.uk/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.514Z"
+  },
+  "https://www.dota2.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.dota2.com/home",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.457Z"
+  },
+  "https://fantasyfootball.telegraph.co.uk/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fantasyfootball.telegraph.co.uk/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:12.976Z"
+  },
+  "https://ultimatefantasytennis.com/blog/what-is-fantasy-tennis": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://ultimatefantasytennis.com/blog/what-is-fantasy-tennis",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.794Z"
+  },
+  "https://www.timhortons.ca/tims-nhl-hockey-challenge": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.timhortons.ca/tims-nhl-hockey-challenge",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.700Z"
+  },
+  "https://www.dreamteamfc.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.dreamteamfc.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.571Z"
+  },
+  "https://fantasy.football.scot/": {
+   "ok": false,
+   "status": 0,
+   "finalUrl": "https://fantasy.football.scot/",
+   "error": "ENOTFOUND",
+   "checkedAt": "2026-11-01T13:47:13.908Z"
+  },
+  "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/vnl-fantasy-unveiling-the-new-fantasy-experience": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://en.volleyballworld.com/volleyball/competitions/volleyball-nations-league/news/vnl-fantasy-unveiling-the-new-fantasy-experience",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.886Z"
+  },
+  "https://sports.yahoo.com/fantasy/article/yahoo-fantasy-bracket-mayhem-is-back-the-best-bracket-in-both-the-mens-and-womens-college-basketball-contests-will-win-25k-each-225407876.html": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://sports.yahoo.com/fantasy/article/yahoo-fantasy-bracket-mayhem-is-back-the-best-bracket-in-both-the-mens-and-womens-college-basketball-contests-will-win-25k-each-225407876.html",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.039Z"
+  },
+  "https://football.fantasysports.yahoo.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://football.fantasysports.yahoo.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.114Z"
+  },
+  "https://x.com/ValorantEsports/status/1963633815282405466": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://x.com/ValorantEsports/status/1963633815282405466",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.860Z"
+  },
+  "https://help.yahoo.com/kb/SLN36907.html": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://help.yahoo.com/kb/SLN36907.html",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.962Z"
+  },
+  "https://bullrush.com/competition-types/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://bullrush.com/competition-types/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.267Z"
+  },
+  "https://www.thesportsgeek.com/contests/nfl-playoff-pickem/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.thesportsgeek.com/contests/nfl-playoff-pickem/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.667Z"
+  },
+  "https://fbs.com/": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://fbs.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.342Z"
+  },
+  "https://www.tottenhamhotspur.com/news/1086226/women-everything-you-need-to-know-about-the-wsls-new-fantasy-game": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.tottenhamhotspur.com/news/1086226/women-everything-you-need-to-know-about-the-wsls-new-fantasy-game",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:13.945Z"
+  },
+  "https://fortraders.com/tournaments": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fortraders.com/tournaments",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.345Z"
+  },
+  "https://fundedfast.com/trading-competition": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://fundedfast.com/trading-competition",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.378Z"
+  },
+  "https://www.myfxbook.com/press-release/headway-launches-no-limits-demo/41776": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://www.myfxbook.com/press-release/headway-launches-no-limits-demo/41776",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.421Z"
+  },
+  "https://www.hfm.com/int/en/promotions/demo-contest": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://www.hfm.com/int/en/promotions/demo-contest",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.423Z"
+  },
+  "https://tradfi.multibankgroup.com/en/lp-n/demo-competition": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://tradfi.multibankgroup.com/en/lp-n/demo-competition",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.485Z"
+  },
+  "https://www.nasdaq.com/press-release/moomoos-second-global-paper-trading-competition-powered-nasdaq-totalview-hits-150000": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.nasdaq.com/press-release/moomoos-second-global-paper-trading-competition-powered-nasdaq-totalview-hits-150000",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.482Z"
+  },
+  "https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.336Z"
+  },
+  "https://ninjatrader.com/ninjatrader-arena/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://ninjatrader.com/ninjatrader-arena/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.514Z"
+  },
+  "https://roboforex.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://roboforex.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.558Z"
+  },
+  "https://help.fundednext.com/en/articles/11982105-how-to-win-fundednext-monthly-competition": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://help.fundednext.com/en/articles/11982105-how-to-win-fundednext-cfd-monthly-competition",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.379Z"
+  },
+  "https://www.tickmill.com/promotions/nfp-machine": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.tickmill.com/promotions/nfp-machine",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.564Z"
+  },
+  "https://www.tradingview.com/the-leap/tradestation-july-2026/rules/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.tradingview.com/the-leap/tradestation-july-2026/rules/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.764Z"
+  },
+  "https://www.wallstreetsurvivor.com/contest-valentines-2026/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.wallstreetsurvivor.com/contest-valentines-2026/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.854Z"
+  },
+  "https://www.myfxbook.com/press-release/xmrsquos-anniversary-demo-competitions-now-live-ndash-join-the-celebration-with-a-100000-prize-pool-/33454": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://www.myfxbook.com/press-release/xmrsquos-anniversary-demo-competitions-now-live-ndash-join-the-celebration-with-a-100000-prize-pool-/33454",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.912Z"
+  },
+  "https://www.trading.com/us/forex-trading-competition": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.trading.com/us/forex-trading-competition",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.635Z"
+  },
+  "https://help.battlefy.com/en/articles/3940531-where-is-my-prize": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://help.battlefy.com/en/articles/3940531-where-is-my-prize",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.946Z"
+  },
+  "https://www.litefinance.org/contests/demo/best/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.litefinance.org/contests/demo/best/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.449Z"
+  },
+  "https://www.checkmategaming.com/free-tournaments": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.checkmategaming.com/free-tournaments",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.146Z"
+  },
+  "https://www.gamersaloon.com/promos/1rounder/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.gamersaloon.com/promos/1rounder/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.265Z"
+  },
+  "https://www.papaya.com/faq": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.papaya.com/faq",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.986Z"
+  },
+  "https://www.pokemon.com/us/play-pokemon": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.pokemon.com/us/play-pokemon",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.370Z"
+  },
+  "https://www.playerslounge.com/madden": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.playerslounge.com/madden",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.427Z"
+  },
+  "https://www.chess.com/announcements/view/chess-com-community-events": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.chess.com/announcements/view/chess-com-community-events",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.232Z"
+  },
+  "https://www.skillz.com/": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://www.skillz.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.514Z"
+  },
+  "https://givling.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://givling.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.582Z"
+  },
+  "https://www.pocket7games.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.aviagames.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.432Z"
+  },
+  "https://start.gg/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.start.gg/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.541Z"
+  },
+  "https://help.swagbucks.com/hc/en-us/articles/15374709231764-What-is-Swagbucks-Daily-Trivia": {
+   "ok": false,
+   "status": 403,
+   "finalUrl": "https://help.swagbucks.com/hc/en-us/articles/15374709231764-What-is-Swagbucks-Daily-Trivia",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.583Z"
+  },
+  "https://support.challengermode.com/en/start-here/how-to-get-started-with-challengermode": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://support.challengermode.com/en/start-here/how-to-get-started-with-challengermode",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.996Z"
+  },
+  "https://www.funofficepools.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.funofficepools.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.666Z"
+  },
+  "https://home.myfantasyleague.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://home.myfantasyleague.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.763Z"
+  },
+  "https://officepoolstop.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://officepoolstop.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.920Z"
+  },
+  "https://mysurvivorpool.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://mysurvivorpool.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.779Z"
+  },
+  "https://mlcontests.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://mlcontests.com/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:16.058Z"
+  },
+  "https://trofeo.live/nfl-confidence-pool": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://trofeo.live/nfl-confidence-pool",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:16.004Z"
+  },
+  "https://reedsy.com/resources/writing-contests": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://reedsy.com/resources/writing-contests/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:16.142Z"
+  },
+  "https://gridirongames.com/football-pools/nfl-survivor/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://gridirongames.com/football-pools/nfl-survivor/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:15.743Z"
+  },
+  "https://npbfx.com/": {
+   "ok": true,
+   "status": 200,
+   "finalUrl": "https://www.nmarkets.org/",
+   "error": "",
+   "checkedAt": "2026-11-01T13:47:14.538Z"
+  },
+  "https://fantasygaelicfootball.com/": {
+   "ok": false,
+   "status": 0,
+   "finalUrl": "https://fantasygaelicfootball.com/",
+   "error": "UND_ERR_CONNECT_TIMEOUT",
+   "checkedAt": "2026-11-01T13:47:10.348Z"
+  },
+  "https://gaming.uefa.com/en/uclfantasy": {
+   "ok": false,
+   "status": 0,
+   "finalUrl": "https://gaming.uefa.com/en/uclfantasy",
+   "error": "AbortError",
+   "checkedAt": "2026-11-01T13:47:13.735Z"
+  }
+ }
+}
