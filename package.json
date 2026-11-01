@@ -1,0 +1,27 @@
+{
+  "name": "prize-atlas",
+  "version": "2.0.0",
+  "description": "Evidence-first dashboard for free-to-enter cash competitions (static site, no framework)",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "node scripts/build-data.mjs && node scripts/build-site.mjs",
+    "test": "node tests/validate.mjs && node tests/dom.test.mjs",
+    "check": "npm run build && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sassnarep3-star/Own1.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sassnarep3-star/Own1/issues"
+  },
+  "homepage": "https://github.com/sassnarep3-star/Own1#readme",
+  "devDependencies": {
+    "jsdom": "^30.1.3"
+  },
+  "private": true,
+  "type": "module"
+}

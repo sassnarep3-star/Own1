@@ -1,7 +1,9 @@
 name: Validate static site
+
 on:
   push:
   pull_request:
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -10,4 +12,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node tests/validate.mjs
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Rebuild every page from source data
+        run: npm run build
+      - name: Fail if generated pages are out of date with the evidence file
+        run: git diff --exit-code -- data index.html category entry review.html sources.html playbook.html
+      - name: Verification gate (no unsourced values, no broken local links)
+        run: node tests/validate.mjs
+      - name: Interactive render test (headless DOM)
+        run: node tests/dom.test.mjs
