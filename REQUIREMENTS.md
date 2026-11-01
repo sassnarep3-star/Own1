@@ -68,7 +68,7 @@ Every requirement taken from the project brief, mapped to what exists, and how i
 
 ## G. Quality gates run in this pass
 
-- `node tests/validate.mjs` → 212 unique rows, 28 checked, 17 free confirmed, 14 pages, all local references resolve; `python3 supplemental/check.py` → supplemental rows each carry an official source link.
+- `node tests/validate.mjs` → 212 unique rows, 28 checked, 18 free confirmed, 14 pages, all local references resolve; `python3 supplemental/check.py` → supplemental rows each carry an official source link.
 - Manual link audit of every external URL used as evidence (18 pages opened and read).
 - Mobile layout audit at 390px, 620px, 900px and 1180px breakpoints by CSS inspection (no forced table width, no viewport-scaling tricks).
 - Accessibility basics: `lang`, skip link, `aria-live` result count, labelled controls, 44px minimum control height, colour contrast on text/badges.
