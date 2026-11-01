@@ -1,13 +1,33 @@
-name: Validate static site
+name: Validate site
+
 on:
   push:
   pull_request:
+
+permissions:
+  contents: read
+
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node tests/validate.mjs
+
+      # The site is generated from data/*.json, so the committed HTML must match the data.
+      - name: Rebuild pages
+        run: node scripts/build.mjs
+
+      - name: Fail if the committed HTML is stale
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::Generated pages are out of date. Run 'node scripts/build.mjs' and commit the result."
+            git --no-pager diff --stat
+            exit 1
+          fi
+
+      - name: Validate data, pages and links
+        run: node tests/validate.mjs

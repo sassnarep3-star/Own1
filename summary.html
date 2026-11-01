@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive summary · Prize Atlas</title>
+<meta name="description" content="Executive summary of the free-to-enter cash competition research: what was verified, what was flagged, and where the verified money is.">
+<meta name="color-scheme" content="light">
+<link rel="stylesheet" href="./assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23104f5c'/%3E%3Cpath d='M8 21l5-10 3 6 3-4 5 8z' fill='%237fe3d0'/%3E%3C/svg%3E">
+<script src="./assets/app.js" defer></script>
+</head>
+<body data-page="summary.html">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="shell topbar-inner">
+    <a class="brand" href="./index.html"><span class="mark" aria-hidden="true">◈</span><span>Prize Atlas</span></a>
+    <nav class="topnav" aria-label="Main"><a href="./index.html">Overview</a><a href="./shortlist.html">Shortlist</a><a href="./categories.html">Categories</a><a href="./summary.html" aria-current="page" class="active">Summary</a><a href="./method.html">Method</a><a href="./review.html">Flagged</a></nav>
+  </div>
+</header>
+
+<main id="main" class="shell main">
+<div class="page-intro">
+  <p class="eyebrow">Executive summary</p>
+  <h1>What the evidence actually supports</h1>
+  <p>Prepared 2026-11-01 UTC. This page is the short version: what was verified, which opportunities look worth the time, what is still unknown, and what could go wrong. Every claim links to the page it came from.</p>
+</div>
+
+<div class="prose-card">
+  <h2>1. The problem this rebuild solves</h2>
+  <p>The reference catalogue at <a href="https://karagemop466-tech.github.io/FreeMoneyApps/" target="_blank" rel="noopener noreferrer">karagemop466-tech.github.io/FreeMoneyApps</a> lists 206 competitions on a single page and states: <em>“No search box, no filters: just scroll.”</em> On a phone that is a long, undifferentiated scroll through hundreds of blocks with no way to sort by deadline or see which entries are actually verified. Several of its links are dead: six of its source domains no longer resolve, one row is only reachable over plain HTTP, and one source is a 2024 news article. Its prize figures are all stamped 2026-08-19 and none is re-established against a current operator rules page.</p>
+  <h2>2. What was done</h2>
+  <ul>
+    <li><strong>205 legacy listings preserved</strong>, with names and categories imported but every prize, fee and deadline field left blank. The legacy claim is displayed only in a column explicitly labelled unverified.</li>
+    <li><strong>44 rows verified</strong> by opening the operator's own page on 2026-11-01 and reading the prize, entry cost, deadline or eligibility from it. Each row links that page and stamps the check date.</li>
+    <li><strong>17 irregularities flagged</strong> and published on the <a href="./review.html">Flagged for review</a> page with sources, instead of being silently fixed or dropped.</li>
+    <li><strong>Mobile-first rebuild</strong>: a dashboard, per-category pages, search, filters, sorting and card layouts, with no build step needed to view it.</li>
+  </ul>
+  <h2>3. Where the verified money is</h2>
+  <p>After checking, the shape of the market is clear. <strong>Free entry with real cash is concentrated in tech, data and forecasting</strong> — the categories where the deliverable is a model, a paper or an app. Sports pick'em is genuinely free and pays cash, but the prizes are diluted across tens of thousands of entrants. Most skill-game and trivia listings from the legacy catalogue are not free cash paths at all: the free rooms pay gems or bonus currency, and the cash rooms charge an entry fee.</p>
+  <div class="pick-list">
+    <article class="pick">
+      <h3>PayPal AI Hackathon (Devpost)</h3>
+      <dl>
+        <div><dt>Verified prize</dt><dd>$67,500 in cash (page body also states $69,750 in total prizes)</dd></div>
+        <div><dt>Entry</dt><dd>not stated</dd></div>
+        <div><dt>Deadline</dt><dd>12 Nov 2026</dd></div>
+        <div><dt>Why it is on this list</dt><dd>Working app that meaningfully integrates PayPal APIs plus AI, public repo, demo video under 3 minutes</dd></div>
+      </dl>
+      <p class="pick-flag">Watch out: Prize figures conflict on the same page: $67,500 &#39;in cash&#39; versus $69,750 &#39;in total prizes&#39;; Entry cost not stated; hackathons normally do not charge, but confirm in the rules</p>
+      <p class="pick-src"><a class="source-link" href="https://paypalaihackathon.devpost.com/" target="_blank" rel="noopener noreferrer">Official hackathon page ↗</a><a class="source-link secondary" href="https://paypalaihackathon.devpost.com/rules" target="_blank" rel="noopener noreferrer">Official rules ↗</a><a class="source-link secondary" href="https://devpost.com/hackathons" target="_blank" rel="noopener noreferrer">Devpost listing ↗</a></p>
+    </article><article class="pick">
+      <h3>GEMS Prize Challenge (DrivenData / U.S. DOE)</h3>
+      <dl>
+        <div><dt>Verified prize</dt><dd>$300,000 total ($50,000 initial round + $250,000 final round)</dd></div>
+        <div><dt>Entry</dt><dd>not stated</dd></div>
+        <div><dt>Deadline</dt><dd>3 Dec 2026</dd></div>
+        <div><dt>Why it is on this list</dt><dd>Build an algorithm that generates enhanced geologic fault datasets</dd></div>
+      </dl>
+      <p class="pick-flag">Watch out: Entry cost not stated on the pages inspected; Eligibility requires reading the rules page</p>
+      <p class="pick-src"><a class="source-link" href="https://www.drivendata.org/competitions/306/competition-doe-gems/" target="_blank" rel="noopener noreferrer">DrivenData competition page ↗</a><a class="source-link secondary" href="https://www.drivendata.org/competitions/306/competition-doe-gems/rules/" target="_blank" rel="noopener noreferrer">Official rules ↗</a></p>
+    </article><article class="pick">
+      <h3>NFL Big Data Bowl 2027 (Kaggle)</h3>
+      <dl>
+        <div><dt>Verified prize</dt><dd>$100,000</dd></div>
+        <div><dt>Entry</dt><dd>not stated</dd></div>
+        <div><dt>Deadline</dt><dd>not stated</dd></div>
+        <div><dt>Why it is on this list</dt><dd>Analytics/model submission on NFL player-tracking data</dd></div>
+      </dl>
+      <p class="pick-flag">Watch out: Exact deadline, entry cost and eligibility not verified — open the competition rules</p>
+      <p class="pick-src"><a class="source-link" href="https://www.kaggle.com/competitions/nfl-big-data-bowl-2027" target="_blank" rel="noopener noreferrer">Kaggle competition page ↗</a><a class="source-link secondary" href="https://www.kaggle.com/competitions" target="_blank" rel="noopener noreferrer">Listing on the Kaggle competitions hub (prize and countdown) ↗</a></p>
+    </article><article class="pick">
+      <h3>Fall 2026 FutureEval Bot Tournament (Metaculus)</h3>
+      <dl>
+        <div><dt>Verified prize</dt><dd>$50,000 prize pool</dd></div>
+        <div><dt>Entry</dt><dd>Free</dd></div>
+        <div><dt>Deadline</dt><dd>not stated</dd></div>
+        <div><dt>Why it is on this list</dt><dd>Automated/bot forecasting tournament</dd></div>
+      </dl>
+      <p class="pick-flag">Watch out: Entry terms, API rules and eligibility not read — open the tournament rules</p>
+      <p class="pick-src"><a class="source-link" href="https://www.metaculus.com/tournament/fall-futureeval-2026/" target="_blank" rel="noopener noreferrer">Metaculus tournament page ↗</a><a class="source-link secondary" href="https://www.metaculus.com/tournaments/" target="_blank" rel="noopener noreferrer">Tournament card: $50,000 prize pool, &#39;Ends 2 months from now&#39; ↗</a></p>
+    </article><article class="pick">
+      <h3>Codegeist 2026 (Atlassian / Devpost)</h3>
+      <dl>
+        <div><dt>Verified prize</dt><dd>$120,000 in prizes</dd></div>
+        <div><dt>Entry</dt><dd>not stated</dd></div>
+        <div><dt>Deadline</dt><dd>22 Dec 2026</dd></div>
+        <div><dt>Why it is on this list</dt><dd>App built on Atlassian&#39;s platform</dd></div>
+      </dl>
+      <p class="pick-flag">Watch out: Devpost states a total &#39;in prizes&#39;; cash versus non-cash split not verified; Event rules not opened — eligibility and entry cost unverified</p>
+      <p class="pick-src"><a class="source-link" href="https://codegeist2026.devpost.com/" target="_blank" rel="noopener noreferrer">Devpost event page ↗</a><a class="source-link secondary" href="https://devpost.com/hackathons" target="_blank" rel="noopener noreferrer">Devpost listing with dates and prize total ↗</a></p>
+    </article>
+  </div>
+  <h2>4. What is not known</h2>
+  <ul>
+    <li><strong>No win probabilities exist in any inspected source.</strong> This site therefore publishes no expected value, hourly rate or “best odds” ranking. Any site that does is inferring.</li>
+    <li><strong>Four categories have no verified row</strong> (skill, market, pools, directories). They are labelled as a coverage gap rather than filled.</li>
+    <li><strong>Most hackathon prize totals are stated “in prizes”, not “in cash”.</strong> The cash/non-cash split is unknown for those rows and is flagged.</li>
+    <li><strong>External reachability is not certified.</strong> DNS was checked for all 223 legacy hostnames; individual deep links were spot-checked, not exhaustively fetched.</li>
+  </ul>
+  <h2>5. Recommended next steps</h2>
+  <ol class="steps">
+    <li>Work the two code-heavy tracks with near-term deadlines first: <a href="./shortlist.html">the shortlist</a> sorted by deadline puts ARC Prize, PayPal AI and GEMS at the top.</li>
+    <li>Treat forecasting tournaments as background work — they are free, they reward calibration, and a bot tournament with a $50,000 pool is explicitly built for automated approaches.</li>
+    <li>Before any submission, re-open the rules page from the row and confirm (a) entry is still free, (b) you are eligible by country and age, (c) the deadline in your time zone. Rules changed mid-season on at least two rows checked here.</li>
+    <li>Review the <a href="./review.html">flagged items</a> and tell us which leads to verify next; that list is ordered by evidence value, not by prize size.</li>
+  </ol>
+  <h2>6. Limits of this document</h2>
+  <p>Verification is a snapshot: a page read on 2026-11-01 can change tomorrow. Cash prizes may carry tax consequences (US reporting commonly starts at $600, but confirm with the operator and a tax professional). Nothing here is financial, legal or tax advice, and no operator paid for a listing.</p>
+</div></main>
+<footer class="footer">
+  <div class="shell footer-inner">
+    <p><strong>Prize Atlas</strong> — free-to-enter cash competition research. Facts verified against operator pages on 2026-11-01 UTC. Not financial, legal or tax advice.</p>
+    <p class="footer-links"><a href="./summary.html">Executive summary</a><a href="./method.html">Method &amp; sources</a><a href="./review.html">Flagged for review</a><a href="https://github.com/sassnarep3-star/Own1" target="_blank" rel="noopener noreferrer">Repository ↗</a></p>
+  </div>
+</footer>
+</body>
+</html>

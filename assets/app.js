@@ -1,12 +1,104 @@
-const BASE = document.body.dataset.base || './';
-const CATEGORIES = [
- ['sports','Fantasy & sports picks','Sports picks and fantasy leads','◈'],['tech','Tech & data','Model-building, code and hackathons','⌘'],['forecasting','Forecasting','Probability and prediction tournaments','◎'],['creative','Creative contests','Writing, design and photography','✳'],['market','Market simulations','Paper-trading leads; verify terms','▥'],['skill','Skill tournaments','Often paid cash rooms or noncash rewards','⚡'],['trivia','Trivia','Quiz and knowledge contests','?'],['pools','Pool tools','Tools; group-funded prizes are not operator cash','▦'],['directory','Directories','Find events; not contests themselves','↗']
-];
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const link=(url,label)=>url&&/^https:\/\//.test(url)?`<a class="source" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`:'<span class="mutedtext">—</span>';
-const $=id=>document.getElementById(id);
-function table(rows){return `<div class="table-wrap"><table><thead><tr><th>Listing</th><th>Evidence</th><th>Cash prize</th><th>Entry cost</th><th>Deadline</th><th>Official source / lead</th></tr></thead><tbody>${rows.map(r=>`<tr><td><span class="name">${esc(r.name)}</span><span class="subtle">${esc(CATEGORIES.find(c=>c[0]===r.category)?.[1]||r.category)}${r.kind?' · '+esc(r.kind):''}</span></td><td><span class="pill ${r.sourceStatus==='checked'?'good':'warn'}">${r.sourceStatus==='checked'?'Page checked':'Unverified'}</span></td><td>${esc(r.prize)||'<span class="mutedtext">—</span>'}</td><td>${esc(r.entry)||'<span class="mutedtext">—</span>'}</td><td>${esc(r.deadline)||'<span class="mutedtext">—</span>'}</td><td>${link(r.source,r.sourceStatus==='checked'?'Official page':'Research lead')}${r.note?`<span class="subtle">${esc(r.note)}</span>`:''}${!r.source?'<span class="subtle">No operator source located</span>':''}</td></tr>`).join('')}</tbody></table></div>`}
-function render(rows){const page=document.body.dataset.page;const checked=rows.filter(r=>r.sourceStatus==='checked');const unverified=rows.filter(r=>r.sourceStatus!=='checked');if($('all-count'))$('all-count').textContent=rows.length;if($('checked-count'))$('checked-count').textContent=checked.length;if($('review-count'))$('review-count').textContent=unverified.length;if($('category-grid'))$('category-grid').innerHTML=CATEGORIES.map(c=>`<a class="card" href="${BASE}category/${c[0]}.html"><span class="icon" aria-hidden="true">${c[3]}</span><h3>${esc(c[1])}</h3><p>${esc(c[2])}</p><span class="count">${rows.filter(r=>r.category===c[0]).length} leads →</span></a>`).join('');
-let initial=page==='review'?unverified:page==='category'?rows.filter(r=>r.category===document.body.dataset.category):checked;let current=initial;const search=$('search'),status=$('status'),kind=$('kind');function update(){let q=(search?.value||'').trim().toLowerCase();current=initial.filter(r=>(!q||[r.name,r.category,r.note,r.source].join(' ').toLowerCase().includes(q))&&(!status?.value||r.sourceStatus===status.value)&&(!kind?.value||r.kind===kind.value));$('rows').innerHTML=current.length?table(current):'<div class="empty">No matches. Try a different search or filter.</div>';$('result-count').textContent=`${current.length} of ${initial.length} listings`;}
-[search,status,kind].forEach(el=>el?.addEventListener(el.tagName==='INPUT'?'input':'change',update));update();}
-fetch(`${BASE}data/entries.json`).then(r=>{if(!r.ok)throw Error('Data unavailable');return r.json()}).then(render).catch(()=>{$('rows').innerHTML='<div class="empty">Could not load the catalog. Try refreshing the page.</div>'});
+/* Prize Atlas — progressive enhancement.
+   The site is fully readable without JavaScript: every table row is in the HTML.
+   This file only adds search, filters and sorting on top of that markup. */
+(function () {
+  'use strict';
+
+  var tables = Array.prototype.slice.call(document.querySelectorAll('[data-table]'));
+  if (!tables.length) return;
+
+  tables.forEach(function (root) {
+    var tbody = root.querySelector('tbody');
+    if (!tbody) return;
+
+    var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+    rows.forEach(function (row, i) {
+      row.dataset.i = String(i);
+      var title = row.querySelector('.cell-title');
+      row.dataset.name = (title ? title.textContent : row.textContent).trim().toLowerCase();
+    });
+
+    var controls = {
+      q: root.querySelector('[data-filter="q"]'),
+      cat: root.querySelector('[data-filter="cat"]'),
+      tier: root.querySelector('[data-filter="tier"]'),
+      flags: root.querySelector('[data-filter="flags"]'),
+      sort: root.querySelector('[data-filter="sort"]')
+    };
+    var counter = root.querySelector('[data-count]');
+    var scroll = root.querySelector('.table-scroll');
+
+    var empty = document.createElement('p');
+    empty.className = 'empty-state';
+    empty.hidden = true;
+    empty.textContent = root.dataset.empty || 'No rows match those filters.';
+    if (scroll && scroll.parentNode) scroll.parentNode.insertBefore(empty, scroll.nextSibling);
+
+    function value(el) { return el ? el.value.trim() : ''; }
+
+    function sortRows(list) {
+      var mode = value(controls.sort);
+      if (!mode) return list.slice().sort(function (a, b) { return Number(a.dataset.i) - Number(b.dataset.i); });
+      if (mode === 'name') return list.slice().sort(function (a, b) { return a.dataset.name.localeCompare(b.dataset.name); });
+      if (mode === 'prize') {
+        return list.slice().sort(function (a, b) {
+          return (Number(b.dataset.prize) || 0) - (Number(a.dataset.prize) || 0) ||
+            a.dataset.name.localeCompare(b.dataset.name);
+        });
+      }
+      if (mode === 'deadline') {
+        return list.slice().sort(function (a, b) {
+          var da = a.dataset.deadline || '';
+          var db = b.dataset.deadline || '';
+          if (!da && !db) return a.dataset.name.localeCompare(b.dataset.name);
+          if (!da) return 1;
+          if (!db) return -1;
+          return da.localeCompare(db);
+        });
+      }
+      return list;
+    }
+
+    function apply() {
+      var q = value(controls.q).toLowerCase();
+      var cat = value(controls.cat);
+      var tier = value(controls.tier);
+      var flag = value(controls.flags);
+
+      var visible = rows.filter(function (row) {
+        if (q && row.dataset.text.indexOf(q) === -1) return false;
+        if (cat && row.dataset.cat !== cat) return false;
+        if (tier && row.dataset.tier !== tier) return false;
+        if (flag && (row.dataset.flags || '').indexOf(flag) === -1) return false;
+        return true;
+      });
+
+      sortRows(visible).forEach(function (row) { tbody.appendChild(row); });
+
+      rows.forEach(function (row) { row.hidden = true; });
+      visible.forEach(function (row) { row.hidden = false; });
+
+      if (counter) {
+        var noun = root.querySelector('.data-table-verified') ? 'verified row' : 'listing';
+        counter.textContent = 'Showing ' + visible.length + ' of ' + rows.length + ' ' + noun + (rows.length === 1 ? '' : 's');
+      }
+      if (empty) empty.hidden = visible.length > 0;
+    }
+
+    var timer;
+    function onInput() {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(apply, 120);
+    }
+
+    if (controls.q) {
+      controls.q.addEventListener('input', onInput);
+      controls.q.addEventListener('search', apply);
+    }
+    ['cat', 'tier', 'flags', 'sort'].forEach(function (key) {
+      if (controls[key]) controls[key].addEventListener('change', apply);
+    });
+
+    apply();
+  });
+})();

@@ -1,0 +1,1344 @@
+[
+  {
+    "id": "espn-nfl-pickem-2026",
+    "name": "ESPN NFL Pick'em 2026",
+    "category": "sports",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://fantasy.espn.com/games/nfl-pickem-2026/",
+    "sourceLabel": "ESPN game page",
+    "evidence": [
+      {
+        "label": "Official rules, prizes and FAQ",
+        "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay"
+      },
+      {
+        "label": "ESPN free-to-play games index",
+        "url": "https://fantasy.espn.com/free-prize-games"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$102,000 total across 58 prizes",
+    "entryFee": "Free — rules state no purchase or payment necessary",
+    "deadline": "2027-01-10",
+    "deadlineNote": "Game dates listed as 09/09/2026 – 01/10/2027; each weekly matchup locks individually",
+    "eligibility": "Rules text: void in Puerto Rico, other U.S. territories, foreign territories and Quebec; rules state persons aged 13–17 are not eligible for the promotion",
+    "work": "Weekly NFL picks in up to 4 modes (Standard, Spread, Pick 5, Confidence)",
+    "payout": "",
+    "notes": "Prize breakdown read from the official rules page: 3 × $20,000 grand prizes (Standard, Spread, Pick 5), $10,000 Confidence grand prize, 18 weekly $500 prizes in each of three modes, and one $5,000 random drawing for complete picks in all 4 modes every week.",
+    "flags": [
+      "ESPN's own page states both 'create up to 10 entries' and 'up to five total' — confirm the limit in the current UI before entering"
+    ],
+    "effort": "low",
+    "fit": "medium"
+  },
+  {
+    "id": "espn-college-pickem-2026",
+    "name": "ESPN College Pick'em 2026",
+    "category": "sports",
+    "recordType": "verified",
+    "tier": "C",
+    "source": "https://fantasy.espn.com/games/nfl-pickem-2026/picks",
+    "sourceLabel": "ESPN related-games tile",
+    "evidence": [
+      {
+        "label": "Related game tile: 'College Pick'em — LIVE • Sep 5 - Dec 5'",
+        "url": "https://fantasy.espn.com/games/nfl-pickem-2026/picks"
+      },
+      {
+        "label": "ESPN FAQ: 'every game we offer is completely free'",
+        "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "",
+    "entryFee": "Free (ESPN's FAQ says every game it offers is free)",
+    "deadline": "2026-12-05",
+    "deadlineNote": "Displayed as 'Sep 5 - Dec 5' on the tile checked 2026-11-01",
+    "eligibility": "",
+    "work": "Weekly college football picks",
+    "payout": "",
+    "notes": "Only the live window and free-entry statement were confirmed. Prize amounts and entry limits for this specific game were not on the page inspected.",
+    "flags": [
+      "Prize amount not stated on the page inspected",
+      "Specific rules page not opened — check before entering"
+    ],
+    "effort": "low",
+    "fit": "low"
+  },
+  {
+    "id": "cbs-pro-football-pickem-2026",
+    "name": "CBS Sports Pro Football Pick'em 2026",
+    "category": "sports",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://www.cbssports.com/fantasy/football/games/pickem/rules",
+    "sourceLabel": "Official contest rules",
+    "evidence": [
+      {
+        "label": "2026 Official Rules (no cost, eligibility, prizes)",
+        "url": "https://www.cbssports.com/fantasy/football/games/pickem/rules"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$18,000 in weekly prizes ($1,000 x 18) + $5,000 season prize + $100,000 contingency prize",
+    "entryFee": "Free — rules state 'No purchase, wireless device or entry fee necessary to enter or win'",
+    "deadline": "2027-01-10",
+    "deadlineNote": "Challenge period 2026-09-09 to 2027-01-10; picks lock at the scheduled start of the last listed game each week",
+    "eligibility": "Registered CBSI user; legal resident of one of the 50 United States or DC; 18+ or age of majority; Puerto Rico and US territories excluded",
+    "work": "Weekly NFL picks against a winning margin, plus tiebreaker score predictions",
+    "payout": "Prize paid by check or as CBSI decides",
+    "notes": "Prize structure read from the official rules on 2026-11-01. The contingency prize requires correctly picking every game in a week and predicting exact scores in all four tiebreaker slots.",
+    "flags": [
+      "Contingency prize requires an exact-score parlay — treat $100,000 as effectively unreachable"
+    ],
+    "effort": "low",
+    "fit": "medium"
+  },
+  {
+    "id": "cbs-college-football-pickem-2026",
+    "name": "CBS Sports College Football Pick'em 2026",
+    "category": "sports",
+    "recordType": "verified",
+    "tier": "C",
+    "source": "https://www.cbssports.com/fantasy/college-football/games/pickem/rules",
+    "sourceLabel": "Official contest rules",
+    "evidence": [
+      {
+        "label": "2026 Official Rules (no cost, eligibility, dates)",
+        "url": "https://www.cbssports.com/fantasy/college-football/games/pickem/rules"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "",
+    "entryFee": "Free — rules state 'No purchase, wireless device or entry fee necessary to enter or win'",
+    "deadline": "2026-11-28",
+    "deadlineNote": "Challenge period 2026-09-05 to 2026-11-28 across 13 weekly contest periods",
+    "eligibility": "Registered CBSI user; legal resident of one of the 50 United States or DC; 18+ or age of majority; Puerto Rico and US territories excluded",
+    "work": "Weekly college football picks against a winning margin",
+    "payout": "",
+    "notes": "Free entry, eligibility and dates read from the official rules. The prize amounts sit in a later section of the same rules document and were not read in this pass.",
+    "flags": [
+      "Prize amounts not read — verify in section 3 of the official rules",
+      "Contest period ends 2026-11-28"
+    ],
+    "effort": "low",
+    "fit": "low"
+  },
+  {
+    "id": "kaggle-platform",
+    "name": "Kaggle Competitions (platform)",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "C",
+    "source": "https://www.kaggle.com/competitions",
+    "sourceLabel": "Kaggle competitions hub",
+    "evidence": [
+      {
+        "label": "Competitions and Hackathons hub",
+        "url": "https://www.kaggle.com/competitions"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "deadlineNote": "Per competition",
+    "eligibility": "",
+    "work": "Build models/notebooks and submit to a leaderboard",
+    "payout": "",
+    "notes": "Kaggle describes 'Featured' as 'Premier challenges with prizes'; Getting Started, Playground, Research and Community categories are not stated to carry prizes. This row is the platform, not a single event.",
+    "flags": [
+      "Prize varies by competition — only individual listings can be cited",
+      "Entry terms and eligibility are set per competition"
+    ],
+    "effort": "high",
+    "fit": "high"
+  },
+  {
+    "id": "kaggle-nfl-big-data-bowl-2027",
+    "name": "NFL Big Data Bowl 2027 (Kaggle)",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://www.kaggle.com/competitions/nfl-big-data-bowl-2027",
+    "sourceLabel": "Kaggle competition page",
+    "evidence": [
+      {
+        "label": "Listing on the Kaggle competitions hub (prize and countdown)",
+        "url": "https://www.kaggle.com/competitions"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$100,000",
+    "entryFee": "",
+    "deadline": "",
+    "deadlineNote": "Hub displayed '2 months to go' on 2026-11-01; exact closing date not read",
+    "eligibility": "",
+    "work": "Analytics/model submission on NFL player-tracking data",
+    "payout": "",
+    "notes": "Prize total and countdown read from the Kaggle hub card. The competition rules page was not opened, so entry cost, eligibility and exact deadline are blank.",
+    "flags": [
+      "Exact deadline, entry cost and eligibility not verified — open the competition rules"
+    ],
+    "effort": "high",
+    "fit": "high"
+  },
+  {
+    "id": "kaggle-gemma-4-developer-agent-paper",
+    "name": "Google Gemma 4 Developer Agent Paper Track (Kaggle)",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://www.kaggle.com/competitions/gemma-4-developer-agent-paper",
+    "sourceLabel": "Kaggle competition page",
+    "evidence": [
+      {
+        "label": "Listing on the Kaggle competitions hub (prize and countdown)",
+        "url": "https://www.kaggle.com/competitions"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$35,000",
+    "entryFee": "",
+    "deadline": "",
+    "deadlineNote": "Hub displayed '11 days to go' on 2026-11-01; exact closing date not read",
+    "eligibility": "",
+    "work": "Research paper on agentic software engineering",
+    "payout": "",
+    "notes": "Prize total and countdown read from the Kaggle hub card; the track rules were not opened.",
+    "flags": [
+      "Exact deadline, entry cost and eligibility not verified — open the competition rules"
+    ],
+    "effort": "medium",
+    "fit": "high"
+  },
+  {
+    "id": "kaggle-arc-prize-2026-paper-track",
+    "name": "ARC Prize 2026 — Paper Track (Kaggle)",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://www.kaggle.com/competitions/arc-prize-2026-paper-track",
+    "sourceLabel": "Kaggle competition page",
+    "evidence": [
+      {
+        "label": "Listing on the Kaggle competitions hub (prize and countdown)",
+        "url": "https://www.kaggle.com/competitions"
+      },
+      {
+        "label": "ARC Prize 2026 key dates and rules",
+        "url": "https://arcprize.org/competitions/2026"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$450,000",
+    "entryFee": "",
+    "deadline": "2026-11-08",
+    "deadlineNote": "ARC Prize states papers are due November 8, 2026; Kaggle hub displayed '8 days to go' on 2026-11-01",
+    "eligibility": "Open source required: 'all code and methods authored by the submitter must be made open source under a permissive public domain license'",
+    "work": "Paper describing an approach that advances performance on ARC-AGI",
+    "payout": "",
+    "notes": "ARC Prize's own page gives $2M across three tracks; Kaggle attributes $450,000 to this paper track. Both figures are operator-stated and consistent with a split by track.",
+    "flags": [
+      "Countdown on Kaggle and the stated paper deadline differ by about one day — treat 2026-11-08 as the operator date and submit early",
+      "Entry cost not stated on either page inspected"
+    ],
+    "effort": "medium",
+    "fit": "high"
+  },
+  {
+    "id": "arc-prize-2026",
+    "name": "ARC Prize 2026 (ARC-AGI-3, ARC-AGI-2, Paper Prize)",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://arcprize.org/competitions/2026",
+    "sourceLabel": "ARC Prize competition page",
+    "evidence": [
+      {
+        "label": "Prizes, key dates, rules and eligibility",
+        "url": "https://arcprize.org/competitions/2026"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$2,000,000 across three tracks",
+    "entryFee": "",
+    "deadline": "2026-11-02",
+    "deadlineNote": "Submissions due 2026-11-02; papers due 2026-11-08; results announced 2026-12-04",
+    "eligibility": "Reproducible, open-source submissions required; internet access is not available during Kaggle evaluation, so API-based systems cannot be used",
+    "work": "Build and open-source an agent/model for ARC-AGI, or publish a paper",
+    "payout": "",
+    "notes": "Three tracks: ARC-AGI-3 (interactive reasoning), ARC-AGI-2 (static benchmark) and the Paper Prize. Prizes are awarded at ARC Prize Inc.'s discretion and may be more or fewer than listed.",
+    "flags": [
+      "Submission deadline 2026-11-02 is imminent",
+      "No internet or frontier-model API use during Kaggle evaluation",
+      "Entry cost not stated on the page inspected"
+    ],
+    "effort": "high",
+    "fit": "high"
+  },
+  {
+    "id": "drivendata-gems",
+    "name": "GEMS Prize Challenge (DrivenData / U.S. DOE)",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://www.drivendata.org/competitions/306/competition-doe-gems/",
+    "sourceLabel": "DrivenData competition page",
+    "evidence": [
+      {
+        "label": "Competition overview, prize pool and end date",
+        "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/"
+      },
+      {
+        "label": "Official rules",
+        "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/rules/"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$300,000 total ($50,000 initial round + $250,000 final round)",
+    "entryFee": "",
+    "deadline": "2026-12-03",
+    "deadlineNote": "Dec. 3, 2026, 11:59 p.m. UTC",
+    "eligibility": "Eligibility criteria are in the official rules page; not restated on the overview",
+    "work": "Build an algorithm that generates enhanced geologic fault datasets",
+    "payout": "",
+    "notes": "Prize ladder read from the overview: initial round pays five awards of $10,000; final round pays $100,000 / $70,000 / $40,000 / $25,000 / $15,000 for the top five on a re-labeled dataset.",
+    "flags": [
+      "Entry cost not stated on the pages inspected",
+      "Eligibility requires reading the rules page"
+    ],
+    "effort": "high",
+    "fit": "high"
+  },
+  {
+    "id": "drivendata-platform",
+    "name": "DrivenData Competitions (platform)",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "C",
+    "source": "https://www.drivendata.org/competitions/",
+    "sourceLabel": "DrivenData competitions index",
+    "evidence": [
+      {
+        "label": "Index separates prize competitions, benchmarks and practice",
+        "url": "https://www.drivendata.org/competitions/"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "",
+    "deadlineNote": "Per competition",
+    "eligibility": "",
+    "work": "Data-science competition submissions",
+    "payout": "",
+    "notes": "The index groups listings as 'Prize competitions', 'Benchmarks' and 'Practice competitions'. Only the prize group is stated to carry cash.",
+    "flags": [
+      "Only prize competitions carry cash; benchmarks and practice do not",
+      "Entry cost not stated on the index page"
+    ],
+    "effort": "high",
+    "fit": "medium"
+  },
+  {
+    "id": "devpost-paypal-ai",
+    "name": "PayPal AI Hackathon (Devpost)",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://paypalaihackathon.devpost.com/",
+    "sourceLabel": "Official hackathon page",
+    "evidence": [
+      {
+        "label": "Deadline, eligibility, requirements and prizes",
+        "url": "https://paypalaihackathon.devpost.com/"
+      },
+      {
+        "label": "Official rules",
+        "url": "https://paypalaihackathon.devpost.com/rules"
+      },
+      {
+        "label": "Devpost listing",
+        "url": "https://devpost.com/hackathons"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$67,500 in cash (page body also states $69,750 in total prizes)",
+    "entryFee": "",
+    "deadline": "2026-11-12",
+    "deadlineNote": "Nov 12, 2026 @ 3:00pm EST",
+    "eligibility": "Above legal age of majority in country of residence; all countries/territories excluding standard exceptions",
+    "work": "Working app that meaningfully integrates PayPal APIs plus AI, public repo, demo video under 3 minutes",
+    "payout": "",
+    "notes": "Requirements read from the event page: public open-source repository with a visible licence, a runnable demo, and a public YouTube demo video under three minutes.",
+    "flags": [
+      "Prize figures conflict on the same page: $67,500 'in cash' versus $69,750 'in total prizes'",
+      "Entry cost not stated; hackathons normally do not charge, but confirm in the rules"
+    ],
+    "effort": "medium",
+    "fit": "high"
+  },
+  {
+    "id": "devpost-kiroween-2026",
+    "name": "Kiroween 2026 (Kiro / Devpost)",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://kiroween.devpost.com/",
+    "sourceLabel": "Devpost event page",
+    "evidence": [
+      {
+        "label": "Devpost listing with dates and prize total",
+        "url": "https://devpost.com/hackathons"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$100,000 in prizes",
+    "entryFee": "",
+    "deadline": "2026-12-04",
+    "deadlineNote": "Listed as Oct 30 – Dec 04, 2026",
+    "eligibility": "",
+    "work": "Build a project with the Kiro toolchain",
+    "payout": "",
+    "notes": "Name, date range and prize total read from Devpost's public listing on 2026-11-01.",
+    "flags": [
+      "Devpost states a total 'in prizes'; cash versus non-cash split not verified",
+      "Event rules not opened — eligibility and entry cost unverified"
+    ],
+    "effort": "medium",
+    "fit": "high"
+  },
+  {
+    "id": "devpost-meta-vr-2026",
+    "name": "Meta VR Start Developer Competition 2026 (Devpost)",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://start-developer-competition-26.devpost.com/",
+    "sourceLabel": "Devpost event page",
+    "evidence": [
+      {
+        "label": "Devpost listing with dates and prize total",
+        "url": "https://devpost.com/hackathons"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$1,000,000 in prizes",
+    "entryFee": "",
+    "deadline": "2026-11-18",
+    "deadlineNote": "Listed as Sep 24 – Nov 18, 2026",
+    "eligibility": "",
+    "work": "VR / AR development project",
+    "payout": "",
+    "notes": "Name, date range and prize total read from Devpost's public listing on 2026-11-01.",
+    "flags": [
+      "Devpost states a total 'in prizes'; cash versus non-cash split not verified",
+      "Event rules not opened — eligibility and entry cost unverified"
+    ],
+    "effort": "high",
+    "fit": "medium"
+  },
+  {
+    "id": "devpost-codegeist-2026",
+    "name": "Codegeist 2026 (Atlassian / Devpost)",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://codegeist2026.devpost.com/",
+    "sourceLabel": "Devpost event page",
+    "evidence": [
+      {
+        "label": "Devpost listing with dates and prize total",
+        "url": "https://devpost.com/hackathons"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$120,000 in prizes",
+    "entryFee": "",
+    "deadline": "2026-12-22",
+    "deadlineNote": "Listed as Oct 27 – Dec 22, 2026",
+    "eligibility": "",
+    "work": "App built on Atlassian's platform",
+    "payout": "",
+    "notes": "Name, date range and prize total read from Devpost's public listing on 2026-11-01.",
+    "flags": [
+      "Devpost states a total 'in prizes'; cash versus non-cash split not verified",
+      "Event rules not opened — eligibility and entry cost unverified"
+    ],
+    "effort": "medium",
+    "fit": "high"
+  },
+  {
+    "id": "devpost-ugreen-ai-nas",
+    "name": "UGREEN Hackathon 2026 on AI NAS (Devpost)",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://ugreenhackathon.devpost.com/",
+    "sourceLabel": "Devpost event page",
+    "evidence": [
+      {
+        "label": "Devpost listing with dates and prize total",
+        "url": "https://devpost.com/hackathons"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$46,000 in prizes",
+    "entryFee": "",
+    "deadline": "2026-11-16",
+    "deadlineNote": "Listed as Oct 22 – Nov 16, 2026",
+    "eligibility": "",
+    "work": "Software project for a UGREEN AI NAS",
+    "payout": "",
+    "notes": "Name, date range and prize total read from Devpost's public listing on 2026-11-01.",
+    "flags": [
+      "Devpost states a total 'in prizes'; cash versus non-cash split not verified",
+      "Event rules not opened — eligibility and entry cost unverified"
+    ],
+    "effort": "medium",
+    "fit": "medium"
+  },
+  {
+    "id": "devpost-learn-ar-specs",
+    "name": "Learn AR with SPECS (Devpost)",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "B",
+    "source": "https://learn-specs.devpost.com/",
+    "sourceLabel": "Devpost event page",
+    "evidence": [
+      {
+        "label": "Devpost listing with dates and prize total",
+        "url": "https://devpost.com/hackathons"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$2,500 in prizes",
+    "entryFee": "",
+    "deadline": "2026-11-09",
+    "deadlineNote": "Listed as Oct 15 – Nov 09, 2026",
+    "eligibility": "",
+    "work": "AR learning project",
+    "payout": "",
+    "notes": "Name, date range and prize total read from Devpost's public listing on 2026-11-01.",
+    "flags": [
+      "Small prize pool relative to build effort",
+      "Event rules not opened — eligibility and entry cost unverified"
+    ],
+    "effort": "medium",
+    "fit": "low"
+  },
+  {
+    "id": "devpost-codex-twitchcon",
+    "name": "Codex x TwitchCon Hackathon (Devpost)",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "B",
+    "source": "https://twitchcon-codex.devpost.com/",
+    "sourceLabel": "Devpost event page",
+    "evidence": [
+      {
+        "label": "Devpost listing with dates and prize total",
+        "url": "https://devpost.com/hackathons"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$25,000 in prizes",
+    "entryFee": "",
+    "deadline": "2026-11-02",
+    "deadlineNote": "Listed as Oct 23 – Nov 02, 2026",
+    "eligibility": "",
+    "work": "Project built with Codex",
+    "payout": "",
+    "notes": "Name, date range and prize total read from Devpost's public listing on 2026-11-01.",
+    "flags": [
+      "Ends 2026-11-02 — effectively out of reach",
+      "Event rules not opened — eligibility and entry cost unverified"
+    ],
+    "effort": "medium",
+    "fit": "low"
+  },
+  {
+    "id": "devpost-youcam-skin-ai",
+    "name": "YouCam API Skin AI & eCommerce VTO Hackathon (Devpost)",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "C",
+    "source": "https://youcam-api-skin-ai-ecommerce.devpost.com/",
+    "sourceLabel": "Devpost event page",
+    "evidence": [
+      {
+        "label": "Devpost listing with dates and prize total",
+        "url": "https://devpost.com/hackathons"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$6,000 in prizes",
+    "entryFee": "",
+    "deadline": "2026-11-02",
+    "deadlineNote": "Listed as Sep 29 – Nov 02, 2026",
+    "eligibility": "",
+    "work": "Project using the YouCam API",
+    "payout": "",
+    "notes": "Name, date range and prize total read from Devpost's public listing on 2026-11-01.",
+    "flags": [
+      "Ends 2026-11-02 — effectively out of reach",
+      "Event rules not opened — eligibility and entry cost unverified"
+    ],
+    "effort": "medium",
+    "fit": "low"
+  },
+  {
+    "id": "devpost-dsh-hacks-v2",
+    "name": "DSH Hacks V2 (Devpost)",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "C",
+    "source": "https://dsh-hacks-v2.devpost.com/",
+    "sourceLabel": "Devpost event page",
+    "evidence": [
+      {
+        "label": "Devpost listing with dates and prize description",
+        "url": "https://devpost.com/hackathons"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "",
+    "entryFee": "",
+    "deadline": "2026-11-15",
+    "deadlineNote": "Listed as Jun 24 – Nov 15, 2026",
+    "eligibility": "",
+    "work": "Student hackathon project",
+    "payout": "",
+    "notes": "Devpost's card for this event reads '5 non-cash prizes' while the event title advertises '$100k+ in prizes'. The listing's own prize counter is non-cash.",
+    "flags": [
+      "Devpost lists 5 non-cash prizes — not a cash opportunity",
+      "Title claims $100k+ in prizes, which conflicts with the non-cash counter",
+      "Entry cost not read from the event rules"
+    ],
+    "effort": "medium",
+    "fit": "low"
+  },
+  {
+    "id": "metaculus-platform",
+    "name": "Metaculus Tournaments (platform)",
+    "category": "forecasting",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://www.metaculus.com/tournaments/",
+    "sourceLabel": "Metaculus tournaments hub",
+    "evidence": [
+      {
+        "label": "Tournaments hub: 'You can participate for free and win cash prizes for being accurate'",
+        "url": "https://www.metaculus.com/tournaments/"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "",
+    "entryFee": "Free — operator states you can participate for free",
+    "deadline": "",
+    "deadlineNote": "Per tournament",
+    "eligibility": "",
+    "work": "Submit probability forecasts on open questions",
+    "payout": "",
+    "notes": "The hub listed 19 tournaments on 2026-11-01, some with a prize pool and some explicitly marked 'NO PRIZE POOL'. This row covers the platform; individual tournaments are listed separately.",
+    "flags": [
+      "Several listed tournaments carry no prize pool — check the label on each tournament"
+    ],
+    "effort": "low",
+    "fit": "high"
+  },
+  {
+    "id": "metaculus-us-midterms-2026",
+    "name": "US Midterms 2026 (Metaculus)",
+    "category": "forecasting",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://www.metaculus.com/tournament/midterms-2026/",
+    "sourceLabel": "Metaculus tournament page",
+    "evidence": [
+      {
+        "label": "Tournament card: $10,000 prize pool, 'Ends 3 days from now'",
+        "url": "https://www.metaculus.com/tournaments/"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$10,000 prize pool",
+    "entryFee": "Free",
+    "deadline": "",
+    "deadlineNote": "Hub displayed 'Ends 3 days from now' on 2026-11-01; exact closing date not read",
+    "eligibility": "",
+    "work": "Forecast US midterm questions",
+    "payout": "",
+    "notes": "Prize pool read from the tournament card on the Metaculus hub; registration closes with the tournament.",
+    "flags": [
+      "Closes within days of 2026-11-01",
+      "Entry terms per tournament rules page not opened"
+    ],
+    "effort": "low",
+    "fit": "medium"
+  },
+  {
+    "id": "metaculus-cup-fall-2026",
+    "name": "Metaculus Cup Fall 2026",
+    "category": "forecasting",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://www.metaculus.com/tournament/metaculus-cup-fall-2026/",
+    "sourceLabel": "Metaculus tournament page",
+    "evidence": [
+      {
+        "label": "Tournament card: $5,000 prize pool, 'Ends 2 months from now'",
+        "url": "https://www.metaculus.com/tournaments/"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$5,000 prize pool",
+    "entryFee": "Free",
+    "deadline": "",
+    "deadlineNote": "Hub displayed 'Ends 2 months from now' on 2026-11-01",
+    "eligibility": "",
+    "work": "Forecast a mixed question set",
+    "payout": "",
+    "notes": "Prize pool read from the tournament card on the Metaculus hub.",
+    "flags": [
+      "Entry terms per tournament rules page not opened"
+    ],
+    "effort": "low",
+    "fit": "high"
+  },
+  {
+    "id": "metaculus-acx-2026",
+    "name": "ACX 2026 Prediction Contest (Metaculus)",
+    "category": "forecasting",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://www.metaculus.com/tournament/ACX2026/",
+    "sourceLabel": "Metaculus tournament page",
+    "evidence": [
+      {
+        "label": "Tournament card: $10,000 prize pool, 'Ends 2 months from now'",
+        "url": "https://www.metaculus.com/tournaments/"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$10,000 prize pool",
+    "entryFee": "Free",
+    "deadline": "",
+    "deadlineNote": "Hub displayed 'Ends 2 months from now' on 2026-11-01",
+    "eligibility": "",
+    "work": "Forecast contest questions",
+    "payout": "",
+    "notes": "Prize pool read from the tournament card on the Metaculus hub.",
+    "flags": [
+      "Entry terms per tournament rules page not opened"
+    ],
+    "effort": "low",
+    "fit": "high"
+  },
+  {
+    "id": "metaculus-market-pulse-26q4",
+    "name": "Market Pulse Challenge 26Q4 (Metaculus)",
+    "category": "forecasting",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://www.metaculus.com/tournament/market-pulse-26q4/",
+    "sourceLabel": "Metaculus tournament page",
+    "evidence": [
+      {
+        "label": "Tournament card: $7,500 prize pool, 'Ends 2 months from now'",
+        "url": "https://www.metaculus.com/tournaments/"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$7,500 prize pool",
+    "entryFee": "Free",
+    "deadline": "",
+    "deadlineNote": "Hub displayed 'Ends 2 months from now' on 2026-11-01",
+    "eligibility": "",
+    "work": "Forecast market-related questions",
+    "payout": "",
+    "notes": "Prize pool read from the tournament card on the Metaculus hub.",
+    "flags": [
+      "Entry terms per tournament rules page not opened"
+    ],
+    "effort": "low",
+    "fit": "high"
+  },
+  {
+    "id": "metaculus-fall-futureeval-2026",
+    "name": "Fall 2026 FutureEval Bot Tournament (Metaculus)",
+    "category": "forecasting",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://www.metaculus.com/tournament/fall-futureeval-2026/",
+    "sourceLabel": "Metaculus tournament page",
+    "evidence": [
+      {
+        "label": "Tournament card: $50,000 prize pool, 'Ends 2 months from now'",
+        "url": "https://www.metaculus.com/tournaments/"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$50,000 prize pool",
+    "entryFee": "Free",
+    "deadline": "",
+    "deadlineNote": "Hub displayed 'Ends 2 months from now' on 2026-11-01",
+    "eligibility": "",
+    "work": "Automated/bot forecasting tournament",
+    "payout": "",
+    "notes": "Largest active Metaculus pool seen on 2026-11-01 and explicitly a bot tournament, which suits automated forecasting work.",
+    "flags": [
+      "Entry terms, API rules and eligibility not read — open the tournament rules"
+    ],
+    "effort": "medium",
+    "fit": "high"
+  },
+  {
+    "id": "metaculus-potus-predictions",
+    "name": "POTUS Predictions (Metaculus)",
+    "category": "forecasting",
+    "recordType": "verified",
+    "tier": "B",
+    "source": "https://www.metaculus.com/tournament/POTUS-predictions/",
+    "sourceLabel": "Metaculus tournament page",
+    "evidence": [
+      {
+        "label": "Tournament card: $15,000 prize pool, 'Ends 2 years from now'",
+        "url": "https://www.metaculus.com/tournaments/"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$15,000 prize pool",
+    "entryFee": "Free",
+    "deadline": "",
+    "deadlineNote": "Hub displayed 'Ends 2 years from now' on 2026-11-01",
+    "eligibility": "",
+    "work": "Long-horizon political forecasting",
+    "payout": "",
+    "notes": "Prize pool read from the tournament card on the Metaculus hub; payout is far out in time.",
+    "flags": [
+      "Payout horizon measured in years",
+      "Entry terms per tournament rules page not opened"
+    ],
+    "effort": "low",
+    "fit": "medium"
+  },
+  {
+    "id": "metaculus-labor-automation",
+    "name": "Labor Automation Tournament (Metaculus)",
+    "category": "forecasting",
+    "recordType": "verified",
+    "tier": "B",
+    "source": "https://www.metaculus.com/tournament/labor-hub/",
+    "sourceLabel": "Metaculus tournament page",
+    "evidence": [
+      {
+        "label": "Tournament card: $35,000 prize pool, 'Ends 9 years from now'",
+        "url": "https://www.metaculus.com/tournaments/"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$35,000 prize pool",
+    "entryFee": "Free",
+    "deadline": "",
+    "deadlineNote": "Hub displayed 'Ends 9 years from now' on 2026-11-01",
+    "eligibility": "",
+    "work": "Long-horizon labour and automation forecasting",
+    "payout": "",
+    "notes": "Prize pool read from the tournament card on the Metaculus hub.",
+    "flags": [
+      "Nine-year horizon — not a near-term cash path",
+      "Entry terms per tournament rules page not opened"
+    ],
+    "effort": "low",
+    "fit": "low"
+  },
+  {
+    "id": "metaculus-animal-futures",
+    "name": "Animal Futures Tournament (Metaculus)",
+    "category": "forecasting",
+    "recordType": "verified",
+    "tier": "B",
+    "source": "https://www.metaculus.com/tournament/33016/",
+    "sourceLabel": "Metaculus tournament page",
+    "evidence": [
+      {
+        "label": "Tournament card: $3,400 prize pool, 'Ends 8 months from now'",
+        "url": "https://www.metaculus.com/tournaments/"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$3,400 prize pool",
+    "entryFee": "Free",
+    "deadline": "",
+    "deadlineNote": "Hub displayed 'Ends 8 months from now' on 2026-11-01",
+    "eligibility": "",
+    "work": "Forecast animal-welfare questions",
+    "payout": "",
+    "notes": "Prize pool read from the tournament card on the Metaculus hub.",
+    "flags": [
+      "Entry terms per tournament rules page not opened"
+    ],
+    "effort": "low",
+    "fit": "low"
+  },
+  {
+    "id": "metaculus-sagan-space",
+    "name": "The Sagan Space Tournament (Metaculus)",
+    "category": "forecasting",
+    "recordType": "verified",
+    "tier": "B",
+    "source": "https://www.metaculus.com/tournament/sagan-tournament/",
+    "sourceLabel": "Metaculus tournament page",
+    "evidence": [
+      {
+        "label": "Tournament card: $5,000 prize pool, 'Ends 4 years from now'",
+        "url": "https://www.metaculus.com/tournaments/"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$5,000 prize pool",
+    "entryFee": "Free",
+    "deadline": "",
+    "deadlineNote": "Hub displayed 'Ends 4 years from now' on 2026-11-01",
+    "eligibility": "",
+    "work": "Space-related forecasting",
+    "payout": "",
+    "notes": "Prize pool read from the tournament card on the Metaculus hub.",
+    "flags": [
+      "Multi-year horizon",
+      "Entry terms per tournament rules page not opened"
+    ],
+    "effort": "low",
+    "fit": "low"
+  },
+  {
+    "id": "metaculus-climate-tipping",
+    "name": "Climate Tipping Points (Metaculus)",
+    "category": "forecasting",
+    "recordType": "verified",
+    "tier": "B",
+    "source": "https://www.metaculus.com/tournament/climate/",
+    "sourceLabel": "Metaculus tournament page",
+    "evidence": [
+      {
+        "label": "Tournament card: $5,000 prize pool, 'Ends 2 months from now'",
+        "url": "https://www.metaculus.com/tournaments/"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$5,000 prize pool",
+    "entryFee": "Free",
+    "deadline": "",
+    "deadlineNote": "Hub displayed 'Ends 2 months from now' on 2026-11-01",
+    "eligibility": "",
+    "work": "Climate forecasting",
+    "payout": "",
+    "notes": "Prize pool read from the tournament card on the Metaculus hub.",
+    "flags": [
+      "Entry terms per tournament rules page not opened"
+    ],
+    "effort": "low",
+    "fit": "medium"
+  },
+  {
+    "id": "metaculus-ai-pathways",
+    "name": "AI Pathways Tournament (Metaculus)",
+    "category": "forecasting",
+    "recordType": "verified",
+    "tier": "B",
+    "source": "https://www.metaculus.com/tournament/foresight-ai-pathways/",
+    "sourceLabel": "Metaculus tournament page",
+    "evidence": [
+      {
+        "label": "Tournament card: $5,000 prize pool, 'Ends 4 years from now'",
+        "url": "https://www.metaculus.com/tournaments/"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$5,000 prize pool",
+    "entryFee": "Free",
+    "deadline": "",
+    "deadlineNote": "Hub displayed 'Ends 4 years from now' on 2026-11-01",
+    "eligibility": "",
+    "work": "AI-development forecasting",
+    "payout": "",
+    "notes": "Prize pool read from the tournament card on the Metaculus hub.",
+    "flags": [
+      "Multi-year horizon",
+      "Entry terms per tournament rules page not opened"
+    ],
+    "effort": "low",
+    "fit": "low"
+  },
+  {
+    "id": "metaculus-our-world-in-data",
+    "name": "Forecasting Our World in Data (Metaculus)",
+    "category": "forecasting",
+    "recordType": "verified",
+    "tier": "B",
+    "source": "https://www.metaculus.com/tournament/forecasting-Our-World-in-Data/",
+    "sourceLabel": "Metaculus tournament page",
+    "evidence": [
+      {
+        "label": "Tournament card: $20,000 prize pool, 'Pending resolutions'",
+        "url": "https://www.metaculus.com/tournaments/"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$20,000 prize pool",
+    "entryFee": "Free",
+    "deadline": "",
+    "deadlineNote": "Hub showed 'Pending resolutions' on 2026-11-01 — new entries may not be possible",
+    "eligibility": "",
+    "work": "Forecast OWID tracked indicators",
+    "payout": "",
+    "notes": "Prize pool read from the tournament card; the card says 'Pending resolutions', so entry status is uncertain.",
+    "flags": [
+      "Marked 'Pending resolutions' — likely closed to new entries"
+    ],
+    "effort": "low",
+    "fit": "low"
+  },
+  {
+    "id": "metaculus-global-health-monitor",
+    "name": "Global Health Monitor 2026/27 (Metaculus)",
+    "category": "forecasting",
+    "recordType": "verified",
+    "tier": "C",
+    "source": "https://www.metaculus.com/tournament/global-health-monitor-26-27/",
+    "sourceLabel": "Metaculus tournament page",
+    "evidence": [
+      {
+        "label": "Tournament card labelled 'NO PRIZE POOL'",
+        "url": "https://www.metaculus.com/tournaments/"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "",
+    "entryFee": "Free",
+    "deadline": "",
+    "deadlineNote": "Hub displayed 'Ends 1 year from now' on 2026-11-01",
+    "eligibility": "",
+    "work": "Health forecasting",
+    "payout": "",
+    "notes": "Listed with the explicit label 'NO PRIZE POOL' on 2026-11-01.",
+    "flags": [
+      "No prize pool — listed for completeness, not a cash opportunity"
+    ],
+    "effort": "low",
+    "fit": "low"
+  },
+  {
+    "id": "sony-swpa-series",
+    "name": "Sony World Photography Awards — Series competition",
+    "category": "creative",
+    "recordType": "verified",
+    "tier": "A",
+    "source": "https://www.worldphoto.org/sony-world-photography-awards",
+    "sourceLabel": "World Photography Organisation",
+    "evidence": [
+      {
+        "label": "Awards page: prize, free entry statement and timeline",
+        "url": "https://www.worldphoto.org/sony-world-photography-awards"
+      },
+      {
+        "label": "Series competition details",
+        "url": "https://www.worldphoto.org/sony-world-photography-awards/professional"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$25,000 plus Sony equipment and a solo exhibition",
+    "entryFee": "Free — the organiser states the Awards have been 'free to enter' since the beginning",
+    "deadline": "2027-01-12",
+    "deadlineNote": "Series competition closes 12 January 2027, 16:00 GMT",
+    "eligibility": "",
+    "work": "Series of 5–10 images with a narrative project",
+    "payout": "",
+    "notes": "Prize and deadline read from the 2027 Awards page on 2026-11-01. The page also lists a Student competition closing 27 November 2026 and Single Image/Youth closing 5 January 2027.",
+    "flags": [
+      "Eligibility terms per competition page not read in full"
+    ],
+    "effort": "high",
+    "fit": "low"
+  },
+  {
+    "id": "sony-swpa-single-image",
+    "name": "Sony World Photography Awards — Single Image competition",
+    "category": "creative",
+    "recordType": "verified",
+    "tier": "B",
+    "source": "https://www.worldphoto.org/sony-world-photography-awards",
+    "sourceLabel": "World Photography Organisation",
+    "evidence": [
+      {
+        "label": "Awards page: prize, free entry statement and timeline",
+        "url": "https://www.worldphoto.org/sony-world-photography-awards"
+      },
+      {
+        "label": "Single Image competition details",
+        "url": "https://www.worldphoto.org/sony-world-photography-awards/open"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$5,000 plus Sony equipment",
+    "entryFee": "Free",
+    "deadline": "2027-01-05",
+    "deadlineNote": "Single Image competition closes 5 January 2027, 16:00 GMT",
+    "eligibility": "",
+    "work": "One or more standalone photographs",
+    "payout": "",
+    "notes": "Prize and deadline read from the 2027 Awards page on 2026-11-01.",
+    "flags": [
+      "Eligibility terms per competition page not read in full"
+    ],
+    "effort": "medium",
+    "fit": "low"
+  },
+  {
+    "id": "sony-swpa-student",
+    "name": "Sony World Photography Awards — Student competition",
+    "category": "creative",
+    "recordType": "verified",
+    "tier": "C",
+    "source": "https://www.worldphoto.org/sony-world-photography-awards",
+    "sourceLabel": "World Photography Organisation",
+    "evidence": [
+      {
+        "label": "Awards page: prize description and timeline",
+        "url": "https://www.worldphoto.org/sony-world-photography-awards"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "",
+    "entryFee": "Free",
+    "deadline": "2026-11-27",
+    "deadlineNote": "Student competition closes 27 November 2026, 16:00 GMT",
+    "eligibility": "Photography students",
+    "work": "Student photography submission",
+    "payout": "",
+    "notes": "The page describes the first prize as Sony digital imaging equipment plus exposure — no cash amount is stated for this competition.",
+    "flags": [
+      "Non-cash prize (equipment) — not a cash opportunity"
+    ],
+    "effort": "medium",
+    "fit": "low"
+  },
+  {
+    "id": "sony-swpa-youth",
+    "name": "Sony World Photography Awards — Youth competition",
+    "category": "creative",
+    "recordType": "verified",
+    "tier": "C",
+    "source": "https://www.worldphoto.org/sony-world-photography-awards",
+    "sourceLabel": "World Photography Organisation",
+    "evidence": [
+      {
+        "label": "Awards page: prize description and timeline",
+        "url": "https://www.worldphoto.org/sony-world-photography-awards"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "",
+    "entryFee": "Free",
+    "deadline": "2027-01-05",
+    "deadlineNote": "Youth competition closes 5 January 2027, 16:00 GMT",
+    "eligibility": "Photographers under 19",
+    "work": "Youth photography submission",
+    "payout": "",
+    "notes": "First prize is described as Sony digital imaging equipment plus exposure — no cash amount stated.",
+    "flags": [
+      "Non-cash prize (equipment) — not a cash opportunity"
+    ],
+    "effort": "medium",
+    "fit": "low"
+  },
+  {
+    "id": "vocal-challenges",
+    "name": "Vocal Challenges",
+    "category": "creative",
+    "recordType": "verified",
+    "tier": "B",
+    "source": "https://vocal.media/resources/challenges-frequently-asked-questions",
+    "sourceLabel": "Vocal help centre",
+    "evidence": [
+      {
+        "label": "Challenge FAQ: free entry, eligibility, prize payment",
+        "url": "https://vocal.media/resources/challenges-frequently-asked-questions"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "",
+    "entryFee": "Free — FAQ: 'You're not required to pay to enter Vocal's Challenges'; some challenges are Vocal+ members only",
+    "deadline": "",
+    "deadlineNote": "Per challenge; FAQ says at least one challenge is always running",
+    "eligibility": "Age 13+; must reside in a country where Stripe is available (FAQ says 32 countries); judges' requirements per challenge",
+    "work": "Write a story to the challenge brief",
+    "payout": "Cash prizes paid through a connected Stripe account; some prizes are items or experiences",
+    "notes": "Prize values vary by challenge and are not stated on the FAQ, so the prize field is blank rather than estimated.",
+    "flags": [
+      "Some challenges are restricted to paying Vocal+ members",
+      "Individual challenge prize amounts and deadlines were not read"
+    ],
+    "effort": "low",
+    "fit": "medium"
+  },
+  {
+    "id": "givling",
+    "name": "Givling",
+    "category": "trivia",
+    "recordType": "verified",
+    "tier": "C",
+    "source": "https://givling.com/",
+    "sourceLabel": "Givling home page",
+    "evidence": [
+      {
+        "label": "How Givling works: queue, exchange, funding limits",
+        "url": "https://givling.com/"
+      },
+      {
+        "label": "How it works",
+        "url": "https://givling.com/how-it-works"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "Up to $100,000 total (up to $50,000 through the Queue and up to $50,000 through the Exchange)",
+    "entryFee": "Free app; points accrue by playing trivia, watching ads or shopping through the marketplace",
+    "deadline": "",
+    "deadlineNote": "No deadline; funding happens as the community crowdfunds",
+    "eligibility": "",
+    "work": "Trivia play, ads and sponsor offers to accumulate Queue Points",
+    "payout": "",
+    "notes": "Page states $10,814,664 crowdfunded to date and that the Exchange pays a maximum of $10,000 per selection with a $50,000 lifetime cap. The money is crowdfunded by other participants' activity, not paid from a fixed operator prize pool.",
+    "flags": [
+      "Prize is community crowdfunding, not a fixed operator prize pool",
+      "Queue position depends on points from ads and shopping, not only skill"
+    ],
+    "effort": "high",
+    "fit": "low"
+  },
+  {
+    "id": "xprize-quantum-applications",
+    "name": "XPRIZE Quantum Applications",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "B",
+    "source": "https://www.xprize.org/competitions/qc-apps",
+    "sourceLabel": "XPRIZE competition page",
+    "evidence": [
+      {
+        "label": "Grand Challenges index: $5 Million, Active",
+        "url": "https://www.xprize.org/competitions"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$5,000,000",
+    "entryFee": "",
+    "deadline": "",
+    "deadlineNote": "Index lists the competition as 'Active' on 2026-11-01; milestone dates not read",
+    "eligibility": "",
+    "work": "Team registration and technical milestone submissions",
+    "payout": "",
+    "notes": "Purse and status read from the XPRIZE Grand Challenges index on 2026-11-01. Competitions of this type normally require an organisation and documentation rather than an individual weekend entry.",
+    "flags": [
+      "Team/organisation requirements and entry cost not verified",
+      "Milestone deadlines not read"
+    ],
+    "effort": "high",
+    "fit": "low"
+  },
+  {
+    "id": "xprize-water-scarcity",
+    "name": "XPRIZE Water Scarcity",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "B",
+    "source": "https://www.xprize.org/competitions/water",
+    "sourceLabel": "XPRIZE competition page",
+    "evidence": [
+      {
+        "label": "Grand Challenges index: $119 Million, Active",
+        "url": "https://www.xprize.org/competitions"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$119,000,000",
+    "entryFee": "",
+    "deadline": "",
+    "deadlineNote": "Index lists the competition as 'Active' on 2026-11-01; milestone dates not read",
+    "eligibility": "",
+    "work": "Team-based technology development and testing",
+    "payout": "",
+    "notes": "Purse and status read from the XPRIZE Grand Challenges index on 2026-11-01.",
+    "flags": [
+      "Team/organisation requirements and entry cost not verified",
+      "Milestone deadlines not read"
+    ],
+    "effort": "high",
+    "fit": "low"
+  },
+  {
+    "id": "xprize-healthspan",
+    "name": "XPRIZE Healthspan",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "B",
+    "source": "https://www.xprize.org/competitions/healthspan",
+    "sourceLabel": "XPRIZE competition page",
+    "evidence": [
+      {
+        "label": "Grand Challenges index: $101 Million, Active",
+        "url": "https://www.xprize.org/competitions"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$101,000,000",
+    "entryFee": "",
+    "deadline": "",
+    "deadlineNote": "Index lists the competition as 'Active' on 2026-11-01; milestone dates not read",
+    "eligibility": "",
+    "work": "Clinical/health technology programme",
+    "payout": "",
+    "notes": "Purse and status read from the XPRIZE Grand Challenges index on 2026-11-01.",
+    "flags": [
+      "Team/organisation and clinical requirements not verified",
+      "Milestone deadlines not read",
+      "Entry cost and eligibility not verified"
+    ],
+    "effort": "high",
+    "fit": "low"
+  },
+  {
+    "id": "xprize-wildfire",
+    "name": "XPRIZE Wildfire",
+    "category": "tech",
+    "recordType": "verified",
+    "tier": "B",
+    "source": "https://www.xprize.org/competitions/wildfire",
+    "sourceLabel": "XPRIZE competition page",
+    "evidence": [
+      {
+        "label": "Grand Challenges index: $11 Million, Finals",
+        "url": "https://www.xprize.org/competitions"
+      }
+    ],
+    "verifiedOn": "2026-11-01",
+    "prize": "$11,000,000",
+    "entryFee": "",
+    "deadline": "",
+    "deadlineNote": "Index lists the competition in 'Finals' on 2026-11-01",
+    "eligibility": "",
+    "work": "Fire-detection and response technology",
+    "payout": "",
+    "notes": "Purse and status read from the XPRIZE Grand Challenges index on 2026-11-01. 'Finals' implies teams are already selected.",
+    "flags": [
+      "Listed as 'Finals' — new entrants are likely not accepted",
+      "Entry cost not verified"
+    ],
+    "effort": "high",
+    "fit": "low"
+  }
+]

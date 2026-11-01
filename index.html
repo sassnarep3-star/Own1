@@ -1,1 +1,214 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A source-first research dashboard for free-to-enter cash prize competitions and unverified leads."><title>Find cash-prize competitions · Prize Atlas</title><link rel="stylesheet" href="./assets/style.css"></head><body data-base="./" data-page="home" data-category=""><header class="topbar"><div class="shell"><a class="brand" href="./index.html"><span class="mark">✳</span> Prize Atlas</a><nav class="topnav" aria-label="Main navigation"><a href="./index.html">Overview</a><a href="./category/sports.html">Browse categories</a><a class="review-link" href="./review.html">Flagged for review</a></nav></div></header><section class="hero"><div class="shell"><div class="eyebrow">A clearer way to find the right competition</div><h1>Less scrolling. Better signals. Real sources.</h1><p>Explore cash-prize competition leads by category, compare the few entries checked against operator pages, and keep uncertain claims out of your shortlist. No deposit is required to use this research dashboard.</p><div class="hero-actions"><a class="btn btn-primary" href="#shortlist">Explore checked pages ↓</a><a class="btn btn-plain" href="review.html">See what needs verification ↗</a></div></div></section><main class="shell main"><div class="metrics"><div class="metric"><strong id="all-count">—</strong><span>Total research leads</span></div><div class="metric"><strong id="checked-count">—</strong><span>Official pages checked</span></div><div class="metric"><strong id="review-count">—</strong><span>Awaiting verification</span></div><div class="metric"><strong>9</strong><span>Browseable categories</span></div></div><div class="notice"><strong>Evidence-first, not a guarantee.</strong> “Page checked” means the linked official page was read for the displayed facts on 2026-11-01, not that a contest remains open or you qualify. Blank cells mean the value was not confirmed. The imported reference catalog was last dated August 2026; never pay to claim a prize.</div><div class="section-head"><div><h2>Explore by category</h2><p>All imported leads are preserved, including non-cash and paid-entry caution items.</p></div></div><div class="category-grid" id="category-grid"></div><div class="section-head" id="shortlist"><div><h2>Official pages checked</h2><p>A research shortlist, not an estimated return or a ranking by win probability.</p></div><a href="review.html">View review queue →</a></div><div class="panel"><div class="toolbar"><input id="search" type="search" placeholder="Search listings or sources…" aria-label="Search listings"><select id="status" aria-label="Evidence status"><option value="">All evidence</option><option value="checked">Page checked</option><option value="unverified">Unverified</option></select><select id="kind" aria-label="Listing type"><option value="">All types</option><option value="Contest">Contest</option><option value="Platform">Platform</option></select></div><div id="rows" aria-live="polite"></div><div class="table-foot" id="result-count">Loading…</div></div><div class="section-head"><div><h2>Executive summary</h2><p>What the evidence supports today.</p></div></div><div class="insight-grid"><div class="metric"><strong>Best near-term research paths</strong>ESPN’s NFL Pick’em rules describe free entry and $102,000 total prizes, but include a $5,000 random-draw bonus. Metaculus explicitly offers free forecasting with cash pools; check each tournament separately. ARC Prize has an imminent Nov 2 deadline and open-source obligations. These are not predictions of likely earnings.</div><div class="metric"><strong>Important limits</strong>Most imported records remain unverified. Kaggle and DrivenData mix paid-prize events with practice events; platforms are not themselves a guaranteed cash prize. No reliable probability, expected value, or time-to-win estimate is available from the inspected sources. Prioritize checking rules, eligibility, deadline, and required work before competing.</div></div></main><footer class="footer"><div class="shell"><span>Prize Atlas · Research, not financial or legal advice · Updated 2026-11-01 UTC</span><span><a href="./review.html">Review queue</a> · <a href="https://github.com/sassnarep3-star/Own1/blob/main/research/SOURCES.md">Method & sources</a></span></div></footer><script src="./assets/app.js" defer></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free-to-enter cash competitions, verified · Prize Atlas</title>
+<meta name="description" content="A dashboard of free-to-enter cash-prize competitions: verified prizes, fees, deadlines and official sources, plus unverified leads clearly flagged.">
+<meta name="color-scheme" content="light">
+<link rel="stylesheet" href="./assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23104f5c'/%3E%3Cpath d='M8 21l5-10 3 6 3-4 5 8z' fill='%237fe3d0'/%3E%3C/svg%3E">
+<script src="./assets/app.js" defer></script>
+</head>
+<body data-page="index.html">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="shell topbar-inner">
+    <a class="brand" href="./index.html"><span class="mark" aria-hidden="true">◈</span><span>Prize Atlas</span></a>
+    <nav class="topnav" aria-label="Main"><a href="./index.html" aria-current="page" class="active">Overview</a><a href="./shortlist.html">Shortlist</a><a href="./categories.html">Categories</a><a href="./summary.html">Summary</a><a href="./method.html">Method</a><a href="./review.html">Flagged</a></nav>
+  </div>
+</header>
+<section class="hero"><div class="shell">
+  <p class="eyebrow">Verified footholds, not hype</p>
+  <h1>Find the free competitions worth your time — and see the source for every number.</h1>
+  <p class="hero-lead">The reference catalogue has 250 listings and no search. This rebuild keeps all of them, verifies 44 against the operator's own pages, and leaves the rest visibly unverified so you can tell the difference at a glance.</p>
+  <div class="hero-actions"><a class="btn btn-primary" href="./shortlist.html">Open the verified shortlist</a>
+        <a class="btn btn-ghost" href="./summary.html">Read the executive summary</a></div>
+</div></section>
+<main id="main" class="shell main">
+<div class="metrics">
+  <div class="metric"><strong>44</strong><span>Verified from operator pages</span><em>20 with a stated deadline</em></div>
+  <div class="metric"><strong>205</strong><span>Unverified leads kept</span><em>prize and fee left blank</em></div>
+  <div class="metric"><strong>5</strong><span>Categories with verified entries</span><em>of 9 categories</em></div>
+  <div class="metric"><strong>17</strong><span>Irregularities flagged</span><em>published for review</em></div>
+</div>
+
+<div class="notice">
+  <strong>Read the evidence column, not the headline.</strong>
+  A row is marked <span class="tier tier-A">verified</span> only when the operator's own page was opened on 2026-11-01 and the prize, fee or date shown was read there. Everything imported from the reference catalogue is an <em>unverified lead</em>: its prize and fee columns are deliberately blank, and its legacy claim is shown only on the <a href="./review.html">Flagged for review</a> page.
+</div>
+
+<section aria-labelledby="start-here">
+  <div class="section-head">
+    <div>
+      <h2 id="start-here">Start here: verified, cash, and open soon</h2>
+      <p>Tier A rows with a stated deadline and a high fit for AI-assisted work, ordered by the nearest operator-stated deadline.</p>
+    </div>
+    <a class="see-all" href="./shortlist.html">All 44 verified →</a>
+  </div>
+  <div class="table-card" data-table data-empty="No verified listings match those filters.">
+  <div class="toolbar toolbar-hidden">
+    <label class="search"><span class="visually-hidden">Search</span><input type="search" data-filter="q" placeholder="Search verified competitions…" autocomplete="off"></label>
+    <select data-filter="cat" aria-label="Filter by category"><option value="">All categories</option><option value="tech">Tech, data &amp; hackathons</option><option value="forecasting">Forecasting &amp; prediction</option><option value="sports">Sports &amp; fantasy picks</option><option value="creative">Creative &amp; photography</option><option value="trivia">Trivia &amp; quizzes</option><option value="skill">Skill tournaments</option><option value="market">Market simulations</option><option value="pools">Pool software</option><option value="directory">Directories</option></select>
+    <select data-filter="tier" aria-label="Filter by tier"><option value="">All tiers</option><option value="A">Tier A — start here</option><option value="B">Tier B — worth tracking</option><option value="C">Tier C — context / non-cash</option></select>
+    <select data-filter="sort" aria-label="Sort rows"><option value="">Default order</option><option value="deadline">Deadline: soonest</option><option value="prize">Prize: largest</option><option value="name">Name: A–Z</option></select>
+  </div>
+  <div class="table-scroll">
+    <table class="data-table data-table-verified"><thead><tr><th scope="col">Competition</th><th scope="col">Verified prize</th><th scope="col">Entry</th><th scope="col">Deadline</th><th scope="col">What it asks for</th><th scope="col">Evidence</th></tr></thead><tbody><tr class="row-verified" data-verified="1" data-cat="tech" data-tier="A"
+    data-prize="2000000" data-deadline="2026-11-02"
+    data-text="arc prize 2026 (arc-agi-3, arc-agi-2, paper prize) tech $2,000,000 across three tracks three tracks: arc-agi-3 (interactive reasoning), arc-agi-2 (static benchmark) and the paper prize. prizes are awarded at arc prize inc.&#39;s discretion and may be more or fewer than listed. reproducible, open-source submissions required; internet access is not available during kaggle evaluation, so api-based systems cannot be used build and open-source an agent/model for arc-agi, or publish a paper submission deadline 2026-11-02 is imminent no internet or frontier-model api use during kaggle evaluation entry cost not stated on the page inspected">
+    <td data-label="Competition">
+      <div class="cell-title">ARC Prize 2026 (ARC-AGI-3, ARC-AGI-2, Paper Prize)</div>
+      <div class="cell-meta">Tech, data &amp; hackathons · <span class="tier tier-A">Tier A</span> · effort high · agent fit high</div>
+      <ul class="flags"><li>Submission deadline 2026-11-02 is imminent</li><li>No internet or frontier-model API use during Kaggle evaluation</li><li>Entry cost not stated on the page inspected</li></ul>
+    </td>
+    <td data-label="Verified prize">$2,000,000 across three tracks</td>
+    <td data-label="Entry"><span class="none">Not stated</span></td>
+    <td data-label="Deadline"><strong>2 Nov 2026</strong><span class="subtle">1 day left</span><span class="subtle">Submissions due 2026-11-02; papers due 2026-11-08; results announced 2026-12-04</span></td>
+    <td data-label="What it asks for">Build and open-source an agent/model for ARC-AGI, or publish a paper<span class="subtle">Reproducible, open-source submissions required; internet access is not available during Kaggle evaluation, so API-based systems cannot be used</span></td>
+    <td data-label="Evidence"><a class="source-link" href="https://arcprize.org/competitions/2026" target="_blank" rel="noopener noreferrer">ARC Prize competition page ↗</a><span class="verified-stamp">Checked 2026-11-01</span></td>
+  </tr><tr class="row-verified" data-verified="1" data-cat="tech" data-tier="A"
+    data-prize="450000" data-deadline="2026-11-08"
+    data-text="arc prize 2026 — paper track (kaggle) tech $450,000 arc prize&#39;s own page gives $2m across three tracks; kaggle attributes $450,000 to this paper track. both figures are operator-stated and consistent with a split by track. open source required: &#39;all code and methods authored by the submitter must be made open source under a permissive public domain license&#39; paper describing an approach that advances performance on arc-agi countdown on kaggle and the stated paper deadline differ by about one day — treat 2026-11-08 as the operator date and submit early entry cost not stated on either page inspected">
+    <td data-label="Competition">
+      <div class="cell-title">ARC Prize 2026 — Paper Track (Kaggle)</div>
+      <div class="cell-meta">Tech, data &amp; hackathons · <span class="tier tier-A">Tier A</span> · effort medium · agent fit high</div>
+      <ul class="flags"><li>Countdown on Kaggle and the stated paper deadline differ by about one day — treat 2026-11-08 as the operator date and submit early</li><li>Entry cost not stated on either page inspected</li></ul>
+    </td>
+    <td data-label="Verified prize">$450,000</td>
+    <td data-label="Entry"><span class="none">Not stated</span></td>
+    <td data-label="Deadline"><strong>8 Nov 2026</strong><span class="subtle">7 days left</span><span class="subtle">ARC Prize states papers are due November 8, 2026; Kaggle hub displayed &#39;8 days to go&#39; on 2026-11-01</span></td>
+    <td data-label="What it asks for">Paper describing an approach that advances performance on ARC-AGI<span class="subtle">Open source required: &#39;all code and methods authored by the submitter must be made open source under a permissive public domain license&#39;</span></td>
+    <td data-label="Evidence"><a class="source-link" href="https://www.kaggle.com/competitions/arc-prize-2026-paper-track" target="_blank" rel="noopener noreferrer">Kaggle competition page ↗</a><a class="source-link secondary" href="https://www.kaggle.com/competitions" target="_blank" rel="noopener noreferrer">Listing on the Kaggle competitions hub (prize and countdown) ↗</a><a class="source-link secondary" href="https://arcprize.org/competitions/2026" target="_blank" rel="noopener noreferrer">ARC Prize 2026 key dates and rules ↗</a><span class="verified-stamp">Checked 2026-11-01</span></td>
+  </tr><tr class="row-verified" data-verified="1" data-cat="tech" data-tier="A"
+    data-prize="67500" data-deadline="2026-11-12"
+    data-text="paypal ai hackathon (devpost) tech $67,500 in cash (page body also states $69,750 in total prizes) requirements read from the event page: public open-source repository with a visible licence, a runnable demo, and a public youtube demo video under three minutes. above legal age of majority in country of residence; all countries/territories excluding standard exceptions working app that meaningfully integrates paypal apis plus ai, public repo, demo video under 3 minutes prize figures conflict on the same page: $67,500 &#39;in cash&#39; versus $69,750 &#39;in total prizes&#39; entry cost not stated; hackathons normally do not charge, but confirm in the rules">
+    <td data-label="Competition">
+      <div class="cell-title">PayPal AI Hackathon (Devpost)</div>
+      <div class="cell-meta">Tech, data &amp; hackathons · <span class="tier tier-A">Tier A</span> · effort medium · agent fit high</div>
+      <ul class="flags"><li>Prize figures conflict on the same page: $67,500 &#39;in cash&#39; versus $69,750 &#39;in total prizes&#39;</li><li>Entry cost not stated; hackathons normally do not charge, but confirm in the rules</li></ul>
+    </td>
+    <td data-label="Verified prize">$67,500 in cash (page body also states $69,750 in total prizes)</td>
+    <td data-label="Entry"><span class="none">Not stated</span></td>
+    <td data-label="Deadline"><strong>12 Nov 2026</strong><span class="subtle">11 days left</span><span class="subtle">Nov 12, 2026 @ 3:00pm EST</span></td>
+    <td data-label="What it asks for">Working app that meaningfully integrates PayPal APIs plus AI, public repo, demo video under 3 minutes<span class="subtle">Above legal age of majority in country of residence; all countries/territories excluding standard exceptions</span></td>
+    <td data-label="Evidence"><a class="source-link" href="https://paypalaihackathon.devpost.com/" target="_blank" rel="noopener noreferrer">Official hackathon page ↗</a><a class="source-link secondary" href="https://paypalaihackathon.devpost.com/rules" target="_blank" rel="noopener noreferrer">Official rules ↗</a><a class="source-link secondary" href="https://devpost.com/hackathons" target="_blank" rel="noopener noreferrer">Devpost listing ↗</a><span class="verified-stamp">Checked 2026-11-01</span></td>
+  </tr><tr class="row-verified" data-verified="1" data-cat="tech" data-tier="A"
+    data-prize="300000" data-deadline="2026-12-03"
+    data-text="gems prize challenge (drivendata / u.s. doe) tech $300,000 total ($50,000 initial round + $250,000 final round) prize ladder read from the overview: initial round pays five awards of $10,000; final round pays $100,000 / $70,000 / $40,000 / $25,000 / $15,000 for the top five on a re-labeled dataset. eligibility criteria are in the official rules page; not restated on the overview build an algorithm that generates enhanced geologic fault datasets entry cost not stated on the pages inspected eligibility requires reading the rules page">
+    <td data-label="Competition">
+      <div class="cell-title">GEMS Prize Challenge (DrivenData / U.S. DOE)</div>
+      <div class="cell-meta">Tech, data &amp; hackathons · <span class="tier tier-A">Tier A</span> · effort high · agent fit high</div>
+      <ul class="flags"><li>Entry cost not stated on the pages inspected</li><li>Eligibility requires reading the rules page</li></ul>
+    </td>
+    <td data-label="Verified prize">$300,000 total ($50,000 initial round + $250,000 final round)</td>
+    <td data-label="Entry"><span class="none">Not stated</span></td>
+    <td data-label="Deadline"><strong>3 Dec 2026</strong><span class="subtle">32 days left</span><span class="subtle">Dec. 3, 2026, 11:59 p.m. UTC</span></td>
+    <td data-label="What it asks for">Build an algorithm that generates enhanced geologic fault datasets<span class="subtle">Eligibility criteria are in the official rules page; not restated on the overview</span></td>
+    <td data-label="Evidence"><a class="source-link" href="https://www.drivendata.org/competitions/306/competition-doe-gems/" target="_blank" rel="noopener noreferrer">DrivenData competition page ↗</a><a class="source-link secondary" href="https://www.drivendata.org/competitions/306/competition-doe-gems/rules/" target="_blank" rel="noopener noreferrer">Official rules ↗</a><span class="verified-stamp">Checked 2026-11-01</span></td>
+  </tr><tr class="row-verified" data-verified="1" data-cat="tech" data-tier="A"
+    data-prize="100000" data-deadline="2026-12-04"
+    data-text="kiroween 2026 (kiro / devpost) tech $100,000 in prizes name, date range and prize total read from devpost&#39;s public listing on 2026-11-01.  build a project with the kiro toolchain devpost states a total &#39;in prizes&#39;; cash versus non-cash split not verified event rules not opened — eligibility and entry cost unverified">
+    <td data-label="Competition">
+      <div class="cell-title">Kiroween 2026 (Kiro / Devpost)</div>
+      <div class="cell-meta">Tech, data &amp; hackathons · <span class="tier tier-A">Tier A</span> · effort medium · agent fit high</div>
+      <ul class="flags"><li>Devpost states a total &#39;in prizes&#39;; cash versus non-cash split not verified</li><li>Event rules not opened — eligibility and entry cost unverified</li></ul>
+    </td>
+    <td data-label="Verified prize">$100,000 in prizes</td>
+    <td data-label="Entry"><span class="none">Not stated</span></td>
+    <td data-label="Deadline"><strong>4 Dec 2026</strong><span class="subtle">33 days left</span><span class="subtle">Listed as Oct 30 – Dec 04, 2026</span></td>
+    <td data-label="What it asks for">Build a project with the Kiro toolchain</td>
+    <td data-label="Evidence"><a class="source-link" href="https://kiroween.devpost.com/" target="_blank" rel="noopener noreferrer">Devpost event page ↗</a><a class="source-link secondary" href="https://devpost.com/hackathons" target="_blank" rel="noopener noreferrer">Devpost listing with dates and prize total ↗</a><span class="verified-stamp">Checked 2026-11-01</span></td>
+  </tr><tr class="row-verified" data-verified="1" data-cat="tech" data-tier="A"
+    data-prize="120000" data-deadline="2026-12-22"
+    data-text="codegeist 2026 (atlassian / devpost) tech $120,000 in prizes name, date range and prize total read from devpost&#39;s public listing on 2026-11-01.  app built on atlassian&#39;s platform devpost states a total &#39;in prizes&#39;; cash versus non-cash split not verified event rules not opened — eligibility and entry cost unverified">
+    <td data-label="Competition">
+      <div class="cell-title">Codegeist 2026 (Atlassian / Devpost)</div>
+      <div class="cell-meta">Tech, data &amp; hackathons · <span class="tier tier-A">Tier A</span> · effort medium · agent fit high</div>
+      <ul class="flags"><li>Devpost states a total &#39;in prizes&#39;; cash versus non-cash split not verified</li><li>Event rules not opened — eligibility and entry cost unverified</li></ul>
+    </td>
+    <td data-label="Verified prize">$120,000 in prizes</td>
+    <td data-label="Entry"><span class="none">Not stated</span></td>
+    <td data-label="Deadline"><strong>22 Dec 2026</strong><span class="subtle">51 days left</span><span class="subtle">Listed as Oct 27 – Dec 22, 2026</span></td>
+    <td data-label="What it asks for">App built on Atlassian&#39;s platform</td>
+    <td data-label="Evidence"><a class="source-link" href="https://codegeist2026.devpost.com/" target="_blank" rel="noopener noreferrer">Devpost event page ↗</a><a class="source-link secondary" href="https://devpost.com/hackathons" target="_blank" rel="noopener noreferrer">Devpost listing with dates and prize total ↗</a><span class="verified-stamp">Checked 2026-11-01</span></td>
+  </tr></tbody></table>
+  </div>
+  <div class="table-foot"><span data-count></span><span class="foot-note">Every prize, fee and date here was read from the linked operator page on 2026-11-01.</span></div>
+</div>
+</section>
+
+<section aria-labelledby="browse">
+  <div class="section-head">
+    <div>
+      <h2 id="browse">Browse by category</h2>
+      <p>Nine categories. Each page separates what was verified from what is still a lead.</p>
+    </div>
+    <a class="see-all" href="./categories.html">Category overview →</a>
+  </div>
+  <div class="category-grid">
+    <a class="card" href="./category/tech.html">
+          <span class="card-icon" aria-hidden="true">⌘</span>
+          <h3>Tech, data &amp; hackathons</h3>
+          <p>Model-building competitions, research paper tracks, and sponsored hackathons. The strongest category for work an AI coding agent can help produce.</p>
+          <span class="card-count">20 verified · 14 leads</span>
+        </a><a class="card" href="./category/forecasting.html">
+          <span class="card-icon" aria-hidden="true">◎</span>
+          <h3>Forecasting &amp; prediction</h3>
+          <p>Probability tournaments scored on accuracy. Free to enter, cash pools published per tournament, and most of the work is research and calibration.</p>
+          <span class="card-count">14 verified · 3 leads</span>
+        </a><a class="card" href="./category/sports.html">
+          <span class="card-icon" aria-hidden="true">◈</span>
+          <h3>Sports &amp; fantasy picks</h3>
+          <p>Free-to-play pick&#39;em and fantasy games from media and league operators. Low effort per week, but the field is large and payouts are concentrated at the top.</p>
+          <span class="card-count">4 verified · 129 leads</span>
+        </a><a class="card" href="./category/creative.html">
+          <span class="card-icon" aria-hidden="true">✳</span>
+          <h3>Creative &amp; photography</h3>
+          <p>Judged writing and photography prizes. Free entry exists, but eligibility and submission windows are strict and prizes are often part equipment.</p>
+          <span class="card-count">5 verified · 18 leads</span>
+        </a><a class="card" href="./category/trivia.html">
+          <span class="card-icon" aria-hidden="true">?</span>
+          <h3>Trivia &amp; quizzes</h3>
+          <p>Knowledge games that advertise cash. Most models pay in points or crowdfunding position rather than a fixed operator prize pool.</p>
+          <span class="card-count">1 verified · 1 lead</span>
+        </a><a class="card" href="./category/skill.html">
+          <span class="card-icon" aria-hidden="true">⚡</span>
+          <h3>Skill tournaments</h3>
+          <p>Mobile skill games. Free rooms typically pay gems, not dollars; real cash usually sits behind an entry fee. Check before spending time.</p>
+          <span class="card-count">No verified rows yet · 12 leads</span>
+        </a><a class="card" href="./category/market.html">
+          <span class="card-icon" aria-hidden="true">▥</span>
+          <h3>Market simulations</h3>
+          <p>Paper-trading and market-prediction contests. Lead-only in this pass: every entry still needs an official rules check.</p>
+          <span class="card-count">No verified rows yet · 19 leads</span>
+        </a><a class="card" href="./category/pools.html">
+          <span class="card-icon" aria-hidden="true">▦</span>
+          <h3>Pool software</h3>
+          <p>Tools for running office pools. The money is contributed by your group, not paid by the operator, so these are not cash-prize competitions.</p>
+          <span class="card-count">No verified rows yet · 7 leads</span>
+        </a><a class="card" href="./category/directory.html">
+          <span class="card-icon" aria-hidden="true">↗</span>
+          <h3>Directories</h3>
+          <p>Lists and aggregators that help you find events. Useful for discovery, but they are not competitions and cannot verify a prize.</p>
+          <span class="card-count">No verified rows yet · 2 leads</span>
+        </a>
+  </div>
+</section>
+
+<section aria-labelledby="how">
+  <div class="section-head"><div><h2 id="how">How to use this site</h2><p>Three steps, in order.</p></div></div>
+  <ol class="steps">
+    <li><strong>Pick a category.</strong> Tech, data and forecasting carry the most operator-verified cash for work an AI agent can help you produce. Sports pick'em is the lowest-effort cash path but has the widest fields.</li>
+    <li><strong>Read the row, then open the official page.</strong> Every verified row links the page the facts came from. Re-read it before you invest time: rules change mid-season.</li>
+    <li><strong>Check the flags.</strong> Entry limits, non-cash prizes and reserved eligibility are recorded as flags rather than smoothed over. The <a href="./review.html">Flagged for review</a> page lists every unresolved item.</li>
+  </ol>
+</section></main>
+<footer class="footer">
+  <div class="shell footer-inner">
+    <p><strong>Prize Atlas</strong> — free-to-enter cash competition research. Facts verified against operator pages on 2026-11-01 UTC. Not financial, legal or tax advice.</p>
+    <p class="footer-links"><a href="./summary.html">Executive summary</a><a href="./method.html">Method &amp; sources</a><a href="./review.html">Flagged for review</a><a href="https://github.com/sassnarep3-star/Own1" target="_blank" rel="noopener noreferrer">Repository ↗</a></p>
+  </div>
+</footer>
+</body>
+</html>
