@@ -21,7 +21,7 @@ The workspace fixes each session's branch as `arena/<session-id>`; that is this 
 | T10 · Second verification pass on official sources | Done | `181b7279-own1` | `research/**`, `data/entries.json`, `data/triage.json` | 20 operator pages re-read 2026-11-01 with per-row evidence blocks. |
 | T11 · Mobile-first rebuild (static tables, filters, category pages, analysis, review) | Done | `181b7279-own1` | `index.html`, `category/**`, `analysis.html`, `methodology.html`, `review.html`, `assets/**`, `data/**`, `tests/**`, `tools/**` | Pre-rendered HTML; works without JavaScript. |
 | T12 · Integration of all sessions' work, PR, merge, Pages deploy | Done | `181b7279-own1` | merge, deployment, this file | PR #17 → #24 → #29 merged; live site shows 212 leads, 29 checked, 19 free. |
-| T14 · Final session: repo review, mobile/link audit, verification spot-checks, executive summary publication, integration PR → merge → Pages | In progress | `adae2c72-own1` | `COORDINATION.md`, `EXECUTIVE_SUMMARY.md`, `executive-summary.html`, `docs/**`, shared nav/build outputs as final integration session | Claimed 2026-11-02. Open PR #3 (`4db3cf09-own1`, GEMS rules) is not touched; GEMS rows excluded from this session's spot-checks. |
+| T14 · Final session: repo review, mobile/link audit, verification spot-checks, executive summary publication, integration PR → merge → Pages | Done (PR pending) | `adae2c72-own1` | `COORDINATION.md`, `EXECUTIVE_SUMMARY.md`, `executive-summary.html`, `docs/**`, `data/cross-checks.json`, `data/link-recheck.json`, `scripts/{build,verify}.js` (I-23 + nav + link-health section), generated pages | Claimed and delivered 2026-11-02. Sources, verification and irregularities recorded in the session section below. Open PR #3 (`4db3cf09-own1`, GEMS rules) untouched; GEMS excluded from spot-checks. |
 
 ## Requests / handoffs
 
@@ -116,6 +116,43 @@ Irregularities found and published on `review.html` (all with source links, none
 11. The reference site's flat "$600 tax form" claim is broader than IRS guidance.
 
 Commands run: `node tools/build.mjs`, `node tests/validate.mjs` (OK), `python3 supplemental/check.py` (OK), `node --check assets/app.js` (OK), plus a local HTTP pass over all 14 pages and assets.
+
+
+## Verification performed — `adae2c72-own1` (2026-11-02)
+
+Official pages re-read this session with a browser-like text fetcher (each read compared against the published cell; agreement is recorded, discrepancies became caveats — nothing was silently overwritten):
+
+| Official page | Row | Result |
+| --- | --- | --- |
+| <https://arcprize.org/competitions/2026> | arcprize | Matches: $2M, 3 tracks, submissions due 2026-11-02 (due that day), papers 2026-11-08, open-source required. |
+| <https://www.metaculus.com/tournament/midterms-2026/> | midterms-2026 | Matches: $10,000 pool, closes Nov 04, 26 questions. |
+| <https://paypalaihackathon.devpost.com/rules> | paypal-ai-hackathon-2026 | Matches: 1st $12,000 / 2nd $8,000 / 3rd $5,000 in rules §8; deadline Nov 12; NO PURCHASE NECESSARY. |
+| <https://twitchcon-codex.devpost.com/rules> | codex-twitchcon-2026 | Matches: 1st $10,000, 2nd $6,000, 3rd $4,000, 2×$2,500 = $25,000 total; closes 2026-11-02 14:00 PT (that day); 18+; free. |
+| <https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay> | espn-pickem | Matches: $102,000 = 3×$20,000 + $10,000 + 54×$500 + $5,000 random; free; known 5-vs-10 entry contradiction still on the page (I-17). |
+| <https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free> | wergle-flomp | Matches: no fee; $5,100 = $2,000/$750/$350 + 10×$200; window 2026-08-15 → 2027-04-01; country exclusions exact. |
+| <https://www.worldphoto.org/sony-world-photography-awards> | sony-world-photo | Amounts match ($25,000 / $5,000, free to enter); competition RENAMED (Professional→Series, Open→Single Image); timeline read: Series closes 2027-01-12. |
+| <https://www.cbssports.com/fantasy/football/games/pickem/rules> | cbs-pro-pickem | Matches: FREE to play; 18×$1,000 weekly + $5,000 season + $100,000 perfect-week contingency; 2026-09-09 → 2027-01-10; 50 states, 18+. |
+| <https://www.checkmategaming.com/free-tournaments> | checkmate-gaming | Free entry confirmed ("Totally free to enter with real cash prizes"); ledger range $10–$180 NOT reproduced — page showed $40 and $120 only. Caveat published. |
+| <https://www.wallstreetsurvivor.com/> | wall-street-survivor | $500 total in Amazon gift cards confirmed for the AI Trading Contest (2026-11-02 → 2026-12-11, free); gift cards not cash; ledger's cited URL is the past Valentine's edition; $300/$150/$50 split not reproduced. Caveats published; deadline 2026-12-11 added. |
+| <https://givling.com/> | givling | Homepage is a crowdfunding queue ($50k Queue + $50k Exchange, Queue Points + random Spinners), free to play; no trivia contest shown; source's "ended" status not reproducible (site recruiting). Caveats published. |
+
+**External link audit (the "broken links" complaint).** `data/link-health.json` (203 URLs fetched 2026-11-01, 166 ok / 37 failed) was re-fetched by hand on 2026-11-02; every observation is in `data/link-recheck.json` and the table is published on `research.html`:
+
+- **Still dead (8):** bracketchallenge.nhl.com/en/how-to-play (404, Azure), fantasy.football.scot, fantazilig.tff.org, supercoach.news.com.au/bbl, fantasyracing.telegraph.co.uk/cheltenham/how-to-play (DNS), fantasygaelicfootball.com (2nd day), dash.hypermind.com (503, 2nd day), pensacolabeachsongwritersfestival.com/2026-songwriting-competition/ (server error page after yesterday's expired certificate).
+- **Recovered / false positives (6):** topcoder.com/challenges (404 → loads), favorites.actionnetwork.com (cert error → loads), paypalaihackathon.devpost.com/rules, twitchcon-codex.devpost.com/rules, metaculus midterms page (403 bot walls → read in full), winningwriters Wergle page (307 → loads).
+- **Not re-fetched (23):** almost all HTTP 403 bot walls; they open in a browser and are not called broken.
+
+**Consequence, per the brief's blank-don't-infer rule:** 5 prize cells whose only official source is dead were blanked (`prizeBlankedBecauseSourceDead = 5`) and 8 rows now carry the new **I-23** flag; blank reasons on rows and detail pages name the dead link explicitly.
+
+**Structural review.** `npm run build` green on 2026-11-02: ingest (checksum pinned source) → verify (23 irregularities) → build (555 pages, 211 rows) → docs → check: `checklinks` 555 pages / 13,832 local references / 0 broken, every row has an external source link; `validate.mjs` + `validate-prize-atlas.mjs` OK (mobile labels, blank-is-not-free, archived-page references).
+
+**Mobile audit.** `assets/css/site.css` is mobile-first: viewport meta everywhere, tables → cards below 820 px with `data-label` cells, 44 px inputs/buttons, scrollable nav, sticky filter bar released on small screens, dark mode, no web fonts/frameworks; `assets/js/app.js` is progressive enhancement only (rows pre-rendered, JS adds search/filter/sort). No issues found; no change needed.
+
+**Executive summary.** Root `EXECUTIVE_SUMMARY.md` rewritten: the previous version claimed `data/entries.json` was "rendered into every page by scripts/build.js" — false for the live build (build.js renders `data/ledger.json` + `data/verification.json`). The corrected document publishes the live totals, keeps the Prize Atlas numbers as a clearly labelled parallel dataset, and lists this pass's findings. The rendered copy (`executive-summary.html`, `docs/EXECUTIVE_SUMMARY.md`) is generated from the same totals.
+
+**Site changes made this pass (final integration scope):** nav gained an "Executive summary" item; `research.html` gained the External link-health section; I-23 added to `data/irregularities.json` (22 → 23, all counts auto-updated); six new cross-checks + five re-reads merged into `data/cross-checks.json` (13 → 19, prior sessions' text carried verbatim with attribution preserved).
+
+**Irregularities raised:** I-23 (dead official links, high) — published on `flagged.html`. Row-level caveats (not register items): Checkmate range unconfirmed; Wall Street Survivor stale source URL + gift-card prize; Givling status/description drift; Sony renaming; ARC/Codex deadlines falling due on build day. Open item for whoever reads the site next: ARC Prize and Codex x TwitchCon closed on 2026-11-02, and the "Days left" column is computed against the stated build date (2026-11-01), not today.
 
 ## Publish log
 

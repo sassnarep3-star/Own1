@@ -7,12 +7,13 @@
   {
    "id": "espn-pickem",
    "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
+   "checkedDate": "2026-11-02",
+   "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1, arena/adae2c72-own1",
    "confirmed": [
     "Free entry: NO PURCHASE NECESSARY.",
     "Prize total $102,000, which includes a $5,000 random-drawing prize (not a skill prize).",
-    "Season runs through 2027-01-10."
+    "Season runs through 2027-01-10.",
+    "Re-read 2026-11-02 by arena/adae2c72-own1: $102,000 total = 3 x $20,000 grand (Standard, Spread, Pick 5) + $10,000 Confidence + 18 x $500 weekly in each of three modes (54 x $500) + $5,000 random drawing; FAQ confirms every ESPN game is free and repeats the five-vs-ten entry contradiction."
    ],
    "caveats": [
     "ESPN's own FAQ contradicts itself on the maximum number of entries (five vs ten)."
@@ -22,16 +23,18 @@
   {
    "id": "arcprize",
    "url": "https://arcprize.org/competitions/2026",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
+   "checkedDate": "2026-11-02",
+   "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1, arena/adae2c72-own1",
    "confirmed": [
     "$2,000,000 across three tracks.",
     "Code and methods must be open-sourced to be eligible for prizes.",
-    "No internet access during Kaggle evaluation."
+    "No internet access during Kaggle evaluation.",
+    "Re-read 2026-11-02 by arena/adae2c72-own1: page unchanged - $2M in prizes, 3 tracks, submissions due November 2, 2026, papers due November 8, 2026, results December 4, 2026."
    ],
    "caveats": [
     "Submission deadline 2026-11-02 and paper deadline 2026-11-08 — both fall within days of this build.",
-    "No entry fee is stated on the page; the earlier build deliberately left the fee cell blank rather than assume free."
+    "No entry fee is stated on the page; the earlier build deliberately left the fee cell blank rather than assume free.",
+    "DUE TODAY: submissions close 2026-11-02 (re-read on the day by arena/adae2c72-own1)."
    ],
    "deadline": "2026-11-02"
   },
@@ -52,11 +55,12 @@
   {
    "id": "midterms-2026",
    "url": "https://www.metaculus.com/tournament/midterms-2026/",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/90c9f78c-own1",
+   "checkedDate": "2026-11-02",
+   "checkedBy": "arena/90c9f78c-own1, arena/adae2c72-own1",
    "confirmed": [
     "$10,000 prize pool.",
-    "Free entry per the platform statement."
+    "Free entry per the platform statement.",
+    "Re-read 2026-11-02 by arena/adae2c72-own1: page still shows $10,000 prize pool and closes Nov 04; 26 questions listed."
    ],
    "caveats": [
     "Closes 2026-11-04 — three days after this build. Confirm eligibility in the tournament rules."
@@ -106,27 +110,30 @@
   {
    "id": "codex-twitchcon-2026",
    "url": "https://twitchcon-codex.devpost.com/rules",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/37aed701-own1",
+   "checkedDate": "2026-11-02",
+   "checkedBy": "arena/37aed701-own1, arena/adae2c72-own1",
    "confirmed": [
     "$10,000 first place.",
     "No purchase necessary; 18+ or age of majority.",
-    "AI coding assistants are permitted; a Codex session ID and demo are required."
+    "AI coding assistants are permitted; a Codex session ID and demo are required.",
+    "Re-read 2026-11-02 by arena/adae2c72-own1: prize table is 1st $10,000, 2nd $6,000, 3rd $4,000, two runner-ups $2,500 each - $25,000 total, matching the page title. NO PURCHASE OR PAYMENT NECESSARY; entrants 18+."
    ],
    "caveats": [
-    "Closes 2026-11-02 at 2pm Pacific — one day after this build."
+    "Closes 2026-11-02 at 2pm Pacific — one day after this build.",
+    "CLOSES TODAY: submission period ends 2026-11-02 2:00pm Pacific / 5:00pm Eastern (re-read on the day by arena/adae2c72-own1)."
    ],
    "deadline": "2026-11-02"
   },
   {
    "id": "paypal-ai-hackathon-2026",
    "url": "https://paypalaihackathon.devpost.com/rules",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/37aed701-own1",
+   "checkedDate": "2026-11-02",
+   "checkedBy": "arena/37aed701-own1, arena/adae2c72-own1",
    "confirmed": [
     "$12,000 first place per the rules page.",
     "No purchase necessary.",
-    "Functional demo and public source repository required."
+    "Functional demo and public source repository required.",
+    "Re-read 2026-11-02 by arena/adae2c72-own1: rules section 8 itemises 1st Place $12,000 USD, 2nd $8,000, 3rd $5,000, five Honorable Mentions of $5,000, plus sponsor prizes; deadline Nov 12, 2026; NO PURCHASE OR PAYMENT NECESSARY."
    ],
    "caveats": [
     "The event page advertises a much larger headline figure than the rules itemise — see I-20."
@@ -187,6 +194,101 @@
    "confirmed": [],
    "caveats": [
     "https://roboforex.com/contests/ returned 404 (\"It seems that the page you requested doesn't exist\"); no contest terms page was found on the operator site, so nothing about this contest is confirmed."
+   ],
+   "deadline": null
+  },
+  {
+   "id": "wergle-flomp",
+   "url": "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free",
+   "checkedDate": "2026-11-02",
+   "checkedBy": "arena/adae2c72-own1",
+   "confirmed": [
+    "\"No fee to enter\" stated on the page; submission window August 15, 2026 - April 1, 2027.",
+    "$5,100 in prizes: $2,000 first, $750 second, $350 third, 10 honorable mentions of $200.",
+    "Eligibility: all countries except Iran, North Korea, Crimea, Russia, Belarus; no age restriction."
+   ],
+   "caveats": [
+    "AI-generated text is not allowed in submitted poems; any AI use in creation must be described at submission.",
+    "Deadline 2027-04-01 as read on the operator page; results announced 2027-08-15."
+   ],
+   "deadline": "2027-04-01"
+  },
+  {
+   "id": "sony-world-photo",
+   "url": "https://www.worldphoto.org/sony-world-photography-awards",
+   "checkedDate": "2026-11-02",
+   "checkedBy": "arena/adae2c72-own1",
+   "confirmed": [
+    "Page states the awards have always been \"free to enter\".",
+    "Series competition (formerly Professional) top prize $25,000; Single Image (formerly Open) top prize $5,000, plus Sony equipment."
+   ],
+   "caveats": [
+    "Competition names changed: the ledger's \"Professional Photographer of the Year\" and \"Open\" wording is the old naming.",
+    "Timeline read 2026-11-02: Student closes 2026-11-27 16:00 GMT; Single Image and Youth 2027-01-05 16:00 GMT; Series 2027-01-12 16:00 GMT; next cycle opens 2027-06-01.",
+    "The $25,000/$5,000 cash figures are the operator's stated top prizes; equipment and exhibition extras are not cash."
+   ],
+   "deadline": "2027-01-12"
+  },
+  {
+   "id": "checkmate-gaming",
+   "url": "https://www.checkmategaming.com/free-tournaments",
+   "checkedDate": "2026-11-02",
+   "checkedBy": "arena/adae2c72-own1",
+   "confirmed": [
+    "Page headline: \"Totally free to enter with real cash prizes. New tournaments posted daily.\"",
+    "Tournaments listed on 2026-11-02 showed cash prizes of $40 and $120, all marked FREE ENTRY."
+   ],
+   "caveats": [
+    "The ledger's \"$10-$180\" range was NOT reproduced on the 2026-11-02 read; only $40 and $120 were visible that day. Treat the range as unconfirmed.",
+    "Paid \"ELITE ENTRY\" events also run on the platform; only listings marked FREE ENTRY are free."
+   ],
+   "deadline": null
+  },
+  {
+   "id": "cbs-pro-pickem",
+   "url": "https://www.cbssports.com/fantasy/football/games/pickem/rules",
+   "checkedDate": "2026-11-02",
+   "checkedBy": "arena/adae2c72-own1",
+   "confirmed": [
+    "\"The Challenge is FREE to play. No purchase, wireless device or entry fee necessary to enter or win.\"",
+    "18 weekly prizes of $1,000 each; season-long prize $5,000; contingency prize $100,000 for a perfect week with exact tiebreaker scores.",
+    "Challenge period 2026-09-09 to 2027-01-10; open to legal residents of the 50 US states (Puerto Rico and territories excluded), 18+, free CBS Sports account."
+   ],
+   "caveats": [
+    "The $100,000 figure is a contingency prize requiring a flawless week plus exact tiebreaker scores - not a realistic skill payout.",
+    "One entry per registered user and per person."
+   ],
+   "deadline": "2027-01-10"
+  },
+  {
+   "id": "wall-street-survivor",
+   "url": "https://www.wallstreetsurvivor.com/",
+   "checkedDate": "2026-11-02",
+   "checkedBy": "arena/adae2c72-own1",
+   "confirmed": [
+    "AI Trading Contest runs 2026-11-02 to 2026-12-11; entry is free (\"Join Contest - it's free!\").",
+    "\"US$500 total in Amazon gift cards up for grabs\" for that contest, plus badges."
+   ],
+   "caveats": [
+    "Prizes are Amazon gift cards, NOT cash.",
+    "The ledger's cited official URL points at the past \"contest-valentines-2026\" page; the current contest page is /ai-trading-contest/ on the same operator site.",
+    "The ledger's \"e.g. $300 / $150 / $50\" split was not visible on the page read 2026-11-02; treat it as unconfirmed."
+   ],
+   "deadline": "2026-12-11"
+  },
+  {
+   "id": "givling",
+   "url": "https://givling.com/",
+   "checkedDate": "2026-11-02",
+   "checkedBy": "arena/adae2c72-own1",
+   "confirmed": [
+    "The operator's homepage describes Givling as a crowdfunding competition: $50,000 Queue funding and up to $50,000 via the Exchange, funded by Queue Points and random Spinners.",
+    "No entry fee is advertised; the service is promoted as free to download and play."
+   ],
+   "caveats": [
+    "The operator homepage advertises no trivia contest and no weekly team jackpot; the ledger's trivia description could not be reproduced there on 2026-11-02.",
+    "The source marks the row \"ended\", but the operator site was live and recruiting users on 2026-11-02 - the status could be stale.",
+    "This is a crowdfunding queue, not a judged contest: payout depends on queue position and random elements."
    ],
    "deadline": null
   }

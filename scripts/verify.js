@@ -55,6 +55,26 @@ for (const c of live.checks || []) {
   liveByUrl.set(norm(c.url), c);
 }
 
+/* ---------- external link re-check (second observation) ----------
+   data/link-recheck.json records a hand re-fetch of URLs that failed
+   data/link-health.json. outcome "broken" means the URL was still dead or
+   erroring on the re-check date: a prize figure whose only official source is
+   broken cannot be confirmed and must not be published. */
+const recheckPath = path.join(ROOT, 'data/link-recheck.json');
+const recheck = fs.existsSync(recheckPath)
+  ? JSON.parse(fs.readFileSync(recheckPath, 'utf8'))
+  : null;
+const lhPath = path.join(ROOT, 'data/link-health.json');
+const lh = fs.existsSync(lhPath) ? JSON.parse(fs.readFileSync(lhPath, 'utf8')) : null;
+const brokenUrls = new Set();
+const recheckOkUrls = new Set();
+if (recheck) {
+  for (const [u, r] of Object.entries(recheck.results || {})) {
+    if (r.outcome === 'broken') brokenUrls.add(u);
+    else if (r.outcome === 'ok') recheckOkUrls.add(u);
+  }
+}
+
 /** Every fetch this pass that touched one of the row's own URLs (a row can have several). */
 function findLiveChecks(item) {
   const urls = new Set([item.signupUrl, item.rulesUrl, item.tosUrl, item.iosUrl]
@@ -98,6 +118,12 @@ for (const item of ledger.listings) {
   const lc = lcLoaded || lcError || null;
   const money = hasMoneyAmount(item.prizeUsd);
   const currencies = currenciesIn(item.prizeUsd);
+  // Official sources (and the row's own entry links) that a later hand re-check found dead.
+  const brokenOfficial = official.map((s) => s.url).filter((u) => brokenUrls.has(u));
+  const brokenAny = [item.signupUrl, item.rulesUrl, item.tosUrl, item.iosUrl]
+    .filter(Boolean)
+    .concat(allUrls)
+    .filter((u, i, a) => a.indexOf(u) === i && brokenUrls.has(u));
   const hasOfficialBasis = official.length > 0;
 
   const crossCheck = item.crossCheck || null;
@@ -124,6 +150,7 @@ for (const item of ledger.listings) {
   if (item.type === 'directory') flags.push('I-14');
   if (item.id === 'tradingview-leap') flags.push('I-06');
   if (item.id === 'swagbucks-trivia' || item.id === 'givling') flags.push('I-11');
+  if (brokenAny.length) flags.push('I-23');
 
   rows.push({
     id: item.id,
@@ -146,8 +173,11 @@ for (const item of ledger.listings) {
     prizeHasMoneyAmount: money,
     prizeCurrencies: currencies,
     prizeHasOfficialBasis: hasOfficialBasis,
-    /** Published table value: blank unless an official source exists AND a real amount is stated. */
-    prizeCellValue: hasOfficialBasis && money ? item.prizeUsd : null,
+    /** Published table value: blank unless an official source exists, a real amount is stated,
+        and every official source backing the figure still loads (dead official links -> blank). */
+    prizeCellValue: hasOfficialBasis && money && brokenOfficial.length === 0 ? item.prizeUsd : null,
+    deadOfficialUrls: brokenOfficial,
+    brokenAnyUrls: brokenAny,
     crossCheck: crossCheck ? {
       url: crossCheck.url, checkedDate: crossCheck.checkedDate, checkedBy: crossCheck.checkedBy,
       confirmed: crossCheck.confirmed, caveats: crossCheck.caveats, deadline: crossCheck.deadline
@@ -176,6 +206,8 @@ const totals = {
   recheckedThisPass: count((r) => r.liveCheck !== null),
   prizeFigureStated: count((r) => r.prizeHasMoneyAmount),
   prizeBlankedOnSite: count((r) => r.prizeCellValue === null),
+  deadLinkRows: count((r) => r.flags.includes('I-23')),
+  prizeBlankedBecauseSourceDead: count((r) => r.prizeHasMoneyAmount && r.prizeHasOfficialBasis && r.prizeCellValue === null),
   withPromoCode: count((r) => r.flags.includes('I-07')),
   endedListings: count((r) => r.flags.includes('I-03')),
   missingRulesUrl: count((r) => !r.hasRulesUrl),
@@ -512,7 +544,38 @@ const register = [
     affected: [],
     links: [],
     action: 'Listed openly. Each row carries its own status badge so a reader can tell a live-checked row from a merely cited one.'
-  }
+  },
+  (function buildI23() {
+    const brokenList = [...brokenUrls];
+    const evidence = brokenList.map((u) => {
+      const r = (recheck && recheck.results && recheck.results[u]) || {};
+      return u + ' — ' + (r.note || ('re-checked ' + (recheck ? recheck.checkedAt : '?') + ': still failing'));
+    });
+    const recovered = [...recheckOkUrls];
+    const notRechecked = lh ? lh.failing - brokenList.length - recovered.length : 0;
+    return {
+      id: 'I-23',
+      title: 'Official links that no longer load — their prize figures can no longer be confirmed',
+      severity: 'high',
+      type: 'broken-link',
+      summary: (lh
+        ? lh.failing + ' of ' + lh.total + ' external URLs in the row data failed an automated fetch on ' +
+          String(lh.generated || '').slice(0, 10) + '. '
+        : '') +
+        'On ' + ((recheck && recheck.checkedAt) || 'the re-check date') + ' those failures were fetched again by hand by ' +
+        ((recheck && recheck.checkedBy) || 'a session in this repo') + ': ' + brokenList.length +
+        ' are still dead or erroring (404, DNS not found, 503, expired certificate, or a server error page), and ' +
+        recovered.length + ' had loaded again (bot walls and transient errors — not flagged). ' +
+        notRechecked + ' failures were not re-fetched; most are HTTP 403 bot walls that open in a browser. ' +
+        'A prize figure whose only official source is one of the dead URLs cannot be confirmed, so ' +
+        totals.prizeBlankedBecauseSourceDead + ' prize cell(s) were blanked on that basis and ' +
+        totals.deadLinkRows + ' row(s) carry this flag.',
+      evidence,
+      affected: idsWith('I-23'),
+      links: brokenList.map((u) => ({ title: 'Dead official link (re-checked ' + ((recheck && recheck.checkedAt) || '') + ')', url: u })),
+      action: 'Affected rows keep their links for auditability but show "—" for the prize and this flag. Re-check the operator by hand before relying on any figure; a DNS failure can be temporary, and the row detail says exactly which URL failed.'
+    };
+  })()
 ];
 
 fs.writeFileSync(path.join(ROOT, 'data/irregularities.json'), JSON.stringify({

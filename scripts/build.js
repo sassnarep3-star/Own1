@@ -22,6 +22,8 @@ const ledger = read('data/ledger.json');
 const verif = read('data/verification.json');
 const irr = read('data/irregularities.json');
 const live = read('data/live-checks.json');
+const lh = fs.existsSync(path.join(ROOT, 'data/link-health.json')) ? read('data/link-health.json') : null;
+const linkRecheck = fs.existsSync(path.join(ROOT, 'data/link-recheck.json')) ? read('data/link-recheck.json') : null;
 
 const rowsById = new Map(verif.rows.map((r) => [r.id, r]));
 const itemsById = new Map(ledger.listings.map((i) => [i.id, i]));
@@ -44,6 +46,7 @@ const NAV = [
   ['all.html', 'All competitions'],
   ['best.html', 'Best picks'],
   ['analysis.html', 'Analysis'],
+  ['executive-summary.html', 'Executive summary'],
   ['research.html', 'Source audit'],
   ['verification.html', 'Verification'],
   ['flagged.html', 'Flagged for review']
@@ -235,7 +238,9 @@ function rowHtml(item, row, base, opts) {
   const prizeCell = row.prizeCellValue
     ? `<span class="prize">${esc(row.prizeCellValue)}</span>`
     : `<span class="prize none">—</span><span class="cell-sub">${
-      row.prizeHasOfficialBasis ? 'no amount stated by the source' : 'unverified: no official source'
+      (row.deadOfficialUrls && row.deadOfficialUrls.length)
+        ? 'official source no longer loads — see I-23'
+        : row.prizeHasOfficialBasis ? 'no amount stated by the source' : 'unverified: no official source'
     }</span>`;
 
   const platforms = item.platforms.map((p) => (p === 'ios' ? 'iOS app' : p === 'web' ? 'Web' : 'Android')).join(', ');
@@ -351,9 +356,14 @@ function detailPage(item, row) {
 
   push('Prize (as claimed)', row.prizeCellValue
     ? esc(row.prizeCellValue)
-    : `<span class="blank">— not shown</span><br><small>${row.prizeHasOfficialBasis
-        ? 'The source states no money amount for this row, so we print none.'
-        : 'This row has no official-tier source, so its prize claim is unverified and is not printed in the table.'}</small>`);
+    : `<span class="blank">— not shown</span><br><small>${
+        (row.deadOfficialUrls && row.deadOfficialUrls.length)
+          ? 'The only official source for this figure was re-checked on ' + esc((linkRecheck && linkRecheck.checkedAt) || '') +
+            ' and no longer loads (see <a href="../flagged.html#I-23">I-23</a>), so the amount cannot be confirmed and is not printed.'
+          : row.prizeHasOfficialBasis
+            ? 'The source states no money amount for this row, so we print none.'
+            : 'This row has no official-tier source, so its prize claim is unverified and is not printed in the table.'
+      }</small>`);
   push('Minimum cash-out', item.minCashout ? esc(item.minCashout) : '<span class="blank">—</span>');
   push('Pays via', (item.payoutMethods || []).length ? esc(item.payoutMethods.join(', ')) : '<span class="blank">—</span>');
   push('Who can enter', item.eligibility ? esc(item.eligibility) : '<span class="blank">—</span>');
@@ -410,6 +420,12 @@ function detailPage(item, row) {
     'official-source-cited': 'This row cites an official source, but we did not fetch it in this pass. Treat the figures as the source\'s claims, last checked ' + fmtDate(SITE.sourceReviewed) + '.',
     'no-official-source': 'This row cites no official source. Its figures are withheld from our table and listed on the Flagged for Review page.'
   }[row.rowStatus];
+
+  const deadNote = (row.deadOfficialUrls && row.deadOfficialUrls.length)
+    ? `<div class="callout warn"><p><b>An official link on this row no longer loads.</b> ${
+        row.deadOfficialUrls.map((u) => `<a href="${attr(u)}" rel="noopener noreferrer">${esc(u.replace(/^https?:\/\//, ''))} ↗</a>`).join(', ')
+      } — re-checked ${esc((linkRecheck && linkRecheck.checkedAt) || '')} and still failing (<a href="${base}flagged.html#I-23">I-23</a>). The prize cell stays blank until the figure can be read again on a working official page. A DNS failure can be temporary; check the operator by hand.</p></div>`
+    : '';
 
   const dirNote = item.type === 'directory'
     ? `<div class="callout warn"><p><b>This is a catalogue, not a competition.</b> A directory lists other
@@ -486,6 +502,7 @@ ${mergedNote}
     ${crossCard ? `<div style="margin-top:12px">${crossCard}</div>` : ''}
     ${dirNote ? `<div style="margin-top:12px">${dirNote}</div>` : ''}
     ${codeNote ? `<div style="margin-top:12px">${codeNote}</div>` : ''}
+    ${deadNote ? `<div style="margin-top:12px">${deadNote}</div>` : ''}
   </aside>
 </div>`;
 
@@ -697,7 +714,7 @@ ${(() => {
   <div class="card">
     <ul class="list">
       <li><b>One row, one operator link.</b> Every row has a link to the operator's own page and, where one exists, a separate rules link. No affiliate redirects.</li>
-      <li><b>Blank beats guessed.</b> ${T.prizeBlankedOnSite} rows show “—” for the prize because the source states no amount or cites no official source. We never fill in a number.</li>
+      <li><b>Blank beats guessed.</b> ${T.prizeBlankedOnSite} rows show “—” for the prize because the source states no amount, cites no official source, or the official source no longer loads (<a href="flagged.html#I-23">I-23</a>). We never fill in a number.</li>
       <li><b>Status is visible.</b> ${T.endedListings} ended contests are stamped and excluded from every shortlist instead of hiding in the scroll.</li>
       <li><b>Badges mean something.</b> “Live-checked” = we fetched a page of that row on ${esc(fmtDate(SITE.verifiedOn))}. “Source cited” = we did not.</li>
       <li><b>Problems are published, not buried.</b> ${irr.items.length} irregularities with evidence and links are on <a href="flagged.html">Flagged for review</a>.</li>
@@ -738,8 +755,8 @@ ${filterBar({ count: T.rows, categories: true })}
 <div class="table-scroll">
   <table class="ledger" data-ledger-table>
     <caption>Prize figures are the source dataset's claims, last checked ${esc(fmtDate(SITE.sourceReviewed))}.
-    “—” means no amount was stated or no official source supports it. Pay cards: ID checks are the operator's
-    stated onboarding burden, not a guarantee.</caption>
+    “—” means no amount was stated, no official source supports it, or the official source no longer loads (I-23).
+    Pay cards: ID checks are the operator's stated onboarding burden, not a guarantee.</caption>
     ${tableBlock(items, '', {})}
   </table>
 </div>`;
@@ -786,7 +803,7 @@ ${filterBar({ count: items.length, categories: false })}
 <div class="table-scroll">
   <table class="ledger" data-ledger-table>
     <caption>Prize figures are the source dataset's claims, last checked ${esc(fmtDate(SITE.sourceReviewed))}.
-    Rows with “—” have no stated amount or no official source.</caption>
+    Rows with “—” have no stated amount, no official source, or an official source that no longer loads (I-23).</caption>
     ${tableBlock(items, '../', { hideCategory: true })}
   </table>
 </div>
@@ -1253,27 +1270,43 @@ function buildResearch() {
   const sessionList = Object.entries(bySession)
     .map(([sess, n]) => `<li><code>${esc(sess)}</code> — ${n} of the ${checks.length} checks</li>`).join('');
 
+  const linkRows = (lh && linkRecheck) ? Object.entries(linkRecheck.results || {})
+    .sort((a, b) => (a[1].outcome === b[1].outcome ? 0 : a[1].outcome === 'broken' ? -1 : 1))
+    .map(([u, r]) => {
+      const first = (lh.results || {})[u] || {};
+      const firstLabel = first.ok ? 'loaded' : (first.error || String(first.status || '—'));
+      return `<tr>
+        <td data-label="URL"><a class="src-link" href="${attr(u)}" rel="noopener noreferrer">${esc(shortText(u.replace(/^https?:\/\//, ''), 52))} ↗</a></td>
+        <td data-label="Bot check">${esc(String(firstLabel))}</td>
+        <td data-label="Hand re-check"><span class="badge ${r.outcome === 'broken' ? 'danger' : 'good'}">${r.outcome === 'broken' ? 'still dead' : 'loads'}</span></td>
+        <td data-label="What we saw">${esc(r.note)}</td>
+      </tr>`;
+    }).join('') : '';
+
   const body = `
 <section class="hero">
   <p class="kicker">Source audit · ${checks.length} official pages read by sessions in this repo</p>
   <h1>What someone actually opened</h1>
-  <p class="lede">Two kinds of verification exist in this repository. This session fetched
+  <p class="lede">Three kinds of verification exist in this repository. The build session fetched
   ${live.checks.length} URLs on ${esc(fmtDate(SITE.verifiedOn))} (logged on
-  <a href="flagged.html">Flagged for review</a>). The parallel sessions that built the earlier
-  “Prize Atlas” dashboard read ${checks.length} operator pages and wrote down exactly what each one said.
-  This page carries their findings forward, attributed, rather than merging them into an anonymous “verified” badge.</p>
+  <a href="flagged.html">Flagged for review</a>). Sessions in this repository have read
+  ${checks.length} operator pages — each read is dated, attributed to the session that made it, and
+  written down with exactly what the page said. And an external link-health pass checked
+  ${lh ? lh.total : '—'} URLs, with every failure re-fetched by hand before being called broken.
+  This page carries all three forward, attributed, rather than merging them into an anonymous “verified” badge.</p>
 </section>
 
 <div class="callout info">
   <p><b>How to read this.</b> A row marked “Independently checked” had one of its official pages read on
-  ${esc(fmtDate(SITE.verifiedOn))} by another session in this repository — not by this one. Their caveats are
+  the date shown in its row by the session named in the “Checked by” column — recorded in
+  <a href="data/cross-checks.json">data/cross-checks.json</a>, not asserted by this build. Their caveats are
   carried verbatim. If a page did not state a value, the value stays blank on the row.</p>
 </div>
 
 <div class="stat-grid">
-  ${stat(String(checks.length), 'official pages read by other sessions', 'good')}
+  ${stat(String(checks.length), 'official pages read by sessions in this repo', 'good')}
   ${stat(String(live.checks.length), 'URLs fetched by this session')}
-  ${stat(String(T.rows), 'rows in the merged ledger')}
+  ${stat(lh ? lh.failing + ' of ' + lh.total : '—', 'external links that failed a bot check', 'warn')}
   ${stat(String(irr.items.length), 'flagged irregularities', 'warn')}
 </div>
 
@@ -1287,6 +1320,23 @@ function buildResearch() {
   </div>
   <p class="note-tiny">Attribution: ${sessionList}</p>
 </section>
+
+${(lh && linkRecheck) ? `
+<section class="section">
+  <h2>External link health</h2>
+  <p class="note-tiny">Automated fetch of ${lh.total} external URLs on ${esc(String(lh.generated || '').slice(0, 10))}:
+  ${lh.ok} loaded, ${lh.failing} failed. On ${esc(linkRecheck.checkedAt || '')} every failure that was not a plain
+  bot wall was fetched again by hand by <code>${esc(linkRecheck.checkedBy || '')}</code> before being called broken —
+  published as <a href="flagged.html#I-23">I-23</a>. A 403 from an automated client is not a broken link: several
+  of those load normally in a browser. Rows whose only official source is one of the dead URLs have their prize
+  cell blanked.</p>
+  <div class="table-scroll">
+    <table class="ledger">
+      <thead><tr><th>URL</th><th>Bot check 1 Nov</th><th>Hand re-check 2 Nov</th><th>What we saw</th></tr></thead>
+      <tbody>${linkRows}</tbody>
+    </table>
+  </div>
+</section>` : ''}
 
 <section class="section">
   <h2>What the other sessions flagged that we did not</h2>
@@ -1331,7 +1381,7 @@ function buildResearch() {
 
   return layout({
     title: `Source audit — ${SITE.name}`,
-    description: `${checks.length} official pages read by the parallel sessions, carried forward with attribution, caveats and links.`,
+    description: `${checks.length} official pages read by sessions in this repository, carried forward with attribution, caveats, links, and an external link-health audit.`,
     active: 'research.html',
     body,
     scripts: false

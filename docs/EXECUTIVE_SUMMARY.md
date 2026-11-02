@@ -7,7 +7,7 @@ _What the source ledger contains, what we could and could not verify, what we re
 
 The source site (Free Money & Contest Ledger) is a research catalogue of free-to-enter competitions that can pay real money. Its weaknesses are real: on a phone it is one long scroll of 211 full-length cards with no search, no filters and no sorting, its own pages disagree about which revision is published, and one of its cited App Store links returned an error page when we fetched it. It also mixes 27 ended contests and 12 unverified referral codes into the same undifferentiated list as live, verifiable competitions.
 
-Five other sessions were working on this repository at the same time. Their build ("Prize Atlas") is preserved intact under archive/prize-atlas/, and their verified work is merged into this dataset: 5 rows they added after reading operator pages, and 13 official pages they read and recorded. Those rows carry an "Independently checked" badge attributed to the session that read them — they are never presented as checks made by this one.
+Five other sessions were working on this repository at the same time. Their build ("Prize Atlas") is preserved intact under archive/prize-atlas/, and their verified work is merged into this dataset: 5 rows they added after reading operator pages, and 19 official pages they read and recorded. Those rows carry an "Independently checked" badge attributed to the session that read them — they are never presented as checks made by this one.
 
 This repository rebuilds it as a mobile-first dashboard: one row per competition, nine category pages, a full-table page with search/filter/sort, a scoring-based shortlist, a verification page, and a Flagged for Review page carrying every irregularity with source links. Every table row links to the operator's own page. Nothing on the site is a value we invented — values that no official source supports are left blank and listed as unverified.
 
@@ -24,11 +24,11 @@ This repository rebuilds it as a mobile-first dashboard: one row per competition
 | Not marked ended | 184 | Live, mixed or flagged "caution" by the source; the strict "active" count is lower |
 | Ended / out of season | 27 | Excluded from every shortlist |
 | Prize text with a stated money amount | 133 | 63% — the rest say "varies", "your group" or "confirm in-app" |
-| Prize cell blanked on the site | 80 | No official source, or no stated amount — left blank, never guessed |
+| Prize cell blanked on the site | 85 | No official source, or no stated amount — left blank, never guessed |
 | Rows with no official-tier source | 11 | Prize claims rest on affiliate/forum sources only |
 | Referral / promo codes withheld | 12 | Unverifiable personal codes; deliberately not republished |
 | Rows re-fetched live this pass | 13 | Of 211 — see section 6 |
-| Flagged irregularities | 22 | All published on the Flagged for Review page |
+| Flagged irregularities | 23 | All published on the Flagged for Review page |
 | Age of the source data | 74 days | Source last checked 2026-08-19; re-verified 2026-11-01 |
 
 
@@ -47,10 +47,10 @@ This repository rebuilds it as a mobile-first dashboard: one row per competition
 
 - Verified-only values: a prize or cash-out figure appears in the table only when the row has an official-tier source and the source text states an amount. Otherwise the cell is blank and marked unverified.
 - One link per row to the operator, plus a second link to the rules/terms page when one exists, and a third to the App Store only where an app actually exists.
-- Every row carries a verification badge: "Live-checked" (12 rows fetched on 2026-11-01), "Link error" (1), "Source cited — not re-checked" (177), or "No official source" (11).
+- Every row carries a verification badge: "Live-checked" (12 rows fetched on 2026-11-01), "Link error" (1), "Source cited — not re-checked" (172), or "No official source" (11).
 - Status is first-class: ended contests are stamped, filtered out of the shortlists and excluded from the "enter now" count.
 - Search, filters (category, entry path, platform, ID checks, status) and sorting work on a real table on desktop and collapse to labelled cards on a phone.
-- The 22 irregularities are published with their evidence, their links and a recommended action — including the ones we could not settle ourselves.
+- The 23 irregularities are published with their evidence, their links and a recommended action — including the ones we could not settle ourselves.
 
 
 ## 5. Where the money and the odds actually are
@@ -66,7 +66,7 @@ Skill tournaments and trivia are the weakest value in the set: the free rooms pa
 
 ## 6. What we did not verify — read this before you enter anything
 
-- Of 211 rows: 12 were fetched live by this session on 2026-11-01, 1 returned a link error, 10 have an official page read by another session in this repository, 177 cite an official source nobody re-opened this pass, and 11 cite no official source at all. The build environment could reach the web only through a page-fetch tool, so a full 211-row crawl (roughly 400 URLs) was not possible; the unchecked rows are listed in full on the Flagged for Review page.
+- Of 211 rows: 12 were fetched live by this session on 2026-11-01, 1 returned a link error, 15 have an official page read by another session in this repository, 172 cite an official source nobody re-opened this pass, and 11 cite no official source at all. The build environment could reach the web only through a page-fetch tool, so a full 211-row crawl (roughly 400 URLs) was not possible; the unchecked rows are listed in full on the Flagged for Review page.
 - All prize figures are at least 74 days old. Seasonal sports contests in particular must be re-read from the operator page before you commit time.
 - We did not verify AI-assistance terms for any contest. Many judged contests restrict or prohibit AI-generated entries; check the rules before using an agent.
 - We did not assess tax treatment beyond flagging that US prizes of $600+ normally require a W-9. That is general context, not advice.
@@ -86,7 +86,7 @@ Skill tournaments and trivia are the weakest value in the set: the free rooms pa
 
 - Six sessions worked on this repository on 2026-11-01. Five merged their work into main before this integration pass; their task records, PR numbers and deployment runs are preserved verbatim in docs/COORDINATION-session-records.md.
 - Their dashboard is preserved as a working, self-contained site at archive/prize-atlas/ — 208 leads, 7 checked official pages, its own review queue and its supplemental research page. Nothing was deleted.
-- Their verified findings were merged into this dataset, attributed: 5 new rows (GEMS Prize Challenge, US Midterms 2026, and three AI hackathons) and 13 official-page cross-checks, each showing the URL, the date read, the session that read it, and their caveats.
+- Their verified findings were merged into this dataset, attributed: 5 new rows (GEMS Prize Challenge, US Midterms 2026, and three AI hackathons) and 19 official-page cross-checks, each showing the URL, the date read, the session that read it, and their caveats.
 - Their four additional irregularity findings (ESPN entry limits, Challenge.gov sunset, IceHacks header, PayPal prize totals, the $600 tax generalisation) are published as I-17 to I-21.
 - Where the two builds disagreed, this site keeps the stricter rule: a figure is shown only when an official source states it. That is why rows the other build marked "checked" can still show a blank prize here.
 
