@@ -1,5 +1,7 @@
 # Executive summary — Free-to-enter cash-prize competition finder
 
+> **Update 2026-11-02 (`arena/7a477419-own1`, task T15).** The live site is the PrizeDesk build (`scripts/build.js`); the counts in the table below come from the earlier audit snapshot of 211 listings. Current figures are in `data/verification.json` and on the site's [executive summary](https://sassnarep3-star.github.io/Own1/executive-summary.html): **221 rows**, **25 official-page readings recorded** (9 dated 2026-11-01, 16 dated 2026-11-02), and **31 flagged irregularities**. New: a [Verified shortlist](https://sassnarep3-star.github.io/Own1/shortlist.html) sorted by closing date; ten competitions added from their official pages (six Kaggle, three Devpost, and the Metaculus **Fall 2026 FutureEval Bot Tournament**, a $50,000 bot-only forecasting tournament closing 2027-01-06 whose entry is free but whose bot running costs are the entrant's). Also found: the GEMS Prize ($300,000) says only U.S.-based entrants are eligible (I-29), and the Global Virtual Hackathon is for students aged 14-18 only. **Closing today:** ARC Prize competition tracks and the Codex x TwitchCon Hackathon; **4 Nov:** Metaculus US Midterms 2026. Full record: [`docs/SESSION-7a477419.md`](docs/SESSION-7a477419.md).
+
 **Current dashboard:** [PrizeDesk](https://sassnarep3-star.github.io/Own1/) · **Site repository:** [sassnarep3-star/Own1](https://github.com/sassnarep3-star/Own1) · **Audit snapshot:** 2026-11-02
 
 ## Executive view

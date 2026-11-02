@@ -1,194 +1,404 @@
 {
- "checkedAt": "2026-11-01",
- "source": "Independent verification performed by the parallel sessions arena/27a86924-own1, arena/90c9f78c-own1 and arena/85ca8130-own1, recorded in research/SOURCES.md, EXECUTIVE_SUMMARY.md (earlier build) and data/entries.json of the archived Prize Atlas dashboard.",
- "mergedBy": "arena/181b7279-own1",
- "method": "Their checked rows and their source audit were re-read and carried over verbatim. Nothing was re-worded into a stronger claim; where they recorded a caveat, the caveat is carried with the fact. These are reported as an independent session's checks, not as checks made by this session, and they are labelled that way on every page.",
- "checks": [
-  {
-   "id": "espn-pickem",
-   "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
-   "confirmed": [
-    "Free entry: NO PURCHASE NECESSARY.",
-    "Prize total $102,000, which includes a $5,000 random-drawing prize (not a skill prize).",
-    "Season runs through 2027-01-10."
-   ],
-   "caveats": [
-    "ESPN's own FAQ contradicts itself on the maximum number of entries (five vs ten)."
-   ],
-   "deadline": "2027-01-10"
-  },
-  {
-   "id": "arcprize",
-   "url": "https://arcprize.org/competitions/2026",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
-   "confirmed": [
-    "$2,000,000 across three tracks.",
-    "Code and methods must be open-sourced to be eligible for prizes.",
-    "No internet access during Kaggle evaluation."
-   ],
-   "caveats": [
-    "Submission deadline 2026-11-02 and paper deadline 2026-11-08 — both fall within days of this build.",
-    "No entry fee is stated on the page; the earlier build deliberately left the fee cell blank rather than assume free."
-   ],
-   "deadline": "2026-11-02"
-  },
-  {
-   "id": "metaculus",
-   "url": "https://www.metaculus.com/tournaments/",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
-   "confirmed": [
-    "Platform states participation is free and that accurate forecasters can win cash prizes.",
-    "Prize pools are per tournament."
-   ],
-   "caveats": [
-    "Some listed tournaments have no prize pool at all."
-   ],
-   "deadline": null
-  },
-  {
-   "id": "midterms-2026",
-   "url": "https://www.metaculus.com/tournament/midterms-2026/",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/90c9f78c-own1",
-   "confirmed": [
-    "$10,000 prize pool.",
-    "Free entry per the platform statement."
-   ],
-   "caveats": [
-    "Closes 2026-11-04 — three days after this build. Confirm eligibility in the tournament rules."
-   ],
-   "deadline": "2026-11-04"
-  },
-  {
-   "id": "kaggle",
-   "url": "https://www.kaggle.com/competitions",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
-   "confirmed": [
-    "Featured competitions carry prizes; practice and community competitions may not."
-   ],
-   "caveats": [
-    "Prize and entry terms are per competition, not platform-wide."
-   ],
-   "deadline": null
-  },
-  {
-   "id": "drivendata",
-   "url": "https://www.drivendata.org/competitions/",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
-   "confirmed": [
-    "Prize competitions and practice benchmarks are listed separately."
-   ],
-   "caveats": [
-    "Eligibility and terms vary per competition."
-   ],
-   "deadline": null
-  },
-  {
-   "id": "gems-prize-2026",
-   "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
-   "confirmed": [
-    "$300,000 total prize pool.",
-    "Closes 2026-12-03 at 23:59 UTC."
-   ],
-   "caveats": [
-    "Final-round awards depend on scoring; no fee is stated on the inspected page."
-   ],
-   "deadline": "2026-12-03"
-  },
-  {
-   "id": "codex-twitchcon-2026",
-   "url": "https://twitchcon-codex.devpost.com/rules",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/37aed701-own1",
-   "confirmed": [
-    "$10,000 first place.",
-    "No purchase necessary; 18+ or age of majority.",
-    "AI coding assistants are permitted; a Codex session ID and demo are required."
-   ],
-   "caveats": [
-    "Closes 2026-11-02 at 2pm Pacific — one day after this build."
-   ],
-   "deadline": "2026-11-02"
-  },
-  {
-   "id": "paypal-ai-hackathon-2026",
-   "url": "https://paypalaihackathon.devpost.com/rules",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/37aed701-own1",
-   "confirmed": [
-    "$12,000 first place per the rules page.",
-    "No purchase necessary.",
-    "Functional demo and public source repository required."
-   ],
-   "caveats": [
-    "The event page advertises a much larger headline figure than the rules itemise — see I-20."
-   ],
-   "deadline": "2026-11-12"
-  },
-  {
-   "id": "global-virtual-hackathon-2026",
-   "url": "https://gvhackathon.com/",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/37aed701-own1",
-   "confirmed": [
-    "Free to enter.",
-    "$1,000 first place per division plus two $250 runners-up per division.",
-    "AI tools allowed and expected; work must be defensible on camera."
-   ],
-   "caveats": [
-    "Students aged 14–18 only, in teams of 2–4 with a supervising teacher.",
-    "Registration closes 2026-11-13 23:59 AoE; submission 2026-11-25."
-   ],
-   "deadline": "2026-11-13"
-  },
-  {
-   "id": "deriv-tournaments",
-   "url": "https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/181b7279-own1",
-   "confirmed": [
-    "Free entry: \"Each tournament is free to enter ... with no deposit required.\"",
-    "Prizes per monthly tournament: $1,000 / $600 / $400.",
-    "Simulated $10,000 virtual account; real cash paid on skill-based leaderboards, no random draws."
-   ],
-   "caveats": [
-    "Prize payment requires a fully verified Deriv account.",
-    "Operator is Deriv (SVG) LLC, an offshore entity; participation is demo-only."
-   ],
-   "deadline": "Monthly tournaments; dates on contest.deriv.com"
-  },
-  {
-   "id": "herox",
-   "url": "https://www.herox.com/crowdsourcing-projects",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/181b7279-own1",
-   "confirmed": [
-    "Explore Challenges listing rendered with featured challenges, including the GEMS Prize and the \"$10 Million USD\" Origin of Life Prize."
-   ],
-   "caveats": [
-    "The listing states no entry fee, so entry cost remains unconfirmed.",
-    "The federal challenge.gov submission portal has been retired; usa.gov/challenges is the current entry point."
-   ],
-   "deadline": null
-  },
-  {
-   "id": "roboforex-demo",
-   "url": "https://roboforex.com/contests/",
-   "checkedDate": "2026-11-01",
-   "checkedBy": "arena/181b7279-own1",
-   "confirmed": [],
-   "caveats": [
-    "https://roboforex.com/contests/ returned 404 (\"It seems that the page you requested doesn't exist\"); no contest terms page was found on the operator site, so nothing about this contest is confirmed."
-   ],
-   "deadline": null
-  }
- ]
+  "checkedAt": "2026-11-01",
+  "source": "Independent verification performed by the parallel sessions arena/27a86924-own1, arena/90c9f78c-own1 and arena/85ca8130-own1, recorded in research/SOURCES.md, EXECUTIVE_SUMMARY.md (earlier build) and data/entries.json of the archived Prize Atlas dashboard.",
+  "mergedBy": "arena/181b7279-own1",
+  "method": "Their checked rows and their source audit were re-read and carried over verbatim. Nothing was re-worded into a stronger claim; where they recorded a caveat, the caveat is carried with the fact. These are reported as an independent session's checks, not as checks made by this session, and they are labelled that way on every page.",
+  "checks": [
+    {
+      "id": "espn-pickem",
+      "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules",
+      "checkedDate": "2026-11-01",
+      "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
+      "confirmed": [
+        "Free entry: NO PURCHASE NECESSARY.",
+        "Prize total $102,000, which includes a $5,000 random-drawing prize (not a skill prize).",
+        "Season runs through 2027-01-10."
+      ],
+      "caveats": [
+        "ESPN's own FAQ contradicts itself on the maximum number of entries (five vs ten)."
+      ],
+      "deadline": "2027-01-10"
+    },
+    {
+      "id": "arcprize",
+      "url": "https://arcprize.org/competitions/2026",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1; re-read 2026-11-02 by arena/7a477419-own1",
+      "confirmed": [
+        "$2,000,000 across three tracks.",
+        "Code and methods must be open-sourced to be eligible for prizes.",
+        "No internet access during Kaggle evaluation.",
+        "[re-read 2026-11-02] Key dates on the official page: submissions due November 2, 2026; papers due November 8, 2026; results announced December 4, 2026.",
+        "[re-read 2026-11-02] Kaggle competition list shows the three tracks with prizes of $850,000 (ARC-AGI-3), $700,000 (ARC-AGI-2) and $450,000 (Paper Track), which sum to the $2M headline; ARC-AGI-3 and ARC-AGI-2 showed \"6 hours to go\" when read.",
+        "[re-read 2026-11-02] Rule text: \"Internet access is not available during Kaggle evaluation (no API-based systems like GPT/Claude/etc.)\" and all prizes require reproducible, open-source submissions."
+      ],
+      "caveats": [
+        "Submission deadline 2026-11-02 and paper deadline 2026-11-08 — both fall within days of this build.",
+        "No entry fee is stated on the page; the earlier build deliberately left the fee cell blank rather than assume free.",
+        "[re-read 2026-11-02] Submissions close today (2026-11-02) for the two competition tracks; only the Paper Track (due 2026-11-08) remains open after today."
+      ],
+      "deadline": "2026-11-02"
+    },
+    {
+      "id": "metaculus",
+      "url": "https://www.metaculus.com/tournaments/",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1; re-read 2026-11-02 by arena/7a477419-own1",
+      "confirmed": [
+        "Platform states participation is free and that accurate forecasters can win cash prizes.",
+        "Prize pools are per tournament.",
+        "[re-read 2026-11-02] General competition rules: \"No purchase or entry fee is necessary to enter a Metaculus competition\"; participants create a free Metaculus account.",
+        "[re-read 2026-11-02] The FutureEval Bot Tournament series is the bot-friendly branch: \"There is currently $58k+ in prizes available every 4 months\" (FutureEval resources page)."
+      ],
+      "caveats": [
+        "Some listed tournaments have no prize pool at all."
+      ],
+      "deadline": null
+    },
+    {
+      "id": "midterms-2026",
+      "url": "https://www.metaculus.com/tournament/midterms-2026/",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/90c9f78c-own1; re-read 2026-11-02 by arena/7a477419-own1",
+      "confirmed": [
+        "$10,000 prize pool.",
+        "Free entry per the platform statement.",
+        "[re-read 2026-11-02] Tournament page loads as \"US Midterms 2026\": prize pool $10,000, started May 27, closes Nov 04, 26 questions.",
+        "[re-read 2026-11-02] Page text: \"By participating in this competition you agree to be bound and abide by the Rules for Competitions on Metaculus\" (https://www.metaculus.com/tournament-rules/).",
+        "[re-read 2026-11-02] Metaculus \"Rules for Competitions on Metaculus\" (https://www.metaculus.com/tournament-rules/, last modified Jun 13, 2025): \"No purchase, fee, or payment is required to participate.\"; generally open to participants worldwide, ages 13 or older; prizes cannot be sent to individuals in countries under U.S. sanctions or export restrictions; one entry per person.",
+        "[re-read 2026-11-02] Same rules: bots and AI-registered accounts are ineligible for prizes unless the competition-specific rules say otherwise, while \"human participants are allowed to use AI tools or systems to assist in their forecasting, as long as the final submissions reflect their own decisions and understanding.\""
+      ],
+      "caveats": [
+        "Closes 2026-11-04 — three days after this build. Confirm eligibility in the tournament rules.",
+        "[re-read 2026-11-02] The slug https://www.metaculus.com/tournament/us-midterms-2026/ returns \"Page not found\"; the working URL is /tournament/midterms-2026/."
+      ],
+      "deadline": "2026-11-04"
+    },
+    {
+      "id": "kaggle",
+      "url": "https://www.kaggle.com/competitions",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1; re-read 2026-11-02 by arena/7a477419-own1",
+      "confirmed": [
+        "Featured competitions carry prizes; practice and community competitions may not.",
+        "[re-read 2026-11-02] Competitions page lists these prize pools beside active competitions: ARC Prize 2026 ARC-AGI-3 $850,000; ARC-AGI-2 $700,000; ARC Paper Track $450,000; Google Quantum AI Verifiable Quantum Circuit Compilation $150,000; Google Gemma 4 Developer Agent Competition $75,000 (Paper Track $35,000); Enveda CASMI 2026 $50,000; Name That LLM $50,000; Squares in Squares $50,000; NFL Big Data Bowl 2027 $100,000.",
+        "[re-read 2026-11-02] Titanic, House Prices, Spaceship Titanic and LLM Classification Finetuning are listed under Getting Started / \"Knowledge\" with team counts and no prize amount; Kaggle docs: Getting Started competitions \"offer no prizes or points\".",
+        "[re-read 2026-11-02] Foundational rules: open to residents of the United States and worldwide except Crimea, so-called DNR and LNR, Cuba, Iran, North Korea and persons under U.S. export controls or sanctions; must be 18 or the age of majority; one account only."
+      ],
+      "caveats": [
+        "Prize and entry terms are per competition, not platform-wide.",
+        "[re-read 2026-11-02] No entry fee is mentioned in the Kaggle docs or in the rules sections read, but the pages also do not say \"free\", so free entry is not asserted for the new Kaggle rows."
+      ],
+      "deadline": null
+    },
+    {
+      "id": "drivendata",
+      "url": "https://www.drivendata.org/competitions/",
+      "checkedDate": "2026-11-01",
+      "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
+      "confirmed": [
+        "Prize competitions and practice benchmarks are listed separately."
+      ],
+      "caveats": [
+        "Eligibility and terms vary per competition."
+      ],
+      "deadline": null
+    },
+    {
+      "id": "gems-prize-2026",
+      "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1; re-read 2026-11-02 by arena/7a477419-own1",
+      "confirmed": [
+        "$300,000 total prize pool.",
+        "Closes 2026-12-03 at 23:59 UTC.",
+        "[re-read 2026-11-02] HeroX challenge page (https://www.herox.com/GEMSPrize): prize $300,000 with \"two rounds, with prizes ranging from $15,000 to $100,000\"; stage \"Enter\"; funded by the U.S. Department of Energy and administered by the National Laboratory of the Rockies with DrivenData; entry via the DrivenData page.",
+        "[re-read 2026-11-02] HeroX guidelines: \"Institutions, companies, nonprofit organizations, and individuals based in the United States are eligible to compete.\""
+      ],
+      "caveats": [
+        "Final-round awards depend on scoring; no fee is stated on the inspected page.",
+        "[re-read 2026-11-02] HeroX says submissions are due \"December 3 at 5 PM ET\" while the DrivenData reading recorded 23:59 UTC the same day; the two times differ by about 2 hours.",
+        "[re-read 2026-11-02] The official rules document is a PDF at https://www.nlr.gov/docs/fy26osti/96647.pdf (linked from https://www.herox.com/GEMSPrize/resource/2274); it could not be fetched, so entry fee and full eligibility were not read."
+      ],
+      "deadline": "2026-12-03"
+    },
+    {
+      "id": "codex-twitchcon-2026",
+      "url": "https://twitchcon-codex.devpost.com/rules",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/37aed701-own1; re-read 2026-11-02 by arena/7a477419-own1",
+      "confirmed": [
+        "$10,000 first place.",
+        "No purchase necessary; 18+ or age of majority.",
+        "AI coding assistants are permitted; a Codex session ID and demo are required.",
+        "[re-read 2026-11-02] Event page: $25,000 in prizes; 1st $10,000, 2nd $6,000, 3rd $4,000, two runner-ups $2,500 each (sums to $25,000). Deadline Nov 2, 2026 @ 5:00pm EST.",
+        "[re-read 2026-11-02] Page states: \"All countries/territories, excluding standard exceptions\"; participants must be above legal age of majority; companies/professional organizations excluded.",
+        "[re-read 2026-11-02] Submission requires a Codex session ID, a public YouTube demo video (max 3 minutes) and a code repository URL."
+      ],
+      "caveats": [
+        "Closes 2026-11-02 at 2pm Pacific — one day after this build.",
+        "[re-read 2026-11-02] Closes today: the page showed \"4 more hours to deadline\" when read."
+      ],
+      "deadline": "2026-11-02"
+    },
+    {
+      "id": "paypal-ai-hackathon-2026",
+      "url": "https://paypalaihackathon.devpost.com/rules",
+      "checkedDate": "2026-11-01",
+      "checkedBy": "arena/37aed701-own1",
+      "confirmed": [
+        "$12,000 first place per the rules page.",
+        "No purchase necessary.",
+        "Functional demo and public source repository required."
+      ],
+      "caveats": [
+        "The event page advertises a much larger headline figure than the rules itemise — see I-20."
+      ],
+      "deadline": "2026-11-12"
+    },
+    {
+      "id": "global-virtual-hackathon-2026",
+      "url": "https://gvhackathon.com/",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/37aed701-own1; re-read 2026-11-02 by arena/7a477419-own1",
+      "confirmed": [
+        "Free to enter.",
+        "$1,000 first place per division plus two $250 runners-up per division.",
+        "AI tools allowed and expected; work must be defensible on camera.",
+        "[re-read 2026-11-02] FAQ on the event page: \"Nothing. Entry is free.\"; \"Students aged 14 to 18 at any school worldwide, in teams of 2-4\"; every team needs a supervising teacher; registration closes 23:59 AoE on 13 November, submissions 25 November."
+      ],
+      "caveats": [
+        "Students aged 14–18 only, in teams of 2–4 with a supervising teacher.",
+        "Registration closes 2026-11-13 23:59 AoE; submission 2026-11-25."
+      ],
+      "deadline": "2026-11-13"
+    },
+    {
+      "id": "deriv-tournaments",
+      "url": "https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes",
+      "checkedDate": "2026-11-01",
+      "checkedBy": "arena/181b7279-own1",
+      "confirmed": [
+        "Free entry: \"Each tournament is free to enter ... with no deposit required.\"",
+        "Prizes per monthly tournament: $1,000 / $600 / $400.",
+        "Simulated $10,000 virtual account; real cash paid on skill-based leaderboards, no random draws."
+      ],
+      "caveats": [
+        "Prize payment requires a fully verified Deriv account.",
+        "Operator is Deriv (SVG) LLC, an offshore entity; participation is demo-only."
+      ],
+      "deadline": "Monthly tournaments; dates on contest.deriv.com"
+    },
+    {
+      "id": "herox",
+      "url": "https://www.herox.com/crowdsourcing-projects",
+      "checkedDate": "2026-11-01",
+      "checkedBy": "arena/181b7279-own1",
+      "confirmed": [
+        "Explore Challenges listing rendered with featured challenges, including the GEMS Prize and the \"$10 Million USD\" Origin of Life Prize."
+      ],
+      "caveats": [
+        "The listing states no entry fee, so entry cost remains unconfirmed.",
+        "The federal challenge.gov submission portal has been retired; usa.gov/challenges is the current entry point."
+      ],
+      "deadline": null
+    },
+    {
+      "id": "roboforex-demo",
+      "url": "https://roboforex.com/contests/",
+      "checkedDate": "2026-11-01",
+      "checkedBy": "arena/181b7279-own1",
+      "confirmed": [],
+      "caveats": [
+        "https://roboforex.com/contests/ returned 404 (\"It seems that the page you requested doesn't exist\"); no contest terms page was found on the operator site, so nothing about this contest is confirmed."
+      ],
+      "deadline": null
+    },
+    {
+      "id": "xprize",
+      "url": "https://www.xprize.org/competitions",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/7a477419-own1",
+      "confirmed": [
+        "Active/finals competitions listed with prize purses: XPRIZE Quantum Applications $5 Million; Water Scarcity $119 Million; Healthspan $101 Million; Wildfire $11 Million (Finals); Carbon Removal $100 Million (Impact); Rainforest $10 Million (Impact).",
+        "XPRIZE Quantum Applications page (https://www.xprize.org/competitions/qc-apps): prize purse $5 Million, track 2024-2027; 7 teams selected as Finalists and 20 as Semifinalists from 133 submissions across 31 countries."
+      ],
+      "caveats": [
+        "The pages read show prize purses and team lists but no entry fee, entry window or eligibility terms. The Quantum Applications page says teams were selected by judges, so open entry for new teams is not evidenced.",
+        "Purses are for team-based multi-year challenges, not individual quick-entry contests."
+      ],
+      "deadline": null
+    },
+    {
+      "id": "devpost",
+      "url": "https://devpost.com/hackathons",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/7a477419-own1",
+      "confirmed": [
+        "Listing shows 14228 hackathons. Open online items with a stated prize total on the first page: PayPal AI Hackathon $67,500 (Oct 01 - Nov 12, 2026); Kiroween 2026 $100,000 (Oct 30 - Dec 04); Meta VR Start Developer Competition 2026 $1,000,000 (Sep 24 - Nov 18); Codex x TwitchCon Hackathon $25,000 (Oct 23 - Nov 02); Codegeist 2026 $120,000 (Oct 27 - Dec 22); UGREEN Hackathon 2026 on AI NAS $46,000 (Oct 22 - Nov 16); Learn AR with SPECS $2,500 (Oct 15 - Nov 09); Arbiter Hacks V1 $7,800 (Oct 20 - Dec 21)."
+      ],
+      "caveats": [
+        "DSH Hacks V2: the title says \"$100k+ in prizes!\" but the listing shows \"5 non-cash prizes\" (Jun 24 - Nov 15, 2026); not treated as a cash prize.",
+        "Prize totals and entry rules are per hackathon; the listing page alone does not confirm free entry. Rules pages were read only for Kiroween, Codegeist, Meta VR Start and Codex x TwitchCon (see their rows).",
+        "Meta VR Start Developer Competition rules: open only to members of the Meta VR Start program."
+      ],
+      "deadline": null
+    },
+    {
+      "id": "gemma-4-developer-agent",
+      "url": "https://www.kaggle.com/competitions/gemma-4-developer-agent/overview",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/7a477419-own1",
+      "confirmed": [
+        "Total Prizes Available: $110,000, of which the competition is $65,000 (1st $37,000, 2nd $18,000, 3rd $10,000), Paper Submission Award $35,000, bonus small-model prize $10,000.",
+        "Timeline: start 2026-09-23; entry and team-merger deadline 2026-11-25; final submission 2026-12-02; optional paper 2026-11-12 (all 11:59 PM UTC).",
+        "Submission is a zip containing agent.yaml (Google ADK Agent Config); scored by PASS/FAIL on SWE-Bench-style patches; agent has 12 hours.",
+        "Kaggle listing page shows \"$75,000\" for this competition and \"$35,000\" for the Paper Track (matches $65,000 + $10,000 and $35,000)."
+      ],
+      "caveats": [
+        "Rules page text beyond the overview was not read; entry fee not stated."
+      ],
+      "deadline": "2026-12-02"
+    },
+    {
+      "id": "name-that-llm",
+      "url": "https://www.kaggle.com/competitions/name-that-llm/rules",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/7a477419-own1",
+      "confirmed": [
+        "Total prizes $50,000: ten prizes of $5,000 (1st-10th place).",
+        "Sponsor Google LLC; winners must license the winning Submission under an OSI-approved open-source license.",
+        "Foundational rules: open to U.S. and worldwide residents except Crimea, DNR, LNR, Cuba, Iran, North Korea; age 18 or majority; winners return W-9 or W-8BEN.",
+        "Overview: code competition, internet disabled, notebooks up to 9 hours; entry deadline 2027-01-06, final 2027-01-13."
+      ],
+      "caveats": [
+        "Free entry is not stated in the text read."
+      ],
+      "deadline": "2027-01-13"
+    },
+    {
+      "id": "squares-in-squares",
+      "url": "https://www.kaggle.com/competitions/squares-in-squares/overview",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/7a477419-own1",
+      "confirmed": [
+        "Prizes: 1st $12,000, 2nd $10,000, 3rd $8,000, 4th $5,000, 5th $5,000, plus $5,000 at each of two milestone cut-offs (2027-01-17 and 2027-04-18); the page header shows $50,000.",
+        "Final submission deadline 2027-07-18; partial submissions are allowed."
+      ],
+      "caveats": [
+        "Page says it \"Does not award Points or Medals\". Rules page not read in this pass; entry fee not stated."
+      ],
+      "deadline": "2027-07-18"
+    },
+    {
+      "id": "google-quantum-circuit-compilation",
+      "url": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/overview",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/7a477419-own1",
+      "confirmed": [
+        "Leaderboard prizes: 1st $50,000, 2nd $25,000, 3rd $10,000, 4th-6th $5,000 each; additional prizes $50,000 (milestone $10,000, longest leader $10,000, single-task $30,000). Kaggle list shows $150,000.",
+        "Overview: \"you will use AI coding agents, classical optimization, and algorithmic insights in a closed verification loop\".",
+        "Timeline: start 2026-10-22; milestone 2026-11-20; entry deadline 2027-01-13; final 2027-01-20."
+      ],
+      "caveats": [
+        "Rules page not read in this pass; entry fee not stated."
+      ],
+      "deadline": "2027-01-20"
+    },
+    {
+      "id": "enveda-casmi-2026",
+      "url": "https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra/overview",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/7a477419-own1",
+      "confirmed": [
+        "Total $50,000: 1st $16,000, 2nd $12,000, 3rd $9,000, 4th $7,000, 5th $6,000.",
+        "Timeline: start 2026-09-14; entry deadline 2026-12-07; final 2026-12-14."
+      ],
+      "caveats": [
+        "Rules page not read in this pass; entry fee not stated."
+      ],
+      "deadline": "2026-12-14"
+    },
+    {
+      "id": "nfl-big-data-bowl-2027",
+      "url": "https://www.kaggle.com/competitions/nfl-big-data-bowl-2027/overview",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/7a477419-own1",
+      "confirmed": [
+        "Open Track $45,000 (3 finalists $10,000 each, 3 runner-ups $5,000 each); University Track $45,000 (same structure); Grand Prize $10,000 (invited finalists only) = $100,000 as shown on the Kaggle list.",
+        "Final submission 2027-01-06 (11:59 PM UTC); judging 2027-01-07 to 2027-01-25; results anticipated 2027-01-26.",
+        "Open Track: \"No eligibility restrictions for entry.\" University Track: only groups composed entirely of undergraduate students."
+      ],
+      "caveats": [
+        "Judged contest: winners are chosen by a judging panel, not a leaderboard. Rules page not read in this pass; entry fee not stated."
+      ],
+      "deadline": "2027-01-06"
+    },
+    {
+      "id": "kiroween-2026",
+      "url": "https://kiroween.devpost.com/rules",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/7a477419-own1",
+      "confirmed": [
+        "\"NO PURCHASE OR PAYMENT NECESSARY TO ENTER OR WIN.\"",
+        "Sponsor Amazon Web Services; submission period 2026-10-30 to 2026-12-04 2:00 pm PT.",
+        "Event page: \"$100,000 in cash\"; 32 days to deadline when read.",
+        "Eligibility: age of majority; named excluded places include Argentina, Australia, Brazil, Indonesia, Italy, Philippines, Quebec, Russia, UAE (full list on the event page).",
+        "Must build with Kiro; /.kiro directory and an open-source public GitHub repository are required."
+      ],
+      "caveats": [
+        "Individual prize amounts were not read in this pass."
+      ],
+      "deadline": "2026-12-04"
+    },
+    {
+      "id": "codegeist-2026",
+      "url": "https://codegeist2026.devpost.com/rules",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/7a477419-own1",
+      "confirmed": [
+        "\"NO PURCHASE OR PAYMENT NECESSARY TO ENTER OR WIN.\"",
+        "Event page prize list: 1st $15,000 x3, 2nd $8,000 x3, 3rd $5,000 x3, four bonus categories $1,500 x6 each; \"$120,000+ in prizes\".",
+        "Registration and submission end 2026-12-22 12:00 pm PT; must be built on Atlassian Forge.",
+        "Excluded places named: Belarus, Brazil, Crimea, Cuba, Iran, North Korea, Myanmar, Quebec, Russia, Sudan, Syria."
+      ],
+      "caveats": [
+        "Listed placement and bonus cash prizes sum to $120,000; the \"+\" and swag prizes are not valued."
+      ],
+      "deadline": "2026-12-22"
+    },
+    {
+      "id": "meta-vr-start-2026",
+      "url": "https://start-developer-competition-26.devpost.com/rules",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/7a477419-own1",
+      "confirmed": [
+        "\"NO PURCHASE NECESSARY.\"",
+        "\"THIS CONTEST IS OPEN ONLY TO MEMBERS OF THE META VR START PROGRAM\" and requires a Meta account with Developer Access.",
+        "Entry period 2026-09-24 to 2026-11-18 12:00 pm PT; winners on or around 2026-12-11."
+      ],
+      "caveats": [
+        "Page title states $1M in cash prizes; the prize table was not read, so the amount is the page-title claim. Entry is gated by program membership."
+      ],
+      "deadline": "2026-11-18"
+    },
+    {
+      "id": "fall-futureeval-2026",
+      "url": "https://www.metaculus.com/tournament/fall-futureeval-2026/",
+      "checkedDate": "2026-11-02",
+      "checkedBy": "arena/7a477419-own1",
+      "confirmed": [
+        "Tournament page: \"Fall 2026 FutureEval Bot Tournament\", $50,000 Prize Pool, started Sep 28 2026, closes Jan 06 2027, 135 questions; \"This is a bot-only competition where bot-makers attempt to push AI to its limits in predicting future events.\"",
+        "Resources page (edited Oct 29, 2026): $50k seasonal bot tournament starting every September, January and May; $1k bi-weekly MiniBench; $7k Market Pulse tournaments in which bots remain eligible; \"There is currently $58k+ in prizes available every 4 months.\"",
+        "Joining: create a human Metaculus account, then create a bot account under \"My Forecasting Bots\" (the first bot is the prize-eligible bot); all participants must fill out the first section of the participation form; bots must leave private comments on every question they forecast.",
+        "Rules for Competitions on Metaculus: \"No purchase, fee, or payment is required to participate\"; bots are ineligible for prizes \"unless otherwise specifically permitted in the Competition-specific rules\"; this tournament is the bot-only branch.",
+        "Questions are open for 3 hours each."
+      ],
+      "caveats": [
+        "Entry is free but running a bot is not: Metaculus gives AskNews search free to registered bot makers and donated LLM credits (OpenAI, Anthropic, Google via OpenRouter) only to \"a select number of bot makers who apply\"; \"We will not be able to cover all AI providers (nor AI costs for especially expensive bots)\".",
+        "The prize split for the $50,000 pool and the later sections of the 19-section resources page were not read."
+      ],
+      "deadline": "2027-01-06"
+    }
+  ]
 }
