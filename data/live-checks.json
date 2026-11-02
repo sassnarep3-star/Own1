@@ -224,5 +224,10 @@
       "trivia"
     ],
     "categoriesNotCovered": []
+  },
+  "laterNote": {
+    "addedAt": "2026-11-02",
+    "addedBy": "f25e2b4b-own1",
+    "text": "The 'Sandbox has no general outbound internet' phrase in method describes the 2026-11-01 session's environment only. On 2026-11-02 this integration session successfully fetched 37 official operator pages with a page-fetch tool; see data/verification-2026-11-02.json. The older 12 checks are retained unchanged as historical evidence and are not re-dated."
   }
 }
