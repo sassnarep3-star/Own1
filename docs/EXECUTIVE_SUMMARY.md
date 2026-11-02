@@ -1,6 +1,6 @@
 # Executive summary
 
-_211 competitions, 30 rows checked against 40 official operator pages on 2026-11-02, 181 rows left blank and flagged. No inferred values._
+_221 competitions, 30 rows checked against 40 official operator pages on 2026-11-02, 191 rows left blank and flagged. No inferred values._
 
 Verified on 2026-11-02. Live site: https://sassnarep3-star.github.io/Own1/
 
@@ -9,7 +9,16 @@ Verified on 2026-11-02. Live site: https://sassnarep3-star.github.io/Own1/
 
 Free-to-enter cash-prize competitions, reorganised into a mobile-friendly dashboard. The source is the third-party "Free Money & Contest Ledger" at https://karagemop466-tech.github.io/FreeMoneyApps/, whose maintained dataset is pinned by commit and SHA-256 in data/source/PROVENANCE.json. That ledger is a research catalogue, not an official operator document, so no figure from it is published as a fact.
 
-The live site is https://sassnarep3-star.github.io/Own1/. It contains 211 competition rows, one row per entry in the pinned ledger, plus 7 new official leads found on 2026-11-02. Every row links to the operator's page where one exists; rows without an official source are labelled "none official" and flagged.
+The live site is https://sassnarep3-star.github.io/Own1/. It contains 221 competition rows, one row per entry in the combined dataset, plus 7 new official leads found on 2026-11-02. Every row links to the operator's page where one exists; rows without an official source are labelled "none official" and flagged.
+
+
+## Dataset reconciliation and current-state audit
+
+The pinned source file has 206 listings. The combined dataset has 221 rows: 206 pinned upstream rows + 15 attributed additions. These are different datasets; 221 is not the reference site's own count.
+
+The base verification snapshot is dated 2026-11-01; the latest independent official-page cross-checks are dated 2026-11-02. Read the targeted current-state audit at data/verification/current-state-2026-11-02.md and the integration log at docs/SESSION-7a477419.md for the earlier sessions' reads, 25 check records and 31 historical irregularities.
+
+No Singapore-specific eligibility conclusion is established. Geographic restrictions, age limits, sanctions/export rules, prize payment and local law must be confirmed on the operator's rules page for the individual entering.
 
 
 ## The rule we applied
@@ -24,15 +33,15 @@ The live site is https://sassnarep3-star.github.io/Own1/. It contains 211 compet
 
 | Measure | Value | Where it comes from |
 | --- | --- | --- |
-| Competition rows | 211 | data/ledger.json (pinned source ledger + 5 merged additions) |
+| Competition rows | 221 | data/ledger.json (pinned source ledger + 5 merged additions) |
 | Official pages fetched on 2026-11-02 | 40 | data/verification-2026-11-02.json (pages) |
 | Rows with at least one confirmed official value | 30 | data/verification-2026-11-02.json (rows) |
-| Rows left blank and flagged unverified | 181 | 211 minus 30 |
+| Rows left blank and flagged unverified | 191 | 221 minus 30 |
 | Confirmed free-entry statements | 17 | exact wording on operator pages |
 | Confirmed paid-entry statements | 1 | exact wording on operator pages |
 | Rows with a confirmed prize figure | 24 | exact wording on operator pages |
 | Rows with no official source | 11 | data/verification.json |
-| Published irregularities | 40 | 22 historical + 18 new |
+| Published irregularities | 49 | 31 historical + 18 new |
 
 The 2026-11-01 automated link check is recorded separately in data/link-health.json: 203 URLs, 166 ok, 10 hard failures and 27 soft failures. Several "failures" are HTTP 403 anti-bot responses, not broken pages; the same pages loaded on 2026-11-02. The dated observation is published on the Flagged page, not treated as a verdict.
 
@@ -77,7 +86,7 @@ For an agent-assisted entrant, the highest-value work is therefore in tech and f
 - 11 rows have no official operator source at all — mostly FPL mini-league codes from forum threads and old blog posts. All of their values are blank.
 - Deadline fields mix registration close and submission close: the Global Virtual Hackathon's 13 November date is registration; submissions close 25 November 2026.
 
-The full register, with evidence and links for manual review, is on the Flagged for Review page and in REPO_REVIEW.md. All 40 items are status "needs review" and do not block the site or the merge.
+The full register, with evidence and links for manual review, is on the Flagged for Review page and in REPO_REVIEW.md. All 49 items are status "needs review" and do not block the site or the merge.
 
 
 ## How to reproduce and check

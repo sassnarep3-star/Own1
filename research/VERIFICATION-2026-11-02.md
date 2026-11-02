@@ -4,7 +4,7 @@
 
 **Rule:** a field is filled only when the exact wording appears on the official page listed in that row. A field that page did not state is left blank and marked unverified. No value is inferred, converted, summed or carried over from the third-party ledger.
 
-**Counts:** 40 official pages fetched · 30 rows with at least one confirmed value · 181 rows left blank and flagged · 7 new official leads.
+**Counts:** 40 official pages fetched · 30 rows with at least one confirmed value · 191 rows left blank and flagged · 7 new official leads.
 
 **Full machine-readable record:** `data/verification-2026-11-02.json`. **Live evidence page:** https://sassnarep3-star.github.io/Own1/verified.html
 
@@ -811,7 +811,7 @@ Category: `market` · Official source: https://roboforex.com/contests/ · Pages 
 
 ## 4. Rows left blank and flagged unverified
 
-These 181 rows were not re-read on 2026-11-02. Their prize, entry cost, deadline, status and eligibility cells are blank in every table. Each row still carries a source link for manual review.
+These 191 rows were not re-read on 2026-11-02. Their prize, entry cost, deadline, status and eligibility cells are blank in every table. Each row still carries a source link for manual review.
 
 | Competition | Category | Source link (official page where one exists) | Values |
 | --- | --- | --- | --- |
@@ -996,6 +996,16 @@ These 181 rows were not re-read on 2026-11-02. Their prize, entry cost, deadline
 | Environmental Photographer of the Year (EPOTY) | creative | https://epoty.org/ (official page) | *(blank — unverified)* |
 | SPIE International Day of Light Photo Contest | creative | https://spie.org/ (official page) | *(blank — unverified)* |
 | Istanbul Photo Awards | creative | https://istanbulphotoawards.com/ (official page) | *(blank — unverified)* |
+| Google — The Gemma 4 Developer Agent Competition (Kaggle) | tech | https://www.kaggle.com/competitions/gemma-4-developer-agent/rules (official page) | *(blank — unverified)* |
+| Name That LLM (Kaggle) | tech | https://www.kaggle.com/competitions/name-that-llm/rules (official page) | *(blank — unverified)* |
+| Squares in Squares (Kaggle Playground) | tech | https://www.kaggle.com/competitions/squares-in-squares/rules (official page) | *(blank — unverified)* |
+| Google Quantum AI — Verifiable Quantum Circuit Compilation (Kaggle) | tech | https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/rules (official page) | *(blank — unverified)* |
+| Enveda CASMI 2026 — Molecule ID From Mass Spectra (Kaggle) | tech | https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra/rules (official page) | *(blank — unverified)* |
+| NFL Big Data Bowl 2027 (Kaggle hackathon) | tech | https://www.kaggle.com/competitions/nfl-big-data-bowl-2027/rules (official page) | *(blank — unverified)* |
+| Kiroween 2026 (Kiro / AWS, Devpost) | tech | https://kiroween.devpost.com/rules (official page) | *(blank — unverified)* |
+| Codegeist 2026 (Atlassian, Devpost) | tech | https://codegeist2026.devpost.com/rules (official page) | *(blank — unverified)* |
+| Meta VR Start Developer Competition 2026 (Devpost) | tech | https://start-developer-competition-26.devpost.com/rules (official page) | *(blank — unverified)* |
+| Fall 2026 FutureEval Bot Tournament (Metaculus) | forecasting | https://www.metaculus.com/tournament/fall-futureeval-2026/ (official page) | *(blank — unverified)* |
 
 ---
 

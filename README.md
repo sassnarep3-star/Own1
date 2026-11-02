@@ -1,72 +1,81 @@
-# PrizeDesk — free-to-enter cash-prize competitions
+# PrizeDesk — free-to-enter cash-prize competition research
 
-A static, mobile-first dashboard built from the reference ledger at
-<https://karagemop466-tech.github.io/FreeMoneyApps/>. Every published value was read on an official
-operator page on **2026-11-02**; anything that could not be confirmed is left **blank and flagged
-unverified**. No value is inferred, converted, summed or carried over from the third-party ledger as a fact.
+A static, mobile-first dashboard for finding and checking competitions that may pay cash. It builds on the public [Free Money & Contest Ledger](https://karagemop466-tech.github.io/FreeMoneyApps/), but distinguishes imported claims from official-page checks. Unsupported or unstated values are left blank, and irregularities are published for review.
 
-**Live site:** <https://sassnarep3-star.github.io/Own1/>
-**Verification pass:** [`data/verification-2026-11-02.json`](data/verification-2026-11-02.json) (40 official pages, 30 rows with confirmed values, 181 rows blank and flagged)
-**Written review:** [`REPO_REVIEW.md`](REPO_REVIEW.md), [`research/VERIFICATION-2026-11-02.md`](research/VERIFICATION-2026-11-02.md), [`EXECUTIVE_SUMMARY.md`](EXECUTIVE_SUMMARY.md)
+**Live dashboard:** <https://sassnarep3-star.github.io/Own1/>
+**Executive summary:** [EXECUTIVE_SUMMARY.md](EXECUTIVE_SUMMARY.md) · [web version](https://sassnarep3-star.github.io/Own1/executive-summary.html)
+**Line-by-line evidence:** <https://sassnarep3-star.github.io/Own1/verified.html>
+**Verified shortlist:** <https://sassnarep3-star.github.io/Own1/shortlist.html>
+**Flagged for Review:** <https://sassnarep3-star.github.io/Own1/flagged.html>
+**Latest source audits:** [2026-11-02 targeted refresh](data/verification/current-state-2026-11-02.md) · [2026-11-02 integration record](research/VERIFICATION-2026-11-02.md) · [repo review](REPO_REVIEW.md)
 
-## What is in here
+## Site map
 
-| Path | What it is |
+| Page | Purpose |
 | --- | --- |
-| `index.html` | Dashboard: counts, best verified opportunities, closing deadlines, category cards, findings |
-| `all.html` | All 211 rows in one searchable/filterable table; every row links to a source |
-| `categories/*.html` | Nine category subpages with the same verified-only table |
-| `c/*.html` | One detail page per row: confirmed values, verbatim quotes, sources and flags |
-| `best.html` | Open-now shortlist, excluded rows with reasons, AI-agent rules, new official leads |
-| `analysis.html` | Coverage, AI compatibility, deadlines, per-row irregularities, findings and limits |
-| `verified.html` | Line-by-line evidence: 40 pages fetched and 30 rows with verbatim quotes and URLs |
-| `verification.html` | Provenance, the five verification rules, badge meanings, reproduce steps |
-| `repo-review.html` | Repo review with GitHub links for manual review |
-| `research.html` | Source audit of the reference site |
-| `flagged.html` | **Flagged for Review** — 40 irregularities (R-01…R-18 and I-01…I-22), all unverified rows, no-official-source rows and link-health observations |
-| `executive-summary.html` | Executive summary rendered from `scripts/summary-content.js` |
-| `data/source/PROVENANCE.json`, `data/source/ledger.source.js` | Pinned reference commit + SHA-256 and the byte-for-byte vendored source ledger |
-| `data/ledger.json` | Canonical 211-row dataset (206 pinned + 5 merged additions, 13 cross-checks) |
-| `data/verification-2026-11-02.json` | Dated official-page reads and per-field confirmed values with verbatim quotes |
-| `data/review-2026-11-02.json` | Repo review and 18 new irregularities with source links |
-| `data/verification.json`, `data/irregularities.json`, `data/link-health.json` | Earlier verification state, the historical 22-item register and a dated link-health observation |
-| `scripts/build.js` | Deterministic generator (no network, no clock, no randomness) |
-| `scripts/summary-content.js`, `scripts/render-docs.js` | Shared content for the executive-summary page and `docs/EXECUTIVE_SUMMARY.md` |
-| `scripts/checklinks.js`, `tests/validate.mjs`, `tests/validate-prize-atlas.mjs` | Link, page and archived-build checks |
-| `.github/workflows/validate.yml` | CI: rebuild + determinism diff, data/link checks, mobile viewport and breakpoint assertions |
-| `archive/**`, `ledger/**`, `entry/**`, `supplemental/**` | Earlier builds from parallel sessions, preserved unchanged and link-checked |
-| `COORDINATION.md` | Shared task board, claims, conflict log, sources and publication records |
+| [`index.html`](index.html) | Dashboard, key figures, best verified opportunities, closing deadlines |
+| [`all.html`](all.html) | Full table of the 221 combined listings; searchable/filterable |
+| [`shortlist.html`](shortlist.html) | Deadline-sorted official-page checks with entry/AI caveats |
+| [`best.html`](best.html) | Open-now shortlist built only from confirmed official wording |
+| [`verified.html`](verified.html) | 40 official pages fetched and 30 rows with verbatim quotes and URLs |
+| [`categories/`](categories/) | Nine category-specific tables |
+| [`c/`](c/) | Per-listing detail pages (221) |
+| [`analysis.html`](analysis.html) | Coverage, AI-agent compatibility, deadlines, findings and limits |
+| [`verification.html`](verification.html) | Evidence method, provenance and reproduce steps |
+| [`repo-review.html`](repo-review.html) | Repo review with GitHub links for manual review |
+| [`research.html`](research.html) | Source-ledger audit |
+| [`flagged.html`](flagged.html) | 49 irregularities (R-01…R-18 + I-01…I-30/I-16) and every unverified row |
+| [`executive-summary.html`](executive-summary.html) | Generated executive summary with official-source links |
+| [`data/ledger.json`](data/ledger.json) | Canonical combined source data (221 rows) |
+| [`data/verification.json`](data/verification.json) | Derived row-level verification states and totals |
+| [`data/verification-2026-11-02.json`](data/verification-2026-11-02.json) | This integration session's dated official-page reads |
+| [`data/review-2026-11-02.json`](data/review-2026-11-02.json) | Repo review and 18 new irregularities with source links |
+| [`data/cross-checks.json`](data/cross-checks.json) | 25 official-page checks with dates, readers, confirmed facts and caveats |
+| [`data/shortlist-notes.json`](data/shortlist-notes.json) | Per-row sourced notes for the Verified shortlist |
+| [`data/live-checks.json`](data/live-checks.json) | Live fetch outcomes from the 2026-11-01 base pass (plus a dated correction note) |
+| [`docs/SESSION-7a477419.md`](docs/SESSION-7a477419.md) | Earlier session's 10 sourced additions, rereads and flags |
+| [`archive/prize-atlas/`](archive/prize-atlas/) | Separate preserved earlier build; not the current root-site generator |
 
-## Data policy
+The upstream source file has **206 listings**. The current local dataset has **221** because **15 later additions** were separately attributed. Do not describe 221 as the source website's count. The combined dataset reconciles as 206 pinned upstream rows + 15 attributed additions.
 
-- **Confirmed** values are copied verbatim from an official operator page fetched on 2026-11-02. Each carries its quote and URL on `verified.html` and in `data/verification-2026-11-02.json`.
-- **Unverified** rows keep their name, category and links but have blank prize, entry, deadline, status and eligibility cells. They are listed individually on `flagged.html#unverified-rows`.
-- Blank means *not confirmed* — never zero, never free. Only explicit operator wording such as "The Challenge is FREE to play" produces a confirmed-free badge.
-- Rows with no official operator source are labelled `none official` and published with blank values.
-- The reference ledger is third-party research: it supplies only the competition name, category grouping and where to look. Its own prize/status/free labels are not republished as values.
-- Nothing is converted, combined, rounded, extrapolated or estimated; no win probability or expected value is published.
-- Irregularities are published with evidence and source links; status "needs review" does not block publication.
+## Data and verification policy
+
+- The upstream data is pinned by repository commit and SHA-256 in [`data/source/PROVENANCE.json`](data/source/PROVENANCE.json). It is third-party research, not an official operator rules document.
+- A cited source link is not proof of a fresh fetch. The current verification distinguishes live fetches, independent official-page reads, source-only citations, and rows without an official source.
+- The 1 Nov base pass contains 13 live-fetch outcomes (12 loaded, one error). Earlier sessions recorded 25 official-page check records; this integration session added 40 dated official-page reads on 2 Nov 2026. The upstream source marks many rows free, but those source labels are **not** fresh official confirmation for every current competition.
+- **A value is published only when an official page read on 2026-11-02 states it.** Every other prize, entry cost, deadline, status and eligibility cell is blank and flagged unverified. Nothing is inferred, converted, summed or rounded.
+- Rows with no official operator source are labelled `none official` and keep blank values.
+- Do not infer entry cost, cash value, deadline, eligibility or open status. Unknown stays unknown.
+- No odds or expected return are estimated. A cash-prize headline does not establish likely winnings.
+- Review [`data/verification/current-state-2026-11-02.md`](data/verification/current-state-2026-11-02.md) and [`research/VERIFICATION-2026-11-02.md`](research/VERIFICATION-2026-11-02.md) for the targeted reads, limits and integration result. **No Singapore-specific eligibility conclusion is established** for any user or contest.
 
 ## Build and checks
 
-```bash
-npm run build     # ingest -> verify -> build:site -> docs -> check
-npm run check     # checklinks + validate.mjs + validate-prize-atlas.mjs
-node scripts/build.js          # regenerate all HTML from committed JSON only
-node scripts/render-docs.js    # regenerate docs/EXECUTIVE_SUMMARY.md
-python3 -m http.server 8000 --bind 0.0.0.0   # local preview
+CI uses Node.js 22. Dependencies are not required for the build.
+
+```sh
+npm run build
 ```
 
-No dependencies and no build step at deploy time. GitHub Pages serves the repository root of `main`
-(`.nojekyll` present). CI rebuilds the site and fails if any generated file changes, so a stale
-commit cannot publish a broken page.
+This ingests the pinned source, merges explicitly attributed additions/cross-checks, derives verification and flags, generates the static site and summary, and runs validation. Individual commands:
 
-## Adding or verifying a row
+```sh
+node scripts/ingest.js
+node scripts/verify.js
+node scripts/build.js                      # deterministic: no network, no clock
+node scripts/render-docs.js                # docs/EXECUTIVE_SUMMARY.md
+node scripts/render-verification-record.js # research/VERIFICATION-2026-11-02.md
+npm run check
+```
 
-1. Fetch the operator's official page; read the exact wording for prize, entry cost, deadline, status and eligibility.
-2. Add a row to `data/verification-2026-11-02.json` with a `facts` object whose `value`, `quote` and `url` come from that page. Leave every other field out (blank) and record it in `notStated`.
-3. Add the URL to `pages` with the returned title and outcome, and any irregularities to `data/review-2026-11-02.json`.
-4. Run `npm run build`. If a check fails, fix it before merging.
-5. Commit the generated pages together with the data files.
+`npm run check` runs `scripts/checklinks.js`, `tests/validate.mjs` and `tests/validate-prize-atlas.mjs`: dataset contracts, generated pages and every internal reference. It does not fetch external operator websites; a passing check does not establish current availability or personal eligibility.
 
-Never fill a blank from the reference ledger, a news article, a forum or an estimate.
+To preview locally:
+
+```sh
+python3 -m http.server 8000 --bind 0.0.0.0
+```
+
+## Current limits
+
+The pinned source declared a review date of 2026-08-19. In the current verification output, 175 rows cite an official-tier page not reopened in the base pass and 11 rows have no official-tier source. This integration session re-read 40 official pages covering 30 rows; the remaining 191 rows are published with blank values rather than guessed ones. Current status, entry cost and eligibility must be confirmed on the operator's rules page before entering. The site is a research index, not an operator, sponsor, guarantee, or legal/financial adviser.
