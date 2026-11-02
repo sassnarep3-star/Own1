@@ -22,6 +22,24 @@ function expect(condition, message) {
   return condition;
 }
 
+/* ---------- generated executive-summary regression checks ---------- */
+const summaryHtml = read('executive-summary.html');
+const summaryVerification = JSON.parse(read('data/verification.json'));
+const summaryTotals = summaryVerification.totals;
+const upstreamCount = summaryTotals.rows - summaryTotals.addedByParallelSessions;
+const dateLabel = (iso) => {
+  const [year, month, day] = iso.split('-');
+  return `${Number(day)} ${['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][Number(month) - 1]} ${year}`;
+};
+const summaryUpdatedOn = summaryVerification.rows.reduce((latest, row) =>
+  row.crossCheck && row.crossCheck.checkedDate > latest ? row.crossCheck.checkedDate : latest,
+summaryVerification.verifiedOn);
+expect(summaryHtml.includes(`Executive summary · updated ${dateLabel(summaryUpdatedOn)} · base verification ${dateLabel(summaryVerification.verifiedOn)}`),
+  'executive summary must distinguish its update date from the base verification date');
+expect(summaryHtml.includes(`The pinned source file has ${upstreamCount} listings.`),
+  'executive summary must distinguish upstream listings from later attributed additions');
+expect(summaryHtml.includes(`${upstreamCount} pinned upstream rows + ${summaryTotals.addedByParallelSessions} attributed additions`),
+  'executive summary count interpretation must reconcile to the combined total');
 
 /* ---------- schema guard ----------
    Several sessions in this repo publish different dataset schemas. This suite
@@ -182,6 +200,15 @@ for (const r of entries) {
 }
 expect(indexHtml.includes('data-label="Triage score"'), 'index.html: triage column missing');
 expect(read('analysis.html').length > 2000, 'analysis.html: page looks empty');
+
+/* ---------- executive-summary evidence and count reconciliation ---------- */
+const executive = read('executive-summary.html');
+expect(executive.includes('206 pinned upstream rows + 15 attributed additions'), 'executive summary: distinguish upstream count from combined count');
+expect(executive.includes('data/verification/current-state-2026-11-02.md'), 'executive summary: link the targeted current-state audit');
+expect(executive.includes('https://www.metaculus.com/tournament/fall-futureeval-2026/'), 'executive summary: include an official FutureEval source');
+expect(executive.includes('No Singapore-specific eligibility conclusion is established'), 'executive summary: do not infer location eligibility');
+expect(!executive.includes('211 full-length cards'), 'executive summary: do not attribute the combined count to the upstream site');
+expect(!executive.includes('All rows from the pinned source file'), 'executive summary: do not call merged additions upstream rows');
 
 /* ---------- blank is never free ---------- */
 for (const r of entries) {

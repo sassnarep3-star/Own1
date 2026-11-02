@@ -4,13 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Source audit — PrizeDesk</title>
-<meta name="description" content="19 official pages read by sessions in this repository, carried forward with attribution, caveats, links, and an external link-health audit.">
+<meta name="description" content="Analysis of the reference site, its defects, and the provenance of the pinned dataset.">
 <meta name="color-scheme" content="light dark">
-<meta property="og:title" content="Source audit — PrizeDesk">
-<meta property="og:description" content="19 official pages read by sessions in this repository, carried forward with attribution, caveats, links, and an external link-health audit.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E%24%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E$%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/css/site.css">
+<style>
+.callout.warn { border-left-color: var(--warn, #b26b00); }
+.evidence-box { border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin:8px 0; background:var(--card,#fff); }
+.fact-quote { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.86rem; color:var(--muted); white-space:pre-wrap; word-break:break-word; }
+.verified-article { border-top:1px solid var(--line); padding:14px 0; }
+.mini-links a { margin-right:10px; }
+.tag-row { margin:6px 0; }
+.stat-grid .stat b { font-size:1.4rem; }
+.src-list { margin:4px 0 0; padding-left:18px; }
+</style>
 
 </head>
 <body>
@@ -19,352 +26,98 @@
   <div class="wrap header-inner">
     <a class="brand" href="index.html">
       <span class="brand-mark" aria-hidden="true">$</span>
-      <span class="brand-text">
-        <b>PrizeDesk</b>
-        <span>Source reviewed 19 Aug 2026</span>
-      </span>
+      <span class="brand-text"><b>PrizeDesk</b><span>Official-page verification 2 Nov 2026</span></span>
     </a>
-    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="analysis.html">Analysis</a><a href="executive-summary.html">Executive summary</a><a href="research.html" aria-current="page">Source audit</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a></nav>
+    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="shortlist.html">Verified shortlist</a><a href="verified.html">Verified 2 Nov</a><a href="analysis.html">Analysis</a><a href="verification.html">Verification</a><a href="repo-review.html">Repo review</a><a href="research.html" aria-current="page">Source audit</a><a href="flagged.html">Flagged for review</a><a href="executive-summary.html">Executive summary</a></nav>
   </div>
 </header>
 <main id="main" class="wrap">
 
-<section class="hero">
-  <p class="kicker">Source audit · 19 official pages read by sessions in this repo</p>
-  <h1>What someone actually opened</h1>
-  <p class="lede">Three kinds of verification exist in this repository. The build session fetched
-  12 URLs on 1 Nov 2026 (logged on
-  <a href="flagged.html">Flagged for review</a>). Sessions in this repository have read
-  19 operator pages — each read is dated, attributed to the session that made it, and
-  written down with exactly what the page said. And an external link-health pass checked
-  203 URLs, with every failure re-fetched by hand before being called broken.
-  This page carries all three forward, attributed, rather than merging them into an anonymous “verified” badge.</p>
-</section>
-
-<div class="callout info">
-  <p><b>How to read this.</b> A row marked “Independently checked” had one of its official pages read on
-  the date shown in its row by the session named in the “Checked by” column — recorded in
-  <a href="data/cross-checks.json">data/cross-checks.json</a>, not asserted by this build. Their caveats are
-  carried verbatim. If a page did not state a value, the value stays blank on the row.</p>
-</div>
-
+<section class="hero"><p class="kicker">Source audit</p>
+  <h1>What the reference site is, and what we changed</h1>
+  <p class="lede">The starting point is <a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">Free Money &amp; Contest Ledger</a>.
+  It is a third-party research catalogue, not an operator. We pinned its maintained dataset and then checked
+  the operator's own pages before printing any value.</p></section>
 <div class="stat-grid">
-  <div class="stat is-good"><b>19</b><span>official pages read by sessions in this repo</span></div>
-  <div class="stat"><b>12</b><span>URLs fetched by this session</span></div>
-  <div class="stat is-warn"><b>37 of 203</b><span>external links that failed a bot check</span></div>
-  <div class="stat is-warn"><b>23</b><span>flagged irregularities</span></div>
+  <div class="stat"><b>206</b><span>listings claimed by the reference README</span></div>
+  <div class="stat"><b>221</b><span>rows in the pinned + merged dataset</span></div>
+  <div class="stat is-good"><b>40</b><span>official pages read 2 Nov</span></div>
+  <div class="stat is-warn"><b>191</b><span>rows still unverified</span></div>
 </div>
+<div class="callout warn"><p><b>Headline counts disagree.</b> The reference README declares 206 listings
+across 9 categories. The pinned dataset plus five merged additions and cross-checks in this repository
+contains 221 rows. Both figures are published here rather than reconciled by guesswork; see
+<a href="flagged.html#I-01">I-01</a> and <a href="flagged.html#R-11">R-11</a>.</p></div>
 
-<section class="section">
-  <h2>Cross-checks carried forward</h2>
-  <div class="table-scroll">
-    <table class="ledger">
-      <thead><tr><th>Listing</th><th>Official page</th><th>Confirmed on the page</th><th>Caveats recorded</th><th>Deadline</th><th>Checked by</th></tr></thead>
-      <tbody><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/givling.html">Givling</a>
-        <span class="cell-sub">Trivia competitions</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://givling.com/" rel="noopener noreferrer">givling.com/ ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>The operator&#39;s homepage describes Givling as a crowdfunding competition: $50,000 Queue funding and up to $50,000 via the Exchange, funded by Queue Points and random Spinners.</li><li>No entry fee is advertised; the service is promoted as free to download and play.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>The operator homepage advertises no trivia contest and no weekly team jackpot; the ledger&#39;s trivia description could not be reproduced there on 2026-11-02.</li><li>The source marks the row &quot;ended&quot;, but the operator site was live and recruiting users on 2026-11-02 - the status could be stale.</li><li>This is a crowdfunding queue, not a judged contest: payout depends on queue position and random elements.</li></ul></td>
-      <td data-label="Deadline"><span class="blank">—</span></td>
-      <td data-label="Checked by">arena/adae2c72-own1<span class="cell-sub">2 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/kaggle.html">Kaggle Competitions</a>
-        <span class="cell-sub">Tech &amp; data competitions</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://www.kaggle.com/competitions" rel="noopener noreferrer">www.kaggle.com/competitions ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>Featured competitions carry prizes; practice and community competitions may not.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>Prize and entry terms are per competition, not platform-wide.</li></ul></td>
-      <td data-label="Deadline"><span class="blank">—</span></td>
-      <td data-label="Checked by">arena/27a86924-own1, arena/90c9f78c-own1<span class="cell-sub">1 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/arcprize.html">ARC Prize (via Kaggle)</a>
-        <span class="cell-sub">Tech &amp; data competitions</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://arcprize.org/competitions/2026" rel="noopener noreferrer">arcprize.org/competitions/2026 ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>$2,000,000 across three tracks.</li><li>Code and methods must be open-sourced to be eligible for prizes.</li><li>No internet access during Kaggle evaluation.</li><li>Re-read 2026-11-02 by arena/adae2c72-own1: page unchanged - $2M in prizes, 3 tracks, submissions due November 2, 2026, papers due November 8, 2026, results December 4, 2026.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>Submission deadline 2026-11-02 and paper deadline 2026-11-08 — both fall within days of this build.</li><li>No entry fee is stated on the page; the earlier build deliberately left the fee cell blank rather than assume free.</li><li>DUE TODAY: submissions close 2026-11-02 (re-read on the day by arena/adae2c72-own1).</li></ul></td>
-      <td data-label="Deadline">2 Nov 2026</td>
-      <td data-label="Checked by">arena/27a86924-own1, arena/90c9f78c-own1, arena/adae2c72-own1<span class="cell-sub">2 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/drivendata.html">DrivenData</a>
-        <span class="cell-sub">Tech &amp; data competitions</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://www.drivendata.org/competitions/" rel="noopener noreferrer">www.drivendata.org/competitions/ ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>Prize competitions and practice benchmarks are listed separately.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>Eligibility and terms vary per competition.</li></ul></td>
-      <td data-label="Deadline"><span class="blank">—</span></td>
-      <td data-label="Checked by">arena/27a86924-own1, arena/90c9f78c-own1<span class="cell-sub">1 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/herox.html">HeroX / Challenge.gov</a>
-        <span class="cell-sub">Tech &amp; data competitions</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://www.herox.com/crowdsourcing-projects" rel="noopener noreferrer">www.herox.com/crowdsourcing-projects ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>Explore Challenges listing rendered with featured challenges, including the GEMS Prize and the &quot;$10 Million USD&quot; Origin of Life Prize.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>The listing states no entry fee, so entry cost remains unconfirmed.</li><li>The federal challenge.gov submission portal has been retired; usa.gov/challenges is the current entry point.</li></ul></td>
-      <td data-label="Deadline"><span class="blank">—</span></td>
-      <td data-label="Checked by">arena/181b7279-own1<span class="cell-sub">1 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/espn-pickem.html">ESPN NFL Pick&#39;em</a>
-        <span class="cell-sub">Fantasy &amp; sports picks</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay#CompleteRules" rel="noopener noreferrer">fantasy.espn.com/games/nfl-pickem-2026/howtop… ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>Free entry: NO PURCHASE NECESSARY.</li><li>Prize total $102,000, which includes a $5,000 random-drawing prize (not a skill prize).</li><li>Season runs through 2027-01-10.</li><li>Re-read 2026-11-02 by arena/adae2c72-own1: $102,000 total = 3 x $20,000 grand (Standard, Spread, Pick 5) + $10,000 Confidence + 18 x $500 weekly in each of three modes (54 x $500) + $5,000 random drawing; FAQ confirms every ESPN game is free and repeats the five-vs-ten entry contradiction.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>ESPN&#39;s own FAQ contradicts itself on the maximum number of entries (five vs ten).</li></ul></td>
-      <td data-label="Deadline">10 Jan 2027</td>
-      <td data-label="Checked by">arena/27a86924-own1, arena/90c9f78c-own1, arena/adae2c72-own1<span class="cell-sub">2 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/cbs-pro-pickem.html">CBS Sports Pro Football Pick&#39;em</a>
-        <span class="cell-sub">Fantasy &amp; sports picks</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://www.cbssports.com/fantasy/football/games/pickem/rules" rel="noopener noreferrer">www.cbssports.com/fantasy/football/games/pick… ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>&quot;The Challenge is FREE to play. No purchase, wireless device or entry fee necessary to enter or win.&quot;</li><li>18 weekly prizes of $1,000 each; season-long prize $5,000; contingency prize $100,000 for a perfect week with exact tiebreaker scores.</li><li>Challenge period 2026-09-09 to 2027-01-10; open to legal residents of the 50 US states (Puerto Rico and territories excluded), 18+, free CBS Sports account.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>The $100,000 figure is a contingency prize requiring a flawless week plus exact tiebreaker scores - not a realistic skill payout.</li><li>One entry per registered user and per person.</li></ul></td>
-      <td data-label="Deadline">10 Jan 2027</td>
-      <td data-label="Checked by">arena/adae2c72-own1<span class="cell-sub">2 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/metaculus.html">Metaculus Tournaments</a>
-        <span class="cell-sub">Forecasting tournaments</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://www.metaculus.com/tournaments/" rel="noopener noreferrer">www.metaculus.com/tournaments/ ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>Platform states participation is free and that accurate forecasters can win cash prizes.</li><li>Prize pools are per tournament.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>Some listed tournaments have no prize pool at all.</li></ul></td>
-      <td data-label="Deadline"><span class="blank">—</span></td>
-      <td data-label="Checked by">arena/27a86924-own1, arena/90c9f78c-own1<span class="cell-sub">1 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/wall-street-survivor.html">Wall Street Survivor Trading Contests</a>
-        <span class="cell-sub">Market competitions</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://www.wallstreetsurvivor.com/" rel="noopener noreferrer">www.wallstreetsurvivor.com/ ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>AI Trading Contest runs 2026-11-02 to 2026-12-11; entry is free (&quot;Join Contest - it&#39;s free!&quot;).</li><li>&quot;US$500 total in Amazon gift cards up for grabs&quot; for that contest, plus badges.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>Prizes are Amazon gift cards, NOT cash.</li><li>The ledger&#39;s cited official URL points at the past &quot;contest-valentines-2026&quot; page; the current contest page is /ai-trading-contest/ on the same operator site.</li><li>The ledger&#39;s &quot;e.g. $300 / $150 / $50&quot; split was not visible on the page read 2026-11-02; treat it as unconfirmed.</li></ul></td>
-      <td data-label="Deadline">11 Dec 2026</td>
-      <td data-label="Checked by">arena/adae2c72-own1<span class="cell-sub">2 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/deriv-tournaments.html">Deriv Trading Tournaments</a>
-        <span class="cell-sub">Market competitions</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes" rel="noopener noreferrer">deriv.com/newsroom/updates/free-trading-tourn… ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>Free entry: &quot;Each tournament is free to enter ... with no deposit required.&quot;</li><li>Prizes per monthly tournament: $1,000 / $600 / $400.</li><li>Simulated $10,000 virtual account; real cash paid on skill-based leaderboards, no random draws.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>Prize payment requires a fully verified Deriv account.</li><li>Operator is Deriv (SVG) LLC, an offshore entity; participation is demo-only.</li></ul></td>
-      <td data-label="Deadline">Monthly tournaments; dates on contest.deriv.com</td>
-      <td data-label="Checked by">arena/181b7279-own1<span class="cell-sub">1 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/roboforex-demo.html">RoboForex Demo Contest</a>
-        <span class="cell-sub">Market competitions</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://roboforex.com/contests/" rel="noopener noreferrer">roboforex.com/contests/ ↗</a></td>
-      <td data-label="Confirmed"><span class="blank">—</span></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>https://roboforex.com/contests/ returned 404 (&quot;It seems that the page you requested doesn&#39;t exist&quot;); no contest terms page was found on the operator site, so nothing about this contest is confirmed.</li></ul></td>
-      <td data-label="Deadline"><span class="blank">—</span></td>
-      <td data-label="Checked by">arena/181b7279-own1<span class="cell-sub">1 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/wergle-flomp.html">Wergle Flomp Humor Poetry Contest</a>
-        <span class="cell-sub">Creative contests</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free" rel="noopener noreferrer">winningwriters.com/our-contests/wergle-flomp-… ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>&quot;No fee to enter&quot; stated on the page; submission window August 15, 2026 - April 1, 2027.</li><li>$5,100 in prizes: $2,000 first, $750 second, $350 third, 10 honorable mentions of $200.</li><li>Eligibility: all countries except Iran, North Korea, Crimea, Russia, Belarus; no age restriction.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>AI-generated text is not allowed in submitted poems; any AI use in creation must be described at submission.</li><li>Deadline 2027-04-01 as read on the operator page; results announced 2027-08-15.</li></ul></td>
-      <td data-label="Deadline">1 Apr 2027</td>
-      <td data-label="Checked by">arena/adae2c72-own1<span class="cell-sub">2 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/checkmate-gaming.html">Checkmate Gaming (CMG) Free Tournaments</a>
-        <span class="cell-sub">Skill tournaments</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://www.checkmategaming.com/free-tournaments" rel="noopener noreferrer">www.checkmategaming.com/free-tournaments ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>Page headline: &quot;Totally free to enter with real cash prizes. New tournaments posted daily.&quot;</li><li>Tournaments listed on 2026-11-02 showed cash prizes of $40 and $120, all marked FREE ENTRY.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>The ledger&#39;s &quot;$10-$180&quot; range was NOT reproduced on the 2026-11-02 read; only $40 and $120 were visible that day. Treat the range as unconfirmed.</li><li>Paid &quot;ELITE ENTRY&quot; events also run on the platform; only listings marked FREE ENTRY are free.</li></ul></td>
-      <td data-label="Deadline"><span class="blank">—</span></td>
-      <td data-label="Checked by">arena/adae2c72-own1<span class="cell-sub">2 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/sony-world-photo.html">Sony World Photography Awards</a>
-        <span class="cell-sub">Creative contests</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://www.worldphoto.org/sony-world-photography-awards" rel="noopener noreferrer">www.worldphoto.org/sony-world-photography-awa… ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>Page states the awards have always been &quot;free to enter&quot;.</li><li>Series competition (formerly Professional) top prize $25,000; Single Image (formerly Open) top prize $5,000, plus Sony equipment.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>Competition names changed: the ledger&#39;s &quot;Professional Photographer of the Year&quot; and &quot;Open&quot; wording is the old naming.</li><li>Timeline read 2026-11-02: Student closes 2026-11-27 16:00 GMT; Single Image and Youth 2027-01-05 16:00 GMT; Series 2027-01-12 16:00 GMT; next cycle opens 2027-06-01.</li><li>The $25,000/$5,000 cash figures are the operator&#39;s stated top prizes; equipment and exhibition extras are not cash.</li></ul></td>
-      <td data-label="Deadline">12 Jan 2027</td>
-      <td data-label="Checked by">arena/adae2c72-own1<span class="cell-sub">2 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/gems-prize-2026.html">GEMS Prize Challenge (DrivenData)</a>
-        <span class="cell-sub">Tech &amp; data competitions</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://www.drivendata.org/competitions/306/competition-doe-gems/" rel="noopener noreferrer">www.drivendata.org/competitions/306/competiti… ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>$300,000 total prize pool.</li><li>Closes 2026-12-03 at 23:59 UTC.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>Final-round awards depend on scoring; no fee is stated on the inspected page.</li></ul></td>
-      <td data-label="Deadline">3 Dec 2026</td>
-      <td data-label="Checked by">arena/27a86924-own1, arena/90c9f78c-own1<span class="cell-sub">1 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/midterms-2026.html">US Midterms 2026 (Metaculus tournament)</a>
-        <span class="cell-sub">Forecasting tournaments</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://www.metaculus.com/tournament/midterms-2026/" rel="noopener noreferrer">www.metaculus.com/tournament/midterms-2026/ ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>$10,000 prize pool.</li><li>Free entry per the platform statement.</li><li>Re-read 2026-11-02 by arena/adae2c72-own1: page still shows $10,000 prize pool and closes Nov 04; 26 questions listed.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>Closes 2026-11-04 — three days after this build. Confirm eligibility in the tournament rules.</li></ul></td>
-      <td data-label="Deadline">4 Nov 2026</td>
-      <td data-label="Checked by">arena/90c9f78c-own1, arena/adae2c72-own1<span class="cell-sub">2 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/codex-twitchcon-2026.html">Codex x TwitchCon Hackathon</a>
-        <span class="cell-sub">Tech &amp; data competitions</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://twitchcon-codex.devpost.com/rules" rel="noopener noreferrer">twitchcon-codex.devpost.com/rules ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>$10,000 first place.</li><li>No purchase necessary; 18+ or age of majority.</li><li>AI coding assistants are permitted; a Codex session ID and demo are required.</li><li>Re-read 2026-11-02 by arena/adae2c72-own1: prize table is 1st $10,000, 2nd $6,000, 3rd $4,000, two runner-ups $2,500 each - $25,000 total, matching the page title. NO PURCHASE OR PAYMENT NECESSARY; entrants 18+.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>Closes 2026-11-02 at 2pm Pacific — one day after this build.</li><li>CLOSES TODAY: submission period ends 2026-11-02 2:00pm Pacific / 5:00pm Eastern (re-read on the day by arena/adae2c72-own1).</li></ul></td>
-      <td data-label="Deadline">2 Nov 2026</td>
-      <td data-label="Checked by">arena/37aed701-own1, arena/adae2c72-own1<span class="cell-sub">2 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/paypal-ai-hackathon-2026.html">PayPal AI Hackathon</a>
-        <span class="cell-sub">Tech &amp; data competitions</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://paypalaihackathon.devpost.com/rules" rel="noopener noreferrer">paypalaihackathon.devpost.com/rules ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>$12,000 first place per the rules page.</li><li>No purchase necessary.</li><li>Functional demo and public source repository required.</li><li>Re-read 2026-11-02 by arena/adae2c72-own1: rules section 8 itemises 1st Place $12,000 USD, 2nd $8,000, 3rd $5,000, five Honorable Mentions of $5,000, plus sponsor prizes; deadline Nov 12, 2026; NO PURCHASE OR PAYMENT NECESSARY.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>The event page advertises a much larger headline figure than the rules itemise — see I-20.</li></ul></td>
-      <td data-label="Deadline">12 Nov 2026</td>
-      <td data-label="Checked by">arena/37aed701-own1, arena/adae2c72-own1<span class="cell-sub">2 Nov 2026</span></td>
-    </tr><tr>
-      <td class="cell-name" data-label="Listing"><a href="c/global-virtual-hackathon-2026.html">Global Virtual Hackathon 2026</a>
-        <span class="cell-sub">Tech &amp; data competitions</span></td>
-      <td data-label="Official page"><a class="src-link" href="https://gvhackathon.com/" rel="noopener noreferrer">gvhackathon.com/ ↗</a></td>
-      <td data-label="Confirmed"><ul class="list" style="margin:0"><li>Free to enter.</li><li>$1,000 first place per division plus two $250 runners-up per division.</li><li>AI tools allowed and expected; work must be defensible on camera.</li></ul></td>
-      <td data-label="Caveats"><ul class="list" style="margin:0"><li>Students aged 14–18 only, in teams of 2–4 with a supervising teacher.</li><li>Registration closes 2026-11-13 23:59 AoE; submission 2026-11-25.</li></ul></td>
-      <td data-label="Deadline">13 Nov 2026</td>
-      <td data-label="Checked by">arena/37aed701-own1<span class="cell-sub">1 Nov 2026</span></td>
-    </tr></tbody>
-    </table>
-  </div>
-  <p class="note-tiny">Attribution: <li><code>arena/adae2c72-own1</code> — 11 of the 19 checks</li><li><code>arena/27a86924-own1</code> — 6 of the 19 checks</li><li><code>arena/90c9f78c-own1</code> — 7 of the 19 checks</li><li><code>arena/181b7279-own1</code> — 3 of the 19 checks</li><li><code>arena/37aed701-own1</code> — 3 of the 19 checks</li></p>
+<section class="section"><h2>1. What makes the reference site hard to use on a phone</h2>
+  <div class="card"><ul class="list">
+    <li>Its own landing page says: "No search box, no filters: just scroll, or tap a section to jump to it." With 206 cards that is a very long scroll.</li>
+    <li>All listings and the four headline counts are injected by <code>assets/js/app.js</code>. With scripts blocked the page shows an empty grid and four zeroes.</li>
+    <li>The stylesheet has a single 760px breakpoint and no table view, so comparing prize/entry/status across rows means scrolling back and forth.</li>
+    <li>Its <code>100_VERIFIED_CONTESTS.md</code> and <code>index.md</code> are both marked superseded by their own authors; the first documents prize claims that did not exist.</li>
+    <li>Some operator links have rotted (Challenge.gov sunset, HeroX and RoboForex 404s), and its blanket "US tax forms apply at $600+" line is a generalisation.</li>
+  </ul>
+  <p class="note-tiny">Manual review: <a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/index.html" rel="noopener noreferrer">reference index.html ↗</a> · <a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/js/app.js" rel="noopener noreferrer">app.js ↗</a> · <a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/100_VERIFIED_CONTESTS.md" rel="noopener noreferrer">100_VERIFIED_CONTESTS.md ↗</a> · <a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/README.md" rel="noopener noreferrer">README.md ↗</a></p></div>
 </section>
 
-
-<section class="section">
-  <h2>External link health</h2>
-  <p class="note-tiny">Automated fetch of 203 external URLs on 2026-11-01:
-  166 loaded, 37 failed. On 2026-11-02 every failure that was not a plain
-  bot wall was fetched again by hand by <code>arena/adae2c72-own1</code> before being called broken —
-  published as <a href="flagged.html#I-23">I-23</a>. A 403 from an automated client is not a broken link: several
-  of those load normally in a browser. Rows whose only official source is one of the dead URLs have their prize
-  cell blanked.</p>
-  <div class="table-scroll">
-    <table class="ledger">
-      <thead><tr><th>URL</th><th>Bot check 1 Nov</th><th>Hand re-check 2 Nov</th><th>What we saw</th></tr></thead>
-      <tbody><tr>
-        <td data-label="URL"><a class="src-link" href="https://bracketchallenge.nhl.com/en/how-to-play" rel="noopener noreferrer">bracketchallenge.nhl.com/en/how-to-play ↗</a></td>
-        <td data-label="Bot check">404</td>
-        <td data-label="Hand re-check"><span class="badge danger">still dead</span></td>
-        <td data-label="What we saw">HTTP 404 again on 2026-11-02 (Azure Static Web Apps: &quot;404: Not Found&quot;). Same host as the row&#39;s signup URL /en/home, which was not fetched separately.</td>
-      </tr><tr>
-        <td data-label="URL"><a class="src-link" href="https://fantasy.football.scot/" rel="noopener noreferrer">fantasy.football.scot/ ↗</a></td>
-        <td data-label="Bot check">ENOTFOUND</td>
-        <td data-label="Hand re-check"><span class="badge danger">still dead</span></td>
-        <td data-label="What we saw">Fetch failed on 2026-11-01 (ENOTFOUND, DNS) and again on 2026-11-02.</td>
-      </tr><tr>
-        <td data-label="URL"><a class="src-link" href="https://fantazilig.tff.org/" rel="noopener noreferrer">fantazilig.tff.org/ ↗</a></td>
-        <td data-label="Bot check">ENOTFOUND</td>
-        <td data-label="Hand re-check"><span class="badge danger">still dead</span></td>
-        <td data-label="What we saw">Fetch failed on 2026-11-01 (ENOTFOUND, DNS) and again on 2026-11-02.</td>
-      </tr><tr>
-        <td data-label="URL"><a class="src-link" href="https://supercoach.news.com.au/bbl/" rel="noopener noreferrer">supercoach.news.com.au/bbl/ ↗</a></td>
-        <td data-label="Bot check">ENOTFOUND</td>
-        <td data-label="Hand re-check"><span class="badge danger">still dead</span></td>
-        <td data-label="What we saw">Fetch failed on 2026-11-01 (ENOTFOUND, DNS) and again on 2026-11-02.</td>
-      </tr><tr>
-        <td data-label="URL"><a class="src-link" href="https://fantasyracing.telegraph.co.uk/cheltenham/how-to-play" rel="noopener noreferrer">fantasyracing.telegraph.co.uk/cheltenham/how-to-play ↗</a></td>
-        <td data-label="Bot check">ENOTFOUND</td>
-        <td data-label="Hand re-check"><span class="badge danger">still dead</span></td>
-        <td data-label="What we saw">Fetch failed on 2026-11-01 (ENOTFOUND, DNS) and again on 2026-11-02.</td>
-      </tr><tr>
-        <td data-label="URL"><a class="src-link" href="https://fantasygaelicfootball.com/" rel="noopener noreferrer">fantasygaelicfootball.com/ ↗</a></td>
-        <td data-label="Bot check">UND_ERR_CONNECT_TIMEOUT</td>
-        <td data-label="Hand re-check"><span class="badge danger">still dead</span></td>
-        <td data-label="What we saw">Connection timeout on 2026-11-01 (UND_ERR_CONNECT_TIMEOUT); fetch failed again on 2026-11-02.</td>
-      </tr><tr>
-        <td data-label="URL"><a class="src-link" href="https://dash.hypermind.com/hypermind/app.html" rel="noopener noreferrer">dash.hypermind.com/hypermind/app.html ↗</a></td>
-        <td data-label="Bot check">503</td>
-        <td data-label="Hand re-check"><span class="badge danger">still dead</span></td>
-        <td data-label="What we saw">HTTP 503 Service Unavailable on 2026-11-01 and again on 2026-11-02.</td>
-      </tr><tr>
-        <td data-label="URL"><a class="src-link" href="https://pensacolabeachsongwritersfestival.com/2026-songwriting-competition/" rel="noopener noreferrer">pensacolabeachsongwritersfestival.com/2026-songwrit… ↗</a></td>
-        <td data-label="Bot check">CERT_HAS_EXPIRED</td>
-        <td data-label="Hand re-check"><span class="badge danger">still dead</span></td>
-        <td data-label="What we saw">TLS certificate expired on 2026-11-01 (CERT_HAS_EXPIRED). On 2026-11-02 the URL loaded but served only a WordPress &quot;There has been a critical error on this website&quot; page - no competition content.</td>
-      </tr><tr>
-        <td data-label="URL"><a class="src-link" href="https://www.topcoder.com/challenges" rel="noopener noreferrer">www.topcoder.com/challenges ↗</a></td>
-        <td data-label="Bot check">404</td>
-        <td data-label="Hand re-check"><span class="badge good">loads</span></td>
-        <td data-label="What we saw">HTTP 404 on 2026-11-01; the challenge-listing page loaded normally on 2026-11-02. Transient false positive - not flagged.</td>
-      </tr><tr>
-        <td data-label="URL"><a class="src-link" href="https://favorites.actionnetwork.com/games/the-favorites" rel="noopener noreferrer">favorites.actionnetwork.com/games/the-favorites ↗</a></td>
-        <td data-label="Bot check">ERR_TLS_CERT_ALTNAME_INVALID</td>
-        <td data-label="Hand re-check"><span class="badge good">loads</span></td>
-        <td data-label="What we saw">TLS certificate error on 2026-11-01 (ERR_TLS_CERT_ALTNAME_INVALID); the page loaded on 2026-11-02 (cookie-consent wall). Transient false positive - not flagged.</td>
-      </tr><tr>
-        <td data-label="URL"><a class="src-link" href="https://paypalaihackathon.devpost.com/rules" rel="noopener noreferrer">paypalaihackathon.devpost.com/rules ↗</a></td>
-        <td data-label="Bot check">403</td>
-        <td data-label="Hand re-check"><span class="badge good">loads</span></td>
-        <td data-label="What we saw">HTTP 403 to the automated fetcher on 2026-11-01; read in full on 2026-11-02 (Devpost blocks bots, not browsers).</td>
-      </tr><tr>
-        <td data-label="URL"><a class="src-link" href="https://twitchcon-codex.devpost.com/rules" rel="noopener noreferrer">twitchcon-codex.devpost.com/rules ↗</a></td>
-        <td data-label="Bot check">403</td>
-        <td data-label="Hand re-check"><span class="badge good">loads</span></td>
-        <td data-label="What we saw">HTTP 403 to the automated fetcher on 2026-11-01; read in full on 2026-11-02 (Devpost blocks bots, not browsers).</td>
-      </tr><tr>
-        <td data-label="URL"><a class="src-link" href="https://www.metaculus.com/tournament/midterms-2026/" rel="noopener noreferrer">www.metaculus.com/tournament/midterms-2026/ ↗</a></td>
-        <td data-label="Bot check">403</td>
-        <td data-label="Hand re-check"><span class="badge good">loads</span></td>
-        <td data-label="What we saw">HTTP 403 to the automated fetcher on 2026-11-01; the tournament page loaded on 2026-11-02 ($10,000 pool, closes Nov 04).</td>
-      </tr><tr>
-        <td data-label="URL"><a class="src-link" href="https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free" rel="noopener noreferrer">winningwriters.com/our-contests/wergle-flomp-humor-… ↗</a></td>
-        <td data-label="Bot check">307</td>
-        <td data-label="Hand re-check"><span class="badge good">loads</span></td>
-        <td data-label="What we saw">HTTP 307 redirect to the automated fetcher on 2026-11-01; the contest page loaded on 2026-11-02 (full prize table read).</td>
-      </tr></tbody>
-    </table>
-  </div>
+<section class="section"><h2>2. What this site does differently</h2>
+  <div class="card"><ol class="list">
+    <li>Pre-rendered static tables with labelled mobile cells; search/filter/sort is progressive enhancement and works with JavaScript off.</li>
+    <li>A dashboard, category subpages, a detail page per row, an analysis page, a verification page and a clearly labelled Flagged for Review page.</li>
+    <li>Only values read on an official page on 2 Nov 2026 are printed, with the verbatim quote and URL on <a href="verified.html">Verified 2 Nov</a>.</li>
+    <li>Unverified rows keep their name, category and links but have blank value cells, and are listed one by one on <a href="flagged.html#unverified-rows">Flagged for Review</a>.</li>
+    <li>Every table row links to a source; rows without an official operator page are labelled "none official" rather than given a made-up one.</li>
+  </ol></div>
 </section>
 
-<section class="section">
-  <h2>What the other sessions flagged that we did not</h2>
-  <div class="card">
-    <ul class="list">
-      <li><a href="flagged.html#I-17">I-17</a> — ESPN's own rules contradict each other on maximum entries (five vs ten).</li>
-      <li><a href="flagged.html#I-18">I-18</a> — Challenge.gov, presented as a live directory, was sunset by the government on 2026-03-30.</li>
-      <li><a href="flagged.html#I-19">I-19</a> — IceHacks advertises cash in its header while its own description says there is none.</li>
-      <li><a href="flagged.html#I-20">I-20</a> — PayPal AI Hackathon's headline prize total and its itemised rules disagree.</li>
-      <li><a href="flagged.html#I-21">I-21</a> — the reference work's “$600+” tax line is a generalisation, not a rule (IRS links included).</li>
-    </ul>
-  </div>
+<section class="section"><h2>3. Provenance of the pinned file</h2>
+  <div class="card"><dl class="kv">
+    <div class="kv-item"><dt>Source commit</dt><dd><code>466f7c1e7a14b52b4a0d36beb84a00d68fd409b7</code></dd></div>
+    <div class="kv-item"><dt>Source file</dt><dd><code>assets/data.js</code></dd></div>
+    <div class="kv-item wide"><dt>SHA-256</dt><dd style="word-break:break-all"><code>13986a17b8b9aa7b3240232e6138155967cfa9347256faa7b5c7d1565ed73211</code></dd></div>
+    <div class="kv-item"><dt>Vendored as</dt><dd><code>data/source/ledger.source.js</code></dd></div>
+    <div class="kv-item"><dt>Declared review date</dt><dd>19 Aug 2026</dd></div>
+  </dl>
+  <p class="note-tiny">See <a href="https://github.com/sassnarep3-star/Own1/blob/main/data/source/PROVENANCE.json" rel="noopener noreferrer">PROVENANCE.json ↗</a> and <a href="https://github.com/sassnarep3-star/Own1/blob/main/scripts/ingest.js" rel="noopener noreferrer">ingest.js ↗</a>. The file is parsed as JSON; its JavaScript is never executed.</p></div>
 </section>
 
-<section class="section">
-  <h2>Raw records you can read yourself</h2>
-  <div class="card">
-    <ul class="list">
-      <li><a href="research/SOURCES.md">research/SOURCES.md</a> — the parallel sessions' original source audit: which pages were read, what they confirmed, and what they could not.</li>
-      <li><a href="archive/prize-atlas/index.html">archived “Prize Atlas” dashboard</a> — the earlier build, preserved intact (208 leads, 7 checked pages) with its own review queue and supplemental research page.</li>
-      <li><a href="archive/prize-atlas/supplemental/index.html">archived supplemental research</a> — the source of the three hackathon rows and four of the flags above.</li>
-      <li><a href="archive/prize-atlas/dashboard-v2/index.html">archived second dashboard (session d21e8702)</a> — the other full build of this brief, preserved intact with its own audit, methodology, sources and cross-session pages.</li>
-      <li><a href="docs/COORDINATION-session-records.md">docs/COORDINATION-session-records.md</a> — every session's own task record, verbatim, including their PR numbers and deployment runs.</li>
-      <li><a href="data/cross-checks.json">data/cross-checks.json</a> — the machine-readable version of this page.</li>
-      <li><a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/466f7c1e7a14b52b4a0d36beb84a00d68fd409b7/assets/data.js" rel="noopener noreferrer">the pinned ledger snapshot</a> the rows were imported from.</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Rows that came from the other sessions</h2>
-  <div class="card">
-    <p>5 rows are not in the pinned ledger at all. They were added by parallel sessions
-    after reading the operator page, and are marked as merged rows on their detail pages:</p>
-    <ul class="list">
-      <li><a href="c/gems-prize-2026.html">GEMS Prize Challenge (DrivenData)</a> — Prize Atlas data/entries.json + research/SOURCES.md</li><li><a href="c/midterms-2026.html">US Midterms 2026 (Metaculus tournament)</a> — Prize Atlas data/entries.json + research/SOURCES.md</li><li><a href="c/codex-twitchcon-2026.html">Codex x TwitchCon Hackathon</a> — Prize Atlas supplemental research page</li><li><a href="c/paypal-ai-hackathon-2026.html">PayPal AI Hackathon</a> — Prize Atlas supplemental research page</li><li><a href="c/global-virtual-hackathon-2026.html">Global Virtual Hackathon 2026</a> — Prize Atlas supplemental research page</li>
-    </ul>
-    <p class="note-tiny">Their prize figures come from the operator page that session read, on the date recorded
-    in <code>data/cross-checks.json</code>. If that page did not state a figure, the row shows “—”.</p>
-  </div>
+<section class="section"><h2>4. Sources used in the 2 Nov pass</h2>
+  <p class="note-tiny">All 40 official URLs are listed with titles and outcomes on
+  <a href="verified.html">Verified 2 Nov</a>. The most consequential ones:</p>
+  <div class="card"><ul class="list">
+    <li><a href="https://www.kaggle.com/competitions" rel="noopener noreferrer">Kaggle Competitions ↗</a> · <a href="https://www.kaggle.com/docs/competitions" rel="noopener noreferrer">Kaggle competition docs ↗</a></li>
+    <li><a href="https://arcprize.org/competitions/2026" rel="noopener noreferrer">ARC Prize 2026 ↗</a> · <a href="https://www.drivendata.org/competitions/306/competition-doe-gems/" rel="noopener noreferrer">DrivenData GEMS ↗</a> · <a href="https://www.metaculus.com/tournaments/" rel="noopener noreferrer">Metaculus Tournaments ↗</a></li>
+    <li><a href="https://twitchcon-codex.devpost.com/rules" rel="noopener noreferrer">Codex x TwitchCon rules ↗</a> · <a href="https://paypalaihackathon.devpost.com/rules" rel="noopener noreferrer">PayPal AI Hackathon rules ↗</a> · <a href="https://devpost.com/hackathons" rel="noopener noreferrer">Devpost hackathons ↗</a></li>
+    <li><a href="https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay" rel="noopener noreferrer">ESPN Pick'em rules ↗</a> · <a href="https://www.cbssports.com/fantasy/football/games/pickem/rules" rel="noopener noreferrer">CBS rules ↗</a> · <a href="https://www.mlb.com/apps/beat-the-streak/official-rules" rel="noopener noreferrer">MLB Beat the Streak rules ↗</a></li>
+    <li><a href="https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free" rel="noopener noreferrer">Winning Writers ↗</a> · <a href="https://www.worldphoto.org/sony-world-photography-awards" rel="noopener noreferrer">Sony World Photography Awards ↗</a> · <a href="https://www.challenge.gov/" rel="noopener noreferrer">Challenge.gov sunset notice ↗</a></li>
+  </ul></div>
 </section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-links">
-      <a href="all.html">All 211 competitions</a>
+      <a href="index.html">Dashboard</a>
+      <a href="all.html">All competitions</a>
       <a href="best.html">Best picks</a>
+      <a href="shortlist.html">Verified shortlist</a>
+      <a href="verified.html">Verified 2 Nov</a>
       <a href="analysis.html">Analysis</a>
+      <a href="verification.html">Verification</a>
+      <a href="repo-review.html">Repo review</a>
       <a href="research.html">Source audit</a>
-      <a href="verification.html">Verification method</a>
-      <a href="flagged.html">Flagged for review (23)</a>
+      <a href="flagged.html">Flagged for review</a>
       <a href="executive-summary.html">Executive summary</a>
     </div>
-    <p><b>PrizeDesk</b> is an independent workbench built on the Free Money &amp; Contest
-    Ledger dataset (pinned commit <code>466f7c1</code>, source reviewed
-    19 Aug 2026). It is not affiliated with any operator listed.
-    Prize figures are the source dataset's claims, not this site's promises — open the operator's
-    rules before you enter. Contest law varies by state and country; play only where legal. 18+/21+.</p>
-    <p class="note-tiny">Figures verified on this site: 13 of 211 rows were
-    fetched live on 1 Nov 2026. Everything else is labelled
-    "source cited — not re-checked". See <a href="verification.html">how verification works</a>.</p>
+    <p><b>PrizeDesk</b> is an independent workbench. Its 221 rows come from the third-party
+    <a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">Free Money &amp; Contest Ledger</a>
+    (pinned commit <code>466f7c1</code>, source reviewed
+    19 Aug 2026). Only values read on an official operator page on
+    2 Nov 2026 are published; everything else is blank and
+    <a href="flagged.html">flagged for review</a>. Prize figures are the operator's wording, not
+    this site's promise. Contest law and eligibility vary by state and country; read the rules before you enter.</p>
+    <p class="note-tiny">30 of 221 rows were checked against 40 official pages on
+    2 Nov 2026. See <a href="verification.html">how verification works</a> and
+    <a href="verified.html">the line-by-line evidence</a>.</p>
   </div>
 </footer>
 

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repo review — PrizeDesk</title>
+<meta name="description" content="Line-by-line repository review with GitHub links for manual review.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E$%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+.callout.warn { border-left-color: var(--warn, #b26b00); }
+.evidence-box { border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin:8px 0; background:var(--card,#fff); }
+.fact-quote { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.86rem; color:var(--muted); white-space:pre-wrap; word-break:break-word; }
+.verified-article { border-top:1px solid var(--line); padding:14px 0; }
+.mini-links a { margin-right:10px; }
+.tag-row { margin:6px 0; }
+.stat-grid .stat b { font-size:1.4rem; }
+.src-list { margin:4px 0 0; padding-left:18px; }
+</style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">$</span>
+      <span class="brand-text"><b>PrizeDesk</b><span>Official-page verification 2 Nov 2026</span></span>
+    </a>
+    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="shortlist.html">Verified shortlist</a><a href="verified.html">Verified 2 Nov</a><a href="analysis.html">Analysis</a><a href="verification.html">Verification</a><a href="repo-review.html" aria-current="page">Repo review</a><a href="research.html">Source audit</a><a href="flagged.html">Flagged for review</a><a href="executive-summary.html">Executive summary</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+
+<section class="hero"><p class="kicker">Repo review · links for manual review</p>
+  <h1>Review the repository line by line</h1>
+  <p class="lede">This page is the manual-review index for the 2 Nov 2026 integration. Every file
+  we checked is linked to its GitHub copy; every irregularity carries its evidence and official source links
+  on the <a href="flagged.html">Flagged for Review</a> page.</p></section>
+<div class="callout info"><p><b>What we did.</b> Read <a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">the
+reference site</a> and its own GitHub files; verified the pinned dataset's checksum; compared the published
+site's data contract, generator, tests and CI workflow; then re-read 40 official operator pages.
+Full written findings: <a href="https://github.com/sassnarep3-star/Own1/blob/main/REPO_REVIEW.md" rel="noopener noreferrer">REPO_REVIEW.md ↗</a>.</p></div>
+
+<section class="section"><h2>1. Files in this repository</h2>
+  <div class="table-scroll"><table class="ledger">
+    <thead><tr><th>File</th><th>What it is / why to review it</th></tr></thead>
+    <tbody><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/COORDINATION.md" rel="noopener noreferrer"><code>COORDINATION.md</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Shared task board: task statuses, owners, file scopes, conflict and publication logs.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/EXECUTIVE_SUMMARY.md" rel="noopener noreferrer"><code>EXECUTIVE_SUMMARY.md</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Canonical written executive summary for this build.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/REPO_REVIEW.md" rel="noopener noreferrer"><code>REPO_REVIEW.md</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Written repo review with manual-review links and irregularities.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/README.md" rel="noopener noreferrer"><code>README.md</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Repository overview and build instructions.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/data/source/ledger.source.js" rel="noopener noreferrer"><code>data/source/ledger.source.js</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Byte-for-byte copy of the reference site&#39;s assets/data.js (SHA-256 13986a17b8b9aa7b3240232e6138155967cfa934725).</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/data/source/PROVENANCE.json" rel="noopener noreferrer"><code>data/source/PROVENANCE.json</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Pinned reference commit, review date and source-file checksum.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/data/ledger.json" rel="noopener noreferrer"><code>data/ledger.json</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Canonical 211-row dataset produced by scripts/ingest.js.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/data/verification-2026-11-02.json" rel="noopener noreferrer"><code>data/verification-2026-11-02.json</code> ↗</a></td>
+      <td data-label="What it is / why to review it">This session&#39;s dated official-page reads, verbatim quotes and per-field confirmed values.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/data/review-2026-11-02.json" rel="noopener noreferrer"><code>data/review-2026-11-02.json</code> ↗</a></td>
+      <td data-label="What it is / why to review it">This session&#39;s repo review and irregularity register.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/data/irregularities.json" rel="noopener noreferrer"><code>data/irregularities.json</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Historical 22-item irregularity register (I-01 to I-22).</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/data/link-health.json" rel="noopener noreferrer"><code>data/link-health.json</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Automated link check from 2026-11-01: 203 URLs, 166 ok, 10 hard failures, 27 soft failures.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/scripts/build.js" rel="noopener noreferrer"><code>scripts/build.js</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Deterministic generator for every published page (no network, no timestamps).</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/scripts/ingest.js" rel="noopener noreferrer"><code>scripts/ingest.js</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Verifies the source checksum and parses the vendored ledger without evaluating JavaScript.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/scripts/verify.js" rel="noopener noreferrer"><code>scripts/verify.js</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Produces the per-row verification state and the historical irregularity register.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/scripts/checklinks.js" rel="noopener noreferrer"><code>scripts/checklinks.js</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Checks every internal link/anchor and that every table row has a source link.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/tests/validate.mjs" rel="noopener noreferrer"><code>tests/validate.mjs</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Data-contract and link validation executed in CI.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/.github/workflows/validate.yml" rel="noopener noreferrer"><code>.github/workflows/validate.yml</code> ↗</a></td>
+      <td data-label="What it is / why to review it">CI: rebuild, determinism check, data contract, link check, mobile checks.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/assets/css/site.css" rel="noopener noreferrer"><code>assets/css/site.css</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Mobile-first stylesheet with min-width breakpoints at 520px and 960px.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/assets/js/app.js" rel="noopener noreferrer"><code>assets/js/app.js</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Progressive-enhancement search/filter/sort; the site works without JavaScript.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/tree/main/archive" rel="noopener noreferrer"><code>archive/</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Earlier generations of this site from parallel sessions, preserved and link-checked.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/research/gems-rules-4db3cf09.md" rel="noopener noreferrer"><code>research/gems-rules-4db3cf09.md</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Independent GEMS rules review handed off by session 4db3cf09-own1 (PR #3), preserved verbatim and re-verified against the official rules on 2026-11-02.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/research/VERIFICATION-2026-11-02.md" rel="noopener noreferrer"><code>research/VERIFICATION-2026-11-02.md</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Human-readable line-by-line verification record: every official page, quote, confirmed value, blank field and unverified row.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/data/verification/current-state-2026-11-02.md" rel="noopener noreferrer"><code>data/verification/current-state-2026-11-02.md</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Earlier session&#39;s targeted official-source refresh and integration update (PR #35). Preserved verbatim.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/docs/SESSION-7a477419.md" rel="noopener noreferrer"><code>docs/SESSION-7a477419.md</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Earlier session&#39;s integration log for the 10 sourced additions, 25 check records and flags I-22..I-30.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/data/shortlist-notes.json" rel="noopener noreferrer"><code>data/shortlist-notes.json</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Per-row sourced notes for the Verified shortlist, written by arena/7a477419-own1 and preserved on shortlist.html.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/data/cross-checks.json" rel="noopener noreferrer"><code>data/cross-checks.json</code> ↗</a></td>
+      <td data-label="What it is / why to review it">25 dated official-page check records with reader attribution, merged by scripts/ingest.js.</td>
+    </tr><tr>
+      <td data-label="File"><a href="https://github.com/sassnarep3-star/Own1/blob/main/shortlist.html" rel="noopener noreferrer"><code>shortlist.html</code> ↗</a></td>
+      <td data-label="What it is / why to review it">Verified shortlist introduced by PR #35, regenerated by this integration build with the same sourced notes.</td>
+    </tr></tbody></table></div>
+</section>
+
+<section class="section"><h2>2. Reference-site files reviewed</h2>
+  <div class="table-scroll"><table class="ledger">
+    <thead><tr><th>Reference file</th><th>Note</th></tr></thead>
+    <tbody><tr>
+      <td data-label="Reference file"><a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/index.html" rel="noopener noreferrer"><code>index.html</code> ↗</a></td>
+      <td data-label="Note">Reference landing page: &#39;No search box, no filters: just scroll, or tap a section to jump to it&#39; and four counts rendered by JavaScript.</td>
+    </tr><tr>
+      <td data-label="Reference file"><a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/data.js" rel="noopener noreferrer"><code>assets/data.js</code> ↗</a></td>
+      <td data-label="Note">The 206-row third-party ledger, pinned here as data/source/ledger.source.js.</td>
+    </tr><tr>
+      <td data-label="Reference file"><a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/js/app.js" rel="noopener noreferrer"><code>assets/js/app.js</code> ↗</a></td>
+      <td data-label="Note">Client-side card renderer; no table view and no filters.</td>
+    </tr><tr>
+      <td data-label="Reference file"><a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/css/style.css" rel="noopener noreferrer"><code>assets/css/style.css</code> ↗</a></td>
+      <td data-label="Note">One mobile breakpoint at 760px; long card list on small screens.</td>
+    </tr><tr>
+      <td data-label="Reference file"><a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/README.md" rel="noopener noreferrer"><code>README.md</code> ↗</a></td>
+      <td data-label="Note">Declares 206 listings across 9 categories and says every entry has an official link.</td>
+    </tr><tr>
+      <td data-label="Reference file"><a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/100_VERIFIED_CONTESTS.md" rel="noopener noreferrer"><code>100_VERIFIED_CONTESTS.md</code> ↗</a></td>
+      <td data-label="Note">Marked &#39;SUPERSEDED — DO NOT USE AS A SOURCE&#39; and lists claims its own authors found false.</td>
+    </tr><tr>
+      <td data-label="Reference file"><a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/index.md" rel="noopener noreferrer"><code>index.md</code> ↗</a></td>
+      <td data-label="Note">Also marked &#39;Superseded research document (2026-08-19). Kept for provenance.&#39;</td>
+    </tr><tr>
+      <td data-label="Reference file"><a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/AUDIT_2026-08-19.md" rel="noopener noreferrer"><code>AUDIT_2026-08-19.md</code> ↗</a></td>
+      <td data-label="Note">The reference site&#39;s own audit trail (pass A).</td>
+    </tr></tbody></table></div>
+  <p class="note-tiny">Also reviewed: <a href="https://github.com/karagemop466-tech/FreeMoneyApps" rel="noopener noreferrer">the reference repository tree ↗</a> and its GitHub Pages build at <a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">https://karagemop466-tech.github.io/FreeMoneyApps/</a>.</p>
+</section>
+
+<section class="section"><h2>3. Irregularities flagged</h2>
+  <div class="table-scroll"><table class="ledger">
+    <thead><tr><th>Item</th><th>Finding</th><th>Severity</th><th>Source links</th></tr></thead>
+    <tbody><tr>
+      <td data-label="Item"><a href="flagged.html#R-01">R-01</a></td>
+      <td data-label="Finding">The reference site&#39;s own &#39;100 verified contests&#39; document is marked superseded and documents false claims</td>
+      <td data-label="Severity">high</td>
+      <td data-label="Source links"><a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/100_VERIFIED_CONTESTS.md" rel="noopener noreferrer">100_VERIFIED_CONTESTS.md (reference repo) ↗</a> · <a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/index.md" rel="noopener noreferrer">index.md (reference repo) ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-02">R-02</a></td>
+      <td data-label="Finding">The reference site is a single client-rendered scroll of 206 cards with no search, filters or table</td>
+      <td data-label="Severity">medium</td>
+      <td data-label="Source links"><a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/index.html" rel="noopener noreferrer">reference index.html ↗</a> · <a href="https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/css/style.css" rel="noopener noreferrer">reference stylesheet ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-03">R-03</a></td>
+      <td data-label="Finding">Three operator links used by the ledger are now 404 or retired</td>
+      <td data-label="Severity">high</td>
+      <td data-label="Source links"><a href="https://www.herox.com/challenges" rel="noopener noreferrer">HeroX /challenges (404) ↗</a> · <a href="https://www.herox.com/crowdsourcing-projects" rel="noopener noreferrer">HeroX replacement ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-04">R-04</a></td>
+      <td data-label="Finding">Every upstream row is dated 2026-08-19 and several statuses have since changed on operator pages</td>
+      <td data-label="Severity">high</td>
+      <td data-label="Source links"><a href="https://fantasy.espn.com/games/nfl-survivor-2026/make-picks" rel="noopener noreferrer">ESPN NFL Survivor ↗</a> · <a href="https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest" rel="noopener noreferrer">Tom Howard contest ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-05">R-05</a></td>
+      <td data-label="Finding">Paid-entry contests are presented in a free-to-enter ledger</td>
+      <td data-label="Severity">high</td>
+      <td data-label="Source links"><a href="https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest" rel="noopener noreferrer">Tom Howard contest ↗</a> · <a href="https://www.papaya.com/faq" rel="noopener noreferrer">Papaya FAQ ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-06">R-06</a></td>
+      <td data-label="Finding">Several &#39;cash&#39; prizes are points, bonus cash or crowdfunding, not withdrawable dollars</td>
+      <td data-label="Severity">high</td>
+      <td data-label="Source links"><a href="https://www.gamersaloon.com/promos/1rounder/" rel="noopener noreferrer">GamerSaloon 1-Rounders ↗</a> · <a href="https://help.swagbucks.com/hc/en-us/articles/15374709231764-What-is-Swagbucks-Daily-Trivia" rel="noopener noreferrer">Swagbucks Daily Trivia ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-07">R-07</a></td>
+      <td data-label="Finding">Official pages contradict the ledger, and in two cases contradict themselves</td>
+      <td data-label="Severity">medium</td>
+      <td data-label="Source links"><a href="https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay" rel="noopener noreferrer">ESPN Pick&#39;em rules ↗</a> · <a href="https://paypalaihackathon.devpost.com/rules" rel="noopener noreferrer">PayPal AI Hackathon rules ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-08">R-08</a></td>
+      <td data-label="Finding">Contest rules differ sharply on whether an AI coding agent may do the work</td>
+      <td data-label="Severity">high</td>
+      <td data-label="Source links"><a href="https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free" rel="noopener noreferrer">Wergle Flomp rules ↗</a> · <a href="https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay" rel="noopener noreferrer">ESPN rules ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-09">R-09</a></td>
+      <td data-label="Finding">Deadline fields mix registration close, submission close and event end dates</td>
+      <td data-label="Severity">medium</td>
+      <td data-label="Source links"><a href="https://gvhackathon.com/" rel="noopener noreferrer">Global Virtual Hackathon ↗</a> · <a href="https://arcprize.org/competitions/2026" rel="noopener noreferrer">ARC Prize 2026 ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-10">R-10</a></td>
+      <td data-label="Finding">Eleven rows have no official operator source at all</td>
+      <td data-label="Severity">medium</td>
+      <td data-label="Source links"><a href="https://github.com/sassnarep3-star/Own1/blob/main/data/verification.json" rel="noopener noreferrer">verification.json (no-official-source rows) ↗</a> · <a href="https://fantasy.premierleague.com/en/help/rules" rel="noopener noreferrer">FPL official rules ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-11">R-11</a></td>
+      <td data-label="Finding">This repository contains several generations of overlapping builds and stale documentation</td>
+      <td data-label="Severity">medium</td>
+      <td data-label="Source links"><a href="https://github.com/sassnarep3-star/Own1/blob/main/README.md" rel="noopener noreferrer">README.md ↗</a> · <a href="https://github.com/sassnarep3-star/Own1/blob/main/COORDINATION.md" rel="noopener noreferrer">COORDINATION.md ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-12">R-12</a></td>
+      <td data-label="Finding">Automated link health from 2026-11-01 mixes real failures with bot blocks</td>
+      <td data-label="Severity">low</td>
+      <td data-label="Source links"><a href="https://github.com/sassnarep3-star/Own1/blob/main/data/link-health.json" rel="noopener noreferrer">data/link-health.json ↗</a> · <a href="https://devpost.com/hackathons" rel="noopener noreferrer">Devpost hackathons ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-13">R-13</a></td>
+      <td data-label="Finding">AIcrowd&#39;s official challenges index returned no verifiable competition facts</td>
+      <td data-label="Severity">medium</td>
+      <td data-label="Source links"><a href="https://www.aicrowd.com/challenges" rel="noopener noreferrer">AIcrowd Challenges ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-14">R-14</a></td>
+      <td data-label="Finding">The ledger&#39;s FPL rules URL redirects and the official rules state no cash prize</td>
+      <td data-label="Severity">low</td>
+      <td data-label="Source links"><a href="https://fantasy.premierleague.com/en/help/rules" rel="noopener noreferrer">Fantasy Premier League rules ↗</a> · <a href="https://fantasy.premierleague.com/help/rules" rel="noopener noreferrer">ledger rules URL ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-15">R-15</a></td>
+      <td data-label="Finding">The reference site&#39;s blanket &#39;$600 tax form&#39; claim is broader than the official rules</td>
+      <td data-label="Severity">low</td>
+      <td data-label="Source links"><a href="https://www.mlb.com/apps/beat-the-streak/official-rules" rel="noopener noreferrer">Beat the Streak rules ↗</a> · <a href="https://twitchcon-codex.devpost.com/rules" rel="noopener noreferrer">Codex x TwitchCon rules ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-16">R-16</a></td>
+      <td data-label="Finding">The 1 Nov verification record says the sandbox had no outbound internet</td>
+      <td data-label="Severity">low</td>
+      <td data-label="Source links"><a href="https://github.com/sassnarep3-star/Own1/blob/main/data/live-checks.json" rel="noopener noreferrer">data/live-checks.json ↗</a> · <a href="https://github.com/sassnarep3-star/Own1/blob/main/data/verification-2026-11-02.json" rel="noopener noreferrer">data/verification-2026-11-02.json ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-17">R-17</a></td>
+      <td data-label="Finding">GEMS Prize official rules and competition homepage disagree on the submission cut-off time, and AI use must be disclosed</td>
+      <td data-label="Severity">high</td>
+      <td data-label="Source links"><a href="https://www.drivendata.org/competitions/306/competition-doe-gems/" rel="noopener noreferrer">DrivenData GEMS page ↗</a> · <a href="https://www.nlr.gov/docs/fy26osti/96647.pdf" rel="noopener noreferrer">GEMS official rules (PDF) ↗</a></td>
+    </tr><tr>
+      <td data-label="Item"><a href="flagged.html#R-18">R-18</a></td>
+      <td data-label="Finding">Metaculus tournament rules bar bots and AI accounts from prizes by default</td>
+      <td data-label="Severity">high</td>
+      <td data-label="Source links"><a href="https://www.metaculus.com/tournament-rules/" rel="noopener noreferrer">Metaculus Tournament Rules ↗</a> · <a href="https://www.metaculus.com/tournament/fall-futureeval-2026/" rel="noopener noreferrer">FutureEval Bot Tournament ↗</a></td>
+    </tr></tbody></table></div>
+  <p class="note-tiny">The earlier 31-item register is on <a href="flagged.html">Flagged for Review</a>. All items are status "needs review" and do not block publication.</p>
+</section>
+
+<section class="section"><h2>4. Manual-review checklist</h2>
+  <div class="card"><ol class="list">
+    <li>Open <a href="verified.html">Verified 2 Nov</a> and check any quote against its official URL.</li>
+    <li>Open <a href="flagged.html#unverified-rows">the unverified rows</a> and tell us which rows to verify next.</li>
+    <li>Open <a href="flagged.html#no-official-source">the no-official-source rows</a> and supply an operator link if you have one.</li>
+    <li>Compare <a href="executive-summary.html">the executive summary</a> with <a href="https://github.com/sassnarep3-star/Own1/blob/main/EXECUTIVE_SUMMARY.md" rel="noopener noreferrer">EXECUTIVE_SUMMARY.md ↗</a> and <a href="https://github.com/sassnarep3-star/Own1/blob/main/COORDINATION.md" rel="noopener noreferrer">COORDINATION.md ↗</a>.</li>
+    <li>Check the build: <a href="https://github.com/sassnarep3-star/Own1/blob/main/.github/workflows/validate.yml" rel="noopener noreferrer">validate.yml ↗</a>, <a href="https://github.com/sassnarep3-star/Own1/blob/main/scripts/checklinks.js" rel="noopener noreferrer">checklinks.js ↗</a>.</li>
+  </ol></div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="index.html">Dashboard</a>
+      <a href="all.html">All competitions</a>
+      <a href="best.html">Best picks</a>
+      <a href="shortlist.html">Verified shortlist</a>
+      <a href="verified.html">Verified 2 Nov</a>
+      <a href="analysis.html">Analysis</a>
+      <a href="verification.html">Verification</a>
+      <a href="repo-review.html">Repo review</a>
+      <a href="research.html">Source audit</a>
+      <a href="flagged.html">Flagged for review</a>
+      <a href="executive-summary.html">Executive summary</a>
+    </div>
+    <p><b>PrizeDesk</b> is an independent workbench. Its 221 rows come from the third-party
+    <a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">Free Money &amp; Contest Ledger</a>
+    (pinned commit <code>466f7c1</code>, source reviewed
+    19 Aug 2026). Only values read on an official operator page on
+    2 Nov 2026 are published; everything else is blank and
+    <a href="flagged.html">flagged for review</a>. Prize figures are the operator's wording, not
+    this site's promise. Contest law and eligibility vary by state and country; read the rules before you enter.</p>
+    <p class="note-tiny">30 of 221 rows were checked against 40 official pages on
+    2 Nov 2026. See <a href="verification.html">how verification works</a> and
+    <a href="verified.html">the line-by-line evidence</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>

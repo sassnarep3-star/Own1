@@ -4,13 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tech &amp; data competitions — PrizeDesk</title>
-<meta name="description" content="18 tech &amp; data competitions competitions, 18 active, with official source links and verification status.">
+<meta name="description" content="Machine-learning competitions and hackathons with published prize pools — the clearest structural fit for an AI-assisted entrant where the rules permit it.">
 <meta name="color-scheme" content="light dark">
-<meta property="og:title" content="Tech &amp; data competitions — PrizeDesk">
-<meta property="og:description" content="18 tech &amp; data competitions competitions, 18 active, with official source links and verification status.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E%24%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E$%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="../assets/css/site.css">
+<style>
+.callout.warn { border-left-color: var(--warn, #b26b00); }
+.evidence-box { border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin:8px 0; background:var(--card,#fff); }
+.fact-quote { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.86rem; color:var(--muted); white-space:pre-wrap; word-break:break-word; }
+.verified-article { border-top:1px solid var(--line); padding:14px 0; }
+.mini-links a { margin-right:10px; }
+.tag-row { margin:6px 0; }
+.stat-grid .stat b { font-size:1.4rem; }
+.src-list { margin:4px 0 0; padding-left:18px; }
+</style>
 
 </head>
 <body>
@@ -19,417 +26,529 @@
   <div class="wrap header-inner">
     <a class="brand" href="../index.html">
       <span class="brand-mark" aria-hidden="true">$</span>
-      <span class="brand-text">
-        <b>PrizeDesk</b>
-        <span>Source reviewed 19 Aug 2026</span>
-      </span>
+      <span class="brand-text"><b>PrizeDesk</b><span>Official-page verification 2 Nov 2026</span></span>
     </a>
-    <nav class="nav" aria-label="Main"><a href="../index.html">Dashboard</a><a href="../all.html" aria-current="page">All competitions</a><a href="../best.html">Best picks</a><a href="../analysis.html">Analysis</a><a href="../executive-summary.html">Executive summary</a><a href="../research.html">Source audit</a><a href="../verification.html">Verification</a><a href="../flagged.html">Flagged for review</a></nav>
+    <nav class="nav" aria-label="Main"><a href="../index.html">Dashboard</a><a href="../all.html" aria-current="page">All competitions</a><a href="../best.html">Best picks</a><a href="../shortlist.html">Verified shortlist</a><a href="../verified.html">Verified 2 Nov</a><a href="../analysis.html">Analysis</a><a href="../verification.html">Verification</a><a href="../repo-review.html">Repo review</a><a href="../research.html">Source audit</a><a href="../flagged.html">Flagged for review</a><a href="../executive-summary.html">Executive summary</a></nav>
   </div>
 </header>
 <main id="main" class="wrap">
 
-<section class="hero">
-  <p class="kicker"><a href="../index.html">Dashboard</a> / Tech &amp; data competitions</p>
+<section class="hero"><p class="kicker">Category · 27 competitions</p>
   <h1>Tech &amp; data competitions</h1>
-  <p class="lede">Machine-learning competitions and hackathons with published prize pools. Free to enter, objectively scored, and the best structural fit for an AI-assisted entrant.</p>
-  <div class="stat-grid">
-    <div class="stat"><b>18</b><span>in this category</span></div>
-    <div class="stat"><b>18</b><span>marked active</span></div>
-    <div class="stat is-good"><b>17</b><span>free entry path</span></div>
-    <div class="stat"><b>15</b><span>state a cash amount</span></div>
-  </div>
-</section>
-
+  <p class="lede">Machine-learning competitions and hackathons with published prize pools — the clearest structural fit for an AI-assisted entrant where the rules permit it. <b>This description is editorial, not an operator claim.</b></p>
+  <div class="btn-row"><a class="btn" href="../all.html">All competitions</a>
+  <a class="btn" href="../flagged.html">Flagged for review</a></div></section>
+<div class="stat-grid">
+  <div class="stat"><b>27</b><span>rows in this category</span></div>
+  <div class="stat is-good"><b>10</b><span>verified 2 Nov</span></div>
+  <div class="stat is-warn"><b>17</b><span>blank + flagged</span></div>
+  <div class="stat is-warn"><b>0</b><span>no official source</span></div>
+</div>
 <div class="filters">
     <div class="filter-row">
-      <div class="search-wrap">
-        <input id="q" type="search" placeholder="Search 18 competitions…" aria-label="Search competitions" autocomplete="off">
-      </div>
-      
-      <select data-filter="free" aria-label="Filter by entry path">
-        <option value="">Any entry path</option>
-        <option value="full">Free entry</option>
-        <option value="partial">Some free events</option>
-        <option value="paid-cash">Cash needs a fee</option>
-        <option value="unknown">Entry cost not stated</option>
+      <div class="search-wrap"><input id="q" type="search" placeholder="Search 27 competitions…" aria-label="Search competitions" autocomplete="off"></div>
+      <select data-filter="category" aria-label="Filter by category">
+        <option value="">All categories</option>
+        <option value="skill">Skill tournaments</option><option value="trivia">Trivia competitions</option><option value="sports">Fantasy &amp; sports picks</option><option value="creative">Creative contests</option><option value="forecasting">Forecasting tournaments</option><option value="market">Market competitions</option><option value="tech">Tech &amp; data competitions</option><option value="directory">Directories &amp; forums</option><option value="pools">Free pool &amp; league platforms</option>
       </select>
-      <select data-filter="verif" aria-label="Filter by ID checks">
-        <option value="">Any ID checks</option>
-        <option value="account">Account only</option><option value="eligibility">Eligibility check</option><option value="kyc">Full KYC</option><option value="tax">Tax paperwork</option>
+      <select data-filter="free" aria-label="Filter by entry evidence">
+        <option value="">Any entry evidence</option>
+        <option value="full">Confirmed free</option>
+        <option value="paid-cash">Confirmed paid</option>
+        <option value="partial">Mixed free path</option>
+        <option value="unknown">Blank / unverified</option>
       </select>
-      <select data-filter="status" aria-label="Filter by status">
-        <option value="">Any status</option>
-        <option value="live">Active</option>
-        <option value="mixed">Mixed</option>
-        <option value="caution">Caution</option>
-        <option value="ended">Ended / out of season</option>
+      <select data-filter="verif" aria-label="Filter by verification">
+        <option value="">Any verification</option>
+        <option value="verified">Verified 2 Nov</option>
+        <option value="unverified">Unverified</option>
       </select>
-      <select data-filter="platform" aria-label="Filter by platform">
-        <option value="">Any platform</option>
-        <option value="web">Browser</option>
-        <option value="ios">iOS app</option>
-        <option value="android">Android app</option>
+      <select data-filter="figure" aria-label="Filter by confirmed prize figure">
+        <option value="">Any prize evidence</option>
+        <option value="yes">Prize figure confirmed</option>
+        <option value="no">Prize blank</option>
       </select>
       <select id="sort" aria-label="Sort rows">
         <option value="source">Sort: source order</option>
-        <option value="prize">Sort: largest stated $ figure</option>
-        <option value="verification">Sort: least ID checks first</option>
+        <option value="prize">Sort: largest stated figure</option>
         <option value="name">Sort: name A–Z</option>
       </select>
     </div>
     <div class="chip-row">
-      <button class="chip" type="button" data-chip="free" aria-pressed="false">Free entry only</button>
-      <button class="chip" type="button" data-chip="live" aria-pressed="false">Active only</button>
-      <button class="chip" type="button" data-chip="usd" aria-pressed="false">State a $ figure</button>
-      <button class="chip" type="button" data-chip="checked" aria-pressed="false">Live-checked</button>
+      <button class="chip" type="button" data-chip="free" aria-pressed="false">Confirmed free</button>
+      <button class="chip" type="button" data-chip="checked" aria-pressed="false">Verified 2 Nov</button>
+      <button class="chip" type="button" data-chip="usd" aria-pressed="false">Prize figure</button>
       <button class="chip" type="button" data-chip="flags" aria-pressed="false">Has a flag</button>
       <button class="chip" type="button" id="reset">Reset</button>
     </div>
-    <p class="filter-count" id="count">18 of 18 competitions shown</p>
+    <p class="filter-count" id="count">27 of 27 competitions shown</p>
   </div>
-
-<div id="empty" class="callout warn" hidden><p>No competition matches those filters.</p></div>
-
-<div class="table-scroll">
-  <table class="ledger" data-ledger-table>
-    <caption>Prize figures are the source dataset's claims, last checked 19 Aug 2026.
-    Rows with “—” have no stated amount, no official source, or an official source that no longer loads (I-23).</caption>
-    <thead><tr><th scope="col">Competition</th><th scope="col">Prize (claimed)</th><th scope="col">Entry</th><th scope="col">Platform</th><th scope="col">ID checks</th><th scope="col">Status</th><th scope="col">Source</th></tr></thead>
+<div id="empty" class="callout warn" hidden><p>No competition matches those filters. Try
+<a href="#" onclick="document.getElementById('reset').click();return false;">resetting</a>.</p></div>
+<div class="table-scroll"><table class="ledger" data-ledger-table>
+  <caption>Only values stated on an official operator page read on 2026-11-02 are printed. A blank cell means the value could not be confirmed from an official source and is flagged unverified. Categories are this site's grouping of the reference ledger, not an operator claim.</caption>
+  <thead><tr><th scope="col">Competition</th><th scope="col">Verified prize</th><th scope="col">Verified entry</th><th scope="col">Verified deadline</th><th scope="col">Verified status</th><th scope="col">Official source</th><th scope="col">Verification</th></tr></thead>
 <tbody>
-<tr id="row-aicrowd"
-    data-name="AIcrowd Challenges"
-    data-short="Open ML challenge platform hosting research contests for ARC, Sony, Meta and Amazon."
-    data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="tax"
-    data-platforms="web"
-    data-checked="no"
-    data-figure="yes"
-    data-usd=""
-    data-prize="per challenge — currently up to $150,000+"
-    data-flags="1"><td class="cell-name" data-label="Competition">
-      <a href="../c/aicrowd.html">AIcrowd Challenges</a>
-      <span class="cell-sub">Open ML challenge platform hosting research contests for ARC, Sony, Meta and Amazon.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize">Per challenge — currently up to $150,000+</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Tax paperwork</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://www.aicrowd.com/challenges" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span> </td></tr>
-<tr id="row-arcprize"
-    data-name="ARC Prize (via Kaggle)"
-    data-short="High-dollar abstraction-and-reasoning competition hosted with Kaggle. Free to submit; open-source requirements apply."
-    data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="tax"
-    data-platforms="web"
-    data-checked="no"
-    data-figure="yes"
-    data-usd="2000000"
-    data-prize="$2,000,000 across three 2026 tracks"
-    data-flags="0"><td class="cell-name" data-label="Competition">
-      <a href="../c/arcprize.html">ARC Prize (via Kaggle)</a>
-      <span class="cell-sub">High-dollar abstraction-and-reasoning competition hosted with Kaggle. Free to submit; open-source requirements apply.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span><span class="badge info">Independently checked</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize">$2,000,000 across three 2026 tracks</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Tax paperwork</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://arcprize.org/competitions/2026" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+2</span> </td></tr>
-<tr id="row-codabench"
-    data-name="Codabench / CodaLab"
-    data-short="Open-source academic benchmark platform. 1,471 public competitions, free to enter and to host."
-    data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="account"
-    data-platforms="web"
-    data-checked="no"
-    data-figure="yes"
-    data-usd=""
-    data-prize="per benchmark — many are unpaid; ml contests logged $248,000 across 2025"
-    data-flags="1"><td class="cell-name" data-label="Competition">
-      <a href="../c/codabench.html">Codabench / CodaLab</a>
-      <span class="cell-sub">Open-source academic benchmark platform. 1,471 public competitions, free to enter and to host.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize">Per benchmark — many are unpaid; ML Contests logged $248,000 across 2025</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Account only</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://www.codabench.org/" rel="noopener noreferrer">Official page ↗</a> </td></tr>
-<tr id="row-codex-twitchcon-2026"
-    data-name="Codex x TwitchCon Hackathon"
-    data-short="Devpost hackathon: build a Twitch-connected project using Codex. $10,000 first place, closes 2026-11-02 14:00 Pacific."
-    data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="unknown"
-    data-platforms="web"
-    data-checked="no"
-    data-figure="yes"
-    data-usd="10000"
-    data-prize="$10,000 first place"
-    data-flags="1"><td class="cell-name" data-label="Competition">
-      <a href="../c/codex-twitchcon-2026.html">Codex x TwitchCon Hackathon</a>
-      <span class="cell-sub">Devpost hackathon: build a Twitch-connected project using Codex. $10,000 first place, closes 2026-11-02 14:00 Pacific.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span><span class="badge info">Independently checked</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize">$10,000 first place</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Not stated</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://twitchcon-codex.devpost.com/rules" rel="noopener noreferrer">Official page ↗</a> </td></tr>
-<tr id="row-crunchdao"
-    data-name="CrunchDAO / ADIA Lab Challenges"
-    data-short="Quantitative ML competitions run with ADIA Lab. Free entry, notebook submissions."
-    data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="tax"
-    data-platforms="web"
-    data-checked="no"
-    data-figure="no"
-    data-usd=""
-    data-prize=""
-    data-flags="2"><td class="cell-name" data-label="Competition">
-      <a href="../c/crunchdao.html">CrunchDAO / ADIA Lab Challenges</a>
-      <span class="cell-sub">Quantitative ML competitions run with ADIA Lab. Free entry, notebook submissions.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize none">—</span><span class="cell-sub">no amount stated by the source</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Tax paperwork</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://hub.crunchdao.com/competitions/structural-break-real-time" rel="noopener noreferrer">Official page ↗</a> </td></tr>
-<tr id="row-devpost"
-    data-name="Devpost Hackathons"
-    data-short="Browser directory of judged hackathons. Many are free to enter and pay winners in USD via the event’s official rules."
-    data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="tax"
-    data-platforms="web"
-    data-checked="no"
-    data-figure="yes"
-    data-usd="10000"
-    data-prize="per event — currently $10,000 to $685,000 per hackathon"
-    data-flags="1"><td class="cell-name" data-label="Competition">
-      <a href="../c/devpost.html">Devpost Hackathons</a>
-      <span class="cell-sub">Browser directory of judged hackathons. Many are free to enter and pay winners in USD via the event’s official rules.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize">Per event — currently $10,000 to $685,000 per hackathon</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Tax paperwork</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://devpost.com/hackathons" rel="noopener noreferrer">Official page ↗</a> </td></tr>
-<tr id="row-drivendata"
-    data-name="DrivenData"
-    data-short="Social-impact data-science contests with published USD purses. Free to enter; winners paid by check or wire after tax forms."
-    data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="tax"
-    data-platforms="web"
-    data-checked="no"
-    data-figure="yes"
-    data-usd="10000"
-    data-prize="per contest — often $10,000–$200,000 total purses"
-    data-flags="1"><td class="cell-name" data-label="Competition">
-      <a href="../c/drivendata.html">DrivenData</a>
-      <span class="cell-sub">Social-impact data-science contests with published USD purses. Free to enter; winners paid by check or wire after…</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span><span class="badge info">Independently checked</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize">Per contest — often $10,000–$200,000 total purses</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Tax paperwork</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://www.drivendata.org/competitions/" rel="noopener noreferrer">Official page ↗</a> </td></tr>
-<tr id="row-gems-prize-2026"
-    data-name="GEMS Prize Challenge (DrivenData)"
-    data-short="US DOE prize competition hosted on DrivenData: $300,000 pool, closes 2026-12-03 23:59 UTC."
-    data-category="tech"
-    data-status="live"
-    data-free="unknown"
-    data-verif="unknown"
-    data-platforms="web"
-    data-checked="no"
-    data-figure="yes"
-    data-usd="300000"
-    data-prize="$300,000 total"
-    data-flags="1"><td class="cell-name" data-label="Competition">
-      <a href="../c/gems-prize-2026.html">GEMS Prize Challenge (DrivenData)</a>
-      <span class="cell-sub">US DOE prize competition hosted on DrivenData: $300,000 pool, closes 2026-12-03 23:59 UTC.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge warn">Entry cost not stated</span><span class="badge info">Independently checked</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize">$300,000 total</span></td><td data-label="Entry"><span class="badge warn">Entry cost not stated</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Not stated</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://www.drivendata.org/competitions/306/competition-doe-gems/" rel="noopener noreferrer">Official page ↗</a> </td></tr>
-<tr id="row-global-virtual-hackathon-2026"
-    data-name="Global Virtual Hackathon 2026"
-    data-short="Free student hackathon for ages 14–18 in teams of 2–4 with a supervising teacher. $1,000 first place per division."
-    data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="unknown"
-    data-platforms="web"
-    data-checked="no"
-    data-figure="yes"
-    data-usd="1000"
-    data-prize="$1,000 first place per division; two $250 runners-up per division"
-    data-flags="0"><td class="cell-name" data-label="Competition">
-      <a href="../c/global-virtual-hackathon-2026.html">Global Virtual Hackathon 2026</a>
-      <span class="cell-sub">Free student hackathon for ages 14–18 in teams of 2–4 with a supervising teacher. $1,000 first place per division.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span><span class="badge info">Independently checked</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize">$1,000 first place per division; two $250 runners-up per division</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Not stated</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://gvhackathon.com/" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span> </td></tr>
-<tr id="row-grand-challenge"
-    data-name="Grand Challenge (medical imaging)"
-    data-short="Medical image analysis challenges from MICCAI, RSNA and university hospitals. 264 hosted to date."
-    data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="account"
-    data-platforms="web"
-    data-checked="no"
-    data-figure="yes"
-    data-usd=""
-    data-prize="per challenge — commonly $2,000 to $10,000"
-    data-flags="1"><td class="cell-name" data-label="Competition">
-      <a href="../c/grand-challenge.html">Grand Challenge (medical imaging)</a>
-      <span class="cell-sub">Medical image analysis challenges from MICCAI, RSNA and university hospitals. 264 hosted to date.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize">Per challenge — commonly $2,000 to $10,000</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Account only</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://grand-challenge.org/challenges/" rel="noopener noreferrer">Official page ↗</a> </td></tr>
-<tr id="row-herox"
-    data-name="HeroX / Challenge.gov"
-    data-short="Marketplace of judged innovation prizes, including US federal Challenge.gov pots paid by EFT."
-    data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="tax"
-    data-platforms="web"
-    data-checked="no"
-    data-figure="yes"
-    data-usd="25000"
-    data-prize="per challenge — federal pots often $25,000–$500,000+"
-    data-flags="0"><td class="cell-name" data-label="Competition">
-      <a href="../c/herox.html">HeroX / Challenge.gov</a>
-      <span class="cell-sub">Marketplace of judged innovation prizes, including US federal Challenge.gov pots paid by EFT.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span><span class="badge info">Independently checked</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize">Per challenge — federal pots often $25,000–$500,000+</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Tax paperwork</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://www.challenge.gov/" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span> </td></tr>
 <tr id="row-kaggle"
     data-name="Kaggle Competitions"
     data-short="Browser data-science contests. Featured competitions publish USD prize pools. Getting Started tracks usually pay $0."
     data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="tax"
-    data-platforms="web"
-    data-checked="yes"
+    data-status=""
+    data-free="unknown"
+    data-verif="verified"
     data-figure="yes"
     data-usd=""
-    data-prize="featured pots commonly $5,000–$100,000+; specials exceed $1m"
-    data-flags="1"><td class="cell-name" data-label="Competition">
+    data-prize="per competition: $450,000 (arc prize 2026 paper track), $100,000 (nfl big data bowl 2027), $35,000 (gemma 4 developer agent paper track)"
+    data-checked="yes"
+    data-flags="3"><td class="cell-name" data-label="Competition">
       <a href="../c/kaggle.html">Kaggle Competitions</a>
       <span class="cell-sub">Browser data-science contests. Featured competitions publish USD prize pools. Getting Started tracks usually pay $0.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span><span class="badge good">Live-checked</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize">Featured pots commonly $5,000–$100,000+; specials exceed $1M</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Tax paperwork</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://www.kaggle.com/competitions" rel="noopener noreferrer">Official page ↗</a> <span class="badge good">live-checked</span></td></tr>
-<tr id="row-paypal-ai-hackathon-2026"
-    data-name="PayPal AI Hackathon"
-    data-short="Devpost hackathon using the free PayPal sandbox plus any AI tool. $12,000 first place, closes 2026-11-12 12:00 Pacific."
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge good">Verified 2 Nov</span></span>
+    </td><td data-label="Verified prize"><span class="prize">Per competition: $450,000 (ARC Prize 2026 Paper Track), $100,000 (NFL Big Data Bowl 2027), $35,000 (Gemma 4 Developer Agent Paper Track)</span><span class="cell-sub"><a href="https://www.kaggle.com/competitions" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize">Competitions listed as ongoing/featured</span><span class="cell-sub"><a href="https://www.kaggle.com/competitions" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Official source"><a class="src-link" href="https://www.kaggle.com/competitions" rel="noopener noreferrer">Official page ↗</a><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../verified.html#kaggle">Evidence ↗</a><span class="cell-sub">2026-11-02</span></td></tr>
+<tr id="row-devpost"
+    data-name="Devpost Hackathons"
+    data-short="Browser directory of judged hackathons. Many are free to enter and pay winners in USD via the event’s official rules."
     data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="unknown"
-    data-platforms="web"
-    data-checked="no"
-    data-figure="yes"
-    data-usd="12000"
-    data-prize="$12,000 first place"
-    data-flags="1"><td class="cell-name" data-label="Competition">
-      <a href="../c/paypal-ai-hackathon-2026.html">PayPal AI Hackathon</a>
-      <span class="cell-sub">Devpost hackathon using the free PayPal sandbox plus any AI tool. $12,000 first place, closes 2026-11-12 12:00…</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span><span class="badge info">Independently checked</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize">$12,000 first place</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Not stated</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://paypalaihackathon.devpost.com/rules" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span> </td></tr>
-<tr id="row-signate"
-    data-name="Signate (Japan) Data Competitions"
-    data-short="Japan-based data science competition platform with cash prize contests from NEDO and corporate sponsors."
-    data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="tax"
-    data-platforms="web"
-    data-checked="no"
-    data-figure="no"
-    data-usd=""
-    data-prize=""
-    data-flags="2"><td class="cell-name" data-label="Competition">
-      <a href="../c/signate.html">Signate (Japan) Data Competitions</a>
-      <span class="cell-sub">Japan-based data science competition platform with cash prize contests from NEDO and corporate sponsors.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize none">—</span><span class="cell-sub">no amount stated by the source</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Tax paperwork</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://signate.jp/" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span> </td></tr>
-<tr id="row-tianchi"
-    data-name="Tianchi (Alibaba Cloud)"
-    data-short="Alibaba Cloud&#39;s big-data competition platform — the second-largest ML competition host by prize money after Kaggle."
-    data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="tax"
-    data-platforms="web"
-    data-checked="no"
+    data-status=""
+    data-free="unknown"
+    data-verif="verified"
     data-figure="yes"
     data-usd=""
-    data-prize="per competition — from ~$1,000 to ¥1,000,000+ (~$157,000); $1.03m across 2025"
-    data-flags="0"><td class="cell-name" data-label="Competition">
-      <a href="../c/tianchi.html">Tianchi (Alibaba Cloud)</a>
-      <span class="cell-sub">Alibaba Cloud&#39;s big-data competition platform — the second-largest ML competition host by prize money after Kaggle.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize">Per competition — from ~$1,000 to ¥1,000,000+ (~$157,000); $1.03M across 2025</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Tax paperwork</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://tianchi.aliyun.com/competition/entrance/532277?lang=en-us" rel="noopener noreferrer">Official page ↗</a> </td></tr>
-<tr id="row-topcoder"
-    data-name="Topcoder"
-    data-short="Long-running design, development, and data-science tournaments. Many challenges pay USD to verified members."
+    data-prize="per hackathon: meta vr start developer competition 2026 $1,000,000; codegeist 2026 $120,000; kiroween 2026 $100,000; paypal ai hackathon $67,500; ugreen 2026 $46,000; codex x twitchcon $25,000; learn ar with specs $2,500"
+    data-checked="yes"
+    data-flags="4"><td class="cell-name" data-label="Competition">
+      <a href="../c/devpost.html">Devpost Hackathons</a>
+      <span class="cell-sub">Browser directory of judged hackathons. Many are free to enter and pay winners in USD via the event’s official rules.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge good">Verified 2 Nov</span></span>
+    </td><td data-label="Verified prize"><span class="prize">Per hackathon: Meta VR Start Developer Competition 2026 $1,000,000; Codegeist 2026 $120,000; Kiroween 2026 $100,000; PayPal AI Hackathon $67,500; UGREEN 2026 $46,000; Codex x TwitchCon $25,000; Learn AR with SPECS $2,500</span><span class="cell-sub"><a href="https://devpost.com/hackathons" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize">14,228 hackathons listed with Upcoming / Open / Ended filters</span><span class="cell-sub"><a href="https://devpost.com/hackathons" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Official source"><a class="src-link" href="https://devpost.com/hackathons" rel="noopener noreferrer">Official page ↗</a><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../verified.html#devpost">Evidence ↗</a><span class="cell-sub">2026-11-02</span></td></tr>
+<tr id="row-arcprize"
+    data-name="ARC Prize (via Kaggle)"
+    data-short="High-dollar abstraction-and-reasoning competition hosted with Kaggle. Free to submit; open-source requirements apply."
     data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="tax"
-    data-platforms="web"
-    data-checked="no"
-    data-figure="no"
+    data-status=""
+    data-free="unknown"
+    data-verif="verified"
+    data-figure="yes"
+    data-usd="2000000"
+    data-prize="$2m in prizes. 3 tracks."
+    data-checked="yes"
+    data-flags="4"><td class="cell-name" data-label="Competition">
+      <a href="../c/arcprize.html">ARC Prize (via Kaggle)</a>
+      <span class="cell-sub">High-dollar abstraction-and-reasoning competition hosted with Kaggle. Free to submit; open-source requirements apply.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge good">Verified 2 Nov</span></span>
+    </td><td data-label="Verified prize"><span class="prize">$2M in prizes. 3 tracks.</span><span class="cell-sub"><a href="https://arcprize.org/competitions/2026" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize">2 Nov 2026</span><span class="cell-sub"><a href="https://arcprize.org/competitions/2026" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://arcprize.org/competitions/2026" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+2</span><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../verified.html#arcprize">Evidence ↗</a><span class="cell-sub">2026-11-02</span></td></tr>
+<tr id="row-drivendata"
+    data-name="DrivenData"
+    data-short="Social-impact data-science contests with published USD purses. Free to enter; winners paid by check or wire after tax forms."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="verified"
+    data-figure="yes"
     data-usd=""
-    data-prize=""
+    data-prize="$300,000 in prizes (gems prize challenge)"
+    data-checked="yes"
     data-flags="2"><td class="cell-name" data-label="Competition">
-      <a href="../c/topcoder.html">Topcoder</a>
-      <span class="cell-sub">Long-running design, development, and data-science tournaments. Many challenges pay USD to verified members.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize none">—</span><span class="cell-sub">no amount stated by the source</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Tax paperwork</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://www.topcoder.com/challenges" rel="noopener noreferrer">Official page ↗</a> </td></tr>
+      <a href="../c/drivendata.html">DrivenData</a>
+      <span class="cell-sub">Social-impact data-science contests with published USD purses. Free to enter; winners paid by check or wire after…</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge good">Verified 2 Nov</span></span>
+    </td><td data-label="Verified prize"><span class="prize">$300,000 in prizes (GEMS Prize Challenge)</span><span class="cell-sub"><a href="https://www.drivendata.org/competitions/" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize">One prize competition, benchmarks and practice competitions listed</span><span class="cell-sub"><a href="https://www.drivendata.org/competitions/" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Official source"><a class="src-link" href="https://www.drivendata.org/competitions/" rel="noopener noreferrer">Official page ↗</a><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../verified.html#drivendata">Evidence ↗</a><span class="cell-sub">2026-11-02</span></td></tr>
+<tr id="row-herox"
+    data-name="HeroX / Challenge.gov"
+    data-short="Marketplace of judged innovation prizes, including US federal Challenge.gov pots paid by EFT."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="verified"
+    data-figure="yes"
+    data-usd=""
+    data-prize="per challenge: &#39;artificial intelligence + origin of life prize, $10 million usd&#39; with &#39;$100k for proof of concept&#39;"
+    data-checked="yes"
+    data-flags="3"><td class="cell-name" data-label="Competition">
+      <a href="../c/herox.html">HeroX / Challenge.gov</a>
+      <span class="cell-sub">Marketplace of judged innovation prizes, including US federal Challenge.gov pots paid by EFT.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge good">Verified 2 Nov</span></span>
+    </td><td data-label="Verified prize"><span class="prize">Per challenge: &#39;Artificial Intelligence + Origin of Life Prize, $10 Million USD&#39; with &#39;$100K for proof of concept&#39;</span><span class="cell-sub"><a href="https://www.herox.com/crowdsourcing-projects" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize">Original /challenges URL is a 404; replacement lists challenges</span><span class="cell-sub"><a href="https://www.herox.com/challenges" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Official source"><a class="src-link" href="https://www.herox.com/crowdsourcing-projects" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../verified.html#herox">Evidence ↗</a><span class="cell-sub">2026-11-02</span></td></tr>
 <tr id="row-xprize"
     data-name="XPRIZE"
     data-short="Large multi-year incentive prizes and occasional hackathons with seven-figure USD pools."
     data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="tax"
-    data-platforms="web"
-    data-checked="no"
-    data-figure="yes"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
     data-usd=""
-    data-prize="flagship prizes in the millions; 2026 google-backed hackathon advertised a $2m pool"
+    data-prize=""
+    data-checked="no"
     data-flags="1"><td class="cell-name" data-label="Competition">
       <a href="../c/xprize.html">XPRIZE</a>
       <span class="cell-sub">Large multi-year incentive prizes and occasional hackathons with seven-figure USD pools.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize">Flagship prizes in the millions; 2026 Google-backed hackathon advertised a $2M pool</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Tax paperwork</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://www.xprize.org/" rel="noopener noreferrer">Official page ↗</a> </td></tr>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://www.xprize.org/" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">1 flags</span></td></tr>
+<tr id="row-topcoder"
+    data-name="Topcoder"
+    data-short="Long-running design, development, and data-science tournaments. Many challenges pay USD to verified members."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
+    data-checked="no"
+    data-flags="2"><td class="cell-name" data-label="Competition">
+      <a href="../c/topcoder.html">Topcoder</a>
+      <span class="cell-sub">Long-running design, development, and data-science tournaments. Many challenges pay USD to verified members.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://www.topcoder.com/challenges" rel="noopener noreferrer">Official page ↗</a><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">2 flags</span></td></tr>
+<tr id="row-aicrowd"
+    data-name="AIcrowd Challenges"
+    data-short="Open ML challenge platform hosting research contests for ARC, Sony, Meta and Amazon."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="verified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
+    data-checked="yes"
+    data-flags="3"><td class="cell-name" data-label="Competition">
+      <a href="../c/aicrowd.html">AIcrowd Challenges</a>
+      <span class="cell-sub">Open ML challenge platform hosting research contests for ARC, Sony, Meta and Amazon.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge good">Verified 2 Nov</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://www.aicrowd.com/challenges" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../verified.html#aicrowd">Evidence ↗</a><span class="cell-sub">2026-11-02</span></td></tr>
 <tr id="row-zindi"
     data-name="Zindi"
     data-short="Africa-focused data science competition platform. Free entry, cash prizes paid by bank transfer or PayPal."
     data-category="tech"
-    data-status="live"
-    data-free="full"
-    data-verif="tax"
-    data-platforms="web"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
     data-checked="no"
-    data-figure="yes"
-    data-usd="1500"
-    data-prize="per challenge — typically $1,500 to $25,000"
     data-flags="0"><td class="cell-name" data-label="Competition">
       <a href="../c/zindi.html">Zindi</a>
       <span class="cell-sub">Africa-focused data science competition platform. Free entry, cash prizes paid by bank transfer or PayPal.</span>
-      <span class="badges" style="margin-top:6px"><span class="badge good">Free entry</span></span>
-    </td><td data-label="Prize (claimed)"><span class="prize">Per challenge — typically $1,500 to $25,000</span></td><td data-label="Entry"><span class="badge good">Free entry</span></td><td data-label="Platform">Web</td><td data-label="ID checks">Tax paperwork</td><td data-label="Status">Active</td><td data-label="Source"><a class="src-link" href="https://zindi.world/competitions" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span> </td></tr>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://zindi.world/competitions" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">0 flags</span></td></tr>
+<tr id="row-codabench"
+    data-name="Codabench / CodaLab"
+    data-short="Open-source academic benchmark platform. 1,471 public competitions, free to enter and to host."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
+    data-checked="no"
+    data-flags="1"><td class="cell-name" data-label="Competition">
+      <a href="../c/codabench.html">Codabench / CodaLab</a>
+      <span class="cell-sub">Open-source academic benchmark platform. 1,471 public competitions, free to enter and to host.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://www.codabench.org/" rel="noopener noreferrer">Official page ↗</a><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">1 flags</span></td></tr>
+<tr id="row-grand-challenge"
+    data-name="Grand Challenge (medical imaging)"
+    data-short="Medical image analysis challenges from MICCAI, RSNA and university hospitals. 264 hosted to date."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
+    data-checked="no"
+    data-flags="1"><td class="cell-name" data-label="Competition">
+      <a href="../c/grand-challenge.html">Grand Challenge (medical imaging)</a>
+      <span class="cell-sub">Medical image analysis challenges from MICCAI, RSNA and university hospitals. 264 hosted to date.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://grand-challenge.org/challenges/" rel="noopener noreferrer">Official page ↗</a><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">1 flags</span></td></tr>
+<tr id="row-crunchdao"
+    data-name="CrunchDAO / ADIA Lab Challenges"
+    data-short="Quantitative ML competitions run with ADIA Lab. Free entry, notebook submissions."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
+    data-checked="no"
+    data-flags="2"><td class="cell-name" data-label="Competition">
+      <a href="../c/crunchdao.html">CrunchDAO / ADIA Lab Challenges</a>
+      <span class="cell-sub">Quantitative ML competitions run with ADIA Lab. Free entry, notebook submissions.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://hub.crunchdao.com/competitions/structural-break-real-time" rel="noopener noreferrer">Official page ↗</a><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">2 flags</span></td></tr>
+<tr id="row-signate"
+    data-name="Signate (Japan) Data Competitions"
+    data-short="Japan-based data science competition platform with cash prize contests from NEDO and corporate sponsors."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
+    data-checked="no"
+    data-flags="2"><td class="cell-name" data-label="Competition">
+      <a href="../c/signate.html">Signate (Japan) Data Competitions</a>
+      <span class="cell-sub">Japan-based data science competition platform with cash prize contests from NEDO and corporate sponsors.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://signate.jp/" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">2 flags</span></td></tr>
+<tr id="row-tianchi"
+    data-name="Tianchi (Alibaba Cloud)"
+    data-short="Alibaba Cloud&#39;s big-data competition platform — the second-largest ML competition host by prize money after Kaggle."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
+    data-checked="no"
+    data-flags="0"><td class="cell-name" data-label="Competition">
+      <a href="../c/tianchi.html">Tianchi (Alibaba Cloud)</a>
+      <span class="cell-sub">Alibaba Cloud&#39;s big-data competition platform — the second-largest ML competition host by prize money after Kaggle.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://tianchi.aliyun.com/competition/entrance/532277?lang=en-us" rel="noopener noreferrer">Official page ↗</a><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">0 flags</span></td></tr>
+<tr id="row-gems-prize-2026"
+    data-name="GEMS Prize Challenge (DrivenData)"
+    data-short="US DOE prize competition hosted on DrivenData: $300,000 pool, closes 2026-12-03 23:59 UTC."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="verified"
+    data-figure="yes"
+    data-usd="300000"
+    data-prize="total prize pool: $300,000 (initial round $50,000; final round $250,000: $100,000 / $70,000 / $40,000 / $25,000 / $15,000)"
+    data-checked="yes"
+    data-flags="5"><td class="cell-name" data-label="Competition">
+      <a href="../c/gems-prize-2026.html">GEMS Prize Challenge (DrivenData)</a>
+      <span class="cell-sub">US DOE prize competition hosted on DrivenData: $300,000 pool, closes 2026-12-03 23:59 UTC.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge good">Verified 2 Nov</span></span>
+    </td><td data-label="Verified prize"><span class="prize">Total Prize Pool: $300,000 (Initial Round $50,000; Final Round $250,000: $100,000 / $70,000 / $40,000 / $25,000 / $15,000)</span><span class="cell-sub"><a href="https://www.drivendata.org/competitions/306/competition-doe-gems/" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified entry"><span class="prize">Create a DrivenData profile and agree to the rules (no fee stated in the official rules)</span><span class="cell-sub"><a href="https://www.nlr.gov/docs/fy26osti/96647.pdf" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified deadline"><span class="prize">3 Dec 2026</span><span class="cell-sub"><a href="https://www.drivendata.org/competitions/306/competition-doe-gems/" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified status"><span class="prize">Listed as an active prize competition</span><span class="cell-sub"><a href="https://www.drivendata.org/competitions/" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Official source"><a class="src-link" href="https://www.drivendata.org/competitions/306/competition-doe-gems/" rel="noopener noreferrer">Official page ↗</a><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../verified.html#gems-prize-2026">Evidence ↗</a><span class="cell-sub">2026-11-02</span></td></tr>
+<tr id="row-codex-twitchcon-2026"
+    data-name="Codex x TwitchCon Hackathon"
+    data-short="Devpost hackathon: build a Twitch-connected project using Codex. $10,000 first place, closes 2026-11-02 14:00 Pacific."
+    data-category="tech"
+    data-status=""
+    data-free="full"
+    data-verif="verified"
+    data-figure="yes"
+    data-usd="10000"
+    data-prize="1st place $10,000 usd; devpost lists $25,000 in prizes"
+    data-checked="yes"
+    data-flags="5"><td class="cell-name" data-label="Competition">
+      <a href="../c/codex-twitchcon-2026.html">Codex x TwitchCon Hackathon</a>
+      <span class="cell-sub">Devpost hackathon: build a Twitch-connected project using Codex. $10,000 first place, closes 2026-11-02 14:00 Pacific.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge good">Verified 2 Nov</span><span class="badge good">Free entry confirmed</span></span>
+    </td><td data-label="Verified prize"><span class="prize">1st Place $10,000 USD; Devpost lists $25,000 in prizes</span><span class="cell-sub"><a href="https://twitchcon-codex.devpost.com/rules" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified entry"><span class="prize">Free entry — no purchase or payment necessary</span><span class="cell-sub"><a href="https://twitchcon-codex.devpost.com/rules" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified deadline"><span class="prize">2 Nov 2026</span><span class="cell-sub"><a href="https://twitchcon-codex.devpost.com/rules" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://twitchcon-codex.devpost.com/rules" rel="noopener noreferrer">Official page ↗</a><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../verified.html#codex-twitchcon-2026">Evidence ↗</a><span class="cell-sub">2026-11-02</span></td></tr>
+<tr id="row-paypal-ai-hackathon-2026"
+    data-name="PayPal AI Hackathon"
+    data-short="Devpost hackathon using the free PayPal sandbox plus any AI tool. $12,000 first place, closes 2026-11-12 12:00 Pacific."
+    data-category="tech"
+    data-status=""
+    data-free="full"
+    data-verif="verified"
+    data-figure="yes"
+    data-usd="12000"
+    data-prize="1st place $12,000 usd; 2nd $8,000; 3rd $5,000"
+    data-checked="yes"
+    data-flags="4"><td class="cell-name" data-label="Competition">
+      <a href="../c/paypal-ai-hackathon-2026.html">PayPal AI Hackathon</a>
+      <span class="cell-sub">Devpost hackathon using the free PayPal sandbox plus any AI tool. $12,000 first place, closes 2026-11-12 12:00…</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge good">Verified 2 Nov</span><span class="badge good">Free entry confirmed</span></span>
+    </td><td data-label="Verified prize"><span class="prize">1st Place $12,000 USD; 2nd $8,000; 3rd $5,000</span><span class="cell-sub"><a href="https://paypalaihackathon.devpost.com/rules" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified entry"><span class="prize">Free entry — no purchase or payment necessary</span><span class="cell-sub"><a href="https://paypalaihackathon.devpost.com/rules" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified deadline"><span class="prize">12 Nov 2026</span><span class="cell-sub"><a href="https://paypalaihackathon.devpost.com/rules" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://paypalaihackathon.devpost.com/rules" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../verified.html#paypal-ai-hackathon-2026">Evidence ↗</a><span class="cell-sub">2026-11-02</span></td></tr>
+<tr id="row-global-virtual-hackathon-2026"
+    data-name="Global Virtual Hackathon 2026"
+    data-short="Free student hackathon for ages 14–18 in teams of 2–4 with a supervising teacher. $1,000 first place per division."
+    data-category="tech"
+    data-status=""
+    data-free="full"
+    data-verif="verified"
+    data-figure="yes"
+    data-usd="1000"
+    data-prize="$1,000 first place per division; two $250 runners-up per division"
+    data-checked="yes"
+    data-flags="4"><td class="cell-name" data-label="Competition">
+      <a href="../c/global-virtual-hackathon-2026.html">Global Virtual Hackathon 2026</a>
+      <span class="cell-sub">Free student hackathon for ages 14–18 in teams of 2–4 with a supervising teacher. $1,000 first place per division.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge good">Verified 2 Nov</span><span class="badge good">Free entry confirmed</span></span>
+    </td><td data-label="Verified prize"><span class="prize">$1,000 first place per division; two $250 runners-up per division</span><span class="cell-sub"><a href="https://gvhackathon.com/" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified entry"><span class="prize">Free entry, no fee</span><span class="cell-sub"><a href="https://gvhackathon.com/" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified deadline"><span class="prize">25 Nov 2026</span><span class="cell-sub"><a href="https://gvhackathon.com/" rel="noopener noreferrer">operator wording ↗</a> · 2 Nov 2026</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://gvhackathon.com/" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../verified.html#global-virtual-hackathon-2026">Evidence ↗</a><span class="cell-sub">2026-11-02</span></td></tr>
+<tr id="row-gemma-4-developer-agent"
+    data-name="Google — The Gemma 4 Developer Agent Competition (Kaggle)"
+    data-short="Kaggle prediction competition: post-train Gemma 4 into a coding agent; $75,000 competition prizes (+ $35,000 paper track)."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
+    data-checked="no"
+    data-flags="0"><td class="cell-name" data-label="Competition">
+      <a href="../c/gemma-4-developer-agent.html">Google — The Gemma 4 Developer Agent Competition (Kaggle)</a>
+      <span class="cell-sub">Kaggle prediction competition: post-train Gemma 4 into a coding agent; $75,000 competition prizes (+ $35,000 paper…</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://www.kaggle.com/competitions/gemma-4-developer-agent/rules" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">0 flags</span></td></tr>
+<tr id="row-name-that-llm"
+    data-name="Name That LLM (Kaggle)"
+    data-short="Kaggle code competition: identify which of 18 frontier LLMs wrote each passage; ten $5,000 prizes."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
+    data-checked="no"
+    data-flags="0"><td class="cell-name" data-label="Competition">
+      <a href="../c/name-that-llm.html">Name That LLM (Kaggle)</a>
+      <span class="cell-sub">Kaggle code competition: identify which of 18 frontier LLMs wrote each passage; ten $5,000 prizes.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://www.kaggle.com/competitions/name-that-llm/rules" rel="noopener noreferrer">Official page ↗</a><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">0 flags</span></td></tr>
+<tr id="row-squares-in-squares"
+    data-name="Squares in Squares (Kaggle Playground)"
+    data-short="Kaggle optimisation contest: pack n unit squares into the smallest square for n = 1..1000; $50,000 incl. two $5,000 milestone prizes."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
+    data-checked="no"
+    data-flags="0"><td class="cell-name" data-label="Competition">
+      <a href="../c/squares-in-squares.html">Squares in Squares (Kaggle Playground)</a>
+      <span class="cell-sub">Kaggle optimisation contest: pack n unit squares into the smallest square for n = 1..1000; $50,000 incl. two $5,000…</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://www.kaggle.com/competitions/squares-in-squares/rules" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">0 flags</span></td></tr>
+<tr id="row-google-quantum-circuit-compilation"
+    data-name="Google Quantum AI — Verifiable Quantum Circuit Compilation (Kaggle)"
+    data-short="Kaggle competition where AI coding agents optimise quantum circuits; $150,000 total."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
+    data-checked="no"
+    data-flags="0"><td class="cell-name" data-label="Competition">
+      <a href="../c/google-quantum-circuit-compilation.html">Google Quantum AI — Verifiable Quantum Circuit Compilation (Kaggle)</a>
+      <span class="cell-sub">Kaggle competition where AI coding agents optimise quantum circuits; $150,000 total.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/rules" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">0 flags</span></td></tr>
+<tr id="row-enveda-casmi-2026"
+    data-name="Enveda CASMI 2026 — Molecule ID From Mass Spectra (Kaggle)"
+    data-short="Kaggle code competition: predict molecule structures (SMILES) from MS/MS spectra; $50,000."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
+    data-checked="no"
+    data-flags="0"><td class="cell-name" data-label="Competition">
+      <a href="../c/enveda-casmi-2026.html">Enveda CASMI 2026 — Molecule ID From Mass Spectra (Kaggle)</a>
+      <span class="cell-sub">Kaggle code competition: predict molecule structures (SMILES) from MS/MS spectra; $50,000.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra/rules" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">0 flags</span></td></tr>
+<tr id="row-nfl-big-data-bowl-2027"
+    data-name="NFL Big Data Bowl 2027 (Kaggle hackathon)"
+    data-short="Kaggle analytics writeup contest on NFL Combine tracking data; $100,000 across Open and University tracks plus a $10,000 Grand Prize."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
+    data-checked="no"
+    data-flags="0"><td class="cell-name" data-label="Competition">
+      <a href="../c/nfl-big-data-bowl-2027.html">NFL Big Data Bowl 2027 (Kaggle hackathon)</a>
+      <span class="cell-sub">Kaggle analytics writeup contest on NFL Combine tracking data; $100,000 across Open and University tracks plus a…</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://www.kaggle.com/competitions/nfl-big-data-bowl-2027/rules" rel="noopener noreferrer">Official page ↗</a> <span class="note-tiny">+1</span><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">0 flags</span></td></tr>
+<tr id="row-kiroween-2026"
+    data-name="Kiroween 2026 (Kiro / AWS, Devpost)"
+    data-short="Devpost hackathon: build a working app with the Kiro agentic IDE/CLI; $100,000 in cash prizes, closes 2026-12-04."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
+    data-checked="no"
+    data-flags="0"><td class="cell-name" data-label="Competition">
+      <a href="../c/kiroween-2026.html">Kiroween 2026 (Kiro / AWS, Devpost)</a>
+      <span class="cell-sub">Devpost hackathon: build a working app with the Kiro agentic IDE/CLI; $100,000 in cash prizes, closes 2026-12-04.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://kiroween.devpost.com/rules" rel="noopener noreferrer">Official page ↗</a><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">0 flags</span></td></tr>
+<tr id="row-codegeist-2026"
+    data-name="Codegeist 2026 (Atlassian, Devpost)"
+    data-short="Devpost hackathon: build a Forge app that extends Atlassian products; $120,000+ in prizes, closes 2026-12-22."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
+    data-checked="no"
+    data-flags="0"><td class="cell-name" data-label="Competition">
+      <a href="../c/codegeist-2026.html">Codegeist 2026 (Atlassian, Devpost)</a>
+      <span class="cell-sub">Devpost hackathon: build a Forge app that extends Atlassian products; $120,000+ in prizes, closes 2026-12-22.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://codegeist2026.devpost.com/rules" rel="noopener noreferrer">Official page ↗</a><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">0 flags</span></td></tr>
+<tr id="row-meta-vr-start-2026"
+    data-name="Meta VR Start Developer Competition 2026 (Devpost)"
+    data-short="Devpost contest for Meta VR Start program members; page title says $1M in cash prizes; closes 2026-11-18."
+    data-category="tech"
+    data-status=""
+    data-free="unknown"
+    data-verif="unverified"
+    data-figure="no"
+    data-usd=""
+    data-prize=""
+    data-checked="no"
+    data-flags="0"><td class="cell-name" data-label="Competition">
+      <a href="../c/meta-vr-start-2026.html">Meta VR Start Developer Competition 2026 (Devpost)</a>
+      <span class="cell-sub">Devpost contest for Meta VR Start program members; page title says $1M in cash prizes; closes 2026-11-18.</span>
+      <span class="badges tag-row" style="margin-top:6px"><span class="badge warn">Unverified</span></span>
+    </td><td data-label="Verified prize"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified entry"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified deadline"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Verified status"><span class="prize none">—</span><span class="cell-sub">blank: unverified</span></td><td data-label="Official source"><a class="src-link" href="https://start-developer-competition-26.devpost.com/rules" rel="noopener noreferrer">Official page ↗</a><span class="cell-sub">operator's own page</span></td><td data-label="Verification"><a class="src-link" href="../flagged.html#unverified-rows">Unverified ↗</a><span class="cell-sub">0 flags</span></td></tr>
 </tbody>
-  </table>
-</div>
-
-<p class="note-tiny" style="margin-top:14px">Category note: the source dataset's own description of this
-category is not repeated here where it contradicts the dataset's exclusion policy — see
-<a href="../flagged.html#I-15">I-15</a>.</p>
+</table></div>
 </main>
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-links">
-      <a href="../all.html">All 211 competitions</a>
+      <a href="../index.html">Dashboard</a>
+      <a href="../all.html">All competitions</a>
       <a href="../best.html">Best picks</a>
+      <a href="../shortlist.html">Verified shortlist</a>
+      <a href="../verified.html">Verified 2 Nov</a>
       <a href="../analysis.html">Analysis</a>
+      <a href="../verification.html">Verification</a>
+      <a href="../repo-review.html">Repo review</a>
       <a href="../research.html">Source audit</a>
-      <a href="../verification.html">Verification method</a>
-      <a href="../flagged.html">Flagged for review (23)</a>
+      <a href="../flagged.html">Flagged for review</a>
       <a href="../executive-summary.html">Executive summary</a>
     </div>
-    <p><b>PrizeDesk</b> is an independent workbench built on the Free Money &amp; Contest
-    Ledger dataset (pinned commit <code>466f7c1</code>, source reviewed
-    19 Aug 2026). It is not affiliated with any operator listed.
-    Prize figures are the source dataset's claims, not this site's promises — open the operator's
-    rules before you enter. Contest law varies by state and country; play only where legal. 18+/21+.</p>
-    <p class="note-tiny">Figures verified on this site: 13 of 211 rows were
-    fetched live on 1 Nov 2026. Everything else is labelled
-    "source cited — not re-checked". See <a href="../verification.html">how verification works</a>.</p>
+    <p><b>PrizeDesk</b> is an independent workbench. Its 221 rows come from the third-party
+    <a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">Free Money &amp; Contest Ledger</a>
+    (pinned commit <code>466f7c1</code>, source reviewed
+    19 Aug 2026). Only values read on an official operator page on
+    2 Nov 2026 are published; everything else is blank and
+    <a href="../flagged.html">flagged for review</a>. Prize figures are the operator's wording, not
+    this site's promise. Contest law and eligibility vary by state and country; read the rules before you enter.</p>
+    <p class="note-tiny">30 of 221 rows were checked against 40 official pages on
+    2 Nov 2026. See <a href="../verification.html">how verification works</a> and
+    <a href="../verified.html">the line-by-line evidence</a>.</p>
   </div>
 </footer>
 <script src="../assets/js/app.js" defer></script>

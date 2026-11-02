@@ -4,13 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Verification method — PrizeDesk</title>
-<meta name="description" content="Provenance, the three verification rules, what each badge means, what was actually fetched, and how to reproduce the build.">
+<meta name="description" content="Provenance, the verification rules, badge meanings and how to reproduce the build.">
 <meta name="color-scheme" content="light dark">
-<meta property="og:title" content="Verification method — PrizeDesk">
-<meta property="og:description" content="Provenance, the three verification rules, what each badge means, what was actually fetched, and how to reproduce the build.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E%24%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E$%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/css/site.css">
+<style>
+.callout.warn { border-left-color: var(--warn, #b26b00); }
+.evidence-box { border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin:8px 0; background:var(--card,#fff); }
+.fact-quote { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.86rem; color:var(--muted); white-space:pre-wrap; word-break:break-word; }
+.verified-article { border-top:1px solid var(--line); padding:14px 0; }
+.mini-links a { margin-right:10px; }
+.tag-row { margin:6px 0; }
+.stat-grid .stat b { font-size:1.4rem; }
+.src-list { margin:4px 0 0; padding-left:18px; }
+</style>
 
 </head>
 <body>
@@ -19,160 +26,114 @@
   <div class="wrap header-inner">
     <a class="brand" href="index.html">
       <span class="brand-mark" aria-hidden="true">$</span>
-      <span class="brand-text">
-        <b>PrizeDesk</b>
-        <span>Source reviewed 19 Aug 2026</span>
-      </span>
+      <span class="brand-text"><b>PrizeDesk</b><span>Official-page verification 2 Nov 2026</span></span>
     </a>
-    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="analysis.html">Analysis</a><a href="executive-summary.html">Executive summary</a><a href="research.html">Source audit</a><a href="verification.html" aria-current="page">Verification</a><a href="flagged.html">Flagged for review</a></nav>
+    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="shortlist.html">Verified shortlist</a><a href="verified.html">Verified 2 Nov</a><a href="analysis.html">Analysis</a><a href="verification.html" aria-current="page">Verification</a><a href="repo-review.html">Repo review</a><a href="research.html">Source audit</a><a href="flagged.html">Flagged for review</a><a href="executive-summary.html">Executive summary</a></nav>
   </div>
 </header>
 <main id="main" class="wrap">
 
-<section class="hero">
-  <p class="kicker">Method, provenance and limits</p>
+<section class="hero"><p class="kicker">Method, provenance and limits</p>
   <h1>How verification works here</h1>
-  <p class="lede">Three rules govern every number on this site: copy the source verbatim, require an official
-  link before a value is shown, and label what was not checked. This page shows exactly what was and was not
-  done, plus how to reproduce it.</p>
-</section>
+  <p class="lede">One rule governs every number on this site: a value is published only when an official
+  operator page fetched on 2 Nov 2026 states it. Everything else is blank and flagged.</p></section>
 
 <div class="stat-grid">
-  <div class="stat is-good"><b>13</b><span>rows fetched live 1 Nov 2026</span></div>
-  <div class="stat is-warn"><b>198</b><span>rows cited, not re-fetched</span></div>
-  <div class="stat"><b>172</b><span>rows with an official source</span></div>
+  <div class="stat is-good"><b>40</b><span>official pages fetched</span></div>
+  <div class="stat is-good"><b>30</b><span>rows with confirmed values</span></div>
+  <div class="stat is-warn"><b>191</b><span>rows blank + flagged</span></div>
   <div class="stat is-warn"><b>11</b><span>rows with no official source</span></div>
 </div>
 
-<section class="section">
-  <h2>1. Provenance</h2>
-  <div class="card">
-    <dl class="kv">
-      <div class="kv-item"><dt>Source repository</dt><dd><a href="https://github.com/karagemop466-tech/FreeMoneyApps" rel="noopener noreferrer">karagemop466-tech/FreeMoneyApps</a></dd></div>
-      <div class="kv-item"><dt>Pinned commit</dt><dd><code>466f7c1e7a14b52b4a0d36beb84a00d68fd409b7</code></dd></div>
-      <div class="kv-item"><dt>Source file</dt><dd><code>assets/data.js</code></dd></div>
-      <div class="kv-item"><dt>SHA-256</dt><dd style="word-break:break-all"><code>13986a17b8b9aa7b3240232e6138155967cfa9347256faa7b5c7d1565ed73211</code></dd></div>
-      <div class="kv-item"><dt>Declared review date</dt><dd>19 Aug 2026 (pass S)</dd></div>
-      <div class="kv-item"><dt>Captured</dt><dd>1 Nov 2026</dd></div>
-      <div class="kv-item wide"><dt>How it is handled</dt><dd>The file is vendored unchanged at <code>data/source/ledger.source.js</code>.
-      <code>scripts/ingest.js</code> verifies the checksum, strips the <code>window.LEDGER =</code> prefix and parses the
-      remainder as strict JSON. The JavaScript is never executed.</dd></div>
-    </dl>
-  </div>
+<section class="section"><h2>1. Provenance</h2>
+  <div class="card"><dl class="kv">
+    <div class="kv-item"><dt>Reference site</dt><dd><a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">Free Money &amp; Contest Ledger</a></dd></div>
+    <div class="kv-item"><dt>Reference repository</dt><dd><a href="https://github.com/karagemop466-tech/FreeMoneyApps" rel="noopener noreferrer">karagemop466-tech/FreeMoneyApps</a></dd></div>
+    <div class="kv-item"><dt>Pinned commit</dt><dd><code>466f7c1e7a14b52b4a0d36beb84a00d68fd409b7</code></dd></div>
+    <div class="kv-item"><dt>Source file</dt><dd><code>assets/data.js</code>, vendored as <code>data/source/ledger.source.js</code></dd></div>
+    <div class="kv-item wide"><dt>SHA-256</dt><dd style="word-break:break-all"><code>13986a17b8b9aa7b3240232e6138155967cfa9347256faa7b5c7d1565ed73211</code></dd></div>
+    <div class="kv-item"><dt>Ledger's own review date</dt><dd>19 Aug 2026 (pass S)</dd></div>
+    <div class="kv-item"><dt>Our verification date</dt><dd>2 Nov 2026</dd></div>
+    <div class="kv-item wide"><dt>How the file is handled</dt><dd><code>scripts/ingest.js</code> verifies the checksum, strips the <code>window.LEDGER =</code> prefix and parses the remainder as strict JSON. The JavaScript is never executed.</dd></div>
+  </dl></div>
 </section>
 
-<section class="section">
-  <h2>2. The rules we applied</h2>
-  <div class="card">
-    <ol class="list">
-      <li><b>Copy, never correct.</b> Every source field is carried through verbatim. When the source is internally
-      inconsistent, both facts are recorded and the inconsistency goes on the Flagged page (see
-      <a href="flagged.html#I-01">I-01</a>).</li>
-      <li><b>Official link or no value.</b> A prize or cash-out figure is printed only when the row has a source
-      tagged "official" <em>and</em> the text states an amount. Otherwise the cell is “—” and the row is listed as
-      unverified. 85 rows are blank on this basis.</li>
-      <li><b>No inference, no conversion, no summation.</b> £ stays £. "$1K/week + $5K season" is not turned into
-      "$6K". "Up to $10M" is not treated as a $10M prize.</li>
-      <li><b>Badge the gap.</b> A row is "Live-checked" only if its own URL was fetched this pass. Everything else
-      says so, and the full not-checked list is published.</li>
-      <li><b>Publish the problems.</b> Anything odd becomes a numbered flag with evidence and links, not a silent edit.</li>
-    </ol>
-  </div>
+<section class="section"><h2>2. The five rules</h2>
+  <div class="card"><ol class="list">
+    <li><b>Official wording or blank.</b> A prize, entry cost, deadline, status or eligibility value is printed only when a page fetched on 2 Nov 2026 states it verbatim. Each such value carries its quote and URL on the <a href="verified.html">Verified 2 Nov</a> page.</li>
+    <li><b>No inference, no conversion, no summation.</b> An annuity is not turned into a lump sum we did not read; "up to" is not a promise; multi-award tables are not totalled.</li>
+    <li><b>The ledger is a pointer, not a source of values.</b> It supplies the competition name, its category grouping and where to look. Its own prize/status/free labels are deliberately not republished.</li>
+    <li><b>Publish the gap.</b> 191 rows were not re-read. They are listed one by one on <a href="flagged.html#unverified-rows">Flagged for Review</a> rather than hidden.</li>
+    <li><b>Publish the problems.</b> 49 irregularities carry evidence and source links; none is silently corrected.</li>
+  </ol></div>
 </section>
 
-<section class="section">
-  <h2>3. Verification badges</h2>
+<section class="section"><h2>3. What the badges mean</h2>
   <div class="table-scroll"><table class="ledger">
-    <thead><tr><th>Badge</th><th>Rows</th><th>What it means</th></tr></thead>
-    <tbody><tr>
-    <td data-label="Badge"><span class="badge good">Live-checked</span></td>
-    <td data-label="Rows" class="num">12</td>
-    <td data-label="Meaning">We fetched one of the row&#39;s own URLs on 1 Nov 2026 and it returned the expected, on-topic page. Only 13 rows qualify.</td>
-  </tr><tr>
-    <td data-label="Badge"><span class="badge danger">Link error found</span></td>
-    <td data-label="Rows" class="num">1</td>
-    <td data-label="Meaning">We fetched the row&#39;s URL and it returned an error page. 1 row.</td>
-  </tr><tr>
-    <td data-label="Badge"><span class="badge info">Independently checked</span></td>
-    <td data-label="Rows" class="num">15</td>
-    <td data-label="Meaning">Another session in this repository read an official page for this row on 1 Nov 2026 and recorded what it said. 15 rows. This session did not fetch them.</td>
-  </tr><tr>
-    <td data-label="Badge"><span class="badge info">Source cited — not re-checked</span></td>
-    <td data-label="Rows" class="num">172</td>
-    <td data-label="Meaning">The row cites an official-tier URL, but we did not fetch it in this pass. 172 rows. Figures are the source&#39;s claims.</td>
-  </tr><tr>
-    <td data-label="Badge"><span class="badge warn">No official source</span></td>
-    <td data-label="Rows" class="num">11</td>
-    <td data-label="Meaning">The row cites only affiliate or forum sources. 11 rows. The prize cell is blank in our tables.</td>
-  </tr></tbody>
-  </table></div>
+    <thead><tr><th>Badge</th><th>Meaning</th></tr></thead><tbody>
+      <tr><td data-label="Badge"><span class="badge good">Verified 2 Nov</span></td><td data-label="Meaning">At least one official page for this row was fetched on 2 Nov 2026 and a confirmed value is shown.</td></tr>
+      <tr><td data-label="Badge"><span class="badge warn">Unverified</span></td><td data-label="Meaning">No official page for this row was read on 2 Nov 2026. All value cells are blank.</td></tr>
+      <tr><td data-label="Badge"><span class="badge danger">Paid entry confirmed</span></td><td data-label="Meaning">The operator's own page states a fee.</td></tr>
+      <tr><td data-label="Badge"><span class="badge warn">none official</span></td><td data-label="Meaning">The ledger cites only affiliate or forum pages. Values are blank and the row is flagged.</td></tr>
+    </tbody></table></div>
 </section>
 
-<section class="section">
-  <h2>4. What was actually fetched</h2>
-  <p>13 URLs were retrieved on 1 Nov 2026 — at least one per category,
-  weighted towards rows with the highest stakes and the oddest claims. The full log, including what each page
-  confirmed and what it did not, is the last table on the <a href="flagged.html">Flagged for review</a> page.</p>
-  <div class="callout warn">
-    <p><b>Why not all 211?</b> The build environment had no general outbound internet; each page had to be
-    fetched individually through a page-fetch tool. A full crawl is roughly 400 requests across 206 domains and
-    was out of scope for this pass. That limit is stated on every page rather than papered over.</p>
-  </div>
+<section class="section"><h2>4. What was actually fetched</h2>
+  <p>40 official pages were fetched once on 2 Nov 2026, covering 30 ledger rows.
+  The complete list with URLs, titles and outcomes is the first table on the <a href="verified.html">Verified 2 Nov</a> page.</p>
+  <div class="callout warn"><p><b>Why not all 221 rows?</b> A complete re-read would require roughly one
+  official rules page per row, some behind anti-bot systems. This pass prioritised the highest-value and
+  most questionable rows across all nine categories. The remaining 191 rows are published as
+  unverified with blank values — the gap is stated on every page.</p></div>
 </section>
 
-<section class="section">
-  <h2>5. Reproduce this build</h2>
-  <div class="card">
-    <p>Everything is generated from the JSON in <code>data/</code>:</p>
-    <ul class="list">
-      <li><code>node scripts/ingest.js</code> — verify the source checksum and write <code>data/ledger.json</code></li>
-      <li><code>node scripts/verify.js</code> — audit every row, write <code>data/verification.json</code> and <code>data/irregularities.json</code></li>
-      <li><code>node scripts/build.js</code> — render the site</li>
-      <li><code>node scripts/checklinks.js</code> — confirm every internal link resolves and every row is published exactly once</li>
-      <li><code>node scripts/render-docs.js</code> — regenerate <code>docs/EXECUTIVE_SUMMARY.md</code> from the same content as this site</li>
-    </ul>
-    <p class="note-tiny">To extend verification, add entries to <code>data/live-checks.json</code> and re-run
-    <code>verify.js</code> then <code>build.js</code>: rows whose URLs appear there upgrade themselves to
-    "Live-checked" automatically.</p>
-  </div>
+<section class="section"><h2>5. Reproduce this build</h2>
+  <div class="card"><ul class="list">
+    <li><code>node scripts/ingest.js</code> — verify the checksum and write <code>data/ledger.json</code></li>
+    <li><code>node scripts/verify.js</code> — rebuild per-row sourcing and the historical flag register</li>
+    <li><code>node scripts/build.js</code> — render all pages, category pages and detail pages</li>
+    <li><code>node scripts/checklinks.js</code> — every internal link/anchor, and a source link on every table row</li>
+    <li><code>node tests/validate.mjs</code> and <code>node tests/validate-prize-atlas.mjs</code> — data and archive checks</li>
+    <li><code>node scripts/render-docs.js</code> — regenerate <code>docs/EXECUTIVE_SUMMARY.md</code> from the same content as the site</li>
+  </ul>
+  <p class="note-tiny">The generator reads only committed JSON, performs no network requests and uses no clock,
+  so CI can rebuild the site and fail if any generated file changes.</p></div>
 </section>
 
-<section class="section">
-  <h2>6. Limitations you should assume</h2>
-  <div class="card">
-    <ul class="list">
-      <li>Prize claims are 74 days old and can change without notice.</li>
-      <li>Third-party text — the source ledger — is the origin of every row's description; we verify the operator
-      link, not every sentence the source wrote.</li>
-      <li>No odds, entrant counts, effort estimates or expected-value figures exist in the data, so none are
-      shown anywhere on this site.</li>
-      <li><b>Tax:</b> the “US prizes of $600+ normally require a W-9” line is the source dataset's
-      generalisation, not a rule. Reporting depends on the type of income and your circumstances — see
-      <a href="flagged.html#I-21">I-21</a> and the IRS pages linked there. Nothing here is tax advice.</li>
-      <li>Links on operator sites rot. The "link error" badge is one observation, not a permanent state.</li>
-    </ul>
-  </div>
+<section class="section"><h2>6. Limitations you should assume</h2>
+  <div class="card"><ul class="list">
+    <li>The pinned ledger's own labels are 75 days old as of 2 Nov 2026 and are not used as values.</li>
+    <li>Operator pages change without notice; a date read today is one observation, not a permanent state.</li>
+    <li>No odds, entrant counts, effort estimates or expected-value figures exist in the evidence, so none are shown.</li>
+    <li>"US tax forms apply at $600+" is the reference site's generalisation, not a rule. See <a href="flagged.html#R-15">R-15</a> and the linked official rules. Nothing here is tax advice.</li>
+  </ul></div>
 </section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-links">
-      <a href="all.html">All 211 competitions</a>
+      <a href="index.html">Dashboard</a>
+      <a href="all.html">All competitions</a>
       <a href="best.html">Best picks</a>
+      <a href="shortlist.html">Verified shortlist</a>
+      <a href="verified.html">Verified 2 Nov</a>
       <a href="analysis.html">Analysis</a>
+      <a href="verification.html">Verification</a>
+      <a href="repo-review.html">Repo review</a>
       <a href="research.html">Source audit</a>
-      <a href="verification.html">Verification method</a>
-      <a href="flagged.html">Flagged for review (23)</a>
+      <a href="flagged.html">Flagged for review</a>
       <a href="executive-summary.html">Executive summary</a>
     </div>
-    <p><b>PrizeDesk</b> is an independent workbench built on the Free Money &amp; Contest
-    Ledger dataset (pinned commit <code>466f7c1</code>, source reviewed
-    19 Aug 2026). It is not affiliated with any operator listed.
-    Prize figures are the source dataset's claims, not this site's promises — open the operator's
-    rules before you enter. Contest law varies by state and country; play only where legal. 18+/21+.</p>
-    <p class="note-tiny">Figures verified on this site: 13 of 211 rows were
-    fetched live on 1 Nov 2026. Everything else is labelled
-    "source cited — not re-checked". See <a href="verification.html">how verification works</a>.</p>
+    <p><b>PrizeDesk</b> is an independent workbench. Its 221 rows come from the third-party
+    <a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">Free Money &amp; Contest Ledger</a>
+    (pinned commit <code>466f7c1</code>, source reviewed
+    19 Aug 2026). Only values read on an official operator page on
+    2 Nov 2026 are published; everything else is blank and
+    <a href="flagged.html">flagged for review</a>. Prize figures are the operator's wording, not
+    this site's promise. Contest law and eligibility vary by state and country; read the rules before you enter.</p>
+    <p class="note-tiny">30 of 221 rows were checked against 40 official pages on
+    2 Nov 2026. See <a href="verification.html">how verification works</a> and
+    <a href="verified.html">the line-by-line evidence</a>.</p>
   </div>
 </footer>
 

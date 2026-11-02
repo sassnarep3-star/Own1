@@ -1,0 +1,95 @@
+{
+  "note": "Per-row notes for the Verified shortlist page. Every statement is taken from the official page recorded in data/cross-checks.json for the same row; nothing is inferred. Written by arena/7a477419-own1 on 2026-11-02.",
+  "rows": [
+    {
+      "id": "fall-futureeval-2026",
+      "kind": "Bot-only forecasting tournament",
+      "note": "Built for AI bots: \"This is a bot-only competition\". No purchase or fee to participate (Metaculus rules), but bot LLM/search costs are yours; free AskNews search for registered bot makers and donated LLM credits only for select applicants. $50,000 pool on the tournament page; the resources page says $58k+ every 4 months across the seasonal tournament, MiniBench and Market Pulse.",
+      "url": "https://www.metaculus.com/tournament/fall-futureeval-2026/"
+    },
+    {
+      "id": "arcprize",
+      "kind": "Closes today",
+      "note": "Official page: \"Internet access is not available during Kaggle evaluation (no API-based systems like GPT/Claude/etc.)\"; all prizes require open-source, reproducible solutions. An AI agent can help write code, but the submitted solution cannot call hosted models.",
+      "url": "https://arcprize.org/competitions/2026"
+    },
+    {
+      "id": "codex-twitchcon-2026",
+      "kind": "Closes today",
+      "note": "Event page: the project must connect to Twitch and be \"built with OpenAI Codex\"; entry requires the Codex session ID, a repository URL and a public YouTube demo (max 3 minutes).",
+      "url": "https://twitchcon-codex.devpost.com/"
+    },
+    {
+      "id": "midterms-2026",
+      "kind": "Forecasting",
+      "note": "Forecasting tournament, not a coding task: $10,000 pool, closes 2026-11-04. Metaculus rules: no purchase or fee; bots are ineligible for prizes, but humans may use AI tools to assist if the final forecasts reflect their own decisions and understanding.",
+      "url": "https://www.metaculus.com/tournament/midterms-2026/"
+    },
+    {
+      "id": "paypal-ai-hackathon-2026",
+      "kind": "Hackathon",
+      "note": "Rules page (read 2026-11-01 by another session): no purchase necessary; a functional demo and a public source repository are required. Headline $67,500 on the event page mixes cash and non-cash prizes (flag I-20); the rules itemise $12,000 for first place. Whether AI tools are permitted was not re-read.",
+      "url": "https://paypalaihackathon.devpost.com/rules"
+    },
+    {
+      "id": "gemma-4-developer-agent",
+      "kind": "Agent-building competition",
+      "note": "The task is to build a coding agent: submission is an agent.yaml config on a single allowed Gemma 4 variant (no mixing models), scored by PASS/FAIL on SWE-Bench-style patches. Ideal topic for an agent team, but a hosted frontier model cannot be the submitted agent.",
+      "url": "https://www.kaggle.com/competitions/gemma-4-developer-agent/overview"
+    },
+    {
+      "id": "kiroween-2026",
+      "kind": "Hackathon",
+      "note": "Must be built with Kiro (IDE, CLI, Web or Kiro Crew); repo must contain a /.kiro directory and an open-source licence; new project built after 2026-10-30; demo video under 3 minutes.",
+      "url": "https://kiroween.devpost.com/rules"
+    },
+    {
+      "id": "google-quantum-circuit-compilation",
+      "kind": "Agent-friendly competition",
+      "note": "Overview: \"you will use AI coding agents, classical optimization, and algorithmic insights in a closed verification loop\"; \"No quantum physics background or quantum hardware is required.\" Mid-competition $10,000 milestone on 2026-11-20 requires a public notebook.",
+      "url": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/overview"
+    },
+    {
+      "id": "enveda-casmi-2026",
+      "kind": "Code competition",
+      "note": "Notebook submissions only, internet disabled, 9-hour CPU/GPU limit; predictions are ranked SMILES lists scored by MRR@25.",
+      "url": "https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra/overview"
+    },
+    {
+      "id": "name-that-llm",
+      "kind": "Code competition",
+      "note": "Notebook submissions only, internet disabled, 9-hour limit; winner must license the submission under an OSI-approved open-source licence.",
+      "url": "https://www.kaggle.com/competitions/name-that-llm/overview"
+    },
+    {
+      "id": "codegeist-2026",
+      "kind": "Hackathon",
+      "note": "Must be a Forge app integrating an Atlassian product; bonus categories include Best Agents (Rovo) and Best app with Atlassian MCP at $1,500 × 6 each. Needs a free Atlassian developer licence, an installation link and a public YouTube demo.",
+      "url": "https://codegeist2026.devpost.com/rules"
+    },
+    {
+      "id": "nfl-big-data-bowl-2027",
+      "kind": "Judged writeup",
+      "note": "Judged analytics writeup (≤ 2,000 words, public Kaggle Notebook); not a leaderboard. University Track is undergraduate-only. Must use the player-tracking data to be scored.",
+      "url": "https://www.kaggle.com/competitions/nfl-big-data-bowl-2027/overview"
+    },
+    {
+      "id": "squares-in-squares",
+      "kind": "Optimisation leaderboard",
+      "note": "Open optimisation problem scored by a published formula; the page names simulated annealing, gradient descent, evolutionary and reinforcement-learning methods. Two $5,000 milestone prizes (2027-01-17, 2027-04-18). No restriction on tooling was read; rules page not read in this pass.",
+      "url": "https://www.kaggle.com/competitions/squares-in-squares/overview"
+    },
+    {
+      "id": "gems-prize-2026",
+      "kind": "Prize challenge",
+      "note": "HeroX guidelines: \"Institutions, companies, nonprofit organizations, and individuals based in the United States are eligible to compete.\" Two rounds, prizes from $15,000 to $100,000. No entry fee was stated on the pages read; the official rules PDF could not be fetched. Closing time differs between pages (5 PM ET vs 23:59 UTC on 2026-12-03).",
+      "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/"
+    },
+    {
+      "id": "global-virtual-hackathon-2026",
+      "kind": "Student hackathon",
+      "note": "Free, but only for students aged 14–18 in teams of 2–4 with a supervising teacher. AI tools are \"allowed and expected\". Registration closes 13 Nov (23:59 AoE).",
+      "url": "https://gvhackathon.com/"
+    }
+  ]
+}

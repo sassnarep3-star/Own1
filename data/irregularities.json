@@ -454,7 +454,7 @@
    "title": "No stated prize amount",
    "severity": "medium",
    "type": "data-quality",
-   "summary": "133 rows state a money amount; the other 78 do not. They use placeholder text such as \"Prizes decided by your group\", \"Varies\", \"Confirm in-app\" or \"Unverified\". These rows cannot be ranked on prize value.",
+   "summary": "143 rows state a money amount; the other 78 do not. They use placeholder text such as \"Prizes decided by your group\", \"Varies\", \"Confirm in-app\" or \"Unverified\". These rows cannot be ranked on prize value.",
    "evidence": [
     "Rows where the prize field contains no currency amount."
    ],
@@ -723,11 +723,245 @@
    "action": "Every page that mentions tax says \"the source's generalisation\" and links this entry. Nothing here is tax advice."
   },
   {
+   "id": "I-22",
+   "title": "Metaculus: the slug \"us-midterms-2026\" returns \"Page not found\"; the working tournament URL is \"midterms-2026\"",
+   "severity": "low",
+   "type": "broken-link",
+   "summary": "Read 2026-11-02: https://www.metaculus.com/tournament/us-midterms-2026/ returns \"Page not found\", while https://www.metaculus.com/tournament/midterms-2026/ loads \"US Midterms 2026\" ($10,000 prize pool, closes Nov 04). The dead slug still appears in the archived Prize Atlas data (data/atlas-entries.json, data/verified.json).",
+   "evidence": [
+    "Both URLs fetched 2026-11-02 by arena/7a477419-own1."
+   ],
+   "affected": [
+    "midterms-2026"
+   ],
+   "links": [
+    {
+     "title": "Working tournament page",
+     "url": "https://www.metaculus.com/tournament/midterms-2026/"
+    },
+    {
+     "title": "Dead slug (404)",
+     "url": "https://www.metaculus.com/tournament/us-midterms-2026/"
+    }
+   ],
+   "action": "This site links only the working URL. The archived files were left unchanged and are noted here."
+  },
+  {
+   "id": "I-23",
+   "title": "Meta VR Start Developer Competition: \"$1M in cash prizes\" but entry is restricted to Meta VR Start members",
+   "severity": "medium",
+   "type": "eligibility-gate",
+   "summary": "The rules state \"NO PURCHASE NECESSARY\" and also \"THIS CONTEST IS OPEN ONLY TO MEMBERS OF THE META VR START PROGRAM\", with a Meta account with Developer Access required. The $1,000,000 figure is the page-title claim; the prize table was not read, so it is shown with that label and the row is marked \"some free events\", not \"free entry\".",
+   "evidence": [
+    "Official rules read 2026-11-02 by arena/7a477419-own1."
+   ],
+   "affected": [
+    "meta-vr-start-2026"
+   ],
+   "links": [
+    {
+     "title": "Official rules",
+     "url": "https://start-developer-competition-26.devpost.com/rules"
+    }
+   ],
+   "action": "Kept as a row with the gate stated. Start membership criteria were not read — check them before planning work."
+  },
+  {
+   "id": "I-24",
+   "title": "Devpost \"DSH Hacks V2\" title says \"$100k+ in prizes!\" but the listing shows \"5 non-cash prizes\"",
+   "severity": "low",
+   "type": "source-conflict",
+   "summary": "On the Devpost hackathon list read 2026-11-02, the event is titled \"DSH Hacks V2 ($100k+ in prizes!)\" while the card shows \"5 non-cash prizes\" (Jun 24 - Nov 15, 2026). A headline in a title is not a cash prize.",
+   "evidence": [
+    "Devpost hackathon listing read 2026-11-02 by arena/7a477419-own1."
+   ],
+   "affected": [],
+   "links": [
+    {
+     "title": "Devpost hackathon list",
+     "url": "https://devpost.com/hackathons"
+    },
+    {
+     "title": "DSH Hacks V2",
+     "url": "https://dsh-hacks-v2.devpost.com/"
+    }
+   ],
+   "action": "Not carried as a row; recorded so the headline-vs-rules pattern stays visible (see also I-19, I-20)."
+  },
+  {
+   "id": "I-25",
+   "title": "Kaggle competition pages state no entry fee but never say \"free\"",
+   "severity": "info",
+   "type": "unconfirmed-value",
+   "summary": "For the six Kaggle competitions added on 2026-11-02, neither the overview nor the rules text read contains an entry fee or the word \"free\", and the Kaggle docs page read does not state it either. Entry is by Kaggle registration and acceptance of the rules. Their entry cell therefore reads \"Entry cost not stated\" rather than \"Free entry\".",
+   "evidence": [
+    "Overview pages and the Name That LLM rules page (including the Kaggle foundational rules) read 2026-11-02 by arena/7a477419-own1."
+   ],
+   "affected": [
+    "gemma-4-developer-agent",
+    "name-that-llm",
+    "squares-in-squares",
+    "google-quantum-circuit-compilation",
+    "enveda-casmi-2026",
+    "nfl-big-data-bowl-2027"
+   ],
+   "links": [
+    {
+     "title": "Kaggle competition docs",
+     "url": "https://www.kaggle.com/docs/competitions"
+    },
+    {
+     "title": "Name That LLM rules (with foundational rules)",
+     "url": "https://www.kaggle.com/competitions/name-that-llm/rules"
+    }
+   ],
+   "action": "Left as \"not stated\". If Kaggle publishes an explicit statement, set freePath to \"full\" for these rows."
+  },
+  {
+   "id": "I-26",
+   "title": "Two top-ranked entries close today (2026-11-02): ARC Prize competition tracks and Codex x TwitchCon",
+   "severity": "info",
+   "type": "time-sensitive",
+   "summary": "ARC Prize lists \"November 2, 2026 - Submissions due\" (Kaggle showed \"6 hours to go\" for ARC-AGI-3 and ARC-AGI-2; the Paper Track is due November 8). Codex x TwitchCon shows \"Deadline: Nov 2, 2026 @ 5:00pm EST\" and \"4 more hours to deadline\". Countdowns on this site run from the date of the newest official-page reading.",
+   "evidence": [
+    "arcprize.org/competitions/2026, the Kaggle competition list and twitchcon-codex.devpost.com read 2026-11-02 by arena/7a477419-own1."
+   ],
+   "affected": [
+    "arcprize",
+    "codex-twitchcon-2026"
+   ],
+   "links": [
+    {
+     "title": "ARC Prize 2026",
+     "url": "https://arcprize.org/competitions/2026"
+    },
+    {
+     "title": "Codex x TwitchCon Hackathon",
+     "url": "https://twitchcon-codex.devpost.com/"
+    }
+   ],
+   "action": "Kept on the dashboard with \"today\" so the closing date is visible; they drop off at the next rebuild after the date passes."
+  },
+  {
+   "id": "I-27",
+   "title": "Tool-locked or offline-only entries cannot be won with an arbitrary hosted AI agent as the submitted solution",
+   "severity": "info",
+   "type": "rule-constraint",
+   "summary": "ARC Prize: \"Internet access is not available during Kaggle evaluation (no API-based systems like GPT/Claude/etc.)\". Name That LLM and Enveda CASMI: notebooks with internet disabled. Gemma 4 Developer Agent: the submission must use one allowed Gemma 4 variant. Codex x TwitchCon requires a project built with OpenAI Codex; Kiroween requires Kiro; Codegeist requires Atlassian Forge. An AI coding agent can still help write and test the solution where the rules allow it.",
+   "evidence": [
+    "Official pages read 2026-11-02 by arena/7a477419-own1; quotes are on the Verified shortlist page."
+   ],
+   "affected": [
+    "arcprize",
+    "name-that-llm",
+    "enveda-casmi-2026",
+    "gemma-4-developer-agent",
+    "codex-twitchcon-2026",
+    "kiroween-2026",
+    "codegeist-2026"
+   ],
+   "links": [
+    {
+     "title": "ARC Prize 2026 rules",
+     "url": "https://arcprize.org/competitions/2026"
+    },
+    {
+     "title": "Gemma 4 Developer Agent",
+     "url": "https://www.kaggle.com/competitions/gemma-4-developer-agent/overview"
+    },
+    {
+     "title": "Kiroween rules",
+     "url": "https://kiroween.devpost.com/rules"
+    }
+   ],
+   "action": "Stated in the \"What the official page says\" column of the Verified shortlist. Nothing is scored on it."
+  },
+  {
+   "id": "I-28",
+   "title": "XPRIZE: multi-million purses are shown, but the Quantum Applications page lists selected finalist teams and no entry terms",
+   "severity": "low",
+   "type": "unconfirmed-value",
+   "summary": "The XPRIZE competitions page lists purses ($5M Quantum Applications, $119M Water Scarcity, $101M Healthspan, $100M Carbon Removal, $10M Rainforest, $11M Wildfire finals). The Quantum Applications page shows 7 finalists and 20 semifinalists chosen by judges; no entry fee, window or eligibility was read, so open entry is not evidenced.",
+   "evidence": [
+    "xprize.org/competitions and /competitions/qc-apps read 2026-11-02 by arena/7a477419-own1."
+   ],
+   "affected": [
+    "xprize"
+   ],
+   "links": [
+    {
+     "title": "XPRIZE competitions",
+     "url": "https://www.xprize.org/competitions"
+    },
+    {
+     "title": "XPRIZE Quantum Applications",
+     "url": "https://www.xprize.org/competitions/qc-apps"
+    }
+   ],
+   "action": "The row stays; its entry cell is not asserted as free."
+  },
+  {
+   "id": "I-29",
+   "title": "GEMS Prize: the HeroX page limits entry to U.S.-based entrants, and the closing time differs between pages",
+   "severity": "medium",
+   "type": "eligibility-gate",
+   "summary": "HeroX (read 2026-11-02): \"Institutions, companies, nonprofit organizations, and individuals based in the United States are eligible to compete.\" It also says submissions are due \"December 3 at 5 PM ET\", while the DrivenData reading on 2026-11-01 recorded 23:59 UTC the same day. The official rules PDF (nlr.gov) could not be fetched, so the entry fee and full eligibility text were not read. The row is labelled \"Entry cost not stated\" and the $300,000 pool is the pages' own figure.",
+   "evidence": [
+    "https://www.herox.com/GEMSPrize read 2026-11-02 by arena/7a477419-own1; DrivenData page read 2026-11-01 by arena/27a86924-own1."
+   ],
+   "affected": [
+    "gems-prize-2026"
+   ],
+   "links": [
+    {
+     "title": "HeroX GEMS Prize page",
+     "url": "https://www.herox.com/GEMSPrize"
+    },
+    {
+     "title": "Official rules (PDF, not fetched)",
+     "url": "https://www.nlr.gov/docs/fy26osti/96647.pdf"
+    },
+    {
+     "title": "DrivenData competition page",
+     "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/"
+    }
+   ],
+   "action": "Row kept with the US-based restriction and both closing times in its notes. Read the PDF rules before spending time on it."
+  },
+  {
+   "id": "I-30",
+   "title": "FutureEval Bot Tournament: entry is free, but running a bot costs money and free credits are limited",
+   "severity": "low",
+   "type": "hidden-cost",
+   "summary": "Metaculus' rules say no purchase or fee is required. The resources page also says free AskNews search is for every registered bot maker, donated LLM credits go to \"a select number of bot makers who apply\", and \"We will not be able to cover all AI providers (nor AI costs for especially expensive bots)\". Prize split for the $50,000 pool was not read.",
+   "evidence": [
+    "Tournament page, resources page (sections 1-2 of 19) and the Metaculus competition rules read 2026-11-02 by arena/7a477419-own1."
+   ],
+   "affected": [
+    "fall-futureeval-2026"
+   ],
+   "links": [
+    {
+     "title": "Tournament page",
+     "url": "https://www.metaculus.com/tournament/fall-futureeval-2026/"
+    },
+    {
+     "title": "FutureEval resources page",
+     "url": "https://www.metaculus.com/notebooks/38928/ai-benchmark-resources/"
+    },
+    {
+     "title": "Rules for Competitions on Metaculus",
+     "url": "https://www.metaculus.com/tournament-rules/"
+    }
+   ],
+   "action": "Stated on the row and on the Verified shortlist. Estimate API cost before committing a bot to the full season."
+  },
+  {
    "id": "I-16",
    "title": "Most rows were not re-checked in this pass",
    "severity": "info",
    "type": "verification-coverage",
-   "summary": "13 of 211 rows were fetched live on 2026-11-01. The build sandbox has no general outbound web access, so a 206-row crawl was not possible here. The other 198 rows are published as \"source cited — not re-checked this session\".",
+   "summary": "13 of 221 rows were fetched live on 2026-11-01. The build sandbox has no general outbound web access, so a 206-row crawl was not possible here. The other 208 rows are published as \"source cited — not re-checked this session\".",
    "evidence": [
     "live-checks.json records 12 fetches; no other URL was retrieved this session."
    ],

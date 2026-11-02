@@ -6,11 +6,18 @@
 <title>Not found — PrizeDesk</title>
 <meta name="description" content="Page not found.">
 <meta name="color-scheme" content="light dark">
-<meta property="og:title" content="Not found — PrizeDesk">
-<meta property="og:description" content="Page not found.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E%24%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E$%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/css/site.css">
+<style>
+.callout.warn { border-left-color: var(--warn, #b26b00); }
+.evidence-box { border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin:8px 0; background:var(--card,#fff); }
+.fact-quote { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.86rem; color:var(--muted); white-space:pre-wrap; word-break:break-word; }
+.verified-article { border-top:1px solid var(--line); padding:14px 0; }
+.mini-links a { margin-right:10px; }
+.tag-row { margin:6px 0; }
+.stat-grid .stat b { font-size:1.4rem; }
+.src-list { margin:4px 0 0; padding-left:18px; }
+</style>
 
 </head>
 <body>
@@ -19,40 +26,42 @@
   <div class="wrap header-inner">
     <a class="brand" href="index.html">
       <span class="brand-mark" aria-hidden="true">$</span>
-      <span class="brand-text">
-        <b>PrizeDesk</b>
-        <span>Source reviewed 19 Aug 2026</span>
-      </span>
+      <span class="brand-text"><b>PrizeDesk</b><span>Official-page verification 2 Nov 2026</span></span>
     </a>
-    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="analysis.html">Analysis</a><a href="executive-summary.html">Executive summary</a><a href="research.html">Source audit</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a></nav>
+    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="shortlist.html">Verified shortlist</a><a href="verified.html">Verified 2 Nov</a><a href="analysis.html">Analysis</a><a href="verification.html">Verification</a><a href="repo-review.html">Repo review</a><a href="research.html">Source audit</a><a href="flagged.html">Flagged for review</a><a href="executive-summary.html">Executive summary</a></nav>
   </div>
 </header>
 <main id="main" class="wrap">
 <section class="hero"><p class="kicker">404</p><h1>That page is not here</h1>
-  <p class="lede">The link may be out of date, or the competition may have been removed. Everything lives from
-  the dashboard.</p>
+  <p class="lede">The link may be out of date, or the competition may have been removed. Everything starts from the dashboard.</p>
   <div class="btn-row"><a class="btn primary" href="index.html">Dashboard</a>
   <a class="btn" href="all.html">All competitions</a></div></section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-links">
-      <a href="all.html">All 211 competitions</a>
+      <a href="index.html">Dashboard</a>
+      <a href="all.html">All competitions</a>
       <a href="best.html">Best picks</a>
+      <a href="shortlist.html">Verified shortlist</a>
+      <a href="verified.html">Verified 2 Nov</a>
       <a href="analysis.html">Analysis</a>
+      <a href="verification.html">Verification</a>
+      <a href="repo-review.html">Repo review</a>
       <a href="research.html">Source audit</a>
-      <a href="verification.html">Verification method</a>
-      <a href="flagged.html">Flagged for review (23)</a>
+      <a href="flagged.html">Flagged for review</a>
       <a href="executive-summary.html">Executive summary</a>
     </div>
-    <p><b>PrizeDesk</b> is an independent workbench built on the Free Money &amp; Contest
-    Ledger dataset (pinned commit <code>466f7c1</code>, source reviewed
-    19 Aug 2026). It is not affiliated with any operator listed.
-    Prize figures are the source dataset's claims, not this site's promises — open the operator's
-    rules before you enter. Contest law varies by state and country; play only where legal. 18+/21+.</p>
-    <p class="note-tiny">Figures verified on this site: 13 of 211 rows were
-    fetched live on 1 Nov 2026. Everything else is labelled
-    "source cited — not re-checked". See <a href="verification.html">how verification works</a>.</p>
+    <p><b>PrizeDesk</b> is an independent workbench. Its 221 rows come from the third-party
+    <a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">Free Money &amp; Contest Ledger</a>
+    (pinned commit <code>466f7c1</code>, source reviewed
+    19 Aug 2026). Only values read on an official operator page on
+    2 Nov 2026 are published; everything else is blank and
+    <a href="flagged.html">flagged for review</a>. Prize figures are the operator's wording, not
+    this site's promise. Contest law and eligibility vary by state and country; read the rules before you enter.</p>
+    <p class="note-tiny">30 of 221 rows were checked against 40 official pages on
+    2 Nov 2026. See <a href="verification.html">how verification works</a> and
+    <a href="verified.html">the line-by-line evidence</a>.</p>
   </div>
 </footer>
 
