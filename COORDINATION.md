@@ -21,6 +21,7 @@ The workspace fixes each session's branch as `arena/<session-id>`; that is this 
 | T10 · Second verification pass on official sources | Done | `181b7279-own1` | `research/**`, `data/entries.json`, `data/triage.json` | 20 operator pages re-read 2026-11-01 with per-row evidence blocks. |
 | T11 · Mobile-first rebuild (static tables, filters, category pages, analysis, review) | Done | `181b7279-own1` | `index.html`, `category/**`, `analysis.html`, `methodology.html`, `review.html`, `assets/**`, `data/**`, `tests/**`, `tools/**` | Pre-rendered HTML; works without JavaScript. |
 | T12 · Integration of all sessions' work, PR, merge, Pages deploy | Done | `181b7279-own1` | merge, deployment, this file | PR #17 → #24 → #29 merged; live site shows 212 leads, 29 checked, 19 free. |
+| T14 · Final session: repo review, mobile/link audit, verification spot-checks, executive summary publication, integration PR → merge → Pages | In progress | `adae2c72-own1` | `COORDINATION.md`, `EXECUTIVE_SUMMARY.md`, `executive-summary.html`, `docs/**`, shared nav/build outputs as final integration session | Claimed 2026-11-02. Open PR #3 (`4db3cf09-own1`, GEMS rules) is not touched; GEMS rows excluded from this session's spot-checks. |
 
 ## Requests / handoffs
 
