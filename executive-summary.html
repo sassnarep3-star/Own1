@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Executive summary — PrizeDesk</title>
-<meta name="description" content="211 competitions, 30 rows checked against 40 official operator pages on 2026-11-02, 181 rows left blank and flagged. No inferred values.">
+<meta name="description" content="221 competitions, 30 rows checked against 40 official operator pages on 2026-11-02, 191 rows left blank and flagged. No inferred values.">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E$%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/css/site.css">
@@ -28,25 +28,36 @@
       <span class="brand-mark" aria-hidden="true">$</span>
       <span class="brand-text"><b>PrizeDesk</b><span>Official-page verification 2 Nov 2026</span></span>
     </a>
-    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="verified.html">Verified 2 Nov</a><a href="analysis.html">Analysis</a><a href="verification.html">Verification</a><a href="repo-review.html">Repo review</a><a href="research.html">Source audit</a><a href="flagged.html">Flagged for review</a><a href="executive-summary.html" aria-current="page">Executive summary</a></nav>
+    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="shortlist.html">Verified shortlist</a><a href="verified.html">Verified 2 Nov</a><a href="analysis.html">Analysis</a><a href="verification.html">Verification</a><a href="repo-review.html">Repo review</a><a href="research.html">Source audit</a><a href="flagged.html">Flagged for review</a><a href="executive-summary.html" aria-current="page">Executive summary</a></nav>
   </div>
 </header>
 <main id="main" class="wrap">
 
-<section class="hero"><p class="kicker">Executive summary · 2 Nov 2026</p>
-  <h1>Executive summary — verified 2026-11-02</h1><p class="lede">211 competitions, 30 rows checked against 40 official operator pages on 2026-11-02, 181 rows left blank and flagged. No inferred values.</p>
-  <div class="btn-row"><a class="btn primary" href="all.html">Browse the 211 rows</a>
+<section class="hero"><p class="kicker">Executive summary · updated 2 Nov 2026 · base verification 1 Nov 2026</p>
+  <h1>Executive summary — verified 2026-11-02</h1><p class="lede">221 competitions, 30 rows checked against 40 official operator pages on 2026-11-02, 191 rows left blank and flagged. No inferred values.</p>
+  <p class="note-tiny">The pinned source file has 206 listings. The combined dataset reconciles as
+  206 pinned upstream rows + 15 attributed additions =
+  221 rows. Read the
+  <a href="https://github.com/sassnarep3-star/Own1/blob/main/data/verification/current-state-2026-11-02.md" rel="noopener noreferrer">targeted current-state audit ↗</a>
+  and the <a href="shortlist.html">Verified shortlist</a>, including the
+  <a href="https://www.metaculus.com/tournament/fall-futureeval-2026/" rel="noopener noreferrer">official FutureEval bot-tournament page ↗</a>.
+  No Singapore-specific eligibility conclusion is established.</p>
+  <div class="btn-row"><a class="btn primary" href="all.html">Browse the 221 rows</a>
   <a class="btn" href="verified.html">Evidence</a>
-  <a class="btn" href="flagged.html">Flagged (40)</a></div></section>
+  <a class="btn" href="flagged.html">Flagged (49)</a></div></section>
 <article class="prose section"><h2>What this is</h2>
 <p>Free-to-enter cash-prize competitions, reorganised into a mobile-friendly dashboard. The source is the third-party &quot;Free Money &amp; Contest Ledger&quot; at https://karagemop466-tech.github.io/FreeMoneyApps/, whose maintained dataset is pinned by commit and SHA-256 in data/source/PROVENANCE.json. That ledger is a research catalogue, not an official operator document, so no figure from it is published as a fact.</p>
-<p>The live site is https://sassnarep3-star.github.io/Own1/. It contains 211 competition rows, one row per entry in the pinned ledger, plus 7 new official leads found on 2026-11-02. Every row links to the operator&#39;s page where one exists; rows without an official source are labelled &quot;none official&quot; and flagged.</p>
+<p>The live site is https://sassnarep3-star.github.io/Own1/. It contains 221 competition rows, one row per entry in the combined dataset, plus 7 new official leads found on 2026-11-02. Every row links to the operator&#39;s page where one exists; rows without an official source are labelled &quot;none official&quot; and flagged.</p>
+<h2>Dataset reconciliation and current-state audit</h2>
+<p>The pinned source file has 206 listings. The combined dataset has 221 rows: 206 pinned upstream rows + 15 attributed additions. These are different datasets; 221 is not the reference site&#39;s own count.</p>
+<p>The base verification snapshot is dated 2026-11-01; the latest independent official-page cross-checks are dated 2026-11-02. Read the targeted current-state audit at data/verification/current-state-2026-11-02.md and the integration log at docs/SESSION-7a477419.md for the earlier sessions&#39; reads, 25 check records and 31 historical irregularities.</p>
+<p>No Singapore-specific eligibility conclusion is established. Geographic restrictions, age limits, sanctions/export rules, prize payment and local law must be confirmed on the operator&#39;s rules page for the individual entering.</p>
 <h2>The rule we applied</h2>
 <ol class="list"><li>A value appears only when the exact wording is on an official operator page fetched on 2026-11-02. Each such value carries the verbatim quote and its URL on the Verified 2 Nov page.</li><li>If an official page does not state a value, the cell is blank and the row is flagged unverified. Nothing is inferred, converted, summed, rounded or filled from the ledger.</li><li>The reference ledger is used only for the competition name, its category grouping and where to look. Its prize, entry, status and eligibility labels are never republished as values.</li><li>Every irregularity is published on the clearly labelled Flagged for Review page with its source links; a flag never blocks publication and never becomes a guessed value.</li></ol>
 <h2>The 2026-11-02 verification pass</h2>
 <div class="table-scroll"><table class="ledger">
       <thead><tr><th>Measure</th><th>Value</th><th>Where it comes from</th></tr></thead>
-      <tbody><tr><td data-label="Measure">Competition rows</td><td data-label="Value">211</td><td data-label="Where it comes from">data/ledger.json (pinned source ledger + 5 merged additions)</td></tr><tr><td data-label="Measure">Official pages fetched on 2026-11-02</td><td data-label="Value">40</td><td data-label="Where it comes from">data/verification-2026-11-02.json (pages)</td></tr><tr><td data-label="Measure">Rows with at least one confirmed official value</td><td data-label="Value">30</td><td data-label="Where it comes from">data/verification-2026-11-02.json (rows)</td></tr><tr><td data-label="Measure">Rows left blank and flagged unverified</td><td data-label="Value">181</td><td data-label="Where it comes from">211 minus 30</td></tr><tr><td data-label="Measure">Confirmed free-entry statements</td><td data-label="Value">17</td><td data-label="Where it comes from">exact wording on operator pages</td></tr><tr><td data-label="Measure">Confirmed paid-entry statements</td><td data-label="Value">1</td><td data-label="Where it comes from">exact wording on operator pages</td></tr><tr><td data-label="Measure">Rows with a confirmed prize figure</td><td data-label="Value">24</td><td data-label="Where it comes from">exact wording on operator pages</td></tr><tr><td data-label="Measure">Rows with no official source</td><td data-label="Value">11</td><td data-label="Where it comes from">data/verification.json</td></tr><tr><td data-label="Measure">Published irregularities</td><td data-label="Value">40</td><td data-label="Where it comes from">22 historical + 18 new</td></tr></tbody>
+      <tbody><tr><td data-label="Measure">Competition rows</td><td data-label="Value">221</td><td data-label="Where it comes from">data/ledger.json (pinned source ledger + 5 merged additions)</td></tr><tr><td data-label="Measure">Official pages fetched on 2026-11-02</td><td data-label="Value">40</td><td data-label="Where it comes from">data/verification-2026-11-02.json (pages)</td></tr><tr><td data-label="Measure">Rows with at least one confirmed official value</td><td data-label="Value">30</td><td data-label="Where it comes from">data/verification-2026-11-02.json (rows)</td></tr><tr><td data-label="Measure">Rows left blank and flagged unverified</td><td data-label="Value">191</td><td data-label="Where it comes from">221 minus 30</td></tr><tr><td data-label="Measure">Confirmed free-entry statements</td><td data-label="Value">17</td><td data-label="Where it comes from">exact wording on operator pages</td></tr><tr><td data-label="Measure">Confirmed paid-entry statements</td><td data-label="Value">1</td><td data-label="Where it comes from">exact wording on operator pages</td></tr><tr><td data-label="Measure">Rows with a confirmed prize figure</td><td data-label="Value">24</td><td data-label="Where it comes from">exact wording on operator pages</td></tr><tr><td data-label="Measure">Rows with no official source</td><td data-label="Value">11</td><td data-label="Where it comes from">data/verification.json</td></tr><tr><td data-label="Measure">Published irregularities</td><td data-label="Value">49</td><td data-label="Where it comes from">31 historical + 18 new</td></tr></tbody>
     </table></div>
 <p>The 2026-11-01 automated link check is recorded separately in data/link-health.json: 203 URLs, 166 ok, 10 hard failures and 27 soft failures. Several &quot;failures&quot; are HTTP 403 anti-bot responses, not broken pages; the same pages loaded on 2026-11-02. The dated observation is published on the Flagged page, not treated as a verdict.</p>
 <h2>Best documented opportunities (verified 2026-11-02)</h2>
@@ -62,7 +73,7 @@
 <p>For an agent-assisted entrant, the highest-value work is therefore in tech and forecasting competitions with objective scoring and explicit AI permission, not in pick&#39;em or judged-writing contests. Two independent rules findings from the handoff in PR #3 (GEMS deadline-time conflict and Metaculus bot-prize eligibility) were re-verified against the official pages on 2026-11-02 and published as R-17 and R-18.</p>
 <h2>Important irregularities (published, not resolved by guessing)</h2>
 <ul class="list"><li>The reference site&#39;s own 100_VERIFIED_CONTESTS.md is marked &quot;SUPERSEDED — DO NOT USE AS A SOURCE&quot; and documents claims its authors found false.</li><li>The reference site is one JavaScript-rendered scroll of 206 cards with no search or filters; its counts show zero when scripts are blocked.</li><li>Official links have rotted: herox.com/challenges and roboforex.com/contests/ return 404, and Challenge.gov was sunset on 2026-03-30 (replacement: usa.gov/challenges).</li><li>Statuses drifted since the ledger&#39;s 2026-08-19 review: ESPN Survivor entry is closed, Tom Howard is closed, FOX Super 6 has no active games, and TradingView The Leap ended 14 August 2026.</li><li>Tom Howard charges $27 per submission; GamerSaloon&#39;s $10 is Bonus Cash &quot;not eligible for withdrawal&quot;; Givling is a crowdfunding queue, not a trivia contest.</li><li>11 rows have no official operator source at all — mostly FPL mini-league codes from forum threads and old blog posts. All of their values are blank.</li><li>Deadline fields mix registration close and submission close: the Global Virtual Hackathon&#39;s 13 November date is registration; submissions close 25 November 2026.</li></ul>
-<p>The full register, with evidence and links for manual review, is on the Flagged for Review page and in REPO_REVIEW.md. All 40 items are status &quot;needs review&quot; and do not block the site or the merge.</p>
+<p>The full register, with evidence and links for manual review, is on the Flagged for Review page and in REPO_REVIEW.md. All 49 items are status &quot;needs review&quot; and do not block the site or the merge.</p>
 <h2>How to reproduce and check</h2>
 <ol class="list"><li>node scripts/ingest.js — verify the pinned source checksum and rebuild data/ledger.json.</li><li>node scripts/verify.js — rebuild the per-row verification state and the historical irregularity register.</li><li>node scripts/build.js — render every page, category page and detail page (deterministic: no network, no clock).</li><li>node scripts/checklinks.js, node tests/validate.mjs, node tests/validate-prize-atlas.mjs — link, data and archive checks.</li><li>node scripts/render-docs.js — regenerate docs/EXECUTIVE_SUMMARY.md from this same content module.</li></ol>
 <p>GitHub Pages serves the main branch from the repository root. The CI workflow rebuilds the site and fails if any generated file changes, if a link is broken, or if a page lacks the mobile viewport/breakpoints.</p></article>
@@ -73,6 +84,7 @@
       <a href="index.html">Dashboard</a>
       <a href="all.html">All competitions</a>
       <a href="best.html">Best picks</a>
+      <a href="shortlist.html">Verified shortlist</a>
       <a href="verified.html">Verified 2 Nov</a>
       <a href="analysis.html">Analysis</a>
       <a href="verification.html">Verification</a>
@@ -81,14 +93,14 @@
       <a href="flagged.html">Flagged for review</a>
       <a href="executive-summary.html">Executive summary</a>
     </div>
-    <p><b>PrizeDesk</b> is an independent workbench. Its 211 rows come from the third-party
+    <p><b>PrizeDesk</b> is an independent workbench. Its 221 rows come from the third-party
     <a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">Free Money &amp; Contest Ledger</a>
     (pinned commit <code>466f7c1</code>, source reviewed
     19 Aug 2026). Only values read on an official operator page on
     2 Nov 2026 are published; everything else is blank and
     <a href="flagged.html">flagged for review</a>. Prize figures are the operator's wording, not
     this site's promise. Contest law and eligibility vary by state and country; read the rules before you enter.</p>
-    <p class="note-tiny">30 of 211 rows were checked against 40 official pages on
+    <p class="note-tiny">30 of 221 rows were checked against 40 official pages on
     2 Nov 2026. See <a href="verification.html">how verification works</a> and
     <a href="verified.html">the line-by-line evidence</a>.</p>
   </div>
