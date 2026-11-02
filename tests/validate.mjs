@@ -183,6 +183,15 @@ for (const r of entries) {
 expect(indexHtml.includes('data-label="Triage score"'), 'index.html: triage column missing');
 expect(read('analysis.html').length > 2000, 'analysis.html: page looks empty');
 
+/* ---------- executive-summary evidence and count reconciliation ---------- */
+const executive = read('executive-summary.html');
+expect(executive.includes('upstream file contains 206 listings; this repository has 211'), 'executive summary: distinguish upstream count from combined count');
+expect(executive.includes('data/verification/current-state-2026-11-02.md'), 'executive summary: link the targeted current-state audit');
+expect(executive.includes('https://www.metaculus.com/tournament/fall-futureeval-2026/'), 'executive summary: include an official FutureEval source');
+expect(executive.includes('does not determine eligibility for a specific person or establish Singapore eligibility'), 'executive summary: do not infer location eligibility');
+expect(!executive.includes('211 full-length cards'), 'executive summary: do not attribute the combined count to the upstream site');
+expect(!executive.includes('All rows from the pinned source file'), 'executive summary: do not call merged additions upstream rows');
+
 /* ---------- blank is never free ---------- */
 for (const r of entries) {
   if (r.sourceStatus === 'unverified') {

@@ -1,108 +1,97 @@
 'use strict';
 /**
- * content.js — prose that is rendered twice: as the site's Executive summary page and as
- * docs/EXECUTIVE_SUMMARY.md. Keeping one source prevents the two from drifting apart.
- *
- * Blocks: {t:'h2'|'h3'|'p'|'ul'|'ol'|'table'|'note', text, items, head, rows}
- * Numbers are injected from data, never typed by hand.
+ * content.js — evidence-limited executive-summary prose shared by the site and docs.
+ * All dynamic counts come from the canonical verifier output. Targeted reads made
+ * after that snapshot are clearly labeled as not yet merged into the row dataset.
  */
 
 function build(ctx) {
   const n = ctx.totals;
-  const pct = (a, b) => Math.round((a / b) * 1000) / 10;
+  const unknownEntry = n.rows - n.freeEntryFull - n.freeEntryPartial - n.paidCash;
 
   return {
     title: 'Executive summary',
     standfirst:
-      'What the source ledger contains, what we could and could not verify, what we rebuilt, and where the free cash actually is.',
-
+      'What the competition catalogue contains, what current official sources confirm, and what still needs review.',
     blocks: [
-      { t: 'h2', text: '1. The brief, and what was delivered' },
+      { t: 'h2', text: '1. The project and the decision' },
       { t: 'p', text:
-        'The source site (Free Money & Contest Ledger) is a research catalogue of free-to-enter competitions that can pay real money. Its weaknesses are real: on a phone it is one long scroll of ' + n.rows + ' full-length cards with no search, no filters and no sorting, its own pages disagree about which revision is published, and one of its cited App Store links returned an error page when we fetched it. It also mixes ' + n.endedListings + ' ended contests and ' + n.withPromoCode + ' unverified referral codes into the same undifferentiated list as live, verifiable competitions.' },
+        'The public Free Money & Contest Ledger is a discovery list of contests and platforms that may pay cash. Its own page describes a single list without search, filters, or sorting. PrizeDesk reorganizes the research as a mobile-first dashboard with nine category pages, a searchable/filterable table, detail pages, an analysis, a verification-method page, and a Flagged for Review page. The upstream file contains ' + (n.rows - n.addedByParallelSessions) + ' listings; this repository has ' + n.rows + ' after ' + n.addedByParallelSessions + ' separately attributed additions.' },
       { t: 'p', text:
-        'Five other sessions were working on this repository at the same time. Their build ("Prize Atlas") is preserved intact under archive/prize-atlas/, and their verified work is merged into this dataset: ' + ctx.totals.addedByParallelSessions + ' rows they added after reading operator pages, and ' + ctx.totals.crossChecks + ' official pages they read and recorded. Those rows carry an "Independently checked" badge attributed to the session that read them — they are never presented as checks made by this one.' },
-      { t: 'p', text:
-        'This repository rebuilds it as a mobile-first dashboard: one row per competition, nine category pages, a full-table page with search/filter/sort, a scoring-based shortlist, a verification page, and a Flagged for Review page carrying every irregularity with source links. Every table row links to the operator\'s own page. Nothing on the site is a value we invented — values that no official source supports are left blank and listed as unverified.' },
+        'A row is a lead, not an offer. A cited link is not proof that a competition is open today, free to enter, or available to a particular entrant. Use the operator’s current rules before committing effort. No win probability or expected return is estimated.' },
 
-      { t: 'h2', text: '2. Key numbers' },
-      { t: 'table', head: ['Measure', 'Value', 'Meaning'], rows: [
-        ['Listings carried over', String(n.rows), 'All rows from the pinned source file; no additions, no deletions'],
-        ['Categories', '9', 'Skill, trivia, sports, creative, forecasting, market, tech, directories, pools'],
-        ['Free-to-enter (full free path)', String(n.freeEntryFull) + ' (' + pct(n.freeEntryFull, n.rows) + '%)', 'Source marks a genuinely free entry path'],
-        ['Some free events only', String(n.freeEntryPartial), 'Free practice exists; cash play costs money'],
-        ['Cash requires an entry fee', String(n.paidCash), 'Free play pays gems, not dollars'],
-        ['Not marked ended', String(n.rows - n.endedListings), 'Live, mixed or flagged "caution" by the source; the strict "active" count is lower'],
-        ['Ended / out of season', String(n.endedListings), 'Excluded from every shortlist'],
-        ['Prize text with a stated money amount', String(n.prizeFigureStated), pct(n.prizeFigureStated, n.rows) + '% — the rest say "varies", "your group" or "confirm in-app"'],
-        ['Prize cell blanked on the site', String(n.prizeBlankedOnSite), 'No official source, or no stated amount — left blank, never guessed'],
-        ['Rows with no official-tier source', String(n.noOfficialSource), 'Prize claims rest on affiliate/forum sources only'],
-        ['Referral / promo codes withheld', String(n.withPromoCode), 'Unverifiable personal codes; deliberately not republished'],
-        ['Rows re-fetched live this pass', String(n.recheckedThisPass), 'Of ' + n.rows + ' — see section 6'],
-        ['Flagged irregularities', String(ctx.flags.length), 'All published on the Flagged for Review page'],
-        ['Age of the source data', n.staleDays + ' days', 'Source last checked ' + ctx.sourceReviewed + '; re-verified ' + ctx.verifiedOn]
+      { t: 'h2', text: '2. Verification snapshot' },
+      { t: 'table', head: ['Measure', 'Value', 'What it means'], rows: [
+        ['Combined listings', String(n.rows), (n.rows - n.addedByParallelSessions) + ' pinned upstream rows + ' + n.addedByParallelSessions + ' attributed additions'],
+        ['Categories', '9', 'Skill, trivia, sports, creative, forecasting, market, tech, directories, and pools'],
+        ['Source-marked full free path', String(n.freeEntryFull), 'Upstream classification; not a fresh official confirmation for every row'],
+        ['Some free events / paid cash / unknown path', n.freeEntryPartial + ' / ' + n.paidCash + ' / ' + unknownEntry, 'Source classifications; check the specific event’s terms'],
+        ['Rows marked ended / out of season', String(n.endedListings), 'Source snapshot; verify current status before relying on it'],
+        ['Official-page fetch outcomes (1 Nov 2026)', n.liveChecked + ' loaded; ' + n.liveCheckError + ' error', n.recheckedThisPass + ' fetch outcomes total in the saved pass'],
+        ['Independent cross-checks', n.crossChecked + ' rows', n.crossChecks + ' check records are retained in the repository'],
+        ['Official-tier source cited, not re-opened in that pass', String(n.officialSourceCited), 'Link is recorded, but the source was not freshly fetched in that pass'],
+        ['No official-tier source in that pass', String(n.noOfficialSource), 'Prize / entry claims are not officially supported there'],
+        ['Prize cells blanked', String(n.prizeBlankedOnSite), 'No qualifying official source or no stated amount'],
+        ['Flagged irregularities', String(ctx.flags.length), 'Published on the Flagged for Review page'],
+        ['Upstream declared review date', ctx.sourceReviewed, n.staleDays + ' days before the 1 Nov verification snapshot']
       ]},
+      { t: 'p', text:
+        'The source marks ' + n.freeEntryFull + ' rows as having a full free path, but that is a source-dataset label, not current confirmation for every contest. Entry cost that is not stated by an official source stays unknown. The pinned source data was reviewed on ' + ctx.sourceReviewed + '; its age and the row-level coverage above limit how much should be relied on.' },
 
-      { t: 'h2', text: '3. What is actually wrong with the original site' },
+      { t: 'h2', text: '3. What the source catalogue gets wrong or leaves unclear' },
       { t: 'ul', items: [
-        'Mobile usability: ' + n.rows + ' cards, each with six metadata rows, six expandable blocks and up to eight buttons, rendered as a single column. No search box, no filters, no sorting — stated on the page itself as a design choice.',
-        'Version confusion: the header says "Pass C · 17 Aug 2026", the data says pass S / ' + ctx.sourceReviewed + ', and the review page says the ledger "runs to 119 listings" while the data holds ' + n.rows + '.',
-        'Broken and weak links: in a sample of 12 fetched URLs, the Solitaire Cash App Store link returned Apple\'s "An Error Occurred" page; one row links only over http://; six rows cite no rules page at all; ' + n.rulesEqualsSignup + ' rows use the signup page as the "rules" link.',
-        'Unsupported prize claims: ' + n.noOfficialSource + ' rows have no official-tier source, and three of them say outright that the prize table came from review sites.',
-        'Unverifiable incentives: ' + n.withPromoCode + ' referral/league codes, 8 of them explicitly marked unverified and 4 with no verification flag at all.',
-        'Scope drift: the file says sweepstakes, casinos and bookmaker accounts are excluded, then links a contest through a live US sportsbook (betfanatics.com) and includes ' + (ctx.flagCounts['I-10'] - 2) + ' forex/CFD broker demo contests whose own notes call them "broker acquisition funnels".',
-        'Dead weight: ' + n.endedListings + ' ended contests and 2 directory rows are presented with the same weight as live competitions.'
+        'Mobile discovery is difficult: the source page explicitly says it has no search box, filters, or sorting and presents a long list of detailed contest cards.',
+        'The source website displays 206 listings. This repository displays 211 because five later additions are merged and attributed; the totals describe different datasets.',
+        n.endedListings + ' rows are marked ended or out of season in the pinned source snapshot, so its status labels are not proof that entry is currently open.',
+        n.noOfficialSource + ' rows had no official-tier source in the verification snapshot; ' + n.missingRulesUrl + ' lacked a rules URL; ' + n.rulesEqualsSignup + ' used the signup URL as their rules link; and ' + n.nonHttps + ' source URL used HTTP.',
+        n.prizeBlankedOnSite + ' prize cells are blanked by the verifier. Free practice, cash-entry play, non-cash credits, pool tools, and cash-prize contests must not be presented as equivalent.',
+        'The 2026-11-01 live check for one cited App Store URL returned an error page. That is a dated observation, not proof the link remains broken.'
       ]},
 
-      { t: 'h2', text: '4. What this rebuild does differently' },
+      { t: 'h2', text: '4. Opportunities from the targeted 2 Nov official-source refresh' },
+      { t: 'p', text:
+        'These are targeted reads from 2 Nov 2026, recorded separately in data/verification/current-state-2026-11-02.md. They are not yet merged into the canonical row-level verification file or rendered as live-checked rows. Values below are limited to what the cited official pages state.' },
       { t: 'ul', items: [
-        'Verified-only values: a prize or cash-out figure appears in the table only when the row has an official-tier source and the source text states an amount. Otherwise the cell is blank and marked unverified.',
-        'One link per row to the operator, plus a second link to the rules/terms page when one exists, and a third to the App Store only where an app actually exists.',
-        'Every row carries a verification badge: "Live-checked" (' + n.liveChecked + ' rows fetched on ' + ctx.verifiedOn + '), "Link error" (' + n.liveCheckError + '), "Source cited — not re-checked" (' + n.officialSourceCited + '), or "No official source" (' + n.noOfficialSource + ').',
-        'Status is first-class: ended contests are stamped, filtered out of the shortlists and excluded from the "enter now" count.',
-        'Search, filters (category, entry path, platform, ID checks, status) and sorting work on a real table on desktop and collapse to labelled cards on a phone.',
-        'The '+ ctx.flags.length + ' irregularities are published with their evidence, their links and a recommended action — including the ones we could not settle ourselves.'
+        'FutureEval Bot Tournament: official page states a $50,000 pool, bot-only format, and 6 Jan 2027 close. Metaculus general rules say no fee is required but generally bar bots from prizes unless contest-specific terms permit them; read the bot resources and specific terms before building. Model/API use may still cost money.',
+        'US Midterms 2026 on Metaculus: official page states a $10,000 pool and 4 Nov close. General rules say no entry fee is required and allow AI assistance to human forecasters when forecasts reflect their own decisions and understanding. Contest-specific restrictions may apply.',
+        'Codex x TwitchCon: official rules say no purchase/payment is required; the event page lists $25,000 total cash, with $10,000 first place. The rules require a Twitch-connected Codex project, a repository, a public YouTube demo, a project description, and a Codex session ID. Official deadline: 2 Nov 2026, 2 p.m. Pacific; check immediately whether it is still open.',
+        'GEMS Prize Challenge: official DrivenData page states $300,000 total and a 3 Dec 2026, 11:59 p.m. UTC end date. The inspected page does not state entry cost, so free entry is unconfirmed.',
+        'Global Virtual Hackathon: official event page states free entry and $1,000 first prize plus two $250 runner-up awards in each division. It is for students aged 14–18 in teams of 2–4 with a supervising teacher; registration closes 13 Nov AoE. Its organizer says AI tools are allowed and expected.'
       ]},
+      { t: 'p', text:
+        'The user’s approximate location is Singapore. This audit does not determine eligibility for a specific person or establish Singapore eligibility for any of these events. Confirm location, age, prize-delivery, sanctions, and local-law terms before investing effort.' },
 
-      { t: 'h2', text: '5. Where the money and the odds actually are' },
-      { t: 'p', text:
-        'Sports pick\'em is the largest category (' + ctx.catCount.sports + ' of ' + n.rows + ' rows) and holds most of the seven-figure marketing numbers, but it is also the most seasonal — ' + n.endedListings + ' rows are already out of season — and the big pools are split across thousands of entrants with tie-breakers. It is the worst place to win money per hour unless you are chasing a specific, well-understood contest.' },
-      { t: 'p', text:
-        'Tech and forecasting carry the largest free-to-enter cash pools with the least luck. Checked live on ' + ctx.verifiedOn + ': Kaggle had prize-bearing competitions of $450,000, $100,000 and $35,000 open to anyone; Metaculus listed 19 tournaments with published pools up to $50,000 and states plainly that you "can participate for free and win cash prizes". The ledger additionally lists ARC Prize at $2,000,000 across three 2026 tracks (source claim, not re-checked). These are also the only categories where the work — modelling, calibration, engineering — is exactly what an AI coding agent can help you do, and where one entry can plausibly place.' },
-      { t: 'p', text:
-        'Market/paper-trading contests sit in between. They are free to enter and several pay genuine withdrawable cash, but about half are broker acquisition funnels where the "prize" is a funded demo account or a trading credit, and a few require a live brokerage account. Treat them as marketing offers that happen to be winnable.' },
-      { t: 'p', text:
-        'Skill tournaments and trivia are the weakest value in the set: the free rooms pay gems or points, the dollar prizes need an entry fee, and the house takes a rake from every pot. Creative contests are free but judged and slow — worth entering only where the prize is large relative to the effort and the judging is transparent.' },
-
-      { t: 'h2', text: '6. What we did not verify — read this before you enter anything' },
-      { t: 'ul', items: [
-        'Of ' + n.rows + ' rows: ' + n.liveChecked + ' were fetched live by this session on ' + ctx.verifiedOn + ', ' + n.liveCheckError + ' returned a link error, ' + n.crossChecked + ' have an official page read by another session in this repository, ' + n.officialSourceCited + ' cite an official source nobody re-opened this pass, and ' + n.noOfficialSource + ' cite no official source at all. The build environment could reach the web only through a page-fetch tool, so a full ' + n.rows + '-row crawl (roughly 400 URLs) was not possible; the unchecked rows are listed in full on the Flagged for Review page.',
-        'All prize figures are at least ' + n.staleDays + ' days old. Seasonal sports contests in particular must be re-read from the operator page before you commit time.',
-        'We did not verify AI-assistance terms for any contest. Many judged contests restrict or prohibit AI-generated entries; check the rules before using an agent.',
-        'We did not assess tax treatment beyond flagging that US prizes of $600+ normally require a W-9. That is general context, not advice.',
-        'Gambling-adjacent rows are kept but stamped "operator account required". Whether they belong in a free-money ledger is a scope decision for you.'
-      ]},
-
-      { t: 'h2', text: '7. Practical next steps' },
+      { t: 'h2', text: '5. Practical triage for an AI-assisted entrant' },
       { t: 'ol', items: [
-        'Start with the "Best picks" page: it ranks only live, free-to-enter, officially sourced rows that state a real cash amount, and it shows the scoring so you can disagree with it.',
-        'Pick two categories, not nine. Tech and forecasting give the best expected value for time spent, and both suit AI-assisted work.',
-        'Before entering anything, open the operator\'s rules from the row and confirm: current prize, deadline, eligibility in your state, and whether entry is genuinely free this season.',
-        'Treat every "funded account", "trading credit" and "gems" prize as worth zero unless you specifically want the product behind it.',
-        'Re-run the pipeline (' + 'npm run build' + ') when you want a fresh pass: the source is pinned by commit and checksum, so any change is auditable.'
+        'Read the current operator rules and confirm free entry, cash (not credits), deadline, entrant eligibility, and how a prize is delivered.',
+        'Choose a task that matches the rules: human forecasting assisted by AI is different from submitting an autonomous bot; a hackathon may require a particular tool, team, demo, or code repository.',
+        'Compare work required and competition structure, not headline prize alone. A $50,000 pool or first-place award does not imply a likely or positive return.',
+        'Count API/model charges, time, team obligations, identity/tax paperwork, and legal restrictions as real constraints. This site does not compute expected value or odds.',
+        'Open the Flagged for Review page for stale, incomplete, conflicting, or unsupported records. Re-check any lead immediately before entering.'
       ]},
 
-      { t: 'h2', text: '8. How this build relates to the parallel sessions' },
-      { t: 'ul', items: [
-        'Six sessions worked on this repository on ' + ctx.verifiedOn + '. Five merged their work into main before this integration pass; their task records, PR numbers and deployment runs are preserved verbatim in docs/COORDINATION-session-records.md.',
-        'Their dashboard is preserved as a working, self-contained site at archive/prize-atlas/ — 208 leads, 7 checked official pages, its own review queue and its supplemental research page. Nothing was deleted.',
-        'Their verified findings were merged into this dataset, attributed: ' + ctx.totals.addedByParallelSessions + ' new rows (GEMS Prize Challenge, US Midterms 2026, and three AI hackathons) and ' + ctx.totals.crossChecks + ' official-page cross-checks, each showing the URL, the date read, the session that read it, and their caveats.',
-        'Their four additional irregularity findings (ESPN entry limits, Challenge.gov sunset, IceHacks header, PayPal prize totals, the $600 tax generalisation) are published as I-17 to I-21.',
-        'Where the two builds disagreed, this site keeps the stricter rule: a figure is shown only when an official source states it. That is why rows the other build marked "checked" can still show a blank prize here.'
+      { t: 'h2', text: '6. Official sources for manual review' },
+      { t: 'links', items: [
+        { label: 'Original Free Money & Contest Ledger', url: 'https://karagemop466-tech.github.io/FreeMoneyApps/', note: 'Upstream discovery list; 206 shown on the page.' },
+        { label: 'Metaculus US Midterms 2026', url: 'https://www.metaculus.com/tournament/midterms-2026/', note: '$10,000 pool; closes 4 Nov 2026.' },
+        { label: 'Metaculus Fall 2026 FutureEval Bot Tournament', url: 'https://www.metaculus.com/tournament/fall-futureeval-2026/', note: '$50,000; bot-only; closes 6 Jan 2027.' },
+        { label: 'Metaculus competition rules', url: 'https://www.metaculus.com/tournament-rules/', note: 'Fee, eligibility, AI-assistance, and bot restrictions.' },
+        { label: 'Codex x TwitchCon official rules', url: 'https://twitchcon-codex.devpost.com/rules', note: 'Entry, eligibility, deliverables, deadline, prize schedule.' },
+        { label: 'GEMS Prize Challenge', url: 'https://www.drivendata.org/competitions/306/competition-doe-gems/', note: 'Prize and closing date; entry fee not stated on inspected page.' },
+        { label: 'Global Virtual Hackathon 2026', url: 'https://gvhackathon.com/', note: 'Official student eligibility, free entry, prize tiers, timeline.' },
+        { label: '2026-11-02 targeted audit note', url: 'data/verification/current-state-2026-11-02.md', note: 'Full facts, limits, and the verification performed.' },
+        { label: 'Flagged for Review', url: 'flagged.html', note: 'Current generated irregularities register.' }
       ]},
-      { t: 'h2', text: '9. Provenance' },
+
+      { t: 'h2', text: '7. Reproducibility and limits' },
+      { t: 'ul', items: [
+        'The upstream JavaScript data file is pinned by repository commit and SHA-256, copied without alteration, and parsed as strict JSON; it is not executed.',
+        'The 2 Nov official-page reads are evidence-only at present. Do not treat those rows as live-checked in the generated table until the data pipeline is updated and the pages rebuilt.',
+        'The local build checks internal links, row coverage, and output structure. It does not crawl external URLs or prove that a contest remains open.',
+        'This site is an independent research index, not a sponsor or guarantee. Contest terms can change; this is not legal, tax, or financial advice.'
+      ]},
       { t: 'p', text:
-        'Source data: the public FreeMoneyApps repository, commit ' + ctx.commit + ', file assets/data.js, SHA-256 ' + ctx.sha256 + ', captured ' + ctx.verifiedOn + '. The file is vendored unchanged in this repository and parsed as strict JSON — never executed. Every published row can be traced back to that file, and every claim in it can be traced to the operator link shown on the row.' }
+        'Source repository commit ' + ctx.commit + '; source file SHA-256 ' + ctx.sha256 + '. The source was captured on 1 Nov 2026. Verification snapshot date: ' + ctx.verifiedOn + '.' }
     ]
   };
 }

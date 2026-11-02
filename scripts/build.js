@@ -1479,6 +1479,9 @@ function renderHtml(c) {
       <thead><tr>${b.head.map((h) => `<th>${esc(h)}</th>`).join('')}</tr></thead>
       <tbody>${b.rows.map((r) => `<tr>${r.map((cell, i) => `<td data-label="${attr(b.head[i])}">${esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody>
     </table></div>`;
+    if (b.t === 'links') return `<ul class="list source-links">${b.items.map((x) =>
+      `<li><a href="${attr(x.url)}"${/^https:\/\//.test(x.url) ? ' rel="noopener noreferrer"' : ''}>${esc(x.label)}</a> — ${esc(x.note)}</li>`
+    ).join('')}</ul>`;
     return '';
   }).join('\n');
 }
