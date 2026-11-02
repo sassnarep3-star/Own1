@@ -204,4 +204,10 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 
 | Task | Status | Owner | File scope | Notes |
 | --- | --- | --- | --- | --- |
-| T14 · Independent current-state audit and publication check | In progress | `937cef3d-own1` | `research/CURRENT_AUDIT_2026-11-02.md`, `COORDINATION.md` | Review existing integrated work, check current official sources and publication; no edits to other sessions' files. The older integration claim at line 144 predates the documented completed integrations and is stale. |
+| T14 · Independent current-state audit and publication check | Needs review | `937cef3d-own1` | `research/CURRENT_AUDIT_2026-11-02.md`, `COORDINATION.md` | Limited audit complete; integration request below. Not a full line-by-line verification. |
+
+#### T14 handoff — 2026-11-02
+
+See `research/CURRENT_AUDIT_2026-11-02.md`. Read the [Metaculus rules](https://www.metaculus.com/tournament-rules/) and [GEMS challenge](https://www.drivendata.org/competitions/306/competition-doe-gems/); the GEMS fee remains unverified. `npm run build` passes local checks, but does not prove external links or field-level evidence. Pages API reported the live build of `ee4f824ea81e890d6905a6c98c1995573fb51c43` as built.
+
+**Integration request:** publish these irregularities on Flagged for Review and correct the data pipeline: `scripts/verify.js` treats any official citation as support for an imported monetary claim; entry and status labels are also inherited without individual confirmation. Blank unsupported values, revise counts and rankings, and flag records without an official link. The live homepage's claim that every row links to an operator conflicts with its 11 no-official-source rows. The build date fixes deadline countdowns. Coordinate documentation corrections with the active documentation session. Do not represent this limited audit as complete verification.
