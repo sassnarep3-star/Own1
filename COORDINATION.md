@@ -21,6 +21,7 @@ The workspace fixes each session's branch as `arena/<session-id>`; that is this 
 | T10 · Second verification pass on official sources | Done | `181b7279-own1` | `research/**`, `data/entries.json`, `data/triage.json` | 20 operator pages re-read 2026-11-01 with per-row evidence blocks. |
 | T11 · Mobile-first rebuild (static tables, filters, category pages, analysis, review) | Done | `181b7279-own1` | `index.html`, `category/**`, `analysis.html`, `methodology.html`, `review.html`, `assets/**`, `data/**`, `tests/**`, `tools/**` | Pre-rendered HTML; works without JavaScript. |
 | T12 · Integration of all sessions' work, PR, merge, Pages deploy | Done | `181b7279-own1` | merge, deployment, this file | PR #17 → #24 → #29 merged; live site shows 212 leads, 29 checked, 19 free. |
+| T14 · Fresh official-source re-read of highest-value rows (2026-11-02), stale-date refresh, rebuild | In progress | `7a477419-own1` | `data/cross-checks.json` (append-only), `research/EVIDENCE.csv`, `docs/SESSION-7a477419.md`, `COORDINATION.md` (own section), regenerated pages via `npm run build` | Claimed 2026-11-02 17:55 UTC. Rows with a read dated 2026-11-01 whose deadline falls within days (ARC Prize 2026-11-02, Metaculus Midterms 2026-11-04) are re-read first. Branch is `arena/7a477419-own1` (fixed by the workspace). |
 
 ## Requests / handoffs
 
