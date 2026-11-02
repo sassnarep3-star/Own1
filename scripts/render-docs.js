@@ -21,6 +21,7 @@ const ctx = {
   totals: verif.totals,
   flags: irr.items,
   verifiedOn: verif.verifiedOn,
+  updatedOn: verif.rows.reduce((max, r) => r.crossCheck && r.crossCheck.checkedDate > max ? r.crossCheck.checkedDate : max, verif.verifiedOn),
   sourceReviewed: verif.sourceReviewed,
   commit: ledger.provenance.sourceRepoCommit,
   sha256: ledger.provenance.sourceFileSha256,
@@ -34,6 +35,8 @@ function md() {
   const out = [];
   out.push('# Executive summary');
   out.push('');
+  out.push('_Updated ' + c.updatedOn + '; base verification snapshot ' + ctx.verifiedOn + '._');
+  out.push('');
   out.push('_' + c.standfirst + '_');
   out.push('');
   for (const b of c.blocks) {
@@ -46,6 +49,14 @@ function md() {
       out.push('| ' + b.head.join(' | ') + ' |');
       out.push('| ' + b.head.map(() => '---').join(' | ') + ' |');
       b.rows.forEach((r) => out.push('| ' + r.join(' | ') + ' |'));
+      out.push('');
+      continue;
+    }
+    if (b.t === 'links') {
+      b.items.forEach((x) => {
+        const url = /^https:\/\//.test(x.url) ? x.url : '../' + x.url;
+        out.push('- [' + x.label + '](' + url + ') — ' + x.note);
+      });
       out.push('');
       continue;
     }

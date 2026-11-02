@@ -1549,6 +1549,9 @@ function renderHtml(c) {
       <thead><tr>${b.head.map((h) => `<th>${esc(h)}</th>`).join('')}</tr></thead>
       <tbody>${b.rows.map((r) => `<tr>${r.map((cell, i) => `<td data-label="${attr(b.head[i])}">${esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody>
     </table></div>`;
+    if (b.t === 'links') return `<ul class="list source-links">${b.items.map((x) =>
+      `<li><a href="${attr(x.url)}"${/^https:\/\//.test(x.url) ? ' rel="noopener noreferrer"' : ''}>${esc(x.label)}</a> — ${esc(x.note)}</li>`
+    ).join('')}</ul>`;
     return '';
   }).join('\n');
 }
@@ -1557,7 +1560,7 @@ function buildExecutive(ctx) {
   const c = content.build(ctx);
   const body = `
 <section class="hero">
-  <p class="kicker">Executive summary · ${esc(fmtDate(SITE.verifiedOn))}</p>
+  <p class="kicker">Executive summary · updated ${esc(fmtDate(c.updatedOn))} · base verification ${esc(fmtDate(SITE.verifiedOn))}</p>
   <h1>${esc(c.title)}</h1>
   <p class="lede">${esc(c.standfirst)}</p>
   <div class="btn-row">
@@ -1610,6 +1613,7 @@ const ctx = {
   totals: T,
   flags: irr.items,
   verifiedOn: SITE.verifiedOn,
+  updatedOn: SITE.asOf,
   sourceReviewed: SITE.sourceReviewed,
   commit: SITE.commit,
   sha256: SITE.sha256,
