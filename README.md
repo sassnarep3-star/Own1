@@ -1,55 +1,68 @@
-# Prize Atlas
+# PrizeDesk — free-to-enter cash competition research
 
-A static, mobile-first dashboard for **free-to-enter competitions that pay real cash** — built from the reference ledger at [karagemop466-tech/FreeMoneyApps](https://karagemop466-tech.github.io/FreeMoneyApps/), with every claim either read on an official page or published as blank and flagged.
+A static, mobile-first dashboard for researching competitions that may pay cash. It is based on the public [Free Money & Contest Ledger](https://karagemop466-tech.github.io/FreeMoneyApps/), but keeps source claims separate from fresh verification: unknown or unsupported values stay blank, and irregularities are listed for review.
 
-**Live site:** https://sassnarep3-star.github.io/Own1/
+**Live dashboard:** <https://sassnarep3-star.github.io/Own1/>  
+**Executive summary:** [EXECUTIVE_SUMMARY.md](EXECUTIVE_SUMMARY.md)  
+**Latest targeted official-source refresh:** [2026-11-02 verification note](data/verification/current-state-2026-11-02.md)
 
-## What is in here
+## Site map
 
-| Path | What it is |
+| Page | Purpose |
 | --- | --- |
-| `index.html` | Dashboard: key figures, triage shortlist, category cards, all 212 rows in one filterable table, executive summary |
-| `category/*.html` | Nine category pages (sports, tech, forecasting, creative, market, skill, trivia, pools, directories) |
-| `analysis.html` | Findings: coverage, where the money is, free-entry traps, the link problem, how to use a coding agent |
-| `methodology.html` | The verification rules and the exact official pages read, per row |
-| `review.html` | Flagged for review: unverified rows, dead/reused links, contradictions, paid-entry traps |
-| `supplemental/index.html` | Independent second audit (three hackathon leads, seven extra flags) |
-| `archive/*.html` | An alternate build of this research by a parallel session, kept working and linked from the method page |
-| `data/verification.json`, `data/audit.json`, `data/ledger.json` | Verbatim-quote verification of 12 rows, 11 rule-based audit findings over the imported ledger, and the mirrored ledger |
-| `entry/*.html`, `sources.html`, `playbook.html` | Fourth build by a parallel session: per-lead pages, a source ledger and a competition playbook |
-| `ledger/index.html` | Third build by a parallel session: all 206 imported rows with an automated audit, 28 rows checked against official pages, its own flagged and method pages |
-| `data/verification/batchA.jsonl` | That session's 28 row-by-row official-page reads; its verified and discrepancy rows are attributed in the main table |
-| `data/verification/batchB.jsonl` | Five further official reads from this session (Deriv promoted, USA.gov confirmed, HeroX and AFL partial, RoboForex 404) |
-| `research/EVIDENCE.csv` | Flat export of all 29 page-checked rows: source, entry cost, prize, deadline, eligibility, reading date, evidence URL, reading session and flags |
-| `data/entries.json` | The dataset: 212 rows with per-row `evidence`, `entryFree` and `flags` |
-| `data/triage.json` | Editorial scoring inputs, one rationale per checked row |
-| `tools/build.mjs` | Zero-dependency generator that renders every page from the data |
-| `tests/validate.mjs` | Data contract + link/asset + mobile checks, run in CI |
+| [`index.html`](index.html) | Dashboard and search/filter controls |
+| [`all.html`](all.html) | All 211 current listings in a table |
+| [`best.html`](best.html) | Shortlist based on the pinned dataset and recorded rules |
+| [`analysis.html`](analysis.html) | Dataset coverage and findings |
+| [`research.html`](research.html) | Source-ledger audit |
+| [`verification.html`](verification.html) | Verification method, status counts, and known limits |
+| [`flagged.html`](flagged.html) | 22 recorded irregularities and review items |
+| [`categories/`](categories/) | Nine category-specific tables and subpages |
+| [`c/`](c/) | Per-listing detail pages |
+| [`data/ledger.json`](data/ledger.json) | Canonical combined data used by the root-site generator |
+| [`data/verification.json`](data/verification.json) | Derived row-level source and verification status |
+| [`data/live-checks.json`](data/live-checks.json) | Official-page reads recorded on 2026-11-01 |
+| [`data/cross-checks.json`](data/cross-checks.json) | Independent official-source cross-checks |
+| [`data/verification/current-state-2026-11-02.md`](data/verification/current-state-2026-11-02.md) | Targeted official-source refresh and findings; not yet merged into the generated row data |
+| [`archive/prize-atlas/`](archive/prize-atlas/) | Separate, preserved prior build; not the current root-site generator |
 
-`EXECUTIVE_SUMMARY.md`, `REQUIREMENTS.md`, `research/SOURCES.md` and `COORDINATION.md` carry the written analysis and the task log.
+The upstream source file contains 206 listings. The combined local dataset has 211 because five separately attributed additions were merged. These counts must not be conflated.
 
-## Data policy
+## Data and verification policy
 
-- **Checked** rows were read on the linked operator page on the date in their `evidence.checkedAt` field. Prize, entry cost, deadline and eligibility are copied from that page.
-- **Unverified** rows are leads only. Their prize, entry-cost, deadline, kind and eligibility cells are forced blank by `tests/validate.mjs`; they display an *Unverified* badge.
-- Blank means *not confirmed* — never zero, never free. Only an explicit statement such as "The Competition is free to enter" produces a *Free entry* badge.
-- Nothing is converted, combined, rounded, extrapolated or estimated; no win probability is published.
+- The upstream data is pinned to a source repository commit and SHA-256 in [`data/source/PROVENANCE.json`](data/source/PROVENANCE.json). It is third-party research, not an official competition source.
+- A source URL is not the same as a fresh verification. The verification snapshot records whether a page was fetched, independently cross-checked, merely cited, or absent.
+- Do not infer an entry fee, prize value, deadline, eligibility, or open status. Unknown stays blank/unconfirmed.
+- The upstream dataset marks many entries as free, but only an official terms page can establish a current free-entry claim. Re-check every contest before entering.
+- The 2026-11-02 note records a targeted sample of current official pages. It does **not** refresh all 211 rows or update the generated tables.
+- No odds or expected return are estimated. A cash-prize headline does not establish a likely return.
 
-## Local preview and checks
+## Build and checks
 
-```bash
-python3 -m http.server 8000 --bind 0.0.0.0   # then open the preview
-node tools/build.mjs                          # regenerate all HTML from data/
-node tests/validate.mjs                       # must print OK
+Node.js 22 is used in CI. Dependencies are not required for the build.
+
+```sh
+npm run build
 ```
 
-No dependencies, no build step at deploy time. GitHub Pages serves the repository root of `main` (`.nojekyll` present).
+This ingests the checksum-pinned source, merges explicitly attributed additions and cross-checks, derives verification and flags, generates the static site, renders the documentation summary, and runs checks. The individual commands are:
 
-## Adding or verifying a row
+```sh
+node scripts/ingest.js
+node scripts/verify.js
+node scripts/build.js
+node scripts/render-docs.js
+npm run check
+```
 
-1. Open the operator's official page; copy the exact wording for prize, entry cost, deadline and eligibility.
-2. Fill only what the page states. Leave everything else blank.
-3. Add an `evidence` block: `url`, `checkedAt`, `confirmed[]`, `notStated[]`, `limits`.
-4. Set `sourceStatus` to `checked` and `entryFree` to `yes`, `no` or blank.
-5. Add a `triage.json` entry with a written rationale if the row should appear in the shortlist.
-6. Run `node tools/build.mjs && node tests/validate.mjs`, then commit.
+`npm run check` validates internal links, row coverage, static pages, and the archived Prize Atlas build. It does not fetch external operator sites; passing it does not mean each contest is current or eligible for a particular entrant.
+
+To preview locally:
+
+```sh
+python3 -m http.server 8000 --bind 0.0.0.0
+```
+
+## Current caveat
+
+The current verification output is dated 2026-11-01: 12 official URLs loaded, one returned an error, 10 rows have independent official-page checks, 177 rows cite an official-tier source that was not re-opened in that pass, and 11 rows have no official-tier source. The 2026-11-02 targeted refresh is evidence-only for now; integrate it into the source data and regenerate pages before calling those rows freshly verified on the site.

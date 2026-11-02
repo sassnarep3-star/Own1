@@ -596,6 +596,36 @@ const register = [
     action: 'The row stays; its entry cell is not asserted as free.'
   },
   {
+    id: 'I-29',
+    title: 'GEMS Prize: the HeroX page limits entry to U.S.-based entrants, and the closing time differs between pages',
+    severity: 'medium',
+    type: 'eligibility-gate',
+    summary: 'HeroX (read 2026-11-02): "Institutions, companies, nonprofit organizations, and individuals based in the United States are eligible to compete." It also says submissions are due "December 3 at 5 PM ET", while the DrivenData reading on 2026-11-01 recorded 23:59 UTC the same day. The official rules PDF (nlr.gov) could not be fetched, so the entry fee and full eligibility text were not read. The row is labelled "Entry cost not stated" and the $300,000 pool is the pages\' own figure.',
+    evidence: ['https://www.herox.com/GEMSPrize read 2026-11-02 by arena/7a477419-own1; DrivenData page read 2026-11-01 by arena/27a86924-own1.'],
+    affected: ['gems-prize-2026'],
+    links: [
+      { title: 'HeroX GEMS Prize page', url: 'https://www.herox.com/GEMSPrize' },
+      { title: 'Official rules (PDF, not fetched)', url: 'https://www.nlr.gov/docs/fy26osti/96647.pdf' },
+      { title: 'DrivenData competition page', url: 'https://www.drivendata.org/competitions/306/competition-doe-gems/' }
+    ],
+    action: 'Row kept with the US-based restriction and both closing times in its notes. Read the PDF rules before spending time on it.'
+  },
+  {
+    id: 'I-30',
+    title: 'FutureEval Bot Tournament: entry is free, but running a bot costs money and free credits are limited',
+    severity: 'low',
+    type: 'hidden-cost',
+    summary: 'Metaculus\' rules say no purchase or fee is required. The resources page also says free AskNews search is for every registered bot maker, donated LLM credits go to "a select number of bot makers who apply", and "We will not be able to cover all AI providers (nor AI costs for especially expensive bots)". Prize split for the $50,000 pool was not read.',
+    evidence: ['Tournament page, resources page (sections 1-2 of 19) and the Metaculus competition rules read 2026-11-02 by arena/7a477419-own1.'],
+    affected: ['fall-futureeval-2026'],
+    links: [
+      { title: 'Tournament page', url: 'https://www.metaculus.com/tournament/fall-futureeval-2026/' },
+      { title: 'FutureEval resources page', url: 'https://www.metaculus.com/notebooks/38928/ai-benchmark-resources/' },
+      { title: 'Rules for Competitions on Metaculus', url: 'https://www.metaculus.com/tournament-rules/' }
+    ],
+    action: 'Stated on the row and on the Verified shortlist. Estimate API cost before committing a bot to the full season.'
+  },
+  {
     id: 'I-16',
     title: 'Most rows were not re-checked in this pass',
     severity: 'info',

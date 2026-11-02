@@ -14,8 +14,8 @@
   "note": "The source file is third-party research, not an official operator document. Every row on this site links to the operator's own page; the source file only tells us where to look."
  },
  "reviewed": "2026-08-19",
- "additionsMerged": 14,
- "crossChecksMerged": 24,
+ "additionsMerged": 15,
+ "crossChecksMerged": 25,
  "pass": "S",
  "types": [
   {
@@ -3663,11 +3663,13 @@
    "lastChecked": "2026-08-19",
    "crossCheck": {
     "url": "https://www.metaculus.com/tournaments/",
-    "checkedDate": "2026-11-01",
-    "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
+    "checkedDate": "2026-11-02",
+    "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1; re-read 2026-11-02 by arena/7a477419-own1",
     "confirmed": [
      "Platform states participation is free and that accurate forecasters can win cash prizes.",
-     "Prize pools are per tournament."
+     "Prize pools are per tournament.",
+     "[re-read 2026-11-02] General competition rules: \"No purchase or entry fee is necessary to enter a Metaculus competition\"; participants create a free Metaculus account.",
+     "[re-read 2026-11-02] The FutureEval Bot Tournament series is the bot-friendly branch: \"There is currently $58k+ in prizes available every 4 months\" (FutureEval resources page)."
     ],
     "caveats": [
      "Some listed tournaments have no prize pool at all."
@@ -8984,14 +8986,18 @@
    "mergedBy": "arena-041e7ad1",
    "crossCheck": {
     "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/",
-    "checkedDate": "2026-11-01",
-    "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1",
+    "checkedDate": "2026-11-02",
+    "checkedBy": "arena/27a86924-own1, arena/90c9f78c-own1; re-read 2026-11-02 by arena/7a477419-own1",
     "confirmed": [
      "$300,000 total prize pool.",
-     "Closes 2026-12-03 at 23:59 UTC."
+     "Closes 2026-12-03 at 23:59 UTC.",
+     "[re-read 2026-11-02] HeroX challenge page (https://www.herox.com/GEMSPrize): prize $300,000 with \"two rounds, with prizes ranging from $15,000 to $100,000\"; stage \"Enter\"; funded by the U.S. Department of Energy and administered by the National Laboratory of the Rockies with DrivenData; entry via the DrivenData page.",
+     "[re-read 2026-11-02] HeroX guidelines: \"Institutions, companies, nonprofit organizations, and individuals based in the United States are eligible to compete.\""
     ],
     "caveats": [
-     "Final-round awards depend on scoring; no fee is stated on the inspected page."
+     "Final-round awards depend on scoring; no fee is stated on the inspected page.",
+     "[re-read 2026-11-02] HeroX says submissions are due \"December 3 at 5 PM ET\" while the DrivenData reading recorded 23:59 UTC the same day; the two times differ by about 2 hours.",
+     "[re-read 2026-11-02] The official rules document is a PDF at https://www.nlr.gov/docs/fy26osti/96647.pdf (linked from https://www.herox.com/GEMSPrize/resource/2274); it could not be fetched, so entry fee and full eligibility were not read."
     ],
     "deadline": "2026-12-03"
    }
@@ -9043,11 +9049,13 @@
      "$10,000 prize pool.",
      "Free entry per the platform statement.",
      "[re-read 2026-11-02] Tournament page loads as \"US Midterms 2026\": prize pool $10,000, started May 27, closes Nov 04, 26 questions.",
-     "[re-read 2026-11-02] Page text: \"By participating in this competition you agree to be bound and abide by the Rules for Competitions on Metaculus\" (https://www.metaculus.com/tournament-rules/)."
+     "[re-read 2026-11-02] Page text: \"By participating in this competition you agree to be bound and abide by the Rules for Competitions on Metaculus\" (https://www.metaculus.com/tournament-rules/).",
+     "[re-read 2026-11-02] Metaculus \"Rules for Competitions on Metaculus\" (https://www.metaculus.com/tournament-rules/, last modified Jun 13, 2025): \"No purchase, fee, or payment is required to participate.\"; generally open to participants worldwide, ages 13 or older; prizes cannot be sent to individuals in countries under U.S. sanctions or export restrictions; one entry per person.",
+     "[re-read 2026-11-02] Same rules: bots and AI-registered accounts are ineligible for prizes unless the competition-specific rules say otherwise, while \"human participants are allowed to use AI tools or systems to assist in their forecasting, as long as the final submissions reflect their own decisions and understanding.\""
     ],
     "caveats": [
      "Closes 2026-11-04 — three days after this build. Confirm eligibility in the tournament rules.",
-     "[re-read 2026-11-02] The slug https://www.metaculus.com/tournament/us-midterms-2026/ returns \"Page not found\"; the working URL is /tournament/midterms-2026/. Free entry was not re-confirmed on this page; the tournament-rules page was not read."
+     "[re-read 2026-11-02] The slug https://www.metaculus.com/tournament/us-midterms-2026/ returns \"Page not found\"; the working URL is /tournament/midterms-2026/."
     ],
     "deadline": "2026-11-04"
    }
@@ -9200,12 +9208,13 @@
    "mergedBy": "arena-041e7ad1",
    "crossCheck": {
     "url": "https://gvhackathon.com/",
-    "checkedDate": "2026-11-01",
-    "checkedBy": "arena/37aed701-own1",
+    "checkedDate": "2026-11-02",
+    "checkedBy": "arena/37aed701-own1; re-read 2026-11-02 by arena/7a477419-own1",
     "confirmed": [
      "Free to enter.",
      "$1,000 first place per division plus two $250 runners-up per division.",
-     "AI tools allowed and expected; work must be defensible on camera."
+     "AI tools allowed and expected; work must be defensible on camera.",
+     "[re-read 2026-11-02] FAQ on the event page: \"Nothing. Entry is free.\"; \"Students aged 14 to 18 at any school worldwide, in teams of 2-4\"; every team needs a supervising teacher; registration closes 23:59 AoE on 13 November, submissions 25 November."
     ],
     "caveats": [
      "Students aged 14–18 only, in teams of 2–4 with a supervising teacher.",
@@ -9727,6 +9736,73 @@
      "Page title states $1M in cash prizes; the prize table was not read, so the amount is the page-title claim. Entry is gated by program membership."
     ],
     "deadline": "2026-11-18"
+   }
+  },
+  {
+   "id": "fall-futureeval-2026",
+   "name": "Fall 2026 FutureEval Bot Tournament (Metaculus)",
+   "short": "Bot-only Metaculus forecasting tournament: $50,000 pool, closes 2027-01-06; the page is built for AI bots.",
+   "type": "forecasting",
+   "status": "live",
+   "freePath": "full",
+   "platforms": [
+    "web"
+   ],
+   "signupUrl": "https://www.metaculus.com/tournament/fall-futureeval-2026/",
+   "rulesUrl": "https://www.metaculus.com/notebooks/38928/ai-benchmark-resources/",
+   "prizeUsd": "$50,000 pool (page); $58k+ every 4 months across series",
+   "prizeNote": "Tournament page: $50,000 Prize Pool, bot-only, closes 2027-01-06. Resources page: $50k seasonal tournament (Sep/Jan/May), $1k bi-weekly MiniBench, $7k Market Pulse; \"$58k+ in prizes available every 4 months\". Metaculus competition rules: \"No purchase, fee, or payment is required to participate.\" The prize split was not read.",
+   "minCashout": "",
+   "payoutMethods": [],
+   "eligibility": "Metaculus competition rules: generally open worldwide, ages 13 or older; free Metaculus account; a bot account created in account settings (first bot is prize-eligible); participation form required.",
+   "restricted": "Prizes cannot be sent to individuals in U.S.-sanctioned or export-restricted countries. Bot operating costs (LLM and search APIs) are the entrant's, apart from free AskNews search and donated LLM credits for select applicants.",
+   "verification": {
+    "level": "unknown",
+    "steps": [
+     "Human Metaculus account, then bot account and API token.",
+     "Participation form.",
+     "Prize acceptance documents may be required (Metaculus rules); details not read."
+    ]
+   },
+   "sources": [
+    {
+     "title": "Official tournament page",
+     "url": "https://www.metaculus.com/tournament/fall-futureeval-2026/",
+     "tier": "official"
+    },
+    {
+     "title": "Official FutureEval resources page",
+     "url": "https://www.metaculus.com/notebooks/38928/ai-benchmark-resources/",
+     "tier": "official"
+    },
+    {
+     "title": "Metaculus competition rules",
+     "url": "https://www.metaculus.com/tournament-rules/",
+     "tier": "official"
+    }
+   ],
+   "lastChecked": "2026-11-02",
+   "deadline": "2027-01-06",
+   "mergedFrom": "Read directly on 2026-11-02 by arena/7a477419-own1; first identified by arena/ac192142-own1 (data/verification/current-state-2026-11-02.md)",
+   "addedBy": "arena/7a477419-own1",
+   "addedByParallelSession": "arena/7a477419-own1",
+   "mergedBy": "arena-041e7ad1",
+   "crossCheck": {
+    "url": "https://www.metaculus.com/tournament/fall-futureeval-2026/",
+    "checkedDate": "2026-11-02",
+    "checkedBy": "arena/7a477419-own1",
+    "confirmed": [
+     "Tournament page: \"Fall 2026 FutureEval Bot Tournament\", $50,000 Prize Pool, started Sep 28 2026, closes Jan 06 2027, 135 questions; \"This is a bot-only competition where bot-makers attempt to push AI to its limits in predicting future events.\"",
+     "Resources page (edited Oct 29, 2026): $50k seasonal bot tournament starting every September, January and May; $1k bi-weekly MiniBench; $7k Market Pulse tournaments in which bots remain eligible; \"There is currently $58k+ in prizes available every 4 months.\"",
+     "Joining: create a human Metaculus account, then create a bot account under \"My Forecasting Bots\" (the first bot is the prize-eligible bot); all participants must fill out the first section of the participation form; bots must leave private comments on every question they forecast.",
+     "Rules for Competitions on Metaculus: \"No purchase, fee, or payment is required to participate\"; bots are ineligible for prizes \"unless otherwise specifically permitted in the Competition-specific rules\"; this tournament is the bot-only branch.",
+     "Questions are open for 3 hours each."
+    ],
+    "caveats": [
+     "Entry is free but running a bot is not: Metaculus gives AskNews search free to registered bot makers and donated LLM credits (OpenAI, Anthropic, Google via OpenRouter) only to \"a select number of bot makers who apply\"; \"We will not be able to cover all AI providers (nor AI costs for especially expensive bots)\".",
+     "The prize split for the $50,000 pool and the later sections of the 19-section resources page were not read."
+    ],
+    "deadline": "2027-01-06"
    }
   }
  ]

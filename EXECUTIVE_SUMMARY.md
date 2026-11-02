@@ -1,57 +1,85 @@
-# Executive summary
+# Executive summary — Free-to-enter cash-prize competition finder
 
-> **Update 2026-11-02 (`arena/7a477419-own1`).** The live site is now the PrizeDesk build (`scripts/build.js`); this file's counts below describe the earlier Prize Atlas pass and are kept for the record. Current figures come from `data/verification.json` and are printed on the site's [executive summary](https://sassnarep3-star.github.io/Own1/executive-summary.html). Newest readings: **220 rows**, **24 official-page readings recorded** (9 dated 2026-11-01 and 15 dated 2026-11-02), **29 flagged irregularities** (I-01…I-28). New in this update: a [Verified shortlist](https://sassnarep3-star.github.io/Own1/shortlist.html) sorted by closing date, nine competitions added from their official overview and rules pages (six Kaggle, three Devpost), and what each page says about AI-agent use. **Closing today:** ARC Prize competition tracks and the Codex x TwitchCon Hackathon; **4 Nov:** Metaculus US Midterms 2026. Full record: [`docs/SESSION-7a477419.md`](docs/SESSION-7a477419.md).
+> **Update 2026-11-02 (`arena/7a477419-own1`, task T15).** The live site is the PrizeDesk build (`scripts/build.js`); the counts in the table below come from the earlier audit snapshot of 211 listings. Current figures are in `data/verification.json` and on the site's [executive summary](https://sassnarep3-star.github.io/Own1/executive-summary.html): **221 rows**, **25 official-page readings recorded** (9 dated 2026-11-01, 16 dated 2026-11-02), and **31 flagged irregularities**. New: a [Verified shortlist](https://sassnarep3-star.github.io/Own1/shortlist.html) sorted by closing date; ten competitions added from their official pages (six Kaggle, three Devpost, and the Metaculus **Fall 2026 FutureEval Bot Tournament**, a $50,000 bot-only forecasting tournament closing 2027-01-06 whose entry is free but whose bot running costs are the entrant's). Also found: the GEMS Prize ($300,000) says only U.S.-based entrants are eligible (I-29), and the Global Virtual Hackathon is for students aged 14-18 only. **Closing today:** ARC Prize competition tracks and the Codex x TwitchCon Hackathon; **4 Nov:** Metaculus US Midterms 2026. Full record: [`docs/SESSION-7a477419.md`](docs/SESSION-7a477419.md).
 
-**Site:** <https://sassnarep3-star.github.io/Own1/> · **Built:** 2026-11-01 · **Dataset:** 211 listings · **Source of record:** `data/entries.json`, rendered into every page by `scripts/build.js`
+**Current dashboard:** [PrizeDesk](https://sassnarep3-star.github.io/Own1/) · **Site repository:** [sassnarep3-star/Own1](https://github.com/sassnarep3-star/Own1) · **Audit snapshot:** 2026-11-02
 
-This repository replaces a hard-to-use, partly broken reference page of "free money apps" with a mobile-first dashboard that lists **211 competitions which can pay cash**, puts every listing in one plain table, and refuses to publish a number it has not read on an official page.
+## Executive view
 
----
+This repository turns the [Free Money & Contest Ledger](https://karagemop466-tech.github.io/FreeMoneyApps/) into a mobile-first, searchable dashboard for discovering competitions that may pay cash. The upstream catalogue itself says it is a long list with no search, filters, or sorting. The replacement site groups listings, supports filtering and search, provides a shortlist and analysis, and publishes verification limits and irregularities rather than treating every upstream claim as fact.
 
-## 1. What the site says, in one line each
+**The main decision:** do not rank opportunities by headline prize alone. Prefer competitions whose official terms explicitly establish free entry, a current deadline, cash awards, and eligibility that the entrant can meet. A prize pool is not an estimate of the chance or value of winning. No win probabilities or expected returns are calculated here.
 
-- **211 listings** across eight categories: AI/data/code, forecasting, writing-art-photography, sports picks, markets & trading, skill cash games, trivia, and pool software.
-- **18 listings are verified** this build: the operator's own page was fetched on 2026-11-01 and the prize, entry cost, deadline and eligibility were copied from it. **6 are partial**, **187 are unverified**.
-- **11 have free entry confirmed**, **1 is confirmed paid**, **14 have a confirmed cash figure**, and **2 have no usable operator link** at all.
-- **22 irregularities** are documented (codes I-01…I-22) and published on the **Flagged for review** page; **13 rows were re-fetched live** in this pass and **13 rows carry an independent cross-check**.
+## Snapshot — what is in the repository
 
-## 2. The important findings
+| Measure | Current audited value | Interpretation |
+| --- | ---: | --- |
+| Canonical listings | 211 | 206 from the pinned upstream source file plus 5 separately attributed additions; the upstream site itself displays 206. |
+| Categories | 9 | Skill, trivia, sports, creative, forecasting, market, tech, directories, and pools. |
+| Official pages fetched in the 2026-11-01 verification snapshot | 12 loaded; 1 returned an error | 13 fetch outcomes in total; see the row-level record in [`data/live-checks.json`](data/live-checks.json). |
+| Independent official-page cross-checks recorded | 10 rows | Cross-check details are retained in [`data/cross-checks.json`](data/cross-checks.json). |
+| Official-tier sources cited but not re-opened in that pass | 177 rows | A source link is present; the page was not freshly confirmed in that pass. |
+| Rows with no official-tier source in that pass | 11 | These claims are not suitable for verified prize/entry values until an operator source is found. |
+| Prize amount blanked on the site | 80 | The build suppresses claims without the required official-source basis or a stated amount. |
+| Irregularities in the snapshot register | 22 | Published on [Flagged for Review](https://sassnarep3-star.github.io/Own1/flagged.html). |
+| Upstream data's declared review date | 2026-08-19 | 75 days before this report date; the catalogue is not a current guarantee. |
 
-1. **The reference list mixes three very different things:** genuinely free contests, "free to play" fantasy games whose prizes are merchandise or tickets, and pay-to-enter skill apps that advertise cash. Presenting them as one list of "free money apps" is the single biggest defect in the original page.
-2. **Its headline counts do not match its own data.** The source homepage shows counts computed in JavaScript (e.g. "119 listings" in one page, 206 in the data); see I-01.
-3. **Some of its links are simply gone or wrong.** The Challenge.gov submission portal the list still points at has been **retired** — `usa.gov/challenges` is the current federal entry point. The RoboForex contest page returns **404**. Two rows have no operator link at all.
-4. **Closed contests are still presented as open.** ESPN's NFL Survivor and Playoff Predictor had stopped accepting entries at the time of the read; the RotoBaller draft window closed 2026-09-08; MLB Beat the Streak's window ends with the 2026 regular season.
-5. **A prize headline is not a prize.** The clearest example is Deriv's demo tournaments: free to enter and genuinely cash-paying ($1,000 / $600 / $400 a month), but the money needs a fully verified account and the operator is an offshore entity. ESPN Pick'em's "$102,000" includes a $5,000 random drawing, not a skill prize. CBS's "$100,000" is a contingency prize for a perfect week.
-6. **Paying to win is the norm in the "skill games" category.** Solitaire Cash, Bingo Cash, Skillz, Pocket7Games and GamerSaloon are entry-fee products; GamerSaloon's $10 is **Bonus Cash that cannot be withdrawn**. They are listed, labelled and never counted as free.
-7. **The honest answer to "is this even possible?"** Yes — but the realistic free paths are narrow: forecasting tournaments (Metaculus), data-science competitions (Kaggle, DrivenData, ARC Prize), creative prizes (Sony World Photography, poetry, photography salons), demo-trading tournaments (Deriv), and free sports pick'em games (ESPN, CBS). Everything else either costs money, demands a serious body of work, or is already closed.
+These are audit counts, not live availability counts. The pinned source marks 193 listings as having a full free path, 13 as having some free events, 4 as requiring paid cash entry, and 1 as unknown. Those labels originate in the source dataset and must **not** be read as 2026-11-02 official confirmations for every row. Of the 211 records, only the rows with directly checked evidence support current claims; unknown entry cost remains unknown.
 
-## 3. What was done to the repo
+## What was checked today and the strongest leads
 
-- **Read the reference ledger line by line** and rebuilt it as a pinned dataset (`data/entries.json`) with a per-row verification status, an evidence block, and flags.
-- **Checked every displayed value against an official page.** 33 official reads are logged in `data/verification/batchA.jsonl` and `batchB.jsonl`; the 29 verified rows are exported row-by-row to `research/EVIDENCE.csv` (source, prize, entry cost, deadline, eligibility, reading date, evidence URL, reading session, flags).
-- **Never filled a blank by inference.** Unverified rows publish empty prize, entry, deadline and eligibility cells and say so.
-- **Rebuilt the site** as static, pre-rendered HTML with plain tables that work without JavaScript, 44 px touch targets, and per-category pages.
-- **Published the irregularities** rather than hiding them: `flagged.html` lists all 22 with severity and evidence links.
-- **Coordinated with five parallel sessions** through `COORDINATION.md`, claiming file scopes and integrating their work in five rounds (PRs #17, #24, #27, #29, #31). When `main` later converged on another session's "PrizeDesk" build, this session stopped overwriting it and delivered its last round through that build's own extension point, `data/cross-checks.json`.
+A targeted official-source refresh was performed on 2026-11-02. It was not a full re-check of all 211 rows. The exact evidence and unresolved terms are recorded in [`data/verification/current-state-2026-11-02.md`](data/verification/current-state-2026-11-02.md).
 
-## 4. Where to look
+1. **Best match for an AI coding agent — [Fall 2026 FutureEval Bot Tournament](https://www.metaculus.com/tournament/fall-futureeval-2026/).** The official tournament page states a $50,000 pool and a Jan 6, 2027 close; it is explicitly bot-only. Metaculus's [official competition rules](https://www.metaculus.com/tournament-rules/) state that no fee is required and generally prohibit bots from prizes unless a contest-specific exception applies. The tournament's bot-only format is why its specific rules and the [FutureEval bot resources](https://www.metaculus.com/notebooks/38928/ai-benchmark-resources/) must be read before building. API/model usage can still cost money, and no probability of winning is implied.
+2. **Near-term human forecasting — [US Midterms 2026 on Metaculus](https://www.metaculus.com/tournament/midterms-2026/).** Its official page states a $10,000 pool and Nov 4 close. The general competition rules say no entry fee is required and allow AI assistance for human forecasters when their final forecasts reflect their own decisions and understanding. General rules may be overridden by tournament-specific terms; check those before participating.
+3. **Near-term build competition — [Codex x TwitchCon Hackathon](https://twitchcon-codex.devpost.com/rules).** The official rules say no purchase/payment is required, require a Twitch-connected project built with OpenAI Codex, and list a Nov 2, 2026, 2 p.m. Pacific deadline. The official prize schedule is $10,000 / $6,000 / $4,000 plus two $2,500 runner-up awards; the event page calls this $25,000 total cash. It requires a repository, public YouTube demo, project description, and Codex session ID. Check the official deadline immediately and establish personal eligibility; the rules impose age, location, and other restrictions.
+4. **High prize, free-entry status unknown — [GEMS Prize Challenge](https://www.drivendata.org/competitions/306/competition-doe-gems/).** The official DrivenData page states a $300,000 pool and Dec 3, 2026, 11:59 p.m. UTC end date. The inspected page does not say entry is free, so this is **not** labeled confirmed free here. Its [official-rules resource](https://www.herox.com/GEMSPrize/resource/2274) points to a separate rules document; read it before investing effort.
+5. **Free, but restricted to eligible student teams — [Global Virtual Hackathon 2026](https://gvhackathon.com/).** The official page states free entry and a $1,000 first prize plus two $250 runners-up in each division. It is for students aged 14–18 in teams of 2–4 with a supervising teacher; registration closes Nov 13 AoE. The organizer says AI tools are allowed and expected, but team, teacher, consent, and authorship requirements apply.
 
-| Page | What it holds |
-| --- | --- |
-| [`index.html`](https://sassnarep3-star.github.io/Own1/) | Dashboard: counts, best bets, and the full 211-row table with filters |
-| [`all.html`](https://sassnarep3-star.github.io/Own1/all.html) | Every listing as one plain, printable table |
-| [`categories/directory.html`](https://sassnarep3-star.github.io/Own1/categories/directory.html) | The same rows grouped by category |
-| [`best.html`](https://sassnarep3-star.github.io/Own1/best.html) | Shortlist ranked only on verified facts |
-| [`analysis.html`](https://sassnarep3-star.github.io/Own1/analysis.html) | What the data shows: prize sizes, free vs paid, effort by category |
-| [`verification.html`](https://sassnarep3-star.github.io/Own1/verification.html) | Method, row statuses and the evidence rules |
-| [`flagged.html`](https://sassnarep3-star.github.io/Own1/flagged.html) | All 22 irregularities with source links |
-| [`research.html`](https://sassnarep3-star.github.io/Own1/research.html) | Supplemental research page kept from a parallel session |
+**Location caveat:** user location is Singapore, but this audit does not determine eligibility for a particular person or contest in Singapore. Read the official rules for geographic restrictions, prize delivery, age, tax forms, and local law before committing time. Do not infer eligibility from a global marketing statement.
 
-## 5. Caveats
+## What is wrong with the upstream experience
 
-- **A listing is not an offer.** Links are research pointers; prizes, rules and eligibility change without notice. Always read the operator's current rules before entering.
-- **Verification is dated.** Every checked row records the date it was read (2026-11-01). Anything older than a season should be re-read before you rely on it.
-- **This build could not use a headless browser.** External pages were read through a text fetcher, so JavaScript-only boards (Zindi, Kaggle counts, TopCoder) could not be verified and are published blank.
-- **Prize figures are the operator's own claims.** No prize has been independently audited or paid out by this project.
-- **Tax and eligibility are real.** US reporting generally starts at $600 of winnings; several contests are 18+/21+, region-limited, or require identity verification before payment.
-- **Nothing here is financial or legal advice**, and no listing is an endorsement of the operator.
+- **Hard to navigate on mobile:** the source says it is one plain list with no search, filters, or sorting. Entries are long cards with multiple blocks of details.
+- **Different counts have different meanings:** its page and pinned file show 206 upstream listings, while this repository's combined catalogue has 211 after five attributed additions. The 211 figure must not be represented as the source site's total.
+- **Staleness and status risk:** the pinned upstream data says it was last reviewed 2026-08-19. Its snapshot classifies 27 rows as ended/out of season, so a listing marked active by the source is not proof that entry is currently open.
+- **Link and evidence gaps:** in the 2026-11-01 snapshot, 11 rows had no official-tier source, 6 lacked a rules URL, 117 used the signup URL as the rules URL, and one listed URL used HTTP. One App Store URL returned an error in the recorded fetch; this is a historical fetch result, not proof it is still broken today.
+- **Mixed economics:** the source combines free-to-enter contests, free practice rounds that do not pay cash, paid-entry cash tournaments, promotional credit, directories, and pool software. These are not equivalent opportunities.
+- **Not all prize text is a verified cash award:** the source's prize claims may be missing, stale, conditional, or non-cash. The site blanks unsupported amounts and publishes the reason in its review queue.
+
+## What the rebuilt site provides
+
+- A mobile-first dashboard and full searchable/filterable table at [the live site](https://sassnarep3-star.github.io/Own1/).
+- A [complete listing page](https://sassnarep3-star.github.io/Own1/all.html), [best-picks shortlist](https://sassnarep3-star.github.io/Own1/best.html), and category/detail pages.
+- [Analysis](https://sassnarep3-star.github.io/Own1/analysis.html), [source audit](https://sassnarep3-star.github.io/Own1/research.html), and [verification method](https://sassnarep3-star.github.io/Own1/verification.html).
+- A prominent [Flagged for Review page](https://sassnarep3-star.github.io/Own1/flagged.html) with issues and evidence links.
+- A pinned upstream input with checksum and provenance; static generated pages; build checks for internal links, listing coverage, and blank/unverified values.
+- The older parallel Prize Atlas build preserved separately at [`archive/prize-atlas/`](archive/prize-atlas/); it is not the current root-site generator.
+
+## How to choose where to spend effort
+
+1. Start with the current official rules, not the shortlist badge. Confirm cash rather than points/credits, entry fee, deadline, and location/age eligibility.
+2. Choose opportunities where the work matches your skills and the rules permit the intended AI use. For human Metaculus forecasting, the general terms require the forecasts to remain the participant's own decisions and understanding. FutureEval is specifically bot-oriented; its specific requirements apply.
+3. Separate fixed prize schedules from large pools shared among many entrants. A larger headline does not mean a better chance or better value per hour.
+4. Treat model/API costs, team requirements, identity/tax paperwork, and deliverable time as effort costs. This repository does not estimate expected value.
+5. Re-check a contest immediately before entry. The site is a research index, not an operator, sponsor, guarantee, or legal/financial adviser.
+
+## Verification, limits, and irregularities
+
+- The 2026-11-01 snapshot identifies each check and source in `data/live-checks.json` and `data/verification.json`; the 2026-11-02 targeted refresh is separately recorded at [`data/verification/current-state-2026-11-02.md`](data/verification/current-state-2026-11-02.md).
+- This turn did not re-fetch all 211 listings. The 177 source-cited-but-not-reopened rows, 11 no-official-source rows, and every current eligibility claim still need page-level review.
+- Local `npm run check` passed: 555 HTML files and 13,563 internal references were checked with no broken local links; the root build completed for 211 listings, 211 detail pages, and 22 flags. The local link checker does not verify external websites or prove that a competition is still open.
+- **Fresh evidence is not yet in the generated dataset or tables.** The new official reads are in the audit record only. A follow-up integration must merge any row changes into the current data pipeline, regenerate the site, and rerun checks before those reads are labeled live-checked on the published table.
+
+## Sources for manual review
+
+- [Original Free Money & Contest Ledger](https://karagemop466-tech.github.io/FreeMoneyApps/)
+- [Repository provenance and pinned source](data/source/PROVENANCE.json)
+- [Current row-level verification snapshot](data/verification.json)
+- [2026-11-02 official-source refresh](data/verification/current-state-2026-11-02.md)
+- [All published irregularities](https://sassnarep3-star.github.io/Own1/flagged.html)
+- [Metaculus tournament rules](https://www.metaculus.com/tournament-rules/)
+- [FutureEval bot tournament](https://www.metaculus.com/tournament/fall-futureeval-2026/)
+- [Codex x TwitchCon official rules](https://twitchcon-codex.devpost.com/rules)
+- [GEMS Prize Challenge](https://www.drivendata.org/competitions/306/competition-doe-gems/)
+- [Global Virtual Hackathon 2026](https://gvhackathon.com/)

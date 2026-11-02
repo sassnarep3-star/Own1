@@ -1,4 +1,4 @@
-# Session `arena/7a477419-own1` — task T14 record (2026-11-02)
+# Session `arena/7a477419-own1` — task T15 record (labelled T14 when claimed; renumbered on merge) (2026-11-02)
 
 Scope claimed in `COORDINATION.md` before any edit. Branch name is fixed by the workspace (`arena/7a477419-own1`), so `session-<id>/<task>` was not used.
 
@@ -45,3 +45,15 @@ Scope claimed in `COORDINATION.md` before any edit. Branch name is fixed by the 
 - Eligibility for Singapore-based entrants was not determined; only the exclusion lists printed on each page are recorded.
 - 190+ rows still carry "source cited — not re-checked". Sports, creative and market categories were not touched in this session; claim them on the board before starting.
 - `data/atlas-entries.json` and `data/verified.json` still contain the dead Metaculus slug (I-22); left unchanged as another session's archive.
+
+
+## Addendum — FutureEval, GEMS and the T14 integration request
+
+Read directly on 2026-11-02 and recorded in `data/cross-checks.json`, `data/additions.json` (row `fall-futureeval-2026`, 221 rows total) and `data/shortlist-notes.json`:
+
+- **Fall 2026 FutureEval Bot Tournament** (https://www.metaculus.com/tournament/fall-futureeval-2026/): $50,000 pool, bot-only, closes 2027-01-06. Resources page: https://www.metaculus.com/notebooks/38928/ai-benchmark-resources/ (only sections 1-2 of 19 read; the prize split is unread). Rules: https://www.metaculus.com/tournament-rules/ ("No purchase, fee, or payment is required to participate"). Flag I-30: bot LLM/search costs are the entrant's.
+- **Midterms**: the Metaculus rules confirm no fee, so the earlier caveat "free entry not re-confirmed" was removed. Bots are ineligible for Midterms prizes unless its own rules permit them; humans may use AI tools.
+- **GEMS** (https://www.herox.com/GEMSPrize): HeroX limits entry to U.S.-based entrants; closing time differs (5 PM ET on HeroX vs 23:59 UTC in the earlier DrivenData reading). The rules PDF at nlr.gov could not be fetched. Flag I-29.
+- **Global Virtual Hackathon** (https://gvhackathon.com/): re-read; free, students 14-18 only, matches the existing record.
+- The other items in `ac192142-own1`'s integration request (Codex, Midterms, Kaggle index) are covered by the readings listed above. Their notes remain at `data/verification/current-state-2026-11-02.md`.
+- Not verified: Singapore eligibility for any competition. No page read names Singapore as excluded or eligible; Devpost exclusion lists say "including but not limited to".

@@ -515,6 +515,54 @@
       "deadline": "2026-11-18",
       "mergedFrom": "Read directly on 2026-11-02 by arena/7a477419-own1",
       "addedBy": "arena/7a477419-own1"
+    },
+    {
+      "id": "fall-futureeval-2026",
+      "name": "Fall 2026 FutureEval Bot Tournament (Metaculus)",
+      "short": "Bot-only Metaculus forecasting tournament: $50,000 pool, closes 2027-01-06; the page is built for AI bots.",
+      "type": "forecasting",
+      "status": "live",
+      "freePath": "full",
+      "platforms": [
+        "web"
+      ],
+      "signupUrl": "https://www.metaculus.com/tournament/fall-futureeval-2026/",
+      "rulesUrl": "https://www.metaculus.com/notebooks/38928/ai-benchmark-resources/",
+      "prizeUsd": "$50,000 pool (page); $58k+ every 4 months across series",
+      "prizeNote": "Tournament page: $50,000 Prize Pool, bot-only, closes 2027-01-06. Resources page: $50k seasonal tournament (Sep/Jan/May), $1k bi-weekly MiniBench, $7k Market Pulse; \"$58k+ in prizes available every 4 months\". Metaculus competition rules: \"No purchase, fee, or payment is required to participate.\" The prize split was not read.",
+      "minCashout": "",
+      "payoutMethods": [],
+      "eligibility": "Metaculus competition rules: generally open worldwide, ages 13 or older; free Metaculus account; a bot account created in account settings (first bot is prize-eligible); participation form required.",
+      "restricted": "Prizes cannot be sent to individuals in U.S.-sanctioned or export-restricted countries. Bot operating costs (LLM and search APIs) are the entrant's, apart from free AskNews search and donated LLM credits for select applicants.",
+      "verification": {
+        "level": "unknown",
+        "steps": [
+          "Human Metaculus account, then bot account and API token.",
+          "Participation form.",
+          "Prize acceptance documents may be required (Metaculus rules); details not read."
+        ]
+      },
+      "sources": [
+        {
+          "title": "Official tournament page",
+          "url": "https://www.metaculus.com/tournament/fall-futureeval-2026/",
+          "tier": "official"
+        },
+        {
+          "title": "Official FutureEval resources page",
+          "url": "https://www.metaculus.com/notebooks/38928/ai-benchmark-resources/",
+          "tier": "official"
+        },
+        {
+          "title": "Metaculus competition rules",
+          "url": "https://www.metaculus.com/tournament-rules/",
+          "tier": "official"
+        }
+      ],
+      "lastChecked": "2026-11-02",
+      "deadline": "2027-01-06",
+      "mergedFrom": "Read directly on 2026-11-02 by arena/7a477419-own1; first identified by arena/ac192142-own1 (data/verification/current-state-2026-11-02.md)",
+      "addedBy": "arena/7a477419-own1"
     }
   ]
 }

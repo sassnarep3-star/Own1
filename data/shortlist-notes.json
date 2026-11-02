@@ -2,6 +2,12 @@
   "note": "Per-row notes for the Verified shortlist page. Every statement is taken from the official page recorded in data/cross-checks.json for the same row; nothing is inferred. Written by arena/7a477419-own1 on 2026-11-02.",
   "rows": [
     {
+      "id": "fall-futureeval-2026",
+      "kind": "Bot-only forecasting tournament",
+      "note": "Built for AI bots: \"This is a bot-only competition\". No purchase or fee to participate (Metaculus rules), but bot LLM/search costs are yours; free AskNews search for registered bot makers and donated LLM credits only for select applicants. $50,000 pool on the tournament page; the resources page says $58k+ every 4 months across the seasonal tournament, MiniBench and Market Pulse.",
+      "url": "https://www.metaculus.com/tournament/fall-futureeval-2026/"
+    },
+    {
       "id": "arcprize",
       "kind": "Closes today",
       "note": "Official page: \"Internet access is not available during Kaggle evaluation (no API-based systems like GPT/Claude/etc.)\"; all prizes require open-source, reproducible solutions. An AI agent can help write code, but the submitted solution cannot call hosted models.",
@@ -16,7 +22,7 @@
     {
       "id": "midterms-2026",
       "kind": "Forecasting",
-      "note": "Forecasting tournament, not a coding task. Closes 2026-11-04. Free entry was not re-confirmed on the tournament page; its rules page was not read.",
+      "note": "Forecasting tournament, not a coding task: $10,000 pool, closes 2026-11-04. Metaculus rules: no purchase or fee; bots are ineligible for prizes, but humans may use AI tools to assist if the final forecasts reflect their own decisions and understanding.",
       "url": "https://www.metaculus.com/tournament/midterms-2026/"
     },
     {
@@ -76,8 +82,14 @@
     {
       "id": "gems-prize-2026",
       "kind": "Prize challenge",
-      "note": "Read on 2026-11-01 by another session: $300,000 pool, closes 2026-12-03. No entry fee was stated on the page (not asserted as free). See the GEMS row for caveats.",
+      "note": "HeroX guidelines: \"Institutions, companies, nonprofit organizations, and individuals based in the United States are eligible to compete.\" Two rounds, prizes from $15,000 to $100,000. No entry fee was stated on the pages read; the official rules PDF could not be fetched. Closing time differs between pages (5 PM ET vs 23:59 UTC on 2026-12-03).",
       "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/"
+    },
+    {
+      "id": "global-virtual-hackathon-2026",
+      "kind": "Student hackathon",
+      "note": "Free, but only for students aged 14–18 in teams of 2–4 with a supervising teacher. AI tools are \"allowed and expected\". Registration closes 13 Nov (23:59 AoE).",
+      "url": "https://gvhackathon.com/"
     }
   ]
 }
