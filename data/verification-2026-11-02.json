@@ -1,0 +1,1580 @@
+{
+  "checkedAt": "2026-11-02",
+  "checkedBy": "f25e2b4b-own1",
+  "method": "Each URL below was fetched once with a page-fetch tool on 2026-11-02 and the returned title and body were read. A field is filled only when the exact wording appears on that official page; otherwise it is left blank and recorded in notStated. No value is inferred, converted, summed or rounded. amountUsd is the literal figure the page states for the headline prize/pool, parsed for sorting only. Three further official pages were read while integrating the independent rules review handed off by session 4db3cf09-own1 in PR #3 (Metaculus Tournament Rules, the GEMS Prize official rules PDF and the DrivenData GEMS rules page).",
+  "sourceOfRows": "data/ledger.json (pinned third-party ledger); the operator pages below are the official sources for every published value.",
+  "pages": [
+    {
+      "url": "https://www.kaggle.com/competitions",
+      "title": "Kaggle Competitions",
+      "outcome": "loaded",
+      "rows": [
+        "kaggle"
+      ]
+    },
+    {
+      "url": "https://www.kaggle.com/docs/competitions",
+      "title": "Getting Started on Kaggle | Kaggle",
+      "outcome": "loaded",
+      "rows": [
+        "kaggle"
+      ]
+    },
+    {
+      "url": "https://arcprize.org/competitions/2026",
+      "title": "ARC Prize 2026",
+      "outcome": "loaded",
+      "rows": [
+        "arcprize"
+      ]
+    },
+    {
+      "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/",
+      "title": "Competition: The Geologic Enhanced Mapping System (GEMS) Prize Challenge",
+      "outcome": "loaded",
+      "rows": [
+        "gems-prize-2026"
+      ]
+    },
+    {
+      "url": "https://www.drivendata.org/competitions/",
+      "title": "Competitions",
+      "outcome": "loaded",
+      "rows": [
+        "drivendata",
+        "gems-prize-2026"
+      ]
+    },
+    {
+      "url": "https://www.metaculus.com/tournaments/",
+      "title": "Tournaments | Metaculus",
+      "outcome": "loaded",
+      "rows": [
+        "metaculus",
+        "midterms-2026"
+      ]
+    },
+    {
+      "url": "https://www.metaculus.com/tournament/midterms-2026/",
+      "title": "US Midterms 2026",
+      "outcome": "loaded",
+      "rows": [
+        "midterms-2026"
+      ]
+    },
+    {
+      "url": "https://www.metaculus.com/tournament/fall-futureeval-2026/",
+      "title": "Fall 2026 FutureEval Bot Tournament",
+      "outcome": "loaded",
+      "rows": [
+        "metaculus"
+      ]
+    },
+    {
+      "url": "https://www.metaculus.com/help/scores-faq/",
+      "title": "Scores FAQ | Metaculus",
+      "outcome": "loaded",
+      "rows": [
+        "metaculus"
+      ]
+    },
+    {
+      "url": "https://twitchcon-codex.devpost.com/rules",
+      "title": "Codex x TwitchCon Hackathon - Devpost",
+      "outcome": "loaded",
+      "rows": [
+        "codex-twitchcon-2026"
+      ]
+    },
+    {
+      "url": "https://paypalaihackathon.devpost.com/rules",
+      "title": "PayPal AI Hackathon - Devpost",
+      "outcome": "loaded",
+      "rows": [
+        "paypal-ai-hackathon-2026"
+      ]
+    },
+    {
+      "url": "https://devpost.com/hackathons",
+      "title": "New & upcoming hackathons · Devpost",
+      "outcome": "loaded",
+      "rows": [
+        "devpost",
+        "paypal-ai-hackathon-2026",
+        "codex-twitchcon-2026"
+      ]
+    },
+    {
+      "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay",
+      "title": "ESPN NFL Pick'em - How to Play",
+      "outcome": "loaded",
+      "rows": [
+        "espn-pickem"
+      ]
+    },
+    {
+      "url": "https://fantasy.espn.com/free-prize-games",
+      "title": "Free to Play Sports Prediction Games and Pick'em Contests - ESPN",
+      "outcome": "loaded",
+      "rows": [
+        "espn-pickem"
+      ]
+    },
+    {
+      "url": "https://www.cbssports.com/fantasy/football/games/pickem/rules",
+      "title": "2026 CBSSports.com Pro Football Pick'em Contest Rules",
+      "outcome": "loaded",
+      "rows": [
+        "cbs-pro-pickem"
+      ]
+    },
+    {
+      "url": "https://fantasy.espn.com/games/nfl-survivor-2026/make-picks",
+      "title": "ESPN NFL Survivor - Make Picks",
+      "outcome": "loaded",
+      "rows": [
+        "espn-survivor"
+      ]
+    },
+    {
+      "url": "https://www.foxsports.com/fox-super-6",
+      "title": "FOX Super 6 — Play free Pick'em Game | FOX Sports",
+      "outcome": "loaded",
+      "rows": [
+        "fox-super6"
+      ]
+    },
+    {
+      "url": "https://www.mlb.com/apps/beat-the-streak/official-rules",
+      "title": "Official Rules | Beat the Streak | Apps | MLB.com",
+      "outcome": "loaded",
+      "rows": [
+        "mlb-beat-the-streak"
+      ]
+    },
+    {
+      "url": "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free",
+      "title": "Wergle Flomp Humor Poetry Contest (no fee) - Winning Writers",
+      "outcome": "loaded",
+      "rows": [
+        "wergle-flomp"
+      ]
+    },
+    {
+      "url": "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest",
+      "title": "Tom Howard/Margaret Reid Poetry Contest - Winning Writers",
+      "outcome": "loaded",
+      "rows": [
+        "tom-howard-poetry"
+      ]
+    },
+    {
+      "url": "https://www.worldphoto.org/sony-world-photography-awards",
+      "title": "Sony World Photography Awards | World Photography Organisation",
+      "outcome": "loaded",
+      "rows": [
+        "sony-world-photo"
+      ]
+    },
+    {
+      "url": "https://www.rmets.org/weather-photographer-of-the-year",
+      "title": "Weather Photographer of the Year | Royal Meteorological Society",
+      "outcome": "loaded",
+      "rows": [
+        "weather-potw"
+      ]
+    },
+    {
+      "url": "https://vocal.media/resources/challenges-frequently-asked-questions",
+      "title": "Challenges: Frequently Asked Questions | Vocal",
+      "outcome": "loaded",
+      "rows": [
+        "vocal"
+      ]
+    },
+    {
+      "url": "https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes",
+      "title": "Deriv launches monthly, skill-based demo trading tournaments to accelerate trader education",
+      "outcome": "loaded",
+      "rows": [
+        "deriv-tournaments"
+      ]
+    },
+    {
+      "url": "https://www.gamersaloon.com/promos/1rounder/",
+      "title": "GamerSaloon 1-Rounders",
+      "outcome": "loaded",
+      "rows": [
+        "gamersaloon"
+      ]
+    },
+    {
+      "url": "https://www.papaya.com/faq",
+      "title": "Papaya Gaming FAQ | About Papaya and the Platform",
+      "outcome": "loaded",
+      "rows": [
+        "solitaire-cash"
+      ]
+    },
+    {
+      "url": "https://www.herox.com/challenges",
+      "title": "Page not found",
+      "outcome": "404",
+      "rows": [
+        "herox"
+      ]
+    },
+    {
+      "url": "https://www.herox.com/crowdsourcing-projects",
+      "title": "Explore Challenges",
+      "outcome": "loaded",
+      "rows": [
+        "herox"
+      ]
+    },
+    {
+      "url": "https://www.challenge.gov/",
+      "title": "Challenge and prize competition content has moved | Challenge.gov",
+      "outcome": "loaded (sunset notice)",
+      "rows": [
+        "herox"
+      ]
+    },
+    {
+      "url": "https://www.usa.gov/challenges",
+      "title": "Challenges and prize competitions | USAGov",
+      "outcome": "loaded",
+      "rows": [
+        "herox"
+      ]
+    },
+    {
+      "url": "https://gvhackathon.com/",
+      "title": "Global Virtual Hackathon 2026",
+      "outcome": "loaded",
+      "rows": [
+        "global-virtual-hackathon-2026"
+      ]
+    },
+    {
+      "url": "https://givling.com/",
+      "title": "Givling",
+      "outcome": "loaded",
+      "rows": [
+        "givling"
+      ]
+    },
+    {
+      "url": "https://www.aicrowd.com/challenges",
+      "title": "AIcrowd | Challenges",
+      "outcome": "loaded (no usable facts)",
+      "rows": [
+        "aicrowd"
+      ]
+    },
+    {
+      "url": "https://www.tradingview.com/the-leap/tradestation-july-2026/rules/",
+      "title": "The Leap with TradeStation — Terms and Conditions — TradingView",
+      "outcome": "loaded",
+      "rows": [
+        "tradingview-leap"
+      ]
+    },
+    {
+      "url": "https://help.swagbucks.com/hc/en-us/articles/15374709231764-What-is-Swagbucks-Daily-Trivia",
+      "title": "What is Swagbucks Daily Trivia? – Swagbucks Help Center",
+      "outcome": "loaded",
+      "rows": [
+        "swagbucks-trivia"
+      ]
+    },
+    {
+      "url": "https://fantasy.premierleague.com/help/rules",
+      "title": "Fantasy Football Game Rules & Help | Fantasy Premier League",
+      "outcome": "loaded (redirects to /en/help/rules)",
+      "rows": [
+        "fpl-official"
+      ]
+    },
+    {
+      "url": "https://roboforex.com/contests/",
+      "title": "Page Not Found (Error 404) - RoboForex",
+      "outcome": "404",
+      "rows": [
+        "roboforex-demo"
+      ]
+    },
+    {
+      "url": "https://www.metaculus.com/tournament-rules/",
+      "title": "Metaculus Tournament Rules",
+      "outcome": "loaded",
+      "rows": [
+        "metaculus",
+        "midterms-2026"
+      ]
+    },
+    {
+      "url": "https://www.nlr.gov/docs/fy26osti/96647.pdf",
+      "title": "Geologic Enhanced Mapping System (GEMS) Prize Official Rules (September 2026)",
+      "outcome": "loaded",
+      "rows": [
+        "gems-prize-2026"
+      ]
+    },
+    {
+      "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/rules/",
+      "title": "GEMS Prize Rules (DrivenData)",
+      "outcome": "loaded",
+      "rows": [
+        "gems-prize-2026"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "kaggle",
+      "name": "Kaggle Competitions",
+      "category": "tech",
+      "sourceUrl": "https://www.kaggle.com/competitions",
+      "sourceLabel": "Kaggle Competitions",
+      "pages": [
+        "https://www.kaggle.com/competitions",
+        "https://www.kaggle.com/docs/competitions"
+      ],
+      "amountUsd": null,
+      "freeConfirmed": null,
+      "facts": {
+        "prize": {
+          "value": "Per competition: $450,000 (ARC Prize 2026 Paper Track), $100,000 (NFL Big Data Bowl 2027), $35,000 (Gemma 4 Developer Agent Paper Track)",
+          "quote": "## $450,000 / 7 days to go ... $100,000 / 2 months to go ... $35,000 / 10 days to go",
+          "url": "https://www.kaggle.com/competitions"
+        },
+        "status": {
+          "value": "Competitions listed as ongoing/featured",
+          "quote": "The world's most important AI problems, open to anyone. Compete alongside millions of builders and researchers to advance the state of the art.",
+          "url": "https://www.kaggle.com/competitions"
+        },
+        "aiAgent": {
+          "value": "Code Competitions run inside Kaggle Notebooks with compute and internet limits",
+          "quote": "In these competitions, all submissions must be made from inside a Kaggle Notebook. You cannot upload predictions directly. ... Notebooks may be restricted by CPU/GPU runtime, internet access, or external data usage.",
+          "url": "https://www.kaggle.com/docs/competitions"
+        }
+      },
+      "notStated": [
+        "No single prize pool for Kaggle as a whole",
+        "No explicit entry-fee statement on the two official pages read",
+        "Getting Started competitions offer no prizes or points (official docs)",
+        "The ledger's 'Featured pots commonly $5,000-$100,000+' is not a stated pool"
+      ],
+      "flags": [
+        "Prize figures are per competition; no single Kaggle-wide pool exists.",
+        "Automated agents must work inside Kaggle Notebook compute/internet limits."
+      ]
+    },
+    {
+      "id": "arcprize",
+      "name": "ARC Prize (via Kaggle)",
+      "category": "tech",
+      "sourceUrl": "https://arcprize.org/competitions/2026",
+      "sourceLabel": "ARC Prize 2026",
+      "pages": [
+        "https://arcprize.org/competitions/2026"
+      ],
+      "amountUsd": 2000000,
+      "freeConfirmed": null,
+      "facts": {
+        "prize": {
+          "value": "$2M in prizes. 3 tracks.",
+          "quote": "### $2M in prizes. 3 tracks. Open source progress toward AGI.",
+          "url": "https://arcprize.org/competitions/2026"
+        },
+        "deadline": {
+          "value": "2026-11-02",
+          "quote": "November 2, 2026 - Submissions due ... November 8, 2026 - Papers due ... December 4, 2026 - Results announced",
+          "url": "https://arcprize.org/competitions/2026"
+        },
+        "eligibility": {
+          "value": "Prizes at ARC Prize Inc.'s sole discretion; open-source solutions required",
+          "quote": "Prizes are awarded at the sole discretion of ARC Prize Inc. and are subject to review by our Technical Team. ... All leading participants are expected to open source their solutions to be eligible for a prize.",
+          "url": "https://arcprize.org/competitions/2026"
+        },
+        "aiAgent": {
+          "value": "No internet/API models during Kaggle evaluation; code must be open source",
+          "quote": "Internet access is not available during Kaggle evaluation (no API-based systems like GPT/Claude/etc.) ... all code and methods authored by the submitter must be made open source under a permissive public domain license",
+          "url": "https://arcprize.org/competitions/2026"
+        }
+      },
+      "notStated": [
+        "No entry fee is stated on the official page",
+        "No cash-out method is stated"
+      ],
+      "flags": [
+        "Submission deadline is 2026-11-02, the day of this verification pass.",
+        "No entry fee stated, so the entry-cost cell stays blank."
+      ]
+    },
+    {
+      "id": "gems-prize-2026",
+      "name": "GEMS Prize Challenge (DrivenData)",
+      "category": "tech",
+      "sourceUrl": "https://www.drivendata.org/competitions/306/competition-doe-gems/",
+      "sourceLabel": "GEMS Prize Challenge",
+      "pages": [
+        "https://www.drivendata.org/competitions/306/competition-doe-gems/",
+        "https://www.drivendata.org/competitions/",
+        "https://www.nlr.gov/docs/fy26osti/96647.pdf",
+        "https://www.drivendata.org/competitions/306/competition-doe-gems/rules/"
+      ],
+      "amountUsd": 300000,
+      "freeConfirmed": null,
+      "facts": {
+        "prize": {
+          "value": "Total Prize Pool: $300,000 (Initial Round $50,000; Final Round $250,000: $100,000 / $70,000 / $40,000 / $25,000 / $15,000)",
+          "quote": "### Total Prize Pool: $300,000 ... Initial Prize Round — $50,000 ... Final Prize Round — $250,000 ... 1st $100,000 ... 5th $15,000",
+          "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/"
+        },
+        "deadline": {
+          "value": "2026-12-03",
+          "quote": "### Dec. 3, 2026, 11:59 p.m. UTC",
+          "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/"
+        },
+        "status": {
+          "value": "Listed as an active prize competition",
+          "quote": "## Prize competitions ... $300,000 in prizes ... 4 weeks left",
+          "url": "https://www.drivendata.org/competitions/"
+        },
+        "eligibility": {
+          "value": "Referred to the official rules page",
+          "quote": "Please refer to the official rules page for full eligibility criteria.",
+          "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/"
+        },
+        "aiAgent": {
+          "value": "External data is allowed with licences and must be shareable with organisers",
+          "quote": "The use of external data is encouraged in this competition, provided you or your team possess the necessary licenses to use the data for this challenge. All data used must be shareable with the challenge organizers to allow for independent result verification.",
+          "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/"
+        },
+        "aiDisclosure": {
+          "value": "Generative AI is allowed in developing a submission but its use must be disclosed in the narrative",
+          "quote": "Using generative AI technology in the development of your prize submission is allowed. However, you must indicate in the narrative (not included in the word count) the extent to which, if any, you used generative AI technology and how you used it to develop your submission",
+          "url": "https://www.nlr.gov/docs/fy26osti/96647.pdf"
+        },
+        "entry": {
+          "value": "Create a DrivenData profile and agree to the rules (no fee stated in the official rules)",
+          "quote": "To enter the competition, you must create a profile on the DrivenData platform and agree to abide by the competition rules and restrictions.",
+          "url": "https://www.nlr.gov/docs/fy26osti/96647.pdf"
+        }
+      },
+      "notStated": [
+        "No entry fee is stated on the official competition page",
+        "Full eligibility criteria are on a separate rules page not read in this pass",
+        "No entry fee amount is stated in section 3.1 of the official rules; free entry is not confirmed"
+      ],
+      "flags": [
+        "No entry fee stated, so the entry-cost cell stays blank.",
+        "The competition homepage says 'Dec. 3, 2026, 11:59 p.m. UTC' while official rules Appendix A.1 says 'by 5:00 p.m. ET on the prize submission deadline date' — the times conflict.",
+        "Generative AI is permitted but must be disclosed in the narrative (official rules §3.2)."
+      ]
+    },
+    {
+      "id": "drivendata",
+      "name": "DrivenData",
+      "category": "tech",
+      "sourceUrl": "https://www.drivendata.org/competitions/",
+      "sourceLabel": "DrivenData Competitions",
+      "pages": [
+        "https://www.drivendata.org/competitions/"
+      ],
+      "amountUsd": null,
+      "freeConfirmed": null,
+      "facts": {
+        "prize": {
+          "value": "$300,000 in prizes (GEMS Prize Challenge)",
+          "quote": "## Prize competitions ... The Geologic Enhanced Mapping System (GEMS) Prize Challenge ... $300,000 in prizes",
+          "url": "https://www.drivendata.org/competitions/"
+        },
+        "status": {
+          "value": "One prize competition, benchmarks and practice competitions listed",
+          "quote": "## Prize competitions ... ## Benchmarks ... ## Practice competitions ... ## Completed competitions",
+          "url": "https://www.drivendata.org/competitions/"
+        }
+      },
+      "notStated": [
+        "No entry fee stated",
+        "No general prize range stated",
+        "The ledger's '$10,000-$200,000 total purses' is not on this page"
+      ],
+      "flags": [
+        "The ledger's general purse range cannot be confirmed from the official index."
+      ]
+    },
+    {
+      "id": "metaculus",
+      "name": "Metaculus Tournaments",
+      "category": "forecasting",
+      "sourceUrl": "https://www.metaculus.com/tournaments/",
+      "sourceLabel": "Metaculus Tournaments",
+      "pages": [
+        "https://www.metaculus.com/tournaments/",
+        "https://www.metaculus.com/tournament/fall-futureeval-2026/",
+        "https://www.metaculus.com/help/scores-faq/",
+        "https://www.metaculus.com/tournament-rules/"
+      ],
+      "amountUsd": null,
+      "freeConfirmed": "yes",
+      "facts": {
+        "entry": {
+          "value": "No purchase, fee or payment required; a free Metaculus account is required",
+          "quote": "No purchase, fee, or payment is required to participate. ... Any person wishing to participate must create a free Metaculus user account. No purchase or entry fee is necessary to enter a Metaculus competition.",
+          "url": "https://www.metaculus.com/tournament-rules/"
+        },
+        "prize": {
+          "value": "Per tournament prize pools; the index shows $50,000, $35,000, $20,000, $15,000, $10,000, $7,500, $5,000, $3,400 and 'NO PRIZE POOL'",
+          "quote": "19 tournaments shown ... $50,000 PRIZE POOL ... NO PRIZE POOL ... $35,000 PRIZE POOL ... $10,000 PRIZE POOL",
+          "url": "https://www.metaculus.com/tournaments/"
+        },
+        "status": {
+          "value": "19 tournaments shown",
+          "quote": "19 tournaments shown",
+          "url": "https://www.metaculus.com/tournaments/"
+        },
+        "aiAgent": {
+          "value": "A bot-only tournament exists with a $50,000 pool",
+          "quote": "Welcome to the Fall 2026 FutureEval Bot Tournament! This is a bot-only competition where bot-makers attempt to push AI to its limits in predicting future events. ... $50,000Prize Pool",
+          "url": "https://www.metaculus.com/tournament/fall-futureeval-2026/"
+        },
+        "aiRules": {
+          "value": "Bots/AI accounts are ineligible for tournament prizes unless competition-specific rules permit; humans may use AI tools if final submissions reflect their own decisions",
+          "quote": "Unless otherwise specifically permitted in the Competition-specific rules, automated systems, bots, artificial intelligence, or user accounts which are officially registered as bot accounts, are ineligible for tournament prizes. However, human participants are allowed to use AI tools or systems to assist in their forecasting, as long as the final submissions reflect their own decisions and understanding.",
+          "url": "https://www.metaculus.com/tournament-rules/"
+        }
+      },
+      "notStated": [
+        "No single platform-wide prize pool",
+        "Several tournaments show NO PRIZE POOL"
+      ],
+      "flags": [
+        "Several listed tournaments carry no prize pool; no blanket figure applies.",
+        "By default bots/AI accounts cannot win tournament prizes; the FutureEval Bot Tournament is a competition-specific exception, not a general permission."
+      ]
+    },
+    {
+      "id": "midterms-2026",
+      "name": "US Midterms 2026 (Metaculus tournament)",
+      "category": "forecasting",
+      "sourceUrl": "https://www.metaculus.com/tournament/midterms-2026/",
+      "sourceLabel": "US Midterms 2026",
+      "pages": [
+        "https://www.metaculus.com/tournament/midterms-2026/",
+        "https://www.metaculus.com/tournaments/",
+        "https://www.metaculus.com/tournament-rules/"
+      ],
+      "amountUsd": 10000,
+      "freeConfirmed": "yes",
+      "facts": {
+        "prize": {
+          "value": "$10,000 Prize Pool",
+          "quote": "$10,000Prize Pool",
+          "url": "https://www.metaculus.com/tournament/midterms-2026/"
+        },
+        "entry": {
+          "value": "Free to participate",
+          "quote": "We are not a prediction market. You can participate for free and win cash prizes for being accurate.",
+          "url": "https://www.metaculus.com/tournaments/"
+        },
+        "deadline": {
+          "value": "2026-11-04",
+          "quote": "Started May 27 / Closes Nov 04 / $10,000 Prize Pool / View Questions(26)",
+          "url": "https://www.metaculus.com/tournament/midterms-2026/"
+        },
+        "status": {
+          "value": "Open until 4 Nov 2026",
+          "quote": "Closes Nov 04",
+          "url": "https://www.metaculus.com/tournament/midterms-2026/"
+        }
+      },
+      "notStated": [
+        "Eligibility restrictions are not stated on this page",
+        "By participating in this competition you agree to be bound and abide by the Rules for Competitions on Metaculus (linked, not read in full)"
+      ],
+      "flags": [
+        "Closes 2026-11-04, two days after this verification pass."
+      ]
+    },
+    {
+      "id": "codex-twitchcon-2026",
+      "name": "Codex x TwitchCon Hackathon",
+      "category": "tech",
+      "sourceUrl": "https://twitchcon-codex.devpost.com/rules",
+      "sourceLabel": "Official rules (Devpost)",
+      "pages": [
+        "https://twitchcon-codex.devpost.com/rules",
+        "https://devpost.com/hackathons"
+      ],
+      "amountUsd": 10000,
+      "freeConfirmed": "yes",
+      "facts": {
+        "entry": {
+          "value": "Free entry — no purchase or payment necessary",
+          "quote": "NO PURCHASE OR PAYMENT NECESSARY TO ENTER OR WIN. A PURCHASE OR PAYMENT WILL NOT INCREASE YOUR CHANCES OF WINNING.",
+          "url": "https://twitchcon-codex.devpost.com/rules"
+        },
+        "prize": {
+          "value": "1st Place $10,000 USD; Devpost lists $25,000 in prizes",
+          "quote": "| 1st Place | $10,000 USD and stage time at TwitchCon | ... Codex x TwitchCon Hackathon ... $25,000 in prizes",
+          "url": "https://twitchcon-codex.devpost.com/rules"
+        },
+        "deadline": {
+          "value": "2026-11-02",
+          "quote": "Deadline: Nov 2, 2026 @ 5:00pm EST ... Submission Period: October 23, 2026 (10:00 am Pacific Time) – November 2, 2026 (2:00 pm Pacific Time)",
+          "url": "https://twitchcon-codex.devpost.com/rules"
+        },
+        "eligibility": {
+          "value": "18+ (or age of majority); some countries excluded",
+          "quote": "Individuals who are at least eighteen (18) years old or the age of majority where they reside as of the time of entry",
+          "url": "https://twitchcon-codex.devpost.com/rules"
+        },
+        "aiAgent": {
+          "value": "AI coding assistants allowed; Codex required and a Codex session ID must be submitted",
+          "quote": "Participants may use standard development tools, including frameworks, libraries, starter templates, and AI coding assistants. ... Provide the Codex session ID for the Codex thread where the Project was built.",
+          "url": "https://twitchcon-codex.devpost.com/rules"
+        }
+      },
+      "notStated": [
+        "Prize amounts for 2nd place were split across fetched chunks and are not quoted here"
+      ],
+      "flags": [
+        "Deadline is 2026-11-02 (2:00 pm Pacific / 5:00 pm EST), the day of this pass.",
+        "The ledger records '$10,000 first place'; the official hackathon listing states '$25,000 in prizes' across five awards."
+      ]
+    },
+    {
+      "id": "paypal-ai-hackathon-2026",
+      "name": "PayPal AI Hackathon",
+      "category": "tech",
+      "sourceUrl": "https://paypalaihackathon.devpost.com/rules",
+      "sourceLabel": "Official rules (Devpost)",
+      "pages": [
+        "https://paypalaihackathon.devpost.com/rules",
+        "https://devpost.com/hackathons"
+      ],
+      "amountUsd": 12000,
+      "freeConfirmed": "yes",
+      "facts": {
+        "entry": {
+          "value": "Free entry — no purchase or payment necessary",
+          "quote": "NO PURCHASE OR PAYMENT NECESSARY TO ENTER OR WIN. A PURCHASE OR PAYMENT WILL NOT INCREASE YOUR CHANCES OF WINNING.",
+          "url": "https://paypalaihackathon.devpost.com/rules"
+        },
+        "prize": {
+          "value": "1st Place $12,000 USD; 2nd $8,000; 3rd $5,000",
+          "quote": "| 1st Place | $12,000 USD | 1 | All Eligible Submissions | | 2nd Place | $8,000 USD | 1 | ... | 3rd Place | $5,000 USD | 1 |",
+          "url": "https://paypalaihackathon.devpost.com/rules"
+        },
+        "deadline": {
+          "value": "2026-11-12",
+          "quote": "Deadline: Nov 12, 2026 @ 3:00pm EST ... Submission Period: Thursday Oct 1, 2026 (9:15 am Pacific Time) – Thursday Nov 12, 2026 (12:00 pm Pacific Time)",
+          "url": "https://paypalaihackathon.devpost.com/rules"
+        },
+        "eligibility": {
+          "value": "Age of majority; organisations allowed; some countries excluded",
+          "quote": "Individuals who are at least the age of majority where they reside as of the time of entry",
+          "url": "https://paypalaihackathon.devpost.com/rules"
+        },
+        "aiAgent": {
+          "value": "Any AI tool allowed; free PayPal sandbox required",
+          "quote": "Entrants must build or update an application that integrates the PayPal developer platform (using the free sandbox environment) along with an AI tool, model, or platform of their choice ... To access the PayPal sandbox environment, use your existing PayPal account or create a free account",
+          "url": "https://paypalaihackathon.devpost.com/rules"
+        }
+      },
+      "notStated": [
+        "The $67,500 headline on the Devpost index is not a single cash prize"
+      ],
+      "flags": [
+        "The Devpost headline '$67,500 in prizes' includes non-cash Sponsor Prizes such as '$1000 Render credits' (official rules prize table).",
+        "New & Existing projects are allowed if significantly updated during the Submission Period."
+      ]
+    },
+    {
+      "id": "devpost",
+      "name": "Devpost Hackathons",
+      "category": "tech",
+      "sourceUrl": "https://devpost.com/hackathons",
+      "sourceLabel": "Devpost hackathon index",
+      "pages": [
+        "https://devpost.com/hackathons"
+      ],
+      "amountUsd": null,
+      "freeConfirmed": null,
+      "facts": {
+        "prize": {
+          "value": "Per hackathon: Meta VR Start Developer Competition 2026 $1,000,000; Codegeist 2026 $120,000; Kiroween 2026 $100,000; PayPal AI Hackathon $67,500; UGREEN 2026 $46,000; Codex x TwitchCon $25,000; Learn AR with SPECS $2,500",
+          "quote": "Showing 14228 hackathons ... $1,000,000 in prizes ... $120,000 in prizes ... $100,000 in prizes ... $67,500 in prizes ... $46,000 in prizes ... $25,000 in prizes ... $2,500 in prizes",
+          "url": "https://devpost.com/hackathons"
+        },
+        "status": {
+          "value": "14,228 hackathons listed with Upcoming / Open / Ended filters",
+          "quote": "Showing 14228 hackathons ... Status: Upcoming / Open / Ended",
+          "url": "https://devpost.com/hackathons"
+        }
+      },
+      "notStated": [
+        "No platform-wide entry-fee statement",
+        "The ledger's '$10,000 to $685,000 per hackathon' is not on this page"
+      ],
+      "flags": [
+        "The ledger's stated range is stale: the official index shows a $1,000,000 contest (Meta VR Start Developer Competition 2026).",
+        "Some listings are '5 non-cash prizes' (DSH Hacks V2)."
+      ]
+    },
+    {
+      "id": "espn-pickem",
+      "name": "ESPN NFL Pick'em",
+      "category": "sports",
+      "sourceUrl": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay",
+      "sourceLabel": "ESPN How to Play / Official Rules",
+      "pages": [
+        "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay",
+        "https://fantasy.espn.com/free-prize-games"
+      ],
+      "amountUsd": 102000,
+      "freeConfirmed": "yes",
+      "facts": {
+        "prize": {
+          "value": "$102,000 total (3 x $20,000; $10,000 Confidence; 18 weekly $500 x 3 modes; $5,000 random drawing)",
+          "quote": "**$102,000** in total prize money is up for grabs! - Three (3) GRAND PRIZES of $20,000 each ... One (1) GRAND PRIZE of $10,000 ... Eighteen (18) WEEKLY PRIZES of $500 each ... One (1) RANDOM DRAWING PRIZE of $5,000",
+          "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay"
+        },
+        "entry": {
+          "value": "Free to play",
+          "quote": "Are ESPN games free to play? Yes! Every game we offer is completely free. ... NO PURCHASE OR PAYMENT NECESSARY TO ENTER OR WIN.",
+          "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay"
+        },
+        "deadline": {
+          "value": "2027-01-10",
+          "quote": "Registration for the Promotion begins on Thursday, May 21, 2026 at 3:00 pm E.T. and ends on Sunday, January 10, 2027 at 8:19 pm ET",
+          "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay"
+        },
+        "eligibility": {
+          "value": "18+; US/DC (excl. territories), Canada (excl. Quebec), UK, Australia; registered ESPN member",
+          "quote": "NFL Pick'em (the 'Promotion') is open to legal residents of the fifty (50) United States and the District of Columbia (excluding Puerto Rico, other United States territories, and foreign territories) and Canada (excluding Quebec) ... The United Kingdom ... and Australia ... who are eighteen (18) years of age or older",
+          "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay"
+        },
+        "aiAgent": {
+          "value": "Automated entry programs are prohibited",
+          "quote": "Entries must be manually key-stroked by the entrant; use of automated entry devices or programs, or entries by third parties are prohibited.",
+          "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay"
+        }
+      },
+      "notStated": [
+        "The $5,000 random drawing is not a skill prize"
+      ],
+      "flags": [
+        "ESPN's own page states both 'You can now create up to 10 entries' and 'you can create another entry (up to five total)'.",
+        "Automated entry programs are prohibited — an agent may not submit picks."
+      ]
+    },
+    {
+      "id": "cbs-pro-pickem",
+      "name": "CBS Sports Pro Football Pick'em",
+      "category": "sports",
+      "sourceUrl": "https://www.cbssports.com/fantasy/football/games/pickem/rules",
+      "sourceLabel": "2026 official rules",
+      "pages": [
+        "https://www.cbssports.com/fantasy/football/games/pickem/rules"
+      ],
+      "amountUsd": 223000,
+      "freeConfirmed": "yes",
+      "facts": {
+        "entry": {
+          "value": "Free to play",
+          "quote": "The Challenge is FREE to play. No purchase, wireless device or entry fee necessary to enter or win.",
+          "url": "https://www.cbssports.com/fantasy/football/games/pickem/rules"
+        },
+        "prize": {
+          "value": "18 weekly $1,000; $5,000 season; $100,000 contingency; maximum ARV $223,000",
+          "quote": "Each Weekly Prize consists of One Thousand Dollars (US$1,000.00) ... The Season Long Prize consists of Five Thousand Dollars (US$5,000.00) ... the contingency prize, which consists of One Hundred Thousand Dollars (US$100,000.00) ... Maximum ARV of all Prizes to be awarded is Two Hundred Twenty-Three Thousand Dollars (US$223,000.00)",
+          "url": "https://www.cbssports.com/fantasy/football/games/pickem/rules"
+        },
+        "deadline": {
+          "value": "2027-01-10",
+          "quote": "The Challenge commences on September 9, 2026 and is scheduled to end on January 10, 2027 (the 'Challenge Period').",
+          "url": "https://www.cbssports.com/fantasy/football/games/pickem/rules"
+        },
+        "eligibility": {
+          "value": "18+; 50 US states + DC; registered CBSI user",
+          "quote": "THIS CHALLENGE IS OPEN TO PERSONS WHO ARE: (A) REGISTERED USERS OF THE CBSI NETWORK OF WEBSITES; (B) LEGAL RESIDENTS OF ONE OF THE FIFTY (50) UNITED STATES OR THE DISTRICT OF COLUMBIA ... (C) (18) YEARS OLD OR AGE OF MAJORITY",
+          "url": "https://www.cbssports.com/fantasy/football/games/pickem/rules"
+        },
+        "aiAgent": {
+          "value": "Automated scripts can disqualify",
+          "quote": "CBSI, in its sole discretion, may disqualify any entrant ... accumulating points through methods such as automated computer scripts or other programming techniques",
+          "url": "https://www.cbssports.com/fantasy/football/games/pickem/rules"
+        }
+      },
+      "notStated": [
+        "The $100,000 contingency prize is only for a perfect week and exact tiebreaker scores"
+      ],
+      "flags": [
+        "The $100,000 prize is a contingency prize, not a regular season prize.",
+        "Automated scripts can disqualify an entrant."
+      ]
+    },
+    {
+      "id": "espn-survivor",
+      "name": "ESPN NFL Survivor",
+      "category": "sports",
+      "sourceUrl": "https://fantasy.espn.com/games/nfl-survivor-2026/make-picks",
+      "sourceLabel": "ESPN NFL Survivor",
+      "pages": [
+        "https://fantasy.espn.com/games/nfl-survivor-2026/make-picks"
+      ],
+      "amountUsd": 25000,
+      "freeConfirmed": "yes",
+      "facts": {
+        "prize": {
+          "value": "$25,000 total prizes",
+          "quote": "Survive the entire season and you could win $25,000! ... Total Prizes $25,000",
+          "url": "https://fantasy.espn.com/games/nfl-survivor-2026/make-picks"
+        },
+        "entry": {
+          "value": "Free entries (up to 25)",
+          "quote": "Create up to 25 free entries to maximize your chances of winning the $25,000 Grand Prize!",
+          "url": "https://fantasy.espn.com/games/nfl-survivor-2026/make-picks"
+        },
+        "status": {
+          "value": "Entry creation closed",
+          "quote": "You Just Missed It! Entry creation has closed, but check out these other free games for more chances to win prizes and compete with friends!",
+          "url": "https://fantasy.espn.com/games/nfl-survivor-2026/make-picks"
+        }
+      },
+      "notStated": [
+        "Event Dates 09/09/2026 - 01/10/2027 are shown on the page but are not an entry deadline"
+      ],
+      "flags": [
+        "The official page says 'Entry creation has closed' while the pinned ledger labels this row 'live'."
+      ]
+    },
+    {
+      "id": "fox-super6",
+      "name": "FOX Super 6",
+      "category": "sports",
+      "sourceUrl": "https://www.foxsports.com/fox-super-6",
+      "sourceLabel": "FOX Super 6",
+      "pages": [
+        "https://www.foxsports.com/fox-super-6"
+      ],
+      "amountUsd": null,
+      "freeConfirmed": "yes",
+      "facts": {
+        "entry": {
+          "value": "Free-to-play game",
+          "quote": "Enter our free-to-play game by predicting the correct answers of 6 questions for your chance at weekly cash prizes!",
+          "url": "https://www.foxsports.com/fox-super-6"
+        },
+        "status": {
+          "value": "No active games",
+          "quote": "play to win cash prizes Fox Super 6 returns soon! ... No active games. Check back soon for updates.",
+          "url": "https://www.foxsports.com/fox-super-6"
+        }
+      },
+      "notStated": [
+        "No prize amount is published on the current page"
+      ],
+      "flags": [
+        "No active games and no prize figure on the official page; the prize cell is blank."
+      ]
+    },
+    {
+      "id": "mlb-beat-the-streak",
+      "name": "MLB Beat the Streak",
+      "category": "sports",
+      "sourceUrl": "https://www.mlb.com/apps/beat-the-streak/official-rules",
+      "sourceLabel": "Beat the Streak 2026 Official Rules",
+      "pages": [
+        "https://www.mlb.com/apps/beat-the-streak/official-rules"
+      ],
+      "amountUsd": 5600000,
+      "freeConfirmed": "yes",
+      "facts": {
+        "entry": {
+          "value": "Free entry",
+          "quote": "NO PURCHASE NECESSARY TO ENTER OR WIN. A PURCHASE WILL NOT IMPACT YOUR OPPORTUNITY TO WIN.",
+          "url": "https://www.mlb.com/apps/beat-the-streak/official-rules"
+        },
+        "prize": {
+          "value": "Grand Prize $5,600,000 (30-year annuity or $3,000,000 lump sum); Top Streak Prize $10,000",
+          "quote": "The 'Grand Prize' is five million six hundred thousand U.S. dollars. ... (b) one (1) lump sum payment ... equals three million U.S. dollars (US $3,000,000) ... The 'Top Streak Prize' is ten thousand U.S. dollars ($10,000).",
+          "url": "https://www.mlb.com/apps/beat-the-streak/official-rules"
+        },
+        "status": {
+          "value": "Entry window tied to the 2026 MLB regular season",
+          "quote": "The entry period for BTS will begin on or about 12:00 p.m. Eastern Standard Time ('ET') on March 24, 2026 ... and end upon the conclusion of the final game of the 2026 MLB regular season",
+          "url": "https://www.mlb.com/apps/beat-the-streak/official-rules"
+        },
+        "eligibility": {
+          "value": "21+; US (incl. territories) and Canada (excl. Quebec); registered MLB.com user",
+          "quote": "BTS is open only to legal residents of the United States, including its commonwealths, territories, and possessions, and Canada (excluding Quebec) who are ... at least twenty-one (21) years old",
+          "url": "https://www.mlb.com/apps/beat-the-streak/official-rules"
+        }
+      },
+      "notStated": [
+        "A prize is only paid if a streak of 57 (Grand) or at least 20 (Top Streak) is achieved"
+      ],
+      "flags": [
+        "The Grand Prize is only awarded for a 57-game streak; the Top Streak Prize only if no Grand Prize is awarded and a streak of 20+ is reached.",
+        "The entry period ends with the 2026 MLB regular season."
+      ]
+    },
+    {
+      "id": "wergle-flomp",
+      "name": "Wergle Flomp Humor Poetry Contest",
+      "category": "creative",
+      "sourceUrl": "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free",
+      "sourceLabel": "Winning Writers contest page",
+      "pages": [
+        "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free"
+      ],
+      "amountUsd": 5100,
+      "freeConfirmed": "yes",
+      "facts": {
+        "entry": {
+          "value": "No fee to enter",
+          "quote": "Now in its 26th year, this contest seeks today's best humor poems. No fee to enter. Submit published or unpublished work. $5,100 in prizes.",
+          "url": "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free"
+        },
+        "prize": {
+          "value": "$5,100 in prizes (1st $2,000; 2nd $750; 3rd $350; 10 x $200 honourable mentions)",
+          "quote": "First Prize: $2,000 ... Second Prize: $750 ... Third Prize: $350 ... Honorable Mentions: 10 awards of $200 each",
+          "url": "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free"
+        },
+        "deadline": {
+          "value": "2027-04-01",
+          "quote": "Please submit one humor poem during August 15, 2026-April 1, 2027",
+          "url": "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free"
+        },
+        "eligibility": {
+          "value": "All ages; most countries; English; one poem, max 250 lines",
+          "quote": "Authors from all countries eligible except Iran, North Korea, Crimea, Russia, and Belarus (due to US government restrictions). ... No restriction on age of author.",
+          "url": "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free"
+        },
+        "aiAgent": {
+          "value": "AI-generated text is prohibited",
+          "quote": "Any writing that you submit to a Winning Writers contest must be composed using your own words, and may not contain any AI-generated text.",
+          "url": "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free"
+        }
+      },
+      "notStated": [
+        "Results announced 15 August 2027 (stated, not a deadline)"
+      ],
+      "flags": [
+        "AI-generated text is prohibited by the official rules — not suitable for an AI-agent-authored entry."
+      ]
+    },
+    {
+      "id": "tom-howard-poetry",
+      "name": "Tom Howard/Margaret Reid Poetry Contest",
+      "category": "creative",
+      "sourceUrl": "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest",
+      "sourceLabel": "Winning Writers contest page",
+      "pages": [
+        "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest"
+      ],
+      "amountUsd": 12000,
+      "freeConfirmed": "no",
+      "facts": {
+        "entry": {
+          "value": "$27 per submission (paid)",
+          "quote": "Fee: $27 per submission (one submission may contain up to 3 poems). Enter as many submissions as you wish.",
+          "url": "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest"
+        },
+        "prize": {
+          "value": "$12,000 in prizes ($3,500 + $3,500 + 10 x $500)",
+          "quote": "Welcome to the 25th annual Tom Howard/Margaret Reid Poetry Contest. Submit published or unpublished work. $12,000 in prizes. ... TOM HOWARD PRIZE: $3,500 ... MARGARET REID PRIZE: $3,500 ... Honorable Mentions: 10 awards of $500 each",
+          "url": "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest"
+        },
+        "status": {
+          "value": "Currently closed",
+          "quote": "This contest is currently closed. It will open again on April 15, 2027.",
+          "url": "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest"
+        },
+        "deadline": {
+          "value": "2027-10-01",
+          "quote": "Please submit during April 15-October 1, 2027",
+          "url": "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest"
+        },
+        "aiAgent": {
+          "value": "AI-generated text is prohibited",
+          "quote": "Any writing that you submit to a Winning Writers contest must be composed using your own words, and may not contain any AI-generated text.",
+          "url": "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest"
+        }
+      },
+      "notStated": [
+        "Next cycle's results announced 15 April 2028"
+      ],
+      "flags": [
+        "Paid entry ($27 per submission) even though the reference ledger lists this as a free-entry competition.",
+        "Currently closed.",
+        "AI-generated text is prohibited."
+      ]
+    },
+    {
+      "id": "sony-world-photo",
+      "name": "Sony World Photography Awards",
+      "category": "creative",
+      "sourceUrl": "https://www.worldphoto.org/sony-world-photography-awards",
+      "sourceLabel": "World Photography Organisation",
+      "pages": [
+        "https://www.worldphoto.org/sony-world-photography-awards"
+      ],
+      "amountUsd": 25000,
+      "freeConfirmed": "yes",
+      "facts": {
+        "entry": {
+          "value": "Free to enter",
+          "quote": "Since the beginning, the Awards have championed inclusivity and access by being free to enter.",
+          "url": "https://www.worldphoto.org/sony-world-photography-awards"
+        },
+        "prize": {
+          "value": "$25,000 (Series); $5,000 (Single Image)",
+          "quote": "Enter your best series of 5 to 10 images - you could win $25,000 ... Enter your best single images - you could win $5,000",
+          "url": "https://www.worldphoto.org/sony-world-photography-awards"
+        },
+        "deadline": {
+          "value": "2027-01-12",
+          "quote": "27 November 2026 16:00 GMT Student competition closes ... 5 January 2027 16:00 GMT Single Image and Youth competition close ... 12 January 2027 16:00 GMT Series competition closes",
+          "url": "https://www.worldphoto.org/sony-world-photography-awards"
+        },
+        "status": {
+          "value": "2027 awards open for entries",
+          "quote": "1 June 0:00 BST 2027 Sony World Photography Awards open for entries",
+          "url": "https://www.worldphoto.org/sony-world-photography-awards"
+        }
+      },
+      "notStated": [
+        "Eligibility restrictions are not stated on this page"
+      ],
+      "flags": [
+        "Competition names changed: 'Series competition (Previously Professional competition)' and 'Single Image competition (Previously Open competition)' — the ledger's 'Professional Photographer of the Year' / 'Open' labels are out of date."
+      ]
+    },
+    {
+      "id": "weather-potw",
+      "name": "Weather Photographer of the Year",
+      "category": "creative",
+      "sourceUrl": "https://www.rmets.org/weather-photographer-of-the-year",
+      "sourceLabel": "Royal Meteorological Society",
+      "pages": [
+        "https://www.rmets.org/weather-photographer-of-the-year"
+      ],
+      "amountUsd": null,
+      "freeConfirmed": "yes",
+      "facts": {
+        "entry": {
+          "value": "Free to enter",
+          "quote": "This annual competition is open to photographers of all skill levels worldwide and is free to enter.",
+          "url": "https://www.rmets.org/weather-photographer-of-the-year"
+        },
+        "status": {
+          "value": "Submissions ran 11 June - 20 August; winners announced 17 November",
+          "quote": "11 June 20 August Submissions open ... 21 August 2 October Judging period ... 22 October 5 November Public vote ... 17 November Winners announced",
+          "url": "https://www.rmets.org/weather-photographer-of-the-year"
+        }
+      },
+      "notStated": [
+        "No prize amounts are stated on the official competition page",
+        "The ledger's '£5,000 (winner); £2,500 (mobile); £750 (young winner)' could not be confirmed from this page"
+      ],
+      "flags": [
+        "No prize amount on the official page; the prize cell is blank and the ledger figure is flagged unverified."
+      ]
+    },
+    {
+      "id": "vocal",
+      "name": "Vocal Challenges",
+      "category": "creative",
+      "sourceUrl": "https://vocal.media/resources/challenges-frequently-asked-questions",
+      "sourceLabel": "Vocal Challenges FAQ",
+      "pages": [
+        "https://vocal.media/resources/challenges-frequently-asked-questions"
+      ],
+      "amountUsd": null,
+      "freeConfirmed": "yes",
+      "facts": {
+        "entry": {
+          "value": "No payment required, but some challenges require a paid Vocal+ membership",
+          "quote": "You're not required to pay to enter Vocal's Challenges. However, some Challenges will only be open to Vocal+ members, and creators that do not have a Vocal+ membership won't be able to enter these exclusive Challenges.",
+          "url": "https://vocal.media/resources/challenges-frequently-asked-questions"
+        },
+        "eligibility": {
+          "value": "13+, active Vocal account, Stripe-available country",
+          "quote": "To be eligible to win a Challenge, you must be over the age of 13, have an active Vocal account (or a Vocal+ account, if applicable), and be residing in a country where Stripe is available at time of entry.",
+          "url": "https://vocal.media/resources/challenges-frequently-asked-questions"
+        },
+        "status": {
+          "value": "At least one challenge always running",
+          "quote": "We'll always have at least one Challenge running, and you can always find the current active Challenges on Vocal's home page.",
+          "url": "https://vocal.media/resources/challenges-frequently-asked-questions"
+        }
+      },
+      "notStated": [
+        "No prize amount is stated on the FAQ",
+        "Cash prizes are paid to a Stripe account"
+      ],
+      "flags": [
+        "Some challenges require a paid Vocal+ membership.",
+        "No prize amount on the official FAQ; prize cell blank."
+      ]
+    },
+    {
+      "id": "deriv-tournaments",
+      "name": "Deriv Trading Tournaments",
+      "category": "market",
+      "sourceUrl": "https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes",
+      "sourceLabel": "Deriv newsroom announcement",
+      "pages": [
+        "https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes"
+      ],
+      "amountUsd": 1000,
+      "freeConfirmed": "yes",
+      "facts": {
+        "entry": {
+          "value": "Free entry, no deposit",
+          "quote": "Each tournament is free to enter, uses $10,000 in virtual funds, and awards real cash prizes to top performers with no deposit required. ... Free entry; no purchase or deposit necessary",
+          "url": "https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes"
+        },
+        "prize": {
+          "value": "1st $1,000; 2nd $600; 3rd $400 per monthly tournament",
+          "quote": "Prizes per monthly tournament - 1st place: $1,000 (cash prize) - 2nd place: $600 - 3rd place: $400",
+          "url": "https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes"
+        },
+        "eligibility": {
+          "value": "Fully verified Deriv account required",
+          "quote": "To receive a prize, participants must have a fully verified Deriv account.",
+          "url": "https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes"
+        },
+        "status": {
+          "value": "Monthly, open tournament schedule on contest.deriv.com",
+          "quote": "Open monthly; see schedule and eligibility on the contest site ... Please check tournament dates: contest.deriv.com.",
+          "url": "https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes"
+        }
+      },
+      "notStated": [
+        "Deriv (SVG) LLC is the operator, registered in St Vincent and the Grenadines",
+        "Trading takes place entirely in a simulated/demo environment"
+      ],
+      "flags": [
+        "A fully verified Deriv account is required to receive a prize.",
+        "Operator is Deriv (SVG) LLC (St Vincent and the Grenadines) and trading is simulated."
+      ]
+    },
+    {
+      "id": "gamersaloon",
+      "name": "GamerSaloon 1-Rounders",
+      "category": "skill",
+      "sourceUrl": "https://www.gamersaloon.com/promos/1rounder/",
+      "sourceLabel": "GamerSaloon 1-Rounders",
+      "pages": [
+        "https://www.gamersaloon.com/promos/1rounder/"
+      ],
+      "amountUsd": 10,
+      "freeConfirmed": "yes",
+      "facts": {
+        "entry": {
+          "value": "Free tournaments, one entry per person",
+          "quote": "Sign Up. Play Now For Free. Win Money. ... These special free tournaments are limited to one entry per person, so pick your title wisely.",
+          "url": "https://www.gamersaloon.com/promos/1rounder/"
+        },
+        "prize": {
+          "value": "$10 per bracket, paid as Bonus Cash (not withdrawable)",
+          "quote": "Get the win and $10 is yours. ... Prizes are paid as Bonus Cash*. ... *Bonus Cash can be used to enter tournaments, matches, and pay other fees on GamerSaloon. It is not eligible for withdrawal.",
+          "url": "https://www.gamersaloon.com/promos/1rounder/"
+        },
+        "status": {
+          "value": "Weekly on Saturdays at 4:30 PM CT",
+          "quote": "Launched Weekly on Saturdays at 4:30 PM CT.",
+          "url": "https://www.gamersaloon.com/promos/1rounder/"
+        }
+      },
+      "notStated": [
+        "Eligibility is not stated beyond an 18+ graphic"
+      ],
+      "flags": [
+        "The $10 prize is Bonus Cash which 'is not eligible for withdrawal' — it is not withdrawable USD."
+      ]
+    },
+    {
+      "id": "solitaire-cash",
+      "name": "Solitaire Cash (Papaya)",
+      "category": "skill",
+      "sourceUrl": "https://www.papaya.com/faq",
+      "sourceLabel": "Papaya Gaming FAQ",
+      "pages": [
+        "https://www.papaya.com/faq"
+      ],
+      "amountUsd": null,
+      "freeConfirmed": "partial",
+      "facts": {
+        "entry": {
+          "value": "Free Gems competitions and separate cash competitions",
+          "quote": "Do I need to spend real money to play PAPAYA games? - No. PAPAYA offers both free competitions using Gems and cash competitions. ... Do I need to spend real money to play Solitaire Cash? - No. Solitaire Cash offers both free competitions using Gems and real money competitions.",
+          "url": "https://www.papaya.com/faq"
+        },
+        "prize": {
+          "value": "Real cash prizes are advertised for cash competitions (no amount stated)",
+          "quote": "Can I win money playing PAPAYA games? - Yes. Since PAPAYA games are skill-based competitions, players can compete for real cash prizes.",
+          "url": "https://www.papaya.com/faq"
+        },
+        "aiAgent": {
+          "value": "No bots are used, per the FAQ",
+          "quote": "No. PAPAYA currently does not use bots in any of its games.",
+          "url": "https://www.papaya.com/faq"
+        }
+      },
+      "notStated": [
+        "No specific cash prize amount is stated",
+        "The FAQ does not state a cash-out method"
+      ],
+      "flags": [
+        "Free competitions pay Gems, not dollars; the cash rooms are a separate paid path.",
+        "Our business model is based on taking a platform fee out of the total entry fees pool in each tournament (official FAQ)."
+      ]
+    },
+    {
+      "id": "herox",
+      "name": "HeroX / Challenge.gov",
+      "category": "tech",
+      "sourceUrl": "https://www.herox.com/crowdsourcing-projects",
+      "sourceLabel": "HeroX Explore Challenges",
+      "pages": [
+        "https://www.herox.com/challenges",
+        "https://www.herox.com/crowdsourcing-projects",
+        "https://www.challenge.gov/",
+        "https://www.usa.gov/challenges"
+      ],
+      "amountUsd": null,
+      "freeConfirmed": null,
+      "facts": {
+        "prize": {
+          "value": "Per challenge: 'Artificial Intelligence + Origin of Life Prize, $10 Million USD' with '$100K for proof of concept'",
+          "quote": "Artificial Intelligence + Origin of Life Prize, $10 Million USD ... How can life's origin & genetic code lead to superior AI? Solve science's #1 mystery for a $10M prize w/ patent. $100K for proof of concept.",
+          "url": "https://www.herox.com/crowdsourcing-projects"
+        },
+        "status": {
+          "value": "Original /challenges URL is a 404; replacement lists challenges",
+          "quote": "Hello. We can't seem to find the page you are looking for. ... # Explore Challenges / Find your perfect innovation challenge on HeroX.",
+          "url": "https://www.herox.com/challenges"
+        }
+      },
+      "notStated": [
+        "No entry fee is stated on the listing page",
+        "No deadline is stated on the listing page"
+      ],
+      "flags": [
+        "herox.com/challenges returns 'Page not found'; the working URL is /crowdsourcing-projects.",
+        "The Challenge.gov platform was sunset on March 30, 2026; the official notice points to usa.gov/challenges."
+      ]
+    },
+    {
+      "id": "global-virtual-hackathon-2026",
+      "name": "Global Virtual Hackathon 2026",
+      "category": "tech",
+      "sourceUrl": "https://gvhackathon.com/",
+      "sourceLabel": "Global Virtual Hackathon 2026",
+      "pages": [
+        "https://gvhackathon.com/"
+      ],
+      "amountUsd": 1000,
+      "freeConfirmed": "yes",
+      "facts": {
+        "entry": {
+          "value": "Free entry, no fee",
+          "quote": "Free No entry fee, any school ... How much does it cost? Nothing. Entry is free.",
+          "url": "https://gvhackathon.com/"
+        },
+        "prize": {
+          "value": "$1,000 first place per division; two $250 runners-up per division",
+          "quote": "$1,000 USDcash first place ... Each division awards a $1,000 first prize and two $250 runner-up prizes.",
+          "url": "https://gvhackathon.com/"
+        },
+        "deadline": {
+          "value": "2026-11-25",
+          "quote": "Registration 28 September to 13 November ... Submission 23:59 AoE, 25 November ... submissions close 23:59 AoE on 25 November",
+          "url": "https://gvhackathon.com/"
+        },
+        "eligibility": {
+          "value": "Students aged 14-18, teams of 2-4, supervising teacher",
+          "quote": "Students aged 14 to 18 at any school worldwide, in teams of 2-4. ... Yes. Every team names a supervising teacher at a member's school, who confirms the team.",
+          "url": "https://gvhackathon.com/"
+        },
+        "aiAgent": {
+          "value": "AI tools allowed and expected, with an on-camera understanding check",
+          "quote": "Is AI allowed, and how do you keep it fair? Building with AI tools is allowed and expected. What we check is that the work is yours and that you understand it, which is exactly what the on-camera interview tests.",
+          "url": "https://gvhackathon.com/"
+        }
+      },
+      "notStated": [
+        "The ledger's 2026-11-13 date is the registration close, not the submission deadline"
+      ],
+      "flags": [
+        "The ledger's 'deadline 2026-11-13' is registration closing; the official submission deadline is 25 November 2026.",
+        "Eligibility is limited to students aged 14-18 with a supervising teacher."
+      ]
+    },
+    {
+      "id": "givling",
+      "name": "Givling",
+      "category": "trivia",
+      "sourceUrl": "https://givling.com/",
+      "sourceLabel": "Givling official site",
+      "pages": [
+        "https://givling.com/"
+      ],
+      "amountUsd": null,
+      "freeConfirmed": null,
+      "facts": {
+        "status": {
+          "value": "Crowdfunding queue, not a trivia contest",
+          "quote": "Givling puts the fun in crowdfunding! ... The only crowdfunding competition in the world where you can receive up to $100,000 in crowdfunding ... $50,000 from competitive participation and up to $50,000 via our non-competitive Exchange.",
+          "url": "https://givling.com/"
+        },
+        "prize": {
+          "value": "Up to $100,000 in crowdfunding ($50,000 queue + up to $50,000 Exchange), not a contest prize",
+          "quote": "$50,000 through the Queue and $50,000 through the Exchange. ... The random Spinners give you Queue Points ... the next person is chosen via an immediate random drawing",
+          "url": "https://givling.com/"
+        }
+      },
+      "notStated": [
+        "No entry fee is stated",
+        "No skill-based prize amount is stated"
+      ],
+      "flags": [
+        "The official site describes a crowdfunding queue with random Spinners, not a trivia contest.",
+        "No free-entry statement on the page."
+      ]
+    },
+    {
+      "id": "aicrowd",
+      "name": "AIcrowd Challenges",
+      "category": "tech",
+      "sourceUrl": "https://www.aicrowd.com/challenges",
+      "sourceLabel": "AIcrowd Challenges",
+      "pages": [
+        "https://www.aicrowd.com/challenges"
+      ],
+      "amountUsd": null,
+      "freeConfirmed": null,
+      "facts": {},
+      "notStated": [
+        "The fetched page returned a 'Loading' shell and an uncurated tag list",
+        "No prize figure, entry fee, deadline or eligibility could be confirmed",
+        "The ledger's 'up to $150,000+' claim could not be confirmed"
+      ],
+      "flags": [
+        "Official challenges page returned no verifiable competition facts; every value cell remains blank and flagged."
+      ]
+    },
+    {
+      "id": "tradingview-leap",
+      "name": "TradingView — The Leap",
+      "category": "market",
+      "sourceUrl": "https://www.tradingview.com/the-leap/tradestation-july-2026/rules/",
+      "sourceLabel": "The Leap official rules",
+      "pages": [
+        "https://www.tradingview.com/the-leap/tradestation-july-2026/rules/"
+      ],
+      "amountUsd": 50000,
+      "freeConfirmed": "yes",
+      "facts": {
+        "entry": {
+          "value": "No purchase or payment necessary",
+          "quote": "NO PURCHASE OR PAYMENT OF ANY KIND NECESSARY TO PARTICIPATE OR WIN. THIS IS A COMPETITION OF SKILL.",
+          "url": "https://www.tradingview.com/the-leap/tradestation-july-2026/rules/"
+        },
+        "prize": {
+          "value": "$50,000 total ARV (1st 10,000 USD; 2nd 7,000; 3rd 6,000; 4th 3,500; 5th 2,500; 6-25 550; 26-50 400; 51-250 3-month subscription)",
+          "quote": "1 Place: 10,000 USD - 2 Place: 7,000 USD - 3 Place: 6,000 USD - 4 Place: 3,500 USD - 5 Place: 2,500 USD - From 6 to 25 Place: 550 USD - From 26 to 50 Place: 400 USD - From 51 to 250 Place: 3-month subscription ... The total approximate retail value ('ARV') of the cash prizes is: 50,000 USD.",
+          "url": "https://www.tradingview.com/the-leap/tradestation-july-2026/rules/"
+        },
+        "deadline": {
+          "value": "2026-08-14",
+          "quote": "The TradingView Paper Trading Competition ('Competition') begins at Jul 20, 2026, 08:00 UTC and ends at Aug 14, 2026, 08:00 UTC",
+          "url": "https://www.tradingview.com/the-leap/tradestation-july-2026/rules/"
+        },
+        "status": {
+          "value": "Ended 14 August 2026",
+          "quote": "ends at Aug 14, 2026, 08:00 UTC ('Competition Period')",
+          "url": "https://www.tradingview.com/the-leap/tradestation-july-2026/rules/"
+        },
+        "aiAgent": {
+          "value": "Scripted high-frequency trading can be banned",
+          "quote": "TradingView warns that excessively high activity of transactions in Paper Trading, including using various scripts, will lead to a ban on access to Paper Trading for one hour or longer.",
+          "url": "https://www.tradingview.com/the-leap/tradestation-july-2026/rules/"
+        }
+      },
+      "notStated": [
+        "Eligibility depends on TradingView plan status at the end of the Competition"
+      ],
+      "flags": [
+        "These rules are for the July-August 2026 edition, which ended 14 Aug 2026; the ledger labels the row 'live'.",
+        "Prizes from 51st to 250th place are a 3-month subscription, not cash."
+      ]
+    },
+    {
+      "id": "swagbucks-trivia",
+      "name": "Swagbucks Daily Trivia",
+      "category": "trivia",
+      "sourceUrl": "https://help.swagbucks.com/hc/en-us/articles/15374709231764-What-is-Swagbucks-Daily-Trivia",
+      "sourceLabel": "Swagbucks Help Center",
+      "pages": [
+        "https://help.swagbucks.com/hc/en-us/articles/15374709231764-What-is-Swagbucks-Daily-Trivia"
+      ],
+      "amountUsd": null,
+      "freeConfirmed": null,
+      "facts": {
+        "prize": {
+          "value": "SB points and 'big cash prizes' (no amount stated)",
+          "quote": "Daily Trivia Live, a real-time game with a host available Monday through Thursday featuring big cash prizes, bonus SB, and themed events ... You earn SB based on the number of questions you get right.",
+          "url": "https://help.swagbucks.com/hc/en-us/articles/15374709231764-What-is-Swagbucks-Daily-Trivia"
+        },
+        "status": {
+          "value": "Two games: Daily Trivia Live (Mon-Thu) and Daily Trivia Challenge (daily, resets 12am PT)",
+          "quote": "The Daily Trivia Challenge, a hostless game that can be played anytime, resetting at 12am Pacific Time, where SB is earned based on correct answers.",
+          "url": "https://help.swagbucks.com/hc/en-us/articles/15374709231764-What-is-Swagbucks-Daily-Trivia"
+        }
+      },
+      "notStated": [
+        "No entry fee is stated",
+        "No cash prize amount is stated"
+      ],
+      "flags": [
+        "Rewards are SB points; 'big cash prizes' has no stated amount, so the prize cell is blank."
+      ]
+    },
+    {
+      "id": "fpl-official",
+      "name": "Official FPL (Premier League)",
+      "category": "sports",
+      "sourceUrl": "https://fantasy.premierleague.com/en/help/rules",
+      "sourceLabel": "Fantasy Premier League rules",
+      "pages": [
+        "https://fantasy.premierleague.com/help/rules"
+      ],
+      "amountUsd": null,
+      "freeConfirmed": null,
+      "facts": {
+        "status": {
+          "value": "Game rules with a published 38-gameweek deadline calendar",
+          "quote": "### Deadlines ... | Gameweek 10 | Fri 6 Nov 13:30 | ... | Gameweek 38 | Sun 30 May 09:30 |",
+          "url": "https://fantasy.premierleague.com/en/help/rules"
+        }
+      },
+      "notStated": [
+        "No cash prize amount is stated on the official rules page",
+        "No explicit free-entry statement on the rules page",
+        "The ledger's 'VIP trip + Surface Laptop + Puma gear' could not be confirmed from this page"
+      ],
+      "flags": [
+        "The ledger's rules URL redirects to /en/help/rules.",
+        "No prize figure is stated on the official rules page; the prize cell is blank."
+      ]
+    },
+    {
+      "id": "roboforex-demo",
+      "name": "RoboForex Demo Contest",
+      "category": "market",
+      "sourceUrl": "https://roboforex.com/contests/",
+      "sourceLabel": "RoboForex contest URL",
+      "pages": [
+        "https://roboforex.com/contests/"
+      ],
+      "amountUsd": null,
+      "freeConfirmed": null,
+      "facts": {
+        "status": {
+          "value": "Official contest URL returns 404",
+          "quote": "# It seems that the page you requested doesn't exist on our web site. ## It may have been relocated.",
+          "url": "https://roboforex.com/contests/"
+        }
+      },
+      "notStated": [
+        "No contest terms, prize, entry fee or deadline could be read",
+        "The ledger's prize ladder ('1st $700 ...') could not be confirmed"
+      ],
+      "flags": [
+        "roboforex.com/contests/ returns a 404 page; no contest facts can be confirmed."
+      ]
+    }
+  ],
+  "newLeads": [
+    {
+      "name": "Fall 2026 FutureEval Bot Tournament (Metaculus)",
+      "category": "forecasting",
+      "prize": "$50,000 Prize Pool",
+      "entry": "Free participation",
+      "deadline": "2027-01-06",
+      "note": "Bot-only competition; 135 questions; automated $1k MiniBench every 2 weeks.",
+      "url": "https://www.metaculus.com/tournament/fall-futureeval-2026/",
+      "quote": "This is a bot-only competition where bot-makers attempt to push AI to its limits in predicting future events. ... $50,000Prize Pool ... Started Sep 28 2026 / Closes Jan 06 2027"
+    },
+    {
+      "name": "Meta VR Start Developer Competition 2026",
+      "category": "tech",
+      "prize": "$1,000,000 in prizes",
+      "entry": "",
+      "deadline": "2026-11-18",
+      "note": "Listed on the official Devpost index; 16 days left at time of reading; Sep 24 - Nov 18, 2026.",
+      "url": "https://devpost.com/hackathons",
+      "quote": "Meta VR Start Developer Competition 2026 ... $1,000,000 in prizes ... Oct ... Sep 24 - Nov 18, 2026"
+    },
+    {
+      "name": "Codegeist 2026 (Atlassian)",
+      "category": "tech",
+      "prize": "$120,000 in prizes",
+      "entry": "",
+      "deadline": "2026-12-22",
+      "note": "Listed on the official Devpost index; Oct 27 - Dec 22, 2026.",
+      "url": "https://devpost.com/hackathons",
+      "quote": "Codegeist 2026: Build with context. Ship with confidence. ... $120,000 in prizes ... Oct 27 - Dec 22, 2026"
+    },
+    {
+      "name": "Kiroween 2026",
+      "category": "tech",
+      "prize": "$100,000 in prizes",
+      "entry": "",
+      "deadline": "2026-12-04",
+      "note": "Listed on the official Devpost index; Oct 30 - Dec 04, 2026.",
+      "url": "https://devpost.com/hackathons",
+      "quote": "Kiroween 2026 ... $100,000 in prizes ... Oct 30 - Dec 04, 2026"
+    },
+    {
+      "name": "UGREEN Hackathon 2026 on AI NAS",
+      "category": "tech",
+      "prize": "$46,000 in prizes",
+      "entry": "",
+      "deadline": "2026-11-16",
+      "note": "Listed on the official Devpost index; Oct 22 - Nov 16, 2026.",
+      "url": "https://devpost.com/hackathons",
+      "quote": "UGREEN Hackathon 2026 on AI NAS ... $46,000 in prizes ... Oct 22 - Nov 16, 2026"
+    },
+    {
+      "name": "Artificial Intelligence + Origin of Life Prize (HeroX)",
+      "category": "tech",
+      "prize": "$10 Million USD; $100K for proof of concept",
+      "entry": "",
+      "deadline": "",
+      "note": "Listed on HeroX Explore Challenges; no entry fee or deadline stated on the listing.",
+      "url": "https://www.herox.com/crowdsourcing-projects",
+      "quote": "Artificial Intelligence + Origin of Life Prize, $10 Million USD ... $100K for proof of concept."
+    },
+    {
+      "name": "USA.gov federal challenge directory",
+      "category": "directory",
+      "prize": "",
+      "entry": "",
+      "deadline": "",
+      "note": "Current federal entry point after Challenge.gov was sunset on 2026-03-30.",
+      "url": "https://www.usa.gov/challenges",
+      "quote": "Challenges and prize competitions ... Browse active challenges from the government"
+    }
+  ]
+}

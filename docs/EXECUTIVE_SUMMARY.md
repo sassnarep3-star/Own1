@@ -1,94 +1,106 @@
 # Executive summary
 
-_Updated 2026-11-02; base verification snapshot 2026-11-01._
+_221 competitions, 30 rows checked against 40 official operator pages on 2026-11-02, 191 rows left blank and flagged. No inferred values._
 
-_What the competition catalogue contains, what official pages support, and what still needs review._
-
-
-## 1. The project and the decision
-
-The upstream Free Money & Contest Ledger is a discovery catalogue; its page presents a long list without search, filters, or sorting. The pinned source file has 206 listings. The current combined PrizeDesk dataset has 221 rows after 15 separately attributed additions. PrizeDesk organizes the list into nine category pages, a searchable and filterable table, a ranked shortlist, per-listing detail pages, an analysis, a verification page, and a Flagged for Review page.
-
-A row is a lead, not an offer. A source link is not proof that a competition is still open, free, or available to a particular person. Use the operator’s current rules before committing effort. This project does not estimate winning odds or expected return.
+Verified on 2026-11-02. Live site: https://sassnarep3-star.github.io/Own1/
 
 
-## 2. Verification snapshot
+## What this is
 
-| Measure | Value | Interpretation |
+Free-to-enter cash-prize competitions, reorganised into a mobile-friendly dashboard. The source is the third-party "Free Money & Contest Ledger" at https://karagemop466-tech.github.io/FreeMoneyApps/, whose maintained dataset is pinned by commit and SHA-256 in data/source/PROVENANCE.json. That ledger is a research catalogue, not an official operator document, so no figure from it is published as a fact.
+
+The live site is https://sassnarep3-star.github.io/Own1/. It contains 221 competition rows, one row per entry in the combined dataset, plus 7 new official leads found on 2026-11-02. Every row links to the operator's page where one exists; rows without an official source are labelled "none official" and flagged.
+
+
+## Dataset reconciliation and current-state audit
+
+The pinned source file has 206 listings. The combined dataset has 221 rows: 206 pinned upstream rows + 15 attributed additions. These are different datasets; 221 is not the reference site's own count.
+
+The base verification snapshot is dated 2026-11-01; the latest independent official-page cross-checks are dated 2026-11-02. Read the targeted current-state audit at data/verification/current-state-2026-11-02.md and the integration log at docs/SESSION-7a477419.md for the earlier sessions' reads, 25 check records and 31 historical irregularities.
+
+No Singapore-specific eligibility conclusion is established. Geographic restrictions, age limits, sanctions/export rules, prize payment and local law must be confirmed on the operator's rules page for the individual entering.
+
+
+## The rule we applied
+
+1. A value appears only when the exact wording is on an official operator page fetched on 2026-11-02. Each such value carries the verbatim quote and its URL on the Verified 2 Nov page.
+2. If an official page does not state a value, the cell is blank and the row is flagged unverified. Nothing is inferred, converted, summed, rounded or filled from the ledger.
+3. The reference ledger is used only for the competition name, its category grouping and where to look. Its prize, entry, status and eligibility labels are never republished as values.
+4. Every irregularity is published on the clearly labelled Flagged for Review page with its source links; a flag never blocks publication and never becomes a guessed value.
+
+
+## The 2026-11-02 verification pass
+
+| Measure | Value | Where it comes from |
 | --- | --- | --- |
-| Combined listings | 221 | 206 pinned upstream rows + 15 attributed additions |
-| Categories | 9 | Skill, trivia, sports, creative, forecasting, market, tech, directories, and pools |
-| Source-marked full free path | 196 | Source classification, not a fresh official confirmation for every row |
-| Some free events / paid cash / unknown path | 14 / 4 / 7 | Source classifications; verify the specific contest terms |
-| Rows marked ended / out of season | 27 | Pinned source status; check current operator status |
-| Live fetch outcomes in the 1 Nov snapshot | 12 loaded; 1 error | 13 fetch outcomes total |
-| Independent official-page checks | 22 rows | 25 check records; dates and readers are recorded per row |
-| Official-tier sources cited but not re-opened in that snapshot | 175 | Source URL recorded, but no fresh fetch in that pass |
-| No official-tier source in that snapshot | 11 | Claims need an operator source before verified values can be shown |
-| Prize cells blanked by the verifier | 80 | No official support or no stated amount |
-| Flagged irregularities | 31 | Published on Flagged for Review |
-| Pinned source review date | 2026-08-19 | 74 days before the 1 Nov base verification snapshot |
+| Competition rows | 221 | data/ledger.json (pinned source ledger + 5 merged additions) |
+| Official pages fetched on 2026-11-02 | 40 | data/verification-2026-11-02.json (pages) |
+| Rows with at least one confirmed official value | 30 | data/verification-2026-11-02.json (rows) |
+| Rows left blank and flagged unverified | 191 | 221 minus 30 |
+| Confirmed free-entry statements | 17 | exact wording on operator pages |
+| Confirmed paid-entry statements | 1 | exact wording on operator pages |
+| Rows with a confirmed prize figure | 24 | exact wording on operator pages |
+| Rows with no official source | 11 | data/verification.json |
+| Published irregularities | 49 | 31 historical + 18 new |
 
-The source classifies 196 rows as having a full free path, 14 as having some free events, 4 as requiring paid cash entry, and 7 as unknown. These are imported source labels, not verified current entry terms for all rows. A value the official page does not state stays unknown or blank.
+The 2026-11-01 automated link check is recorded separately in data/link-health.json: 203 URLs, 166 ok, 10 hard failures and 27 soft failures. Several "failures" are HTTP 403 anti-bot responses, not broken pages; the same pages loaded on 2026-11-02. The dated observation is published on the Flagged page, not treated as a verdict.
 
 
-## 3. What matters for an AI-assisted entrant
+## Best documented opportunities (verified 2026-11-02)
 
-- Metaculus Fall 2026 FutureEval is explicitly a bot-only tournament; its page states a $50,000 pool and a 6 Jan 2027 close. Metaculus general rules say no entry fee is required but normally exclude bots from prizes unless contest-specific terms permit them. The official resource page describes the bot competition. Model/API and search use can still have operating costs (flag I-30).
-- Metaculus US Midterms 2026 has a stated $10,000 pool and a 4 Nov close. General Metaculus rules allow AI assistance for a human forecaster only when final forecasts reflect that person’s own decisions and understanding. Check the contest-specific terms.
-- Codex x TwitchCon rules state no purchase/payment is necessary and require an OpenAI Codex-built Twitch-connected project, a repository, a public YouTube demo, a project description, and the Codex session ID. The event page states $25,000 total cash; first place is $10,000. The rules deadline is 2 Nov 2026 at 2 p.m. Pacific, so confirm immediately whether entry is still open.
-- The GEMS Prize page states a $300,000 total pool and 3 Dec 2026 close. Its entry-cost status is not confirmed as free; the latest verification pass also flags U.S.-based eligibility and a closing-time discrepancy (I-29). Read the official rules before considering it.
-- Global Virtual Hackathon is free and explicitly permits/expects AI tools, but eligibility is restricted to student teams aged 14–18 with a supervising teacher; its $1,000 first prize and two $250 runner-up prizes are per division.
+These are the rows where an official page states a cash figure, free/no-purchase entry and an open status. Ordered by the literal figure stated on the official page; this is not an odds estimate, an endorsement or an expected-value ranking. No figure has been summed or extrapolated. Excluded: rows the operator says are closed, ended or seasonal; rows whose verified deadline has passed; and prizes the operator describes as Bonus Cash, Gems, points, credits or crowdfunding.
 
-No Singapore-specific eligibility conclusion is established for any competition. Confirm geography, age, prize delivery, sanctions, local law, and any contest-specific restrictions before investing time.
+| Competition | Prize (official wording) | Entry (official wording) | Deadline | Status (official wording) | Official source |
+| --- | --- | --- | --- | --- | --- |
+| CBS Sports Pro Football Pick'em | 18 weekly $1,000; $5,000 season; $100,000 contingency; maximum ARV $223,000 | Free to play | 2027-01-10 |  | https://www.cbssports.com/fantasy/football/games/pickem/rules |
+| ESPN NFL Pick'em | $102,000 total (3 x $20,000; $10,000 Confidence; 18 weekly $500 x 3 modes; $5,000 random drawing) | Free to play | 2027-01-10 |  | https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay |
+| Sony World Photography Awards | $25,000 (Series); $5,000 (Single Image) | Free to enter | 2027-01-12 | 2027 awards open for entries | https://www.worldphoto.org/sony-world-photography-awards |
+| PayPal AI Hackathon | 1st Place $12,000 USD; 2nd $8,000; 3rd $5,000 | Free entry — no purchase or payment necessary | 2026-11-12 |  | https://paypalaihackathon.devpost.com/rules |
+| US Midterms 2026 (Metaculus tournament) | $10,000 Prize Pool | Free to participate | 2026-11-04 | Open until 4 Nov 2026 | https://www.metaculus.com/tournament/midterms-2026/ |
+| Codex x TwitchCon Hackathon | 1st Place $10,000 USD; Devpost lists $25,000 in prizes | Free entry — no purchase or payment necessary | 2026-11-02 |  | https://twitchcon-codex.devpost.com/rules |
+| Wergle Flomp Humor Poetry Contest | $5,100 in prizes (1st $2,000; 2nd $750; 3rd $350; 10 x $200 honourable mentions) | No fee to enter | 2027-04-01 |  | https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free |
+| Deriv Trading Tournaments | 1st $1,000; 2nd $600; 3rd $400 per monthly tournament | Free entry, no deposit |  | Monthly, open tournament schedule on contest.deriv.com | https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes |
+| Global Virtual Hackathon 2026 | $1,000 first place per division; two $250 runners-up per division | Free entry, no fee | 2026-11-25 |  | https://gvhackathon.com/ |
 
-
-## 4. Why the catalogue needs review
-
-- The upstream page shows 206 listings; the combined site shows 221 because it includes later attributed additions. Never describe the combined count as the upstream total.
-- The pinned source was last reviewed on 2026-08-19. Its 27 ended/out-of-season labels and other status fields are not proof of current availability.
-- 11 rows had no official-tier source in the verification snapshot; 6 lacked a rules URL; 117 used a signup URL as the rules URL; and 1 source URL used HTTP.
-- 80 prize cells are blanked because the available evidence does not support an amount. Free practice, non-cash credits, paid-entry cash rooms, directories, and cash competitions are different products.
-- A 1 Nov fetch of one App Store URL returned an error. This is a dated observation, not proof that the link remains broken today.
-
-
-## 5. How to use the site
-
-1. Start with the Verified shortlist and its official-source column, then open the actual rules page before entering.
-2. Confirm cash versus points/credits, entry fee, deadline, age and location eligibility, prize delivery, and permitted use of AI.
-3. Choose a task that matches the rules: human forecasts assisted by AI are different from an autonomous bot; hackathons may require a particular tool, team, demo, or repository.
-4. Compare the work required and competition structure, not headline prize alone. Account for time, team obligations, and model/API costs; no return estimate is published here.
-5. Use Flagged for Review for unresolved sources, stale information, status problems, and contradictions. Re-check every time-sensitive claim before acting.
+Deadlines that fall on 2026-11-02 (ARC Prize submissions and Codex x TwitchCon) close on the day of this pass. Confirm on the operator page before starting work.
 
 
-## 6. Official sources for manual review
+## Where an AI coding agent can actually help
 
-- [Original Free Money & Contest Ledger](https://karagemop466-tech.github.io/FreeMoneyApps/) — Upstream discovery catalogue; page shows 206 listings.
-- [Verified shortlist](../shortlist.html) — Newly re-read opportunities with source links and contest-specific caveats.
-- [Metaculus FutureEval Bot Tournament](https://www.metaculus.com/tournament/fall-futureeval-2026/) — $50,000; bot-only; closes 6 Jan 2027.
-- [Metaculus competition rules](https://www.metaculus.com/tournament-rules/) — Fees, AI assistance, bot restrictions, and eligibility.
-- [Metaculus US Midterms 2026](https://www.metaculus.com/tournament/midterms-2026/) — $10,000 pool; closes 4 Nov 2026.
-- [Codex x TwitchCon official rules](https://twitchcon-codex.devpost.com/rules) — Entry, eligibility, requirements, deadline, and prize schedule.
-- [GEMS Prize Challenge](https://www.drivendata.org/competitions/306/competition-doe-gems/) — $300,000 pool; entry cost not stated on the inspected page.
-- [Global Virtual Hackathon 2026](https://gvhackathon.com/) — Free entry, student eligibility, prize tiers, and timeline.
-- [2026-11-02 official-source audit](../data/verification/current-state-2026-11-02.md) — Original targeted reads, limitations, and verification performed.
-- [Flagged for Review](../flagged.html) — Current irregularities register.
+The rules differ sharply and the differences are quoted with links on the Analysis page:
+
+- Allowed/required: Codex x TwitchCon ("Participants may use standard development tools ... and AI coding assistants" and a Codex session ID is required); PayPal AI Hackathon ("along with an AI tool, model, or platform of their choice"); Global Virtual Hackathon ("Building with AI tools is allowed and expected"); GEMS Prize official rules §3.2 permit generative AI but require a narrative disclosure of its use; Metaculus runs a bot-only FutureEval tournament with a $50,000 pool.
+- Restricted: Metaculus platform rules say "automated systems, bots, artificial intelligence, or user accounts which are officially registered as bot accounts, are ineligible for tournament prizes" unless competition-specific rules permit — human participants may use AI tools only when "the final submissions reflect their own decisions and understanding". ARC Prize requires open-source code and says "Internet access is not available during Kaggle evaluation (no API-based systems like GPT/Claude/etc.)"; Kaggle Code Competitions run inside Notebook compute limits; TradingView warns that high-frequency scripts can trigger a ban.
+- Prohibited: Winning Writers contests ("may not contain any AI-generated text"); ESPN ("Entries must be manually key-stroked by the entrant; use of automated entry devices or programs ... are prohibited"); CBS may disqualify "automated computer scripts".
+
+For an agent-assisted entrant, the highest-value work is therefore in tech and forecasting competitions with objective scoring and explicit AI permission, not in pick'em or judged-writing contests. Two independent rules findings from the handoff in PR #3 (GEMS deadline-time conflict and Metaculus bot-prize eligibility) were re-verified against the official pages on 2026-11-02 and published as R-17 and R-18.
 
 
-## 7. Verification limits and provenance
+## Important irregularities (published, not resolved by guessing)
 
-- The 1 Nov base pass fetched 13 URLs (12 loaded and one error); 25 official-page check records are now retained, including the 2 Nov reads. The verification badges distinguish live fetches from independent cross-checks and source-only citations.
-- The 2 Nov audit note preserves the targeted-read record. The current row dataset and Verified shortlist carry the newly integrated findings, but neither replaces reading the operator rules at the time of entry.
-- The local build checks generated pages and internal references. It does not prove that external links work or that a contest remains open.
-- The upstream file is pinned by repository commit and SHA-256, copied unchanged, and parsed as strict JSON rather than executed.
+- The reference site's own 100_VERIFIED_CONTESTS.md is marked "SUPERSEDED — DO NOT USE AS A SOURCE" and documents claims its authors found false.
+- The reference site is one JavaScript-rendered scroll of 206 cards with no search or filters; its counts show zero when scripts are blocked.
+- Official links have rotted: herox.com/challenges and roboforex.com/contests/ return 404, and Challenge.gov was sunset on 2026-03-30 (replacement: usa.gov/challenges).
+- Statuses drifted since the ledger's 2026-08-19 review: ESPN Survivor entry is closed, Tom Howard is closed, FOX Super 6 has no active games, and TradingView The Leap ended 14 August 2026.
+- Tom Howard charges $27 per submission; GamerSaloon's $10 is Bonus Cash "not eligible for withdrawal"; Givling is a crowdfunding queue, not a trivia contest.
+- 11 rows have no official operator source at all — mostly FPL mini-league codes from forum threads and old blog posts. All of their values are blank.
+- Deadline fields mix registration close and submission close: the Global Virtual Hackathon's 13 November date is registration; submissions close 25 November 2026.
 
-Source repository commit 466f7c1e7a14b52b4a0d36beb84a00d68fd409b7; source file SHA-256 13986a17b8b9aa7b3240232e6138155967cfa9347256faa7b5c7d1565ed73211. Pinned source captured 1 Nov 2026. Base verification snapshot: 2026-11-01.
+The full register, with evidence and links for manual review, is on the Flagged for Review page and in REPO_REVIEW.md. All 49 items are status "needs review" and do not block the site or the merge.
+
+
+## How to reproduce and check
+
+1. node scripts/ingest.js — verify the pinned source checksum and rebuild data/ledger.json.
+2. node scripts/verify.js — rebuild the per-row verification state and the historical irregularity register.
+3. node scripts/build.js — render every page, category page and detail page (deterministic: no network, no clock).
+4. node scripts/checklinks.js, node tests/validate.mjs, node tests/validate-prize-atlas.mjs — link, data and archive checks.
+5. node scripts/render-docs.js — regenerate docs/EXECUTIVE_SUMMARY.md from this same content module.
+
+GitHub Pages serves the main branch from the repository root. The CI workflow rebuilds the site and fails if any generated file changes, if a link is broken, or if a page lacks the mobile viewport/breakpoints.
 
 ---
 
-Generated by `scripts/render-docs.js` for the verification date 2026-11-01.
-Site: https://sassnarep3-star.github.io/Own1/
-
-Every figure in this document is computed from `data/ledger.json`, `data/verification.json`
-and `data/irregularities.json` at build time. Source dataset: commit `466f7c1e7a14b52b4a0d36beb84a00d68fd409b7`,
-SHA-256 `13986a17b8b9aa7b3240232e6138155967cfa9347256faa7b5c7d1565ed73211`.
+Generated by `scripts/render-docs.js` from `scripts/summary-content.js`, which also renders `executive-summary.html`.
+Every figure is computed at build time from `data/ledger.json`, `data/verification.json`,
+`data/irregularities.json`, `data/verification-2026-11-02.json` and `data/review-2026-11-02.json`.

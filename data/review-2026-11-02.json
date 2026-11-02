@@ -1,0 +1,782 @@
+{
+  "reviewedAt": "2026-11-02",
+  "reviewedBy": "f25e2b4b-own1",
+  "scope": "Line-by-line review of the reference site, the pinned ledger, the published site's data contract, and this repository's own files. Every item links to a file or an official page for manual review. Also integrates the independent GEMS/Metaculus rules review handed off by session 4db3cf09-own1 in PR #3, re-verified from the official pages on 2026-11-02.",
+  "repoFiles": [
+    {
+      "path": "COORDINATION.md",
+      "note": "Shared task board: task statuses, owners, file scopes, conflict and publication logs.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/COORDINATION.md"
+    },
+    {
+      "path": "EXECUTIVE_SUMMARY.md",
+      "note": "Canonical written executive summary for this build.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/EXECUTIVE_SUMMARY.md"
+    },
+    {
+      "path": "REPO_REVIEW.md",
+      "note": "Written repo review with manual-review links and irregularities.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/REPO_REVIEW.md"
+    },
+    {
+      "path": "README.md",
+      "note": "Repository overview and build instructions.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/README.md"
+    },
+    {
+      "path": "data/source/ledger.source.js",
+      "note": "Byte-for-byte copy of the reference site's assets/data.js (SHA-256 13986a17b8b9aa7b3240232e6138155967cfa934725).",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/data/source/ledger.source.js"
+    },
+    {
+      "path": "data/source/PROVENANCE.json",
+      "note": "Pinned reference commit, review date and source-file checksum.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/data/source/PROVENANCE.json"
+    },
+    {
+      "path": "data/ledger.json",
+      "note": "Canonical 211-row dataset produced by scripts/ingest.js.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/data/ledger.json"
+    },
+    {
+      "path": "data/verification-2026-11-02.json",
+      "note": "This session's dated official-page reads, verbatim quotes and per-field confirmed values.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/data/verification-2026-11-02.json"
+    },
+    {
+      "path": "data/review-2026-11-02.json",
+      "note": "This session's repo review and irregularity register.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/data/review-2026-11-02.json"
+    },
+    {
+      "path": "data/irregularities.json",
+      "note": "Historical 22-item irregularity register (I-01 to I-22).",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/data/irregularities.json"
+    },
+    {
+      "path": "data/link-health.json",
+      "note": "Automated link check from 2026-11-01: 203 URLs, 166 ok, 10 hard failures, 27 soft failures.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/data/link-health.json"
+    },
+    {
+      "path": "scripts/build.js",
+      "note": "Deterministic generator for every published page (no network, no timestamps).",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/scripts/build.js"
+    },
+    {
+      "path": "scripts/ingest.js",
+      "note": "Verifies the source checksum and parses the vendored ledger without evaluating JavaScript.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/scripts/ingest.js"
+    },
+    {
+      "path": "scripts/verify.js",
+      "note": "Produces the per-row verification state and the historical irregularity register.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/scripts/verify.js"
+    },
+    {
+      "path": "scripts/checklinks.js",
+      "note": "Checks every internal link/anchor and that every table row has a source link.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/scripts/checklinks.js"
+    },
+    {
+      "path": "tests/validate.mjs",
+      "note": "Data-contract and link validation executed in CI.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/tests/validate.mjs"
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "note": "CI: rebuild, determinism check, data contract, link check, mobile checks.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/.github/workflows/validate.yml"
+    },
+    {
+      "path": "assets/css/site.css",
+      "note": "Mobile-first stylesheet with min-width breakpoints at 520px and 960px.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/assets/css/site.css"
+    },
+    {
+      "path": "assets/js/app.js",
+      "note": "Progressive-enhancement search/filter/sort; the site works without JavaScript.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/assets/js/app.js"
+    },
+    {
+      "path": "archive/",
+      "note": "Earlier generations of this site from parallel sessions, preserved and link-checked.",
+      "url": "https://github.com/sassnarep3-star/Own1/tree/main/archive"
+    },
+    {
+      "path": "research/gems-rules-4db3cf09.md",
+      "note": "Independent GEMS rules review handed off by session 4db3cf09-own1 (PR #3), preserved verbatim and re-verified against the official rules on 2026-11-02.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/research/gems-rules-4db3cf09.md"
+    },
+    {
+      "path": "research/VERIFICATION-2026-11-02.md",
+      "note": "Human-readable line-by-line verification record: every official page, quote, confirmed value, blank field and unverified row.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/research/VERIFICATION-2026-11-02.md"
+    },
+    {
+      "path": "data/verification/current-state-2026-11-02.md",
+      "note": "Earlier session's targeted official-source refresh and integration update (PR #35). Preserved verbatim.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/data/verification/current-state-2026-11-02.md"
+    },
+    {
+      "path": "docs/SESSION-7a477419.md",
+      "note": "Earlier session's integration log for the 10 sourced additions, 25 check records and flags I-22..I-30.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/docs/SESSION-7a477419.md"
+    },
+    {
+      "path": "data/shortlist-notes.json",
+      "note": "Per-row sourced notes for the Verified shortlist, written by arena/7a477419-own1 and preserved on shortlist.html.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/data/shortlist-notes.json"
+    },
+    {
+      "path": "data/cross-checks.json",
+      "note": "25 dated official-page check records with reader attribution, merged by scripts/ingest.js.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/data/cross-checks.json"
+    },
+    {
+      "path": "shortlist.html",
+      "note": "Verified shortlist introduced by PR #35, regenerated by this integration build with the same sourced notes.",
+      "url": "https://github.com/sassnarep3-star/Own1/blob/main/shortlist.html"
+    }
+  ],
+  "referenceFiles": [
+    {
+      "path": "index.html",
+      "note": "Reference landing page: 'No search box, no filters: just scroll, or tap a section to jump to it' and four counts rendered by JavaScript.",
+      "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/index.html"
+    },
+    {
+      "path": "assets/data.js",
+      "note": "The 206-row third-party ledger, pinned here as data/source/ledger.source.js.",
+      "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/data.js"
+    },
+    {
+      "path": "assets/js/app.js",
+      "note": "Client-side card renderer; no table view and no filters.",
+      "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/js/app.js"
+    },
+    {
+      "path": "assets/css/style.css",
+      "note": "One mobile breakpoint at 760px; long card list on small screens.",
+      "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/css/style.css"
+    },
+    {
+      "path": "README.md",
+      "note": "Declares 206 listings across 9 categories and says every entry has an official link.",
+      "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/README.md"
+    },
+    {
+      "path": "100_VERIFIED_CONTESTS.md",
+      "note": "Marked 'SUPERSEDED — DO NOT USE AS A SOURCE' and lists claims its own authors found false.",
+      "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/100_VERIFIED_CONTESTS.md"
+    },
+    {
+      "path": "index.md",
+      "note": "Also marked 'Superseded research document (2026-08-19). Kept for provenance.'",
+      "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/index.md"
+    },
+    {
+      "path": "AUDIT_2026-08-19.md",
+      "note": "The reference site's own audit trail (pass A).",
+      "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/AUDIT_2026-08-19.md"
+    }
+  ],
+  "irregularities": [
+    {
+      "id": "R-01",
+      "severity": "high",
+      "type": "reference site",
+      "title": "The reference site's own '100 verified contests' document is marked superseded and documents false claims",
+      "summary": "The file 100_VERIFIED_CONTESTS.md opens with 'SUPERSEDED — DO NOT USE AS A SOURCE' and states that its closing claim of 'No hallucinated, duplicated, deposit, or mail-in entries' was false; it lists rows whose prizes and links did not exist. index.md carries a similar superseded notice.",
+      "evidence": [
+        "'Status as of 2026-08-19: this document failed verification and is retained only as a research trail.'",
+        "'Its closing ... claimed \"No hallucinated, duplicated, deposit, or mail-in entries\" ... Both claims are false.'",
+        "'21 | Football Nation USA — \"$100 every week\" ... Page has no pick'em and no prize, only referral ads'"
+      ],
+      "links": [
+        {
+          "title": "100_VERIFIED_CONTESTS.md (reference repo)",
+          "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/100_VERIFIED_CONTESTS.md"
+        },
+        {
+          "title": "index.md (reference repo)",
+          "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/index.md"
+        }
+      ],
+      "affected": [],
+      "action": "No figure from those documents was imported. Only the maintained assets/data.js was pinned, with its SHA-256 recorded."
+    },
+    {
+      "id": "R-02",
+      "severity": "medium",
+      "type": "mobile usability",
+      "title": "The reference site is a single client-rendered scroll of 206 cards with no search, filters or table",
+      "summary": "Its own index.html says 'No search box, no filters: just scroll, or tap a section to jump to it.' All listings and the four headline counts are injected by JavaScript, so with scripts blocked the page shows an empty grid and four zeroes. The stylesheet has a single 760px breakpoint.",
+      "evidence": [
+        "'One plain list ... No search box, no filters: just scroll, or tap a section to jump to it.'",
+        "'<main id=\"cards\" class=\"grid\"></main>'",
+        "'<b id=\"statTotal\">0</b><span>Listings</span>'",
+        "'@media (max-width: 760px) { .stats { grid-template-columns: 1fr 1fr; } ... }'"
+      ],
+      "links": [
+        {
+          "title": "reference index.html",
+          "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/index.html"
+        },
+        {
+          "title": "reference stylesheet",
+          "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/css/style.css"
+        },
+        {
+          "title": "reference app.js",
+          "url": "https://github.com/karagemop466-tech/FreeMoneyApps/blob/main/assets/js/app.js"
+        }
+      ],
+      "affected": [],
+      "action": "Rebuilt as pre-rendered static tables with labelled mobile cells, a search box and filters that degrade gracefully without JavaScript."
+    },
+    {
+      "id": "R-03",
+      "severity": "high",
+      "type": "broken links",
+      "title": "Three operator links used by the ledger are now 404 or retired",
+      "summary": "Fetched on 2026-11-02: herox.com/challenges returns 'Page not found'; roboforex.com/contests/ returns a 404; challenge.gov shows a retirement notice. The working replacements are herox.com/crowdsourcing-projects and usa.gov/challenges.",
+      "evidence": [
+        "HeroX: 'Hello. We can't seem to find the page you are looking for.'",
+        "RoboForex: 'It seems that the page you requested doesn't exist on our web site.'",
+        "Challenge.gov: 'The Challenge.gov platform was sunset on March 30, 2026. The content has moved to other government websites.'"
+      ],
+      "links": [
+        {
+          "title": "HeroX /challenges (404)",
+          "url": "https://www.herox.com/challenges"
+        },
+        {
+          "title": "HeroX replacement",
+          "url": "https://www.herox.com/crowdsourcing-projects"
+        },
+        {
+          "title": "RoboForex contests (404)",
+          "url": "https://roboforex.com/contests/"
+        },
+        {
+          "title": "Challenge.gov sunset notice",
+          "url": "https://www.challenge.gov/"
+        },
+        {
+          "title": "USA.gov challenges",
+          "url": "https://www.usa.gov/challenges"
+        }
+      ],
+      "affected": [
+        "herox",
+        "roboforex-demo"
+      ],
+      "action": "The HeroX row links to the working Explore Challenges page and the sunset notice; RoboForex keeps its URL with a 404 flag and blank values. Both are published on the Flagged page."
+    },
+    {
+      "id": "R-04",
+      "severity": "high",
+      "type": "stale data",
+      "title": "Every upstream row is dated 2026-08-19 and several statuses have since changed on operator pages",
+      "summary": "The pinned ledger's lastChecked is 2026-08-19 for all 206 upstream rows. Official pages read on 2026-11-02 show ESPN Survivor entry closed, Tom Howard/Margaret Reid closed, FOX Super 6 with no active games, TradingView The Leap ended 14 August 2026, and the Sony awards competitions renamed.",
+      "evidence": [
+        "ESPN Survivor: 'You Just Missed It! Entry creation has closed'",
+        "Tom Howard: 'This contest is currently closed. It will open again on April 15, 2027.'",
+        "FOX Super 6: 'Fox Super 6 returns soon! ... No active games.'",
+        "TradingView: 'begins at Jul 20, 2026, 08:00 UTC and ends at Aug 14, 2026, 08:00 UTC'",
+        "Sony: 'Series competition (Previously Professional competition)'"
+      ],
+      "links": [
+        {
+          "title": "ESPN NFL Survivor",
+          "url": "https://fantasy.espn.com/games/nfl-survivor-2026/make-picks"
+        },
+        {
+          "title": "Tom Howard contest",
+          "url": "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest"
+        },
+        {
+          "title": "FOX Super 6",
+          "url": "https://www.foxsports.com/fox-super-6"
+        },
+        {
+          "title": "The Leap rules",
+          "url": "https://www.tradingview.com/the-leap/tradestation-july-2026/rules/"
+        },
+        {
+          "title": "Sony World Photography Awards",
+          "url": "https://www.worldphoto.org/sony-world-photography-awards"
+        }
+      ],
+      "affected": [
+        "espn-survivor",
+        "tom-howard-poetry",
+        "fox-super6",
+        "tradingview-leap",
+        "sony-world-photo"
+      ],
+      "action": "Upstream status labels are not published as facts. Status appears only where an official page read on 2026-11-02 states it; every other status cell is blank and flagged."
+    },
+    {
+      "id": "R-05",
+      "severity": "high",
+      "type": "paid entry",
+      "title": "Paid-entry contests are presented in a free-to-enter ledger",
+      "summary": "Tom Howard/Margaret Reid charges '$27 per submission', and Papaya's own FAQ separates free Gems competitions from cash competitions while describing a platform fee taken from entry-fee pools.",
+      "evidence": [
+        "'Fee: $27 per submission (one submission may contain up to 3 poems).'",
+        "'Our business model is based on taking a platform fee out of the total entry fees pool in each tournament.'",
+        "'PAPAYA offers both free competitions using Gems and cash competitions.'"
+      ],
+      "links": [
+        {
+          "title": "Tom Howard contest",
+          "url": "https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest"
+        },
+        {
+          "title": "Papaya FAQ",
+          "url": "https://www.papaya.com/faq"
+        }
+      ],
+      "affected": [
+        "tom-howard-poetry",
+        "solitaire-cash"
+      ],
+      "action": "Both rows show the operator's exact wording. The Tom Howard row is marked confirmed paid, never free."
+    },
+    {
+      "id": "R-06",
+      "severity": "high",
+      "type": "non-cash prizes",
+      "title": "Several 'cash' prizes are points, bonus cash or crowdfunding, not withdrawable dollars",
+      "summary": "GamerSaloon explicitly says its $10 is Bonus Cash 'not eligible for withdrawal'; Swagbucks Daily Trivia rewards SB points; Papaya free rooms pay Gems; Givling is a crowdfunding queue with random Spinners.",
+      "evidence": [
+        "'*Bonus Cash ... is not eligible for withdrawal.'",
+        "'You earn SB based on the number of questions you get right.'",
+        "'free competitions using Gems and cash competitions'",
+        "'Givling puts the fun in crowdfunding!'"
+      ],
+      "links": [
+        {
+          "title": "GamerSaloon 1-Rounders",
+          "url": "https://www.gamersaloon.com/promos/1rounder/"
+        },
+        {
+          "title": "Swagbucks Daily Trivia",
+          "url": "https://help.swagbucks.com/hc/en-us/articles/15374709231764-What-is-Swagbucks-Daily-Trivia"
+        },
+        {
+          "title": "Papaya FAQ",
+          "url": "https://www.papaya.com/faq"
+        },
+        {
+          "title": "Givling",
+          "url": "https://givling.com/"
+        }
+      ],
+      "affected": [
+        "gamersaloon",
+        "swagbucks-trivia",
+        "solitaire-cash",
+        "givling"
+      ],
+      "action": "Each row quotes the operator's wording; none is counted as a free withdrawable-cash path."
+    },
+    {
+      "id": "R-07",
+      "severity": "medium",
+      "type": "contradictions",
+      "title": "Official pages contradict the ledger, and in two cases contradict themselves",
+      "summary": "ESPN's own page says both 'create up to 10 entries' and 'up to five total'. Devpost's $67,500 PayPal headline includes non-cash Render credits. The Devpost index lists a $1,000,000 contest while the ledger's stated range tops out at $685,000. ESPN Survivor's page says entry creation has closed while the ledger labels it live.",
+      "evidence": [
+        "'You can now create up to 10 entries!' / 'you can create another entry (up to five total)'",
+        "'Best Use of Render - 1st Place | $1000 Render credits'",
+        "'Meta VR Start Developer Competition 2026 ... $1,000,000 in prizes'",
+        "'Entry creation has closed'"
+      ],
+      "links": [
+        {
+          "title": "ESPN Pick'em rules",
+          "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay"
+        },
+        {
+          "title": "PayPal AI Hackathon rules",
+          "url": "https://paypalaihackathon.devpost.com/rules"
+        },
+        {
+          "title": "Devpost hackathons",
+          "url": "https://devpost.com/hackathons"
+        },
+        {
+          "title": "ESPN Survivor",
+          "url": "https://fantasy.espn.com/games/nfl-survivor-2026/make-picks"
+        }
+      ],
+      "affected": [
+        "espn-pickem",
+        "paypal-ai-hackathon-2026",
+        "devpost",
+        "espn-survivor"
+      ],
+      "action": "Both conflicting statements are published with their source links; no reconciled value is invented."
+    },
+    {
+      "id": "R-08",
+      "severity": "high",
+      "type": "AI-agent eligibility",
+      "title": "Contest rules differ sharply on whether an AI coding agent may do the work",
+      "summary": "Winning Writers prohibits AI-generated text; ESPN prohibits automated entry programs; CBS may disqualify automated scripts; ARC Prize forbids internet/API models during evaluation and requires open-sourced code; TradingView warns that scripts can trigger bans. Conversely, the Codex x TwitchCon rules require Codex and permit AI coding assistants, the Global Virtual Hackathon says AI tools are 'allowed and expected', and Metaculus runs a bot-only tournament.",
+      "evidence": [
+        "'may not contain any AI-generated text'",
+        "'Entries must be manually key-stroked by the entrant; use of automated entry devices or programs ... are prohibited.'",
+        "'accumulating points through methods such as automated computer scripts'",
+        "'Internet access is not available during Kaggle evaluation (no API-based systems like GPT/Claude/etc.)'",
+        "'Building with AI tools is allowed and expected.'",
+        "'This is a bot-only competition where bot-makers attempt to push AI to its limits'"
+      ],
+      "links": [
+        {
+          "title": "Wergle Flomp rules",
+          "url": "https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free"
+        },
+        {
+          "title": "ESPN rules",
+          "url": "https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay"
+        },
+        {
+          "title": "CBS rules",
+          "url": "https://www.cbssports.com/fantasy/football/games/pickem/rules"
+        },
+        {
+          "title": "ARC Prize 2026",
+          "url": "https://arcprize.org/competitions/2026"
+        },
+        {
+          "title": "Global Virtual Hackathon",
+          "url": "https://gvhackathon.com/"
+        },
+        {
+          "title": "FutureEval Bot Tournament",
+          "url": "https://www.metaculus.com/tournament/fall-futureeval-2026/"
+        }
+      ],
+      "affected": [
+        "wergle-flomp",
+        "tom-howard-poetry",
+        "espn-pickem",
+        "cbs-pro-pickem",
+        "arcprize",
+        "tradingview-leap",
+        "codex-twitchcon-2026",
+        "global-virtual-hackathon-2026",
+        "metaculus"
+      ],
+      "action": "A dedicated AI-agent compatibility table on the Analysis page quotes each rule with its official link; no contest is described as agent-friendly without that quote."
+    },
+    {
+      "id": "R-09",
+      "severity": "medium",
+      "type": "deadlines",
+      "title": "Deadline fields mix registration close, submission close and event end dates",
+      "summary": "The Global Virtual Hackathon's 13 November date is the registration close; the official submission deadline is 25 November 2026. ARC Prize submissions are due 2 November 2026 with papers due 8 November; the Codex x TwitchCon deadline is 2 November 2026; Metaculus US Midterms closes 4 November 2026.",
+      "evidence": [
+        "'Registration 28 September to 13 November' / 'Submission 23:59 AoE, 25 November'",
+        "'November 2, 2026 - Submissions due ... November 8, 2026 - Papers due'",
+        "'Deadline: Nov 2, 2026 @ 5:00pm EST'",
+        "'Closes Nov 04'"
+      ],
+      "links": [
+        {
+          "title": "Global Virtual Hackathon",
+          "url": "https://gvhackathon.com/"
+        },
+        {
+          "title": "ARC Prize 2026",
+          "url": "https://arcprize.org/competitions/2026"
+        },
+        {
+          "title": "Codex x TwitchCon rules",
+          "url": "https://twitchcon-codex.devpost.com/rules"
+        },
+        {
+          "title": "US Midterms 2026",
+          "url": "https://www.metaculus.com/tournament/midterms-2026/"
+        }
+      ],
+      "affected": [
+        "global-virtual-hackathon-2026",
+        "arcprize",
+        "codex-twitchcon-2026",
+        "midterms-2026"
+      ],
+      "action": "Each deadline cell shows the exact date with its quoted wording; only dates read on an official page on 2026-11-02 appear in the closing-soon table."
+    },
+    {
+      "id": "R-10",
+      "severity": "medium",
+      "type": "sourcing",
+      "title": "Eleven rows have no official operator source at all",
+      "summary": "The no-official-source rows are FPL mini-league codes sourced from forum threads, 2025/26 blog posts and a 2024 article, plus two demo-contest reviews and a secondary news item. No prize, entry cost, deadline or eligibility can be confirmed from an operator page.",
+      "evidence": [
+        "'r/FantasyPL minileagues thread' (forum)",
+        "'Free-to-join FPL prize leagues' (2025/07 blog post)",
+        "'Free NFL contest pools games week 1 2024' (2024 article)",
+        "'FBS Pro Demo Contest (review)' (third-party review)"
+      ],
+      "links": [
+        {
+          "title": "verification.json (no-official-source rows)",
+          "url": "https://github.com/sassnarep3-star/Own1/blob/main/data/verification.json"
+        },
+        {
+          "title": "FPL official rules",
+          "url": "https://fantasy.premierleague.com/en/help/rules"
+        }
+      ],
+      "affected": [
+        "thelines-survivor",
+        "fantasy-arena",
+        "fplhub",
+        "bona-fide",
+        "olka",
+        "fplmanager-india",
+        "fplstore",
+        "pitchbooking",
+        "fbs-pro-demo",
+        "npbfx-demo",
+        "tff-fantezi-lig"
+      ],
+      "action": "All values on these rows are blank and flagged; the table still links each row to the cited page and to the reference ledger, with a 'none official' label."
+    },
+    {
+      "id": "R-11",
+      "severity": "medium",
+      "type": "repository",
+      "title": "This repository contains several generations of overlapping builds and stale documentation",
+      "summary": "Parallel sessions produced Prize Atlas, a Verified Contest Ledger, a generated entry-page build and this dashboard. README.md, EXECUTIVE_SUMMARY.md and COORDINATION.md describe different builds and different row counts. The archived builds are kept working but their narrative documents no longer describe the live site. After this claim, main advanced with T14/T15/T16 from ac192142-own1 and 7a477419-own1: the combined dataset is now 221 rows (206 pinned upstream + 15 attributed additions), data/cross-checks.json holds 25 dated official-page checks, shortlist.html was added and the historical register grew to 31 items. This integration carries all of that work forward rather than reverting to the older 211-row state.",
+      "evidence": [
+        "README.md begins 'Prize Atlas' while the live site is a dashboard generated by scripts/build.js",
+        "COORDINATION.md records five publication rounds and multiple independent rebuilds",
+        "archive/ contains several complete alternate sites"
+      ],
+      "links": [
+        {
+          "title": "README.md",
+          "url": "https://github.com/sassnarep3-star/Own1/blob/main/README.md"
+        },
+        {
+          "title": "COORDINATION.md",
+          "url": "https://github.com/sassnarep3-star/Own1/blob/main/COORDINATION.md"
+        },
+        {
+          "title": "archive/",
+          "url": "https://github.com/sassnarep3-star/Own1/tree/main/archive"
+        },
+        {
+          "title": "docs/EXECUTIVE_SUMMARY.md",
+          "url": "https://github.com/sassnarep3-star/Own1/blob/main/docs/EXECUTIVE_SUMMARY.md"
+        }
+      ],
+      "affected": [],
+      "action": "This session claims a single task on the board, treats all earlier tasks as done, keeps every earlier file, and makes EXECUTIVE_SUMMARY.md the canonical summary for the live build. Rebased onto origin/main ce854c6, preserved the 10 new detail pages, shortlist.html, shortlist-notes.json, the current-state audit and the integration log, and regenerated every page from the combined 221-row dataset."
+    },
+    {
+      "id": "R-12",
+      "severity": "low",
+      "type": "link checking",
+      "title": "Automated link health from 2026-11-01 mixes real failures with bot blocks",
+      "summary": "data/link-health.json records 203 URLs: 166 ok, 10 hard failures, 27 soft failures. Several 'failures' are HTTP 403 anti-bot responses (Devpost, Metaculus, 99designs); those same pages loaded normally when fetched with a page tool on 2026-11-02. Conversely some real 404s (topcoder.com/challenges) were recorded there.",
+      "evidence": [
+        "'https://devpost.com/hackathons' status 403 on 2026-11-01",
+        "'https://www.metaculus.com/tournaments/' status 403 on 2026-11-01",
+        "'https://www.topcoder.com/challenges' status 404 on 2026-11-01",
+        "Devpost and Metaculus pages loaded on 2026-11-02"
+      ],
+      "links": [
+        {
+          "title": "data/link-health.json",
+          "url": "https://github.com/sassnarep3-star/Own1/blob/main/data/link-health.json"
+        },
+        {
+          "title": "Devpost hackathons",
+          "url": "https://devpost.com/hackathons"
+        },
+        {
+          "title": "Metaculus tournaments",
+          "url": "https://www.metaculus.com/tournaments/"
+        }
+      ],
+      "affected": [],
+      "action": "The link-health table is published as a dated observation, not as a statement that those sites are broken; 403 responses are labelled as likely bot blocks."
+    },
+    {
+      "id": "R-13",
+      "severity": "medium",
+      "type": "official page unreadable",
+      "title": "AIcrowd's official challenges index returned no verifiable competition facts",
+      "summary": "The fetched page was a 'Loading' shell followed by an uncurated tag list containing obvious spam entries. No prize, entry fee, deadline or eligibility could be read, so the ledger's 'up to $150,000+' claim stays unverified.",
+      "evidence": [
+        "'Loading # Challenges Active Draft Running Completed Starting soon'",
+        "Tag list includes unrelated movie-streaming and ebook phrases"
+      ],
+      "links": [
+        {
+          "title": "AIcrowd Challenges",
+          "url": "https://www.aicrowd.com/challenges"
+        }
+      ],
+      "affected": [
+        "aicrowd"
+      ],
+      "action": "Every value cell on the row is blank and flagged unverified; the page is listed in the verification log with its outcome."
+    },
+    {
+      "id": "R-14",
+      "severity": "low",
+      "type": "URL drift",
+      "title": "The ledger's FPL rules URL redirects and the official rules state no cash prize",
+      "summary": "fantasy.premierleague.com/help/rules now serves /en/help/rules. The rules page publishes the gameweek calendar but no prize amounts, so the ledger's 'VIP trip + Surface Laptop + Puma gear' cannot be confirmed from an official page.",
+      "evidence": [
+        "'### Deadlines ... | Gameweek 38 | Sun 30 May 09:30 |'",
+        "No prize section in the fetched rules page"
+      ],
+      "links": [
+        {
+          "title": "Fantasy Premier League rules",
+          "url": "https://fantasy.premierleague.com/en/help/rules"
+        },
+        {
+          "title": "ledger rules URL",
+          "url": "https://fantasy.premierleague.com/help/rules"
+        }
+      ],
+      "affected": [
+        "fpl-official"
+      ],
+      "action": "The row links to the working rules URL; the prize cell is blank and flagged."
+    },
+    {
+      "id": "R-15",
+      "severity": "low",
+      "type": "tax generalisation",
+      "title": "The reference site's blanket '$600 tax form' claim is broader than the official rules",
+      "summary": "The reference homepage says 'US tax forms apply at $600+'. Official rules read on 2026-11-02 show that specific contests require a W-9 or Form 1099 at $600 or more, but that is a rule of those contests, not a universal threshold for all prize income.",
+      "evidence": [
+        "MLB Beat the Streak: 'The potential winner will be required to submit his/her valid social security number and will receive an IRS Form 1099 for any prize valued at $600 or greater.'",
+        "Codex x TwitchCon: 'United States residents may be required to provide a completed form W-9'",
+        "CBS: 'an Affidavit or Declaration of Eligibility and release and a W-9 tax form where applicable'"
+      ],
+      "links": [
+        {
+          "title": "Beat the Streak rules",
+          "url": "https://www.mlb.com/apps/beat-the-streak/official-rules"
+        },
+        {
+          "title": "Codex x TwitchCon rules",
+          "url": "https://twitchcon-codex.devpost.com/rules"
+        },
+        {
+          "title": "CBS rules",
+          "url": "https://www.cbssports.com/fantasy/football/games/pickem/rules"
+        }
+      ],
+      "affected": [],
+      "action": "The claim is not repeated as a rule; the site links the specific official rules instead. Nothing here is tax advice."
+    },
+    {
+      "id": "R-16",
+      "severity": "low",
+      "type": "stale environment note",
+      "title": "The 1 Nov verification record says the sandbox had no outbound internet",
+      "summary": "data/live-checks.json records 'Sandbox has no general outbound internet' as its method. That described one session's environment and is not a permanent limitation: on 2026-11-02 this integration session fetched 37 official operator pages. The older 12 checks are retained unchanged as historical evidence rather than re-dated.",
+      "evidence": [
+        "'Sandbox has no general outbound internet. Each URL below was fetched once with a page-fetch tool on 2026-11-01'",
+        "37 official pages fetched on 2026-11-02 are listed in data/verification-2026-11-02.json"
+      ],
+      "links": [
+        {
+          "title": "data/live-checks.json",
+          "url": "https://github.com/sassnarep3-star/Own1/blob/main/data/live-checks.json"
+        },
+        {
+          "title": "data/verification-2026-11-02.json",
+          "url": "https://github.com/sassnarep3-star/Own1/blob/main/data/verification-2026-11-02.json"
+        },
+        {
+          "title": "Verified 2 Nov page",
+          "url": "https://sassnarep3-star.github.io/Own1/verified.html"
+        }
+      ],
+      "affected": [],
+      "action": "A dated laterNote was added to data/live-checks.json; no historical check was changed or re-dated. The current verification pass is recorded separately."
+    },
+    {
+      "id": "R-17",
+      "severity": "high",
+      "type": "official-rules conflict",
+      "title": "GEMS Prize official rules and competition homepage disagree on the submission cut-off time, and AI use must be disclosed",
+      "summary": "The DrivenData competition page says submissions close 'Dec. 3, 2026, 11:59 p.m. UTC'. The September 2026 official rules (Appendix A.1) say the final content must be posted 'by 5:00 p.m. ET on the prize submission deadline date'. Section 3.2 permits generative AI but requires a narrative disclosure of the extent and manner of use. Section 3.1 states how to enter but no fee amount, so free entry is not confirmed.",
+      "evidence": [
+        "'### Dec. 3, 2026, 11:59 p.m. UTC' (competition homepage)",
+        "'You must post the final content of your submission or upload the submission form online by 5:00 p.m. ET on the prize submission deadline date before the prize's phase submission period closes.' (official rules A.1)",
+        "'Using generative AI technology in the development of your prize submission is allowed. However, you must indicate in the narrative ... the extent to which, if any, you used generative AI technology and how you used it' (official rules 3.2)",
+        "'To enter the competition, you must create a profile on the DrivenData platform and agree to abide by the competition rules and restrictions.' (official rules 3.1)"
+      ],
+      "links": [
+        {
+          "title": "DrivenData GEMS page",
+          "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/"
+        },
+        {
+          "title": "GEMS official rules (PDF)",
+          "url": "https://www.nlr.gov/docs/fy26osti/96647.pdf"
+        },
+        {
+          "title": "DrivenData GEMS rules page",
+          "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/rules/"
+        },
+        {
+          "title": "Handoff research (PR #3)",
+          "url": "https://github.com/sassnarep3-star/Own1/blob/main/research/gems-rules-4db3cf09.md"
+        }
+      ],
+      "affected": [
+        "gems-prize-2026"
+      ],
+      "action": "Both times are published with their source links; no reconciled deadline is invented. The verified deadline cell keeps the competition homepage's date and links to it, while the conflict is flagged here. Generative-AI disclosure is quoted on the row and the Analysis page. Handed off by session 4db3cf09-own1 in PR #3; re-verified against the official rules on 2026-11-02."
+    },
+    {
+      "id": "R-18",
+      "severity": "high",
+      "type": "AI-agent eligibility",
+      "title": "Metaculus tournament rules bar bots and AI accounts from prizes by default",
+      "summary": "The platform-wide rules say automated systems, bots, artificial intelligence and registered bot accounts are ineligible for tournament prizes unless competition-specific rules permit them. Human participants may use AI tools only when final submissions reflect their own decisions and understanding. The FutureEval Bot Tournament is therefore an explicit exception, not a general permission.",
+      "evidence": [
+        "'Unless otherwise specifically permitted in the Competition-specific rules, automated systems, bots, artificial intelligence, or user accounts which are officially registered as bot accounts, are ineligible for tournament prizes.'",
+        "'However, human participants are allowed to use AI tools or systems to assist in their forecasting, as long as the final submissions reflect their own decisions and understanding.'",
+        "'No purchase, fee, or payment is required to participate.'",
+        "'Any person wishing to participate must create a free Metaculus user account. No purchase or entry fee is necessary to enter a Metaculus competition.'"
+      ],
+      "links": [
+        {
+          "title": "Metaculus Tournament Rules",
+          "url": "https://www.metaculus.com/tournament-rules/"
+        },
+        {
+          "title": "FutureEval Bot Tournament",
+          "url": "https://www.metaculus.com/tournament/fall-futureeval-2026/"
+        },
+        {
+          "title": "Handoff PR #3",
+          "url": "https://github.com/sassnarep3-star/Own1/pull/3"
+        }
+      ],
+      "affected": [
+        "metaculus",
+        "midterms-2026"
+      ],
+      "action": "The platform rule is quoted on the Analysis page and on the Metaculus detail page; the bot-only tournament is listed as a competition-specific exception. Requested by session 4db3cf09-own1 in PR #3; independently re-verified on the official rules page on 2026-11-02."
+    }
+  ]
+}

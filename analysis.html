@@ -4,13 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Analysis — PrizeDesk</title>
-<meta name="description" content="Counted findings from the dataset: category coverage, entry paths, ID burden, prize currencies, host concentration and what the data cannot answer.">
+<meta name="description" content="Counted findings from the pinned ledger and the official pages read on 2 Nov 2026.">
 <meta name="color-scheme" content="light dark">
-<meta property="og:title" content="Analysis — PrizeDesk">
-<meta property="og:description" content="Counted findings from the dataset: category coverage, entry paths, ID burden, prize currencies, host concentration and what the data cannot answer.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E%24%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b7a4b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E$%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/css/site.css">
+<style>
+.callout.warn { border-left-color: var(--warn, #b26b00); }
+.evidence-box { border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin:8px 0; background:var(--card,#fff); }
+.fact-quote { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.86rem; color:var(--muted); white-space:pre-wrap; word-break:break-word; }
+.verified-article { border-top:1px solid var(--line); padding:14px 0; }
+.mini-links a { margin-right:10px; }
+.tag-row { margin:6px 0; }
+.stat-grid .stat b { font-size:1.4rem; }
+.src-list { margin:4px 0 0; padding-left:18px; }
+</style>
 
 </head>
 <body>
@@ -19,431 +26,385 @@
   <div class="wrap header-inner">
     <a class="brand" href="index.html">
       <span class="brand-mark" aria-hidden="true">$</span>
-      <span class="brand-text">
-        <b>PrizeDesk</b>
-        <span>Source reviewed 19 Aug 2026</span>
-      </span>
+      <span class="brand-text"><b>PrizeDesk</b><span>Official-page verification 2 Nov 2026</span></span>
     </a>
-    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="shortlist.html">Verified shortlist</a><a href="analysis.html" aria-current="page">Analysis</a><a href="research.html">Source audit</a><a href="verification.html">Verification</a><a href="flagged.html">Flagged for review</a></nav>
+    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="shortlist.html">Verified shortlist</a><a href="verified.html">Verified 2 Nov</a><a href="analysis.html" aria-current="page">Analysis</a><a href="verification.html">Verification</a><a href="repo-review.html">Repo review</a><a href="research.html">Source audit</a><a href="flagged.html">Flagged for review</a><a href="executive-summary.html">Executive summary</a></nav>
   </div>
 </header>
 <main id="main" class="wrap">
 
-<section class="hero">
-  <p class="kicker">Analysis</p>
-  <h1>What 221 competitions actually look like</h1>
-  <p class="lede">Every number on this page is counted from the pinned dataset at build time — no estimates,
-  no extrapolation. Where the data cannot answer a question, it is listed in the last section instead of being
-  guessed at.</p>
-</section>
-
+<section class="hero"><p class="kicker">Analysis &amp; findings</p>
+  <h1>What 221 rows and 40 official pages actually show</h1>
+  <p class="lede">Every count on this page is computed at build time. Where the evidence cannot answer a
+  question, the answer is stated as unknown rather than estimated.</p></section>
 <div class="stat-grid">
   <div class="stat"><b>221</b><span>rows parsed</span></div>
-  <div class="stat is-good"><b>196</b><span>free entry path</span></div>
-  <div class="stat"><b>143</b><span>state a cash amount</span></div>
-  <div class="stat is-warn"><b>27</b><span>already ended</span></div>
+  <div class="stat is-good"><b>30</b><span>rows checked 2 Nov</span></div>
+  <div class="stat is-good"><b>17</b><span>free statements confirmed</span></div>
+  <div class="stat"><b>24</b><span>prize figures confirmed</span></div>
+  <div class="stat is-warn"><b>191</b><span>rows blank + flagged</span></div>
+  <div class="stat is-warn"><b>49</b><span>irregularities published</span></div>
 </div>
 
-<section class="section">
-  <h2>Coverage by category</h2>
+<section class="section"><h2>1. Coverage by category</h2>
   <div class="table-scroll"><table class="ledger">
-    <thead><tr><th>Category</th><th>Rows</th><th>Active</th><th>Free entry</th><th>States a cash figure</th><th>Has an official source</th></tr></thead>
+    <thead><tr><th>Category</th><th>Rows</th><th>Verified 2 Nov</th><th>Prize confirmed</th><th>Free confirmed</th><th>No official source</th></tr></thead>
     <tbody><tr>
       <td data-label="Category"><a href="categories/sports.html">Fantasy &amp; sports picks</a></td>
       <td data-label="Rows" class="num">129</td>
-      <td data-label="Active" class="num">93</td>
-      <td data-label="Free entry" class="num">128</td>
-      <td data-label="Cash figure" class="num">79</td>
-      <td data-label="Official source" class="num">120 / 129</td>
+      <td data-label="Verified 2 Nov" class="num">6</td>
+      <td data-label="Prize confirmed" class="num">4</td>
+      <td data-label="Free confirmed" class="num">5</td>
+      <td data-label="No official source" class="num">9</td>
     </tr><tr>
       <td data-label="Category"><a href="categories/tech.html">Tech &amp; data competitions</a></td>
       <td data-label="Rows" class="num">27</td>
-      <td data-label="Active" class="num">27</td>
-      <td data-label="Free entry" class="num">19</td>
-      <td data-label="Cash figure" class="num">24</td>
-      <td data-label="Official source" class="num">27 / 27</td>
+      <td data-label="Verified 2 Nov" class="num">10</td>
+      <td data-label="Prize confirmed" class="num">9</td>
+      <td data-label="Free confirmed" class="num">3</td>
+      <td data-label="No official source" class="num">0</td>
     </tr><tr>
       <td data-label="Category"><a href="categories/market.html">Market competitions</a></td>
       <td data-label="Rows" class="num">19</td>
-      <td data-label="Active" class="num">19</td>
-      <td data-label="Free entry" class="num">18</td>
-      <td data-label="Cash figure" class="num">16</td>
-      <td data-label="Official source" class="num">17 / 19</td>
+      <td data-label="Verified 2 Nov" class="num">3</td>
+      <td data-label="Prize confirmed" class="num">2</td>
+      <td data-label="Free confirmed" class="num">2</td>
+      <td data-label="No official source" class="num">2</td>
     </tr><tr>
       <td data-label="Category"><a href="categories/creative.html">Creative contests</a></td>
       <td data-label="Rows" class="num">18</td>
-      <td data-label="Active" class="num">17</td>
-      <td data-label="Free entry" class="num">17</td>
-      <td data-label="Cash figure" class="num">15</td>
-      <td data-label="Official source" class="num">18 / 18</td>
+      <td data-label="Verified 2 Nov" class="num">5</td>
+      <td data-label="Prize confirmed" class="num">3</td>
+      <td data-label="Free confirmed" class="num">4</td>
+      <td data-label="No official source" class="num">0</td>
     </tr><tr>
       <td data-label="Category"><a href="categories/skill.html">Skill tournaments</a></td>
       <td data-label="Rows" class="num">12</td>
-      <td data-label="Active" class="num">8</td>
-      <td data-label="Free entry" class="num">1</td>
-      <td data-label="Cash figure" class="num">3</td>
-      <td data-label="Official source" class="num">12 / 12</td>
+      <td data-label="Verified 2 Nov" class="num">2</td>
+      <td data-label="Prize confirmed" class="num">2</td>
+      <td data-label="Free confirmed" class="num">1</td>
+      <td data-label="No official source" class="num">0</td>
     </tr><tr>
       <td data-label="Category"><a href="categories/pools.html">Free pool &amp; league platforms</a></td>
       <td data-label="Rows" class="num">7</td>
-      <td data-label="Active" class="num">7</td>
-      <td data-label="Free entry" class="num">5</td>
-      <td data-label="Cash figure" class="num">0</td>
-      <td data-label="Official source" class="num">7 / 7</td>
+      <td data-label="Verified 2 Nov" class="num">0</td>
+      <td data-label="Prize confirmed" class="num">0</td>
+      <td data-label="Free confirmed" class="num">0</td>
+      <td data-label="No official source" class="num">0</td>
     </tr><tr>
       <td data-label="Category"><a href="categories/forecasting.html">Forecasting tournaments</a></td>
       <td data-label="Rows" class="num">5</td>
-      <td data-label="Active" class="num">4</td>
-      <td data-label="Free entry" class="num">5</td>
-      <td data-label="Cash figure" class="num">4</td>
-      <td data-label="Official source" class="num">5 / 5</td>
+      <td data-label="Verified 2 Nov" class="num">2</td>
+      <td data-label="Prize confirmed" class="num">2</td>
+      <td data-label="Free confirmed" class="num">2</td>
+      <td data-label="No official source" class="num">0</td>
     </tr><tr>
       <td data-label="Category"><a href="categories/trivia.html">Trivia competitions</a></td>
       <td data-label="Rows" class="num">2</td>
-      <td data-label="Active" class="num">1</td>
-      <td data-label="Free entry" class="num">1</td>
-      <td data-label="Cash figure" class="num">0</td>
-      <td data-label="Official source" class="num">2 / 2</td>
+      <td data-label="Verified 2 Nov" class="num">2</td>
+      <td data-label="Prize confirmed" class="num">2</td>
+      <td data-label="Free confirmed" class="num">0</td>
+      <td data-label="No official source" class="num">0</td>
     </tr><tr>
       <td data-label="Category"><a href="categories/directory.html">Directories &amp; forums</a></td>
       <td data-label="Rows" class="num">2</td>
-      <td data-label="Active" class="num">2</td>
-      <td data-label="Free entry" class="num">2</td>
-      <td data-label="Cash figure" class="num">0</td>
-      <td data-label="Official source" class="num">2 / 2</td>
-    </tr></tbody>
-  </table></div>
-  <p class="note-tiny">58.4% of the ledger is a single category
-  (Fantasy &amp; sports picks). That is a consequence of the source's own scope, not of this rebuild.</p>
+      <td data-label="Verified 2 Nov" class="num">0</td>
+      <td data-label="Prize confirmed" class="num">0</td>
+      <td data-label="Free confirmed" class="num">0</td>
+      <td data-label="No official source" class="num">0</td>
+    </tr></tbody></table></div>
+  <p class="note-tiny">58.4% of the ledger sits in a single category (Fantasy &amp; sports picks). That is the reference ledger's scope, not a judgement by this site.</p>
 </section>
 
-<section class="section">
-  <h2>Entry path and status</h2>
+<section class="section" id="ai-agent"><h2>2. AI-agent compatibility: what the rules actually say</h2>
   <div class="detail-grid">
-    <div class="card">
-      <h3>Entry path</h3>
-      <div class="table-scroll"><table class="ledger"><tbody>
-        <tr>
-    <td data-label="Item">Free entry path</td>
-    <td data-label="Count" class="num">196</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:89%;min-width:2px"></span>
-      <span class="note-tiny">88.7%</span>
-    </td>
-  </tr>
-        <tr>
-    <td data-label="Item">Some free events</td>
-    <td data-label="Count" class="num">14</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:6%;min-width:2px"></span>
-      <span class="note-tiny">6.3%</span>
-    </td>
-  </tr>
-        <tr>
-    <td data-label="Item">Cash needs a fee</td>
-    <td data-label="Count" class="num">4</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:2%;min-width:2px"></span>
-      <span class="note-tiny">1.8%</span>
-    </td>
-  </tr>
-      </tbody></table></div>
-    </div>
-    <div class="card">
-      <h3>Source status</h3>
-      <div class="table-scroll"><table class="ledger"><tbody>
-        <tr>
-    <td data-label="Item">Active</td>
-    <td data-label="Count" class="num">178</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:81%;min-width:2px"></span>
-      <span class="note-tiny"></span>
-    </td>
-  </tr>
-        <tr>
-    <td data-label="Item">Mixed</td>
-    <td data-label="Count" class="num">5</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:2%;min-width:2px"></span>
-      <span class="note-tiny"></span>
-    </td>
-  </tr>
-        <tr>
-    <td data-label="Item">Caution</td>
-    <td data-label="Count" class="num">11</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:5%;min-width:2px"></span>
-      <span class="note-tiny"></span>
-    </td>
-  </tr>
-        <tr>
-    <td data-label="Item">Ended / out of season</td>
-    <td data-label="Count" class="num">27</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:12%;min-width:2px"></span>
-      <span class="note-tiny"></span>
-    </td>
-  </tr>
-        <tr>
-    <td data-label="Item">Inactive</td>
-    <td data-label="Count" class="num">0</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:2%;min-width:2px"></span>
-      <span class="note-tiny"></span>
-    </td>
-  </tr>
-      </tbody></table></div>
-    </div>
+    <div class="card"><h3>Allowed or required</h3><ul class="list">
+      <li>Codex x TwitchCon: "Participants may use standard development tools, including frameworks, libraries, starter templates, and AI coding assistants." <a href="https://twitchcon-codex.devpost.com/rules" rel="noopener noreferrer">Official rules ↗</a></li>
+      <li>PayPal AI Hackathon: "along with an AI tool, model, or platform of their choice". <a href="https://paypalaihackathon.devpost.com/rules" rel="noopener noreferrer">Official rules ↗</a></li>
+      <li>Global Virtual Hackathon: "Building with AI tools is allowed and expected." <a href="https://gvhackathon.com/" rel="noopener noreferrer">Official page ↗</a></li>
+      <li>Metaculus FutureEval: "a bot-only competition where bot-makers attempt to push AI to its limits in predicting future events." <a href="https://www.metaculus.com/tournament/fall-futureeval-2026/" rel="noopener noreferrer">Official page ↗</a></li>
+      <li>GEMS Prize official rules §3.2: "Using generative AI technology in the development of your prize submission is allowed. However, you must indicate in the narrative ... the extent to which, if any, you used generative AI technology and how you used it". <a href="https://www.nlr.gov/docs/fy26osti/96647.pdf" rel="noopener noreferrer">Official rules ↗</a></li>
+    </ul></div>
+    <div class="card"><h3>Restricted or prohibited</h3><ul class="list">
+      <li>Metaculus platform rules: "Unless otherwise specifically permitted in the Competition-specific rules, automated systems, bots, artificial intelligence, or user accounts which are officially registered as bot accounts, are ineligible for tournament prizes. However, human participants are allowed to use AI tools or systems to assist in their forecasting, as long as the final submissions reflect their own decisions and understanding." <a href="https://www.metaculus.com/tournament-rules/" rel="noopener noreferrer">Official rules ↗</a> The bot-only FutureEval tournament is a competition-specific exception, not a general permission.</li>
+      <li>Winning Writers: "may not contain any AI-generated text". <a href="https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free" rel="noopener noreferrer">Official page ↗</a></li>
+      <li>ESPN: "Entries must be manually key-stroked by the entrant; use of automated entry devices or programs, or entries by third parties are prohibited." <a href="https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay" rel="noopener noreferrer">Official rules ↗</a></li>
+      <li>CBS: may disqualify "accumulating points through methods such as automated computer scripts". <a href="https://www.cbssports.com/fantasy/football/games/pickem/rules" rel="noopener noreferrer">Official rules ↗</a></li>
+      <li>ARC Prize: "Internet access is not available during Kaggle evaluation (no API-based systems like GPT/Claude/etc.)" and code must be open source. <a href="https://arcprize.org/competitions/2026" rel="noopener noreferrer">Official page ↗</a></li>
+      <li>TradingView: scripts with excessively high transaction activity "will lead to a ban". <a href="https://www.tradingview.com/the-leap/tradestation-july-2026/rules/" rel="noopener noreferrer">Official rules ↗</a></li>
+    </ul></div>
   </div>
+  <p class="note-tiny">Reading: an AI coding agent is a genuine fit for objective-scoring tech/forecasting events whose rules invite it, and a liability in pick'em or judged-writing contests. Metaculus is the clearest example of a split rule: AI assistance is allowed for human forecasts, but bots cannot win prizes by default — only a competition with explicit permission (such as FutureEval) changes that. This is analysis of the quoted rules, not a claim about any operator's enforcement. See <a href="flagged.html#R-18">R-18</a> and <a href="flagged.html#R-17">R-17</a>.</p>
 </section>
 
-<section class="section">
-  <h2>What it takes to get paid</h2>
-  <div class="detail-grid">
-    <div class="card">
-      <h3>Operator ID checks (source's label)</h3>
-      <div class="table-scroll"><table class="ledger"><tbody>
-        <tr>
-    <td data-label="Item">Account only</td>
-    <td data-label="Count" class="num">85</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:38%;min-width:2px"></span>
-      <span class="note-tiny"></span>
-    </td>
-  </tr><tr>
-    <td data-label="Item">Eligibility check</td>
-    <td data-label="Count" class="num">96</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:43%;min-width:2px"></span>
-      <span class="note-tiny"></span>
-    </td>
-  </tr><tr>
-    <td data-label="Item">Full KYC</td>
-    <td data-label="Count" class="num">7</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:3%;min-width:2px"></span>
-      <span class="note-tiny"></span>
-    </td>
-  </tr><tr>
-    <td data-label="Item">Tax paperwork</td>
-    <td data-label="Count" class="num">18</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:8%;min-width:2px"></span>
-      <span class="note-tiny"></span>
-    </td>
-  </tr>
-      </tbody></table></div>
-      <p class="note-tiny">40
-      rows demand a photo ID, tax paperwork or both before a withdrawal.</p>
-    </div>
-    <div class="card">
-      <h3>Prize currency as written</h3>
-      <div class="table-scroll"><table class="ledger"><tbody>
-        <tr>
-    <td data-label="Item">USD ($)</td>
-    <td data-label="Count" class="num">120</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:54%;min-width:2px"></span>
-      <span class="note-tiny">54.3%</span>
-    </td>
-  </tr><tr>
-    <td data-label="Item">no currency stated</td>
-    <td data-label="Count" class="num">76</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:34%;min-width:2px"></span>
-      <span class="note-tiny">34.4%</span>
-    </td>
-  </tr><tr>
-    <td data-label="Item">GBP (£)</td>
-    <td data-label="Count" class="num">22</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:10%;min-width:2px"></span>
-      <span class="note-tiny">10%</span>
-    </td>
-  </tr><tr>
-    <td data-label="Item">EUR (€)</td>
-    <td data-label="Count" class="num">2</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:2%;min-width:2px"></span>
-      <span class="note-tiny">0.9%</span>
-    </td>
-  </tr><tr>
-    <td data-label="Item">USD ($) + EUR (€)</td>
-    <td data-label="Count" class="num">1</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:2%;min-width:2px"></span>
-      <span class="note-tiny">0.5%</span>
-    </td>
-  </tr>
-      </tbody></table></div>
-      <p class="note-tiny">No FX conversion is applied anywhere on this site. A £5,000 prize stays £5,000.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Concentration: where the rows point</h2>
-  <p>176 distinct hostnames appear in 221 rows. The ten most-linked domains:</p>
+<section class="section"><h2>3. Verified deadlines</h2>
+  <p class="note-tiny">Only deadlines stated on an official page read on 2 Nov 2026. A zero means the date is today.</p>
   <div class="table-scroll"><table class="ledger">
-    <thead><tr><th>Host</th><th>Rows</th><th>Share</th></tr></thead>
+    <thead><tr><th>Competition</th><th>Verified deadline</th><th>Days from 2 Nov</th><th>Official source</th></tr></thead>
     <tbody><tr>
-    <td data-label="Item">fantasy.espn.com</td>
-    <td data-label="Count" class="num">14</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:100%;min-width:2px"></span>
-      <span class="note-tiny">6.3%</span>
-    </td>
-  </tr><tr>
-    <td data-label="Item">fantasy.premierleague.com</td>
-    <td data-label="Count" class="num">11</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:79%;min-width:2px"></span>
-      <span class="note-tiny">5%</span>
-    </td>
-  </tr><tr>
-    <td data-label="Item">kaggle.com</td>
-    <td data-label="Count" class="num">7</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:50%;min-width:2px"></span>
-      <span class="note-tiny">3.2%</span>
-    </td>
-  </tr><tr>
-    <td data-label="Item">apps.apple.com</td>
-    <td data-label="Count" class="num">3</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:21%;min-width:2px"></span>
-      <span class="note-tiny">1.4%</span>
-    </td>
-  </tr><tr>
-    <td data-label="Item">metaculus.com</td>
-    <td data-label="Count" class="num">3</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:21%;min-width:2px"></span>
-      <span class="note-tiny">1.4%</span>
-    </td>
-  </tr><tr>
-    <td data-label="Item">supercoach.com.au</td>
-    <td data-label="Count" class="num">3</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:21%;min-width:2px"></span>
-      <span class="note-tiny">1.4%</span>
-    </td>
-  </tr><tr>
-    <td data-label="Item">papaya.com</td>
-    <td data-label="Count" class="num">2</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:14%;min-width:2px"></span>
-      <span class="note-tiny">0.9%</span>
-    </td>
-  </tr><tr>
-    <td data-label="Item">drivendata.org</td>
-    <td data-label="Count" class="num">2</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:14%;min-width:2px"></span>
-      <span class="note-tiny">0.9%</span>
-    </td>
-  </tr><tr>
-    <td data-label="Item">cbssports.com</td>
-    <td data-label="Count" class="num">2</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:14%;min-width:2px"></span>
-      <span class="note-tiny">0.9%</span>
-    </td>
-  </tr><tr>
-    <td data-label="Item">thesportsgeek.com</td>
-    <td data-label="Count" class="num">2</td>
-    <td data-label="Share">
-      <span style="display:inline-block;height:8px;border-radius:4px;background:var(--accent);width:14%;min-width:2px"></span>
-      <span class="note-tiny">0.9%</span>
-    </td>
-  </tr></tbody>
-  </table></div>
-  <p class="note-tiny">5 destinations are shared by more than one row
-  (19 rows in total). A shared URL cannot support a
-  row-specific prize claim, so those rows are cross-checked against the
-  <a href="flagged.html#I-08b">I-08b</a> register entry.</p>
+      <td class="cell-name" data-label="Competition"><a href="c/tradingview-leap.html">TradingView — The Leap</a></td>
+      <td data-label="Verified deadline">14 Aug 2026</td>
+      <td data-label="Days from 2 Nov" class="num">-80</td>
+      <td data-label="Official source"><a class="src-link" href="https://www.tradingview.com/the-leap/tradestation-july-2026/rules/" rel="noopener noreferrer">Official page ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/midterms-2026.html">US Midterms 2026 (Metaculus tournament)</a></td>
+      <td data-label="Verified deadline">4 Nov 2026</td>
+      <td data-label="Days from 2 Nov" class="num">2</td>
+      <td data-label="Official source"><a class="src-link" href="https://www.metaculus.com/tournament/midterms-2026/" rel="noopener noreferrer">Official page ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/paypal-ai-hackathon-2026.html">PayPal AI Hackathon</a></td>
+      <td data-label="Verified deadline">12 Nov 2026</td>
+      <td data-label="Days from 2 Nov" class="num">10</td>
+      <td data-label="Official source"><a class="src-link" href="https://paypalaihackathon.devpost.com/rules" rel="noopener noreferrer">Official page ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/global-virtual-hackathon-2026.html">Global Virtual Hackathon 2026</a></td>
+      <td data-label="Verified deadline">25 Nov 2026</td>
+      <td data-label="Days from 2 Nov" class="num">23</td>
+      <td data-label="Official source"><a class="src-link" href="https://gvhackathon.com/" rel="noopener noreferrer">Official page ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/gems-prize-2026.html">GEMS Prize Challenge (DrivenData)</a></td>
+      <td data-label="Verified deadline">3 Dec 2026</td>
+      <td data-label="Days from 2 Nov" class="num">31</td>
+      <td data-label="Official source"><a class="src-link" href="https://www.drivendata.org/competitions/306/competition-doe-gems/" rel="noopener noreferrer">Official page ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/espn-pickem.html">ESPN NFL Pick&#39;em</a></td>
+      <td data-label="Verified deadline">10 Jan 2027</td>
+      <td data-label="Days from 2 Nov" class="num">69</td>
+      <td data-label="Official source"><a class="src-link" href="https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay" rel="noopener noreferrer">Official page ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/cbs-pro-pickem.html">CBS Sports Pro Football Pick&#39;em</a></td>
+      <td data-label="Verified deadline">10 Jan 2027</td>
+      <td data-label="Days from 2 Nov" class="num">69</td>
+      <td data-label="Official source"><a class="src-link" href="https://www.cbssports.com/fantasy/football/games/pickem/rules" rel="noopener noreferrer">Official page ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/sony-world-photo.html">Sony World Photography Awards</a></td>
+      <td data-label="Verified deadline">12 Jan 2027</td>
+      <td data-label="Days from 2 Nov" class="num">71</td>
+      <td data-label="Official source"><a class="src-link" href="https://www.worldphoto.org/sony-world-photography-awards" rel="noopener noreferrer">Official page ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/wergle-flomp.html">Wergle Flomp Humor Poetry Contest</a></td>
+      <td data-label="Verified deadline">1 Apr 2027</td>
+      <td data-label="Days from 2 Nov" class="num">150</td>
+      <td data-label="Official source"><a class="src-link" href="https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free" rel="noopener noreferrer">Official page ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/tom-howard-poetry.html">Tom Howard/Margaret Reid Poetry Contest</a></td>
+      <td data-label="Verified deadline">1 Oct 2027</td>
+      <td data-label="Days from 2 Nov" class="num">333</td>
+      <td data-label="Official source"><a class="src-link" href="https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest" rel="noopener noreferrer">Official page ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/arcprize.html">ARC Prize (via Kaggle)</a></td>
+      <td data-label="Verified deadline">2 Nov 2026</td>
+      <td data-label="Days from 2 Nov" class="num">0</td>
+      <td data-label="Official source"><a class="src-link" href="https://arcprize.org/competitions/2026" rel="noopener noreferrer">Official page ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/codex-twitchcon-2026.html">Codex x TwitchCon Hackathon</a></td>
+      <td data-label="Verified deadline">2 Nov 2026</td>
+      <td data-label="Days from 2 Nov" class="num">0</td>
+      <td data-label="Official source"><a class="src-link" href="https://twitchcon-codex.devpost.com/rules" rel="noopener noreferrer">Official page ↗</a></td>
+    </tr></tbody></table></div>
+</section>
+
+<section class="section"><h2>4. Per-row irregularities found on official pages</h2>
   <div class="table-scroll"><table class="ledger">
-    <thead><tr><th>Shared destination</th><th>Rows pointing at it</th></tr></thead>
+    <thead><tr><th>Competition</th><th>Irregularity</th><th>Official source</th><th>Evidence</th></tr></thead>
     <tbody><tr>
-      <td data-label="Destination" style="word-break:break-all"><a href="https://fantasy.premierleague.com/" rel="noopener noreferrer">https://fantasy.premierleague.com/</a></td>
-      <td data-label="Rows">11 — <a href="c/fpl-official.html">Official FPL (Premier League)</a>, <a href="c/ffs-fpl.html">Fantasy Football Scout FPL league</a>, <a href="c/football-mad.html">Football Mad FPL league</a>, <a href="c/fantasy-arena.html">Fantasy Arena FPL league</a>, <a href="c/lazyfpl.html">LazyFPL league</a>, <a href="c/fplhub.html">FPL Hub league</a>, <a href="c/bona-fide.html">Bona Fide Sports league</a>, <a href="c/olka.html">OLKA Express league</a>, <a href="c/fplmanager-india.html">FPLManagerIndia league</a>, <a href="c/fplstore.html">fplStore_ league</a>, <a href="c/pitchbooking.html">Pitchbooking.com league</a></td>
+      <td class="cell-name" data-label="Competition"><a href="c/kaggle.html">Kaggle Competitions</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>Prize figures are per competition; no single Kaggle-wide pool exists.</li><li>Automated agents must work inside Kaggle Notebook compute/internet limits.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://www.kaggle.com/competitions" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#kaggle">Quote ↗</a></td>
     </tr><tr>
-      <td data-label="Destination" style="word-break:break-all"><a href="https://www.papaya.com/" rel="noopener noreferrer">https://www.papaya.com/</a></td>
-      <td data-label="Rows">2 — <a href="c/solitaire-cash.html">Solitaire Cash (Papaya)</a>, <a href="c/bingo-cash.html">Bingo Cash (Papaya)</a></td>
+      <td class="cell-name" data-label="Competition"><a href="c/arcprize.html">ARC Prize (via Kaggle)</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>Submission deadline is 2026-11-02, the day of this verification pass.</li><li>No entry fee stated, so the entry-cost cell stays blank.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://arcprize.org/competitions/2026" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#arcprize">Quote ↗</a></td>
     </tr><tr>
-      <td data-label="Destination" style="word-break:break-all"><a href="https://gaming.uefa.com/en/uclfantasy" rel="noopener noreferrer">https://gaming.uefa.com/en/uclfantasy</a></td>
-      <td data-label="Rows">2 — <a href="c/ucl-fantasy.html">UCL Fantasy</a>, <a href="c/ffs-ucl.html">FFScout UCL Fantasy league</a></td>
+      <td class="cell-name" data-label="Competition"><a href="c/gems-prize-2026.html">GEMS Prize Challenge (DrivenData)</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>No entry fee stated, so the entry-cost cell stays blank.</li><li>The competition homepage says &#39;Dec. 3, 2026, 11:59 p.m. UTC&#39; while official rules Appendix A.1 says &#39;by 5:00 p.m. ET on the prize submission deadline date&#39; — the times conflict.</li><li>Generative AI is permitted but must be disclosed in the narrative (official rules §3.2).</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://www.drivendata.org/competitions/306/competition-doe-gems/" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#gems-prize-2026">Quote ↗</a></td>
     </tr><tr>
-      <td data-label="Destination" style="word-break:break-all"><a href="https://championsleague.cev.eu/" rel="noopener noreferrer">https://championsleague.cev.eu/</a></td>
-      <td data-label="Rows">2 — <a href="c/cev-volley-fantasy.html">CEV Champions League Volley Fantasy</a>, <a href="c/cev-predictor.html">CEV Champions League Predictor Game</a></td>
+      <td class="cell-name" data-label="Competition"><a href="c/drivendata.html">DrivenData</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>The ledger&#39;s general purse range cannot be confirmed from the official index.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://www.drivendata.org/competitions/" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#drivendata">Quote ↗</a></td>
     </tr><tr>
-      <td data-label="Destination" style="word-break:break-all"><a href="https://tipping.afl.com.au/" rel="noopener noreferrer">https://tipping.afl.com.au/</a></td>
-      <td data-label="Rows">2 — <a href="c/afl-tipping.html">AFL Tipping</a>, <a href="c/aflw-tipping.html">AFLW Tipping</a></td>
-    </tr></tbody>
-  </table></div>
+      <td class="cell-name" data-label="Competition"><a href="c/metaculus.html">Metaculus Tournaments</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>Several listed tournaments carry no prize pool; no blanket figure applies.</li><li>By default bots/AI accounts cannot win tournament prizes; the FutureEval Bot Tournament is a competition-specific exception, not a general permission.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://www.metaculus.com/tournaments/" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#metaculus">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/midterms-2026.html">US Midterms 2026 (Metaculus tournament)</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>Closes 2026-11-04, two days after this verification pass.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://www.metaculus.com/tournament/midterms-2026/" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#midterms-2026">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/codex-twitchcon-2026.html">Codex x TwitchCon Hackathon</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>Deadline is 2026-11-02 (2:00 pm Pacific / 5:00 pm EST), the day of this pass.</li><li>The ledger records &#39;$10,000 first place&#39;; the official hackathon listing states &#39;$25,000 in prizes&#39; across five awards.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://twitchcon-codex.devpost.com/rules" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#codex-twitchcon-2026">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/paypal-ai-hackathon-2026.html">PayPal AI Hackathon</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>The Devpost headline &#39;$67,500 in prizes&#39; includes non-cash Sponsor Prizes such as &#39;$1000 Render credits&#39; (official rules prize table).</li><li>New &amp; Existing projects are allowed if significantly updated during the Submission Period.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://paypalaihackathon.devpost.com/rules" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#paypal-ai-hackathon-2026">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/devpost.html">Devpost Hackathons</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>The ledger&#39;s stated range is stale: the official index shows a $1,000,000 contest (Meta VR Start Developer Competition 2026).</li><li>Some listings are &#39;5 non-cash prizes&#39; (DSH Hacks V2).</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://devpost.com/hackathons" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#devpost">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/espn-pickem.html">ESPN NFL Pick&#39;em</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>ESPN&#39;s own page states both &#39;You can now create up to 10 entries&#39; and &#39;you can create another entry (up to five total)&#39;.</li><li>Automated entry programs are prohibited — an agent may not submit picks.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#espn-pickem">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/cbs-pro-pickem.html">CBS Sports Pro Football Pick&#39;em</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>The $100,000 prize is a contingency prize, not a regular season prize.</li><li>Automated scripts can disqualify an entrant.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://www.cbssports.com/fantasy/football/games/pickem/rules" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#cbs-pro-pickem">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/espn-survivor.html">ESPN NFL Survivor</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>The official page says &#39;Entry creation has closed&#39; while the pinned ledger labels this row &#39;live&#39;.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://fantasy.espn.com/games/nfl-survivor-2026/make-picks" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#espn-survivor">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/fox-super6.html">FOX Super 6</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>No active games and no prize figure on the official page; the prize cell is blank.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://www.foxsports.com/fox-super-6" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#fox-super6">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/mlb-beat-the-streak.html">MLB Beat the Streak</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>The Grand Prize is only awarded for a 57-game streak; the Top Streak Prize only if no Grand Prize is awarded and a streak of 20+ is reached.</li><li>The entry period ends with the 2026 MLB regular season.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://www.mlb.com/apps/beat-the-streak/official-rules" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#mlb-beat-the-streak">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/wergle-flomp.html">Wergle Flomp Humor Poetry Contest</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>AI-generated text is prohibited by the official rules — not suitable for an AI-agent-authored entry.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#wergle-flomp">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/tom-howard-poetry.html">Tom Howard/Margaret Reid Poetry Contest</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>Paid entry ($27 per submission) even though the reference ledger lists this as a free-entry competition.</li><li>Currently closed.</li><li>AI-generated text is prohibited.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://winningwriters.com/our-contests/tom-howard-margaret-reid-poetry-contest" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#tom-howard-poetry">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/sony-world-photo.html">Sony World Photography Awards</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>Competition names changed: &#39;Series competition (Previously Professional competition)&#39; and &#39;Single Image competition (Previously Open competition)&#39; — the ledger&#39;s &#39;Professional Photographer of the Year&#39; / &#39;Open&#39; labels are out of date.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://www.worldphoto.org/sony-world-photography-awards" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#sony-world-photo">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/weather-potw.html">Weather Photographer of the Year</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>No prize amount on the official page; the prize cell is blank and the ledger figure is flagged unverified.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://www.rmets.org/weather-photographer-of-the-year" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#weather-potw">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/vocal.html">Vocal Challenges</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>Some challenges require a paid Vocal+ membership.</li><li>No prize amount on the official FAQ; prize cell blank.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://vocal.media/resources/challenges-frequently-asked-questions" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#vocal">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/deriv-tournaments.html">Deriv Trading Tournaments</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>A fully verified Deriv account is required to receive a prize.</li><li>Operator is Deriv (SVG) LLC (St Vincent and the Grenadines) and trading is simulated.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://deriv.com/newsroom/updates/free-trading-tournaments-virtual-funds-cash-prizes" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#deriv-tournaments">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/gamersaloon.html">GamerSaloon 1-Rounders</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>The $10 prize is Bonus Cash which &#39;is not eligible for withdrawal&#39; — it is not withdrawable USD.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://www.gamersaloon.com/promos/1rounder/" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#gamersaloon">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/solitaire-cash.html">Solitaire Cash (Papaya)</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>Free competitions pay Gems, not dollars; the cash rooms are a separate paid path.</li><li>Our business model is based on taking a platform fee out of the total entry fees pool in each tournament (official FAQ).</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://www.papaya.com/faq" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#solitaire-cash">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/herox.html">HeroX / Challenge.gov</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>herox.com/challenges returns &#39;Page not found&#39;; the working URL is /crowdsourcing-projects.</li><li>The Challenge.gov platform was sunset on March 30, 2026; the official notice points to usa.gov/challenges.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://www.herox.com/crowdsourcing-projects" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#herox">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/global-virtual-hackathon-2026.html">Global Virtual Hackathon 2026</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>The ledger&#39;s &#39;deadline 2026-11-13&#39; is registration closing; the official submission deadline is 25 November 2026.</li><li>Eligibility is limited to students aged 14-18 with a supervising teacher.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://gvhackathon.com/" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#global-virtual-hackathon-2026">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/givling.html">Givling</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>The official site describes a crowdfunding queue with random Spinners, not a trivia contest.</li><li>No free-entry statement on the page.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://givling.com/" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#givling">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/aicrowd.html">AIcrowd Challenges</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>Official challenges page returned no verifiable competition facts; every value cell remains blank and flagged.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://www.aicrowd.com/challenges" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#aicrowd">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/tradingview-leap.html">TradingView — The Leap</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>These rules are for the July-August 2026 edition, which ended 14 Aug 2026; the ledger labels the row &#39;live&#39;.</li><li>Prizes from 51st to 250th place are a 3-month subscription, not cash.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://www.tradingview.com/the-leap/tradestation-july-2026/rules/" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#tradingview-leap">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/swagbucks-trivia.html">Swagbucks Daily Trivia</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>Rewards are SB points; &#39;big cash prizes&#39; has no stated amount, so the prize cell is blank.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://help.swagbucks.com/hc/en-us/articles/15374709231764-What-is-Swagbucks-Daily-Trivia" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#swagbucks-trivia">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/fpl-official.html">Official FPL (Premier League)</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>The ledger&#39;s rules URL redirects to /en/help/rules.</li><li>No prize figure is stated on the official rules page; the prize cell is blank.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://fantasy.premierleague.com/en/help/rules" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#fpl-official">Quote ↗</a></td>
+    </tr><tr>
+      <td class="cell-name" data-label="Competition"><a href="c/roboforex-demo.html">RoboForex Demo Contest</a></td>
+      <td data-label="Irregularity"><ul class="list" style="margin:0"><li>roboforex.com/contests/ returns a 404 page; no contest facts can be confirmed.</li></ul></td>
+      <td data-label="Official source"><a class="src-link" href="https://roboforex.com/contests/" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Evidence"><a href="verified.html#roboforex-demo">Quote ↗</a></td>
+    </tr></tbody></table></div>
+  <p class="note-tiny">The full register, including repository-level findings, is on <a href="flagged.html">Flagged for Review</a>.</p>
 </section>
 
-<section class="section">
-  <h2>Findings</h2>
-  <div class="card">
-    <ol class="list">
-      <li><b>Free entry is the norm, free cash is not.</b> 196 rows claim a free path, but only
-      143 state a cash amount at all, and 80 rows show “—” on this site
-      because the source either states no figure or cites no official source.</li>
-      <li><b>The dataset is seasonal and it shows.</b> 27 rows are out of season, almost all of
-      them sports brackets and pick'em contests. Any "best of" list that ignores status is misleading within weeks.</li>
-      <li><b>Effort is inversely related to certainty.</b> Pick'em contests are low-effort with tiny per-entrant
-      odds and a tie-breaker; tech and forecasting contests are high-effort with objective scoring and far fewer
-      entrants. For an AI-assisted entrant, the second shape is worth more per hour.</li>
-      <li><b>Non-cash prizes hide in plain sight.</b> Gems, tickets, SB points, trading credits and "funded
-      accounts" all appear as prizes. They are not dollars, and we say so on every such row.</li>
-      <li><b>Sourcing quality varies wildly.</b> 11 rows have no official-tier source at all,
-      and 117 "rules" links are just the signup page. A prize claim that cannot be read on an
-      operator page is a rumour.</li>
-      <li><b>Referral codes are an incentive, not information.</b> 12 rows carried codes;
-      none is republished here.</li>
-    </ol>
-  </div>
+<section class="section"><h2>5. Findings</h2>
+  <div class="card"><ol class="list">
+    <li><b>Confirmed free entry is common; confirmed free cash is narrower.</b> 17 rows quote a free/no-purchase statement, 24 quote a prize figure, and 1 quote a fee. Non-withdrawable Bonus Cash, Gems and SB points are labelled as such.</li>
+    <li><b>Headline figures need their wording.</b> MLB's $5,600,000 is a 57-streak annuity ($3,000,000 lump sum); CBS's $100,000 is a perfect-week contingency; PayPal's $67,500 total includes Render credits. We publish the wording, not a single invented number.</li>
+    <li><b>The data is seasonal and it shows.</b> ESPN Survivor entry has closed, FOX Super 6 has no active games, Tom Howard is closed and TradingView's July edition ended 14 August 2026 — each confirmed on the operator's own page.</li>
+    <li><b>Sourcing quality is uneven.</b> 11 rows cite only forums, blogs or old articles. Their values are blank, not guessed.</li>
+    <li><b>Verification is deliberately incomplete.</b> 191 of 221 rows were not re-read on 2 Nov 2026. That gap is published rather than hidden.</li>
+  </ol></div>
 </section>
 
-<section class="section">
-  <h2>What this data cannot tell you</h2>
-  <div class="callout warn">
-    <ul class="list">
-      <li><b>Odds of winning.</b> No entrant counts, no historical win rates, no field sizes. The ledger is a
-      catalogue of contests, not a record of outcomes.</li>
-      <li><b>Expected value per hour.</b> Deadlines, effort and skill ceilings are not fields in the dataset.
-      We can rank prize size and entry friction; we cannot rank your personal EV.</li>
-      <li><b>Whether a contest is running this week.</b> The data is 74 days old and only
-      13 rows were re-fetched. Status is the source's label, not a live calendar.</li>
-      <li><b>Legality in your jurisdiction.</b> Some rows are skill-cash games restricted by US state, others
-      are UK/Ireland-only. Read the operator's eligibility section.</li>
-      <li><b>Tax treatment.</b> We only record that US prizes of $600+ normally trigger a W-9. That is context
-      from the source, not advice.</li>
-    </ul>
-  </div>
+<section class="section"><h2>6. What this evidence cannot tell you</h2>
+  <div class="callout warn"><ul class="list">
+    <li>Odds of winning, field sizes, historical win rates and expected value per hour.</li>
+    <li>Whether a contest is running beyond the moment its page was read on 2 Nov 2026.</li>
+    <li>Legality in your jurisdiction, identity requirements, and the tax treatment of a prize.</li>
+    <li>The current value of any figure on the 191 rows we did not re-read.</li>
+  </ul></div>
 </section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-links">
-      <a href="all.html">All 221 competitions</a>
+      <a href="index.html">Dashboard</a>
+      <a href="all.html">All competitions</a>
       <a href="best.html">Best picks</a>
       <a href="shortlist.html">Verified shortlist</a>
+      <a href="verified.html">Verified 2 Nov</a>
       <a href="analysis.html">Analysis</a>
+      <a href="verification.html">Verification</a>
+      <a href="repo-review.html">Repo review</a>
       <a href="research.html">Source audit</a>
-      <a href="verification.html">Verification method</a>
-      <a href="flagged.html">Flagged for review (31)</a>
+      <a href="flagged.html">Flagged for review</a>
       <a href="executive-summary.html">Executive summary</a>
     </div>
-    <p><b>PrizeDesk</b> is an independent workbench built on the Free Money &amp; Contest
-    Ledger dataset (pinned commit <code>466f7c1</code>, source reviewed
-    19 Aug 2026). It is not affiliated with any operator listed.
-    Prize figures are the source dataset's claims, not this site's promises — open the operator's
-    rules before you enter. Contest law varies by state and country; play only where legal. 18+/21+.</p>
-    <p class="note-tiny">Figures verified on this site: 13 of 221 rows were
-    fetched live on 1 Nov 2026. Everything else is labelled
-    "source cited — not re-checked". See <a href="verification.html">how verification works</a>.</p>
+    <p><b>PrizeDesk</b> is an independent workbench. Its 221 rows come from the third-party
+    <a href="https://karagemop466-tech.github.io/FreeMoneyApps/" rel="noopener noreferrer">Free Money &amp; Contest Ledger</a>
+    (pinned commit <code>466f7c1</code>, source reviewed
+    19 Aug 2026). Only values read on an official operator page on
+    2 Nov 2026 are published; everything else is blank and
+    <a href="flagged.html">flagged for review</a>. Prize figures are the operator's wording, not
+    this site's promise. Contest law and eligibility vary by state and country; read the rules before you enter.</p>
+    <p class="note-tiny">30 of 221 rows were checked against 40 official pages on
+    2 Nov 2026. See <a href="verification.html">how verification works</a> and
+    <a href="verified.html">the line-by-line evidence</a>.</p>
   </div>
 </footer>
 
