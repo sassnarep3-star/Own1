@@ -199,3 +199,9 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 - **Deriv** pays real cash on a demo account, but the operator is Deriv (SVG) LLC and prizes require a fully verified account — flagged on the row.
 
 **Audit trail added:** `research/EVIDENCE.csv` is a flat, spreadsheet-friendly export of every page-checked row (id, name, category, source, entry cost, prize, deadline, eligibility, reading date, evidence URL, reading session, flags) so any value on the site can be traced to the page it came from.
+
+### Session `937cef3d-own1` claim (2026-11-02)
+
+| Task | Status | Owner | File scope | Notes |
+| --- | --- | --- | --- | --- |
+| T14 · Independent current-state audit and publication check | In progress | `937cef3d-own1` | `research/CURRENT_AUDIT_2026-11-02.md`, `COORDINATION.md` | Review existing integrated work, check current official sources and publication; no edits to other sessions' files. The older integration claim at line 144 predates the documented completed integrations and is stale. |
