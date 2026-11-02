@@ -1,6 +1,8 @@
 # Targeted official-source refresh — 2026-11-02
 
-**Scope:** This is a targeted update to the 2026-11-01 source audit, not a full re-verification of the 211-row catalogue. Official operator pages were opened and read on 2026-11-02. Facts below are limited to what those pages state. Missing information is explicitly left unresolved. No rows in the published dataset were changed in this audit.
+> **Integration update (PR #35, 2026-11-02):** The initial audit below was written before its reads were merged. The T14 rereads and additional official-page checks were subsequently integrated into `data/cross-checks.json`, `data/verification.json`, the 221-row catalogue, the [Verified shortlist](../../shortlist.html), and [Flagged for Review](../../flagged.html). The current dataset records 25 official-page check records, 22 independently checked rows, and 31 irregularities. The historical notes below still apply to the time the first targeted fetches were made; no entry-fee, eligibility, or win-probability value should be inferred where the evidence leaves it unstated. Full integration log: [`docs/SESSION-7a477419.md`](../../docs/SESSION-7a477419.md).
+
+**Scope:** This was a targeted update to the 2026-11-01 source audit, not a full re-verification of every catalogue row. Official operator pages were opened and read on 2026-11-02. Facts below are limited to what those pages state. Missing information is explicitly left unresolved. The initial audit did not edit rows; later integration is recorded above.
 
 ## Official pages read
 
@@ -26,16 +28,20 @@ The pinned upstream source data declares 206 listings and a review date of 2026-
 
 As of 2026-11-02, the source's declared review date is 75 days old. These five targeted page reads and the Kaggle index above do not refresh all 211 listings. In particular, they do not resolve the 11 rows with no official-tier source, the 177 cited-but-not-re-opened rows, stale/ended listings, or individual eligibility in Singapore.
 
-## Findings requiring integration / review
+## Findings and integration status
 
-1. **Root executive summary and README were stale and inconsistent with the active pipeline.** The old root summary described a separate 212-row Prize Atlas build, whereas the current canonical PrizeDesk build has 211 rows (206 pinned-source rows plus five additions). The alternate Prize Atlas site is preserved under `archive/prize-atlas/`; it is not the current root generator.
-2. **The upstream page and the combined site have different row totals by design.** The upstream page shows 206 listings. The repository's 211-row total includes five later additions; do not describe 211 as the upstream site's own count.
-3. **Fresh reads are not yet the published row-verification data.** This report records the 2026-11-02 evidence, but does not overwrite `data/live-checks.json`, the derived `data/verification.json`, row entries, or generated tables. A follow-up integration should add the source reads to the current data pipeline and render any changed facts/flags before describing them as live-checked on the site.
-4. **No specific individual's geographic eligibility is verified.** Follow each operator's official rules before spending time, especially for cash-prize receipt and sanctions/export restrictions.
+1. **Root executive summary and README were stale and inconsistent with the active pipeline.** The old root summary described a separate 212-row Prize Atlas build, whereas the current canonical PrizeDesk build has 221 rows (206 pinned-source rows plus 15 attributed additions). The alternate Prize Atlas site is preserved under `archive/prize-atlas/`; it is not the current root generator. The summary and README were updated in the integration PRs.
+2. **The upstream page and the combined site have different row totals by design.** The upstream page shows 206 listings. The repository's 221-row total includes 15 later additions; do not describe 221 as the upstream site's own count.
+3. **Fresh reads were subsequently integrated.** The 2026-11-02 reads and additional independent checks were merged into the current source/cross-check data and rendered into the row pages and Verified shortlist by PR #35. They are independent source reads, not all live fetches performed by the 2026-11-01 fetch pass; the badges and dates distinguish those cases.
+4. **Unresolved limits:** 11 rows still have no official-tier source in the current verification output; the GEMS entry fee remains unstated in the inspected source; the detailed GEMS PDF and several dynamic pages were not fetched; and no specific user's eligibility in Singapore was determined. Review official terms before spending time.
 
-## Verification performed
+## T14 pre-integration verification performed
 
 - Read the official pages listed above and recorded only facts actually present in the fetched text.
-- Compared the existing dataset totals and dates directly against `data/source/PROVENANCE.json`, `data/additions.json`, and `data/verification.json`.
-- Ran `npm run check`: internal-link checking, root dataset/page checks, and archived Prize Atlas checks passed. The data-specific root validation reports 555 HTML files and 13,563 local references with no broken internal links; external URLs are not tested by that local checker.
-- Ran `node scripts/build.js`: generated site build completed (211 listings, 211 detail pages, 22 flags).
+- Compared the then-current dataset totals and dates directly against `data/source/PROVENANCE.json`, `data/additions.json`, and `data/verification.json`.
+- Ran `npm run check`: internal-link checking, root dataset/page checks, and archived Prize Atlas checks passed. At that point the checker reported 555 HTML files and 13,563 local references with no broken internal links; external URLs are not tested by that local checker.
+- Ran `node scripts/build.js`: the then-current site build completed with 211 listings, 211 detail pages, and 22 flags.
+
+## Post-integration verification
+
+PR #35 subsequently integrated the new official-page checks and added ten sourced rows. The resulting build reports 221 listings and 31 irregularities. Its CI run passed the validate workflow, and the GitHub Pages deployment for merge commit `d19ac56f71e55c2d9f7569095b148d9b307d06bc` completed successfully. The local checker in this session's final build is re-run after merging the executive-summary correction; its final output is recorded in `COORDINATION.md`.
