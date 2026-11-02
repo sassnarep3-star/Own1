@@ -297,6 +297,16 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 
 `assets/css/site.css` unchanged since T4/T11 and still sound: viewport meta on every page, tables → cards below 820 px with per-cell labels, 44 px touch targets, scrollable nav (now 11 items, horizontal scroll on phones), dark mode, no web fonts or frameworks; `assets/js/app.js` is progressive enhancement only (rows pre-rendered). Reference-site defects that motivated the rebuild (client-rendered card scroll, no filters, no table) are confirmed fixed in `REPO_REVIEW.md` §2. No CSS change needed.
 
+### Publication record (T18)
+
+| Event | Result |
+| --- | --- |
+| PR [#42](https://github.com/sassnarep3-star/Own1/pull/42) — hand re-check table + I-31 + 6 cross-checks + research section 5 + archive marker fix | **MERGED** 2026-11-02T18:57:54Z, merge commit [`ffdf621`](https://github.com/sassnarep3-star/Own1/commit/ffdf6211a846bf4f9452a459f6d2908890b1ef18) |
+| PR [#43](https://github.com/sassnarep3-star/Own1/pull/43) — follow-up fix: `deadLinkRows` still counted the pre-merge I-23 id, so I-31 printed “0 row(s)” while 8 rows carry it | **MERGED** 2026-11-02T19:02:35Z, merge commit [`58dbc47`](https://github.com/sassnarep3-star/Own1/commit/58dbc47811ffe2261d1f0b0cd1c35c7f381c91f2) |
+| GitHub Pages | Builds `ffdf621` (18:57→built) and `58dbc47` (19:02:37→built 19:03:21Z) both **built**; site <https://sassnarep3-star.github.io/Own1/> |
+| Live spot-check 2026-11-02 (cache-busted) | `flagged.html`: 50 items (18 new + 32 register), I-31 present with **“8 row(s) carry this flag”**, hand re-check table shows 8 “still dead” + 6 “loads”; `research.html`: section 5 renders all **31 cross-check records** with verbatim evidence (incl. this session’s 8), “15 merged additions” copy fixed; `shortlist.html`: Wall Street Survivor 11 Dec 2026 (39 days) + gift-card/stale-URL caveats, Checkmate range-unconfirmed caveat; `index.html`: nav includes Executive summary, stats 221/40/30/191/50 |
+| Checks at every step | `checklinks` 568 pages / 17,527 references / 0 broken; `validate.mjs` + `validate-prize-atlas.mjs` OK; never merged a failing build |
+
 ### Verification performed (build gate)
 
 `npm run build` green after the merge: ingest (pinned SHA-256 ok) → verify (32-item register I-01…I-30 + I-16 + I-31, plus R-01…R-18) → build → docs → `checklinks` (all pages, every row has a source, 0 broken internal links) → `tests/validate.mjs` + `tests/validate-prize-atlas.mjs`. PR link and Pages result recorded below after the merge.
