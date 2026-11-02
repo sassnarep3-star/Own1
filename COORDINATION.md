@@ -25,6 +25,7 @@ The workspace fixes each session's branch as `arena/<session-id>`; that is this 
 | T12 · Integration of all sessions' work, PR, merge, Pages deploy | Done | `181b7279-own1` | merge, deployment, this file | PR #17 → #24 → #29 merged; live site shows 212 leads, 29 checked, 19 free. |
 | T15 · Fresh official-source re-read of highest-value rows (2026-11-02), stale-date refresh, rebuild | Done (PR #35 merged) | `7a477419-own1` | `data/cross-checks.json` (append-only), `research/EVIDENCE.csv`, `docs/SESSION-7a477419.md`, `COORDINATION.md` (own section), regenerated pages via `npm run build` | Claimed 2026-11-02 17:55 UTC. Rows with a read dated 2026-11-01 whose deadline falls within days (ARC Prize 2026-11-02, Metaculus Midterms 2026-11-04) are re-read first. Branch is `arena/7a477419-own1` (fixed by the workspace). Renumbered from T14 to T15 on merge: `ac192142-own1` also used T14 (audit) and landed first. Also integrates the follow-up request in the T14 record below. |
 | T17 · 2026-11-02 final integration: re-verify against official pages, blank every unconfirmed value, repair broken links, refresh executive summary + repo audit, publish, PR, merge, confirm Pages | Done | `f25e2b4b-own1` | `COORDINATION.md`, `EXECUTIVE_SUMMARY.md`, `REPO_REVIEW.md`, `research/VERIFICATION-2026-11-02.md`, `data/verification-2026-11-02.json`, `data/review-2026-11-02.json`, `scripts/build.js`, `scripts/summary-content.js`, `scripts/render-docs.js`, `scripts/render-verification-record.js`, `data/live-checks.json`, published root pages, `categories/**`, `c/**`, `shortlist.html`, `sitemap.xml` | Claimed 2026-11-02, renumbered from T14 to T17 because `ac192142-own1`'s T14 landed first. PR [#40](https://github.com/sassnarep3-star/Own1/pull/40) merged 2026-11-02T18:24:01Z (`cc008f6`); Pages built 18:24:24Z. 221 rows, 40 official reads, 30 verified rows, 191 blank + flagged, 49 irregularities published. Full record below. |
+| T18 · Supplementary pass: re-verify 11 official pages by hand, publish the dead-link second observation (link-recheck) and flag I-31, six new cross-checks + two re-read appends, mobile/nav audit, merge T17's 221-row build, PR, merge, Pages | In progress | `adae2c72-own1` | `COORDINATION.md` (own row + record), `data/cross-checks.json` (append-only), `data/link-recheck.json` (new), `scripts/verify.js` (I-31 + dead-source blanking), `scripts/build.js` (recheck table on flagged page), regenerated pages via `npm run build` | Claimed as T14 before `main` advanced; renumbered **T18** on merge because T14/T15/T16/T17 were taken by `ac192142-own1`, `7a477419-own1` and `f25e2b4b-own1` while this session worked. Their 221-row build, EXECUTIVE_SUMMARY.md and generated pages were kept as the base; this session's work is layered on top. |
 
 ## Requests / handoffs
 
@@ -248,3 +249,54 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 - **Follow-up:** documentation-only [PR #41](https://github.com/sassnarep3-star/Own1/pull/41) carries this coordination record onto `main` after the merge; it changes no site file.
 - **GitHub Pages deployment:** `status: built`, source `main` path `/`, build created 2026-11-02T18:24:02Z and completed 2026-11-02T18:24:24Z for commit `cc008f6`, error null. Live site verified: <https://sassnarep3-star.github.io/Own1/> shows 221 competitions, 40 official pages read, 30 verified rows, 191 blank + flagged and 49 irregularities; `flagged.html` renders the R-01…R-18 and I-01…I-30/I-16 register with source links.
 - **Status:** Done.
+
+## T18 record — `adae2c72-own1` (2026-11-02 UTC)
+
+**Branch note:** the workspace fixes this session's branch as `arena/adae2c72-own1`. Claimed as **T14** and pushed before edits (`2338117`); renumbered **T18** while merging because T14 (`ac192142-own1`), T15 (`7a477419-own1`), T16 (`ac192142-own1`) and T17 (`f25e2b4b-own1`) all landed on `main` during this session's work. Nothing from those sessions was discarded: the merge keeps their `scripts/build.js`, `EXECUTIVE_SUMMARY.md`, `data/ledger.json`, `data/verification.json` and every generated page; this session's additions are layered on top.
+
+### Merge / conflict log (T18)
+
+| File | Resolution |
+| --- | --- |
+| `scripts/build.js` | **T17's version kept**, then one addition layered on: the hand re-check table (`data/link-recheck.json`) inside T17's `#link-health` section on `flagged.html`. T17 already added the Executive-summary nav item and the automated link-health tables, so this session's earlier drafts of those were dropped in favour of theirs. |
+| `scripts/verify.js` | Auto-merged. This session's dead-source blanking rule (`prizeCellValue` requires every official source to load) and flag **I-31** kept; the flag was renumbered from I-23 on merge because T15 had already taken I-23 (Meta VR eligibility gate). T17's register I-01…I-30 and R-01…R-18 untouched. |
+| `data/cross-checks.json` | T17's 25 checks kept; this session appended **6 new checks** (wergle-flomp, sony-world-photo, checkmate-gaming, cbs-pro-pickem, wall-street-survivor, givling) and appended re-read notes to espn-pickem and paypal-ai-hackathon-2026 (both still dated 2026-11-01 on `main`). ARC Prize, Midterms and Codex already carried T15's superior 2026-11-02 re-reads — left untouched to avoid duplication. Total: **31 checks**. |
+| `data/ledger.json`, `data/verification.json`, `EXECUTIVE_SUMMARY.md`, `docs/EXECUTIVE_SUMMARY.md`, all generated `*.html` | T17's versions kept (221-row combined dataset); pages regenerated afterwards by `npm run build`. |
+| `data/link-recheck.json` | New file from this session (14 hand re-fetches with notes); no conflict. |
+| `COORDINATION.md` | This merged board: T14–T17 records kept verbatim, T18 row and record appended. |
+| `archive/**/supplemental/index.html` (3 files) | **Pre-existing conflict markers found on `main`** (`<<<<<<< HEAD` committed into archived supplemental pages by an earlier integration). Both sides merged: kept the `body class="legacy"` scoping that the archived stylesheet requires and T17's "Verified ledger" nav link; markers removed. |
+| Stale build text | `scripts/build.js` research page said "five merged additions" while the dataset carries 15 (221 = 206 + 15). Now rendered from `ledger.additionsMerged`. |
+
+### Official pages re-read by hand on 2026-11-02 (source links for manual review)
+
+| Official page | Row | Result vs the published cell |
+| --- | --- | --- |
+| <https://arcprize.org/competitions/2026> | arcprize | Agrees with T15's re-read: $2M, 3 tracks, submissions due 2026-11-02, papers 2026-11-08, open-source required. |
+| <https://www.metaculus.com/tournament/midterms-2026/> | midterms-2026 | Agrees: $10,000 pool, closes Nov 04, 26 questions. |
+| <https://paypalaihackathon.devpost.com/rules> | paypal-ai-hackathon-2026 | Agrees: 1st $12,000 / 2nd $8,000 / 3rd $5,000 in rules §8; deadline Nov 12; NO PURCHASE NECESSARY. Re-read note appended. |
+| <https://twitchcon-codex.devpost.com/rules> | codex-twitchcon-2026 | Agrees with T15: 1st $10,000, 2nd $6,000, 3rd $4,000, 2×$2,500 = $25,000 total; closes 2026-11-02 14:00 PT (that day); 18+; free. |
+| <https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay> | espn-pickem | Agrees: $102,000 = 3×$20,000 + $10,000 + 54×$500 + $5,000 random; free; five-vs-ten entry contradiction still on the page (I-17). Re-read note appended. |
+| <https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free> | wergle-flomp | Matches: no fee; $5,100 = $2,000/$750/$350 + 10×$200; window 2026-08-15 → 2027-04-01; country exclusions exact. New check. |
+| <https://www.worldphoto.org/sony-world-photography-awards> | sony-world-photo | Amounts match ($25,000 / $5,000, "free to enter"); competitions renamed Professional→Series, Open→Single Image; timeline: Series closes 2027-01-12. New check with caveats. |
+| <https://www.cbssports.com/fantasy/football/games/pickem/rules> | cbs-pro-pickem | Matches: FREE to play; 18×$1,000 weekly + $5,000 season + $100,000 perfect-week contingency; 2026-09-09 → 2027-01-10; 50 states, 18+. New check. |
+| <https://www.checkmategaming.com/free-tournaments> | checkmate-gaming | Free entry confirmed; ledger's $10–$180 range NOT reproduced (page showed $40 and $120 only). Caveat published; range marked unconfirmed. New check. |
+| <https://www.wallstreetsurvivor.com/> | wall-street-survivor | $500 total in Amazon gift cards confirmed for the AI Trading Contest (2026-11-02 → 2026-12-11, free); gift cards not cash; cited URL is the past Valentine's edition; $300/$150/$50 split not reproduced. Caveats + verified deadline 2026-12-11 added. New check. |
+| <https://givling.com/> | givling | Homepage is a crowdfunding queue ($50k Queue + $50k Exchange), free to play; no trivia contest shown; source's "ended" status not reproducible. Caveats published. New check. |
+
+### External link second observation (the "broken links" audit)
+
+`data/link-health.json` (203 URLs, 2026-11-01) was re-fetched by hand on 2026-11-02; every observation is in **`data/link-recheck.json`** and the table is published inside the `#link-health` section of `flagged.html`:
+
+- **Still dead (8):** bracketchallenge.nhl.com/en/how-to-play (404), fantasy.football.scot, fantazilig.tff.org, supercoach.news.com.au/bbl, fantasyracing.telegraph.co.uk/cheltenham/how-to-play (DNS), fantasygaelicfootball.com (2nd day), dash.hypermind.com (503, 2nd day), pensacolabeachsongwritersfestival.com/2026-songwriting-competition/ (server error page after an expired certificate). Complementary to T17's R-03 (herox/roboforex/challenge.gov) — no overlap.
+- **Recovered / false positives (6):** topcoder.com/challenges (404 → loads; agrees with T17's R-12), favorites.actionnetwork.com (cert error → loads), paypalaihackathon + twitchcon-codex rules and the Metaculus midterms page (403 bot walls → read in full), winningwriters Wergle page (307 → loads).
+- **Not re-fetched (23):** almost all HTTP 403 bot walls; not called broken.
+
+**Rule applied:** a prize cell whose only official source is one of the dead URLs is blanked (`prizeBlankedBecauseSourceDead`) and the row carries flag **I-31** (renumbered from I-23). On T17's evidence-first build these rows are already blank as "unverified"; the flag and the dead-link reason are additive.
+
+### Mobile / UX audit (2026-11-02)
+
+`assets/css/site.css` unchanged since T4/T11 and still sound: viewport meta on every page, tables → cards below 820 px with per-cell labels, 44 px touch targets, scrollable nav (now 11 items, horizontal scroll on phones), dark mode, no web fonts or frameworks; `assets/js/app.js` is progressive enhancement only (rows pre-rendered). Reference-site defects that motivated the rebuild (client-rendered card scroll, no filters, no table) are confirmed fixed in `REPO_REVIEW.md` §2. No CSS change needed.
+
+### Verification performed (build gate)
+
+`npm run build` green after the merge: ingest (pinned SHA-256 ok) → verify (32-item register I-01…I-30 + I-16 + I-31, plus R-01…R-18) → build → docs → `checklinks` (all pages, every row has a source, 0 broken internal links) → `tests/validate.mjs` + `tests/validate-prize-atlas.mjs`. PR link and Pages result recorded below after the merge.

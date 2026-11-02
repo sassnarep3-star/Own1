@@ -41,7 +41,7 @@ No Singapore-specific eligibility conclusion is established. Geographic restrict
 | Confirmed paid-entry statements | 1 | exact wording on operator pages |
 | Rows with a confirmed prize figure | 24 | exact wording on operator pages |
 | Rows with no official source | 11 | data/verification.json |
-| Published irregularities | 49 | 31 historical + 18 new |
+| Published irregularities | 50 | 32 historical + 18 new |
 
 The 2026-11-01 automated link check is recorded separately in data/link-health.json: 203 URLs, 166 ok, 10 hard failures and 27 soft failures. Several "failures" are HTTP 403 anti-bot responses, not broken pages; the same pages loaded on 2026-11-02. The dated observation is published on the Flagged page, not treated as a verdict.
 
@@ -86,7 +86,7 @@ For an agent-assisted entrant, the highest-value work is therefore in tech and f
 - 11 rows have no official operator source at all — mostly FPL mini-league codes from forum threads and old blog posts. All of their values are blank.
 - Deadline fields mix registration close and submission close: the Global Virtual Hackathon's 13 November date is registration; submissions close 25 November 2026.
 
-The full register, with evidence and links for manual review, is on the Flagged for Review page and in REPO_REVIEW.md. All 49 items are status "needs review" and do not block the site or the merge.
+The full register, with evidence and links for manual review, is on the Flagged for Review page and in REPO_REVIEW.md. All 50 items are status "needs review" and do not block the site or the merge.
 
 
 ## How to reproduce and check
