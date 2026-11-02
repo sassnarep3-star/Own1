@@ -199,3 +199,5 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 - **Deriv** pays real cash on a demo account, but the operator is Deriv (SVG) LLC and prizes require a fully verified account — flagged on the row.
 
 **Audit trail added:** `research/EVIDENCE.csv` is a flat, spreadsheet-friendly export of every page-checked row (id, name, category, source, entry cost, prize, deadline, eligibility, reading date, evidence URL, reading session, flags) so any value on the site can be traced to the page it came from.
+
+| T14 · Current-state audit, official-source verification refresh, and executive summary | In progress | `ac192142-own1` | `EXECUTIVE_SUMMARY.md`, `README.md`, `COORDINATION.md`, `data/verification/**` (new audit record only) | Claim 2026-11-02 UTC. Non-overlapping documentation and audit-note scope; no edits to generated site/data/index/nav. |
