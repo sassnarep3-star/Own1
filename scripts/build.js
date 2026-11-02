@@ -39,10 +39,14 @@ const SITE = {
   sha256: ledger.provenance.sourceFileSha256
 };
 
+// "As of" date for countdowns: the newest official-page reading recorded in the data.
+SITE.asOf = verif.rows.reduce((m, r) => (r.crossCheck && r.crossCheck.checkedDate > m ? r.crossCheck.checkedDate : m), SITE.verifiedOn);
+
 const NAV = [
   ['index.html', 'Dashboard'],
   ['all.html', 'All competitions'],
   ['best.html', 'Best picks'],
+  ['shortlist.html', 'Verified shortlist'],
   ['analysis.html', 'Analysis'],
   ['research.html', 'Source audit'],
   ['verification.html', 'Verification'],
@@ -165,6 +169,7 @@ ${opts.body}
     <div class="footer-links">
       <a href="${base}all.html">All ${T.rows} competitions</a>
       <a href="${base}best.html">Best picks</a>
+      <a href="${base}shortlist.html">Verified shortlist</a>
       <a href="${base}analysis.html">Analysis</a>
       <a href="${base}research.html">Source audit</a>
       <a href="${base}verification.html">Verification method</a>
@@ -391,8 +396,8 @@ function detailPage(item, row) {
   const crossCard = row.crossCheck ? `<div class="card">
       <h2>Independently checked</h2>
       <p class="note-tiny">Read on ${esc(fmtDate(row.crossCheck.checkedDate))} by
-      <code>${esc(row.crossCheck.checkedBy || 'another session')}</code>, not by this build session.
-      The caveats are theirs, carried verbatim.</p>
+      <code>${esc(row.crossCheck.checkedBy || 'another session')}</code>.
+      Confirmed items and caveats are carried verbatim from the record of that reading, not inferred.</p>
       <p><a href="${attr(row.crossCheck.url)}" rel="noopener noreferrer">${esc(shortText(row.crossCheck.url.replace(/^https?:\/\//, ''), 52))} ↗</a></p>
       ${(row.crossCheck.confirmed || []).length ? `<h3>Confirmed on that page</h3><ul class="list">${row.crossCheck.confirmed.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
       ${(row.crossCheck.caveats || []).length ? `<h3>Caveats recorded</h3><ul class="list">${row.crossCheck.caveats.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
@@ -406,7 +411,7 @@ function detailPage(item, row) {
   const statusText = {
     'live-checked': 'We fetched a page of this row on ' + fmtDate(SITE.verifiedOn) + ' and it loaded with relevant content.',
     'live-check-error': 'We fetched this row\'s link on ' + fmtDate(SITE.verifiedOn) + ' and it returned an error page.',
-    'cross-checked': 'Another session in this repository read an official page for this row on ' + fmtDate(SITE.verifiedOn) + ' and recorded what it said. This session did not fetch it.',
+    'cross-checked': 'An official page for this row was read on ' + fmtDate(row.crossCheck && row.crossCheck.checkedDate || SITE.verifiedOn) + ' by ' + ((row.crossCheck && row.crossCheck.checkedBy) || 'a session in this repository') + ' and what it said is recorded on this page. The page-fetch build step did not re-fetch it.',
     'official-source-cited': 'This row cites an official source, but we did not fetch it in this pass. Treat the figures as the source\'s claims, last checked ' + fmtDate(SITE.sourceReviewed) + '.',
     'no-official-source': 'This row cites no official source. Its figures are withheld from our table and listed on the Flagged for Review page.'
   }[row.rowStatus];
@@ -658,7 +663,7 @@ function buildIndex() {
 </section>
 
 ${(() => {
-    const today = new Date(SITE.verifiedOn + 'T00:00:00Z');
+    const today = new Date(SITE.asOf + 'T00:00:00Z');
     const soon = ledger.listings
       .map((i) => ({ i, r: rowsById.get(i.id) }))
       .filter((x) => x.r.deadline)
@@ -668,8 +673,8 @@ ${(() => {
     if (!soon.length) return '';
     return `<section class="section">
       <h2>Closing within 60 days</h2>
-      <p class="note-tiny">Only deadlines that another session read from an official page on
-      ${esc(fmtDate(SITE.verifiedOn))} appear here. Any row without a verified deadline is absent — not because
+      <p class="note-tiny">Only deadlines read from an official page by a session in this repository
+      (1–2 Nov 2026; day counts run from ${esc(fmtDate(SITE.asOf))}) appear here. Any row without a verified deadline is absent — not because
       nothing closes, but because we did not confirm a date.</p>
       <div class="table-scroll"><table class="ledger">
         <thead><tr><th>Competition</th><th>Verified deadline</th><th>Days left</th><th>Prize (claimed)</th><th>Source</th></tr></thead>
@@ -934,6 +939,71 @@ function buildBest() {
     title: `Best picks — ${SITE.name}`,
     description: 'Four transparent shortlists built from the dataset: best overall, largest stated cash, least friction, and best fit for AI-assisted entry.',
     active: 'best.html',
+    body,
+    scripts: false
+  });
+}
+
+
+/* ------------------------------------------------------------------ verified shortlist */
+
+const FREE_QUOTE = /no purchase|free entry|free to enter|free to play|entry is free/i;
+
+function buildShortlist() {
+  const notesPath = path.join(ROOT, 'data/shortlist-notes.json');
+  const notes = fs.existsSync(notesPath) ? read('data/shortlist-notes.json') : { rows: [], note: '' };
+  const today = new Date(SITE.asOf + 'T00:00:00Z');
+  const rows = notes.rows
+    .map((n) => ({ n, i: itemsById.get(n.id), r: rowsById.get(n.id) }))
+    .filter((x) => x.i && x.r && x.r.crossCheck)
+    .map((x) => ({ ...x, days: x.r.deadline ? Math.round((new Date(x.r.deadline + 'T00:00:00Z') - today) / 86400000) : null }))
+    .filter((x) => x.days === null || x.days >= 0)
+    .sort((a, b) => (a.days === null ? 1e9 : a.days) - (b.days === null ? 1e9 : b.days));
+
+  const body = `
+<section class="hero">
+  <p class="eyebrow">Read from official pages · as of ${esc(fmtDate(SITE.asOf))}</p>
+  <h1>Verified shortlist — what to work on, and when it closes</h1>
+  <p class="lede">${rows.length} competitions whose official overview or rules page was read by a session in this repository
+  on 1–2 Nov 2026, sorted by closing date. The “What the official page says” column contains only statements taken from
+  that page; where the page was silent the cell says so. Nothing here is inferred. Expired deadlines are dropped when the site is rebuilt.</p>
+</section>
+
+<div class="callout warn"><p><b>Entry cost.</b> The “Entry” badge is the source ledger's label. Underneath it, “free entry stated in the recorded reading”
+appears only where the recorded reading of the official page notes it (for example “NO PURCHASE OR PAYMENT NECESSARY”). Kaggle pages read here state no fee
+but do not say “free”, so they carry no such statement. That is a gap in the page, not evidence of a fee.</p></div>
+
+<section class="section">
+  <div class="table-scroll"><table class="ledger">
+    <thead><tr><th>Competition</th><th>Closes</th><th>Days</th><th>Prize (from the page)</th><th>Entry</th><th>What the official page says</th><th>Source</th></tr></thead>
+    <tbody>${rows.map((x) => `<tr>
+      <td class="cell-name" data-label="Competition"><a href="c/${attr(x.i.id)}.html">${esc(x.i.name)}</a><span class="cell-sub">${esc(x.n.kind)}</span></td>
+      <td data-label="Closes">${x.r.deadline ? esc(fmtDate(x.r.deadline)) : '<span class="blank">—</span>'}</td>
+      <td data-label="Days" class="num">${x.days === null ? '<span class="blank">—</span>' : (x.days === 0 ? 'today' : x.days)}</td>
+      <td data-label="Prize">${x.r.prizeCellValue ? `<span class="prize">${esc(x.r.prizeCellValue)}</span>` : '<span class="prize none">—</span>'}</td>
+      <td data-label="Entry">${badgesFor(x.i, x.r)}<span class="cell-sub">${(x.r.crossCheck.confirmed || []).some((t) => FREE_QUOTE.test(t)) ? 'free entry stated in the recorded reading' : 'no free-entry statement recorded'}</span></td>
+      <td data-label="What the official page says">${esc(x.n.note)}</td>
+      <td data-label="Source"><a class="src-link" href="${attr(x.n.url)}" rel="noopener noreferrer">Official ↗</a></td>
+    </tr>`).join('')}</tbody>
+  </table></div>
+</section>
+
+<section class="section">
+  <h2>How to use this list</h2>
+  <div class="card"><ul class="list">
+    <li><b>Closing in days, not weeks:</b> ARC Prize (today, Paper Track 8 Nov), Codex x TwitchCon (today), Metaculus US Midterms (4 Nov).</li>
+    <li><b>Best fit for an AI coding agent, per the pages themselves:</b> Google Quantum AI circuit compilation (its overview names AI coding agents), Gemma 4 Developer Agent, Squares in Squares, and the two Kaggle code competitions.</li>
+    <li><b>Tool-locked hackathons:</b> Kiroween needs Kiro, Codegeist needs Atlassian Forge, Codex x TwitchCon needs OpenAI Codex.</li>
+    <li><b>Offline-only evaluation:</b> ARC Prize, Name That LLM and Enveda CASMI forbid or disable internet access at evaluation, so the submitted solution cannot call a hosted model.</li>
+    <li><b>Before you enter anything:</b> read the rules page linked in the Source column; eligibility and prize-payment terms (tax forms, licence of winning code) are in there, not on this site.</li>
+  </ul></div>
+  <p class="note-tiny">${esc(notes.note)}</p>
+</section>`;
+
+  return layout({
+    title: `Verified shortlist — ${SITE.name}`,
+    description: 'Competitions whose official pages were read on 1–2 Nov 2026, sorted by closing date, with the AI-agent rules each page states.',
+    active: 'shortlist.html',
     body,
     scripts: false
   });
@@ -1265,8 +1335,8 @@ function buildResearch() {
 </section>
 
 <div class="callout info">
-  <p><b>How to read this.</b> A row marked “Independently checked” had one of its official pages read on
-  ${esc(fmtDate(SITE.verifiedOn))} by another session in this repository — not by this one. Their caveats are
+  <p><b>How to read this.</b> A row marked “Independently checked” had one of its official pages read by a
+  session in this repository (1 or 2 Nov 2026; the date and reader are shown on each row). Their caveats are
   carried verbatim. If a page did not state a value, the value stays blank on the row.</p>
 </div>
 
@@ -1342,7 +1412,7 @@ function buildVerification() {
   const statusRows = [
     ['Live-checked', 'live-checked', 'good', 'We fetched one of the row\'s own URLs on ' + fmtDate(SITE.verifiedOn) + ' and it returned the expected, on-topic page. Only ' + T.recheckedThisPass + ' rows qualify.'],
     ['Link error found', 'live-check-error', 'danger', 'We fetched the row\'s URL and it returned an error page. ' + T.liveCheckError + ' row.'],
-    ['Independently checked', 'cross-checked', 'info', 'Another session in this repository read an official page for this row on ' + fmtDate(SITE.verifiedOn) + ' and recorded what it said. ' + T.crossChecked + ' rows. This session did not fetch them.'],
+    ['Independently checked', 'cross-checked', 'info', 'A session in this repository read an official page for this row and recorded what it said (date and reader are shown on each row). ' + T.crossChecked + ' rows.'],
     ['Source cited — not re-checked', 'official-source-cited', 'info', 'The row cites an official-tier URL, but we did not fetch it in this pass. ' + T.officialSourceCited + ' rows. Figures are the source\'s claims.'],
     ['No official source', 'no-official-source', 'warn', 'The row cites only affiliate or forum sources. ' + T.noOfficialSource + ' rows. The prize cell is blank in our tables.']
   ].map(([label, key, tone, meaning]) => `<tr>
@@ -1552,6 +1622,7 @@ written.push(write('all.html', buildAll()));
 buildCategories().forEach((p) => written.push(write(p.file, p.html)));
 buildDetails().forEach((p) => written.push(write(p.file, p.html)));
 written.push(write('best.html', buildBest()));
+written.push(write('shortlist.html', buildShortlist()));
 written.push(write('analysis.html', buildAnalysis()));
 written.push(write('flagged.html', buildFlagged()));
 written.push(write('verification.html', buildVerification()));

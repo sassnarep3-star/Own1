@@ -1,5 +1,7 @@
 # Executive summary
 
+> **Update 2026-11-02 (`arena/7a477419-own1`).** The live site is now the PrizeDesk build (`scripts/build.js`); this file's counts below describe the earlier Prize Atlas pass and are kept for the record. Current figures come from `data/verification.json` and are printed on the site's [executive summary](https://sassnarep3-star.github.io/Own1/executive-summary.html). Newest readings: **220 rows**, **24 official-page readings recorded** (9 dated 2026-11-01 and 15 dated 2026-11-02), **29 flagged irregularities** (I-01…I-28). New in this update: a [Verified shortlist](https://sassnarep3-star.github.io/Own1/shortlist.html) sorted by closing date, nine competitions added from their official overview and rules pages (six Kaggle, three Devpost), and what each page says about AI-agent use. **Closing today:** ARC Prize competition tracks and the Codex x TwitchCon Hackathon; **4 Nov:** Metaculus US Midterms 2026. Full record: [`docs/SESSION-7a477419.md`](docs/SESSION-7a477419.md).
+
 **Site:** <https://sassnarep3-star.github.io/Own1/> · **Built:** 2026-11-01 · **Dataset:** 211 listings · **Source of record:** `data/entries.json`, rendered into every page by `scripts/build.js`
 
 This repository replaces a hard-to-use, partly broken reference page of "free money apps" with a mobile-first dashboard that lists **211 competitions which can pay cash**, puts every listing in one plain table, and refuses to publish a number it has not read on an official page.

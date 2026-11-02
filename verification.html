@@ -24,7 +24,7 @@
         <span>Source reviewed 19 Aug 2026</span>
       </span>
     </a>
-    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="analysis.html">Analysis</a><a href="research.html">Source audit</a><a href="verification.html" aria-current="page">Verification</a><a href="flagged.html">Flagged for review</a></nav>
+    <nav class="nav" aria-label="Main"><a href="index.html">Dashboard</a><a href="all.html">All competitions</a><a href="best.html">Best picks</a><a href="shortlist.html">Verified shortlist</a><a href="analysis.html">Analysis</a><a href="research.html">Source audit</a><a href="verification.html" aria-current="page">Verification</a><a href="flagged.html">Flagged for review</a></nav>
   </div>
 </header>
 <main id="main" class="wrap">
@@ -39,8 +39,8 @@
 
 <div class="stat-grid">
   <div class="stat is-good"><b>13</b><span>rows fetched live 1 Nov 2026</span></div>
-  <div class="stat is-warn"><b>198</b><span>rows cited, not re-fetched</span></div>
-  <div class="stat"><b>177</b><span>rows with an official source</span></div>
+  <div class="stat is-warn"><b>207</b><span>rows cited, not re-fetched</span></div>
+  <div class="stat"><b>175</b><span>rows with an official source</span></div>
   <div class="stat is-warn"><b>11</b><span>rows with no official source</span></div>
 </div>
 
@@ -94,12 +94,12 @@
     <td data-label="Meaning">We fetched the row&#39;s URL and it returned an error page. 1 row.</td>
   </tr><tr>
     <td data-label="Badge"><span class="badge info">Independently checked</span></td>
-    <td data-label="Rows" class="num">10</td>
-    <td data-label="Meaning">Another session in this repository read an official page for this row on 1 Nov 2026 and recorded what it said. 10 rows. This session did not fetch them.</td>
+    <td data-label="Rows" class="num">21</td>
+    <td data-label="Meaning">A session in this repository read an official page for this row and recorded what it said (date and reader are shown on each row). 21 rows.</td>
   </tr><tr>
     <td data-label="Badge"><span class="badge info">Source cited — not re-checked</span></td>
-    <td data-label="Rows" class="num">177</td>
-    <td data-label="Meaning">The row cites an official-tier URL, but we did not fetch it in this pass. 177 rows. Figures are the source&#39;s claims.</td>
+    <td data-label="Rows" class="num">175</td>
+    <td data-label="Meaning">The row cites an official-tier URL, but we did not fetch it in this pass. 175 rows. Figures are the source&#39;s claims.</td>
   </tr><tr>
     <td data-label="Badge"><span class="badge warn">No official source</span></td>
     <td data-label="Rows" class="num">11</td>
@@ -114,7 +114,7 @@
   weighted towards rows with the highest stakes and the oddest claims. The full log, including what each page
   confirmed and what it did not, is the last table on the <a href="flagged.html">Flagged for review</a> page.</p>
   <div class="callout warn">
-    <p><b>Why not all 211?</b> The build environment had no general outbound internet; each page had to be
+    <p><b>Why not all 220?</b> The build environment had no general outbound internet; each page had to be
     fetched individually through a page-fetch tool. A full crawl is roughly 400 requests across 206 domains and
     was out of scope for this pass. That limit is stated on every page rather than papered over.</p>
   </div>
@@ -157,12 +157,13 @@
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-links">
-      <a href="all.html">All 211 competitions</a>
+      <a href="all.html">All 220 competitions</a>
       <a href="best.html">Best picks</a>
+      <a href="shortlist.html">Verified shortlist</a>
       <a href="analysis.html">Analysis</a>
       <a href="research.html">Source audit</a>
       <a href="verification.html">Verification method</a>
-      <a href="flagged.html">Flagged for review (22)</a>
+      <a href="flagged.html">Flagged for review (29)</a>
       <a href="executive-summary.html">Executive summary</a>
     </div>
     <p><b>PrizeDesk</b> is an independent workbench built on the Free Money &amp; Contest
@@ -170,7 +171,7 @@
     19 Aug 2026). It is not affiliated with any operator listed.
     Prize figures are the source dataset's claims, not this site's promises — open the operator's
     rules before you enter. Contest law varies by state and country; play only where legal. 18+/21+.</p>
-    <p class="note-tiny">Figures verified on this site: 13 of 211 rows were
+    <p class="note-tiny">Figures verified on this site: 13 of 220 rows were
     fetched live on 1 Nov 2026. Everything else is labelled
     "source cited — not re-checked". See <a href="verification.html">how verification works</a>.</p>
   </div>

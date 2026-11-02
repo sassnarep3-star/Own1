@@ -59,7 +59,7 @@ for (const extra of additions.listings || []) {
   }
   ledger.listings.push({
     ...extra,
-    addedByParallelSession: additions.addedBy,
+    addedByParallelSession: extra.addedBy || additions.addedBy,
     mergedBy: additions.mergedBy
   });
   console.warn('merged added row: ' + extra.id);
