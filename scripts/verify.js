@@ -206,7 +206,7 @@ const totals = {
   recheckedThisPass: count((r) => r.liveCheck !== null),
   prizeFigureStated: count((r) => r.prizeHasMoneyAmount),
   prizeBlankedOnSite: count((r) => r.prizeCellValue === null),
-  deadLinkRows: count((r) => r.flags.includes('I-23')),
+  deadLinkRows: count((r) => r.flags.includes('I-31')),
   prizeBlankedBecauseSourceDead: count((r) => r.prizeHasMoneyAmount && r.prizeHasOfficialBasis && r.prizeCellValue === null),
   withPromoCode: count((r) => r.flags.includes('I-07')),
   endedListings: count((r) => r.flags.includes('I-03')),
