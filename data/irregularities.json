@@ -974,7 +974,7 @@
    "title": "Official links that no longer load — their prize figures can no longer be confirmed",
    "severity": "high",
    "type": "broken-link",
-   "summary": "37 of 203 external URLs in the row data failed an automated fetch on 2026-11-01. On 2026-11-02 those failures were fetched again by hand by arena/adae2c72-own1: 8 are still dead or erroring (404, DNS not found, 503, expired certificate, or a server error page), and 6 had loaded again (bot walls and transient errors — not flagged). 23 failures were not re-fetched; most are HTTP 403 bot walls that open in a browser. A prize figure whose only official source is one of the dead URLs cannot be confirmed, so 5 prize cell(s) were blanked on that basis and 0 row(s) carry this flag.",
+   "summary": "37 of 203 external URLs in the row data failed an automated fetch on 2026-11-01. On 2026-11-02 those failures were fetched again by hand by arena/adae2c72-own1: 8 are still dead or erroring (404, DNS not found, 503, expired certificate, or a server error page), and 6 had loaded again (bot walls and transient errors — not flagged). 23 failures were not re-fetched; most are HTTP 403 bot walls that open in a browser. A prize figure whose only official source is one of the dead URLs cannot be confirmed, so 5 prize cell(s) were blanked on that basis and 8 row(s) carry this flag.",
    "evidence": [
     "https://bracketchallenge.nhl.com/en/how-to-play — HTTP 404 again on 2026-11-02 (Azure Static Web Apps: \"404: Not Found\"). Same host as the row's signup URL /en/home, which was not fetched separately.",
     "https://fantasy.football.scot/ — Fetch failed on 2026-11-01 (ENOTFOUND, DNS) and again on 2026-11-02.",
