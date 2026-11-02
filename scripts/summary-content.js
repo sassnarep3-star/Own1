@@ -43,7 +43,14 @@ function build() {
 
   h2('What this is');
   p(`Free-to-enter cash-prize competitions, reorganised into a mobile-friendly dashboard. The source is the third-party "Free Money & Contest Ledger" at ${sourceSite}, whose maintained dataset is pinned by commit and SHA-256 in data/source/PROVENANCE.json. That ledger is a research catalogue, not an official operator document, so no figure from it is published as a fact.`);
-  p(`The live site is ${liveSite}. It contains ${rows} competition rows, one row per entry in the pinned ledger, plus ${fresh.newLeads.length} new official leads found on 2026-11-02. Every row links to the operator's page where one exists; rows without an official source are labelled "none official" and flagged.`);
+  p(`The live site is ${liveSite}. It contains ${rows} competition rows, one row per entry in the combined dataset, plus ${fresh.newLeads.length} new official leads found on 2026-11-02. Every row links to the operator's page where one exists; rows without an official source are labelled "none official" and flagged.`);
+
+  h2('Dataset reconciliation and current-state audit');
+  const upstream = verif.totals.rows - verif.totals.addedByParallelSessions;
+  const added = verif.totals.addedByParallelSessions;
+  p(`The pinned source file has ${upstream} listings. The combined dataset has ${verif.totals.rows} rows: ${upstream} pinned upstream rows + ${added} attributed additions. These are different datasets; ${verif.totals.rows} is not the reference site's own count.`);
+  p(`The base verification snapshot is dated ${verif.verifiedOn}; the latest independent official-page cross-checks are dated 2026-11-02. Read the targeted current-state audit at data/verification/current-state-2026-11-02.md and the integration log at docs/SESSION-7a477419.md for the earlier sessions' reads, 25 check records and 31 historical irregularities.`);
+  p('No Singapore-specific eligibility conclusion is established. Geographic restrictions, age limits, sanctions/export rules, prize payment and local law must be confirmed on the operator\'s rules page for the individual entering.');
 
   h2('The rule we applied');
   ol([

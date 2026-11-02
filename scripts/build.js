@@ -30,6 +30,8 @@ const irr = read('data/irregularities.json');
 const fresh = read('data/verification-2026-11-02.json');
 const review = read('data/review-2026-11-02.json');
 const linkHealth = read('data/link-health.json');
+const shortlistNotes = read('data/shortlist-notes.json');
+const crossChecks = read('data/cross-checks.json');
 
 const TODAY = fresh.checkedAt;                       // 2026-11-02
 const SOURCE_REVIEWED = ledger.reviewed;            // 2026-08-19
@@ -55,6 +57,7 @@ const NAV = [
   ['index.html', 'Dashboard'],
   ['all.html', 'All competitions'],
   ['best.html', 'Best picks'],
+  ['shortlist.html', 'Verified shortlist'],
   ['verified.html', 'Verified 2 Nov'],
   ['analysis.html', 'Analysis'],
   ['verification.html', 'Verification'],
@@ -1219,6 +1222,84 @@ contains ${S.rows} rows. Both figures are published here rather than reconciled 
   return layout({ title: 'Source audit — PrizeDesk', description: 'Analysis of the reference site, its defects, and the provenance of the pinned dataset.', active: 'research.html', body, scripts: false });
 }
 
+/* ------------------------------------------------------------------ verified shortlist (from PR #35) */
+
+function buildShortlist() {
+  const notes = new Map((shortlistNotes.rows || []).map((n) => [n.id, n]));
+  const checks = new Map();
+  for (const c of (crossChecks.checks || [])) {
+    if (!checks.has(c.id)) checks.set(c.id, []);
+    checks.get(c.id).push(c);
+  }
+  const ids = [...new Set([...notes.keys(), ...checks.keys()])].filter((id) => itemsById.has(id));
+  const rows2 = ids.map((id) => {
+    const item = itemsById.get(id);
+    const n = notes.get(id) || {};
+    const cs = checks.get(id) || [];
+    const f = freshById.get(id);
+    const deadline = (f && f.facts && f.facts.deadline && f.facts.deadline.value) ||
+      (cs.find((c) => c.deadline) || {}).deadline || '';
+    return { item, n, cs, f, deadline };
+  }).sort((a, b) => {
+    if (a.deadline && b.deadline) return a.deadline.localeCompare(b.deadline);
+    if (a.deadline) return -1;
+    if (b.deadline) return 1;
+    return a.item.name.localeCompare(b.item.name);
+  });
+  const tableRows = rows2.map(({ item, n, cs, f, deadline }) => {
+    const url = n.url || (cs[0] && cs[0].url) || officialUrl(item);
+    const caveats = cs.flatMap((c) => c.caveats || []);
+    return `<tr>
+      <td class="cell-name" data-label="Competition"><a href="c/${attr(item.id)}.html">${esc(item.name)}</a>
+        <span class="cell-sub">${esc(n.kind || (f ? 'Verified 2 Nov' : 'Official-page check'))}</span></td>
+      <td data-label="Verified deadline">${/^\d{4}-\d{2}-\d{2}$/.test(deadline) ? esc(fmtDate(deadline)) : '<span class="blank">—</span>'}</td>
+      <td data-label="Days from 2 Nov" class="num">${/^\d{4}-\d{2}-\d{2}$/.test(deadline) ? daysUntil(deadline) : '—'}</td>
+      <td data-label="Official source"><a class="src-link" href="${attr(url)}" rel="noopener noreferrer">Official page ↗</a></td>
+      <td data-label="Sourced note">${n.note ? esc(n.note) : '<span class="blank">—</span>'}</td>
+      <td data-label="Caveats">${caveats.length ? `<ul class="list" style="margin:0">${caveats.slice(0, 3).map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : '<span class="blank">—</span>'}</td>
+    </tr>`;
+  }).join('');
+  const body = `
+<section class="hero"><p class="kicker">Verified shortlist · deadline order</p>
+  <h1>Official-page checks, sorted by the dates recorded</h1>
+  <p class="lede">This page carries forward the Verified shortlist introduced by the parallel session
+  <code>7a477419-own1</code> (PR #35). Its per-row notes come from
+  <code>data/shortlist-notes.json</code> and its dated official-page reads from
+  <code>data/cross-checks.json</code>; no note was rewritten and no value was inferred. Rows this session
+  re-read on ${esc(fmtDate(TODAY))} also show their new evidence on <a href="verified.html">Verified 2 Nov</a>.</p>
+  <div class="btn-row"><a class="btn primary" href="best.html">Best picks →</a>
+  <a class="btn" href="verified.html">Line-by-line evidence</a>
+  <a class="btn" href="flagged.html">Flagged for review</a></div></section>
+<div class="callout info"><p><b>Two audits, one dataset.</b> The earlier sessions recorded
+${(crossChecks.checks || []).length} official-page check records and
+<a href="https://github.com/sassnarep3-star/Own1/blob/main/data/verification/current-state-2026-11-02.md" rel="noopener noreferrer">a targeted current-state audit ↗</a>
+(<a href="https://github.com/sassnarep3-star/Own1/blob/main/docs/SESSION-7a477419.md" rel="noopener noreferrer">integration log ↗</a>).
+This session added ${fresh.pages.length} further official reads. Dates on this page belong to the check that
+recorded them; a blank deadline means the official page did not state one.</p></div>
+<div class="stat-grid">
+  ${stat(String(rows2.length), 'shortlisted rows')}
+  ${stat(String((crossChecks.checks || []).length), 'dated check records', 'good')}
+  ${stat(String(fresh.pages.length), 'pages read 2 Nov', 'good')}
+  ${stat(String(S.unverified), 'rows still unverified', 'warn')}
+</div>
+<section class="section"><h2>Deadline-sorted shortlist</h2>
+  <p class="note-tiny">A zero in "Days from 2 Nov" means the date is today. Every row links to its
+  official page and to its detail page. Notes are quoted verbatim from the earlier session's record.</p>
+  <div class="table-scroll"><table class="ledger">
+    <thead><tr><th>Competition</th><th>Verified deadline</th><th>Days from 2 Nov</th><th>Official source</th><th>Sourced note</th><th>Caveats</th></tr></thead>
+    <tbody>${tableRows}</tbody></table></div>
+</section>
+<section class="section"><h2>Interpretation limits</h2>
+  <div class="callout warn"><ul class="list">
+    <li>A large prize pool is not a win estimate; no odds, expected return or effort estimate is published.</li>
+    <li>Bots and AI accounts are generally ineligible for Metaculus tournament prizes unless the specific competition permits them — see <a href="flagged.html#R-18">R-18</a>.</li>
+    <li>No Singapore-specific eligibility conclusion is established; confirm geographic and age terms on the operator's rules page.</li>
+    <li>The GEMS entry fee is not stated on the pages read, so its entry-cost cell stays blank — see <a href="flagged.html#R-17">R-17</a>.</li>
+  </ul></div>
+</section>`;
+  return layout({ title: 'Verified shortlist — PrizeDesk', description: 'Deadline-sorted official-page checks with sourced notes and caveats.', active: 'shortlist.html', body, scripts: false });
+}
+
 /* ------------------------------------------------------------------ executive / 404 / sitemap */
 
 function renderHtml(c) {
@@ -1238,9 +1319,19 @@ function renderHtml(c) {
 }
 function buildExecutive() {
   const c = summary.build();
+  const latestCrossCheck = verif.rows.reduce((latest, r) =>
+    r.crossCheck && r.crossCheck.checkedDate > latest ? r.crossCheck.checkedDate : latest, verif.verifiedOn);
+  const upstream = verif.totals.rows - verif.totals.addedByParallelSessions;
   const body = `
-<section class="hero"><p class="kicker">Executive summary · ${esc(fmtDate(TODAY))}</p>
+<section class="hero"><p class="kicker">Executive summary · updated ${esc(fmtDate(latestCrossCheck))} · base verification ${esc(fmtDate(verif.verifiedOn))}</p>
   <h1>${esc(c.title)}</h1><p class="lede">${esc(c.standfirst)}</p>
+  <p class="note-tiny">The pinned source file has ${upstream} listings. The combined dataset reconciles as
+  ${upstream} pinned upstream rows + ${verif.totals.addedByParallelSessions} attributed additions =
+  ${verif.totals.rows} rows. Read the
+  <a href="https://github.com/sassnarep3-star/Own1/blob/main/data/verification/current-state-2026-11-02.md" rel="noopener noreferrer">targeted current-state audit ↗</a>
+  and the <a href="shortlist.html">Verified shortlist</a>, including the
+  <a href="https://www.metaculus.com/tournament/fall-futureeval-2026/" rel="noopener noreferrer">official FutureEval bot-tournament page ↗</a>.
+  No Singapore-specific eligibility conclusion is established.</p>
   <div class="btn-row"><a class="btn primary" href="all.html">Browse the ${S.rows} rows</a>
   <a class="btn" href="verified.html">Evidence</a>
   <a class="btn" href="flagged.html">Flagged (${allFlags.length})</a></div></section>
@@ -1276,6 +1367,7 @@ written.push(write('all.html', buildAll()));
 buildCategories().forEach((p) => written.push(write(p.file, p.html)));
 buildDetails().forEach((p) => written.push(write(p.file, p.html)));
 written.push(write('best.html', buildBest()));
+written.push(write('shortlist.html', buildShortlist()));
 written.push(write('analysis.html', buildAnalysis()));
 written.push(write('verified.html', buildVerified()));
 written.push(write('verification.html', buildVerification()));
