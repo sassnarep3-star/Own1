@@ -150,7 +150,7 @@ for (const item of ledger.listings) {
   if (item.type === 'directory') flags.push('I-14');
   if (item.id === 'tradingview-leap') flags.push('I-06');
   if (item.id === 'swagbucks-trivia' || item.id === 'givling') flags.push('I-11');
-  if (brokenAny.length) flags.push('I-23');
+  if (brokenAny.length) flags.push('I-31');
 
   rows.push({
     id: item.id,
@@ -677,7 +677,7 @@ const register = [
     const recovered = [...recheckOkUrls];
     const notRechecked = lh ? lh.failing - brokenList.length - recovered.length : 0;
     return {
-      id: 'I-23',
+      id: 'I-31',
       title: 'Official links that no longer load — their prize figures can no longer be confirmed',
       severity: 'high',
       type: 'broken-link',
@@ -694,7 +694,7 @@ const register = [
         totals.prizeBlankedBecauseSourceDead + ' prize cell(s) were blanked on that basis and ' +
         totals.deadLinkRows + ' row(s) carry this flag.',
       evidence,
-      affected: idsWith('I-23'),
+      affected: idsWith('I-31'),
       links: brokenList.map((u) => ({ title: 'Dead official link (re-checked ' + ((recheck && recheck.checkedAt) || '') + ')', url: u })),
       action: 'Affected rows keep their links for auditability but show "—" for the prize and this flag. Re-check the operator by hand before relying on any figure; a DNS failure can be temporary, and the row detail says exactly which URL failed.'
     };

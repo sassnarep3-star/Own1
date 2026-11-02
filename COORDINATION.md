@@ -264,6 +264,8 @@ Sources: 28 official pages fetched 2026-11-01, each listed with URL, facts and i
 | `data/ledger.json`, `data/verification.json`, `EXECUTIVE_SUMMARY.md`, `docs/EXECUTIVE_SUMMARY.md`, all generated `*.html` | T17's versions kept (221-row combined dataset); pages regenerated afterwards by `npm run build`. |
 | `data/link-recheck.json` | New file from this session (14 hand re-fetches with notes); no conflict. |
 | `COORDINATION.md` | This merged board: T14–T17 records kept verbatim, T18 row and record appended. |
+| `archive/**/supplemental/index.html` (3 files) | **Pre-existing conflict markers found on `main`** (`<<<<<<< HEAD` committed into archived supplemental pages by an earlier integration). Both sides merged: kept the `body class="legacy"` scoping that the archived stylesheet requires and T17's "Verified ledger" nav link; markers removed. |
+| Stale build text | `scripts/build.js` research page said "five merged additions" while the dataset carries 15 (221 = 206 + 15). Now rendered from `ledger.additionsMerged`. |
 
 ### Official pages re-read by hand on 2026-11-02 (source links for manual review)
 

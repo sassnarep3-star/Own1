@@ -30,6 +30,7 @@ const irr = read('data/irregularities.json');
 const fresh = read('data/verification-2026-11-02.json');
 const review = read('data/review-2026-11-02.json');
 const linkHealth = read('data/link-health.json');
+const linkRecheck = fs.existsSync(path.join(ROOT, 'data/link-recheck.json')) ? read('data/link-recheck.json') : null;
 const shortlistNotes = read('data/shortlist-notes.json');
 const crossChecks = read('data/cross-checks.json');
 
@@ -439,6 +440,15 @@ function detailPage(item) {
       <h2>Blank beats guessed</h2>
       <p class="note-tiny">The pinned reference ledger contains its own prize, entry, status and eligibility labels. They are deliberately not republished here, because they were not read on an operator page on ${esc(fmtDate(TODAY))}. See <a href="${base}research.html">the source audit</a>.</p>
     </div>
+    ${(r && r.deadOfficialUrls && r.deadOfficialUrls.length) ? `
+    <div class="callout warn" style="margin-top:12px">
+      <p><b>An official link on this row no longer loads.</b>
+      ${r.deadOfficialUrls.map((u) => `<a href="${attr(u)}" rel="noopener noreferrer">${esc(u.replace(/^https?:\/\//, ''))} ↗</a>`).join(', ')}
+      — re-checked ${esc((linkRecheck && linkRecheck.checkedAt) || '2026-11-02')} and still failing
+      (<a href="${base}flagged.html#I-31">I-31</a>). Any figure that rested only on that page stays blank
+      until it can be read again on a working official page. A DNS failure can be temporary — check the
+      operator by hand.</p>
+    </div>` : ''}
   </aside>
 </div>`;
   return layout({
@@ -1016,6 +1026,18 @@ function buildFlagged() {
       <td data-label="Interpretation">${esc(note)}</td>
       <td data-label="Checked at">${esc(v.checkedAt || linkHealth.generated)}</td>
     </tr>`).join('');
+  const recheckRows = (linkRecheck ? Object.entries(linkRecheck.results || {})
+    .sort((a, b) => (a[1].outcome === b[1].outcome ? 0 : a[1].outcome === 'broken' ? -1 : 1))
+    .map(([url, v]) => {
+      const first = (linkHealth.results || {})[url] || {};
+      const firstLabel = first.ok ? 'loaded' : (first.error || String(first.status || '—'));
+      return `<tr>
+        <td data-label="URL"><a href="${attr(url)}" rel="noopener noreferrer">${esc(url)}</a></td>
+        <td data-label="1 Nov result">${esc(String(firstLabel))}</td>
+        <td data-label="2 Nov re-check"><span class="badge ${v.outcome === 'broken' ? 'danger' : 'good'}">${v.outcome === 'broken' ? 'still dead' : 'loads'}</span></td>
+        <td data-label="What we saw">${esc(v.note)}</td>
+      </tr>`;
+    }).join('') : '');
   const unverifiedRows = unverifiedItems.map((i) => `<tr>
       <td class="cell-name" data-label="Competition"><a href="c/${attr(i.id)}.html">${esc(i.name)}</a></td>
       <td data-label="Category"><a href="categories/${attr(i.type)}.html">${esc(typeById.get(i.type) ? typeById.get(i.type).name : i.type)}</a></td>
@@ -1093,6 +1115,15 @@ than being filled in. See <a href="verification.html">how verification works</a>
   <div class="table-scroll"><table class="ledger">
     <thead><tr><th>URL</th><th>Status</th><th>Interpretation</th><th>Checked at</th></tr></thead>
     <tbody>${linkRows(other, 'automated request did not complete; not proof of a broken page')}</tbody></table></div>
+  ${linkRecheck ? `
+  <h3>Hand re-check of the failures (2026-11-02, ${esc(linkRecheck.checkedBy)})</h3>
+  <p class="note-tiny">Every failure below was fetched again by hand with a page tool on
+  ${esc(linkRecheck.checkedAt)} before being called broken. “Still dead” rows carry
+  <a href="#I-31">I-31</a>; “loads” rows were bot walls or transients and are not flagged.
+  Machine-readable record: <a href="https://github.com/sassnarep3-star/Own1/blob/main/data/link-recheck.json" rel="noopener noreferrer">data/link-recheck.json ↗</a>.</p>
+  <div class="table-scroll"><table class="ledger">
+    <thead><tr><th>URL</th><th>1 Nov result</th><th>2 Nov re-check</th><th>What we saw</th></tr></thead>
+    <tbody>${recheckRows}</tbody></table></div>` : ''}
   <p class="note-tiny">Full machine-readable record: <a href="https://github.com/sassnarep3-star/Own1/blob/main/data/link-health.json" rel="noopener noreferrer">data/link-health.json ↗</a>. See also <a href="#R-12">R-12</a>.</p>
 </section>`;
   return layout({ title: 'Flagged for Review — PrizeDesk', description: `${allFlags.length} irregularities with source links, plus every unverified row.`, active: 'flagged.html', body, scripts: false });
@@ -1172,7 +1203,7 @@ function buildResearch() {
   ${stat(String(S.unverified), 'rows still unverified', 'warn')}
 </div>
 <div class="callout warn"><p><b>Headline counts disagree.</b> The reference README declares 206 listings
-across 9 categories. The pinned dataset plus five merged additions and cross-checks in this repository
+across 9 categories. The pinned dataset plus ${ledger.additionsMerged} merged additions and cross-checks in this repository
 contains ${S.rows} rows. Both figures are published here rather than reconciled by guesswork; see
 <a href="flagged.html#I-01">I-01</a> and <a href="flagged.html#R-11">R-11</a>.</p></div>
 
@@ -1218,6 +1249,26 @@ contains ${S.rows} rows. Both figures are published here rather than reconciled 
     <li><a href="https://fantasy.espn.com/games/nfl-pickem-2026/howtoplay" rel="noopener noreferrer">ESPN Pick'em rules ↗</a> · <a href="https://www.cbssports.com/fantasy/football/games/pickem/rules" rel="noopener noreferrer">CBS rules ↗</a> · <a href="https://www.mlb.com/apps/beat-the-streak/official-rules" rel="noopener noreferrer">MLB Beat the Streak rules ↗</a></li>
     <li><a href="https://winningwriters.com/our-contests/wergle-flomp-humor-poetry-contest-free" rel="noopener noreferrer">Winning Writers ↗</a> · <a href="https://www.worldphoto.org/sony-world-photography-awards" rel="noopener noreferrer">Sony World Photography Awards ↗</a> · <a href="https://www.challenge.gov/" rel="noopener noreferrer">Challenge.gov sunset notice ↗</a></li>
   </ul></div>
+</section>
+
+<section class="section"><h2>5. Session cross-checks with verbatim evidence (${(crossChecks.checks || []).length} records)</h2>
+  <p class="note-tiny">Every official-page read logged in <a href="https://github.com/sassnarep3-star/Own1/blob/main/data/cross-checks.json" rel="noopener noreferrer">data/cross-checks.json ↗</a>:
+  the URL, the date it was read, the session that read it, exactly what the page confirmed, and its caveats.
+  Nothing here was rewritten by this build. Deadline-ordered view: <a href="shortlist.html">Verified shortlist</a>;
+  line-by-line field evidence for the 2 Nov pass: <a href="verified.html">Verified 2 Nov</a>.</p>
+  <div class="table-scroll"><table class="ledger">
+    <thead><tr><th>Listing</th><th>Official page</th><th>Confirmed on that page</th><th>Caveats recorded</th><th>Deadline</th><th>Checked by / date</th></tr></thead>
+    <tbody>${(crossChecks.checks || []).map((c) => {
+      const ccItem = itemsById.get(c.id);
+      return `<tr>
+        <td class="cell-name" data-label="Listing">${ccItem ? `<a href="c/${attr(c.id)}.html">${esc(ccItem.name)}</a>` : esc(c.id)}</td>
+        <td data-label="Official page"><a class="src-link" href="${attr(c.url)}" rel="noopener noreferrer">${esc(shortText(c.url.replace(/^https?:\/\//, ''), 44))} ↗</a></td>
+        <td data-label="Confirmed"><ul class="list" style="margin:0">${(c.confirmed || []).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></td>
+        <td data-label="Caveats">${(c.caveats || []).length ? `<ul class="list" style="margin:0">${c.caveats.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : '<span class="blank">—</span>'}</td>
+        <td data-label="Deadline">${c.deadline ? esc(fmtDate(c.deadline)) : '<span class="blank">—</span>'}</td>
+        <td data-label="Checked by">${esc(c.checkedBy || '—')}<span class="cell-sub">${esc(fmtDate(c.checkedDate))}</span></td>
+      </tr>`;
+    }).join('')}</tbody></table></div>
 </section>`;
   return layout({ title: 'Source audit — PrizeDesk', description: 'Analysis of the reference site, its defects, and the provenance of the pinned dataset.', active: 'research.html', body, scripts: false });
 }
